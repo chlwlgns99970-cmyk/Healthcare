@@ -32,6 +32,7 @@ import androidx.compose.material.icons.rounded.MonitorHeart
 import androidx.compose.material.icons.rounded.Person
 import androidx.compose.material.icons.rounded.RestaurantMenu
 import androidx.compose.material.icons.rounded.TextFields
+import androidx.compose.material.icons.rounded.SystemUpdate
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.AssistChip
 import androidx.compose.material3.Button
@@ -74,7 +75,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.example.healthcare.R
+import com.example.healthcare.BuildConfig
 import com.example.healthcare.data.AppFontSize
+import com.example.healthcare.data.appupdate.AppUpdatePhase
+import com.example.healthcare.data.appupdate.AppUpdateUiState
 import com.example.healthcare.data.model.ActivityLevel
 import com.example.healthcare.data.model.TargetMode
 import com.example.healthcare.data.update.FoodDataUpdateState
@@ -102,7 +106,9 @@ fun SettingsScreen(
     appFontSize: AppFontSize = AppFontSize.NORMAL,
     onAppFontSizeSelected: (AppFontSize) -> Unit = {},
     onOpenMealPreference: () -> Unit = {},
-    onBodyWeightSaved: (Double) -> Unit = {}
+    onBodyWeightSaved: (Double) -> Unit = {},
+    appUpdateState: AppUpdateUiState = AppUpdateUiState(),
+    onCheckAppUpdate: () -> Unit = {}
 ) {
     val currentGoal by viewModel?.currentGoal?.collectAsState() ?: remember { mutableStateOf(null) }
     val isGoalSaving by viewModel?.isSaving?.collectAsState() ?: remember { mutableStateOf(false) }
@@ -157,6 +163,7 @@ fun SettingsScreen(
         bodyProfileState = bodyProfileState,
         weightGoalState = weightGoalState,
         foodDataUpdateState = foodDataUpdateState,
+        appUpdateState = appUpdateState,
         onGoalClick = {
             newGoalText = targetCalories.toString()
             showGoalDialog = true
@@ -182,6 +189,7 @@ fun SettingsScreen(
         onAppFontSizeSelected = onAppFontSizeSelected,
         onOpenMealPreference = onOpenMealPreference,
         onCheckFoodData = { viewModel?.checkFoodDataNow() },
+        onCheckAppUpdate = onCheckAppUpdate,
         onBack = { selectedSection = null }
     )
 }
@@ -315,6 +323,7 @@ internal fun SettingsSectionContent(
     bodyProfileState: BodyProfileUiState,
     weightGoalState: WeightGoalUiState,
     foodDataUpdateState: FoodDataUpdateState,
+    appUpdateState: AppUpdateUiState,
     onGoalClick: () -> Unit,
     onBmrChange: (String) -> Unit,
     onActivityLevelSelected: (ActivityLevel) -> Unit,
@@ -337,6 +346,7 @@ internal fun SettingsSectionContent(
     onAppFontSizeSelected: (AppFontSize) -> Unit,
     onOpenMealPreference: () -> Unit,
     onCheckFoodData: () -> Unit,
+    onCheckAppUpdate: () -> Unit,
     onBack: () -> Unit
 ) {
     Scaffold(
@@ -415,7 +425,7 @@ internal fun SettingsSectionContent(
                     item { AppFontSizeCard(appFontSize, onAppFontSizeSelected) }
                 }
                 SettingsSection.APP_INFO -> {
-                    item { AppInformationCard() }
+                    item { AppInformationCard(appUpdateState, onCheckAppUpdate) }
                 }
             }
         }
@@ -455,15 +465,47 @@ private fun MealPreferenceLinkCard(onClick: () -> Unit) {
 }
 
 @Composable
-private fun AppInformationCard() {
+private fun AppInformationCard(
+    updateState: AppUpdateUiState,
+    onCheckAppUpdate: () -> Unit
+) {
+    val updateSummary = when (updateState.phase) {
+        AppUpdatePhase.CHECKING -> "업데이트 확인 중…"
+        AppUpdatePhase.UP_TO_DATE -> "현재 최신 버전을 사용 중이에요."
+        AppUpdatePhase.AVAILABLE -> "새 버전 ${updateState.release?.versionName.orEmpty()}을 사용할 수 있어요."
+        AppUpdatePhase.FAILED -> updateState.message ?: "업데이트 정보를 확인하지 못했어요."
+        else -> "현재 버전 ${BuildConfig.VERSION_NAME}"
+    }
     WellnessCard {
-        ListItem(
-            headlineContent = { Text(stringResource(R.string.app_name)) },
-            supportingContent = { Text("식사와 칼로리 기록을 한곳에서 관리합니다.") },
-            leadingContent = { Icon(Icons.Rounded.Info, contentDescription = null) },
-            trailingContent = { Text("1.0.0", style = MaterialTheme.typography.labelLarge) },
-            colors = ListItemDefaults.colors(containerColor = MaterialTheme.colorScheme.surface)
-        )
+        Column {
+            ListItem(
+                headlineContent = { Text(stringResource(R.string.app_name)) },
+                supportingContent = { Text("식사와 칼로리 기록을 한곳에서 관리합니다.") },
+                leadingContent = { Icon(Icons.Rounded.Info, contentDescription = null) },
+                trailingContent = { Text(BuildConfig.VERSION_NAME, style = MaterialTheme.typography.labelLarge) },
+                colors = ListItemDefaults.colors(containerColor = MaterialTheme.colorScheme.surface)
+            )
+            HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = .48f))
+            Surface(
+                onClick = onCheckAppUpdate,
+                enabled = updateState.phase != AppUpdatePhase.CHECKING,
+                color = androidx.compose.ui.graphics.Color.Transparent
+            ) {
+                ListItem(
+                    headlineContent = { Text("앱 업데이트") },
+                    supportingContent = { Text(updateSummary) },
+                    leadingContent = { Icon(Icons.Rounded.SystemUpdate, contentDescription = null) },
+                    trailingContent = {
+                        if (updateState.phase == AppUpdatePhase.CHECKING) {
+                            CircularProgressIndicator(Modifier.size(20.dp), strokeWidth = 2.dp)
+                        } else {
+                            Icon(Icons.Rounded.ChevronRight, contentDescription = "앱 업데이트 확인")
+                        }
+                    },
+                    colors = ListItemDefaults.colors(containerColor = MaterialTheme.colorScheme.surface)
+                )
+            }
+        }
     }
 }
 

@@ -1,5 +1,6 @@
 package com.example.healthcare.ui
 
+import android.app.Activity
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.WindowInsets
@@ -12,6 +13,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -26,9 +28,12 @@ import androidx.navigation3.runtime.NavEntry
 import androidx.navigation3.runtime.rememberNavBackStack
 import androidx.navigation3.ui.NavDisplay
 import com.example.healthcare.HealthcareApplication
+import com.example.healthcare.BuildConfig
+import com.example.healthcare.data.appupdate.AppUpdatePhase
 import com.example.healthcare.data.model.MealType
 import com.example.healthcare.domain.ExerciseCoachCalculator
 import com.example.healthcare.ui.components.FloatingNavigationDock
+import com.example.healthcare.ui.components.AppUpdateOverlay
 import com.example.healthcare.ui.components.WellnessEmptyState
 import com.example.healthcare.ui.components.WellnessTopAppBar
 import com.example.healthcare.ui.screens.AddRecordScreen
@@ -55,8 +60,19 @@ fun HealthcareApp() {
     var pendingQuickAction by remember { mutableStateOf<QuickRecordAction?>(null) }
     var pendingRecordDate by remember { mutableStateOf<LocalDate?>(null) }
     var immersiveRecord by remember { mutableStateOf(false) }
-    val app = LocalContext.current.applicationContext as HealthcareApplication
+    val localContext = LocalContext.current
+    val app = localContext.applicationContext as HealthcareApplication
+    val hostActivity = localContext as? Activity
     val appFontSize by app.appFontSizeStore.fontSize.collectAsState()
+    val appUpdateState by app.appUpdateManager.state.collectAsState()
+    LaunchedEffect(app) {
+        app.appUpdateManager.checkAutomatically()
+    }
+    LaunchedEffect(appUpdateState.phase) {
+        if (appUpdateState.phase == AppUpdatePhase.READY_TO_INSTALL) {
+            hostActivity?.let(app.appUpdateManager::continueInstallation)
+        }
+    }
     val viewModelFactory = remember {
         ViewModelFactory(
             app.mealRepository,
@@ -242,6 +258,8 @@ fun HealthcareApp() {
                             SettingsScreen(
                                 viewModel = settingsViewModel,
                                 appFontSize = appFontSize,
+                                appUpdateState = appUpdateState,
+                                onCheckAppUpdate = app.appUpdateManager::checkManually,
                                 onAppFontSizeSelected = app.appFontSizeStore::set,
                                 onBodyWeightSaved = {
                                     bodyProfile = app.bodyProfileStore.read()
@@ -291,4 +309,14 @@ fun HealthcareApp() {
             }
         }
     }
+    AppUpdateOverlay(
+        state = appUpdateState,
+        currentVersionName = BuildConfig.VERSION_NAME,
+        onUpdate = app.appUpdateManager::startDownload,
+        onLater = app.appUpdateManager::dismissAvailableUpdate,
+        onOpenInstallPermission = {
+            hostActivity?.let(app.appUpdateManager::openInstallPermissionSettings)
+        },
+        onDismissStatus = app.appUpdateManager::dismissStatus
+    )
 }

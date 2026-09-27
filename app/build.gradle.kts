@@ -37,10 +37,16 @@ android {
         applicationId = "com.example.healthcare"
         minSdk = 24
         targetSdk = 37
-        versionCode = 3
-        versionName = "1.0.2"
+        versionCode = 4
+        versionName = "1.0.3"
 
         buildConfigField("String", "FOOD_ANALYSIS_BASE_URL", foodAnalysisBaseUrl.asBuildConfigString())
+        buildConfigField(
+            "String",
+            "APP_UPDATE_URL",
+            "https://today-mwo-meokji.vercel.app/api/releases/latest".asBuildConfigString()
+        )
+        buildConfigField("boolean", "APP_UPDATE_INSTALL_ENABLED", "false")
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -65,6 +71,7 @@ android {
             matchingFallbacks += listOf("debug")
         }
         release {
+            buildConfigField("boolean", "APP_UPDATE_INSTALL_ENABLED", "true")
             signingConfig = signingConfigs.findByName("release")
             optimization {
                 enable = false
@@ -115,8 +122,10 @@ val validateFoodAnalysisReleaseConfig = tasks.register("validateFoodAnalysisRele
 }
 
 val validateReleaseSigningConfig = tasks.register("validateReleaseSigningConfig") {
+    inputs.property("releaseSigningConfigured", releaseSigningConfigured)
     doLast {
-        if (!releaseSigningConfigured) {
+        val configured = inputs.properties["releaseSigningConfigured"] as? Boolean ?: false
+        if (!configured) {
             throw GradleException("Release 서명 설정이 필요합니다. 사용자 Gradle properties를 확인하세요.")
         }
     }

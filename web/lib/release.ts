@@ -53,7 +53,7 @@ function normalizeNotes(value: unknown): string[] {
   return [];
 }
 
-function parseRelease(row: ReleaseRow): LatestRelease | null {
+export function parseRelease(row: ReleaseRow): LatestRelease | null {
   const versionName = typeof row.version_name === "string" ? row.version_name : "";
   const versionCode = Number(row.version_code);
   const apkUrl = typeof row.apk_url === "string" ? row.apk_url : "";
@@ -66,6 +66,7 @@ function parseRelease(row: ReleaseRow): LatestRelease | null {
   if (
     !versionName ||
     !Number.isInteger(versionCode) ||
+    versionCode <= 0 ||
     !isGitHubReleaseAsset(apkUrl) ||
     !fileName.endsWith(".apk") ||
     !Number.isFinite(fileSizeBytes) ||

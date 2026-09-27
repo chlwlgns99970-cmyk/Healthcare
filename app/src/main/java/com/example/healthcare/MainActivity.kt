@@ -28,4 +28,9 @@ class MainActivity : ComponentActivity() {
             }
         }
     }
+
+    override fun onResume() {
+        super.onResume()
+        (application as HealthcareApplication).appUpdateManager.onHostResumed(this)
+    }
 }

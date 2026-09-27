@@ -2,6 +2,13 @@ package com.example.healthcare
 
 import android.app.Application
 import com.example.healthcare.data.AppFontSizeStore
+import com.example.healthcare.data.appupdate.AndroidApkIdentityReader
+import com.example.healthcare.data.appupdate.ApkUpdateVerifier
+import com.example.healthcare.data.appupdate.AppUpdateManager
+import com.example.healthcare.data.appupdate.AppUpdatePreferences
+import com.example.healthcare.data.appupdate.HttpAppUpdateRepository
+import com.example.healthcare.data.appupdate.PrivateUpdateApkDownloader
+import com.example.healthcare.data.appupdate.SystemAppInstaller
 import com.example.healthcare.data.SharedPreferencesRecommendationCycleStore
 import com.example.healthcare.data.BodyProfileStore
 import com.example.healthcare.data.WeightGoalStore
@@ -62,6 +69,41 @@ class HealthcareApplication : Application() {
     val nutritionLabelRecognizer by lazy { KoreanNutritionLabelRecognizer(this) }
     val foodPhotoProcessor by lazy { FoodPhotoProcessor(cacheDir) }
 
+    private val appUpdateMetadataClient by lazy {
+        OkHttpClient.Builder()
+            .connectTimeout(15, TimeUnit.SECONDS)
+            .readTimeout(20, TimeUnit.SECONDS)
+            .callTimeout(30, TimeUnit.SECONDS)
+            .build()
+    }
+    private val appUpdateDownloadClient by lazy {
+        OkHttpClient.Builder()
+            .connectTimeout(20, TimeUnit.SECONDS)
+            .readTimeout(0, TimeUnit.SECONDS)
+            .callTimeout(0, TimeUnit.SECONDS)
+            .build()
+    }
+    val appUpdateManager by lazy {
+        val identityReader = AndroidApkIdentityReader(this)
+        AppUpdateManager(
+            context = this,
+            repository = HttpAppUpdateRepository(appUpdateMetadataClient, BuildConfig.APP_UPDATE_URL),
+            preferences = AppUpdatePreferences(this),
+            downloader = PrivateUpdateApkDownloader(this, appUpdateDownloadClient),
+            identityReader = identityReader,
+            verifier = ApkUpdateVerifier(
+                identityReader = identityReader,
+                expectedPackageName = PRODUCT_APPLICATION_ID,
+                knownReleaseSignerSha256 = RELEASE_SIGNER_SHA256
+            ),
+            installer = SystemAppInstaller("${BuildConfig.APPLICATION_ID}.update-file-provider"),
+            scope = applicationScope,
+            currentVersionCode = BuildConfig.VERSION_CODE,
+            expectedPackageName = PRODUCT_APPLICATION_ID,
+            installEnabled = BuildConfig.APP_UPDATE_INSTALL_ENABLED
+        )
+    }
+
     private val foodAnalysisHttpClient by lazy {
         OkHttpClient.Builder()
             .connectTimeout(15, TimeUnit.SECONDS)
@@ -95,5 +137,11 @@ class HealthcareApplication : Application() {
                 foodDataUpdateCoordinator.state.value.lastCheckedAt
             )
         }
+    }
+
+    private companion object {
+        const val PRODUCT_APPLICATION_ID = "com.example.healthcare"
+        const val RELEASE_SIGNER_SHA256 =
+            "385693830FF4C9F9122A9DC5D992646A871AC82764439AEC1C1078BF55496CA8"
     }
 }
