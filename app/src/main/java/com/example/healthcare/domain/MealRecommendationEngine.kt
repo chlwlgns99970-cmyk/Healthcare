@@ -1,0 +1,139 @@
+package com.example.healthcare.domain
+
+import com.example.healthcare.data.entity.MealTemplate
+import kotlin.math.abs
+import kotlin.math.max
+
+data class RecommendationSeed(
+    val template: MealTemplate,
+    val ingredientNames: Set<String>,
+    val allergenTags: Set<String> = emptySet(),
+    val ingredientInfoComplete: Boolean = true,
+    val recentUseCount: Int = 0,
+    val dataCompleteness: Double = 1.0
+)
+
+data class ScoredMealRecommendation(
+    val template: MealTemplate,
+    val score: Double,
+    val calorieDifference: Int,
+    val toleranceKcal: Int,
+    val reason: String
+)
+
+enum class RecommendationStage { EXACT, WIDER_CALORIES, EXPANDED_MODE, CLOSEST_VERIFIED }
+
+object MealRecommendationEngine {
+    fun passesHardFilters(
+        seed: RecommendationSeed,
+        excludedNames: Set<String>,
+        allergyNames: Set<String>,
+        dietType: String
+    ): Boolean {
+        if (seed.template.totalKcal <= 0 || seed.dataCompleteness < 1.0 ||
+            seed.ingredientNames.isEmpty() || seed.template.source.isBlank()) return false
+        val dislikes = excludedNames.map(::normalizeFoodName).filter(String::isNotBlank).toSet()
+        val searchable = (seed.ingredientNames + seed.template.name)
+            .map(::normalizeFoodName).filter(String::isNotBlank)
+        if (searchable.any { candidate -> dislikes.any(candidate::contains) }) return false
+
+        return !containsToken(seed.template.excludedDietTypes, dietType)
+    }
+
+    /** 알레르기는 추천을 숨기지 않고, 확인된 정보에 한해 UI 주의로 전달합니다. */
+    fun matchedAllergens(seed: RecommendationSeed, allergyNames: Set<String>): Set<String> {
+        // 음식명은 원재료표가 아니므로 알레르기 근거로 사용하지 않습니다.
+        // 공식/공공 자료로 확인해 저장한 allergenTags만 사용자 설정과 대조합니다.
+        val searchable = seed.allergenTags
+        return allergyNames.mapNotNull(FoodAllergenPolicy::canonicalize)
+            .filterTo(linkedSetOf()) { cause ->
+                searchable.any { FoodAllergenPolicy.matches(it, cause) }
+            }
+    }
+
+    fun recommend(
+        candidates: List<RecommendationSeed>,
+        budgetKcal: Int,
+        excludedNames: Set<String>,
+        allergyNames: Set<String>,
+        preferredNames: Set<String>,
+        dietType: String,
+        cookingMode: String = "ANY",
+        budgetLevel: String = "ANY",
+        recommendationDiversity: String = "BALANCED",
+        limit: Int = 3,
+        stage: RecommendationStage = RecommendationStage.EXACT,
+        allowedCookingModes: Set<String> = setOf(cookingMode),
+        excludedTemplateIds: Set<String> = emptySet()
+    ): List<ScoredMealRecommendation> {
+        if (budgetKcal <= 0 || limit <= 0) return emptyList()
+        val preferred = preferredNames.map(::normalizeFoodName).filter(String::isNotBlank).toSet()
+        val filtered = candidates.filter { seed ->
+            seed.template.id !in excludedTemplateIds &&
+                passesHardFilters(seed, excludedNames, allergyNames, dietType) &&
+                ("ANY" in allowedCookingModes || allowedCookingModes.any { containsToken(seed.template.tags, it) }) &&
+                costWithinBudget(seed.template.costLevel, budgetLevel)
+        }
+
+        val baseTolerance = max((budgetKcal * 0.10).toInt(), 80)
+        val tolerance = when (stage) {
+            RecommendationStage.EXACT -> baseTolerance
+            RecommendationStage.CLOSEST_VERIFIED -> Int.MAX_VALUE
+            else -> max((budgetKcal * 0.20).toInt(), 150)
+        }
+        val inRange = filtered.filter { abs(it.template.totalKcal - budgetKcal) <= tolerance }
+
+        return inRange.map { seed ->
+            val calorieFit = (1.0 - abs(seed.template.totalKcal - budgetKcal).toDouble() / max(budgetKcal, 1)).coerceIn(0.0, 1.0)
+            val searchable = (seed.ingredientNames + seed.template.name).map(::normalizeFoodName)
+            val preferenceFit = if (preferred.isEmpty()) 0.5 else if (
+                searchable.any { name -> preferred.any { pref -> name.contains(pref) || pref.contains(name) } }
+            ) 1.0 else 0.0
+            val variety = when (recommendationDiversity) {
+                "FAMILIAR" -> if (seed.recentUseCount > 0) 1.0 else 0.5
+                "VARIED" -> (1.0 - seed.recentUseCount * 0.4).coerceIn(0.0, 1.0)
+                else -> (1.0 - seed.recentUseCount * 0.25).coerceIn(0.0, 1.0)
+            }
+            val score = calorieFit * 55.0 + preferenceFit * 20.0 + variety * 15.0 +
+                seed.dataCompleteness.coerceIn(0.0, 1.0) * 10.0
+            val reason = when {
+                calorieFit >= 0.95 -> "다음 한 끼의 참고 범위에 가까워요."
+                recommendationDiversity == "FAMILIAR" && seed.recentUseCount > 0 ->
+                    "최근 선택했던 익숙한 식단이에요."
+                seed.recentUseCount == 0 && variety >= 0.75 -> "최근 식단과 겹치지 않는 선택이에요."
+                else -> "등록한 제외 음식 조건을 통과한 식단이에요."
+            }
+            ScoredMealRecommendation(
+                template = seed.template,
+                score = score,
+                calorieDifference = seed.template.totalKcal - budgetKcal,
+                toleranceKcal = tolerance,
+                reason = reason
+            )
+        }.sortedWith(if (stage == RecommendationStage.CLOSEST_VERIFIED) {
+            compareBy<ScoredMealRecommendation> { abs(it.calorieDifference) }.thenByDescending { it.score }
+        } else {
+            compareByDescending<ScoredMealRecommendation> { it.score }.thenBy { abs(it.calorieDifference) }
+        })
+            .take(limit)
+    }
+
+    fun normalizeFoodName(value: String): String = value
+        .lowercase()
+        .replace(Regex("[^0-9a-z가-힣]"), "")
+
+    fun hasCompleteIngredientInfo(tags: String): Boolean = containsToken(tags, "INGREDIENTS_COMPLETE")
+
+    private fun containsToken(tokens: String, value: String): Boolean {
+        val normalized = value.trim().uppercase()
+        return normalized.isNotBlank() && tokens.uppercase().split('|').any { it == normalized }
+    }
+
+    private fun costWithinBudget(costLevel: String, budgetLevel: String): Boolean {
+        if (budgetLevel == "ANY") return true
+        val ranks = mapOf("LOW" to 1, "MEDIUM" to 2, "HIGH" to 3)
+        val candidateRank = ranks[costLevel.uppercase()] ?: return false
+        val budgetRank = ranks[budgetLevel.uppercase()] ?: return true
+        return candidateRank <= budgetRank
+    }
+}

@@ -1,0 +1,2 @@
+"""Food photo analysis backend."""
+
