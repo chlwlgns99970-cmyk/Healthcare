@@ -111,6 +111,7 @@ export async function getLatestRelease(): Promise<ReleaseResult> {
       headers: {
         apikey: anonKey,
         Authorization: `Bearer ${anonKey}`,
+        "Accept-Profile": "today_mwo_meokji",
       },
       cache: "no-store",
     });
