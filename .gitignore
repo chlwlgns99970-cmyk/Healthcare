@@ -45,3 +45,11 @@ local.properties
 *.key
 *.p12
 *.jks
+/web/node_modules/
+/web/.next/
+/web/.vercel/
+/web/.env
+/web/.env.*
+!/web/.env.example
+/web/*.tsbuildinfo
+/supabase/.temp/
