@@ -7,6 +7,7 @@ import com.example.healthcare.data.model.ActivityLevel
 import com.example.healthcare.data.model.MealType
 import com.example.healthcare.data.model.TargetMode
 import com.example.healthcare.domain.DailyIntakeStatus
+import com.example.healthcare.domain.CalendarGoalStatus
 import com.example.healthcare.domain.DailyIntakeTimeline
 import java.time.LocalDate
 import org.junit.Assert.assertEquals
@@ -23,6 +24,13 @@ class DailyIntakeTimelineTest {
         assertEquals(DailyIntakeStatus.BALANCED, status(1900))
         assertEquals(DailyIntakeStatus.BALANCED, status(2000))
         assertEquals(DailyIntakeStatus.OVER, status(2001))
+    }
+
+    @Test
+    fun `calendar distinguishes achieved exceeded and no data`() {
+        assertEquals(CalendarGoalStatus.NO_DATA, timeline(emptyList()).summary(day).calendarGoalStatus)
+        assertEquals(CalendarGoalStatus.ACHIEVED, timeline(listOf(meal(day, 2000))).summary(day).calendarGoalStatus)
+        assertEquals(CalendarGoalStatus.EXCEEDED, timeline(listOf(meal(day, 2001))).summary(day).calendarGoalStatus)
     }
 
     @Test

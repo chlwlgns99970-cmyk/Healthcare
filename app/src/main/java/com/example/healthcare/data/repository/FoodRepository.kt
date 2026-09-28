@@ -3,6 +3,7 @@ package com.example.healthcare.data.repository
 import com.example.healthcare.data.dao.FrequentFoodDao
 import com.example.healthcare.data.entity.FrequentFood
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.first
 
 /**
  * 자주 먹는 음식 관련 데이터 처리를 담당하는 레포지토리
@@ -15,6 +16,17 @@ open class FoodRepository(private val frequentFoodDao: FrequentFoodDao) {
 
     open suspend fun insertFood(food: FrequentFood) {
         frequentFoodDao.insertFood(food)
+    }
+
+    open suspend fun insertFoodIfAbsent(food: FrequentFood): Boolean {
+        val duplicate = searchFoods(food.foodName).first().any { saved ->
+            saved.foodName.trim().equals(food.foodName.trim(), ignoreCase = true) &&
+                saved.defaultServing.trim().equals(food.defaultServing.trim(), ignoreCase = true) &&
+                saved.calories == food.calories
+        }
+        if (duplicate) return false
+        insertFood(food)
+        return true
     }
 
     open suspend fun updateFood(food: FrequentFood) {

@@ -24,6 +24,7 @@ import androidx.compose.material.icons.rounded.CameraAlt
 import androidx.compose.material.icons.rounded.ChevronRight
 import androidx.compose.material.icons.rounded.Close
 import androidx.compose.material.icons.rounded.Edit
+import androidx.compose.material.icons.rounded.Delete
 import androidx.compose.material.icons.rounded.History
 import androidx.compose.material.icons.rounded.ImageSearch
 import androidx.compose.material.icons.rounded.QrCodeScanner
@@ -64,10 +65,12 @@ import androidx.compose.ui.unit.dp
 import com.example.healthcare.data.entity.FoodBrandSummary
 import com.example.healthcare.R
 import com.example.healthcare.data.entity.FoodItem
+import com.example.healthcare.data.entity.FrequentFood
 import com.example.healthcare.data.entity.MealRecord
 import com.example.healthcare.data.model.MealType
 import com.example.healthcare.domain.NutritionBasisCandidate
 import com.example.healthcare.domain.FoodSearchPolicy
+import com.example.healthcare.domain.FoodBrowseCategory
 import com.example.healthcare.domain.FranchiseCatalog
 import com.example.healthcare.domain.PortionGuide
 import com.example.healthcare.ui.components.SectionHeader
@@ -106,6 +109,10 @@ internal fun SmartFoodInputScreen(
     onBrandSelected: (FoodBrandSummary) -> Unit = {},
     onBrandBack: () -> Unit = {},
     onBrandCategorySelected: (String?) -> Unit = {},
+    frequentFoods: List<FrequentFood> = emptyList(),
+    onFoodCategorySelected: (FoodBrowseCategory) -> Unit = {},
+    onFrequentFoodSelected: (FrequentFood) -> Unit = {},
+    onFrequentFoodDeleted: (FrequentFood) -> Unit = {},
     onOpenHistory: () -> Unit = {}
 ) {
     Scaffold(
@@ -151,6 +158,10 @@ internal fun SmartFoodInputScreen(
                 onBrandSelected = onBrandSelected,
                 onBrandBack = onBrandBack,
                 onBrandCategorySelected = onBrandCategorySelected,
+                frequentFoods = frequentFoods,
+                onFoodCategorySelected = onFoodCategorySelected,
+                onFrequentFoodSelected = onFrequentFoodSelected,
+                onFrequentFoodDeleted = onFrequentFoodDeleted,
                 modifier = Modifier.padding(innerPadding)
             )
             SmartInputMode.BARCODE_LOADING -> LoadingContent("상품 영양정보를 확인하고 있어요", Modifier.padding(innerPadding))
@@ -469,6 +480,10 @@ private fun FoodSearchContent(
     onBrandSelected: (FoodBrandSummary) -> Unit,
     onBrandBack: () -> Unit,
     onBrandCategorySelected: (String?) -> Unit,
+    frequentFoods: List<FrequentFood>,
+    onFoodCategorySelected: (FoodBrowseCategory) -> Unit,
+    onFrequentFoodSelected: (FrequentFood) -> Unit,
+    onFrequentFoodDeleted: (FrequentFood) -> Unit,
     modifier: Modifier = Modifier
 ) {
     val brandFoods = state.brandProducts.filter { food ->
@@ -587,6 +602,52 @@ private fun FoodSearchContent(
                 } else null,
                 singleLine = true
             )
+        }
+        if (!state.isCompanionSearch && state.selectedBrand == null && state.searchMode == FoodSearchMode.FOOD) {
+            item {
+                LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                    items(FoodBrowseCategory.entries, key = FoodBrowseCategory::name) { category ->
+                        FilterChip(
+                            selected = state.selectedFoodCategory == category,
+                            onClick = { onFoodCategorySelected(category) },
+                            label = { Text(category.label) }
+                        )
+                    }
+                }
+            }
+            if (frequentFoods.isNotEmpty() && state.searchQuery.isBlank()) {
+                item {
+                    Text(
+                        "자주 먹는 음식",
+                        style = MaterialTheme.typography.titleSmall,
+                        color = MaterialTheme.colorScheme.primary
+                    )
+                }
+                item {
+                    LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                        items(frequentFoods, key = FrequentFood::id) { food ->
+                            OutlinedCard(onClick = { onFrequentFoodSelected(food) }) {
+                                Row(
+                                    modifier = Modifier.padding(start = 12.dp, top = 6.dp, bottom = 6.dp),
+                                    verticalAlignment = Alignment.CenterVertically
+                                ) {
+                                    Column(Modifier.padding(end = 4.dp)) {
+                                        Text(food.foodName, style = MaterialTheme.typography.labelLarge)
+                                        Text(
+                                            "${food.defaultServing} · ${food.calories} kcal",
+                                            style = MaterialTheme.typography.bodySmall,
+                                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                                        )
+                                    }
+                                    IconButton(onClick = { onFrequentFoodDeleted(food) }) {
+                                        Icon(Icons.Rounded.Delete, contentDescription = "${food.foodName} 자주 먹는 음식에서 삭제")
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
         state.message?.let { message ->
             item { Text(message, style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.error) }

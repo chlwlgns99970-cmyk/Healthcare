@@ -15,6 +15,7 @@ import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
@@ -313,6 +314,13 @@ fun DashboardScreen(
     )
 }
 
+internal val DashboardMealOrder = listOf(
+    MealType.BREAKFAST,
+    MealType.SNACK,
+    MealType.LUNCH,
+    MealType.DINNER
+)
+
 @Composable
 internal fun DashboardContent(
     selectedDate: LocalDate,
@@ -344,7 +352,7 @@ internal fun DashboardContent(
     val isToday = selectedDate == LocalDate.now()
     var showDatePicker by rememberSaveable { mutableStateOf(false) }
     val mealCalories = remember(meals) {
-        listOf(MealType.BREAKFAST, MealType.LUNCH, MealType.DINNER).associateWith { type ->
+        DashboardMealOrder.associateWith { type ->
             meals.asSequence().filter { it.mealType == type }.sumOf { it.calories }
         }
     }
@@ -435,21 +443,6 @@ internal fun DashboardContent(
                 ),
                 verticalArrangement = Arrangement.spacedBy(gap)
             ) {
-                CompactIntakeCard(
-                    total = totalCalories,
-                    target = targetCalories,
-                    statusText = statusText,
-                    nutrition = nutrition,
-                    dense = dense,
-                    modifier = Modifier.fillMaxWidth().height(if (dense) 160.dp else 188.dp)
-                )
-                CompactMealCard(
-                    meals = meals,
-                    mealCalories = mealCalories,
-                    onClick = onAddRecord,
-                    dense = dense,
-                    modifier = Modifier.fillMaxWidth().height(if (dense) 132.dp else 154.dp)
-                )
                 CompactActivityCard(
                     state = stepCounterState,
                     bodyProfile = bodyProfile,
@@ -460,6 +453,22 @@ internal fun DashboardContent(
                     } else 0,
                     onOpenExerciseCoach = onOpenExerciseCoach,
                     modifier = Modifier.fillMaxWidth().height(if (dense) 92.dp else 106.dp)
+                )
+                CompactMealCard(
+                    meals = meals,
+                    mealCalories = mealCalories,
+                    onClick = onAddRecord,
+                    dense = dense,
+                    modifier = Modifier.fillMaxWidth().height(if (dense) 140.dp else 154.dp)
+                )
+                CompactIntakeCard(
+                    total = totalCalories,
+                    target = targetCalories,
+                    statusText = statusText,
+                    nutrition = nutrition,
+                    dense = dense,
+                    onOpenEnergySettings = onOpenEnergySettings,
+                    modifier = Modifier.fillMaxWidth().height(if (dense) 152.dp else 178.dp)
                 )
                 CompactRecommendationCard(
                     state = coachState,
@@ -538,14 +547,21 @@ private fun CompactIntakeCard(
     statusText: String,
     nutrition: Macronutrients,
     dense: Boolean,
+    onOpenEnergySettings: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     val difference = target - total
     val progress = if (target > 0) (total.toFloat() / target).coerceIn(0f, 1f) else 0f
     Row(
-        modifier = modifier.semantics {
-            stateDescription = "$statusText, 오늘 섭취 ${formatNumber(total)} kcal, 목표 ${formatNumber(target)} kcal"
-        }.padding(horizontal = 2.dp, vertical = 2.dp),
+        modifier = modifier
+            .testTag("dashboard-calorie-target")
+            .clickable(onClick = onOpenEnergySettings)
+            .semantics {
+                contentDescription = "하루 목표 칼로리 수정"
+                stateDescription = "$statusText, 오늘 섭취 ${formatNumber(total)} kcal, 목표 ${formatNumber(target)} kcal"
+                role = Role.Button
+            }
+            .padding(horizontal = 2.dp, vertical = 2.dp),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(if (dense) 10.dp else 15.dp)
     ) {
@@ -599,6 +615,13 @@ private fun CompactIntakeCard(
             modifier = Modifier.weight(.52f).fillMaxHeight().padding(vertical = if (dense) 5.dp else 8.dp),
             verticalArrangement = Arrangement.SpaceEvenly
         ) {
+                Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.End,
+                    verticalAlignment = Alignment.CenterVertically) {
+                    Text("목표 수정", style = MaterialTheme.typography.labelSmall,
+                        color = MaterialTheme.colorScheme.primary)
+                    Icon(Icons.Rounded.ChevronRight, contentDescription = null,
+                        modifier = Modifier.size(14.dp), tint = MaterialTheme.colorScheme.primary)
+                }
                 CompactMacro("탄수화물", nutrition.carbohydrateGrams, NutritionCarbohydrate)
                 CompactMacro("단백질", nutrition.proteinGrams, NutritionProtein)
                 CompactMacro("지방", nutrition.fatGrams, NutritionFat)
@@ -637,44 +660,46 @@ private fun CompactMealCard(
     dense: Boolean,
     modifier: Modifier = Modifier
 ) {
-    Row(modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(if (dense) 5.dp else 7.dp)) {
-        listOf(MealType.BREAKFAST, MealType.LUNCH, MealType.DINNER).forEach { type ->
+    Column(modifier.fillMaxWidth(), verticalArrangement = Arrangement.spacedBy(if (dense) 2.dp else 3.dp)) {
+        DashboardMealOrder.forEach { type ->
             val calories = mealCalories[type].orEmptyCalories()
             val designImage = when (type) {
                 MealType.BREAKFAST -> R.drawable.photo_breakfast_yogurt_bowl
+                MealType.SNACK -> R.drawable.rec_kfind_snack_convenience_1
                 MealType.LUNCH -> R.drawable.photo_sandwich
                 MealType.DINNER -> R.drawable.photo_salmon_avocado_salad
                 else -> R.drawable.photo_breakfast_yogurt_bowl
             }
             Card(
                 onClick = onClick,
-                modifier = Modifier.weight(1f).fillMaxHeight(),
+                modifier = Modifier.weight(1f).fillMaxWidth()
+                    .testTag("dashboard-meal-${type.name.lowercase()}"),
                 colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                 elevation = CardDefaults.cardElevation(defaultElevation = .5.dp)
             ) {
-                Column(Modifier.fillMaxSize()) {
-                    Box(Modifier.fillMaxWidth().weight(1f)) {
-                        Image(
-                            bitmap = ImageBitmap.imageResource(designImage),
-                            contentDescription = null,
-                            contentScale = ContentScale.Crop,
-                            filterQuality = FilterQuality.High,
-                            modifier = Modifier.fillMaxSize()
-                        )
-                    }
-                    Column(Modifier.fillMaxWidth().padding(horizontal = 7.dp, vertical = if (dense) 3.dp else 5.dp)) {
-                        Row(verticalAlignment = Alignment.CenterVertically) {
-                            Text(type.displayName, style = MaterialTheme.typography.labelSmall, fontWeight = FontWeight.SemiBold, modifier = Modifier.weight(1f), maxLines = 1)
-                            Icon(Icons.Rounded.ChevronRight, contentDescription = null, modifier = Modifier.size(13.dp), tint = MaterialTheme.colorScheme.onSurfaceVariant)
-                        }
-                        Text(
-                            if (calories > 0) "${formatNumber(calories)} kcal" else "기록 전",
-                            style = MaterialTheme.typography.labelSmall,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant,
-                            maxLines = 1,
-                            overflow = TextOverflow.Ellipsis
-                        )
-                    }
+                Row(
+                    Modifier.fillMaxSize().padding(end = 8.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(9.dp)
+                ) {
+                    Image(
+                        bitmap = ImageBitmap.imageResource(designImage),
+                        contentDescription = null,
+                        contentScale = ContentScale.Crop,
+                        filterQuality = FilterQuality.High,
+                        modifier = Modifier.fillMaxHeight().width(if (dense) 40.dp else 46.dp)
+                    )
+                    Text(type.displayName, style = MaterialTheme.typography.labelMedium,
+                        fontWeight = FontWeight.SemiBold, modifier = Modifier.weight(1f), maxLines = 1)
+                    Text(
+                        if (meals.any { it.mealType == type }) "${formatNumber(calories)} kcal" else "기록 없음",
+                        style = MaterialTheme.typography.labelSmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis
+                    )
+                    Icon(Icons.Rounded.ChevronRight, contentDescription = "${type.displayName} 기록",
+                        modifier = Modifier.size(14.dp), tint = MaterialTheme.colorScheme.onSurfaceVariant)
                 }
             }
         }

@@ -250,7 +250,10 @@ class QaRuntimeUiTest {
         composeRule.waitForIdle()
         composeRule.activityRule.scenario.onActivity { activity ->
             assertEquals(QA_APPLICATION_ID, activity.packageName)
-            assertTrue("PRIVACY_GUARD_TRIGGERED", activity.hasWindowFocus())
+            // The IME owns window focus while keyboard QA is in progress. Capture is limited to
+            // the Compose root, so require the QA activity's decor view to be visibly attached
+            // without treating the expected IME focus hand-off as another foreground app.
+            assertTrue("PRIVACY_GUARD_TRIGGERED", activity.window.decorView.isShown)
         }
         val directory = File(targetContext.getExternalFilesDir(null), "ui-qa").apply { mkdirs() }
         FileOutputStream(File(directory, fileName)).use { output ->

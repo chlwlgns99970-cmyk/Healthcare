@@ -8,9 +8,12 @@ import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.imePadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.relocation.BringIntoViewRequester
+import androidx.compose.foundation.relocation.bringIntoViewRequester
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.rounded.ArrowBack
 import androidx.compose.material.icons.rounded.Add
@@ -30,8 +33,11 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.tooling.preview.Preview
@@ -48,6 +54,8 @@ import com.example.healthcare.ui.theme.WellnessSpacing
 import com.example.healthcare.ui.theme.HealthCareTheme
 import com.example.healthcare.ui.viewmodel.MealPreferenceUiState
 import com.example.healthcare.ui.viewmodel.MealPreferenceViewModel
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 @Composable
 fun MealPreferenceScreen(viewModel: MealPreferenceViewModel, onBack: () -> Unit) {
@@ -91,6 +99,8 @@ internal fun MealPreferenceContent(
     onSave: () -> Unit
 ) {
     val preference = state.preference
+    val preferredFoodRequester = remember { BringIntoViewRequester() }
+    val coroutineScope = rememberCoroutineScope()
     Scaffold(
         topBar = {
             WellnessTopAppBar(
@@ -103,7 +113,7 @@ internal fun MealPreferenceContent(
         containerColor = MaterialTheme.colorScheme.background
     ) { innerPadding ->
         LazyColumn(
-            modifier = Modifier.fillMaxSize().padding(innerPadding),
+            modifier = Modifier.fillMaxSize().padding(innerPadding).imePadding(),
             contentPadding = PaddingValues(WellnessSpacing.ScreenHorizontal, WellnessSpacing.Compact, WellnessSpacing.ScreenHorizontal, WellnessSpacing.Section),
             verticalArrangement = Arrangement.spacedBy(WellnessSpacing.CardGap)
         ) {
@@ -235,7 +245,17 @@ internal fun MealPreferenceContent(
                     onValueChange = onPreferredInput,
                     label = { Text("선호 음식") },
                     supportingText = { Text("여러 음식은 쉼표로 구분하세요. 선호는 하드 필터가 아닙니다.") },
-                    modifier = Modifier.fillMaxWidth()
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .bringIntoViewRequester(preferredFoodRequester)
+                        .onFocusChanged { focusState ->
+                            if (focusState.isFocused) {
+                                coroutineScope.launch {
+                                    delay(180)
+                                    preferredFoodRequester.bringIntoView()
+                                }
+                            }
+                        }
                 )
             }
             state.error?.let { item { Text(it, color = MaterialTheme.colorScheme.error, style = MaterialTheme.typography.bodyMedium) } }

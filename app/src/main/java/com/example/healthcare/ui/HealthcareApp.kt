@@ -59,6 +59,7 @@ fun HealthcareApp() {
     val backStack = rememberNavBackStack(DashboardRoute)
     var pendingQuickAction by remember { mutableStateOf<QuickRecordAction?>(null) }
     var pendingRecordDate by remember { mutableStateOf<LocalDate?>(null) }
+    var pendingSettingsSection by remember { mutableStateOf<String?>(null) }
     var immersiveRecord by remember { mutableStateOf(false) }
     val localContext = LocalContext.current
     val app = localContext.applicationContext as HealthcareApplication
@@ -159,6 +160,7 @@ fun HealthcareApp() {
                                 backStack.add(AddRecordRoute)
                             },
                             onOpenEnergySettings = {
+                                pendingSettingsSection = "ENERGY"
                                 backStack.clear()
                                 backStack.add(SettingsRoute)
                             },
@@ -180,6 +182,7 @@ fun HealthcareApp() {
                             exerciseWeightKg = exerciseWeightKg,
                             showActivityDetail = true,
                             onOpenEnergySettings = {
+                                pendingSettingsSection = "ENERGY"
                                 backStack.clear()
                                 backStack.add(SettingsRoute)
                             },
@@ -264,7 +267,9 @@ fun HealthcareApp() {
                                 onBodyWeightSaved = {
                                     bodyProfile = app.bodyProfileStore.read()
                                 },
-                                onOpenMealPreference = { backStack.add(MealPreferenceRoute) }
+                                onOpenMealPreference = { backStack.add(MealPreferenceRoute) },
+                                initialSection = pendingSettingsSection,
+                                onInitialSectionConsumed = { pendingSettingsSection = null }
                             )
                         }
                         ExerciseCoachRoute -> ExerciseCoachScreen(

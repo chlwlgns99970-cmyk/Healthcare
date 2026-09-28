@@ -10,6 +10,7 @@ import com.example.healthcare.data.repository.NutritionRepository
 import com.example.healthcare.data.repository.MealCoachRepository
 import com.example.healthcare.data.model.MealType
 import com.example.healthcare.domain.FoodSearchPolicy
+import com.example.healthcare.domain.FoodBrowseCategory
 import com.example.healthcare.domain.FranchiseCatalog
 import com.example.healthcare.ui.RecommendationImageResolver
 import kotlinx.coroutines.delay
@@ -56,6 +57,10 @@ class BundledFoodDataTest {
         )
 
         assertEquals(EXPECTED_KFIND_FOOD_COUNT, officialFoodCount)
+        assertEquals(EXPECTED_BASIC_FOOD_COUNT, scalar(
+            database,
+            "SELECT COUNT(*) FROM food_items WHERE sourceType = 'USDA-SR-LEGACY'"
+        ))
         assertEquals(EXPECTED_KFIND_PRODUCT_COUNT, officialProductCount)
         assertEquals(0, officialBarcodeCount)
         assertEquals(EXPECTED_TEMPLATE_COUNT, templateCount)
@@ -178,6 +183,35 @@ class BundledFoodDataTest {
         ).forEach { query ->
             assertTrue("No official candidate for $query", repository.search(query).first().isNotEmpty())
         }
+    }
+
+    @Test
+    fun basicFruitVegetableAliasesAndCategoryBrowseUseOfficialRows() = runBlocking {
+        val context = ApplicationProvider.getApplicationContext<HealthcareApplication>()
+        val database = AppDatabase.getDatabase(context)
+        withTimeout(180_000) {
+            while (database.foodItemDao().count() < EXPECTED_TOTAL_FOOD_COUNT) delay(100)
+        }
+        val repository = NutritionRepository(database.foodItemDao())
+        listOf("사과", "바나나", "딸기", "포도", "오렌지", "수박", "복숭아", "배").forEach { query ->
+            assertTrue("No basic fruit for $query", repository.search(query).first().any {
+                it.sourceType == "USDA-SR-LEGACY"
+            })
+        }
+        listOf("양배추", "상추", "토마토", "오이").forEach { query ->
+            assertTrue("No basic vegetable for $query", repository.search(query).first().any {
+                it.sourceType == "USDA-SR-LEGACY"
+            })
+        }
+        assertTrue(repository.search("과일").first().any { it.name.startsWith("사과_") })
+        assertTrue(repository.search("야채").first().any { it.name.startsWith("양배추_") })
+        assertTrue(repository.browse(FoodBrowseCategory.FRUIT, "").first().all {
+            FoodSearchPolicy.matchesCategory(it, FoodBrowseCategory.FRUIT)
+        })
+        assertTrue(repository.browse(FoodBrowseCategory.VEGETABLE, "오이").first().any {
+            it.name.startsWith("오이_")
+        })
+        assertTrue(repository.search("과자").first().isNotEmpty())
     }
 
     @Test
@@ -343,10 +377,11 @@ class BundledFoodDataTest {
 
     private companion object {
         const val EXPECTED_KFIND_FOOD_COUNT = 19_617
+        const val EXPECTED_BASIC_FOOD_COUNT = 12
         const val EXPECTED_KFIND_PRODUCT_COUNT = 11_921
         const val EXPECTED_OFFICIAL_FRANCHISE_FOOD_COUNT = 30
-        const val EXPECTED_TOTAL_FOOD_COUNT = EXPECTED_KFIND_FOOD_COUNT + EXPECTED_KFIND_PRODUCT_COUNT +
-            EXPECTED_OFFICIAL_FRANCHISE_FOOD_COUNT
+        const val EXPECTED_TOTAL_FOOD_COUNT = EXPECTED_KFIND_FOOD_COUNT + EXPECTED_BASIC_FOOD_COUNT +
+            EXPECTED_KFIND_PRODUCT_COUNT + EXPECTED_OFFICIAL_FRANCHISE_FOOD_COUNT
         const val EXPECTED_TEMPLATE_COUNT = 292
         const val EXPECTED_MACRO_COMPLETE_COUNT = 261
         const val EXPECTED_INGREDIENT_COMPLETE_COUNT = 36

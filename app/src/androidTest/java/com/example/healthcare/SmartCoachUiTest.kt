@@ -307,7 +307,7 @@ class SmartCoachUiTest {
         composeRule.onNodeWithContentDescription("오늘의 추천 식사 보기").assertHasClickAction()
         composeRule.onNodeWithText("420 kcal").assertIsDisplayed()
         composeRule.onNodeWithText("900 kcal").assertIsDisplayed()
-        composeRule.onNodeWithText("기록 전").assertIsDisplayed()
+        composeRule.onAllNodesWithText("기록 없음").onFirst().assertIsDisplayed()
         composeRule.onNodeWithText("아침").performClick()
         composeRule.runOnIdle { assertEquals(true, recordOpened) }
     }

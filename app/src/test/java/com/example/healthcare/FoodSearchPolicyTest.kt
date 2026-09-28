@@ -2,6 +2,7 @@ package com.example.healthcare
 
 import com.example.healthcare.data.entity.FoodItem
 import com.example.healthcare.domain.FoodSearchPolicy
+import com.example.healthcare.domain.FoodBrowseCategory
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
@@ -64,6 +65,32 @@ class FoodSearchPolicyTest {
         assertEquals("중·고등학교 급식 · 재료량 기반 산출", FoodSearchPolicy.sourceVariantLabel(source.copy(sourceFoodCode = "D605-x")))
         assertEquals("산업체 급식 · 재료량 기반 산출", FoodSearchPolicy.sourceVariantLabel(source.copy(sourceFoodCode = "D705-x")))
         assertEquals(null, FoodSearchPolicy.sourceVariantLabel(source.copy(sourceType = "K-FIND-PRODUCT")))
+    }
+
+    @Test fun broadAliasesAndCategoriesFindBasicFoodsWithoutMixingCompletedSalads() {
+        assertEquals(listOf("과일류", "과일"), FoodSearchPolicy.queries("과일류"))
+        assertEquals(listOf("야채", "채소"), FoodSearchPolicy.queries("야채"))
+        assertEquals(listOf("간식", "과자"), FoodSearchPolicy.queries("간식"))
+
+        val apple = food("사과_껍질 포함_생것", "과일류", "g")
+        val cabbage = food("양배추_생것", "채소류", "g")
+        val dressedSalad = food("닭가슴살 샐러드", "샐러드류", "g")
+        assertTrue(FoodSearchPolicy.matchesCategory(apple, FoodBrowseCategory.FRUIT))
+        assertTrue(FoodSearchPolicy.matchesCategory(cabbage, FoodBrowseCategory.VEGETABLE))
+        assertFalse(FoodSearchPolicy.matchesCategory(dressedSalad, FoodBrowseCategory.VEGETABLE))
+    }
+
+    @Test fun duplicateKeyCollapsesOnlySameBrandBasisAndNutrition() {
+        val first = food("사과_생것", "과일류", "g").copy(
+            id = "one", sourceFoodCode = "FDC-1", sourceType = "USDA-SR-LEGACY",
+            brand = null, carbohydrateGrams = 13.0, proteinGrams = 0.3, fatGrams = 0.2
+        )
+        val duplicate = first.copy(id = "two", sourceFoodCode = "FDC-2")
+        val anotherBrand = duplicate.copy(brand = "다른 브랜드")
+        val anotherBasis = duplicate.copy(referenceAmount = 80.0)
+        assertEquals(FoodSearchPolicy.deduplicationKey(first), FoodSearchPolicy.deduplicationKey(duplicate))
+        assertFalse(FoodSearchPolicy.deduplicationKey(first) == FoodSearchPolicy.deduplicationKey(anotherBrand))
+        assertFalse(FoodSearchPolicy.deduplicationKey(first) == FoodSearchPolicy.deduplicationKey(anotherBasis))
     }
 
     private fun food(name: String, category: String, unit: String) = FoodItem(

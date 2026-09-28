@@ -77,6 +77,28 @@ class TopLevelNavigationUiTest {
     }
 
     @Test
+    fun homeCalorieTargetOpensEnergySettingsDirectly() {
+        composeRule.onNodeWithTag("dashboard-calorie-target")
+            .assertIsDisplayed()
+            .assertHasClickAction()
+            .performClick()
+
+        composeRule.waitUntil(10_000) {
+            composeRule.onAllNodesWithText("에너지 목표").fetchSemanticsNodes().isNotEmpty()
+        }
+        composeRule.onNodeWithText("BMR, 활동 수준, 유지 칼로리와 섭취 목표").assertIsDisplayed()
+        composeRule.onAllNodes(hasScrollAction()).onFirst()
+            .performScrollToNode(hasText("직접 설정"))
+        composeRule.onNodeWithText("직접 설정").assertIsDisplayed()
+        composeRule.onAllNodes(hasScrollAction()).onFirst()
+            .performScrollToNode(hasText("기초대사량 기준"))
+        composeRule.onNodeWithText("기초대사량 기준").assertIsDisplayed()
+        composeRule.onAllNodes(hasScrollAction()).onFirst()
+            .performScrollToNode(hasText("활동량 포함 유지 기준"))
+        composeRule.onNodeWithText("활동량 포함 유지 기준").assertIsDisplayed()
+    }
+
+    @Test
     fun recommendationCardWholeSurfaceUsesRecommendationTabAndBackReturnsHome() {
         assertEquals("com.example.healthcare.qa", InstrumentationRegistry.getInstrumentation().targetContext.packageName)
 

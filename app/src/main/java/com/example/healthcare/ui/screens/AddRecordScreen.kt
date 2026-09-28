@@ -285,6 +285,10 @@ fun AddRecordScreen(
                 onBrandSelected = { viewModel?.selectProductBrand(it) },
                 onBrandBack = { viewModel?.clearSelectedProductBrand() },
                 onBrandCategorySelected = { viewModel?.selectBrandCategory(it) },
+                frequentFoods = foodsHolder.value,
+                onFoodCategorySelected = { viewModel?.selectFoodCategory(it) },
+                onFrequentFoodSelected = { viewModel?.selectFrequentFood(it) },
+                onFrequentFoodDeleted = { viewModel?.deleteFrequentFood(it) },
                 onOpenHistory = onOpenHistory
             )
         } else WellnessManualRecordScreen(
@@ -346,6 +350,10 @@ fun AddRecordScreen(
                     onBrandSelected = { viewModel?.selectProductBrand(it) },
                     onBrandBack = { viewModel?.clearSelectedProductBrand() },
                     onBrandCategorySelected = { viewModel?.selectBrandCategory(it) },
+                    frequentFoods = foodsHolder.value,
+                    onFoodCategorySelected = { viewModel?.selectFoodCategory(it) },
+                    onFrequentFoodSelected = { viewModel?.selectFrequentFood(it) },
+                    onFrequentFoodDeleted = { viewModel?.deleteFrequentFood(it) },
                     onOpenHistory = onOpenHistory
                 )
                 PhotoEntryErrorDialog(
@@ -410,6 +418,10 @@ fun AddRecordScreen(
                 onBrandSelected = { viewModel?.selectProductBrand(it) },
                 onBrandBack = { viewModel?.clearSelectedProductBrand() },
                 onBrandCategorySelected = { viewModel?.selectBrandCategory(it) },
+                frequentFoods = foodsHolder.value,
+                onFoodCategorySelected = { viewModel?.selectFoodCategory(it) },
+                onFrequentFoodSelected = { viewModel?.selectFrequentFood(it) },
+                onFrequentFoodDeleted = { viewModel?.deleteFrequentFood(it) },
                 onOpenHistory = onOpenHistory
             )
         }
@@ -494,7 +506,7 @@ private fun ManualRecordScreen(
             if (favoriteFoods.isNotEmpty()) {
                 item {
                     Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                        Text("즐겨찾기", style = MaterialTheme.typography.titleSmall)
+                        Text("자주 먹는 음식", style = MaterialTheme.typography.titleSmall)
                         LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                             items(favoriteFoods, key = { it.id }) { food ->
                                 SuggestionChip(
@@ -520,7 +532,7 @@ private fun ManualRecordScreen(
                 } else {
                     item {
                         Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                            Text("저장된 음식", style = MaterialTheme.typography.titleSmall)
+                            Text("자주 먹는 음식", style = MaterialTheme.typography.titleSmall)
                             LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                                 items(filteredFoods, key = { it.id }) { food ->
                                     SuggestionChip(
@@ -621,7 +633,7 @@ private fun ManualRecordScreen(
                         checked = uiState.saveAsFrequent,
                         onCheckedChange = { viewModel?.onSaveAsFrequentChange(it) }
                     )
-                    Text("내 음식으로 저장")
+                    Text("자주 먹는 음식으로 저장")
                 }
             }
             uiState.saveError?.let { error ->

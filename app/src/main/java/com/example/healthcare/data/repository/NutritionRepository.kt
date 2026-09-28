@@ -4,6 +4,7 @@ import com.example.healthcare.data.dao.FoodItemDao
 import com.example.healthcare.data.entity.FoodItem
 import com.example.healthcare.data.entity.FoodBrandSummary
 import com.example.healthcare.domain.FoodSearchPolicy
+import com.example.healthcare.domain.FoodBrowseCategory
 import com.example.healthcare.domain.FranchiseCatalog
 import com.example.healthcare.data.product.DisabledProductNutritionProvider
 import com.example.healthcare.data.product.ProductNutritionProvider
@@ -23,6 +24,24 @@ open class NutritionRepository(
         if (variants.size == 1) return primary
         return combine(primary, searchVariant(variants[1])) { exact, alternate ->
             rankedResults(exact + alternate, variants.first())
+        }
+    }
+
+    open fun browse(category: FoodBrowseCategory, query: String): Flow<List<FoodItem>> {
+        val effectiveQuery = query.trim().ifBlank { category.seedQuery }
+        if (effectiveQuery.isBlank()) return flowOf(emptyList())
+        return search(effectiveQuery).map { results ->
+            val filtered = results.filter { FoodSearchPolicy.matchesCategory(it, category) }
+            if (category == FoodBrowseCategory.ALL) filtered else filtered.sortedWith(
+                compareBy<FoodItem> {
+                    when {
+                        it.sourceType == "USDA-SR-LEGACY" -> 0
+                        !FoodSearchPolicy.isProduct(it) -> 1
+                        else -> 2
+                    }
+                }.thenBy { FoodSearchPolicy.searchRank(it, effectiveQuery) }
+                    .thenBy(FoodSearchPolicy::displayName)
+            )
         }
     }
 
@@ -76,7 +95,7 @@ open class NutritionRepository(
         val generic = sorted.filterNot { FoodSearchPolicy.isProduct(it) || FranchiseCatalog.isFranchise(it) }
         return (products.take(35) + franchises.take(10) + generic.take(15) +
             products.drop(35) + franchises.drop(10) + generic.drop(15))
-            .distinctBy(FoodItem::id)
+            .distinctBy(FoodSearchPolicy::deduplicationKey)
             .take(60)
     }
 

@@ -408,7 +408,7 @@ class SettingsViewModel(
                 hasUserEditedEnergyForm = false
                 _energyState.value = validated.copy(
                     isSaving = false,
-                    saveMessage = "에너지 기준을 저장했습니다.",
+                    saveMessage = "저장되었어요",
                     saveError = null
                 )
                 onSuccess()
@@ -416,7 +416,7 @@ class SettingsViewModel(
                 _energyState.value = validated.copy(
                     isSaving = false,
                     saveMessage = null,
-                    saveError = "저장하지 못했습니다. 잠시 후 다시 시도해 주세요."
+                    saveError = "저장에 실패했어요. 다시 시도해주세요."
                 )
             }
         }

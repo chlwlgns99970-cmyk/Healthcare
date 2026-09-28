@@ -14,6 +14,7 @@ import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.test.assertCountEquals
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.hasScrollAction
+import androidx.compose.ui.test.hasSetTextAction
 import androidx.compose.ui.test.hasText
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onAllNodesWithText
@@ -24,6 +25,7 @@ import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performScrollToNode
+import androidx.compose.ui.test.performTextInput
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.Density
 import androidx.test.platform.app.InstrumentationRegistry
@@ -38,12 +40,14 @@ import com.example.healthcare.ui.screens.HistoryDetailPane
 import com.example.healthcare.ui.screens.HistoryEditPane
 import com.example.healthcare.ui.screens.HistoryListPane
 import com.example.healthcare.ui.screens.SettingsContent
+import com.example.healthcare.ui.screens.MealPreferenceContent
 import com.example.healthcare.ui.screens.WellnessManualRecordScreen
 import com.example.healthcare.ui.theme.HealthCareTheme
 import com.example.healthcare.ui.viewmodel.AddRecordUiState
 import com.example.healthcare.ui.viewmodel.DashboardEnergyUiState
 import com.example.healthcare.ui.viewmodel.EnergySettingsUiState
 import com.example.healthcare.ui.viewmodel.MealEditUiState
+import com.example.healthcare.ui.viewmodel.MealPreferenceUiState
 import java.io.File
 import java.io.FileOutputStream
 import java.time.LocalDate
@@ -59,6 +63,7 @@ class CompactWidthUiTest {
     @Test
     fun dashboardAndSettingsRemainUsableAt360Dp() {
         var screen by mutableIntStateOf(0)
+        var energyOpened = false
         composeRule.setContent {
             HealthCareTheme {
                 Box(Modifier.width(360.dp).height(800.dp)) {
@@ -73,7 +78,7 @@ class CompactWidthUiTest {
                             onPreviousDay = {},
                             onNextDay = {},
                             onAddRecord = {},
-                            onOpenEnergySettings = {}
+                            onOpenEnergySettings = { energyOpened = true }
                         )
                     } else {
                         SettingsContent(
@@ -102,6 +107,12 @@ class CompactWidthUiTest {
         composeRule.onNodeWithText("300 kcal 초과").assertIsDisplayed()
         composeRule.onNodeWithText("아침").assertIsDisplayed()
         composeRule.onNodeWithText("오늘 활동").assertIsDisplayed()
+        val mealTops = listOf("breakfast", "snack", "lunch", "dinner").map { meal ->
+            composeRule.onNodeWithTag("dashboard-meal-$meal").fetchSemanticsNode().boundsInRoot.top
+        }
+        assertEquals(mealTops.sorted(), mealTops)
+        composeRule.onNodeWithTag("dashboard-calorie-target").performClick()
+        composeRule.runOnIdle { assert(energyOpened) }
 
         composeRule.runOnIdle { screen = 1 }
         scrollTo("3,600")
@@ -255,6 +266,38 @@ class CompactWidthUiTest {
         listOf("홈", "추천", "기록", "통계", "설정").forEach { label ->
             composeRule.onAllNodesWithText(label).onFirst().assertIsDisplayed()
         }
+    }
+
+    @Test
+    fun preferredFoodFieldRemainsVisibleWhenFocusedAt360Dp() {
+        composeRule.setContent {
+            HealthCareTheme {
+                Box(Modifier.width(360.dp).height(800.dp)) {
+                    MealPreferenceContent(
+                        state = MealPreferenceUiState(),
+                        onBack = {},
+                        onMealEnabled = { _, _ -> },
+                        onRatioChange = { _, _ -> },
+                        onDietType = {},
+                        onCookingMode = {},
+                        onBudget = {},
+                        onDiversity = {},
+                        onAllergyInput = {},
+                        onAddAllergy = {},
+                        onDislikeInput = {},
+                        onAddDislike = {},
+                        onPreferredInput = {},
+                        onRemoveExcluded = {},
+                        onSave = {}
+                    )
+                }
+            }
+        }
+
+        val preferredField = hasSetTextAction() and hasText("선호 음식", substring = true)
+        composeRule.onAllNodes(hasScrollAction()).onFirst().performScrollToNode(preferredField)
+        composeRule.onNode(preferredField).performClick().performTextInput("사과")
+        composeRule.onNode(preferredField).assertIsDisplayed()
     }
 
     private fun scrollTo(text: String) {

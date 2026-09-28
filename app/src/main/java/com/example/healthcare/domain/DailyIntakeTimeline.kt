@@ -16,6 +16,14 @@ enum class DailyIntakeStatus {
     BELOW_BMR
 }
 
+/** Calendar-only goal state. Detailed intake coaching remains in [DailyIntakeStatus]. */
+enum class CalendarGoalStatus {
+    ACHIEVED,
+    EXCEEDED,
+    NO_DATA,
+    UNKNOWN_TARGET
+}
+
 data class DailyIntakeSummary(
     val date: LocalDate,
     val intakeCalories: Int,
@@ -25,6 +33,14 @@ data class DailyIntakeSummary(
     val status: DailyIntakeStatus
 ) {
     val differenceCalories: Int? get() = targetCalories?.let { intakeCalories - it }
+
+    val calendarGoalStatus: CalendarGoalStatus
+        get() = when {
+            recordCount == 0 -> CalendarGoalStatus.NO_DATA
+            targetCalories == null -> CalendarGoalStatus.UNKNOWN_TARGET
+            intakeCalories > targetCalories -> CalendarGoalStatus.EXCEEDED
+            else -> CalendarGoalStatus.ACHIEVED
+        }
 }
 
 class DailyIntakeTimeline private constructor(

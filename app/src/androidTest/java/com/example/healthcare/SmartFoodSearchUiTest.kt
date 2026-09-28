@@ -58,7 +58,8 @@ class SmartFoodSearchUiTest {
         composeRule.onNode(hasSetTextAction() and hasText("음식·제품 또는 브랜드 이름", substring = true))
             .performTextInput("신라면")
         waitForText("제품")
-        composeRule.onNode(hasScrollAction()).performScrollToNode(hasText("1봉 120g", substring = true))
+        composeRule.onAllNodes(hasScrollAction()).onFirst()
+            .performScrollToNode(hasText("1봉 120g", substring = true))
         composeRule.onNode(hasClickAction() and hasText("1봉 120g", substring = true))
             .assertIsDisplayed().performClick()
 
@@ -88,9 +89,36 @@ class SmartFoodSearchUiTest {
         composeRule.onNode(hasSetTextAction() and hasText("음식·제품 또는 브랜드 이름", substring = true))
             .performTextInput("참치김밥")
         waitForText("제품")
-        composeRule.onNode(hasScrollAction()).performScrollToNode(hasText("김밥 · 참치"))
+        composeRule.onAllNodes(hasScrollAction()).onFirst()
+            .performScrollToNode(hasText("김밥 · 참치"))
         composeRule.onAllNodesWithText("김밥 · 참치").onFirst().assertIsDisplayed()
         composeRule.onNodeWithText("영양정보 100g 기준 · 약 174 kcal").assertIsDisplayed()
+    }
+
+    @Test
+    fun basicFoodCategoriesBrowseFruitAndCombineVegetableSearch() {
+        openFoodSearch()
+        waitForSearchField()
+
+        composeRule.onNodeWithText("과일").assertIsDisplayed().performClick()
+        waitForSubstring("이름이 비슷한 음식도")
+        composeRule.onAllNodes(hasScrollAction()).onFirst()
+            .performScrollToNode(hasText("사과 · 껍질 포함 · 생것"))
+        composeRule.onNodeWithText("사과 · 껍질 포함 · 생것").assertIsDisplayed()
+
+        composeRule.onAllNodes(hasScrollAction()).onFirst()
+            .performScrollToNode(hasText("채소·야채"))
+        composeRule.onNodeWithText("채소·야채").performClick()
+        val searchField = composeRule.onNode(
+            hasSetTextAction() and hasText("음식·제품 또는 브랜드 이름", substring = true)
+        )
+        searchField.performTextReplacement("오이")
+        waitForSubstring("이름이 비슷한 음식도")
+        composeRule.onAllNodes(hasScrollAction()).onFirst()
+            .performScrollToNode(hasText("오이 · 껍질 포함 · 생것"))
+        composeRule.onNodeWithText("오이 · 껍질 포함 · 생것").assertIsDisplayed()
+        composeRule.onNodeWithText("샐러드", substring = true).assertDoesNotExist()
+        capture("basic-food-category-search.png")
     }
 
     @Test
@@ -101,7 +129,8 @@ class SmartFoodSearchUiTest {
             .performTextInput("햄버거")
         waitForText("제품")
         composeRule.onNodeWithText("제품").assertIsDisplayed()
-        composeRule.onNode(hasScrollAction()).performScrollToNode(hasText("기본·종류"))
+        composeRule.onAllNodes(hasScrollAction()).onFirst()
+            .performScrollToNode(hasText("기본·종류"))
         composeRule.onNodeWithText("기본·종류").assertIsDisplayed()
     }
 

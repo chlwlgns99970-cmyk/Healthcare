@@ -139,7 +139,7 @@ class EnergyViewModelTest {
         assertEquals(1, energyDao.saveCount)
         assertEquals(originalId, energyDao.profile.value?.profileId)
         assertEquals(1600, energyDao.profile.value?.basalMetabolicRateKcal)
-        assertEquals("에너지 기준을 저장했습니다.", viewModel.energyState.value.saveMessage)
+        assertEquals("저장되었어요", viewModel.energyState.value.saveMessage)
     }
 
     @Test
@@ -170,7 +170,7 @@ class EnergyViewModelTest {
         advanceUntilIdle()
 
         assertNull(viewModel.energyState.value.saveMessage)
-        assertEquals("저장하지 못했습니다. 잠시 후 다시 시도해 주세요.", viewModel.energyState.value.saveError)
+        assertEquals("저장에 실패했어요. 다시 시도해주세요.", viewModel.energyState.value.saveError)
     }
 
     @Test

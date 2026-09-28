@@ -25,6 +25,7 @@ import com.example.healthcare.data.repository.NutritionRepository
 import com.example.healthcare.data.repository.RecognitionRepository
 import com.example.healthcare.domain.NutritionBasisCandidate
 import com.example.healthcare.domain.FoodSearchPolicy
+import com.example.healthcare.domain.FoodBrowseCategory
 import com.example.healthcare.domain.NutritionLabelParseResult
 import com.example.healthcare.domain.NutritionLabelParser
 import com.example.healthcare.domain.MealRecommendationEngine
@@ -176,21 +177,34 @@ class AddRecordViewModel(
     private fun searchVerifiedFoods(query: String) {
         _smartInputState.update { it.copy(searchQuery = query, message = null, brandResults = emptyList()) }
         searchJob?.cancel()
-        if (query.isBlank() || nutritionRepository == null) {
+        val category = _smartInputState.value.selectedFoodCategory
+        if ((query.isBlank() && category == FoodBrowseCategory.ALL) || nutritionRepository == null) {
             _smartInputState.update { it.copy(searchResults = emptyList(), isSearching = false) }
             return
         }
         searchJob = viewModelScope.launch {
             _smartInputState.update { it.copy(isSearching = true) }
-            combine(
-                nutritionRepository.search(query),
+            val foodResults = nutritionRepository.browse(category, query)
+            val franchiseResults = if (query.isBlank()) {
+                kotlinx.coroutines.flow.flowOf(emptyList())
+            } else {
                 nutritionRepository.searchFranchiseBrands(query)
+            }
+            combine(
+                foodResults,
+                franchiseResults
             ) { foods, franchises -> foods to franchises }.collectLatest { (results, franchises) ->
                 _smartInputState.update {
                     it.copy(searchResults = results, brandResults = franchises, isSearching = false)
                 }
             }
         }
+    }
+
+    fun selectFoodCategory(category: FoodBrowseCategory) {
+        if (_smartInputState.value.isCompanionSearch || _smartInputState.value.searchMode != FoodSearchMode.FOOD) return
+        _smartInputState.update { it.copy(selectedFoodCategory = category) }
+        searchVerifiedFoods(_smartInputState.value.searchQuery)
     }
 
     fun selectFoodSearchMode(mode: FoodSearchMode) {
@@ -206,6 +220,7 @@ class AddRecordViewModel(
                 brandProducts = emptyList(),
                 brandCategories = emptyList(),
                 selectedBrandCategory = null,
+                selectedFoodCategory = FoodBrowseCategory.ALL,
                 isSearching = false,
                 message = null
             )
@@ -568,6 +583,13 @@ class AddRecordViewModel(
                 caloriesError = null
             )
         }
+        _smartInputState.update { it.copy(mode = SmartInputMode.MANUAL, message = null) }
+    }
+
+    fun deleteFrequentFood(food: FrequentFood) {
+        viewModelScope.launch {
+            foodRepository.deleteFood(food)
+        }
     }
 
     fun selectRecentMeal(meal: MealRecord) {
@@ -913,11 +935,12 @@ class AddRecordViewModel(
                 else mealRepository.insertPhotoMeals(listOf(primaryRecord) + companionRecords)
 
                 if (state.saveAsFrequent) {
-                    foodRepository.insertFood(
+                    foodRepository.insertFoodIfAbsent(
                         FrequentFood(
                             foodName = state.foodName.trim(),
                             defaultServing = servingDescription(state.servingAmount, state.servingUnit),
-                            calories = calorieInt
+                            calories = calorieInt,
+                            isFavorite = true
                         )
                     )
                 }
@@ -1671,6 +1694,7 @@ data class SmartInputUiState(
     val searchQuery: String = "",
     val searchResults: List<FoodItem> = emptyList(),
     val searchMode: FoodSearchMode = FoodSearchMode.FOOD,
+    val selectedFoodCategory: FoodBrowseCategory = FoodBrowseCategory.ALL,
     val brandResults: List<FoodBrandSummary> = emptyList(),
     val selectedBrand: FoodBrandSummary? = null,
     val brandProducts: List<FoodItem> = emptyList(),

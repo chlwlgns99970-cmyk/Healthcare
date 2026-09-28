@@ -3,6 +3,18 @@ package com.example.healthcare.domain
 import com.example.healthcare.data.entity.FoodItem
 import java.text.Normalizer
 import java.util.Locale
+import kotlin.math.round
+
+enum class FoodBrowseCategory(val label: String, val seedQuery: String) {
+    ALL("전체", ""),
+    RICE_NOODLE("밥·면", "밥"),
+    SOUP_STEW("국·찌개", "국"),
+    MEAT("고기", "고기"),
+    FRUIT("과일", "과일"),
+    VEGETABLE("채소·야채", "채소"),
+    SNACK("간식·과자", "과자"),
+    BEVERAGE("음료", "음료")
+}
 
 /** Search-only aliases. Source names and nutrition units remain untouched. */
 object FoodSearchPolicy {
@@ -13,6 +25,10 @@ object FoodSearchPolicy {
         "달걀" to "계란",
         "흰밥" to "쌀밥",
         "흰우유" to "우유",
+        "과일류" to "과일",
+        "야채" to "채소",
+        "채소류" to "채소",
+        "간식" to "과자",
         "mcdonalds" to "맥도날드",
         "lotteria" to "롯데리아",
         "burgerking" to "버거킹",
@@ -79,6 +95,40 @@ object FoodSearchPolicy {
 
     fun isProduct(food: FoodItem): Boolean = food.sourceType.equals("K-FIND-PRODUCT", ignoreCase = true)
 
+    fun matchesCategory(food: FoodItem, category: FoodBrowseCategory): Boolean {
+        if (category == FoodBrowseCategory.ALL) return true
+        val searchable = normalize(
+            listOf(food.name, food.category.orEmpty(), food.aliases).joinToString("|")
+        )
+        val terms = when (category) {
+            FoodBrowseCategory.ALL -> emptyList()
+            FoodBrowseCategory.RICE_NOODLE -> listOf("밥", "면", "국수", "파스타", "만두")
+            FoodBrowseCategory.SOUP_STEW -> listOf("국", "탕", "찌개", "전골", "죽", "스프", "수프")
+            FoodBrowseCategory.MEAT -> listOf("고기", "육류", "소고기", "쇠고기", "돼지고기", "닭", "오리")
+            FoodBrowseCategory.FRUIT -> listOf("과일", "사과", "바나나", "딸기", "포도", "오렌지", "수박", "복숭아", "배")
+            FoodBrowseCategory.VEGETABLE -> listOf("채소", "야채", "양배추", "상추", "토마토", "오이")
+            FoodBrowseCategory.SNACK -> listOf("간식", "과자", "스낵", "쿠키", "초콜릿", "빙과")
+            FoodBrowseCategory.BEVERAGE -> listOf("음료", "차류", "커피", "주스", "우유", "탄산")
+        }
+        return terms.any { searchable.contains(normalize(it)) }
+    }
+
+    /**
+     * 검색 소스가 합쳐질 때 생기는 실질적으로 동일한 행만 접는다.
+     * 브랜드·출처 종류·기준량·단위·영양값 중 하나라도 다르면 별도 결과로 보존한다.
+     */
+    fun deduplicationKey(food: FoodItem): String = listOf(
+        normalize(displayName(food)),
+        normalize(food.brand.orEmpty()),
+        food.sourceType.uppercase(Locale.ROOT),
+        decimalKey(food.referenceAmount),
+        food.unit.lowercase(Locale.ROOT),
+        decimalKey(food.energyKcal),
+        decimalKey(food.carbohydrateGrams),
+        decimalKey(food.proteinGrams),
+        decimalKey(food.fatGrams)
+    ).joinToString("|")
+
     fun resultGroup(food: FoodItem): String = when {
         isProduct(food) -> "제품"
         FranchiseCatalog.isFranchise(food) -> "프랜차이즈"
@@ -123,4 +173,6 @@ object FoodSearchPolicy {
             !detail.endsWith("만") &&
             !detail.contains("제외") &&
             !base.contains(detail)
+
+    private fun decimalKey(value: Double?): String = value?.let { round(it * 1000.0).toString() } ?: "missing"
 }

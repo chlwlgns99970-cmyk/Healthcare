@@ -459,7 +459,7 @@ internal fun WellnessManualRecordScreen(
                             onCheckedChange = { viewModel?.onSaveAsFrequentChange(it) }
                         )
                         Column {
-                            Text("내 음식으로 저장", style = MaterialTheme.typography.bodyLarge)
+                            Text("자주 먹는 음식으로 저장", style = MaterialTheme.typography.bodyLarge)
                             Text(
                                 "다음 기록에서 빠르게 선택할 수 있어요.",
                                 style = MaterialTheme.typography.bodySmall,

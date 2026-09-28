@@ -19,6 +19,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.material.icons.Icons
@@ -53,6 +54,7 @@ import androidx.compose.material3.TextButton
 import androidx.compose.material3.TextField
 import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -66,6 +68,7 @@ import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.semantics.error
 import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.semantics.selected
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.text.input.KeyboardType
@@ -108,7 +111,9 @@ fun SettingsScreen(
     onOpenMealPreference: () -> Unit = {},
     onBodyWeightSaved: (Double) -> Unit = {},
     appUpdateState: AppUpdateUiState = AppUpdateUiState(),
-    onCheckAppUpdate: () -> Unit = {}
+    onCheckAppUpdate: () -> Unit = {},
+    initialSection: String? = null,
+    onInitialSectionConsumed: () -> Unit = {}
 ) {
     val currentGoal by viewModel?.currentGoal?.collectAsState() ?: remember { mutableStateOf(null) }
     val isGoalSaving by viewModel?.isSaving?.collectAsState() ?: remember { mutableStateOf(false) }
@@ -124,6 +129,13 @@ fun SettingsScreen(
     var selectedSection by rememberSaveable { mutableStateOf<String?>(null) }
     var newGoalText by remember { mutableStateOf("") }
     val targetCalories = currentGoal?.targetCalories ?: 2000
+
+    LaunchedEffect(initialSection) {
+        if (initialSection != null && runCatching { SettingsSection.valueOf(initialSection) }.isSuccess) {
+            selectedSection = initialSection
+            onInitialSectionConsumed()
+        }
+    }
 
     if (showGoalDialog) {
         GoalDialog(
@@ -363,7 +375,7 @@ internal fun SettingsSectionContent(
         }
     ) { padding ->
         LazyColumn(
-            modifier = Modifier.fillMaxSize().padding(padding).imePadding().navigationBarsPadding(),
+            modifier = Modifier.fillMaxSize().padding(padding).imePadding(),
             contentPadding = PaddingValues(
                 horizontal = WellnessSpacing.ScreenHorizontal,
                 vertical = WellnessSpacing.Compact
@@ -1472,23 +1484,79 @@ internal fun EnergySettingsCard(
 
             Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 Text("목표 기준", style = MaterialTheme.typography.titleSmall)
-                FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                    TargetMode.entries.forEach { mode ->
-                        FilterChip(
-                            selected = state.targetMode == mode,
-                            onClick = { onTargetModeSelected(mode) },
-                            label = { Text(targetModeLabel(mode)) },
-                            leadingIcon = if (state.targetMode == mode) {
-                                { Icon(Icons.Rounded.Check, contentDescription = null, Modifier.size(18.dp)) }
-                            } else null
-                        )
+                TargetMode.entries.forEach { mode ->
+                    val selected = state.targetMode == mode
+                    val accent = when (mode) {
+                        TargetMode.MANUAL -> MaterialTheme.colorScheme.primary
+                        TargetMode.BMR -> MaterialTheme.colorScheme.tertiary
+                        TargetMode.MAINTENANCE -> MaterialTheme.colorScheme.secondary
+                    }
+                    val container = when (mode) {
+                        TargetMode.MANUAL -> MaterialTheme.colorScheme.primaryContainer
+                        TargetMode.BMR -> MaterialTheme.colorScheme.tertiaryContainer
+                        TargetMode.MAINTENANCE -> MaterialTheme.colorScheme.secondaryContainer
+                    }
+                    Surface(
+                        onClick = { onTargetModeSelected(mode) },
+                        color = if (selected) container else MaterialTheme.colorScheme.surface,
+                        shape = MaterialTheme.shapes.medium,
+                        border = BorderStroke(if (selected) 2.dp else 1.dp,
+                            if (selected) accent else MaterialTheme.colorScheme.outlineVariant),
+                        modifier = Modifier.fillMaxWidth().semantics { this.selected = selected }
+                    ) {
+                        Row(
+                            Modifier.fillMaxWidth().padding(horizontal = 14.dp, vertical = 11.dp),
+                            verticalAlignment = Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.spacedBy(10.dp)
+                        ) {
+                            Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(2.dp)) {
+                                Text(targetModeLabel(mode), style = MaterialTheme.typography.titleSmall,
+                                    fontWeight = if (selected) FontWeight.Bold else FontWeight.Medium)
+                                Text(targetModeDescription(mode), style = MaterialTheme.typography.bodySmall,
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant)
+                            }
+                            Text(
+                                when (mode) {
+                                    TargetMode.MANUAL -> targetCalories
+                                    TargetMode.BMR -> bmrPreview
+                                    TargetMode.MAINTENANCE -> state.maintenancePreviewKcal
+                                }?.let { "${NumberFormat.getNumberInstance().format(it)} kcal" } ?: "계산 필요",
+                                style = MaterialTheme.typography.labelLarge,
+                                color = accent,
+                                fontWeight = FontWeight.SemiBold
+                            )
+                            if (selected) Icon(Icons.Rounded.Check, contentDescription = "선택됨", tint = accent)
+                        }
                     }
                 }
-                Text(
-                    targetModeDescription(state.targetMode),
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
+            }
+
+            Surface(
+                color = MaterialTheme.colorScheme.surfaceVariant,
+                shape = MaterialTheme.shapes.medium,
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Row(
+                    Modifier.fillMaxWidth().padding(14.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(10.dp)
+                ) {
+                    Column(Modifier.weight(1f)) {
+                        Text("현재 목표", style = MaterialTheme.typography.labelMedium,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant)
+                        Text(targetCalories?.let { "${NumberFormat.getNumberInstance().format(it)} kcal" } ?: "설정 필요",
+                            style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.SemiBold)
+                    }
+                    Icon(Icons.Rounded.ChevronRight, contentDescription = null,
+                        tint = MaterialTheme.colorScheme.onSurfaceVariant)
+                    Column(Modifier.weight(1f), horizontalAlignment = Alignment.End) {
+                        Text("변경 후", style = MaterialTheme.typography.labelMedium,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant)
+                        Text(effectiveTargetPreview?.let { "${NumberFormat.getNumberInstance().format(it)} kcal" } ?: "계산 필요",
+                            style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold,
+                            color = MaterialTheme.colorScheme.primary)
+                    }
+                }
             }
 
             state.saveMessage?.let { Text(it, color = MaterialTheme.colorScheme.primary, style = MaterialTheme.typography.bodyMedium) }
