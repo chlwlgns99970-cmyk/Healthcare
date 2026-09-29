@@ -59,7 +59,8 @@ data class AppUpdateUiState(
     val phase: AppUpdatePhase = AppUpdatePhase.IDLE,
     val release: AppReleaseMetadata? = null,
     val downloadProgress: Int = 0,
-    val message: String? = null
+    val message: String? = null,
+    val failureReason: ApkVerificationFailure? = null
 )
 
 sealed interface AppUpdateCheckResult {

@@ -17,6 +17,7 @@ import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onAllNodesWithText
 import androidx.compose.ui.test.onFirst
 import androidx.compose.ui.test.onNodeWithContentDescription
+import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performScrollToIndex
@@ -126,7 +127,7 @@ class QaRuntimeUiTest {
         scrollTo(hasText(LONG_MEMO))
         composeRule.onNodeWithText(LONG_MEMO).assertIsDisplayed()
         saveRootScreenshot("history-detail-long-content-384dp.png")
-        composeRule.onNodeWithContentDescription("기록 편집").performClick()
+        composeRule.onNodeWithTag("history-detail-edit").performClick()
         replace("음식 이름", EDITED_FOOD_NAME)
         replace("칼로리", "700")
         scrollTo(hasText("저녁"))

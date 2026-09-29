@@ -2,7 +2,10 @@ package com.example.healthcare
 
 import com.example.healthcare.data.appupdate.APP_UPDATE_CHECK_INTERVAL_MILLIS
 import com.example.healthcare.data.appupdate.ApkIdentity
+import com.example.healthcare.data.appupdate.ApkIdentityReadFailure
+import com.example.healthcare.data.appupdate.ApkIdentityReadResult
 import com.example.healthcare.data.appupdate.ApkIdentityReader
+import com.example.healthcare.data.appupdate.ApkSigningCompatibility
 import com.example.healthcare.data.appupdate.ApkUpdateVerifier
 import com.example.healthcare.data.appupdate.ApkVerificationFailure
 import com.example.healthcare.data.appupdate.ApkVerificationResult
@@ -13,6 +16,7 @@ import com.example.healthcare.data.appupdate.AppUpdateChecker
 import com.example.healthcare.data.appupdate.AppUpdatePolicy
 import com.example.healthcare.data.appupdate.AppUpdatePreferenceStore
 import com.example.healthcare.data.appupdate.AppUpdateRepository
+import com.example.healthcare.data.appupdate.SigningQueryMode
 import kotlinx.coroutines.runBlocking
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
@@ -49,69 +53,180 @@ class AppUpdateTest {
     }
 
     @Test
+    fun fileSizeMatchPassesVerification() {
+        assertTrue(verify().first is ApkVerificationResult.Success)
+    }
+
+    @Test
+    fun fileSizeMismatchIsRejectedBeforeHashing() {
+        val (result, apk) = verify(expectedSize = 999L)
+        val failure = result as ApkVerificationResult.Failure
+        assertEquals(ApkVerificationFailure.FILE_SIZE_MISMATCH, failure.reason)
+        assertEquals(apk.length(), failure.diagnostics.actualSize)
+    }
+
+    @Test
+    fun missingFileIsReportedSeparately() {
+        val apk = File(temporaryFolder.root, "missing.apk")
+        val result = verifier(validReader()).verify(apk, release(5), currentVersionCode = 4)
+        assertEquals(
+            ApkVerificationFailure.FILE_NOT_FOUND,
+            (result as ApkVerificationResult.Failure).reason
+        )
+    }
+
+    @Test
     fun sha256MatchPassesVerification() {
-        assertTrue(verify().first is ApkVerificationResult.Valid)
+        assertTrue(verify().first is ApkVerificationResult.Success)
     }
 
     @Test
     fun sha256MismatchIsRejected() {
         val (result) = verify(expectedHash = "0".repeat(64))
-        assertEquals(ApkVerificationFailure.SHA256_MISMATCH, (result as ApkVerificationResult.Invalid).failure)
+        assertEquals(
+            ApkVerificationFailure.HASH_MISMATCH,
+            (result as ApkVerificationResult.Failure).reason
+        )
     }
 
     @Test
     fun matchingPackagePassesVerification() {
-        assertTrue(verify(archivePackage = PRODUCT_PACKAGE).first is ApkVerificationResult.Valid)
+        assertTrue(verify(archivePackage = PRODUCT_PACKAGE).first is ApkVerificationResult.Success)
     }
 
     @Test
     fun mismatchingPackageIsRejected() {
         val (result) = verify(archivePackage = "com.example.other")
-        assertEquals(ApkVerificationFailure.PACKAGE_MISMATCH, (result as ApkVerificationResult.Invalid).failure)
+        assertEquals(
+            ApkVerificationFailure.PACKAGE_MISMATCH,
+            (result as ApkVerificationResult.Failure).reason
+        )
     }
 
     @Test
     fun higherApkVersionPassesVerification() {
-        assertTrue(verify(archiveVersion = 5, metadataVersion = 5, currentVersion = 4).first is ApkVerificationResult.Valid)
+        assertTrue(
+            verify(archiveVersion = 5, metadataVersion = 5, currentVersion = 4).first
+                is ApkVerificationResult.Success
+        )
     }
 
     @Test
     fun apkAndMetadataVersionMismatchIsRejected() {
         val (result) = verify(archiveVersion = 5, metadataVersion = 6, currentVersion = 4)
         assertEquals(
-            ApkVerificationFailure.VERSION_METADATA_MISMATCH,
-            (result as ApkVerificationResult.Invalid).failure
+            ApkVerificationFailure.VERSION_MISMATCH,
+            (result as ApkVerificationResult.Failure).reason
         )
     }
 
     @Test
     fun nonIncreasingApkVersionIsRejected() {
         val (result) = verify(archiveVersion = 4, metadataVersion = 4, currentVersion = 4)
-        assertEquals(ApkVerificationFailure.VERSION_NOT_HIGHER, (result as ApkVerificationResult.Invalid).failure)
+        assertEquals(
+            ApkVerificationFailure.VERSION_MISMATCH,
+            (result as ApkVerificationResult.Failure).reason
+        )
     }
 
     @Test
     fun matchingSignerPassesVerification() {
-        assertTrue(verify(archiveSigners = setOf(RELEASE_SIGNER)).first is ApkVerificationResult.Valid)
+        assertTrue(verify(archiveSigners = setOf(RELEASE_SIGNER)).first is ApkVerificationResult.Success)
+    }
+
+    @Test
+    fun signingHistoryDoesNotCauseFalseMismatchWhenKnownSignerIsPresent() {
+        val oldSigner = "C".repeat(64)
+        val (result) = verify(
+            archiveSigners = setOf(RELEASE_SIGNER, oldSigner),
+            installedSigners = setOf(RELEASE_SIGNER)
+        )
+        assertTrue(result is ApkVerificationResult.Success)
+    }
+
+    @Test
+    fun signerReadFailureIsNotReportedAsMismatch() {
+        val (result) = verify(
+            archiveResult = ApkIdentityReadResult.Failure(
+                ApkIdentityReadFailure.SIGNER_READ_FAILED,
+                "OEM did not expose archive signer"
+            )
+        )
+        assertEquals(
+            ApkVerificationFailure.SIGNER_READ_FAILED,
+            (result as ApkVerificationResult.Failure).reason
+        )
     }
 
     @Test
     fun mismatchingSignerIsRejected() {
         val (result) = verify(archiveSigners = setOf("B".repeat(64)))
-        assertEquals(ApkVerificationFailure.SIGNER_MISMATCH, (result as ApkVerificationResult.Invalid).failure)
+        assertEquals(
+            ApkVerificationFailure.SIGNER_MISMATCH,
+            (result as ApkVerificationResult.Failure).reason
+        )
     }
 
     @Test
     fun installedSignerMustAlsoMatchKnownReleaseSigner() {
         val (result) = verify(installedSigners = setOf("B".repeat(64)))
-        assertEquals(ApkVerificationFailure.SIGNER_MISMATCH, (result as ApkVerificationResult.Invalid).failure)
+        assertEquals(
+            ApkVerificationFailure.SIGNER_MISMATCH,
+            (result as ApkVerificationResult.Failure).reason
+        )
+    }
+
+    @Test
+    fun archiveParseFailureIsReportedSeparately() {
+        val (result) = verify(
+            archiveResult = ApkIdentityReadResult.Failure(ApkIdentityReadFailure.APK_PARSE_FAILED)
+        )
+        assertEquals(
+            ApkVerificationFailure.APK_PARSE_FAILED,
+            (result as ApkVerificationResult.Failure).reason
+        )
+    }
+
+    @Test
+    fun api27UsesLegacySignatureQuery() {
+        assertEquals(listOf(SigningQueryMode.LEGACY), ApkSigningCompatibility.queryModes(27))
+    }
+
+    @Test
+    fun api28Through32TryModernThenLegacySignatureQuery() {
+        assertEquals(
+            listOf(SigningQueryMode.MODERN, SigningQueryMode.LEGACY),
+            ApkSigningCompatibility.queryModes(28)
+        )
+        assertEquals(
+            listOf(SigningQueryMode.MODERN, SigningQueryMode.LEGACY),
+            ApkSigningCompatibility.queryModes(29)
+        )
+        assertEquals(
+            listOf(SigningQueryMode.MODERN, SigningQueryMode.LEGACY),
+            ApkSigningCompatibility.queryModes(32)
+        )
+    }
+
+    @Test
+    fun api33AndLaterTryModernThenLegacySignatureQuery() {
+        assertEquals(
+            listOf(SigningQueryMode.MODERN, SigningQueryMode.LEGACY),
+            ApkSigningCompatibility.queryModes(33)
+        )
+        assertEquals(
+            listOf(SigningQueryMode.MODERN, SigningQueryMode.LEGACY),
+            ApkSigningCompatibility.queryModes(36)
+        )
     }
 
     @Test
     fun automaticCheckIsThrottledForTwentyFourHours() = runBlocking {
         val repository = FakeRepository(release(5))
         val preferences = FakePreferences(lastSuccessfulCheckAt = 1_000L)
-        val checker = AppUpdateChecker(repository, preferences, 4) { 1_000L + APP_UPDATE_CHECK_INTERVAL_MILLIS - 1L }
+        val checker = AppUpdateChecker(repository, preferences, 4) {
+            1_000L + APP_UPDATE_CHECK_INTERVAL_MILLIS - 1L
+        }
         assertEquals(AppUpdateCheckResult.Throttled, checker.check(manual = false))
         assertEquals(0, repository.calls)
     }
@@ -164,17 +279,34 @@ class AppUpdateTest {
         currentVersion: Long = 4,
         archiveSigners: Set<String> = setOf(RELEASE_SIGNER),
         installedSigners: Set<String> = setOf(RELEASE_SIGNER),
-        expectedHash: String? = null
+        expectedHash: String? = null,
+        expectedSize: Long? = null,
+        archiveResult: ApkIdentityReadResult? = null
     ): Pair<ApkVerificationResult, File> {
         val apk = temporaryFolder.newFile().apply { writeBytes("verified-apk-fixture".toByteArray()) }
         val hash = expectedHash ?: ApkUpdateVerifier.sha256(apk)
         val reader = FakeIdentityReader(
-            ApkIdentity(archivePackage, archiveVersion, archiveSigners)
+            archiveResult = archiveResult ?: ApkIdentityReadResult.Success(
+                ApkIdentity(archivePackage, archiveVersion, archiveSigners)
+            ),
+            installedResult = ApkIdentityReadResult.Success(
+                ApkIdentity(PRODUCT_PACKAGE, currentVersion, installedSigners)
+            )
         )
-        val verifier = ApkUpdateVerifier(reader, PRODUCT_PACKAGE, RELEASE_SIGNER)
-        val metadata = release(metadataVersion).copy(sha256 = hash)
-        return verifier.verify(apk, metadata, currentVersion, installedSigners) to apk
+        val metadata = release(metadataVersion).copy(
+            sha256 = hash,
+            fileSizeBytes = expectedSize ?: apk.length()
+        )
+        return verifier(reader).verify(apk, metadata, currentVersion) to apk
     }
+
+    private fun validReader() = FakeIdentityReader(
+        archiveResult = ApkIdentityReadResult.Success(ApkIdentity(PRODUCT_PACKAGE, 5, setOf(RELEASE_SIGNER))),
+        installedResult = ApkIdentityReadResult.Success(ApkIdentity(PRODUCT_PACKAGE, 4, setOf(RELEASE_SIGNER)))
+    )
+
+    private fun verifier(reader: ApkIdentityReader) =
+        ApkUpdateVerifier(reader, PRODUCT_PACKAGE, RELEASE_SIGNER)
 
     private class FakeRepository(private val release: AppReleaseMetadata) : AppUpdateRepository {
         var calls: Int = 0
@@ -201,9 +333,12 @@ class AppUpdateTest {
         }
     }
 
-    private class FakeIdentityReader(private val archive: ApkIdentity?) : ApkIdentityReader {
-        override fun readArchive(apkFile: File): ApkIdentity? = archive
-        override fun readInstalled(packageName: String): ApkIdentity? = null
+    private class FakeIdentityReader(
+        private val archiveResult: ApkIdentityReadResult,
+        private val installedResult: ApkIdentityReadResult
+    ) : ApkIdentityReader {
+        override fun readArchive(apkFile: File): ApkIdentityReadResult = archiveResult
+        override fun readInstalled(packageName: String): ApkIdentityReadResult = installedResult
     }
 
     private companion object {

@@ -20,6 +20,7 @@ fun AppUpdateOverlay(
     state: AppUpdateUiState,
     currentVersionName: String,
     onUpdate: () -> Unit,
+    onRetry: () -> Unit,
     onLater: () -> Unit,
     onOpenInstallPermission: () -> Unit,
     onDismissStatus: () -> Unit
@@ -78,12 +79,26 @@ fun AppUpdateOverlay(
             dismissButton = { TextButton(onClick = onDismissStatus) { Text("나중에") } }
         )
 
-        AppUpdatePhase.FAILED -> AlertDialog(
-            onDismissRequest = onDismissStatus,
-            title = { Text("업데이트를 진행하지 못했어요") },
-            text = { Text(state.message ?: "잠시 후 다시 시도해주세요.") },
-            confirmButton = { TextButton(onClick = onDismissStatus) { Text("확인") } }
-        )
+        AppUpdatePhase.FAILED -> {
+            val canRetry = state.release != null
+            AlertDialog(
+                onDismissRequest = onDismissStatus,
+                title = { Text("업데이트를 진행하지 못했어요") },
+                text = { Text(state.message ?: "잠시 후 다시 시도해주세요.") },
+                confirmButton = {
+                    if (canRetry) {
+                        Button(onClick = onRetry) { Text("다시 시도") }
+                    } else {
+                        TextButton(onClick = onDismissStatus) { Text("확인") }
+                    }
+                },
+                dismissButton = if (canRetry) {
+                    { TextButton(onClick = onDismissStatus) { Text("나중에") } }
+                } else {
+                    null
+                }
+            )
+        }
 
         else -> Unit
     }

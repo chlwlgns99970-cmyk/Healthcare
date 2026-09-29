@@ -109,7 +109,7 @@ class DashboardViewModel(
 
     val dailyNutrition: StateFlow<Macronutrients> = _selectedDate
         .flatMapLatest { date -> mealRepository.getNutritionByDate(date.format(dateFormatter)) }
-        .map { rows -> Macronutrients.strictSum(rows.map { it.asMacronutrients() }) }
+        .map { rows -> Macronutrients.knownSum(rows.map { it.asMacronutrients() }) }
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), Macronutrients.Unknown)
 
     private val manualTargetCalories = _selectedDate

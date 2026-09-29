@@ -10,21 +10,31 @@ import java.io.File
 interface UpdateApkDownloader {
     suspend fun download(metadata: AppReleaseMetadata, onProgress: (Int) -> Unit): File
     fun delete(file: File?)
+    fun clear()
 }
 
-class PrivateUpdateApkDownloader(
-    context: Context,
+class UpdateDownloadException(
+    val failure: ApkVerificationFailure,
+    val expectedSize: Long? = null,
+    val actualSize: Long? = null,
+    cause: Throwable? = null
+) : Exception(failure.name, cause)
+
+class PrivateUpdateApkDownloader internal constructor(
+    private val updateDirectory: File,
     private val client: OkHttpClient
 ) : UpdateApkDownloader {
-    private val updateDirectory = File(context.filesDir, UPDATE_DIRECTORY)
+    constructor(context: Context, client: OkHttpClient) : this(
+        File(context.filesDir, UPDATE_DIRECTORY),
+        client
+    )
 
     override suspend fun download(
         metadata: AppReleaseMetadata,
         onProgress: (Int) -> Unit
     ): File = withContext(Dispatchers.IO) {
-        check(AppReleaseMetadataValidator.isValid(metadata))
-        updateDirectory.mkdirs()
-        updateDirectory.listFiles()?.forEach(File::delete)
+        clear()
+        check(updateDirectory.mkdirs() || updateDirectory.isDirectory) { "Unable to prepare update directory" }
         val finalFile = File(updateDirectory, "update-${metadata.versionCode}.apk")
         val partialFile = File(updateDirectory, "update-${metadata.versionCode}.apk.part")
         val request = Request.Builder().url(metadata.apkUrl).get().build()
@@ -32,6 +42,14 @@ class PrivateUpdateApkDownloader(
             client.newCall(request).execute().use { response ->
                 check(response.isSuccessful) { "APK download HTTP ${response.code}" }
                 val body = response.body ?: error("APK response body missing")
+                val responseLength = body.contentLength()
+                if (responseLength >= 0L && responseLength != metadata.fileSizeBytes) {
+                    throw UpdateDownloadException(
+                        failure = ApkVerificationFailure.FILE_SIZE_MISMATCH,
+                        expectedSize = metadata.fileSizeBytes,
+                        actualSize = responseLength
+                    )
+                }
                 var copied = 0L
                 var lastProgress = -1
                 body.byteStream().use { input ->
@@ -52,7 +70,17 @@ class PrivateUpdateApkDownloader(
                         }
                     }
                 }
-                check(copied == metadata.fileSizeBytes) { "APK size mismatch" }
+                if (copied != metadata.fileSizeBytes) {
+                    throw UpdateDownloadException(
+                        failure = if (copied < metadata.fileSizeBytes) {
+                            ApkVerificationFailure.DOWNLOAD_INCOMPLETE
+                        } else {
+                            ApkVerificationFailure.FILE_SIZE_MISMATCH
+                        },
+                        expectedSize = metadata.fileSizeBytes,
+                        actualSize = copied
+                    )
+                }
             }
             check(partialFile.renameTo(finalFile)) { "Unable to finalize APK download" }
             onProgress(100)
@@ -66,6 +94,14 @@ class PrivateUpdateApkDownloader(
 
     override fun delete(file: File?) {
         file?.takeIf { it.parentFile == updateDirectory }?.delete()
+    }
+
+    override fun clear() {
+        updateDirectory.listFiles()?.forEach { file ->
+            if (file.isFile && (file.extension == "apk" || file.name.endsWith(".apk.part"))) {
+                file.delete()
+            }
+        }
     }
 
     private companion object {

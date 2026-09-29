@@ -31,6 +31,7 @@ import org.junit.After
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertNotNull
+import org.junit.Assert.assertNull
 import org.junit.Assert.assertTrue
 import org.junit.Before
 import org.junit.Test
@@ -136,7 +137,7 @@ class HistoryEditViewModelTest {
         advanceUntilIdle()
 
         assertEquals(original, dao.meals.value.single())
-        assertEquals("기록을 수정하지 못했습니다. 다시 시도해주세요.", viewModel.editState.value.saveError)
+        assertEquals("기록 수정에 실패했어요. 다시 시도해주세요.", viewModel.editState.value.saveError)
         assertFalse(viewModel.editState.value.isSaving)
         assertTrue(viewModel.editState.value.isEditing)
     }
@@ -166,6 +167,45 @@ class HistoryEditViewModelTest {
         assertEquals("한 공기 · 절반", saved.portionDisplayLabel)
         assertEquals("VISUAL_ESTIMATE", saved.portionEstimationType)
     }
+
+    @Test
+    fun `하루 합계는 누락값과 무관하게 알려진 영양소를 유지하고 수정 삭제를 즉시 반영한다`() =
+        runTest(dispatcher.scheduler) {
+            val complete = photoMeal().copy(
+                carbohydrateGrams = 30.0, proteinGrams = 10.0, fatGrams = 5.0
+            )
+            val partial = photoMeal().copy(
+                id = 8, time = "09:30", calories = 100,
+                carbohydrateGrams = null, proteinGrams = 3.0, fatGrams = null
+            )
+            val dao = FakeMealDao(listOf(complete, partial))
+            val viewModel = historyViewModel(dao)
+            val nutritionCollection = backgroundScope.launch { viewModel.dailyNutrition.collect {} }
+            advanceUntilIdle()
+
+            assertEquals(30.0, viewModel.dailyNutrition.value.carbohydrateGrams!!, 0.0001)
+            assertEquals(13.0, viewModel.dailyNutrition.value.proteinGrams!!, 0.0001)
+            assertEquals(5.0, viewModel.dailyNutrition.value.fatGrams!!, 0.0001)
+
+            viewModel.startEditing(complete)
+            viewModel.onEditCaloriesChange("640")
+            viewModel.saveMealEdit()
+            advanceUntilIdle()
+            assertEquals(60.0, viewModel.dailyNutrition.value.carbohydrateGrams!!, 0.0001)
+            assertEquals(23.0, viewModel.dailyNutrition.value.proteinGrams!!, 0.0001)
+            assertEquals(10.0, viewModel.dailyNutrition.value.fatGrams!!, 0.0001)
+
+            viewModel.deleteMeal(dao.meals.value.first { it.id == complete.id })
+            advanceUntilIdle()
+            assertNull(viewModel.dailyNutrition.value.carbohydrateGrams)
+            assertEquals(3.0, viewModel.dailyNutrition.value.proteinGrams!!, 0.0001)
+            assertNull(viewModel.dailyNutrition.value.fatGrams)
+
+            viewModel.deleteMeal(partial)
+            advanceUntilIdle()
+            assertEquals(com.example.healthcare.domain.Macronutrients.Unknown, viewModel.dailyNutrition.value)
+            nutritionCollection.cancel()
+        }
 
     private fun historyViewModel(dao: FakeMealDao) = HistoryViewModel(
         mealRepository = MealRepository(dao),

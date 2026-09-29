@@ -11,6 +11,8 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.RestaurantMenu
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -18,6 +20,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
@@ -53,12 +56,14 @@ import com.example.healthcare.ui.viewmodel.MealPreferenceViewModel
 import com.example.healthcare.ui.viewmodel.SettingsViewModel
 import com.example.healthcare.ui.viewmodel.ViewModelFactory
 import java.time.LocalDate
+import kotlinx.coroutines.launch
 
 @Composable
 fun HealthcareApp() {
     val backStack = rememberNavBackStack(DashboardRoute)
     var pendingQuickAction by remember { mutableStateOf<QuickRecordAction?>(null) }
     var pendingRecordDate by remember { mutableStateOf<LocalDate?>(null) }
+    var pendingMealType by remember { mutableStateOf<MealType?>(null) }
     var pendingSettingsSection by remember { mutableStateOf<String?>(null) }
     var immersiveRecord by remember { mutableStateOf(false) }
     val localContext = LocalContext.current
@@ -66,6 +71,8 @@ fun HealthcareApp() {
     val hostActivity = localContext as? Activity
     val appFontSize by app.appFontSizeStore.fontSize.collectAsState()
     val appUpdateState by app.appUpdateManager.state.collectAsState()
+    val snackbarHostState = remember { SnackbarHostState() }
+    val appScope = rememberCoroutineScope()
     LaunchedEffect(app) {
         app.appUpdateManager.checkAutomatically()
     }
@@ -128,11 +135,15 @@ fun HealthcareApp() {
     Scaffold(
         containerColor = MaterialTheme.colorScheme.background,
         contentWindowInsets = WindowInsets(0, 0, 0, 0),
+        snackbarHost = { SnackbarHost(snackbarHostState) },
         bottomBar = {
             if (!immersiveRecord && !recordKeyboardVisible && currentRoute != ExerciseCoachRoute) {
             FloatingNavigationDock(selectedDestination) { destination ->
                 if (currentRoute != destination.route) {
-                    if (destination == TopLevelDestination.ADD) pendingRecordDate = null
+                    if (destination == TopLevelDestination.ADD) {
+                        pendingRecordDate = null
+                        pendingMealType = null
+                    }
                     backStack.clear()
                     backStack.add(destination.route)
                 }
@@ -152,11 +163,19 @@ fun HealthcareApp() {
                             onOpenExerciseCoach = { backStack.add(ExerciseCoachRoute) },
                             onAddRecord = {
                                 pendingRecordDate = dashboardSelectedDate
+                                pendingMealType = null
+                                backStack.add(AddRecordRoute)
+                            },
+                            onAddMealRecord = { mealType ->
+                                pendingRecordDate = dashboardSelectedDate
+                                pendingMealType = mealType
+                                pendingQuickAction = QuickRecordAction.SEARCH
                                 backStack.add(AddRecordRoute)
                             },
                             onQuickRecord = { action ->
                                 pendingQuickAction = action
                                 pendingRecordDate = dashboardSelectedDate
+                                pendingMealType = null
                                 backStack.add(AddRecordRoute)
                             },
                             onOpenEnergySettings = {
@@ -208,6 +227,7 @@ fun HealthcareApp() {
                                     onSearchFood = {
                                         pendingQuickAction = QuickRecordAction.SEARCH
                                         pendingRecordDate = null
+                                        pendingMealType = nextMeal
                                         backStack.add(AddRecordRoute)
                                     },
                                     onOpenPreferences = { backStack.add(MealPreferenceRoute) },
@@ -238,6 +258,14 @@ fun HealthcareApp() {
                                 viewModel = addViewModel,
                                 initialAction = pendingQuickAction,
                                 initialDate = pendingRecordDate,
+                                initialMealType = pendingMealType,
+                                onRecordSaved = { mealType ->
+                                    backStack.clear()
+                                    backStack.add(DashboardRoute)
+                                    appScope.launch {
+                                        snackbarHostState.showSnackbar("${mealType.displayName} 식사에 기록했어요")
+                                    }
+                                },
                                 onInitialActionConsumed = { pendingQuickAction = null },
                                 onImmersiveChanged = { immersiveRecord = it },
                                 onOpenHistory = {
@@ -292,6 +320,8 @@ fun HealthcareApp() {
                                 onSearchFood = {
                                     pendingQuickAction = QuickRecordAction.SEARCH
                                     pendingRecordDate = null
+                                    pendingMealType = runCatching { MealType.valueOf(key.mealType) }
+                                        .getOrDefault(MealType.LUNCH)
                                     backStack.add(AddRecordRoute)
                                 },
                                 onOpenPreferences = { backStack.add(MealPreferenceRoute) },
@@ -318,6 +348,7 @@ fun HealthcareApp() {
         state = appUpdateState,
         currentVersionName = BuildConfig.VERSION_NAME,
         onUpdate = app.appUpdateManager::startDownload,
+        onRetry = app.appUpdateManager::retryDownload,
         onLater = app.appUpdateManager::dismissAvailableUpdate,
         onOpenInstallPermission = {
             hostActivity?.let(app.appUpdateManager::openInstallPermissionSettings)

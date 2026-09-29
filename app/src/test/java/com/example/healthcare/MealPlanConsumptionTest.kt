@@ -12,6 +12,9 @@ class MealPlanConsumptionTest {
         foodItem = FoodItem(
             id = "food-$id", sourceType = "K-FIND", sourceFoodCode = "$id", name = "검증 음식 $id",
             normalizedName = "검증음식$id", referenceAmount = 100.0, unit = "g", energyKcal = calories.toDouble(),
+            carbohydrateGrams = if (id == 2L) null else 30.0,
+            proteinGrams = 10.0,
+            fatGrams = if (id == 2L) null else 5.0,
             servingDescription = "100g 기준", dataVersion = "test", createdAt = 0, updatedAt = 0
         ),
         baseAmount = 100.0, amount = 100.0, unit = "g", calories = calories,
@@ -25,5 +28,14 @@ class MealPlanConsumptionTest {
         assertEquals(300, planned.copy(ingredients = planned.ingredients.map { it.copy(consumedRatio = 0.5) }).consumedCalories)
         assertEquals(500, planned.copy(ingredients = listOf(ingredient(1, 400), ingredient(2, 200, 0.5))).consumedCalories)
         assertEquals(400, planned.copy(ingredients = listOf(ingredient(1, 400), ingredient(2, 200).copy(included = false))).consumedCalories)
+    }
+
+    @Test fun consumedNutritionKeepsKnownMacrosWhenOneIngredientIsMissingSomeValues() {
+        val planned = SelectedMealUi(
+            "template", "검증 식단", "", listOf(ingredient(1, 400), ingredient(2, 200)), 600
+        )
+        assertEquals(30.0, planned.consumedNutrition.carbohydrateGrams!!, 0.0001)
+        assertEquals(20.0, planned.consumedNutrition.proteinGrams!!, 0.0001)
+        assertEquals(5.0, planned.consumedNutrition.fatGrams!!, 0.0001)
     }
 }

@@ -86,11 +86,9 @@ class HealthcareApplication : Application() {
     val appUpdateManager by lazy {
         val identityReader = AndroidApkIdentityReader(this)
         AppUpdateManager(
-            context = this,
             repository = HttpAppUpdateRepository(appUpdateMetadataClient, BuildConfig.APP_UPDATE_URL),
             preferences = AppUpdatePreferences(this),
             downloader = PrivateUpdateApkDownloader(this, appUpdateDownloadClient),
-            identityReader = identityReader,
             verifier = ApkUpdateVerifier(
                 identityReader = identityReader,
                 expectedPackageName = PRODUCT_APPLICATION_ID,
@@ -99,8 +97,10 @@ class HealthcareApplication : Application() {
             installer = SystemAppInstaller("${BuildConfig.APPLICATION_ID}.update-file-provider"),
             scope = applicationScope,
             currentVersionCode = BuildConfig.VERSION_CODE,
+            currentPackageName = BuildConfig.APPLICATION_ID,
             expectedPackageName = PRODUCT_APPLICATION_ID,
-            installEnabled = BuildConfig.APP_UPDATE_INSTALL_ENABLED
+            installEnabled = BuildConfig.APP_UPDATE_INSTALL_ENABLED,
+            showTechnicalFailureReason = BuildConfig.APP_UPDATE_SHOW_DEBUG_FAILURE
         )
     }
 

@@ -49,8 +49,25 @@ data class Macronutrients(
             )
         }
 
+        /**
+         * 영양소별로 확인 가능한 값만 합산합니다. 어떤 기록의 한 영양소가 누락되어도 다른
+         * 기록의 확인된 값은 유지하며, 해당 영양소가 전부 누락된 경우에만 null을 반환합니다.
+         */
+        fun knownSum(items: Iterable<Macronutrients>): Macronutrients {
+            val values = items.toList()
+            if (values.isEmpty()) return Unknown
+            return Macronutrients(
+                values.map { it.carbohydrateGrams }.knownSum(),
+                values.map { it.proteinGrams }.knownSum(),
+                values.map { it.fatGrams }.knownSum()
+            )
+        }
+
         private fun List<Double?>.strictSum(): Double? =
             if (all { it != null }) sumOf { requireNotNull(it) } else null
+
+        private fun List<Double?>.knownSum(): Double? =
+            filterNotNull().takeIf { it.isNotEmpty() }?.sum()
     }
 }
 

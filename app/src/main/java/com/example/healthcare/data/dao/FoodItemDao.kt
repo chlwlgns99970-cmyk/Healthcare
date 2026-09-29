@@ -29,7 +29,7 @@ interface FoodItemDao {
             "WHEN normalizedName LIKE :normalizedQuery || '%' THEN 4 ELSE 5 END, name " +
             "LIMIT :limit"
     )
-    fun observeSearch(normalizedQuery: String, limit: Int = 30): Flow<List<FoodItem>>
+    fun observeSearch(normalizedQuery: String, limit: Int = 80): Flow<List<FoodItem>>
 
     @Query(
         "SELECT * FROM food_items " +

@@ -183,6 +183,7 @@ fun DashboardScreen(
     exerciseWeightKg: Double? = null,
     onOpenExerciseCoach: () -> Unit = {},
     onAddRecord: () -> Unit = {},
+    onAddMealRecord: ((MealType) -> Unit)? = null,
     onQuickRecord: (QuickRecordAction) -> Unit = {},
     onOpenEnergySettings: () -> Unit = {},
     onOpenMealPlan: (MealType, Int) -> Unit = { _, _ -> },
@@ -301,6 +302,7 @@ fun DashboardScreen(
         onPreviousDay = { viewModel?.moveToPreviousDay() },
         onNextDay = { viewModel?.moveToNextDay() },
         onAddRecord = onAddRecord,
+        onAddMealRecord = onAddMealRecord,
         onQuickRecord = onQuickRecord,
         onOpenEnergySettings = onOpenEnergySettings,
         onOpenMealPlan = onOpenMealPlan,
@@ -346,7 +348,8 @@ internal fun DashboardContent(
     nutrition: Macronutrients = Macronutrients.Unknown,
     stepCounterState: StepCounterUiState = StepCounterUiState(StepCounterStatus.PERMISSION_REQUIRED),
     onStepAction: () -> Unit = {},
-    onOpenActivityDetail: () -> Unit = {}
+    onOpenActivityDetail: () -> Unit = {},
+    onAddMealRecord: ((MealType) -> Unit)? = null
 ) {
     val dateFormatter = DateTimeFormatter.ofPattern("M월 d일 (E)", Locale.KOREAN)
     val isToday = selectedDate == LocalDate.now()
@@ -457,7 +460,7 @@ internal fun DashboardContent(
                 CompactMealCard(
                     meals = meals,
                     mealCalories = mealCalories,
-                    onClick = onAddRecord,
+                    onClick = { mealType -> onAddMealRecord?.invoke(mealType) ?: onAddRecord() },
                     dense = dense,
                     modifier = Modifier.fillMaxWidth().height(if (dense) 140.dp else 154.dp)
                 )
@@ -656,7 +659,7 @@ private fun CompactMacro(label: String, grams: Double?, color: Color) {
 private fun CompactMealCard(
     meals: List<MealRecord>,
     mealCalories: Map<MealType, Int>,
-    onClick: () -> Unit,
+    onClick: (MealType) -> Unit,
     dense: Boolean,
     modifier: Modifier = Modifier
 ) {
@@ -671,7 +674,7 @@ private fun CompactMealCard(
                 else -> R.drawable.photo_breakfast_yogurt_bowl
             }
             Card(
-                onClick = onClick,
+                onClick = { onClick(type) },
                 modifier = Modifier.weight(1f).fillMaxWidth()
                     .testTag("dashboard-meal-${type.name.lowercase()}"),
                 colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),

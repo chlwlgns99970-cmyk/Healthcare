@@ -32,26 +32,13 @@ interface MealRecordDao {
     @Query("SELECT SUM(calories) FROM meal_records WHERE date = :date")
     fun getTotalCaloriesByDate(date: String): Flow<Int?>
 
-    /**
-     * 신규 기록은 저장 시점 스냅샷을 사용합니다. 스냅샷이 없는 과거 기록만 연결된 음식의
-     * 현재 원본을 기록 kcal 비율로 환산하며, 연결할 수 없으면 null을 반환합니다.
-     */
+    /** 저장 당시의 영양정보 스냅샷만 반환합니다. 과거 null 값은 현재 음식 DB로 재계산하지 않습니다. */
     @Query(
         """
-        SELECT m.id AS mealId,
-          COALESCE(m.carbohydrateGrams,
-            CASE WHEN f.energyKcal > 0 AND f.carbohydrateGrams IS NOT NULL
-              THEN f.carbohydrateGrams * m.calories / f.energyKcal END) AS carbohydrateGrams,
-          COALESCE(m.proteinGrams,
-            CASE WHEN f.energyKcal > 0 AND f.proteinGrams IS NOT NULL
-              THEN f.proteinGrams * m.calories / f.energyKcal END) AS proteinGrams,
-          COALESCE(m.fatGrams,
-            CASE WHEN f.energyKcal > 0 AND f.fatGrams IS NOT NULL
-              THEN f.fatGrams * m.calories / f.energyKcal END) AS fatGrams
-        FROM meal_records m
-        LEFT JOIN food_items f ON f.id = m.foodItemId
-        WHERE m.date = :date
-        ORDER BY m.time ASC
+        SELECT id AS mealId, carbohydrateGrams, proteinGrams, fatGrams
+        FROM meal_records
+        WHERE date = :date
+        ORDER BY time ASC
         """
     )
     fun getNutritionByDate(date: String): Flow<List<MealNutritionRow>>

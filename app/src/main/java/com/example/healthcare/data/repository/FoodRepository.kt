@@ -19,12 +19,20 @@ open class FoodRepository(private val frequentFoodDao: FrequentFoodDao) {
     }
 
     open suspend fun insertFoodIfAbsent(food: FrequentFood): Boolean {
-        val duplicate = searchFoods(food.foodName).first().any { saved ->
+        val duplicate = searchFoods(food.foodName).first().firstOrNull { saved ->
             saved.foodName.trim().equals(food.foodName.trim(), ignoreCase = true) &&
                 saved.defaultServing.trim().equals(food.defaultServing.trim(), ignoreCase = true) &&
                 saved.calories == food.calories
         }
-        if (duplicate) return false
+        if (duplicate != null) {
+            val enriched = duplicate.copy(
+                carbohydrateGrams = duplicate.carbohydrateGrams ?: food.carbohydrateGrams,
+                proteinGrams = duplicate.proteinGrams ?: food.proteinGrams,
+                fatGrams = duplicate.fatGrams ?: food.fatGrams
+            )
+            if (enriched != duplicate) updateFood(enriched)
+            return false
+        }
         insertFood(food)
         return true
     }

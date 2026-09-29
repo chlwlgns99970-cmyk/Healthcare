@@ -37,6 +37,26 @@ class FrequentFoodRepositoryTest {
         assertEquals(2, dao.values.value.size)
     }
 
+    @Test
+    fun `existing saved food gains only previously missing macro snapshots`() = runTest {
+        val dao = FakeFrequentFoodDao()
+        val repository = FoodRepository(dao)
+        val original = FrequentFood(
+            foodName = "사과", defaultServing = "100g", calories = 52,
+            carbohydrateGrams = null, proteinGrams = 0.3, fatGrams = null
+        )
+        repository.insertFood(original)
+
+        assertFalse(repository.insertFoodIfAbsent(original.copy(
+            carbohydrateGrams = 14.0, proteinGrams = 9.9, fatGrams = 0.2
+        )))
+
+        val enriched = dao.values.value.single()
+        assertEquals(14.0, enriched.carbohydrateGrams!!, 0.0001)
+        assertEquals(0.3, enriched.proteinGrams!!, 0.0001)
+        assertEquals(0.2, enriched.fatGrams!!, 0.0001)
+    }
+
     private class FakeFrequentFoodDao : FrequentFoodDao {
         val values = MutableStateFlow<List<FrequentFood>>(emptyList())
         private var nextId = 1L

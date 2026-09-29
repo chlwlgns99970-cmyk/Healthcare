@@ -57,7 +57,7 @@ data class SelectedMealUi(
     val consumedCalories: Int get() = ingredients.filter(RecommendedIngredientUi::included)
         .sumOf { (it.calories * it.consumedRatio).roundToInt() }
     val consumedNutrition: Macronutrients
-        get() = Macronutrients.strictSum(
+        get() = Macronutrients.knownSum(
             ingredients.filter(RecommendedIngredientUi::included).map(RecommendedIngredientUi::nutrition)
         )
 }

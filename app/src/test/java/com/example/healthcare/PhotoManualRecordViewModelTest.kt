@@ -8,6 +8,7 @@ import com.example.healthcare.data.entity.FoodBrandSummary
 import com.example.healthcare.data.entity.FoodItem
 import com.example.healthcare.data.entity.MealRecord
 import com.example.healthcare.data.model.RecordSource
+import com.example.healthcare.data.model.MealType
 import com.example.healthcare.data.photo.FoodPhotoAnalysisRepository
 import com.example.healthcare.data.photo.FoodPhotoProcessor
 import com.example.healthcare.data.photo.model.FoodPhotoAnalysisRequest
@@ -45,6 +46,7 @@ class PhotoManualRecordViewModelTest {
     private val dispatcher = StandardTestDispatcher()
     private val insertedMeals = mutableListOf<MealRecord>()
     private val registeredProducts = mutableListOf<FoodItem>()
+    private val savedFrequentFoods = mutableListOf<FrequentFood>()
     private var analysisCalls = 0
     private lateinit var cacheRoot: File
     private lateinit var viewModel: AddRecordViewModel
@@ -68,12 +70,19 @@ class PhotoManualRecordViewModelTest {
     }
 
     private val foodDao = object : FrequentFoodDao {
-        override suspend fun insertFood(food: FrequentFood) = Unit
-        override suspend fun updateFood(food: FrequentFood) = Unit
-        override suspend fun deleteFood(food: FrequentFood) = Unit
-        override fun getAllFoods(): Flow<List<FrequentFood>> = flowOf(emptyList())
-        override fun getFavoriteFoods(): Flow<List<FrequentFood>> = flowOf(emptyList())
-        override fun searchFoods(query: String): Flow<List<FrequentFood>> = flowOf(emptyList())
+        override suspend fun insertFood(food: FrequentFood) {
+            savedFrequentFoods += food.copy(id = savedFrequentFoods.size + 1L)
+        }
+        override suspend fun updateFood(food: FrequentFood) {
+            savedFrequentFoods.replaceAll { if (it.id == food.id) food else it }
+        }
+        override suspend fun deleteFood(food: FrequentFood) {
+            savedFrequentFoods.removeAll { it.id == food.id }
+        }
+        override fun getAllFoods(): Flow<List<FrequentFood>> = flowOf(savedFrequentFoods)
+        override fun getFavoriteFoods(): Flow<List<FrequentFood>> = flowOf(savedFrequentFoods.filter { it.isFavorite })
+        override fun searchFoods(query: String): Flow<List<FrequentFood>> =
+            flowOf(savedFrequentFoods.filter { it.foodName.contains(query, ignoreCase = true) })
     }
 
     private val foodItemDao = object : FoodItemDao {
@@ -154,6 +163,24 @@ class PhotoManualRecordViewModelTest {
     }
 
     @Test
+    fun `홈에서 고른 네 식사 구분은 저장과 성공 피드백까지 유지된다`() = runTest(dispatcher.scheduler) {
+        val mealTypes = listOf(MealType.BREAKFAST, MealType.SNACK, MealType.LUNCH, MealType.DINNER)
+        mealTypes.forEach { mealType ->
+            viewModel.onMealTypeChange(mealType)
+            viewModel.onFoodNameChange("${mealType.displayName} 테스트")
+            viewModel.onCaloriesChange("100")
+            var completedMealType: MealType? = null
+
+            viewModel.saveRecord { completedMealType = it }
+            advanceUntilIdle()
+
+            assertEquals(mealType, insertedMeals.last().mealType)
+            assertEquals(mealType, completedMealType)
+        }
+        assertEquals(4, insertedMeals.size)
+    }
+
+    @Test
     fun `저장 음식의 빠른 섭취량은 기준 칼로리와 제공량에 비례한다`() {
         viewModel.selectFrequentFood(
             FrequentFood(foodName = "비빔밥", defaultServing = "100g", calories = 600)
@@ -171,6 +198,74 @@ class PhotoManualRecordViewModelTest {
         assertEquals("275", viewModel.uiState.value.calories)
         assertNull(viewModel.uiState.value.selectedServingRatio)
     }
+
+    @Test
+    fun `검색 음식 150그램은 탄단지 모두 같은 비율로 MealRecord에 저장한다`() =
+        runTest(dispatcher.scheduler) {
+            val food = FoodItem(
+                id = "macro-food", sourceType = "K-FIND", sourceFoodCode = "macro-food",
+                name = "영양 음식", normalizedName = "영양음식", category = "밥류",
+                referenceAmount = 100.0, unit = "g", energyKcal = 200.0,
+                carbohydrateGrams = 30.0, proteinGrams = 10.0, fatGrams = 5.0,
+                servingDescription = "100g 기준", dataVersion = "test", createdAt = 1, updatedAt = 1
+            )
+            viewModel.selectVerifiedFood(food)
+            viewModel.onServingAmountChange("150")
+            viewModel.saveRecord {}
+            advanceUntilIdle()
+
+            val saved = insertedMeals.single()
+            assertEquals(45.0, saved.carbohydrateGrams!!, 0.0001)
+            assertEquals(15.0, saved.proteinGrams!!, 0.0001)
+            assertEquals(7.5, saved.fatGrams!!, 0.0001)
+        }
+
+    @Test
+    fun `직접 입력은 근거 없는 탄단지를 0으로 만들지 않는다`() = runTest(dispatcher.scheduler) {
+        viewModel.onFoodNameChange("직접 입력 음식")
+        viewModel.onServingAmountChange("1")
+        viewModel.onServingUnitChange("인분")
+        viewModel.onCaloriesChange("300")
+        viewModel.saveRecord {}
+        advanceUntilIdle()
+
+        val saved = insertedMeals.single()
+        assertNull(saved.carbohydrateGrams)
+        assertNull(saved.proteinGrams)
+        assertNull(saved.fatGrams)
+    }
+
+    @Test
+    fun `자주 먹는 음식은 저장 시점 탄단지를 보존하고 재기록 양에 비례한다`() =
+        runTest(dispatcher.scheduler) {
+            val food = FoodItem(
+                id = "favorite-food", sourceType = "K-FIND", sourceFoodCode = "favorite-food",
+                name = "저장 영양 음식", normalizedName = "저장영양음식", category = "밥류",
+                referenceAmount = 100.0, unit = "g", energyKcal = 200.0,
+                carbohydrateGrams = 30.0, proteinGrams = 10.0, fatGrams = 5.0,
+                servingDescription = "100g 기준", dataVersion = "test", createdAt = 1, updatedAt = 1
+            )
+            viewModel.selectVerifiedFood(food)
+            viewModel.onServingAmountChange("150")
+            viewModel.onSaveAsFrequentChange(true)
+            viewModel.saveRecord {}
+            advanceUntilIdle()
+
+            val favorite = savedFrequentFoods.single()
+            assertEquals(45.0, favorite.carbohydrateGrams!!, 0.0001)
+            assertEquals(15.0, favorite.proteinGrams!!, 0.0001)
+            assertEquals(7.5, favorite.fatGrams!!, 0.0001)
+
+            viewModel.selectFrequentFood(favorite)
+            viewModel.selectServingRatio(0.5)
+            viewModel.saveRecord {}
+            advanceUntilIdle()
+
+            val repeated = insertedMeals.last()
+            assertEquals(22.5, repeated.carbohydrateGrams!!, 0.0001)
+            assertEquals(7.5, repeated.proteinGrams!!, 0.0001)
+            assertEquals(3.75, repeated.fatGrams!!, 0.0001)
+        }
 
     @Test
     fun `검증 음식의 직접 섭취량 변경은 기준량으로 칼로리를 다시 계산한다`() {

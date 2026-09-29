@@ -41,6 +41,7 @@ import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Snackbar
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -49,6 +50,7 @@ import androidx.compose.material3.adaptive.layout.ListDetailPaneScaffold
 import androidx.compose.material3.adaptive.layout.ListDetailPaneScaffoldRole
 import androidx.compose.material3.adaptive.navigation.rememberListDetailPaneScaffoldNavigator
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
@@ -106,6 +108,7 @@ import com.example.healthcare.ui.theme.WellnessSpacing
 import com.example.healthcare.ui.viewmodel.HistoryViewModel
 import com.example.healthcare.ui.viewmodel.MealEditUiState
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.delay
 import java.text.NumberFormat
 import java.time.LocalDate
 import java.time.YearMonth
@@ -132,6 +135,13 @@ fun HistoryScreen(viewModel: HistoryViewModel? = null) {
     val editState by viewModel?.editState?.collectAsState() ?: remember { mutableStateOf(MealEditUiState()) }
     val timeline by viewModel?.intakeTimeline?.collectAsState() ?: remember { mutableStateOf(DailyIntakeTimeline.Empty) }
     var selectedHubSection by rememberSaveable { mutableStateOf<String?>(null) }
+    var editFeedback by rememberSaveable { mutableStateOf<String?>(null) }
+    LaunchedEffect(editFeedback) {
+        if (editFeedback != null) {
+            delay(3_000)
+            editFeedback = null
+        }
+    }
 
     if (selectedHubSection == null) {
         HistoryHubContent(
@@ -146,6 +156,7 @@ fun HistoryScreen(viewModel: HistoryViewModel? = null) {
         .getOrDefault(HistoryHubSection.SEVEN_DAYS)
     BackHandler { selectedHubSection = null }
 
+    Box(Modifier.fillMaxSize()) {
     ListDetailPaneScaffold(
         directive = navigator.scaffoldDirective,
         value = navigator.scaffoldValue,
@@ -189,6 +200,7 @@ fun HistoryScreen(viewModel: HistoryViewModel? = null) {
                     onMemoChange = { viewModel?.onEditMemoChange(it) },
                     onSave = {
                         viewModel?.saveMealEdit {
+                            editFeedback = "기록을 수정했어요"
                             scope.launch { navigator.navigateBack() }
                         }
                     },
@@ -210,6 +222,12 @@ fun HistoryScreen(viewModel: HistoryViewModel? = null) {
             }
         }
     )
+        editFeedback?.let { message ->
+            Snackbar(
+                modifier = Modifier.align(Alignment.BottomCenter).padding(16.dp)
+            ) { Text(message) }
+        }
+    }
 }
 
 private enum class HistoryHubSection(val title: String, val description: String) {
@@ -606,8 +624,10 @@ fun HistoryDetailPane(
                     }
                 },
                 actions = {
-                    IconButton(onClick = onEdit, modifier = Modifier.size(48.dp)) {
-                        Icon(Icons.Rounded.Edit, contentDescription = "기록 편집")
+                    TextButton(onClick = onEdit, modifier = Modifier.heightIn(min = 48.dp).testTag("history-detail-edit")) {
+                        Icon(Icons.Rounded.Edit, contentDescription = null)
+                        Spacer(Modifier.size(6.dp))
+                        Text("수정")
                     }
                 }
             )

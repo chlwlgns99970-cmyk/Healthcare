@@ -32,16 +32,31 @@ class FoodSearchPolicyTest {
         assertFalse(FoodSearchPolicy.needsBasisReview(food("우유", "음료 및 차류", "ml")))
     }
 
-    @Test fun officialProductsRankBeforeGenericRowsForExactPrefixAndContainsMatches() {
+    @Test fun exactAndCompleteFoodNameMatchesRankBeforeGenericSourceType() {
         val exactProduct = food("신라면", "면류", "g").copy(sourceType = "K-FIND-PRODUCT", normalizedName = "신라면")
         val prefixProduct = exactProduct.copy(name = "신라면 블랙", normalizedName = "신라면블랙")
         val containsProduct = exactProduct.copy(name = "매운 신라면", normalizedName = "매운신라면")
         val generic = food("신라면", "면류", "g").copy(normalizedName = "신라면")
-        assertEquals(listOf(0, 1, 2, 3), listOf(exactProduct, prefixProduct, containsProduct, generic)
+        assertEquals(listOf(0, 20, 20, 0), listOf(exactProduct, prefixProduct, containsProduct, generic)
             .map { FoodSearchPolicy.searchRank(it, "신라면") })
         assertEquals("제품", FoodSearchPolicy.resultGroup(exactProduct))
         assertEquals("기본·종류", FoodSearchPolicy.resultGroup(generic))
         assertTrue(FoodSearchPolicy.isOfficialKfind(exactProduct))
+    }
+
+    @Test fun tunaGimbapExactAliasAndTokenMatchesRankBeforePlainGimbap() {
+        val exactSourceOrder = food("김밥_참치", "밥류", "g").copy(normalizedName = "김밥참치")
+        val spacedExact = food("참치 김밥", "밥류", "g").copy(normalizedName = "참치김밥")
+        val tokenMatch = food("참치 마요 김밥", "밥류", "g").copy(normalizedName = "참치마요김밥")
+        val strongVariant = food("매콤참치김밥", "밥류", "g").copy(normalizedName = "매콤참치김밥")
+        val generic = food("김밥", "밥류", "g").copy(normalizedName = "김밥")
+
+        assertEquals(0, FoodSearchPolicy.searchRank(exactSourceOrder, "참치김밥"))
+        assertEquals(0, FoodSearchPolicy.searchRank(spacedExact, "참치 김밥"))
+        assertTrue(FoodSearchPolicy.searchRank(tokenMatch, "참치김밥") <
+            FoodSearchPolicy.searchRank(generic, "참치김밥"))
+        assertTrue(FoodSearchPolicy.searchRank(strongVariant, "참치김밥") <
+            FoodSearchPolicy.searchRank(generic, "참치김밥"))
     }
 
     @Test fun officialSoupDetailIsNaturalizedForDisplayWithoutChangingSourceName() {

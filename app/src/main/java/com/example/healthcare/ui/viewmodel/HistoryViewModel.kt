@@ -100,7 +100,7 @@ class HistoryViewModel(
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
 
     val dailyNutrition: StateFlow<Macronutrients> = dailyNutritionRows
-        .map { rows -> Macronutrients.strictSum(rows.map { it.asMacronutrients() }) }
+        .map { rows -> Macronutrients.knownSum(rows.map { it.asMacronutrients() }) }
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), Macronutrients.Unknown)
 
     // 해당 날짜의 목표 칼로리
@@ -311,7 +311,7 @@ class HistoryViewModel(
             } catch (_: Exception) {
                 _editState.value = validated.copy(
                     isSaving = false,
-                    saveError = "기록을 수정하지 못했습니다. 다시 시도해주세요."
+                    saveError = "기록 수정에 실패했어요. 다시 시도해주세요."
                 )
             }
         }

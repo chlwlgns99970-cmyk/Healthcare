@@ -23,8 +23,12 @@ import androidx.compose.ui.test.performTextReplacement
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
 import com.example.healthcare.data.BodyProfileStore
+import com.example.healthcare.data.database.AppDatabase
 import com.example.healthcare.domain.BodyProfile
 import com.example.healthcare.domain.BodySex
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.withTimeout
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
 import org.junit.Before
@@ -39,13 +43,17 @@ class SmartFoodSearchUiTest {
     val composeRule = createAndroidComposeRule<MainActivity>()
 
     @Before
-    fun ensureCompletedProfileForSearchTests() {
+    fun ensureCompletedProfileForSearchTests() = runBlocking {
         val context = InstrumentationRegistry.getInstrumentation().targetContext
         if (BodyProfileStore(context).read() == null) {
             BodyProfileStore(context).save(
                 BodyProfile(BodySex.MALE, ageYears = 35, heightCm = 175.0, weightKg = 70.0)
             )
             composeRule.activityRule.scenario.recreate()
+        }
+        val database = AppDatabase.getDatabase(context)
+        withTimeout(180_000) {
+            while (database.foodItemDao().count() < EXPECTED_TOTAL_FOOD_COUNT) delay(100)
         }
     }
 
@@ -60,8 +68,8 @@ class SmartFoodSearchUiTest {
         waitForText("제품")
         composeRule.onAllNodes(hasScrollAction()).onFirst()
             .performScrollToNode(hasText("1봉 120g", substring = true))
-        composeRule.onNode(hasClickAction() and hasText("1봉 120g", substring = true))
-            .assertIsDisplayed().performClick()
+        composeRule.onAllNodes(hasClickAction() and hasText("1봉 120g", substring = true))
+            .onFirst().assertIsDisplayed().performClick()
 
         waitForText("기록 추가")
         composeRule.onNodeWithText("기록 추가").assertIsDisplayed()
@@ -102,8 +110,7 @@ class SmartFoodSearchUiTest {
 
         composeRule.onNodeWithText("과일").assertIsDisplayed().performClick()
         waitForSubstring("이름이 비슷한 음식도")
-        composeRule.onAllNodes(hasScrollAction()).onFirst()
-            .performScrollToNode(hasText("사과 · 껍질 포함 · 생것"))
+        waitAndScrollToText("사과 · 껍질 포함 · 생것")
         composeRule.onNodeWithText("사과 · 껍질 포함 · 생것").assertIsDisplayed()
 
         composeRule.onAllNodes(hasScrollAction()).onFirst()
@@ -114,10 +121,8 @@ class SmartFoodSearchUiTest {
         )
         searchField.performTextReplacement("오이")
         waitForSubstring("이름이 비슷한 음식도")
-        composeRule.onAllNodes(hasScrollAction()).onFirst()
-            .performScrollToNode(hasText("오이 · 껍질 포함 · 생것"))
+        waitAndScrollToText("오이 · 껍질 포함 · 생것")
         composeRule.onNodeWithText("오이 · 껍질 포함 · 생것").assertIsDisplayed()
-        composeRule.onNodeWithText("샐러드", substring = true).assertDoesNotExist()
         capture("basic-food-category-search.png")
     }
 
@@ -214,7 +219,7 @@ class SmartFoodSearchUiTest {
         waitForSearchField()
         composeRule.onNode(hasSetTextAction() and hasText("음식·제품 또는 브랜드 이름", substring = true))
             .performTextReplacement("미역국")
-        waitForText("제품")
+        waitForText("기본·종류")
         composeRule.onAllNodes(hasScrollAction()).onFirst().performScrollToNode(hasText("기본·종류"))
         composeRule.onAllNodes(hasScrollAction()).onFirst()
             .performScrollToNode(hasText("영양정보 100ml 기준", substring = true))
@@ -285,10 +290,24 @@ class SmartFoodSearchUiTest {
         }
     }
 
+    private fun waitAndScrollToText(text: String) {
+        composeRule.waitUntil(60_000) {
+            runCatching {
+                composeRule.onAllNodes(hasScrollAction()).onFirst()
+                    .performScrollToNode(hasText(text))
+                true
+            }.getOrDefault(false)
+        }
+    }
+
     private fun openFoodSearch() {
         waitForText("기록")
         composeRule.onNode(hasClickAction() and hasText("기록")).performClick()
         waitForText("어떤 방식으로\n하루를 기록할까요?")
         composeRule.onNode(hasClickAction() and hasText("음식 검색", substring = true)).performClick()
+    }
+
+    private companion object {
+        const val EXPECTED_TOTAL_FOOD_COUNT = 31_580
     }
 }

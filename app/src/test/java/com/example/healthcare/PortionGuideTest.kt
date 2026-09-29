@@ -138,6 +138,24 @@ class PortionGuideTest {
         assertEquals("제품 전체 320g · 800 kcal", PortionGuide.resultServingSummary(unmarked))
     }
 
+    @Test fun verifiedLineUnitIsOfferedOnlyWhenOfficialSourceSaysLine() {
+        val verifiedRoll = food("참치김밥", "밥류", 100.0, "g", 170.0).copy(
+            sourceType = "K-FIND-PRODUCT",
+            sourceFoodCode = "official-roll",
+            servingDescription = "100g 기준 · 공식 총내용량 240g · 포장단위 줄"
+        )
+        assertEquals(listOf("반 줄", "1줄", "1.5줄", "2줄"),
+            PortionGuide.presets(verifiedRoll).map { it.label })
+        assertEquals(408, PortionGuide.estimate(verifiedRoll, PortionGuide.presets(verifiedRoll)[1])?.calories)
+
+        val genericRoll = verifiedRoll.copy(
+            sourceType = "K-FIND",
+            servingDescription = "100g 기준"
+        )
+        assertTrue(PortionGuide.presets(genericRoll).isEmpty())
+        assertTrue(PortionGuide.requiresDirectAmount(genericRoll))
+    }
+
     @Test fun hamburgerNeverBecomesOnePieceWithoutOfficialPieceEvidence() {
         val genericBurger = food("햄버거", "빵류", 100.0, "g", 250.0)
         assertEquals("영양정보 100g 기준 · 약 250 kcal", PortionGuide.resultServingSummary(genericBurger))

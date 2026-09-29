@@ -129,7 +129,20 @@ class AddRecordViewModel(
     }
 
     fun onCaloriesChange(calories: String) {
-        _uiState.update { it.copy(calories = calories, caloriesError = null, selectedServingRatio = null) }
+        _uiState.update { state ->
+            val referenceCalories = state.referenceCalories?.takeIf { it > 0 }
+            val enteredCalories = calories.trim().replace(',', '.').toDoubleOrNull()
+                ?.takeIf { it.isFinite() && it > 0.0 }
+            val hasEstimatedNutrition = state.estimatedCarbohydrateGrams != null ||
+                state.estimatedProteinGrams != null || state.estimatedFatGrams != null
+            state.copy(
+                calories = calories,
+                caloriesError = null,
+                selectedServingRatio = if (hasEstimatedNutrition && referenceCalories != null && enteredCalories != null) {
+                    enteredCalories / referenceCalories
+                } else null
+            )
+        }
     }
 
     fun onServingAmountChange(amount: String) {
@@ -572,9 +585,9 @@ class AddRecordViewModel(
                 selectedServingRatio = 1.0,
                 selectedFoodItemId = null,
                 selectedFood = null,
-                estimatedCarbohydrateGrams = null,
-                estimatedProteinGrams = null,
-                estimatedFatGrams = null,
+                estimatedCarbohydrateGrams = food.carbohydrateGrams,
+                estimatedProteinGrams = food.proteinGrams,
+                estimatedFatGrams = food.fatGrams,
                 selectedPortion = null,
                 selectedBarcode = null,
                 pendingProductBarcode = null,
@@ -813,7 +826,7 @@ class AddRecordViewModel(
         }
     }
 
-    fun saveRecord(onSuccess: () -> Unit) {
+    fun saveRecord(onSuccess: (MealType) -> Unit) {
         val state = _uiState.value
         val manualPhotoPath = (_photoState.value as? PhotoAnalysisUiState.ManualEntry)?.photoPath
         var hasError = false
@@ -886,7 +899,7 @@ class AddRecordViewModel(
                     state.estimatedCarbohydrateGrams,
                     state.estimatedProteinGrams,
                     state.estimatedFatGrams
-                )
+                ).scaled(state.selectedServingRatio ?: 1.0)
                 val primaryRecord = MealRecord(
                         date = state.date.format(dateFormatter),
                         time = state.time.format(timeFormatter),
@@ -940,7 +953,10 @@ class AddRecordViewModel(
                             foodName = state.foodName.trim(),
                             defaultServing = servingDescription(state.servingAmount, state.servingUnit),
                             calories = calorieInt,
-                            isFavorite = true
+                            isFavorite = true,
+                            carbohydrateGrams = primaryNutrition.carbohydrateGrams,
+                            proteinGrams = primaryNutrition.proteinGrams,
+                            fatGrams = primaryNutrition.fatGrams
                         )
                     )
                 }
@@ -948,9 +964,10 @@ class AddRecordViewModel(
                     photoProcessor?.deleteTemporaryPhoto(manualPhotoPath)
                     _photoState.value = PhotoAnalysisUiState.Idle
                 }
+                val savedMealType = state.mealType
                 _uiState.value = AddRecordUiState()
                 showSmartInputHub()
-                onSuccess()
+                onSuccess(savedMealType)
             } catch (_: Exception) {
                 _uiState.update { it.copy(saveError = "기록을 저장하지 못했습니다. 다시 시도해주세요.") }
             } finally {
@@ -1110,14 +1127,14 @@ class AddRecordViewModel(
                 referenceCalories = candidate.energyKcal.roundToInt(),
                 referenceServingAmount = candidate.referenceAmount,
                 referenceServingUnit = candidate.unit,
-                selectedServingRatio = null,
+                selectedServingRatio = amount / candidate.referenceAmount,
                 selectedPortion = smart.ocrPortionPreset,
                 recordSource = RecordSource.NUTRITION_LABEL,
                 selectedFoodItemId = null,
                 selectedFood = null,
-                estimatedCarbohydrateGrams = result.carbohydrateGrams?.times(amount / candidate.referenceAmount),
-                estimatedProteinGrams = result.proteinGrams?.times(amount / candidate.referenceAmount),
-                estimatedFatGrams = result.fatGrams?.times(amount / candidate.referenceAmount),
+                estimatedCarbohydrateGrams = result.carbohydrateGrams,
+                estimatedProteinGrams = result.proteinGrams,
+                estimatedFatGrams = result.fatGrams,
                 selectedBarcode = null,
                 nameError = null,
                 caloriesError = null

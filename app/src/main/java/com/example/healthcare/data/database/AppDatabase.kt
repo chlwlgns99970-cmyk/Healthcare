@@ -47,7 +47,7 @@ import com.example.healthcare.data.entity.UserMealPreference
         RecognitionSession::class,
         RecognitionCandidate::class
     ],
-    version = 6,
+    version = 7,
     exportSchema = false
 )
 @TypeConverters(Converters::class)
@@ -71,7 +71,10 @@ abstract class AppDatabase : RoomDatabase() {
                     AppDatabase::class.java,
                     "healthcare_database"
                 )
-                    .addMigrations(MIGRATION_1_2, MIGRATION_2_3, MIGRATION_3_4, MIGRATION_4_5, MIGRATION_5_6)
+                    .addMigrations(
+                        MIGRATION_1_2, MIGRATION_2_3, MIGRATION_3_4, MIGRATION_4_5,
+                        MIGRATION_5_6, MIGRATION_6_7
+                    )
                     .build()
                 INSTANCE = instance
                 instance
@@ -263,6 +266,14 @@ abstract class AppDatabase : RoomDatabase() {
                 db.execSQL("ALTER TABLE meal_records ADD COLUMN carbohydrateGrams REAL")
                 db.execSQL("ALTER TABLE meal_records ADD COLUMN proteinGrams REAL")
                 db.execSQL("ALTER TABLE meal_records ADD COLUMN fatGrams REAL")
+            }
+        }
+
+        val MIGRATION_6_7 = object : Migration(6, 7) {
+            override fun migrate(db: SupportSQLiteDatabase) {
+                db.execSQL("ALTER TABLE frequent_foods ADD COLUMN carbohydrateGrams REAL")
+                db.execSQL("ALTER TABLE frequent_foods ADD COLUMN proteinGrams REAL")
+                db.execSQL("ALTER TABLE frequent_foods ADD COLUMN fatGrams REAL")
             }
         }
     }

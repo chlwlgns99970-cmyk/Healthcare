@@ -45,7 +45,7 @@ class AppDatabaseMigrationTest {
     }
 
     @Test
-    fun version1DataIsPreservedThroughVersion6AndCoachTablesAreCreated() {
+    fun version1DataIsPreservedThroughVersion7AndCoachTablesAreCreated() {
         val configuration = SupportSQLiteOpenHelper.Configuration.builder(context)
             .name(databaseName)
             .callback(object : SupportSQLiteOpenHelper.Callback(1) {
@@ -81,6 +81,10 @@ class AppDatabaseMigrationTest {
             helper.writableDatabase.execSQL(
                 "INSERT INTO calorie_goals(targetCalories, startDate) VALUES(2000, '2026-09-01')"
             )
+            helper.writableDatabase.execSQL(
+                "INSERT INTO frequent_foods(foodName, defaultServing, calories, isFavorite) " +
+                    "VALUES('기존 저장 음식', '1인분', 300, 1)"
+            )
         }
 
         val database = Room.databaseBuilder(context, AppDatabase::class.java, databaseName)
@@ -89,7 +93,8 @@ class AppDatabaseMigrationTest {
                 AppDatabase.MIGRATION_2_3,
                 AppDatabase.MIGRATION_3_4,
                 AppDatabase.MIGRATION_4_5,
-                AppDatabase.MIGRATION_5_6
+                AppDatabase.MIGRATION_5_6,
+                AppDatabase.MIGRATION_6_7
             )
             .allowMainThreadQueries()
             .build()
@@ -116,6 +121,16 @@ class AppDatabaseMigrationTest {
                 cursor.moveToFirst()
                 assertEquals(2000, cursor.getInt(0))
                 assertEquals("2026-09-01", cursor.getString(1))
+            }
+            database.openHelper.writableDatabase.query(
+                "SELECT foodName, calories, carbohydrateGrams, proteinGrams, fatGrams FROM frequent_foods"
+            ).use { cursor ->
+                cursor.moveToFirst()
+                assertEquals("기존 저장 음식", cursor.getString(0))
+                assertEquals(300, cursor.getInt(1))
+                assertNull(cursor.getString(2))
+                assertNull(cursor.getString(3))
+                assertNull(cursor.getString(4))
             }
             database.openHelper.writableDatabase.execSQL(
                 "INSERT INTO energy_profile_history(" +
@@ -293,7 +308,7 @@ class AppDatabaseMigrationTest {
     }
 
     @Test
-    fun legacyLinkedNutritionIsDerivedButUnlinkedHistoryStaysUnknown() = runBlocking {
+    fun historicalMissingNutritionStaysUnknownEvenWhenFoodIsStillLinked() = runBlocking {
         val database = Room.inMemoryDatabaseBuilder(context, AppDatabase::class.java)
             .allowMainThreadQueries()
             .build()
@@ -317,9 +332,9 @@ class AppDatabaseMigrationTest {
             )
 
             val rows = database.mealRecordDao().getNutritionByDate("2026-09-23").first()
-            assertEquals(40.0, rows[0].carbohydrateGrams!!, 0.0001)
-            assertEquals(5.0, rows[0].proteinGrams!!, 0.0001)
-            assertEquals(8.0, rows[0].fatGrams!!, 0.0001)
+            assertNull(rows[0].carbohydrateGrams)
+            assertNull(rows[0].proteinGrams)
+            assertNull(rows[0].fatGrams)
             assertNull(rows[1].carbohydrateGrams)
             assertNull(rows[1].proteinGrams)
             assertNull(rows[1].fatGrams)

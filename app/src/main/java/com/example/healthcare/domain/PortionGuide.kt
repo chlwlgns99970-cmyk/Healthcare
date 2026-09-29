@@ -45,7 +45,7 @@ object PortionGuide {
     const val JJOLMYEON_SERVING_GRAMS = 450.0
     const val JJOLMYEON_SOURCE = "식품안전나라 외식 영양성분 자료집 · 쫄면 1인분 450g · https://www.foodsafetykorea.go.kr/upload/20150824/20150824011539_1440389739434.pdf"
     private val officialTotalPattern = Regex("공식 총내용량\\s+([0-9]+(?:\\.[0-9]+)?)(g|ml)", RegexOption.IGNORE_CASE)
-    private val packageUnitPattern = Regex("포장단위\\s+(봉|캔|병|팩|개|조각)")
+    private val packageUnitPattern = Regex("포장단위\\s+(봉|캔|병|팩|개|조각|줄)")
 
     fun presets(food: FoodItem): List<PortionPreset> {
         if (!validFood(food)) return emptyList()
@@ -110,7 +110,7 @@ object PortionGuide {
                 preset("jjol-one-half", "쫄면 한 그릇 반", JJOLMYEON_SERVING_GRAMS * 1.5, unit,
                     PortionEstimationType.OFFICIAL_SERVING, JJOLMYEON_SOURCE)
             )
-            unit in setOf("개", "조각", "봉", "봉지", "캔", "병", "인분") && food.referenceAmount == 1.0 -> listOf(
+            unit in setOf("개", "조각", "봉", "봉지", "캔", "병", "인분", "줄") && food.referenceAmount == 1.0 -> listOf(
                 preset("count-half", "반 $unit", 0.5, unit, PortionEstimationType.OFFICIAL_SERVING, food.servingDescription),
                 preset("count-one", "한 $unit", 1.0, unit, PortionEstimationType.OFFICIAL_SERVING, food.servingDescription),
                 preset("count-one-half", "한 $unit 반", 1.5, unit, PortionEstimationType.OFFICIAL_SERVING, food.servingDescription),

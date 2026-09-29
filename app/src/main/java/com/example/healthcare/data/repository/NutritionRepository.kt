@@ -86,17 +86,15 @@ open class NutritionRepository(
 
     private fun rankedResults(items: List<FoodItem>, query: String): List<FoodItem> {
         val sorted = items.distinctBy(FoodItem::id)
-            .sortedWith(compareBy<FoodItem> { FoodSearchPolicy.needsBasisReview(it) }
-                .thenBy { FoodSearchPolicy.searchRank(it, query) }
+            .sortedWith(compareBy<FoodItem> { FoodSearchPolicy.searchRank(it, query) }
+                .thenBy { FoodSearchPolicy.needsBasisReview(it) }
+                .thenBy(FoodSearchPolicy::sourceTieBreakRank)
                 .thenBy(FoodItem::name)
                 .thenBy(FoodItem::sourceFoodCode))
-        val products = sorted.filter(FoodSearchPolicy::isProduct)
-        val franchises = sorted.filter(FranchiseCatalog::isFranchise)
-        val generic = sorted.filterNot { FoodSearchPolicy.isProduct(it) || FranchiseCatalog.isFranchise(it) }
-        return (products.take(35) + franchises.take(10) + generic.take(15) +
-            products.drop(35) + franchises.drop(10) + generic.drop(15))
             .distinctBy(FoodSearchPolicy::deduplicationKey)
-            .take(60)
+        val visible = sorted.take(60)
+        val basicFoods = sorted.filter { it.sourceType == BASIC_FOOD_SOURCE }.take(12)
+        return (visible + basicFoods).distinctBy(FoodItem::id)
     }
 
     open suspend fun matchVerifiedFood(names: List<String>): FoodItem? {
@@ -138,6 +136,8 @@ open class NutritionRepository(
     open suspend fun count(): Int = foodItemDao.count()
 
     companion object {
+        private const val BASIC_FOOD_SOURCE = "USDA-SR-LEGACY"
+
         fun calculateCalories(item: FoodItem, amount: Double): Int =
             kotlin.math.round(item.energyKcal * amount / item.referenceAmount).toInt().coerceAtLeast(0)
     }

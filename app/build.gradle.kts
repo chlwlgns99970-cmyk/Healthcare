@@ -37,8 +37,8 @@ android {
         applicationId = "com.example.healthcare"
         minSdk = 24
         targetSdk = 37
-        versionCode = 5
-        versionName = "1.0.4"
+        versionCode = 6
+        versionName = "1.0.5"
 
         buildConfigField("String", "FOOD_ANALYSIS_BASE_URL", foodAnalysisBaseUrl.asBuildConfigString())
         buildConfigField(
@@ -47,6 +47,7 @@ android {
             "https://today-mwo-meokji.vercel.app/api/releases/latest".asBuildConfigString()
         )
         buildConfigField("boolean", "APP_UPDATE_INSTALL_ENABLED", "false")
+        buildConfigField("boolean", "APP_UPDATE_SHOW_DEBUG_FAILURE", "false")
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -68,6 +69,7 @@ android {
             applicationIdSuffix = ".qa"
             versionNameSuffix = "-qa"
             isDebuggable = true
+            buildConfigField("boolean", "APP_UPDATE_SHOW_DEBUG_FAILURE", "true")
             matchingFallbacks += listOf("debug")
         }
         release {
@@ -86,6 +88,18 @@ android {
     buildFeatures {
         compose = true
         buildConfig = true
+    }
+    testOptions {
+        managedDevices {
+            localDevices {
+                create("api29Updater") {
+                    device = "Pixel 2"
+                    apiLevel = 29
+                    systemImageSource = "aosp"
+                    testedAbi = "x86"
+                }
+            }
+        }
     }
 }
 

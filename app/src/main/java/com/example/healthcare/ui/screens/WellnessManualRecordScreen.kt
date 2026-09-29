@@ -104,10 +104,11 @@ internal fun WellnessManualRecordScreen(
     recentMeals: List<MealRecord>,
     photoPath: String?,
     onBack: () -> Unit,
-    onSaved: () -> Unit,
+    onSaved: (MealType) -> Unit,
     onPhotoRecord: () -> Unit,
     viewModel: AddRecordViewModel?,
-    guided: Boolean = viewModel != null
+    guided: Boolean = viewModel != null,
+    mealTypeLocked: Boolean = false
 ) {
     val query = uiState.foodSearch.trim()
     val filteredFoods = frequentFoods.filter {
@@ -115,6 +116,12 @@ internal fun WellnessManualRecordScreen(
     }
     var step by rememberSaveable { mutableIntStateOf(if (uiState.selectedFood != null) 1 else 0) }
     var showAll by rememberSaveable { mutableStateOf(!guided) }
+    val confirmStep = if (mealTypeLocked) 2 else 3
+    val stepLabels = if (mealTypeLocked) {
+        listOf("음식", "먹은 양", "기록 확인")
+    } else {
+        listOf("음식", "먹은 양", "식사 시간", "기록 확인")
+    }
     val keyboardController = LocalSoftwareKeyboardController.current
     val dismissKeyboard = KeyboardActions(onDone = { keyboardController?.hide() })
     BackHandler(enabled = !showAll && step > 0) { step -= 1 }
@@ -148,13 +155,13 @@ internal fun WellnessManualRecordScreen(
         ) {
             item {
                 Column(verticalArrangement = Arrangement.spacedBy(7.dp)) {
-                    Text(if (showAll) "한 화면에서 자세히 입력" else "${step + 1} / 4  ${listOf("음식", "먹은 양", "식사 시간", "기록 확인")[step]}",
+                    Text(if (showAll) "한 화면에서 자세히 입력" else "${step + 1} / ${stepLabels.size}  ${stepLabels[step.coerceAtMost(confirmStep)]}",
                         style = MaterialTheme.typography.labelLarge,
                         color = MaterialTheme.colorScheme.secondary)
                     Text(if (showAll) "내 식사를 자세히 기록해요" else when (step) {
                         0 -> "무엇을 먹었나요?"
                         1 -> "얼마나 먹었나요?"
-                        2 -> "언제 먹었나요?"
+                        2 -> if (mealTypeLocked) "이대로 기록할까요?" else "언제 먹었나요?"
                         else -> "이대로 기록할까요?"
                     }, style = MaterialTheme.typography.headlineMedium)
                     TextButton(onClick = { showAll = !showAll }) {
@@ -184,7 +191,7 @@ internal fun WellnessManualRecordScreen(
                     if (recentMeals.isNotEmpty()) {
                         ChoiceSection("최근 음식", Icons.Rounded.History) {
                             items(recentMeals, key = { "recent-${it.id}-${it.foodName}" }) { meal ->
-                                FoodSuggestionChip("${meal.foodName} · ${meal.portionDisplayLabel ?: "이전과 같은 양"} · ${meal.calories} kcal") {
+                                FoodSuggestionChip("최근 기록 · ${meal.foodName} · ${meal.portionDisplayLabel ?: "이전과 같은 양"} · ${meal.calories} kcal") {
                                     viewModel?.selectRecentMeal(meal)
                                 }
                             }
@@ -339,7 +346,7 @@ internal fun WellnessManualRecordScreen(
                 }
             }
             }
-            if (showAll || step == 3) {
+            if (showAll || step == confirmStep) {
             if (!showAll) item {
                 WellnessCard(containerColor = MaterialTheme.colorScheme.surface) {
                     Column(Modifier.fillMaxWidth().padding(WellnessSpacing.CardContent),
@@ -425,11 +432,17 @@ internal fun WellnessManualRecordScreen(
                 }
             }
             }
-            if (showAll || step == 2) {
+            if (showAll || (!mealTypeLocked && step == 2)) {
             item { SectionHeader("식사", modifier = Modifier.padding(top = 10.dp)) }
             item {
                 FormSectionCard {
-                    WellnessMealTypeSelector(uiState.mealType) { viewModel?.onMealTypeChange(it) }
+                    if (mealTypeLocked) {
+                        Text("${uiState.mealType.displayName} 식사에 기록", style = MaterialTheme.typography.titleMedium)
+                        Text("홈에서 고른 식사 구분을 그대로 사용해요.", style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant)
+                    } else {
+                        WellnessMealTypeSelector(uiState.mealType) { viewModel?.onMealTypeChange(it) }
+                    }
                     WellnessDateTimeSelectors(
                         date = uiState.date,
                         time = uiState.time,
@@ -439,7 +452,7 @@ internal fun WellnessManualRecordScreen(
                 }
             }
             }
-            if (showAll || step == 3) {
+            if (showAll || step == confirmStep) {
             item { SectionHeader("메모", modifier = Modifier.padding(top = 10.dp)) }
             item {
                 FormSectionCard {
@@ -490,14 +503,18 @@ internal fun WellnessManualRecordScreen(
                         CircularProgressIndicator(modifier = Modifier.size(22.dp), strokeWidth = 2.dp)
                     } else {
                         Text(
-                            if (uiState.pendingProductBarcode != null) "상품 정보와 기록 저장" else "기록 저장",
+                            when {
+                                uiState.pendingProductBarcode != null -> "상품 정보와 기록 저장"
+                                mealTypeLocked -> "${uiState.mealType.displayName}에 기록"
+                                else -> "기록 저장"
+                            },
                             style = MaterialTheme.typography.labelLarge
                         )
                     }
                 }
             }
             }
-            if (!showAll && step < 3) item {
+            if (!showAll && step < confirmStep) item {
                 Button(
                     onClick = { step += 1 },
                     enabled = step != 0 || uiState.foodName.isNotBlank(),
@@ -506,7 +523,7 @@ internal fun WellnessManualRecordScreen(
                 ) {
                     Text(when (step) {
                         0 -> "다음 · 먹은 양"
-                        1 -> "다음 · 식사 시간"
+                        1 -> if (mealTypeLocked) "기록 확인" else "다음 · 식사 시간"
                         else -> "기록 확인"
                     })
                 }
@@ -635,8 +652,8 @@ private fun estimatedNutrition(state: AddRecordUiState): Macronutrients {
         state.estimatedCarbohydrateGrams,
         state.estimatedProteinGrams,
         state.estimatedFatGrams
-    )
-    return Macronutrients.strictSum(
+    ).scaled(state.selectedServingRatio ?: 1.0)
+    return Macronutrients.knownSum(
         listOf(base) + state.companionFoods.map { Macronutrients.forFood(it.food, it.portion.amount) }
     )
 }

@@ -52,6 +52,9 @@ object FoodSearchPolicy {
         "흰밥" to "밥",
         "닭가슴살" to "닭"
     )
+    private val compoundSearchTokens = mapOf(
+        "참치김밥" to listOf("참치", "김밥")
+    )
     private val detailFirstCategories = setOf("국 및 탕류", "찌개 및 전골류", "죽 및 스프류")
     private val detailFirstDishSuffixes = listOf("찌개", "전골", "스프", "수프", "국", "탕", "죽")
     private val simpleKoreanDetail = Regex("^[가-힣]{1,8}$")
@@ -137,15 +140,32 @@ object FoodSearchPolicy {
 
     fun searchRank(food: FoodItem, query: String): Int {
         val normalized = normalize(query)
-        val name = food.normalizedName
+        val queryVariants = queries(query)
+        val name = normalize(food.normalizedName.ifBlank { displayName(food) })
+        val aliases = normalize(food.aliases)
         val brand = normalize(food.brand.orEmpty())
-        val productOffset = if (isProduct(food) || FranchiseCatalog.isFranchise(food)) 0 else 3
-        return productOffset + when {
-            name == normalized -> 0
-            name.startsWith(normalized) -> 1
-            name.contains(normalized) || brand.contains(normalized) || food.aliases.contains(normalized) -> 2
-            else -> 3
+        val tokens = compoundSearchTokens[normalized]
+            ?: query.trim().split(Regex("[^0-9A-Za-z가-힣]+"))
+                .map(::normalize)
+                .filter(String::isNotBlank)
+                .takeIf { it.size > 1 }
+                .orEmpty()
+        return when {
+            queryVariants.any { name == it } -> 0
+            tokens.isNotEmpty() && tokens.all(name::contains) -> 10
+            queryVariants.any { name.contains(it) } -> 20
+            tokens.any(name::contains) -> 30
+            queryVariants.any { aliases.contains(it) } -> 40
+            brand.contains(normalized) -> 50
+            else -> 60
         }
+    }
+
+    /** Relevance is primary; source/brand is only a tie-breaker. */
+    fun sourceTieBreakRank(food: FoodItem): Int = when {
+        isProduct(food) -> 0
+        FranchiseCatalog.isFranchise(food) -> 1
+        else -> 2
     }
 
     fun quickCompanionQueries(food: FoodItem?): List<Pair<String, String>> = when {

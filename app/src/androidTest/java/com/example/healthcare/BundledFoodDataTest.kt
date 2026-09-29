@@ -137,10 +137,14 @@ class BundledFoodDataTest {
         }
         val results = NutritionRepository(database.foodItemDao()).search("참치김밥").first()
         assertTrue(results.isNotEmpty())
+        assertEquals("참치김밥", FoodSearchPolicy.normalize(results.first().name))
         assertTrue(results.any { it.name == "김밥_참치" && it.unit == "g" })
         assertTrue(results.any { it.name == "김밥_참치" && it.unit == "ml" })
         assertEquals("g", results.first { it.name == "김밥_참치" }.unit)
         assertTrue(results.filter(FoodSearchPolicy::needsBasisReview).all { it.unit == "ml" })
+        val exactBrands = results.filter { FoodSearchPolicy.normalize(it.name) == "참치김밥" }
+            .mapNotNull { it.brand }
+        assertTrue(exactBrands.distinct().size > 1)
         assertEquals(results.map { it.id }, NutritionRepository(database.foodItemDao())
             .search("참치 김밥").first().map { it.id })
     }
@@ -205,7 +209,11 @@ class BundledFoodDataTest {
         }
         assertTrue(repository.search("과일").first().any { it.name.startsWith("사과_") })
         assertTrue(repository.search("야채").first().any { it.name.startsWith("양배추_") })
-        assertTrue(repository.browse(FoodBrowseCategory.FRUIT, "").first().all {
+        val fruitBrowse = repository.browse(FoodBrowseCategory.FRUIT, "").first()
+        assertTrue("Basic apple missing from fruit browse", fruitBrowse.any {
+            it.id == "usda-sr-171688"
+        })
+        assertTrue(fruitBrowse.all {
             FoodSearchPolicy.matchesCategory(it, FoodBrowseCategory.FRUIT)
         })
         assertTrue(repository.browse(FoodBrowseCategory.VEGETABLE, "오이").first().any {

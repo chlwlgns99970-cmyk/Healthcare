@@ -12,5 +12,8 @@ data class FrequentFood(
     val foodName: String,      // 음식명
     val defaultServing: String, // 기본 제공량 (예: 100g, 1그릇)
     val calories: Int,         // 칼로리
-    val isFavorite: Boolean = false // 즐겨찾기 여부
+    val isFavorite: Boolean = false, // 즐겨찾기 여부
+    val carbohydrateGrams: Double? = null,
+    val proteinGrams: Double? = null,
+    val fatGrams: Double? = null
 )

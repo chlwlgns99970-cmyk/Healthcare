@@ -105,6 +105,8 @@ fun AddRecordScreen(
     onBack: () -> Unit = {},
     initialAction: QuickRecordAction? = null,
     initialDate: LocalDate? = null,
+    initialMealType: MealType? = null,
+    onRecordSaved: (MealType) -> Unit = { onBack() },
     onInitialActionConsumed: () -> Unit = {},
     onImmersiveChanged: (Boolean) -> Unit = {},
     onOpenHistory: () -> Unit = {}
@@ -129,6 +131,9 @@ fun AddRecordScreen(
 
     LaunchedEffect(viewModel, initialDate) {
         initialDate?.let { viewModel?.onDateChange(it) }
+    }
+    LaunchedEffect(viewModel, initialMealType) {
+        initialMealType?.let { viewModel?.onMealTypeChange(it) }
     }
     LaunchedEffect(photoState) {
         onImmersiveChanged(photoState is PhotoAnalysisUiState.Camera || photoState is PhotoAnalysisUiState.Preview)
@@ -294,8 +299,9 @@ fun AddRecordScreen(
         } else WellnessManualRecordScreen(
                 uiState = uiState, frequentFoods = foodsHolder.value, favoriteFoods = favoritesHolder.value,
                 recentMeals = recentMealsHolder.value, photoPath = photoState.photoPath,
-                onBack = { viewModel?.cancelPhotoFlow() }, onSaved = onBack,
-                onPhotoRecord = requestPhotoCapture, viewModel = viewModel
+                onBack = { viewModel?.cancelPhotoFlow() }, onSaved = onRecordSaved,
+                onPhotoRecord = requestPhotoCapture, viewModel = viewModel,
+                mealTypeLocked = initialMealType != null
             )
         is PhotoAnalysisUiState.InProgress -> PhotoAnalysisProgressScreen(
             state = photoState,
@@ -388,9 +394,10 @@ fun AddRecordScreen(
                 recentMeals = recentMealsHolder.value,
                 photoPath = null,
                 onBack = { viewModel?.showSmartInputHub() },
-                onSaved = onBack,
+                onSaved = onRecordSaved,
                 onPhotoRecord = requestPhotoCapture,
-                viewModel = viewModel
+                viewModel = viewModel,
+                mealTypeLocked = initialMealType != null
             )
         } else {
             SmartFoodInputScreen(
@@ -641,7 +648,7 @@ private fun ManualRecordScreen(
             }
             item {
                 Button(
-                    onClick = { viewModel?.saveRecord(onBack) },
+                    onClick = { viewModel?.saveRecord { onBack() } },
                     modifier = Modifier.fillMaxWidth(),
                     enabled = !uiState.isSaving
                 ) {

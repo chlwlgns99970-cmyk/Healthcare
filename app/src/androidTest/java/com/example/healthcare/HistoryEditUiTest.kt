@@ -29,6 +29,7 @@ import androidx.compose.ui.unit.dp
 import com.example.healthcare.data.entity.MealRecord
 import com.example.healthcare.data.model.MealType
 import com.example.healthcare.ui.screens.HistoryEditPane
+import com.example.healthcare.ui.screens.HistoryDetailPane
 import com.example.healthcare.ui.theme.HealthCareTheme
 import com.example.healthcare.ui.viewmodel.MealEditUiState
 import java.time.LocalDate
@@ -40,6 +41,37 @@ import org.junit.Test
 class HistoryEditUiTest {
     @get:Rule
     val composeRule = createComposeRule()
+
+    @Test
+    fun detailShowsVisibleEditActionAndUsesExistingCallback() {
+        val meal = MealRecord(
+            id = 31,
+            date = "2026-09-29",
+            time = "12:10",
+            mealType = MealType.LUNCH,
+            foodName = "참치김밥",
+            calories = 420
+        )
+        var editClicks = 0
+        var deleteClicks = 0
+        composeRule.setContent {
+            HealthCareTheme {
+                HistoryDetailPane(
+                    meal,
+                    onEdit = { editClicks++ },
+                    onDelete = { deleteClicks++ },
+                    onBack = {}
+                )
+            }
+        }
+
+        composeRule.onNodeWithText("수정").assertIsDisplayed().performClick()
+        composeRule.onNodeWithText("기록 삭제").assertIsDisplayed().performClick()
+        composeRule.runOnIdle {
+            assertEquals(1, editClicks)
+            assertEquals(1, deleteClicks)
+        }
+    }
 
     @Test
     fun existingValuesCanBeEditedAndSaveBecomesSingleShot() {

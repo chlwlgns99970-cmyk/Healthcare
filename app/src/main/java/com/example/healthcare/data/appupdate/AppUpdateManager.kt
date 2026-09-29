@@ -1,7 +1,7 @@
 package com.example.healthcare.data.appupdate
 
 import android.app.Activity
-import android.content.Context
+import android.os.Build
 import android.util.Log
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -13,17 +13,21 @@ import kotlinx.coroutines.sync.withLock
 import java.io.File
 
 class AppUpdateManager(
-    private val context: Context,
     repository: AppUpdateRepository,
     preferences: AppUpdatePreferenceStore,
     private val downloader: UpdateApkDownloader,
-    private val identityReader: ApkIdentityReader,
     private val verifier: ApkUpdateVerifier,
     private val installer: SystemAppInstaller,
     private val scope: CoroutineScope,
     private val currentVersionCode: Int,
+    private val currentPackageName: String,
     private val expectedPackageName: String,
-    private val installEnabled: Boolean
+    private val installEnabled: Boolean,
+    private val showTechnicalFailureReason: Boolean,
+    private val sdkInt: Int = Build.VERSION.SDK_INT,
+    private val logger: (String, Throwable?) -> Unit = { message, error ->
+        if (error == null) Log.w(TAG, message) else Log.w(TAG, message, error)
+    }
 ) {
     private val checker = AppUpdateChecker(repository, preferences, currentVersionCode)
     private val operationMutex = Mutex()
@@ -76,8 +80,19 @@ class AppUpdateManager(
     }
 
     fun startDownload() {
+        startDownload(state.value.release)
+    }
+
+    fun retryDownload() {
+        if (state.value.phase != AppUpdatePhase.FAILED) return
         val release = state.value.release ?: return
-        if (!installEnabled || context.packageName != expectedPackageName) {
+        cleanupDownloadedFiles()
+        startDownload(release)
+    }
+
+    private fun startDownload(release: AppReleaseMetadata?) {
+        release ?: return
+        if (!installEnabled || currentPackageName != expectedPackageName) {
             _state.value = AppUpdateUiState(
                 phase = AppUpdatePhase.FAILED,
                 message = "이 빌드에서는 제품 업데이트를 설치할 수 없어요."
@@ -103,37 +118,50 @@ class AppUpdateManager(
                         downloadProgress = 100,
                         message = "업데이트 파일 확인 중…"
                     )
-                    val installed = identityReader.readInstalled(expectedPackageName)
-                        ?: error("Installed product identity unavailable")
-                    val verification = verifier.verify(
+                    when (val verification = verifier.verify(
                         apkFile = downloaded,
                         metadata = release,
-                        currentVersionCode = currentVersionCode.toLong(),
-                        installedSignerSha256 = installed.signerSha256
-                    )
-                    if (verification !is ApkVerificationResult.Valid) {
-                        val failure = (verification as ApkVerificationResult.Invalid).failure
-                        Log.w(TAG, "Rejected downloaded update: $failure")
-                        downloader.delete(downloaded)
-                        _state.value = AppUpdateUiState(
-                            phase = AppUpdatePhase.FAILED,
-                            message = "업데이트 파일을 확인할 수 없어 설치하지 않았어요."
-                        )
-                        return@withLock
+                        currentVersionCode = currentVersionCode.toLong()
+                    )) {
+                        is ApkVerificationResult.Failure -> {
+                            logVerificationFailure(verification)
+                            cleanupDownloadedFiles(downloaded)
+                            showFailure(release, verification.reason, userMessage(verification.reason))
+                        }
+                        is ApkVerificationResult.Success -> {
+                            verifiedApk = downloaded
+                            _state.value = AppUpdateUiState(
+                                phase = AppUpdatePhase.READY_TO_INSTALL,
+                                release = release,
+                                downloadProgress = 100,
+                                message = "업데이트를 설치할 준비가 되었어요."
+                            )
+                        }
                     }
-                    verifiedApk = downloaded
-                    _state.value = AppUpdateUiState(
-                        phase = AppUpdatePhase.READY_TO_INSTALL,
-                        release = release,
-                        downloadProgress = 100,
-                        message = "업데이트를 설치할 준비가 되었어요."
+                } catch (error: UpdateDownloadException) {
+                    val diagnostics = ApkVerificationDiagnostics(
+                        expectedSize = error.expectedSize ?: release.fileSizeBytes,
+                        actualSize = error.actualSize,
+                        expectedSha256 = release.sha256,
+                        expectedPackage = expectedPackageName,
+                        currentVersion = currentVersionCode.toLong(),
+                        expectedVersion = release.versionCode.toLong(),
+                        detail = error.javaClass.simpleName
                     )
+                    logVerificationFailure(ApkVerificationResult.Failure(error.failure, diagnostics))
+                    cleanupDownloadedFiles(downloaded)
+                    showFailure(release, error.failure, userMessage(error.failure))
                 } catch (error: Throwable) {
-                    Log.w(TAG, "Update download failed", error)
-                    downloader.delete(downloaded)
-                    _state.value = AppUpdateUiState(
-                        phase = AppUpdatePhase.FAILED,
-                        message = "다운로드에 실패했어요. 다시 시도해주세요."
+                    logger(
+                        "UpdateDownload: reason=${ApkVerificationFailure.UNKNOWN} sdk=$sdkInt " +
+                            "error=${error.javaClass.simpleName}",
+                        error
+                    )
+                    cleanupDownloadedFiles(downloaded)
+                    showFailure(
+                        release,
+                        ApkVerificationFailure.UNKNOWN,
+                        "다운로드에 실패했어요. 다시 시도해주세요."
                     )
                 }
             }
@@ -169,8 +197,7 @@ class AppUpdateManager(
         if (state.value.phase == AppUpdatePhase.INSTALL_PERMISSION_REQUIRED ||
             state.value.phase == AppUpdatePhase.FAILED
         ) {
-            downloader.delete(verifiedApk)
-            verifiedApk = null
+            cleanupDownloadedFiles()
         }
         _state.value = AppUpdateUiState()
     }
@@ -179,18 +206,81 @@ class AppUpdateManager(
         _state.value = _state.value.copy(phase = AppUpdatePhase.INSTALLER_OPENED)
         runCatching { installer.openPackageInstaller(activity, apk) }
             .onFailure {
-                Log.w(TAG, "Unable to open package installer", it)
+                logger("UpdateInstaller: sdk=$sdkInt error=${it.javaClass.simpleName}", it)
                 failInstallation()
             }
     }
 
     private fun failInstallation() {
-        downloader.delete(verifiedApk)
-        verifiedApk = null
+        val release = state.value.release
+        cleanupDownloadedFiles()
         _state.value = AppUpdateUiState(
             phase = AppUpdatePhase.FAILED,
-            message = "설치 화면을 열지 못했어요."
+            release = release,
+            message = "설치 화면을 열지 못했어요.",
+            failureReason = ApkVerificationFailure.UNKNOWN
         )
+    }
+
+    private fun cleanupDownloadedFiles(file: File? = verifiedApk) {
+        downloader.delete(file)
+        downloader.clear()
+        verifiedApk = null
+    }
+
+    private fun showFailure(
+        release: AppReleaseMetadata,
+        reason: ApkVerificationFailure,
+        userMessage: String
+    ) {
+        val message = if (showTechnicalFailureReason) {
+            "$userMessage\n\n업데이트 검증 실패: ${reason.name}"
+        } else {
+            userMessage
+        }
+        _state.value = AppUpdateUiState(
+            phase = AppUpdatePhase.FAILED,
+            release = release,
+            message = message,
+            failureReason = reason
+        )
+    }
+
+    private fun logVerificationFailure(failure: ApkVerificationResult.Failure) {
+        val diagnostic = failure.diagnostics
+        logger(
+            "UpdateVerification: reason=${failure.reason} sdk=$sdkInt " +
+                "expectedSize=${diagnostic.expectedSize} actualSize=${diagnostic.actualSize} " +
+                "expectedSha=${diagnostic.expectedSha256} actualSha=${diagnostic.actualSha256} " +
+                "expectedPackage=${diagnostic.expectedPackage} actualPackage=${diagnostic.actualPackage} " +
+                "currentVersion=${diagnostic.currentVersion} expectedVersion=${diagnostic.expectedVersion} " +
+                "actualVersion=${diagnostic.actualVersion} " +
+                "archiveSignerRead=${diagnostic.archiveSignerSha256.isNotEmpty()} " +
+                "installedSignerRead=${diagnostic.installedSignerSha256.isNotEmpty()} " +
+                "detail=${diagnostic.detail}",
+            null
+        )
+    }
+
+    private fun userMessage(reason: ApkVerificationFailure): String = when (reason) {
+        ApkVerificationFailure.FILE_SIZE_MISMATCH,
+        ApkVerificationFailure.DOWNLOAD_INCOMPLETE ->
+            "업데이트 파일이 완전히 내려받아지지 않았어요. 다시 시도해주세요."
+        ApkVerificationFailure.HASH_CALCULATION_FAILED,
+        ApkVerificationFailure.HASH_MISMATCH ->
+            "업데이트 파일을 확인하지 못했어요. 다시 다운로드해주세요."
+        ApkVerificationFailure.APK_PARSE_FAILED,
+        ApkVerificationFailure.SIGNER_READ_FAILED ->
+            "이 기기에서 업데이트 파일 정보를 확인하지 못했어요. 다시 시도해주세요."
+        ApkVerificationFailure.PACKAGE_MISMATCH,
+        ApkVerificationFailure.SIGNER_MISMATCH ->
+            "공식 업데이트 파일로 확인되지 않아 설치하지 않았어요."
+        ApkVerificationFailure.VERSION_MISMATCH ->
+            "업데이트 파일 버전이 올바르지 않아 설치하지 않았어요."
+        ApkVerificationFailure.FILE_NOT_FOUND ->
+            "다운로드한 업데이트 파일을 찾지 못했어요. 다시 시도해주세요."
+        ApkVerificationFailure.UNKNOWN ->
+            "업데이트를 진행하지 못했어요. 다시 시도해주세요."
     }
 
     private companion object {

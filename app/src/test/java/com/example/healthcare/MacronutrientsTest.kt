@@ -24,6 +24,31 @@ class MacronutrientsTest {
         assertEquals(160.0, double.carbohydrateGrams!!, 0.0001)
         assertEquals(20.0, double.proteinGrams!!, 0.0001)
         assertEquals(32.0, double.fatGrams!!, 0.0001)
+        val oneAndHalf = Macronutrients.forFood(food, 150.0)
+        assertEquals(120.0, oneAndHalf.carbohydrateGrams!!, 0.0001)
+        assertEquals(15.0, oneAndHalf.proteinGrams!!, 0.0001)
+        assertEquals(24.0, oneAndHalf.fatGrams!!, 0.0001)
+    }
+
+    @Test fun knownTotalKeepsAvailableValuesAndOnlyUnknownStaysNull() {
+        val total = Macronutrients.knownSum(listOf(
+            Macronutrients(30.0, 10.0, 5.0),
+            Macronutrients(null, 3.0, null),
+            Macronutrients(12.0, null, null)
+        ))
+        assertEquals(42.0, total.carbohydrateGrams!!, 0.0001)
+        assertEquals(13.0, total.proteinGrams!!, 0.0001)
+        assertEquals(5.0, total.fatGrams!!, 0.0001)
+        assertNull(Macronutrients.knownSum(listOf(
+            Macronutrients(null, 2.0, null), Macronutrients(null, 4.0, null)
+        )).carbohydrateGrams)
+    }
+
+    @Test fun scalingPreservesMissingValuesInsteadOfTurningThemIntoZero() {
+        val scaled = Macronutrients(30.0, 10.0, null).scaled(1.5)
+        assertEquals(45.0, scaled.carbohydrateGrams!!, 0.0001)
+        assertEquals(15.0, scaled.proteinGrams!!, 0.0001)
+        assertNull(scaled.fatGrams)
     }
 
     @Test fun strictTotalNeverTurnsMissingHistoricalDataIntoZero() {
