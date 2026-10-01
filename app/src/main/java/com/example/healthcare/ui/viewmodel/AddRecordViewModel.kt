@@ -386,6 +386,14 @@ class AddRecordViewModel(
         _smartInputState.update { it.copy(mode = SmartInputMode.MANUAL, message = null, isCompanionSearch = false) }
     }
 
+    fun showManualDetails() {
+        _smartInputState.update { it.copy(mode = SmartInputMode.MANUAL, message = null, isCompanionSearch = false) }
+    }
+
+    fun returnToFoodSearch() {
+        _smartInputState.update { it.copy(mode = SmartInputMode.SEARCH, message = null, isCompanionSearch = false) }
+    }
+
     fun showBarcodeManualRegistration() {
         val barcode = _smartInputState.value.barcode.takeIf(String::isNotBlank) ?: return
         _uiState.update {
@@ -481,7 +489,7 @@ class AddRecordViewModel(
         }
         _smartInputState.update {
             it.copy(
-                mode = SmartInputMode.MANUAL,
+                mode = SmartInputMode.QUICK_RECORD,
                 searchQuery = "",
                 searchResults = emptyList(),
                 selectedBrand = null,
@@ -571,6 +579,23 @@ class AddRecordViewModel(
     }
 
     fun selectFrequentFood(food: FrequentFood) {
+        selectSavedFood(food, SmartInputMode.MANUAL)
+    }
+
+    fun selectFavoriteFood(food: FrequentFood) {
+        val foodItemId = food.foodItemId
+        if (foodItemId == null || nutritionRepository == null) {
+            selectSavedFood(food, SmartInputMode.QUICK_RECORD)
+            return
+        }
+        viewModelScope.launch {
+            val currentFood = runCatching { nutritionRepository.findById(foodItemId) }.getOrNull()
+            if (currentFood == null) selectSavedFood(food, SmartInputMode.QUICK_RECORD)
+            else selectVerifiedFood(currentFood)
+        }
+    }
+
+    private fun selectSavedFood(food: FrequentFood, destination: SmartInputMode) {
         val (servingAmount, servingUnit) = parseServing(food.defaultServing)
         _uiState.update {
             it.copy(
@@ -583,12 +608,22 @@ class AddRecordViewModel(
                 referenceServingAmount = servingAmount,
                 referenceServingUnit = servingUnit,
                 selectedServingRatio = 1.0,
-                selectedFoodItemId = null,
+                selectedFoodItemId = food.foodItemId,
                 selectedFood = null,
                 estimatedCarbohydrateGrams = food.carbohydrateGrams,
                 estimatedProteinGrams = food.proteinGrams,
                 estimatedFatGrams = food.fatGrams,
-                selectedPortion = null,
+                selectedPortion = if (destination == SmartInputMode.QUICK_RECORD) {
+                    PortionPreset(
+                        id = "reference-1.0",
+                        label = "보통",
+                        amount = servingAmount,
+                        unit = servingUnit,
+                        estimationType = PortionEstimationType.MANUAL_AMOUNT,
+                        sourceReference = "사용자가 저장한 영양정보",
+                        description = "저장된 음식의 기본 양이에요."
+                    )
+                } else null,
                 selectedBarcode = null,
                 pendingProductBarcode = null,
                 recordSource = RecordSource.SAVED_FOOD,
@@ -596,7 +631,73 @@ class AddRecordViewModel(
                 caloriesError = null
             )
         }
-        _smartInputState.update { it.copy(mode = SmartInputMode.MANUAL, message = null) }
+        _smartInputState.update { it.copy(mode = destination, message = null) }
+    }
+
+    fun toggleFavorite(food: FoodItem) {
+        val isFavorite = favoriteFoods.value.any { it.foodItemId == food.id }
+        val snapshot = FrequentFood(
+            foodName = FoodSearchPolicy.displayName(food),
+            defaultServing = "${formatAmount(food.referenceAmount)}${food.unit}",
+            calories = food.energyKcal.roundToInt().coerceAtLeast(1),
+            isFavorite = !isFavorite,
+            isFrequent = false,
+            carbohydrateGrams = food.carbohydrateGrams,
+            proteinGrams = food.proteinGrams,
+            fatGrams = food.fatGrams,
+            foodItemId = food.id,
+            sourceType = food.sourceType,
+            sourceFoodCode = food.sourceFoodCode,
+            brand = food.brand
+        )
+        viewModelScope.launch {
+            runCatching { foodRepository.setFavorite(snapshot, !isFavorite) }
+                .onFailure {
+                    _smartInputState.update { state ->
+                        state.copy(message = "즐겨찾기를 변경하지 못했어요. 다시 시도해주세요.")
+                    }
+                }
+        }
+    }
+
+    fun removeFavorite(food: FrequentFood) {
+        viewModelScope.launch {
+            runCatching { foodRepository.setFavorite(food, false) }
+                .onFailure {
+                    _smartInputState.update { state ->
+                        state.copy(message = "즐겨찾기를 해제하지 못했어요. 다시 시도해주세요.")
+                    }
+                }
+        }
+    }
+
+    fun applyRecentAmount(meal: MealRecord) {
+        val state = _uiState.value
+        val amount = meal.servingAmount?.takeIf { it.isFinite() && it > 0.0 } ?: return
+        val unit = meal.servingUnit?.takeIf(String::isNotBlank) ?: return
+        val food = state.selectedFood
+        if (food != null && !food.unit.equals(unit, ignoreCase = true)) return
+        _uiState.update {
+            it.copy(
+                servingAmount = formatAmount(amount),
+                servingUnit = unit,
+                calories = meal.calories.toString(),
+                selectedServingRatio = it.referenceServingAmount?.takeIf { reference -> reference > 0.0 }
+                    ?.let { reference -> amount / reference },
+                selectedPortion = PortionPreset(
+                    id = "recent-${meal.id}",
+                    label = "최근 기록 ${formatAmount(amount)}$unit",
+                    amount = amount,
+                    unit = unit,
+                    estimationType = PortionEstimationType.MANUAL_AMOUNT,
+                    sourceReference = "사용자의 최근 기록",
+                    description = "이전에 직접 저장한 양이에요. 공식 제공량은 아니에요."
+                ),
+                preciseAmountOpen = false,
+                caloriesError = null,
+                saveError = null
+            )
+        }
     }
 
     fun deleteFrequentFood(food: FrequentFood) {
@@ -953,10 +1054,15 @@ class AddRecordViewModel(
                             foodName = state.foodName.trim(),
                             defaultServing = servingDescription(state.servingAmount, state.servingUnit),
                             calories = calorieInt,
-                            isFavorite = true,
+                            isFavorite = false,
+                            isFrequent = true,
                             carbohydrateGrams = primaryNutrition.carbohydrateGrams,
                             proteinGrams = primaryNutrition.proteinGrams,
-                            fatGrams = primaryNutrition.fatGrams
+                            fatGrams = primaryNutrition.fatGrams,
+                            foodItemId = primaryFood?.id,
+                            sourceType = primaryFood?.sourceType,
+                            sourceFoodCode = primaryFood?.sourceFoodCode,
+                            brand = primaryFood?.brand
                         )
                     )
                 }
@@ -1695,6 +1801,7 @@ enum class CapturePurpose { FOOD_PHOTO, NUTRITION_LABEL }
 enum class SmartInputMode {
     HUB,
     MANUAL,
+    QUICK_RECORD,
     SEARCH,
     BARCODE_LOADING,
     BARCODE_RESULT,

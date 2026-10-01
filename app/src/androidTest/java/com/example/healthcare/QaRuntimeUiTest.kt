@@ -137,7 +137,7 @@ class QaRuntimeUiTest {
         scrollTo(hasText("수정 저장"))
         composeRule.onNodeWithText("수정 저장").performClick()
         composeRule.waitUntil(timeoutMillis = TIMEOUT_MILLIS) {
-            composeRule.onAllNodesWithText("식사별").fetchSemanticsNodes().isNotEmpty()
+            composeRule.onAllNodesWithText("기록을 수정했어요").fetchSemanticsNodes().isNotEmpty()
         }
         scrollTo(hasText(EDITED_FOOD_NAME))
         composeRule.onNodeWithText(EDITED_FOOD_NAME).assertIsDisplayed().performClick()

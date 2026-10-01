@@ -11,6 +11,9 @@ import com.example.healthcare.domain.PortionGuide
 import com.example.healthcare.domain.Macronutrients
 import com.example.healthcare.domain.FoodSearchPolicy
 import com.example.healthcare.domain.RecommendationStage
+import com.example.healthcare.domain.MealRecommendationTheme
+import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.collect
 import java.time.LocalDate
 import java.time.LocalTime
 import kotlin.math.roundToInt
@@ -78,6 +81,8 @@ data class MealPlanUiState(
     val isExhausted: Boolean = false,
     val loadError: Boolean = false,
     val recommendations: List<MealRecommendationWithIngredients> = emptyList(),
+    val selectedTheme: MealRecommendationTheme? = null,
+    val themeCounts: Map<MealRecommendationTheme, Int> = emptyMap(),
     val recommendationPortionLabels: Map<String, List<String>> = emptyMap(),
     val selectedMeal: SelectedMealUi? = null,
     val isLoading: Boolean = false,
@@ -97,13 +102,57 @@ class MealPlanViewModel(
     val uiState: StateFlow<MealPlanUiState> = _uiState.asStateFlow()
     private val saveCompleted = Channel<Unit>(Channel.BUFFERED)
     val saveCompletedEvents = saveCompleted.receiveAsFlow()
+    private var conditionsChangedDuringLoad = false
+    private var pendingLoad: (() -> Unit)? = null
+    private var dailyDetailRequest: (() -> Unit)? = null
 
-    fun load(mealType: MealType, budgetKcal: Int, targetKcal: Int, dailyRemainingKcal: Int = targetKcal) {
+    init {
+        viewModelScope.launch {
+            var previous: Any? = null
+            combine(mealCoachRepository.preference, mealCoachRepository.excludedFoods) { preference, excluded ->
+                preference to excluded
+            }.collect { conditions ->
+                val changed = previous != null && previous != conditions
+                previous = conditions
+                if (changed) {
+                    dailyDetailRequest?.let { request ->
+                        _uiState.update { it.copy(selectedMeal = null, showConsumptionConfirm = false) }
+                        request()
+                        return@collect
+                    }
+                    if (_uiState.value.isLoading) conditionsChangedDuringLoad = true
+                    else if (_uiState.value.hasLoaded) {
+                        _uiState.update { it.copy(selectedMeal = null, showConsumptionConfirm = false) }
+                        loadStage(stableDate = LocalDate.now())
+                    }
+                }
+            }
+        }
+    }
+
+    fun load(
+        mealType: MealType,
+        budgetKcal: Int,
+        targetKcal: Int,
+        dailyRemainingKcal: Int = targetKcal,
+        initialTemplateId: String? = null
+    ) {
+        dailyDetailRequest = null
         val current = _uiState.value
-        if (current.isLoading) return
+        if (current.isLoading) {
+            // A Home card can be opened while a theme page is still loading. Keep the latest request.
+            pendingLoad = { load(mealType, budgetKcal, targetKcal, dailyRemainingKcal, initialTemplateId) }
+            return
+        }
+        val needsHomePage = initialTemplateId != null && (current.selectedTheme != null ||
+            current.recommendations.none { it.recommendation.template.id == initialTemplateId })
         if (current.hasLoaded && current.mealType == mealType && current.budgetKcal == budgetKcal &&
-            current.targetKcal == targetKcal) {
+            current.targetKcal == targetKcal && !needsHomePage) {
             _uiState.update { it.copy(dailyRemainingKcal = dailyRemainingKcal) }
+            initialTemplateId?.let { id ->
+                current.recommendations.indexOfFirst { it.recommendation.template.id == id }
+                    .takeIf { it >= 0 }?.let(::selectRecommendation)
+            }
             return
         }
         _uiState.value = MealPlanUiState(mealType = mealType, budgetKcal = budgetKcal,
@@ -113,23 +162,58 @@ class MealPlanViewModel(
                 message = "유효한 식사 예산이 없습니다. 목표와 식사 배분 설정을 확인해 주세요.") }
             return
         }
-        loadStage()
+        loadStage(stableDate = LocalDate.now(), initialTemplateId = initialTemplateId)
     }
 
-    private fun loadStage(keepCurrentWhenEmpty: Boolean = false) {
+    /** Opens the exact standard-portion item selected by the day planner, without selecting a legacy page. */
+    fun loadDailyDetail(templateId: String, mealType: MealType, kcal: Int, targetKcal: Int) {
+        dailyDetailRequest = { loadDailyDetail(templateId, mealType, kcal, targetKcal) }
+        _uiState.value = MealPlanUiState(mealType = mealType, budgetKcal = kcal, targetKcal = targetKcal,
+            dailyRemainingKcal = targetKcal, isLoading = true)
+        viewModelScope.launch {
+            val bundle = runCatching { mealCoachRepository.dailyPlanDetail(templateId, mealType, kcal) }
+            _uiState.update { it.copy(isLoading = false, hasLoaded = true,
+                recommendations = listOfNotNull(bundle.getOrNull()), loadError = bundle.isFailure || bundle.getOrNull() == null,
+                message = if (bundle.getOrNull() == null) "현재 조건에 맞는 메뉴가 없어요." else null) }
+            if (bundle.getOrNull() != null) selectRecommendation(0)
+        }
+    }
+
+    private fun loadStage(
+        keepCurrentWhenEmpty: Boolean = false,
+        stableDate: LocalDate? = null,
+        initialTemplateId: String? = null
+    ) {
         val state = _uiState.value
         if (state.isLoading) return
         viewModelScope.launch {
             _uiState.update { it.copy(isLoading = true, loadError = false, message = null) }
             val results = runCatching {
-                mealCoachRepository.searchRecommendations(
-                    mealType = state.mealType,
-                    budgetKcal = state.budgetKcal,
-                    stage = state.stage,
-                    extraCookingMode = state.extraCookingMode,
-                    limit = RECOMMENDATION_PAGE_SIZE
-                )
+                if (state.selectedTheme != null) {
+                    mealCoachRepository.getOrCreateThemeRecommendations(
+                        stableDate ?: LocalDate.now(), state.mealType, state.budgetKcal,
+                        state.selectedTheme, RECOMMENDATION_PAGE_SIZE
+                    )
+                } else if (stableDate != null) {
+                    mealCoachRepository.getOrCreateTodayRecommendations(
+                        localDate = stableDate,
+                        mealType = state.mealType,
+                        budgetKcal = state.budgetKcal,
+                        limit = RECOMMENDATION_PAGE_SIZE
+                    )
+                } else {
+                    mealCoachRepository.searchRecommendations(
+                        mealType = state.mealType,
+                        budgetKcal = state.budgetKcal,
+                        stage = state.stage,
+                        extraCookingMode = state.extraCookingMode,
+                        limit = RECOMMENDATION_PAGE_SIZE
+                    )
+                }
             }
+            val themeCounts = runCatching {
+                mealCoachRepository.recommendationThemeCounts(state.mealType, state.budgetKcal)
+            }.getOrDefault(emptyMap())
             val portionLabels = mutableMapOf<String, List<String>>()
             val page = results.getOrNull()?.recommendations.orEmpty()
             val keepCurrent = results.isSuccess && keepCurrentWhenEmpty &&
@@ -144,6 +228,7 @@ class MealPlanViewModel(
             _uiState.update {
                 it.copy(
                     recommendations = if (keepCurrent) state.recommendations else page,
+                    themeCounts = themeCounts,
                     recommendationPortionLabels = if (keepCurrent) {
                         state.recommendationPortionLabels
                     } else {
@@ -165,7 +250,42 @@ class MealPlanViewModel(
                     }
                 )
             }
+            val nextLoad = pendingLoad
+            pendingLoad = null
+            if (nextLoad != null) {
+                if (conditionsChangedDuringLoad) {
+                    // Do not let the cached page bypass a preference/dislike change during this load.
+                    conditionsChangedDuringLoad = false
+                    _uiState.update { it.copy(hasLoaded = false, selectedMeal = null, showConsumptionConfirm = false) }
+                }
+                nextLoad()
+                return@launch
+            }
+            initialTemplateId?.let { templateId ->
+                page.indexOfFirst { it.recommendation.template.id == templateId }
+                    .takeIf { it >= 0 }
+                    ?.let(::selectRecommendation)
+            }
+            if (conditionsChangedDuringLoad) {
+                conditionsChangedDuringLoad = false
+                _uiState.update { it.copy(selectedMeal = null, showConsumptionConfirm = false) }
+                loadStage(stableDate = LocalDate.now())
+            }
         }
+    }
+
+    fun selectTheme(theme: MealRecommendationTheme) {
+        if (_uiState.value.isLoading) return
+        _uiState.update { it.copy(selectedTheme = theme, stage = RecommendationStage.EXACT,
+            selectedMeal = null, recommendations = emptyList(), showConsumptionConfirm = false) }
+        loadStage(stableDate = LocalDate.now())
+    }
+
+    fun showTodayRecommendations() {
+        if (_uiState.value.isLoading) return
+        _uiState.update { it.copy(selectedTheme = null, stage = RecommendationStage.EXACT,
+            selectedMeal = null, recommendations = emptyList(), showConsumptionConfirm = false) }
+        loadStage(stableDate = LocalDate.now())
     }
 
     fun refresh() {
@@ -181,7 +301,7 @@ class MealPlanViewModel(
 
     fun advanceFallback() {
         val state = _uiState.value
-        if (state.isLoading || state.loadError) return
+        if (state.isLoading || state.loadError || state.selectedTheme != null) return
         val next = when (state.stage) {
             RecommendationStage.EXACT -> RecommendationStage.WIDER_CALORIES
             RecommendationStage.WIDER_CALORIES, RecommendationStage.EXPANDED_MODE -> RecommendationStage.CLOSEST_VERIFIED
@@ -389,8 +509,12 @@ class MealPlanViewModel(
         viewModelScope.launch {
             runCatching {
                 val preference = mealCoachRepository.ensureDefaultPreference()
-                val (_, plannedMeals) = mealCoachRepository.ensureDailyPlan(LocalDate.now(), state.targetKcal, preference)
-                val planned = requireNotNull(plannedMeals.firstOrNull { it.mealType == state.mealType.name })
+                val planned = if (dailyDetailRequest != null) {
+                    mealCoachRepository.ensureDailyConsumptionSlot(LocalDate.now(), state.targetKcal, state.mealType, selected.totalCalories)
+                } else {
+                    val (_, plannedMeals) = mealCoachRepository.ensureDailyPlan(LocalDate.now(), state.targetKcal, preference)
+                    requireNotNull(plannedMeals.firstOrNull { it.mealType == state.mealType.name })
+                }
                 mealCoachRepository.selectTemplate(planned.id, selected.templateId)
                 mealCoachRepository.confirmConsumed(
                     plannedMealId = planned.id,

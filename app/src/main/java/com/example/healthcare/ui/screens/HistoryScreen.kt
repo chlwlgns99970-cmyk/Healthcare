@@ -3,6 +3,7 @@ package com.example.healthcare.ui.screens
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.Canvas
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
@@ -174,6 +175,10 @@ fun HistoryScreen(viewModel: HistoryViewModel? = null) {
                 screenTitle = hubSection.title,
                 onBackToHub = { selectedHubSection = null },
                 onItemClick = { meal ->
+                    scope.launch { navigator.navigateTo(ListDetailPaneScaffoldRole.Detail, meal.id) }
+                },
+                onEdit = { meal ->
+                    viewModel?.startEditing(meal)
                     scope.launch { navigator.navigateTo(ListDetailPaneScaffoldRole.Detail, meal.id) }
                 }
             )
@@ -352,6 +357,7 @@ fun HistoryListPane(
     statusText: String,
     onDateSelected: (LocalDate) -> Unit,
     onItemClick: (MealRecord) -> Unit,
+    onEdit: (MealRecord) -> Unit = {},
     timeline: DailyIntakeTimeline = DailyIntakeTimeline.Empty,
     nutrition: Macronutrients = Macronutrients.Unknown,
     initialChartDays: Int = 7,
@@ -513,13 +519,21 @@ fun HistoryListPane(
                                 }
                             }
                             items(group, key = { it.id }) { meal ->
-                                HistoryItemCard(meal = meal, onClick = { onItemClick(meal) })
+                                HistoryItemCard(
+                                    meal = meal,
+                                    onClick = { onItemClick(meal) },
+                                    onEdit = { onEdit(meal) }
+                                )
                             }
                         }
                     }
                 } else {
                     items(meals.sortedBy { it.time }, key = { it.id }) { meal ->
-                        HistoryItemCard(meal = meal, onClick = { onItemClick(meal) })
+                        HistoryItemCard(
+                            meal = meal,
+                            onClick = { onItemClick(meal) },
+                            onEdit = { onEdit(meal) }
+                        )
                     }
                 }
             }
@@ -562,43 +576,63 @@ private fun DailySummaryCard(
 }
 
 @Composable
-fun HistoryItemCard(meal: MealRecord, onClick: () -> Unit) {
+fun HistoryItemCard(
+    meal: MealRecord,
+    onClick: () -> Unit,
+    onEdit: () -> Unit = {}
+) {
     Surface(
-        onClick = onClick,
         modifier = Modifier.fillMaxWidth(),
         shape = MaterialTheme.shapes.medium,
         color = MaterialTheme.colorScheme.surface
     ) {
-        Row(
-            modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 15.dp),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(12.dp)
-        ) {
-            RecommendationPhoto(
-                templateId = null,
-                foodName = meal.foodName,
-                contentDescription = null,
-                modifier = Modifier.size(52.dp).clip(MaterialTheme.shapes.small)
-            )
-            Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(7.dp)) {
-                Text(
-                    meal.foodName,
-                    style = MaterialTheme.typography.titleMedium,
-                    maxLines = 2,
-                    overflow = TextOverflow.Ellipsis
+        Column {
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .clickable(onClick = onClick)
+                    .padding(horizontal = 16.dp, vertical = 15.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(12.dp)
+            ) {
+                RecommendationPhoto(
+                    templateId = null,
+                    foodName = meal.foodName,
+                    contentDescription = null,
+                    modifier = Modifier.size(52.dp).clip(MaterialTheme.shapes.small)
                 )
-                Text("${meal.time} · ${meal.mealType.displayName}", style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant)
-                meal.portionDisplayLabel?.let { label ->
-                    Text(label, style = MaterialTheme.typography.bodySmall,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant, maxLines = 1)
+                Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(7.dp)) {
+                    Text(
+                        meal.foodName,
+                        style = MaterialTheme.typography.titleMedium,
+                        maxLines = 2,
+                        overflow = TextOverflow.Ellipsis
+                    )
+                    Text("${meal.time} · ${meal.mealType.displayName}", style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant)
+                    meal.portionDisplayLabel?.let { label ->
+                        Text(label, style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant, maxLines = 1)
+                    }
                 }
+                Column(horizontalAlignment = Alignment.End) {
+                    Text(NumberFormat.getNumberInstance().format(meal.calories), style = MaterialTheme.typography.titleLarge)
+                    Text("kcal", style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                }
+                Icon(Icons.Rounded.ChevronRight, contentDescription = "상세 보기", tint = MaterialTheme.colorScheme.onSurfaceVariant)
             }
-            Column(horizontalAlignment = Alignment.End) {
-                Text(NumberFormat.getNumberInstance().format(meal.calories), style = MaterialTheme.typography.titleLarge)
-                Text("kcal", style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
+            TextButton(
+                onClick = onEdit,
+                modifier = Modifier
+                    .align(Alignment.End)
+                    .heightIn(min = 48.dp)
+                    .padding(end = 8.dp)
+                    .testTag("history-item-edit-${meal.id}")
+            ) {
+                Icon(Icons.Rounded.Edit, contentDescription = "${meal.foodName} 기록 수정")
+                Spacer(Modifier.size(6.dp))
+                Text("수정")
             }
-            Icon(Icons.Rounded.ChevronRight, contentDescription = "상세 보기", tint = MaterialTheme.colorScheme.onSurfaceVariant)
         }
     }
 }
@@ -957,7 +991,16 @@ private val previewTimeline = DailyIntakeTimeline.build(
 @Composable
 private fun HistoryListPreview() {
     HealthCareTheme(darkTheme = false) {
-        HistoryListPane(LocalDate.of(2026, 9, 13), previewMeals, 900, 2000, "목표까지 1,100 kcal 남았어요.", {}, {}, previewTimeline)
+        HistoryListPane(
+            LocalDate.of(2026, 9, 13),
+            previewMeals,
+            900,
+            2000,
+            "목표까지 1,100 kcal 남았어요.",
+            {},
+            {},
+            timeline = previewTimeline
+        )
     }
 }
 

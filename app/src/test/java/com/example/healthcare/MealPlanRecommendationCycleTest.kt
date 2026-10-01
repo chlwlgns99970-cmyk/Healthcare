@@ -64,4 +64,15 @@ class MealPlanRecommendationCycleTest {
         assertEquals(listOf("only"), first.selectedTemplateIds)
         assertTrue(second.selectedTemplateIds.isEmpty())
     }
+
+    @Test
+    fun stableDailySelectionKeepsOrderAcrossStoreReads() {
+        val store = InMemoryRecommendationCycleStore()
+        store.writeStableSelection("2026-09-30_LUNCH", listOf("meal-2", "meal-1", "meal-3"))
+
+        assertEquals(
+            listOf("meal-2", "meal-1", "meal-3"),
+            store.readStableSelection("2026-09-30_LUNCH")
+        )
+    }
 }

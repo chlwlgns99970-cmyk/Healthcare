@@ -12,11 +12,13 @@ import com.example.healthcare.data.entity.MealRecord
 import com.example.healthcare.data.entity.CalorieGoal
 import com.example.healthcare.data.entity.MealTemplate
 import com.example.healthcare.data.entity.FoodItem
+import com.example.healthcare.data.entity.FrequentFood
 import com.example.healthcare.data.model.ActivityLevel
 import com.example.healthcare.data.model.MealType
 import com.example.healthcare.data.model.RecordSource
 import com.example.healthcare.data.model.TargetMode
 import com.example.healthcare.data.repository.EnergyProfileRepository
+import com.example.healthcare.data.repository.FoodRepository
 import com.example.healthcare.data.repository.MealCoachRepository
 import java.time.LocalDate
 import java.time.LocalTime
@@ -45,7 +47,7 @@ class AppDatabaseMigrationTest {
     }
 
     @Test
-    fun version1DataIsPreservedThroughVersion7AndCoachTablesAreCreated() {
+    fun version1DataIsPreservedThroughVersion8AndFavoriteIdentityColumnsAreCreated() {
         val configuration = SupportSQLiteOpenHelper.Configuration.builder(context)
             .name(databaseName)
             .callback(object : SupportSQLiteOpenHelper.Callback(1) {
@@ -94,7 +96,8 @@ class AppDatabaseMigrationTest {
                 AppDatabase.MIGRATION_3_4,
                 AppDatabase.MIGRATION_4_5,
                 AppDatabase.MIGRATION_5_6,
-                AppDatabase.MIGRATION_6_7
+                AppDatabase.MIGRATION_6_7,
+                AppDatabase.MIGRATION_7_8
             )
             .allowMainThreadQueries()
             .build()
@@ -123,7 +126,9 @@ class AppDatabaseMigrationTest {
                 assertEquals("2026-09-01", cursor.getString(1))
             }
             database.openHelper.writableDatabase.query(
-                "SELECT foodName, calories, carbohydrateGrams, proteinGrams, fatGrams FROM frequent_foods"
+                "SELECT foodName, calories, carbohydrateGrams, proteinGrams, fatGrams, " +
+                    "isFavorite, isFrequent, foodItemId, sourceType, sourceFoodCode, brand " +
+                    "FROM frequent_foods"
             ).use { cursor ->
                 cursor.moveToFirst()
                 assertEquals("기존 저장 음식", cursor.getString(0))
@@ -131,6 +136,12 @@ class AppDatabaseMigrationTest {
                 assertNull(cursor.getString(2))
                 assertNull(cursor.getString(3))
                 assertNull(cursor.getString(4))
+                assertEquals(0, cursor.getInt(5))
+                assertEquals(1, cursor.getInt(6))
+                assertNull(cursor.getString(7))
+                assertNull(cursor.getString(8))
+                assertNull(cursor.getString(9))
+                assertNull(cursor.getString(10))
             }
             database.openHelper.writableDatabase.execSQL(
                 "INSERT INTO energy_profile_history(" +
@@ -164,6 +175,48 @@ class AppDatabaseMigrationTest {
                     assertEquals("$table table", 1, cursor.getInt(0))
                 }
             }
+        } finally {
+            database.close()
+        }
+    }
+
+    @Test
+    fun favoritePersistsAcrossDatabaseReopenAndRemainsIndependentFromFrequentFood() = runBlocking {
+        val favorite = FrequentFood(
+            foodName = "참치김밥",
+            defaultServing = "180g",
+            calories = 420,
+            isFavorite = true,
+            isFrequent = false,
+            foodItemId = "kfind-product-tuna-1",
+            sourceType = "K-FIND-PRODUCT",
+            sourceFoodCode = "tuna-1",
+            brand = "검수 브랜드"
+        )
+        var database = Room.databaseBuilder(context, AppDatabase::class.java, databaseName)
+            .allowMainThreadQueries()
+            .build()
+        FoodRepository(database.frequentFoodDao()).setFavorite(favorite, true)
+        database.close()
+
+        database = Room.databaseBuilder(context, AppDatabase::class.java, databaseName)
+            .allowMainThreadQueries()
+            .build()
+        try {
+            val repository = FoodRepository(database.frequentFoodDao())
+            val restored = repository.favoriteFoods.first().single()
+            assertEquals("kfind-product-tuna-1", restored.foodItemId)
+            assertEquals("검수 브랜드", restored.brand)
+            assertEquals(0, repository.allFoods.first().size)
+
+            repository.insertFoodIfAbsent(restored.copy(isFavorite = false, isFrequent = true))
+            val merged = repository.allFoods.first().single()
+            assertEquals(restored.id, merged.id)
+            assertEquals(1, repository.favoriteFoods.first().size)
+
+            repository.setFavorite(merged, false)
+            assertEquals(0, repository.favoriteFoods.first().size)
+            assertEquals(1, repository.allFoods.first().size)
         } finally {
             database.close()
         }

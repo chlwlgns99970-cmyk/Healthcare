@@ -30,6 +30,8 @@ import androidx.compose.material.icons.rounded.ImageSearch
 import androidx.compose.material.icons.rounded.QrCodeScanner
 import androidx.compose.material.icons.rounded.RestaurantMenu
 import androidx.compose.material.icons.rounded.Search
+import androidx.compose.material.icons.rounded.Star
+import androidx.compose.material.icons.rounded.StarBorder
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -49,12 +51,15 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateMapOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.FilterQuality
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.imageResource
 import androidx.compose.ui.semantics.heading
@@ -113,6 +118,10 @@ internal fun SmartFoodInputScreen(
     onFoodCategorySelected: (FoodBrowseCategory) -> Unit = {},
     onFrequentFoodSelected: (FrequentFood) -> Unit = {},
     onFrequentFoodDeleted: (FrequentFood) -> Unit = {},
+    favoriteFoods: List<FrequentFood> = emptyList(),
+    onFavoriteFoodSelected: (FrequentFood) -> Unit = {},
+    onFavoriteToggle: (FoodItem) -> Unit = {},
+    onFavoriteRemoved: (FrequentFood) -> Unit = {},
     onOpenHistory: () -> Unit = {}
 ) {
     Scaffold(
@@ -121,6 +130,7 @@ internal fun SmartFoodInputScreen(
                 WellnessTopAppBar(
                     title = when (state.mode) {
                         SmartInputMode.SEARCH -> if (state.isCompanionSearch) "같이 먹은 음식" else "음식 검색"
+                        SmartInputMode.QUICK_RECORD -> "빠른 기록"
                         SmartInputMode.BARCODE_LOADING, SmartInputMode.BARCODE_RESULT, SmartInputMode.BARCODE_NOT_FOUND -> "바코드 기록"
                         SmartInputMode.OCR_PROCESSING, SmartInputMode.OCR_RESULT -> "영양성분표 확인"
                         else -> "기록"
@@ -159,11 +169,16 @@ internal fun SmartFoodInputScreen(
                 onBrandBack = onBrandBack,
                 onBrandCategorySelected = onBrandCategorySelected,
                 frequentFoods = frequentFoods,
+                favoriteFoods = favoriteFoods,
                 onFoodCategorySelected = onFoodCategorySelected,
                 onFrequentFoodSelected = onFrequentFoodSelected,
                 onFrequentFoodDeleted = onFrequentFoodDeleted,
+                onFavoriteFoodSelected = onFavoriteFoodSelected,
+                onFavoriteToggle = onFavoriteToggle,
+                onFavoriteRemoved = onFavoriteRemoved,
                 modifier = Modifier.padding(innerPadding)
             )
+            SmartInputMode.QUICK_RECORD -> LoadingContent("빠른 기록을 준비하고 있어요", Modifier.padding(innerPadding))
             SmartInputMode.BARCODE_LOADING -> LoadingContent("상품 영양정보를 확인하고 있어요", Modifier.padding(innerPadding))
             SmartInputMode.BARCODE_RESULT -> BarcodeResultContent(
                 item = state.barcodeItem,
@@ -481,9 +496,13 @@ private fun FoodSearchContent(
     onBrandBack: () -> Unit,
     onBrandCategorySelected: (String?) -> Unit,
     frequentFoods: List<FrequentFood>,
+    favoriteFoods: List<FrequentFood>,
     onFoodCategorySelected: (FoodBrowseCategory) -> Unit,
     onFrequentFoodSelected: (FrequentFood) -> Unit,
     onFrequentFoodDeleted: (FrequentFood) -> Unit,
+    onFavoriteFoodSelected: (FrequentFood) -> Unit,
+    onFavoriteToggle: (FoodItem) -> Unit,
+    onFavoriteRemoved: (FrequentFood) -> Unit,
     modifier: Modifier = Modifier
 ) {
     val brandFoods = state.brandProducts.filter { food ->
@@ -492,6 +511,9 @@ private fun FoodSearchContent(
     val officialMenuReferences = state.selectedBrand?.let {
         FranchiseCatalog.officialMenuNames(it.brand, state.searchQuery)
     }.orEmpty()
+    val groupedResults = FoodSearchPolicy.groupSearchResults(state.searchResults, state.searchQuery)
+    val expandedGroups = remember(state.searchQuery, state.searchResults) { mutableStateMapOf<String, Boolean>() }
+    val favoriteIds = favoriteFoods.mapNotNull(FrequentFood::foodItemId).toSet()
     LazyColumn(
         modifier = modifier.fillMaxSize(),
         contentPadding = PaddingValues(WellnessSpacing.ScreenHorizontal, WellnessSpacing.Compact, WellnessSpacing.ScreenHorizontal, WellnessSpacing.Section),
@@ -615,6 +637,53 @@ private fun FoodSearchContent(
                     }
                 }
             }
+            if (state.searchQuery.isBlank()) {
+                item {
+                    Text(
+                        "즐겨찾기",
+                        style = MaterialTheme.typography.titleSmall,
+                        color = MaterialTheme.colorScheme.primary
+                    )
+                }
+                if (favoriteFoods.isEmpty()) {
+                    item {
+                        Text(
+                            "즐겨찾기한 음식이 없어요. 자주 먹는 음식을 검색해 즐겨찾기에 추가해보세요.",
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                    }
+                } else {
+                    item {
+                        LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                            items(favoriteFoods, key = { "favorite-${it.id}" }) { food ->
+                                OutlinedCard(
+                                    onClick = { onFavoriteFoodSelected(food) },
+                                    modifier = Modifier.testTag("favorite-food-${food.foodItemId ?: food.id}")
+                                ) {
+                                    Row(
+                                        modifier = Modifier.padding(start = 12.dp, top = 6.dp, bottom = 6.dp),
+                                        verticalAlignment = Alignment.CenterVertically
+                                    ) {
+                                        Column(Modifier.padding(end = 4.dp)) {
+                                            Text(food.foodName, style = MaterialTheme.typography.labelLarge, maxLines = 2)
+                                            Text(
+                                                listOfNotNull(food.brand, "${food.defaultServing} · ${food.calories} kcal")
+                                                    .joinToString(" · "),
+                                                style = MaterialTheme.typography.bodySmall,
+                                                color = MaterialTheme.colorScheme.onSurfaceVariant
+                                            )
+                                        }
+                                        IconButton(onClick = { onFavoriteRemoved(food) }, modifier = Modifier.size(48.dp)) {
+                                            Icon(Icons.Rounded.Star, contentDescription = "${food.foodName} 즐겨찾기 해제")
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
             if (frequentFoods.isNotEmpty() && state.searchQuery.isBlank()) {
                 item {
                     Text(
@@ -718,7 +787,12 @@ private fun FoodSearchContent(
                     }
                 }
                 items(brandFoods, key = FoodItem::id) { food ->
-                    FoodSearchResultCard(food = food, onFoodSelected = onFoodSelected)
+                    FoodSearchResultCard(
+                        food = food,
+                        isFavorite = food.id in favoriteIds,
+                        onFoodSelected = onFoodSelected,
+                        onFavoriteToggle = onFavoriteToggle
+                    )
                 }
                 if (officialMenuReferences.isNotEmpty()) {
                     item {
@@ -767,14 +841,30 @@ private fun FoodSearchContent(
                         Text(if (state.isCompanionSearch) "기록 화면으로 돌아가기" else "직접 입력으로 전환")
                     } }
                 }
-                state.searchResults.groupBy(FoodSearchPolicy::resultGroup).forEach { (group, foods) ->
-                    item(key = "group-$group") {
-                        Text(group, style = MaterialTheme.typography.titleSmall,
-                            color = MaterialTheme.colorScheme.primary,
-                            modifier = Modifier.padding(top = 4.dp))
+                groupedResults.forEach { group ->
+                    val expanded = expandedGroups[group.key] == true
+                    item(key = "name-group-${group.key}") {
+                        FoodSearchResultCard(
+                            food = group.representative,
+                            isFavorite = group.representative.id in favoriteIds,
+                            alternativeCount = group.alternatives.size,
+                            alternativesExpanded = expanded,
+                            onAlternativesToggle = {
+                                expandedGroups[group.key] = !expanded
+                            },
+                            onFoodSelected = onFoodSelected,
+                            onFavoriteToggle = onFavoriteToggle
+                        )
                     }
-                    items(foods, key = FoodItem::id) { food ->
-                        FoodSearchResultCard(food = food, onFoodSelected = onFoodSelected)
+                    if (expanded) {
+                        items(group.alternatives, key = { "alternative-${it.id}" }) { food ->
+                            FoodSearchResultCard(
+                                food = food,
+                                isFavorite = food.id in favoriteIds,
+                                onFoodSelected = onFoodSelected,
+                                onFavoriteToggle = onFavoriteToggle
+                            )
+                        }
                     }
                 }
                 if (state.brandResults.isNotEmpty()) {
@@ -820,19 +910,52 @@ private fun FoodSearchContent(
 }
 
 @Composable
-private fun FoodSearchResultCard(food: FoodItem, onFoodSelected: (FoodItem) -> Unit) {
+private fun FoodSearchResultCard(
+    food: FoodItem,
+    isFavorite: Boolean,
+    onFoodSelected: (FoodItem) -> Unit,
+    onFavoriteToggle: (FoodItem) -> Unit,
+    alternativeCount: Int = 0,
+    alternativesExpanded: Boolean = false,
+    onAlternativesToggle: () -> Unit = {}
+) {
     val needsReview = FoodSearchPolicy.needsBasisReview(food)
     Card(
         onClick = { onFoodSelected(food) },
         enabled = !needsReview,
-        modifier = Modifier.fillMaxWidth(),
+        modifier = Modifier.fillMaxWidth().testTag("food-search-result-${food.id}"),
         colors = CardDefaults.cardColors(
             containerColor = if (needsReview) MaterialTheme.colorScheme.surfaceVariant else MaterialTheme.colorScheme.surface
         )
     ) {
         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(5.dp)) {
-            Text(FoodSearchPolicy.displayName(food), style = MaterialTheme.typography.titleMedium, maxLines = 2,
-                overflow = TextOverflow.Ellipsis)
+            Row(
+                Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text(
+                    FoodSearchPolicy.displayName(food),
+                    style = MaterialTheme.typography.titleMedium,
+                    maxLines = 2,
+                    overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier.weight(1f)
+                )
+                TextButton(
+                    onClick = { onFavoriteToggle(food) },
+                    modifier = Modifier.heightIn(min = 48.dp)
+                ) {
+                    Icon(
+                        if (isFavorite) Icons.Rounded.Star else Icons.Rounded.StarBorder,
+                        contentDescription = if (isFavorite) {
+                            "${FoodSearchPolicy.displayName(food)} 즐겨찾기 해제"
+                        } else {
+                            "${FoodSearchPolicy.displayName(food)} 즐겨찾기 추가"
+                        }
+                    )
+                    Text(if (isFavorite) "즐겨찾기됨" else "즐겨찾기")
+                }
+            }
             food.brand?.takeIf(String::isNotBlank)?.let { brand ->
                 Text("${if (FranchiseCatalog.isFranchise(food)) "프랜차이즈" else "브랜드·제조사"} · $brand", style = MaterialTheme.typography.labelLarge,
                     color = MaterialTheme.colorScheme.secondary, maxLines = 2, overflow = TextOverflow.Ellipsis)
@@ -850,6 +973,17 @@ private fun FoodSearchResultCard(food: FoodItem, onFoodSelected: (FoodItem) -> U
             }
             Text("${food.category?.let { "$it · " }.orEmpty()}출처 ${food.sourceType} · 데이터 ${food.dataVersion}",
                 style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+            if (alternativeCount > 0) {
+                TextButton(
+                    onClick = onAlternativesToggle,
+                    modifier = Modifier
+                        .heightIn(min = 48.dp)
+                        .align(Alignment.End)
+                        .testTag("food-search-alternatives-${food.id}")
+                ) {
+                    Text(if (alternativesExpanded) "다른 제품 접기" else "다른 제품 ${alternativeCount}개")
+                }
+            }
         }
     }
 }

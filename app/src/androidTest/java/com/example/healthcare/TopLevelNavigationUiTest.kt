@@ -9,7 +9,6 @@ import androidx.compose.ui.test.hasText
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onAllNodesWithText
 import androidx.compose.ui.test.onFirst
-import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
@@ -54,14 +53,14 @@ class TopLevelNavigationUiTest {
             .performScrollToNode(hasText("식사 추천 설정"))
         composeRule.onNodeWithText("식사 추천 설정").performClick()
         composeRule.waitUntil(10_000) {
-            composeRule.onAllNodesWithText("하루 식사 구성").fetchSemanticsNodes().isNotEmpty()
+            composeRule.onAllNodesWithText("추천에 반영할 취향").fetchSemanticsNodes().isNotEmpty()
         }
 
         composeRule.onNodeWithText("홈").performClick()
         composeRule.waitUntil(10_000) {
-            composeRule.onAllNodesWithText("좋은 아침이에요.").fetchSemanticsNodes().isNotEmpty()
+            runCatching { composeRule.onNodeWithTag("dashboard-root").fetchSemanticsNode() }.isSuccess
         }
-        composeRule.onNodeWithText("좋은 아침이에요.").assertIsDisplayed()
+        composeRule.onNodeWithTag("dashboard-root").assertIsDisplayed()
     }
 
     @Test
@@ -77,32 +76,22 @@ class TopLevelNavigationUiTest {
     }
 
     @Test
-    fun homeCalorieTargetOpensEnergySettingsDirectly() {
+    fun homeCalorieTargetOpensTodayReport() {
         composeRule.onNodeWithTag("dashboard-calorie-target")
-            .assertIsDisplayed()
-            .assertHasClickAction()
-            .performClick()
-
+            .assertIsDisplayed().assertHasClickAction().performClick()
         composeRule.waitUntil(10_000) {
-            composeRule.onAllNodesWithText("에너지 목표").fetchSemanticsNodes().isNotEmpty()
+            composeRule.onAllNodesWithText("오늘 식사 리포트").fetchSemanticsNodes().isNotEmpty()
         }
-        composeRule.onNodeWithText("BMR, 활동 수준, 유지 칼로리와 섭취 목표").assertIsDisplayed()
-        composeRule.onAllNodes(hasScrollAction()).onFirst()
-            .performScrollToNode(hasText("직접 설정"))
-        composeRule.onNodeWithText("직접 설정").assertIsDisplayed()
-        composeRule.onAllNodes(hasScrollAction()).onFirst()
-            .performScrollToNode(hasText("기초대사량 기준"))
-        composeRule.onNodeWithText("기초대사량 기준").assertIsDisplayed()
-        composeRule.onAllNodes(hasScrollAction()).onFirst()
-            .performScrollToNode(hasText("활동량 포함 유지 기준"))
-        composeRule.onNodeWithText("활동량 포함 유지 기준").assertIsDisplayed()
+        composeRule.onNodeWithTag("today-report").assertIsDisplayed()
+        Espresso.pressBack()
+        composeRule.onNodeWithTag("dashboard-root").assertIsDisplayed()
     }
 
     @Test
     fun recommendationCardWholeSurfaceUsesRecommendationTabAndBackReturnsHome() {
         assertEquals("com.example.healthcare.qa", InstrumentationRegistry.getInstrumentation().targetContext.packageName)
 
-        composeRule.onNodeWithContentDescription("오늘의 추천 식사 보기")
+        composeRule.onNodeWithTag("dashboard-open-daily-plan")
             .assertIsDisplayed()
             .assertHasClickAction()
 
@@ -117,17 +106,30 @@ class TopLevelNavigationUiTest {
                 }.getOrDefault(false)
             }
             composeRule.onNodeWithText("추천").assertIsSelected()
+            composeRule.waitUntil(10_000) {
+                runCatching { composeRule.onNodeWithTag("daily-plan-title").fetchSemanticsNode() }.isSuccess &&
+                    runCatching { composeRule.onNodeWithTag("daily-plan-loading").fetchSemanticsNode() }.isFailure
+            }
+            // Home opens an existing day plan when available. Its first Back returns to themes.
+            if (composeRule.onAllNodesWithText("오늘은 어떻게 먹고 싶나요?").fetchSemanticsNodes().isEmpty()) {
+                Espresso.pressBack()
+            }
+            composeRule.onNodeWithText("오늘은 어떻게 먹고 싶나요?").assertIsDisplayed()
+            composeRule.onNodeWithTag("daily-theme-LIGHT").assertIsDisplayed().assertHasClickAction()
+            composeRule.onNodeWithTag("daily-plan-total").assertDoesNotExist()
 
             Espresso.pressBack()
             composeRule.waitUntil(10_000) {
-                composeRule.onAllNodesWithText("좋은 아침이에요.").fetchSemanticsNodes().isNotEmpty()
+                runCatching { composeRule.onNodeWithTag("dashboard-root").fetchSemanticsNode() }.isSuccess
             }
-            composeRule.onNodeWithText("좋은 아침이에요.").assertIsDisplayed()
+            composeRule.onNodeWithTag("dashboard-root").assertIsDisplayed()
         }
 
         composeRule.onNodeWithText("추천").performClick()
         composeRule.onNodeWithText("추천").assertIsSelected()
+        composeRule.onNodeWithText("오늘은 어떻게 먹고 싶나요?").assertIsDisplayed()
+        composeRule.onNodeWithTag("daily-plan-total").assertDoesNotExist()
         composeRule.onNodeWithText("홈").performClick()
-        composeRule.onNodeWithText("좋은 아침이에요.").assertIsDisplayed()
+        composeRule.onNodeWithTag("dashboard-root").assertIsDisplayed()
     }
 }

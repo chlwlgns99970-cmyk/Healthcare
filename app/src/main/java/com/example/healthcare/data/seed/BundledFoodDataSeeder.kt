@@ -34,40 +34,64 @@ class BundledFoodDataSeeder(
             }
             val foodFiles = listOf(FOODS_FILE, PRODUCT_FOODS_FILE, OFFICIAL_FRANCHISE_FOODS_FILE)
                 .filter(files::contains)
-            val foods = foodFiles.flatMap { file ->
-                readCsv("$ASSET_DIRECTORY/$file").map(::foodItem)
-            }
-            val ingredients = if (INGREDIENTS_FILE in files) {
-                readCsv("$ASSET_DIRECTORY/$INGREDIENTS_FILE").map(::ingredient)
-            } else emptyList()
-            val foodsById = foods.associateBy(FoodItem::id)
-            val ingredientsByTemplate = ingredients.groupBy(MealTemplateIngredient::mealTemplateId)
-            val templates = if (TEMPLATES_FILE in files) {
-                readCsv("$ASSET_DIRECTORY/$TEMPLATES_FILE").map { row ->
-                    mealTemplate(row, ingredientsByTemplate[row.required("id")].orEmpty(), foodsById)
+            val ingredients = mutableListOf<MealTemplateIngredient>()
+            if (INGREDIENTS_FILE in files) {
+                forEachCsvRow("$ASSET_DIRECTORY/$INGREDIENTS_FILE") { row ->
+                    ingredients += ingredient(row)
                 }
-            } else emptyList()
-            require(foodsById.size == foods.size) { "Duplicate FoodItem id in bundled data" }
-            val templateIds = templates.map(MealTemplate::id).toSet()
-            require(templateIds.size == templates.size) { "Duplicate MealTemplate id in bundled data" }
-            require(ingredients.all { it.mealTemplateId in templateIds }) {
-                "Bundled ingredient references an unknown meal template"
             }
+            val neededFoodIds = ingredients.mapTo(mutableSetOf(), MealTemplateIngredient::foodItemId)
+            val ingredientsByTemplate = ingredients.groupBy(MealTemplateIngredient::mealTemplateId)
 
-            database.withTransaction {
+            val result = database.withTransaction {
                 val foodItemDao = database.foodItemDao()
                 val mealCoachDao = database.mealCoachDao()
-                if (foods.isNotEmpty()) foodItemDao.upsertAll(foods)
+                val seenFoodIds = mutableSetOf<String>()
+                val foodsById = mutableMapOf<String, FoodItem>()
+                val foodBatch = ArrayList<FoodItem>(FOOD_INSERT_BATCH_SIZE)
+                // Keep only one insert batch and foods needed for template nutrient calculations.
+                // A later validation failure rolls back every batch in this transaction.
+                foodFiles.forEach { file ->
+                    forEachCsvRow("$ASSET_DIRECTORY/$file") { row ->
+                        val food = foodItem(row)
+                        require(seenFoodIds.add(food.id)) { "Duplicate FoodItem id in bundled data" }
+                        if (food.id in neededFoodIds) foodsById[food.id] = food
+                        foodBatch += food
+                        if (foodBatch.size == FOOD_INSERT_BATCH_SIZE) {
+                            foodItemDao.upsertAll(foodBatch)
+                            foodBatch.clear()
+                        }
+                    }
+                }
+                if (foodBatch.isNotEmpty()) {
+                    foodItemDao.upsertAll(foodBatch)
+                    foodBatch.clear()
+                }
+
+                val templates = mutableListOf<MealTemplate>()
+                if (TEMPLATES_FILE in files) {
+                    forEachCsvRow("$ASSET_DIRECTORY/$TEMPLATES_FILE") { row ->
+                        templates += mealTemplate(
+                            row, ingredientsByTemplate[row.required("id")].orEmpty(), foodsById
+                        )
+                    }
+                }
+                val templateIds = templates.map(MealTemplate::id).toSet()
+                require(templateIds.size == templates.size) { "Duplicate MealTemplate id in bundled data" }
+                require(ingredients.all { it.mealTemplateId in templateIds }) {
+                    "Bundled ingredient references an unknown meal template"
+                }
                 if (templates.isNotEmpty()) {
                     mealCoachDao.upsertTemplates(templates)
                     mealCoachDao.deleteIngredientsForTemplates(templateIds.toList())
                 }
                 if (ingredients.isNotEmpty()) mealCoachDao.upsertIngredients(ingredients)
+                SeedResult.Seeded(seenFoodIds.size, templates.size, ingredients.size)
             }
             if (bundleId.isNotBlank()) {
                 preferences.edit { putString(KEY_BUNDLE_ID, bundleId) }
             }
-            SeedResult.Seeded(foods.size, templates.size, ingredients.size)
+            result
         }.getOrElse { SeedResult.InvalidBundle(it.message.orEmpty()) }
     }
 
@@ -151,13 +175,18 @@ class BundledFoodDataSeeder(
         adjustmentStep = row["adjustmentStep"].doubleOrNull()
     )
 
-    private fun readCsv(path: String): List<Map<String, String>> = context.assets.open(path).bufferedReader().use { reader ->
-        val lines = reader.lineSequence().filter { it.isNotBlank() }.toList()
-        if (lines.isEmpty()) return@use emptyList()
-        val headers = parseCsvLine(lines.first())
-        lines.drop(1).map { line ->
-            val values = parseCsvLine(line)
-            headers.mapIndexed { index, header -> header to values.getOrElse(index) { "" } }.toMap()
+    private suspend fun forEachCsvRow(path: String, action: suspend (Map<String, String>) -> Unit) {
+        context.assets.open(path).bufferedReader().use { reader ->
+            val lines = reader.lineSequence().filter { it.isNotBlank() }.iterator()
+            if (!lines.hasNext()) return@use
+            val headers = parseCsvLine(lines.next())
+            while (lines.hasNext()) {
+                val values = parseCsvLine(lines.next())
+                val row = headers.mapIndexed { index, header ->
+                    header to values.getOrElse(index) { "" }
+                }.toMap()
+                action(row)
+            }
         }
     }
 
@@ -219,6 +248,7 @@ class BundledFoodDataSeeder(
         const val MANIFEST_FILE = "food_data_manifest.properties"
         private const val SEED_PREFERENCES = "bundled_food_seed"
         private const val KEY_BUNDLE_ID = "bundle_id"
+        private const val FOOD_INSERT_BATCH_SIZE = 250
         const val REQUIRED_KFIND_ATTRIBUTION = "식품영양성분 데이터베이스"
         const val REQUIRED_KFIND_ATTRIBUTION_ENGLISH = "Korean Food Composition Database system(K-FCDB)"
         const val SOURCE_TYPE_KFIND = "K-FIND"

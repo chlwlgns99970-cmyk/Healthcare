@@ -8,16 +8,19 @@ import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.test.assertIsDisplayed
+import androidx.compose.ui.test.SemanticsMatcher
 import androidx.compose.ui.test.assertHasClickAction
+import androidx.compose.ui.test.assertCountEquals
 import androidx.compose.ui.test.captureToImage
 import androidx.compose.ui.test.hasContentDescription
+import androidx.compose.ui.test.hasTestTag
 import androidx.compose.ui.test.hasScrollAction
 import androidx.compose.ui.test.hasText
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onFirst
 import androidx.compose.ui.test.onAllNodesWithText
-import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithText
+import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onRoot
 import androidx.compose.ui.test.performScrollToNode
 import androidx.compose.ui.test.performClick
@@ -30,6 +33,7 @@ import com.example.healthcare.data.entity.FoodBrandSummary
 import com.example.healthcare.data.entity.MealRecord
 import com.example.healthcare.data.entity.MealTemplate
 import com.example.healthcare.data.entity.FoodItem
+import com.example.healthcare.data.entity.FrequentFood
 import com.example.healthcare.data.repository.MealRecommendationWithIngredients
 import com.example.healthcare.domain.ScoredMealRecommendation
 import com.example.healthcare.ui.screens.DashboardContent
@@ -110,6 +114,9 @@ class SmartCoachUiTest {
         }
         composeRule.onNodeWithText("영양정보 100g 기준 · 약 174 kcal").assertIsDisplayed()
         composeRule.onAllNodes(hasScrollAction()).onFirst()
+            .performScrollToNode(hasTestTag("food-search-alternatives-g"))
+        composeRule.onNodeWithTag("food-search-alternatives-g").performClick()
+        composeRule.onAllNodes(hasScrollAction()).onFirst()
             .performScrollToNode(hasText("영양정보 단위 확인 필요"))
         composeRule.onNodeWithText("영양정보 단위 확인 필요").assertIsDisplayed()
         composeRule.onNodeWithText("100ml 기준", substring = true).assertDoesNotExist()
@@ -136,6 +143,116 @@ class SmartCoachUiTest {
         composeRule.onNodeWithText("‘김밥’ 결과 보기").performClick()
         assertEquals("김밥", suggestedQuery)
         composeRule.onNodeWithText("직접 입력으로 전환").assertIsDisplayed()
+    }
+
+    @Test
+    fun sameNameSearchShowsOneRepresentativeThenExpandsEveryOriginalProduct() {
+        fun product(id: String, brand: String?) = FoodItem(
+            id = id,
+            sourceType = if (brand == null) "K-FIND" else "K-FIND-PRODUCT",
+            sourceFoodCode = id,
+            name = if (id == "cu") "참치 김밥" else "참치김밥",
+            normalizedName = "참치김밥",
+            category = "밥류",
+            referenceAmount = if (id == "general") 100.0 else 180.0,
+            unit = "g",
+            energyKcal = if (id == "general") 220.0 else 420.0,
+            carbohydrateGrams = 40.0,
+            proteinGrams = 10.0,
+            fatGrams = 8.0,
+            servingDescription = "100g 기준",
+            brand = brand,
+            dataVersion = "test",
+            createdAt = 0,
+            updatedAt = 0
+        )
+        var selectedId = ""
+        composeRule.setContent {
+            HealthCareTheme {
+                Box(Modifier.width(360.dp).height(800.dp)) {
+                    SmartFoodInputScreen(
+                        state = SmartInputUiState(
+                            mode = SmartInputMode.SEARCH,
+                            searchQuery = "참치김밥",
+                            searchResults = listOf(
+                                product("gs", "GS25"),
+                                product("cu", "CU"),
+                                product("general", null)
+                            )
+                        ),
+                        recentMeals = emptyList(), onBack = {}, onPhoto = {}, onBarcode = {},
+                        onNutritionLabel = {}, onSearch = {}, onSearchQueryChange = {},
+                        onFoodSelected = { selectedId = it.id }, onUseBarcodeItem = {},
+                        onOcrCandidateSelected = {}, onOcrAmountChange = {}, onConfirmOcr = {},
+                        onManual = {}, onRegisterBarcode = {}, onRepeatRecent = {}
+                    )
+                }
+            }
+        }
+
+        composeRule.onNodeWithTag("food-search-result-general").assertIsDisplayed()
+        composeRule.onAllNodes(hasTestTag("food-search-result-cu")).assertCountEquals(0)
+        composeRule.onAllNodes(hasTestTag("food-search-result-gs")).assertCountEquals(0)
+        composeRule.onAllNodes(hasScrollAction()).onFirst()
+            .performScrollToNode(hasTestTag("food-search-alternatives-general"))
+        composeRule.onNodeWithText("다른 제품 2개").performClick()
+        composeRule.onAllNodes(hasScrollAction()).onFirst()
+            .performScrollToNode(hasTestTag("food-search-result-gs"))
+        composeRule.onNodeWithTag("food-search-result-gs").assertIsDisplayed()
+        composeRule.onAllNodes(hasScrollAction()).onFirst()
+            .performScrollToNode(hasTestTag("food-search-result-cu"))
+        composeRule.onNodeWithTag("food-search-result-cu").assertIsDisplayed().performClick()
+        composeRule.runOnIdle { assertEquals("cu", selectedId) }
+    }
+
+    @Test
+    fun favoriteSectionHasExplicitEmptyState() {
+        composeRule.setContent {
+            HealthCareTheme {
+                SmartFoodInputScreen(
+                    state = SmartInputUiState(mode = SmartInputMode.SEARCH),
+                    recentMeals = emptyList(), onBack = {}, onPhoto = {}, onBarcode = {},
+                    onNutritionLabel = {}, onSearch = {}, onSearchQueryChange = {},
+                    onFoodSelected = {}, onUseBarcodeItem = {}, onOcrCandidateSelected = {},
+                    onOcrAmountChange = {}, onConfirmOcr = {}, onManual = {},
+                    onRegisterBarcode = {}, onRepeatRecent = {}
+                )
+            }
+        }
+        composeRule.onNodeWithText("즐겨찾기한 음식이 없어요", substring = true).assertIsDisplayed()
+    }
+
+    @Test
+    fun favoriteSectionOpensSavedItemWithoutSearchingAgain() {
+        val favorite = FrequentFood(
+            id = 1,
+            foodName = "참치김밥",
+            defaultServing = "180g",
+            calories = 420,
+            isFavorite = true,
+            isFrequent = false,
+            foodItemId = "favorite-1",
+            sourceType = "K-FIND-PRODUCT",
+            sourceFoodCode = "favorite-1",
+            brand = "검수 브랜드"
+        )
+        var selectedFavoriteId: String? = null
+        composeRule.setContent {
+            HealthCareTheme {
+                SmartFoodInputScreen(
+                    state = SmartInputUiState(mode = SmartInputMode.SEARCH),
+                    recentMeals = emptyList(), onBack = {}, onPhoto = {}, onBarcode = {},
+                    onNutritionLabel = {}, onSearch = {}, onSearchQueryChange = {},
+                    onFoodSelected = {}, onUseBarcodeItem = {}, onOcrCandidateSelected = {},
+                    onOcrAmountChange = {}, onConfirmOcr = {}, onManual = {},
+                    onRegisterBarcode = {}, onRepeatRecent = {},
+                    favoriteFoods = listOf(favorite),
+                    onFavoriteFoodSelected = { selectedFavoriteId = it.foodItemId }
+                )
+            }
+        }
+        composeRule.onNodeWithTag("favorite-food-favorite-1").assertIsDisplayed().performClick()
+        composeRule.runOnIdle { assertEquals("favorite-1", selectedFavoriteId) }
     }
 
     @Test
@@ -263,8 +380,10 @@ class SmartCoachUiTest {
             }
         }
 
-        composeRule.onNodeWithText("다음 식사는 가볍게").assertIsDisplayed()
-        assertEquals(0, composeRule.onAllNodes(hasScrollAction()).fetchSemanticsNodes().size)
+        composeRule.onNodeWithText("오늘 목표보다 약 200 kcal 많아요").assertIsDisplayed()
+        assertEquals(0, composeRule.onAllNodes(SemanticsMatcher("vertical scroll") {
+            it.config.contains(androidx.compose.ui.semantics.SemanticsProperties.VerticalScrollAxisRange)
+        }).fetchSemanticsNodes().size)
     }
 
     @Test
@@ -302,11 +421,12 @@ class SmartCoachUiTest {
             }
         }
 
-        composeRule.onNodeWithText("추천 메뉴를 확인해 보세요").performClick()
+        composeRule.onNodeWithText("오늘 식사 스타일을 골라보세요").assertIsDisplayed()
+        composeRule.onNodeWithText("추천 고르기").assertIsDisplayed()
+        composeRule.onNodeWithTag("dashboard-open-daily-plan").assertHasClickAction().performClick()
         composeRule.runOnIdle { assertEquals(true, recommendationOpened) }
-        composeRule.onNodeWithContentDescription("오늘의 추천 식사 보기").assertHasClickAction()
-        composeRule.onNodeWithText("420 kcal").assertIsDisplayed()
-        composeRule.onNodeWithText("900 kcal").assertIsDisplayed()
+        composeRule.onNodeWithText("아침 식사 · 420 kcal").assertIsDisplayed()
+        composeRule.onNodeWithText("점심 식사 · 900 kcal").assertIsDisplayed()
         composeRule.onAllNodesWithText("기록 없음").onFirst().assertIsDisplayed()
         composeRule.onNodeWithText("아침").performClick()
         composeRule.runOnIdle { assertEquals(true, recordOpened) }

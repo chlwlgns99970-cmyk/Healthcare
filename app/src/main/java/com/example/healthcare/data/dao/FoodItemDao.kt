@@ -19,7 +19,9 @@ interface FoodItemDao {
             "normalizedName LIKE '%' || :normalizedQuery || '%' " +
             "OR aliases LIKE '%' || :normalizedQuery || '%' " +
             "OR replace(lower(COALESCE(brand, '')), ' ', '') LIKE '%' || :normalizedQuery || '%') " +
-            "ORDER BY CASE WHEN sourceType = 'K-FIND' AND lower(unit) = 'ml' AND " +
+            "ORDER BY CASE WHEN sourceType = 'USDA-SR-LEGACY' AND " +
+            "aliases LIKE '%|' || :normalizedQuery || '|%' THEN 0 ELSE 1 END, " +
+            "CASE WHEN sourceType = 'K-FIND' AND lower(unit) = 'ml' AND " +
             "category NOT IN ('음료 및 차류', '국 및 탕류', '찌개 및 전골류', '죽 및 스프류', " +
             "'장류, 양념류', '유제품류 및 빙과류') THEN 1 ELSE 0 END, " +
             "CASE WHEN sourceType = 'K-FIND-PRODUCT' AND normalizedName = :normalizedQuery THEN 0 " +
@@ -35,8 +37,11 @@ interface FoodItemDao {
         "SELECT * FROM food_items " +
             "WHERE sourceType = 'K-FIND-PRODUCT' AND (" +
             "normalizedName LIKE '%' || :normalizedQuery || '%' " +
-            "OR aliases LIKE '%' || :normalizedQuery || '%') " +
-            "ORDER BY CASE WHEN normalizedName = :normalizedQuery THEN 0 " +
+            "OR aliases LIKE '%' || :normalizedQuery || '%' " +
+            "OR replace(lower(COALESCE(brand, '')), ' ', '') || normalizedName " +
+            "LIKE '%' || :normalizedQuery || '%') " +
+            "ORDER BY CASE WHEN normalizedName = :normalizedQuery OR " +
+            "replace(lower(COALESCE(brand, '')), ' ', '') || normalizedName = :normalizedQuery THEN 0 " +
             "WHEN normalizedName LIKE :normalizedQuery || '%' THEN 1 ELSE 2 END, name, sourceFoodCode " +
             "LIMIT :limit"
     )

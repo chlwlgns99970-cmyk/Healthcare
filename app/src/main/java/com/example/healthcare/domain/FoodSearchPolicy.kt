@@ -16,6 +16,14 @@ enum class FoodBrowseCategory(val label: String, val seedQuery: String) {
     BEVERAGE("음료", "음료")
 }
 
+data class FoodSearchResultGroup(
+    val key: String,
+    val representative: FoodItem,
+    val alternatives: List<FoodItem>
+) {
+    val size: Int get() = alternatives.size + 1
+}
+
 /** Search-only aliases. Source names and nutrition units remain untouched. */
 object FoodSearchPolicy {
     private val nonNameCharacters = Regex("[^0-9a-z가-힣]")
@@ -58,6 +66,7 @@ object FoodSearchPolicy {
     private val detailFirstCategories = setOf("국 및 탕류", "찌개 및 전골류", "죽 및 스프류")
     private val detailFirstDishSuffixes = listOf("찌개", "전골", "스프", "수프", "국", "탕", "죽")
     private val simpleKoreanDetail = Regex("^[가-힣]{1,8}$")
+    private val retailBrandPrefixes = listOf("세븐일레븐", "이마트24", "gs25", "씨유", "cu")
 
     fun normalize(query: String): String = nonNameCharacters.replace(
         Normalizer.normalize(query, Normalizer.Form.NFKC).lowercase(Locale.ROOT), ""
@@ -72,11 +81,31 @@ object FoodSearchPolicy {
     fun broaderSuggestion(query: String): String? = broaderSearchTerms[normalize(query)]
 
     fun displayName(food: FoodItem): String {
+        basicFruitName(food)?.let { return it }
         val parts = food.name.split('_').map(String::trim).filter(String::isNotBlank)
         if (parts.size == 2 && shouldPlaceDetailFirst(food, parts[0], parts[1])) {
             return parts[1] + parts[0]
         }
         return parts.joinToString(" · ").ifBlank { food.name }
+    }
+
+    /** 사용자 검색 화면에서 같은 음식 종류로 볼 수 있는 이름입니다. 원본 이름과 ID는 바꾸지 않습니다. */
+    fun canonicalFoodKind(food: FoodItem): String {
+        var name = normalize(displayName(food))
+        val brand = normalize(food.brand.orEmpty())
+        if (brand.isNotBlank()) {
+            name = when {
+                name.startsWith(brand) && name.length > brand.length -> name.removePrefix(brand)
+                name.endsWith(brand) && name.length > brand.length -> name.removeSuffix(brand)
+                else -> name
+            }
+        }
+        retailBrandPrefixes.firstOrNull { prefix -> name.startsWith(prefix) && name.length > prefix.length }
+            ?.let { name = name.removePrefix(it) }
+        if (name.startsWith("김밥") && name.length > "김밥".length) {
+            name = name.removePrefix("김밥") + "김밥"
+        }
+        return name
     }
 
     /** K-FIND's food-code prefix identifies the official row's origin. */
@@ -138,6 +167,37 @@ object FoodSearchPolicy {
         else -> "기본·종류"
     }
 
+    /**
+     * 화면에서만 같은 표시 이름을 한 묶음으로 접습니다. 원본 FoodItem은 모두 그대로 보존됩니다.
+     * 대표 항목은 검색어·브랜드 일치, 일반 음식 여부, 영양 완전도, 기준량, 안정 ID 순으로 결정합니다.
+     */
+    fun groupSearchResults(foods: List<FoodItem>, query: String): List<FoodSearchResultGroup> {
+        val normalizedQuery = normalize(query)
+        return foods
+            .groupBy(::canonicalFoodKind)
+            .map { (key, members) ->
+                val ordered = members.sortedWith(
+                    compareBy<FoodItem>(
+                        { representativeBrandRank(it, normalizedQuery) },
+                        { if (canonicalFoodKind(it) == normalizedQuery) 0 else 1 },
+                        { foodKindRank(it) },
+                        { -nutritionCompleteness(it) },
+                        { if (needsBasisReview(it)) 1 else 0 },
+                        { it.sourceType.uppercase(Locale.ROOT) },
+                        { it.sourceFoodCode },
+                        { it.id }
+                    )
+                )
+                FoodSearchResultGroup(key, ordered.first(), ordered.drop(1))
+            }
+            .sortedWith(compareBy(
+                { searchRank(it.representative, query) },
+                { if (it.key == normalizedQuery) 0 else 1 },
+                { it.key },
+                { it.representative.id }
+            ))
+    }
+
     fun searchRank(food: FoodItem, query: String): Int {
         val normalized = normalize(query)
         val queryVariants = queries(query)
@@ -151,8 +211,12 @@ object FoodSearchPolicy {
                 .takeIf { it.size > 1 }
                 .orEmpty()
         return when {
+            normalized.isNotBlank() && canonicalFoodKind(food) == normalized -> 0
+            normalized.isNotBlank() && brand.isNotBlank() && brand + name == normalized -> 0
             queryVariants.any { name == it } -> 0
+            queryVariants.any { hasAlias(food, it) } && food.sourceType == "USDA-SR-LEGACY" -> 5
             tokens.isNotEmpty() && tokens.all(name::contains) -> 10
+            queryVariants.any { hasAlias(food, it) } && !isProduct(food) -> 15
             queryVariants.any { name.contains(it) } -> 20
             tokens.any(name::contains) -> 30
             queryVariants.any { aliases.contains(it) } -> 40
@@ -162,11 +226,7 @@ object FoodSearchPolicy {
     }
 
     /** Relevance is primary; source/brand is only a tie-breaker. */
-    fun sourceTieBreakRank(food: FoodItem): Int = when {
-        isProduct(food) -> 0
-        FranchiseCatalog.isFranchise(food) -> 1
-        else -> 2
-    }
+    fun sourceTieBreakRank(food: FoodItem): Int = foodKindRank(food)
 
     fun quickCompanionQueries(food: FoodItem?): List<Pair<String, String>> = when {
         food == null -> emptyList()
@@ -187,12 +247,43 @@ object FoodSearchPolicy {
     private fun shouldPlaceDetailFirst(food: FoodItem, base: String, detail: String): Boolean =
         food.sourceType.equals("K-FIND", ignoreCase = true) &&
             !food.sourceFoodCode.startsWith("D2", ignoreCase = true) &&
-            food.category in detailFirstCategories &&
-            detailFirstDishSuffixes.any(base::endsWith) &&
+            ((food.category in detailFirstCategories && detailFirstDishSuffixes.any(base::endsWith)) ||
+                base == "김밥") &&
             simpleKoreanDetail.matches(detail) &&
             !detail.endsWith("만") &&
             !detail.contains("제외") &&
             !base.contains(detail)
+
+    private fun nutritionCompleteness(food: FoodItem): Int = listOf(
+        food.energyKcal.takeIf { it.isFinite() && it > 0.0 },
+        food.carbohydrateGrams,
+        food.proteinGrams,
+        food.fatGrams
+    ).count { it != null }
+
+    private fun representativeBrandRank(food: FoodItem, normalizedQuery: String): Int {
+        if (normalizedQuery.isBlank()) return 1
+        val brand = normalize(food.brand.orEmpty())
+        return if (brand.isNotBlank() && normalizedQuery.contains(brand)) 0 else 1
+    }
+
+    private fun hasAlias(food: FoodItem, normalized: String): Boolean =
+        food.aliases.split('|').any { normalize(it) == normalized }
+
+    /** Raw reference fruits use their source alias as the food kind; juice/snacks keep their own names. */
+    private fun basicFruitName(food: FoodItem): String? =
+        if (food.sourceType == "USDA-SR-LEGACY" && food.category == "과일류") {
+            food.aliases.split('|').firstOrNull {
+                it.isNotBlank() && it != "과일" && it != "과일류"
+            }
+        } else null
+
+    private fun foodKindRank(food: FoodItem): Int = when {
+        food.sourceType == "USDA-SR-LEGACY" -> 0
+        !isProduct(food) && !FranchiseCatalog.isFranchise(food) -> 1
+        FranchiseCatalog.isFranchise(food) -> 2
+        else -> 3
+    }
 
     private fun decimalKey(value: Double?): String = value?.let { round(it * 1000.0).toString() } ?: "missing"
 }

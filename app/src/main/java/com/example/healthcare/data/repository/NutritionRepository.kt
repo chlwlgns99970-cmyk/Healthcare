@@ -94,7 +94,8 @@ open class NutritionRepository(
             .distinctBy(FoodSearchPolicy::deduplicationKey)
         val visible = sorted.take(60)
         val basicFoods = sorted.filter { it.sourceType == BASIC_FOOD_SOURCE }.take(12)
-        return (visible + basicFoods).distinctBy(FoodItem::id)
+        val products = sorted.filter(FoodSearchPolicy::isProduct).take(6)
+        return (visible + basicFoods + products).distinctBy(FoodItem::id)
     }
 
     open suspend fun matchVerifiedFood(names: List<String>): FoodItem? {

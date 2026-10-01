@@ -33,6 +33,8 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.background
+import androidx.compose.foundation.pager.HorizontalPager
+import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.shape.CircleShape
@@ -154,9 +156,13 @@ import com.example.healthcare.ui.theme.WellnessSpacing
 import com.example.healthcare.ui.viewmodel.DashboardEnergyUiState
 import com.example.healthcare.ui.viewmodel.DashboardViewModel
 import com.example.healthcare.ui.viewmodel.TodayCoachUiState
+import com.example.healthcare.ui.viewmodel.RecommendationPreviewUi
 import com.example.healthcare.domain.DailyIntakeTimeline
 import com.example.healthcare.domain.DailyIntakeStatus
 import com.example.healthcare.domain.DailyIntakeSummary
+import com.example.healthcare.domain.DashboardMealOrder
+import com.example.healthcare.domain.DashboardMealSummary
+import com.example.healthcare.domain.DashboardSummaryPolicy
 import com.example.healthcare.domain.BodyProfile
 import com.example.healthcare.domain.ExerciseCoachCalculator
 import com.example.healthcare.domain.Macronutrients
@@ -187,7 +193,7 @@ fun DashboardScreen(
     onQuickRecord: (QuickRecordAction) -> Unit = {},
     onOpenEnergySettings: () -> Unit = {},
     onOpenMealPlan: (MealType, Int) -> Unit = { _, _ -> },
-    onOpenRecommendations: (() -> Unit)? = null,
+    onOpenRecommendations: ((String?) -> Unit)? = null,
     onOpenHistory: () -> Unit = {},
     showActivityDetail: Boolean = false,
     onOpenActivityDetail: () -> Unit = {},
@@ -275,6 +281,8 @@ fun DashboardScreen(
         ?: remember { mutableStateOf(TodayCoachUiState()) }
     val timeline by viewModel?.intakeTimeline?.collectAsState()
         ?: remember { mutableStateOf(DailyIntakeTimeline.Empty) }
+    val situationMessage by viewModel?.situationMessage?.collectAsState()
+        ?: remember { mutableStateOf("오늘 첫 식사를 기록해보세요.") }
 
     if (showActivityDetail) {
         ActivityDetailContent(
@@ -296,6 +304,7 @@ fun DashboardScreen(
         statusText = statusText,
         energyState = energyState,
         coachState = coachState,
+        situationMessage = situationMessage,
         stepCounterState = stepCounterState,
         onStepAction = onStepAction,
         onOpenActivityDetail = onOpenActivityDetail,
@@ -316,13 +325,6 @@ fun DashboardScreen(
     )
 }
 
-internal val DashboardMealOrder = listOf(
-    MealType.BREAKFAST,
-    MealType.SNACK,
-    MealType.LUNCH,
-    MealType.DINNER
-)
-
 @Composable
 internal fun DashboardContent(
     selectedDate: LocalDate,
@@ -332,12 +334,13 @@ internal fun DashboardContent(
     statusText: String,
     energyState: DashboardEnergyUiState,
     coachState: TodayCoachUiState = TodayCoachUiState(),
+    situationMessage: String = "오늘 첫 식사를 기록해보세요.",
     onPreviousDay: () -> Unit,
     onNextDay: () -> Unit,
     onAddRecord: () -> Unit,
     onOpenEnergySettings: () -> Unit,
     onOpenMealPlan: (MealType, Int) -> Unit = { _, _ -> },
-    onOpenRecommendations: (() -> Unit)? = null,
+    onOpenRecommendations: ((String?) -> Unit)? = null,
     onQuickRecord: (QuickRecordAction) -> Unit = {},
     timeline: DailyIntakeTimeline = DailyIntakeTimeline.Empty,
     onOpenHistory: () -> Unit = {},
@@ -354,11 +357,7 @@ internal fun DashboardContent(
     val dateFormatter = DateTimeFormatter.ofPattern("M월 d일 (E)", Locale.KOREAN)
     val isToday = selectedDate == LocalDate.now()
     var showDatePicker by rememberSaveable { mutableStateOf(false) }
-    val mealCalories = remember(meals) {
-        DashboardMealOrder.associateWith { type ->
-            meals.asSequence().filter { it.mealType == type }.sumOf { it.calories }
-        }
-    }
+    val mealSummaries = remember(meals) { DashboardSummaryPolicy.mealSummaries(meals) }
     Scaffold(
         topBar = {
             Surface(color = MaterialTheme.colorScheme.background) {
@@ -384,19 +383,14 @@ internal fun DashboardContent(
                         verticalArrangement = Arrangement.spacedBy(1.dp)
                     ) {
                         Text(
-                            "좋은 아침이에요.",
+                            situationMessage,
                             style = if (largeText) MaterialTheme.typography.titleMedium else MaterialTheme.typography.titleLarge,
                             fontWeight = FontWeight.Medium,
-                            maxLines = 1,
+                            maxLines = 2,
+                            overflow = TextOverflow.Ellipsis,
                             modifier = Modifier.semantics { heading() }
                         )
-                        Text(
-                            "오늘도 건강한 하루 되세요!",
-                            style = MaterialTheme.typography.bodySmall,
-                            color = MaterialTheme.colorScheme.onSurface,
-                            maxLines = 1
-                        )
-                        Spacer(Modifier.height(5.dp))
+                        Spacer(Modifier.height(3.dp))
                         Row(
                             verticalAlignment = Alignment.CenterVertically,
                             horizontalArrangement = Arrangement.spacedBy(5.dp)
@@ -458,8 +452,7 @@ internal fun DashboardContent(
                     modifier = Modifier.fillMaxWidth().height(if (dense) 92.dp else 106.dp)
                 )
                 CompactMealCard(
-                    meals = meals,
-                    mealCalories = mealCalories,
+                    summaries = mealSummaries,
                     onClick = { mealType -> onAddMealRecord?.invoke(mealType) ?: onAddRecord() },
                     dense = dense,
                     modifier = Modifier.fillMaxWidth().height(if (dense) 140.dp else 154.dp)
@@ -470,22 +463,24 @@ internal fun DashboardContent(
                     statusText = statusText,
                     nutrition = nutrition,
                     dense = dense,
-                    onOpenEnergySettings = onOpenEnergySettings,
+                    onOpenReport = onOpenHistory,
                     modifier = Modifier.fillMaxWidth().height(if (dense) 152.dp else 178.dp)
                 )
                 CompactRecommendationCard(
                     state = coachState,
                     dense = dense,
-                    onOpenRecommendation = {
+                    onOpenRecommendation = { templateId ->
                         if (onOpenRecommendations != null) {
-                            onOpenRecommendations()
+                            onOpenRecommendations(templateId)
                         } else {
                             val mealType = coachState.nextMealType
                             val budget = coachState.nextMealBudgetKcal
                             if (mealType != null && budget != null) onOpenMealPlan(mealType, budget)
                         }
                     },
-                    modifier = Modifier.fillMaxWidth().height(if (dense) 102.dp else 104.dp)
+                    modifier = Modifier.fillMaxWidth().height(
+                        if (LocalDensity.current.fontScale >= 1.5f) 148.dp else if (dense) 102.dp else 104.dp
+                    )
                 )
                 Spacer(Modifier.weight(1f))
             }
@@ -550,7 +545,7 @@ private fun CompactIntakeCard(
     statusText: String,
     nutrition: Macronutrients,
     dense: Boolean,
-    onOpenEnergySettings: () -> Unit,
+    onOpenReport: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     val difference = target - total
@@ -558,9 +553,9 @@ private fun CompactIntakeCard(
     Row(
         modifier = modifier
             .testTag("dashboard-calorie-target")
-            .clickable(onClick = onOpenEnergySettings)
+            .clickable(onClick = onOpenReport)
             .semantics {
-                contentDescription = "하루 목표 칼로리 수정"
+                contentDescription = "오늘 식사 리포트 열기"
                 stateDescription = "$statusText, 오늘 섭취 ${formatNumber(total)} kcal, 목표 ${formatNumber(target)} kcal"
                 role = Role.Button
             }
@@ -620,7 +615,7 @@ private fun CompactIntakeCard(
         ) {
                 Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.End,
                     verticalAlignment = Alignment.CenterVertically) {
-                    Text("목표 수정", style = MaterialTheme.typography.labelSmall,
+                    Text("오늘 리포트", style = MaterialTheme.typography.labelSmall,
                         color = MaterialTheme.colorScheme.primary)
                     Icon(Icons.Rounded.ChevronRight, contentDescription = null,
                         modifier = Modifier.size(14.dp), tint = MaterialTheme.colorScheme.primary)
@@ -657,15 +652,14 @@ private fun CompactMacro(label: String, grams: Double?, color: Color) {
 
 @Composable
 private fun CompactMealCard(
-    meals: List<MealRecord>,
-    mealCalories: Map<MealType, Int>,
+    summaries: List<DashboardMealSummary>,
     onClick: (MealType) -> Unit,
     dense: Boolean,
     modifier: Modifier = Modifier
 ) {
     Column(modifier.fillMaxWidth(), verticalArrangement = Arrangement.spacedBy(if (dense) 2.dp else 3.dp)) {
-        DashboardMealOrder.forEach { type ->
-            val calories = mealCalories[type].orEmptyCalories()
+        summaries.forEach { summary ->
+            val type = summary.mealType
             val designImage = when (type) {
                 MealType.BREAKFAST -> R.drawable.photo_breakfast_yogurt_bowl
                 MealType.SNACK -> R.drawable.rec_kfind_snack_convenience_1
@@ -693,9 +687,10 @@ private fun CompactMealCard(
                         modifier = Modifier.fillMaxHeight().width(if (dense) 40.dp else 46.dp)
                     )
                     Text(type.displayName, style = MaterialTheme.typography.labelMedium,
-                        fontWeight = FontWeight.SemiBold, modifier = Modifier.weight(1f), maxLines = 1)
+                        fontWeight = FontWeight.SemiBold, maxLines = 1)
                     Text(
-                        if (meals.any { it.mealType == type }) "${formatNumber(calories)} kcal" else "기록 없음",
+                        summary.displayText,
+                        modifier = Modifier.weight(1f),
                         style = MaterialTheme.typography.labelSmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                         maxLines = 1,
@@ -708,8 +703,6 @@ private fun CompactMealCard(
         }
     }
 }
-
-private fun Int?.orEmptyCalories(): Int = this ?: 0
 
 @Composable
 private fun CompactActivityCard(
@@ -838,61 +831,27 @@ private fun CompactActivityCard(
 private fun CompactRecommendationCard(
     state: TodayCoachUiState,
     dense: Boolean,
-    onOpenRecommendation: () -> Unit,
+    onOpenRecommendation: (String?) -> Unit,
     modifier: Modifier = Modifier
 ) {
-    val mealType = state.nextMealType
-    val budget = state.nextMealBudgetKcal
-    Card(
-        onClick = onOpenRecommendation,
-        modifier = modifier
-            .testTag("dashboard-recommendation-card")
-            .semantics {
-                contentDescription = "오늘의 추천 식사 보기"
-                role = Role.Button
-            },
-        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
-        elevation = CardDefaults.cardElevation(defaultElevation = 1.dp)
-    ) {
-        Row(
-            modifier = Modifier.fillMaxSize().padding(if (dense) 6.dp else 8.dp),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(10.dp)
-        ) {
-            RecommendationPhoto(
-                templateId = state.previewRecommendationTemplateId,
-                foodName = state.previewRecommendationName.orEmpty(),
-                contentDescription = state.previewRecommendationName?.let { "$it 추천 이미지" },
-                modifier = Modifier.fillMaxHeight().width(if (dense) 60.dp else 76.dp)
-                    .clip(MaterialTheme.shapes.medium)
-            )
-            Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(1.dp)) {
-                Text("오늘의 추천 식사", style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant, maxLines = 1)
-                Text(
-                    when {
-                        state.isRecommendationLoading -> "추천을 준비하고 있어요"
-                        state.recommendationError -> "추천을 준비하지 못했어요"
-                        mealType != null && budget != null && state.previewRecommendationName != null -> state.previewRecommendationName
-                        mealType != null && budget != null -> "추천 메뉴를 확인해 보세요"
-                        state.targetExceeded -> "다음 식사는 가볍게"
-                        else -> "식사를 기록하면 추천해요"
-                    },
-                    style = MaterialTheme.typography.titleSmall,
-                    fontWeight = FontWeight.SemiBold,
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis
-                )
-                if (mealType != null && budget != null && !state.isRecommendationLoading && !state.recommendationError) {
-                    Text(
-                        "약 ${formatNumber(state.previewRecommendationKcal ?: budget)} kcal",
-                        style = MaterialTheme.typography.labelSmall,
-                        maxLines = 1
-                    )
-                } else if (state.recommendationError) {
-                    Text("눌러서 다시 확인", style = MaterialTheme.typography.labelSmall, maxLines = 1)
-                }
+    Card(modifier = modifier.testTag("dashboard-recommendation-card"),
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface)) {
+        Row(Modifier.fillMaxSize().testTag("dashboard-open-daily-plan").clickable { onOpenRecommendation(null) }
+            .semantics { role = Role.Button }.padding(if (dense) 10.dp else 12.dp),
+            verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+            Icon(Icons.Rounded.RestaurantMenu, contentDescription = null)
+            Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(3.dp)) {
+                Text("오늘의 추천", style = MaterialTheme.typography.labelSmall)
+                Text(state.dailyThemeLabel?.let { "$it 식단" } ?: "오늘 식사 스타일을 골라보세요",
+                    style = MaterialTheme.typography.titleSmall, maxLines = 2, overflow = TextOverflow.Ellipsis)
+                if (state.dailyPlanKcal != null && state.dailyPlanTarget != null) Text(
+                    "${formatNumber(state.dailyPlanKcal)} / ${formatNumber(state.dailyPlanTarget)} kcal",
+                    style = MaterialTheme.typography.bodySmall)
+                Text(if (state.dailyThemeLabel == null) "추천 고르기" else "오늘 식단 보기",
+                    color = MaterialTheme.colorScheme.primary, style = MaterialTheme.typography.labelLarge,
+                    modifier = Modifier.testTag("dashboard-more-recommendations"))
             }
-            Icon(Icons.Rounded.ChevronRight, contentDescription = null)
+            Icon(Icons.Rounded.ChevronRight, contentDescription = "오늘의 추천 열기")
         }
     }
 }
@@ -1956,6 +1915,7 @@ private fun Dashboard360Preview() {
         DashboardContent(
             LocalDate.of(2026, 9, 13), previewMeals, 2625, 2325, "목표 대비 +300kcal", previewEnergyState,
             TodayCoachUiState(2325, 2625, 0, listOf(MealType.DINNER), MealType.DINNER, null, true),
+            "오늘 기록은 목표보다 약 300 kcal 높아요. 기록 내용을 확인해보세요.",
             {}, {}, {}, {}, { _, _ -> }, timeline = previewTimeline
         )
     }
@@ -1968,6 +1928,7 @@ private fun DashboardEmptyPreview() {
         DashboardContent(
             LocalDate.now(), emptyList(), 0, 2000, "목표까지 2,000kcal", DashboardEnergyUiState(),
             TodayCoachUiState(2000, 0, 2000, listOf(MealType.BREAKFAST, MealType.LUNCH, MealType.SNACK, MealType.DINNER), MealType.BREAKFAST, 500),
+            "좋은 아침이에요. 아침 식사를 기록해볼까요?",
             {}, {}, {}, {}, { _, _ -> }, timeline = DailyIntakeTimeline.Empty
         )
     }
@@ -1980,6 +1941,7 @@ private fun DashboardDarkPreview() {
         DashboardContent(
             LocalDate.of(2026, 9, 13), previewMeals, 2625, 2325, "목표 대비 +300kcal", previewEnergyState,
             TodayCoachUiState(2325, 2625, 0, listOf(MealType.DINNER), MealType.DINNER, null, true),
+            "오늘도 식사 기록을 이어가고 있어요.",
             {}, {}, {}, {}, { _, _ -> }, timeline = previewTimeline
         )
     }

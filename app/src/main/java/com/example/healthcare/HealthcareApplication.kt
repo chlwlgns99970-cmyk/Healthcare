@@ -10,6 +10,8 @@ import com.example.healthcare.data.appupdate.HttpAppUpdateRepository
 import com.example.healthcare.data.appupdate.PrivateUpdateApkDownloader
 import com.example.healthcare.data.appupdate.SystemAppInstaller
 import com.example.healthcare.data.SharedPreferencesRecommendationCycleStore
+import com.example.healthcare.data.TodayMealPlanStore
+import com.example.healthcare.data.repository.TodayMealPlanRepository
 import com.example.healthcare.data.BodyProfileStore
 import com.example.healthcare.data.WeightGoalStore
 import com.example.healthcare.data.database.AppDatabase
@@ -63,6 +65,10 @@ class HealthcareApplication : Application() {
         )
     }
     val recognitionRepository by lazy { RecognitionRepository(database.recognitionDao()) }
+    val todayMealPlanRepository by lazy {
+        TodayMealPlanRepository(TodayMealPlanStore(this), mealCoachRepository, goalRepository,
+            energyProfileRepository, mealRepository, foodRepository)
+    }
     val foodDataUpdateCoordinator by lazy {
         FoodDataUpdateCoordinator(database, FoodDataUpdateStateStore(this))
     }

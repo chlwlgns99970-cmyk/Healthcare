@@ -137,7 +137,8 @@ class BundledFoodDataTest {
         }
         val results = NutritionRepository(database.foodItemDao()).search("참치김밥").first()
         assertTrue(results.isNotEmpty())
-        assertEquals("참치김밥", FoodSearchPolicy.normalize(results.first().name))
+        assertEquals("참치김밥", FoodSearchPolicy.canonicalFoodKind(results.first()))
+        assertEquals("참치김밥", FoodSearchPolicy.displayName(results.first()))
         assertTrue(results.any { it.name == "김밥_참치" && it.unit == "g" })
         assertTrue(results.any { it.name == "김밥_참치" && it.unit == "ml" })
         assertEquals("g", results.first { it.name == "김밥_참치" }.unit)
@@ -182,7 +183,7 @@ class BundledFoodDataTest {
         val repository = NutritionRepository(database.foodItemDao())
         listOf(
             "김밥", "참치김밥", "참치 김밥", "비빔밥", "쫄면", "라면", "된장찌개",
-            "계란", "달걀", "닭가슴살", "닭 가슴살", "사과", "바나나",
+            "두부", "계란", "달걀", "삶은 달걀", "삶은 계란", "닭가슴살", "닭 가슴살", "사과", "바나나",
             "식빵", "우유", "떡볶이", "불고기", "삼겹살"
         ).forEach { query ->
             assertTrue("No official candidate for $query", repository.search(query).first().isNotEmpty())
@@ -385,7 +386,7 @@ class BundledFoodDataTest {
 
     private companion object {
         const val EXPECTED_KFIND_FOOD_COUNT = 19_617
-        const val EXPECTED_BASIC_FOOD_COUNT = 12
+        const val EXPECTED_BASIC_FOOD_COUNT = 14
         const val EXPECTED_KFIND_PRODUCT_COUNT = 11_921
         const val EXPECTED_OFFICIAL_FRANCHISE_FOOD_COUNT = 30
         const val EXPECTED_TOTAL_FOOD_COUNT = EXPECTED_KFIND_FOOD_COUNT + EXPECTED_BASIC_FOOD_COUNT +

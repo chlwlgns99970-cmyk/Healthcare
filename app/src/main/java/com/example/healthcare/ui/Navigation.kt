@@ -46,13 +46,17 @@ data object ExerciseCoachRoute : NavKey
 data object ActivityDetailRoute : NavKey
 
 @Serializable
+data object TodayReportRoute : NavKey
+
+@Serializable
 data object RecommendationsRoute : NavKey
 
 @Serializable
 data class MealPlanRoute(
     val mealType: String,
     val budgetKcal: Int,
-    val targetKcal: Int
+    val targetKcal: Int,
+    val dailyTemplateId: String? = null
 ) : NavKey
 
 @Serializable

@@ -44,13 +44,17 @@ import com.example.healthcare.ui.screens.BodyProfileSetupScreen
 import com.example.healthcare.ui.screens.DashboardScreen
 import com.example.healthcare.ui.screens.ExerciseCoachScreen
 import com.example.healthcare.ui.screens.HistoryScreen
+import com.example.healthcare.ui.screens.TodayRecommendationScreen
 import com.example.healthcare.ui.screens.MealPlanScreen
 import com.example.healthcare.ui.screens.MealPreferenceScreen
+import com.example.healthcare.ui.screens.MealTasteSetupScreen
 import com.example.healthcare.ui.screens.QuickRecordAction
 import com.example.healthcare.ui.screens.SettingsScreen
+import com.example.healthcare.ui.screens.TodayReportScreen
 import com.example.healthcare.ui.viewmodel.AddRecordViewModel
 import com.example.healthcare.ui.viewmodel.DashboardViewModel
 import com.example.healthcare.ui.viewmodel.HistoryViewModel
+import com.example.healthcare.ui.viewmodel.TodayMealPlanViewModel
 import com.example.healthcare.ui.viewmodel.MealPlanViewModel
 import com.example.healthcare.ui.viewmodel.MealPreferenceViewModel
 import com.example.healthcare.ui.viewmodel.SettingsViewModel
@@ -65,6 +69,8 @@ fun HealthcareApp() {
     var pendingRecordDate by remember { mutableStateOf<LocalDate?>(null) }
     var pendingMealType by remember { mutableStateOf<MealType?>(null) }
     var pendingSettingsSection by remember { mutableStateOf<String?>(null) }
+    var pendingRecommendedTemplateId by remember { mutableStateOf<String?>(null) }
+    var openSavedDayPlan by remember { mutableStateOf(false) }
     var immersiveRecord by remember { mutableStateOf(false) }
     val localContext = LocalContext.current
     val app = localContext.applicationContext as HealthcareApplication
@@ -95,15 +101,18 @@ fun HealthcareApp() {
             app.recognitionRepository,
             app.bodyProfileStore,
             app.weightGoalStore,
-            app.foodDataUpdateCoordinator
+            app.foodDataUpdateCoordinator,
+            app.todayMealPlanRepository
         )
     }
     val dashboardViewModel: DashboardViewModel = viewModel(factory = viewModelFactory)
+    val dailyPlanViewModel: TodayMealPlanViewModel = viewModel(factory = viewModelFactory)
     val settingsViewModel: SettingsViewModel = viewModel(factory = viewModelFactory)
     val bodyProfileState by settingsViewModel.bodyProfileState.collectAsState()
     val coachState by dashboardViewModel.todayCoachUiState.collectAsState()
     val dashboardSelectedDate by dashboardViewModel.selectedDate.collectAsState()
     var bodyProfile by remember(app) { mutableStateOf(app.bodyProfileStore.read()) }
+    var tasteSetupPending by remember(app) { mutableStateOf(app.bodyProfileStore.isTasteSetupPending()) }
     val exerciseWeightKg = bodyProfile?.weightKg
 
     if (bodyProfile == null) {
@@ -114,11 +123,21 @@ fun HealthcareApp() {
             onHeightChange = settingsViewModel::onBodyHeightChange,
             onWeightChange = settingsViewModel::onBodyWeightChange,
             onSave = {
+                app.bodyProfileStore.setTasteSetupPending(true)
+                tasteSetupPending = true
                 settingsViewModel.saveBodyProfile {
                     bodyProfile = app.bodyProfileStore.read()
                 }
             }
         )
+        return
+    }
+    if (tasteSetupPending) {
+        val preferenceViewModel: MealPreferenceViewModel = viewModel(factory = viewModelFactory)
+        MealTasteSetupScreen(preferenceViewModel) {
+            app.bodyProfileStore.setTasteSetupPending(false)
+            tasteSetupPending = false
+        }
         return
     }
     val currentRoute = backStack.lastOrNull()
@@ -127,7 +146,7 @@ fun HealthcareApp() {
     val selectedDestination = when (currentRoute) {
         is MealPlanRoute, RecommendationsRoute -> TopLevelDestination.RECOMMENDATIONS
         MealPreferenceRoute -> TopLevelDestination.SETTINGS
-        ActivityDetailRoute -> TopLevelDestination.DASHBOARD
+        ActivityDetailRoute, TodayReportRoute -> TopLevelDestination.DASHBOARD
         else -> TopLevelDestination.entries.find { it.route == currentRoute }
             ?: TopLevelDestination.DASHBOARD
     }
@@ -143,6 +162,10 @@ fun HealthcareApp() {
                     if (destination == TopLevelDestination.ADD) {
                         pendingRecordDate = null
                         pendingMealType = null
+                    }
+                    if (destination == TopLevelDestination.RECOMMENDATIONS) {
+                        pendingRecommendedTemplateId = null
+                        openSavedDayPlan = false
                     }
                     backStack.clear()
                     backStack.add(destination.route)
@@ -186,12 +209,14 @@ fun HealthcareApp() {
                             onOpenMealPlan = { mealType, budget ->
                                 backStack.add(MealPlanRoute(mealType.name, budget, coachState.targetCalories))
                             },
-                            onOpenRecommendations = {
+                            onOpenRecommendations = { templateId ->
+                                pendingRecommendedTemplateId = null
+                                openSavedDayPlan = coachState.dailyThemeLabel != null
                                 if (backStack.lastOrNull() != RecommendationsRoute) {
                                     backStack.add(RecommendationsRoute)
                                 }
                             },
-                            onOpenHistory = { backStack.add(HistoryRoute) }
+                            onOpenHistory = { backStack.add(TodayReportRoute) }
                             ,onOpenActivityDetail = { backStack.add(ActivityDetailRoute) }
                         )
                         ActivityDetailRoute -> DashboardScreen(
@@ -213,44 +238,26 @@ fun HealthcareApp() {
                                 }
                             }
                         )
-                        RecommendationsRoute -> {
-                            val nextMeal = coachState.nextMealType
-                            val budget = coachState.nextMealBudgetKcal
-                            if (nextMeal != null && budget != null) {
-                                val planViewModel: MealPlanViewModel = viewModel(factory = viewModelFactory)
-                                MealPlanScreen(
-                                    mealType = nextMeal,
-                                    budgetKcal = budget,
-                                    targetKcal = coachState.targetCalories,
-                                    dailyRemainingKcal = coachState.remainingCalories,
-                                    viewModel = planViewModel,
-                                    onSearchFood = {
-                                        pendingQuickAction = QuickRecordAction.SEARCH
-                                        pendingRecordDate = null
-                                        pendingMealType = nextMeal
-                                        backStack.add(AddRecordRoute)
-                                    },
-                                    onOpenPreferences = { backStack.add(MealPreferenceRoute) },
-                                    onBack = {
-                                        backStack.clear()
-                                        backStack.add(DashboardRoute)
-                                    },
-                                    onSaved = {
-                                        backStack.clear()
-                                        backStack.add(DashboardRoute)
-                                    }
-                                )
-                            } else {
-                                Scaffold(topBar = { WellnessTopAppBar("오늘의 추천") }) { padding ->
-                                    Column(Modifier.fillMaxSize().padding(padding).padding(20.dp)) {
-                                        WellnessEmptyState(
-                                            icon = Icons.Rounded.RestaurantMenu,
-                                            title = "지금 추천할 다음 식사가 없어요",
-                                            message = "오늘의 식사 흐름이 바뀌면 여기서 다음 한 끼를 살펴볼 수 있어요."
-                                        )
-                                    }
-                                }
+                        TodayReportRoute -> TodayReportScreen(
+                            viewModel = dashboardViewModel,
+                            onBack = { if (backStack.size > 1) backStack.removeAt(backStack.lastIndex) },
+                            onAddRecord = {
+                                pendingQuickAction = QuickRecordAction.SEARCH
+                                pendingRecordDate = dashboardSelectedDate
+                                pendingMealType = null
+                                backStack.add(AddRecordRoute)
                             }
+                        )
+                        RecommendationsRoute -> {
+                            TodayRecommendationScreen(dailyPlanViewModel,
+                                openSaved = openSavedDayPlan,
+                                onBack = { backStack.clear(); backStack.add(DashboardRoute) },
+                                onOpenPreferences = { backStack.add(MealPreferenceRoute) },
+                                onOpenEnergy = { pendingSettingsSection = "ENERGY"; backStack.add(SettingsRoute) },
+                                onOpenMeal = { meal, target ->
+                                    openSavedDayPlan = true
+                                    backStack.add(MealPlanRoute(meal.mealType.name, meal.kcal, target, meal.templateId))
+                                })
                         }
                         AddRecordRoute -> {
                             val addViewModel: AddRecordViewModel = viewModel(factory = viewModelFactory)
@@ -259,11 +266,15 @@ fun HealthcareApp() {
                                 initialAction = pendingQuickAction,
                                 initialDate = pendingRecordDate,
                                 initialMealType = pendingMealType,
+                                returnToParentFromSearch = backStack.size > 1,
                                 onRecordSaved = { mealType ->
-                                    backStack.clear()
-                                    backStack.add(DashboardRoute)
-                                    appScope.launch {
-                                        snackbarHostState.showSnackbar("${mealType.displayName} 식사에 기록했어요")
+                                    if (finishRecordFlow(backStack)) {
+                                        pendingQuickAction = null
+                                        pendingRecordDate = null
+                                        pendingMealType = null
+                                        appScope.launch {
+                                            snackbarHostState.showSnackbar("${mealType.displayName} 식사에 기록했어요")
+                                        }
                                     }
                                 },
                                 onInitialActionConsumed = { pendingQuickAction = null },
@@ -273,11 +284,7 @@ fun HealthcareApp() {
                                     backStack.add(HistoryRoute)
                                 },
                                 onBack = {
-                                    if (backStack.size > 1) backStack.removeAt(backStack.size - 1)
-                                    else {
-                                        backStack.clear()
-                                        backStack.add(DashboardRoute)
-                                    }
+                                    finishRecordFlow(backStack)
                                 }
                             )
                         }
@@ -315,6 +322,7 @@ fun HealthcareApp() {
                                 mealType = runCatching { MealType.valueOf(key.mealType) }.getOrDefault(MealType.LUNCH),
                                 budgetKcal = key.budgetKcal,
                                 targetKcal = key.targetKcal,
+                                dailyTemplateId = key.dailyTemplateId,
                                 dailyRemainingKcal = coachState.remainingCalories,
                                 viewModel = planViewModel,
                                 onSearchFood = {

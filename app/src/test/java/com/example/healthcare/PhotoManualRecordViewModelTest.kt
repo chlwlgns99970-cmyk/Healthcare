@@ -23,6 +23,7 @@ import com.example.healthcare.domain.PortionVessel
 import com.example.healthcare.ui.viewmodel.AddRecordViewModel
 import com.example.healthcare.ui.viewmodel.PhotoAnalysisError
 import com.example.healthcare.ui.viewmodel.PhotoAnalysisUiState
+import com.example.healthcare.ui.viewmodel.SmartInputMode
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.Flow
@@ -48,15 +49,18 @@ class PhotoManualRecordViewModelTest {
     private val registeredProducts = mutableListOf<FoodItem>()
     private val savedFrequentFoods = mutableListOf<FrequentFood>()
     private var analysisCalls = 0
+    private var failMealInsert = false
     private lateinit var cacheRoot: File
     private lateinit var viewModel: AddRecordViewModel
 
     private val mealDao = object : MealRecordDao {
         override suspend fun insertMeal(meal: MealRecord) {
+            if (failMealInsert) error("forced insert failure")
             insertedMeals += meal
         }
 
         override suspend fun insertPhotoMeals(meals: List<MealRecord>): List<Long> {
+            if (failMealInsert) error("forced insert failure")
             insertedMeals += meals
             return meals.indices.map { it + 1L }
         }
@@ -179,6 +183,168 @@ class PhotoManualRecordViewModelTest {
         }
         assertEquals(4, insertedMeals.size)
     }
+
+    @Test
+    fun `검색 결과 선택은 네 식사 context를 유지한 빠른 기록으로 열리고 중복 저장되지 않는다`() =
+        runTest(dispatcher.scheduler) {
+            val packageFood = verifiedFood("quick-food", "참치김밥", "밥류", 180.0, "g", 420.0).copy(
+                sourceType = "K-FIND-PRODUCT",
+                servingDescription = "100g 기준 · 공식 총내용량 180g · 포장단위 줄"
+            )
+
+            listOf(MealType.BREAKFAST, MealType.SNACK, MealType.LUNCH, MealType.DINNER).forEach { mealType ->
+                viewModel.onMealTypeChange(mealType)
+                viewModel.selectVerifiedFood(packageFood)
+                assertEquals(SmartInputMode.QUICK_RECORD, viewModel.smartInputState.value.mode)
+                assertEquals(mealType, viewModel.uiState.value.mealType)
+
+                viewModel.selectPortionPreset(requireNotNull(PortionGuide.defaultPreset(packageFood)))
+                var successCount = 0
+                viewModel.saveRecord { successCount++ }
+                viewModel.saveRecord { successCount++ }
+                advanceUntilIdle()
+
+                assertEquals(mealType, insertedMeals.last().mealType)
+                assertEquals(1, successCount)
+            }
+
+            assertEquals(4, insertedMeals.size)
+        }
+
+    @Test
+    fun `빠른 기록의 자세히 입력은 기존 수동 상세 입력 상태로 이동한다`() {
+        val food = verifiedFood("details", "참치김밥", "밥류", 100.0, "g", 220.0)
+        viewModel.selectVerifiedFood(food)
+        assertEquals(SmartInputMode.QUICK_RECORD, viewModel.smartInputState.value.mode)
+
+        viewModel.showManualDetails()
+
+        assertEquals(SmartInputMode.MANUAL, viewModel.smartInputState.value.mode)
+        assertEquals("참치김밥", viewModel.uiState.value.foodName)
+        assertEquals("details", viewModel.uiState.value.selectedFoodItemId)
+    }
+
+    @Test
+    fun `최근 기록 shortcut은 공식 제공량으로 위장하지 않고 저장한 양을 적용한다`() {
+        val food = verifiedFood("recent", "샐러드", "샐러드류", 100.0, "g", 120.0)
+        val recent = MealRecord(
+            id = 42,
+            date = "2026-09-29",
+            time = "12:00",
+            mealType = MealType.LUNCH,
+            foodName = "샐러드",
+            calories = 216,
+            servingAmount = 180.0,
+            servingUnit = "g",
+            foodItemId = "recent"
+        )
+        viewModel.selectVerifiedFood(food)
+
+        viewModel.applyRecentAmount(recent)
+
+        val state = viewModel.uiState.value
+        assertEquals("180", state.servingAmount)
+        assertEquals("216", state.calories)
+        assertEquals("최근 기록 180g", state.selectedPortion?.label)
+        assertEquals("사용자의 최근 기록", state.selectedPortion?.sourceReference)
+        assertTrue(state.selectedPortion?.description.orEmpty().contains("공식 제공량은 아니에요"))
+    }
+
+    @Test
+    fun `원본 FoodItem이 사라진 즐겨찾기도 snapshot으로 빠른 기록하고 해제할 수 있다`() =
+        runTest(dispatcher.scheduler) {
+            val favorite = FrequentFood(
+                id = 7,
+                foodName = "사라진 제품",
+                defaultServing = "85g",
+                calories = 210,
+                isFavorite = true,
+                isFrequent = false,
+                carbohydrateGrams = 31.0,
+                proteinGrams = 8.0,
+                fatGrams = 6.0,
+                foodItemId = "removed-product",
+                sourceType = "K-FIND-PRODUCT",
+                sourceFoodCode = "removed-product",
+                brand = "테스트 브랜드"
+            )
+            savedFrequentFoods += favorite
+
+            viewModel.selectFavoriteFood(favorite)
+            advanceUntilIdle()
+
+            assertEquals(SmartInputMode.QUICK_RECORD, viewModel.smartInputState.value.mode)
+            assertEquals("removed-product", viewModel.uiState.value.selectedFoodItemId)
+            assertEquals("85", viewModel.uiState.value.servingAmount)
+            assertEquals("210", viewModel.uiState.value.calories)
+            assertEquals("보통", viewModel.uiState.value.selectedPortion?.label)
+
+            viewModel.removeFavorite(favorite)
+            advanceUntilIdle()
+            assertTrue(savedFrequentFoods.isEmpty())
+        }
+
+    @Test
+    fun `즐겨찾기 원본 FoodItem이 있으면 최신 원본 영양정보로 빠른 기록한다`() =
+        runTest(dispatcher.scheduler) {
+            val currentFood = verifiedFood(
+                "favorite-current", "참치김밥", "밥류", 180.0, "g", 430.0
+            ).copy(
+                sourceType = "K-FIND-PRODUCT",
+                servingDescription = "100g 기준 · 공식 총내용량 180g · 포장단위 줄",
+                brand = "현재 브랜드"
+            )
+            registeredProducts += currentFood
+            val favorite = FrequentFood(
+                id = 9,
+                foodName = "참치김밥",
+                defaultServing = "180g",
+                calories = 400,
+                isFavorite = true,
+                isFrequent = false,
+                foodItemId = currentFood.id,
+                sourceType = "K-FIND-PRODUCT",
+                sourceFoodCode = currentFood.sourceFoodCode,
+                brand = "이전 브랜드"
+            )
+
+            viewModel.selectFavoriteFood(favorite)
+            advanceUntilIdle()
+
+            assertEquals(SmartInputMode.QUICK_RECORD, viewModel.smartInputState.value.mode)
+            assertEquals(currentFood, viewModel.uiState.value.selectedFood)
+            assertEquals("430", viewModel.uiState.value.calories)
+        }
+
+    @Test
+    fun `빠른 기록 저장 실패는 성공 callback 없이 재시도 가능한 오류를 남긴다`() =
+        runTest(dispatcher.scheduler) {
+            val food = verifiedFood("failure", "참치김밥", "밥류", 180.0, "g", 420.0).copy(
+                sourceType = "K-FIND-PRODUCT",
+                servingDescription = "100g 기준 · 공식 총내용량 180g · 포장단위 줄"
+            )
+            viewModel.selectVerifiedFood(food)
+            viewModel.selectPortionPreset(requireNotNull(PortionGuide.defaultPreset(food)))
+            failMealInsert = true
+            var successCount = 0
+
+            viewModel.saveRecord { successCount++ }
+            advanceUntilIdle()
+
+            assertEquals(0, successCount)
+            assertTrue(insertedMeals.isEmpty())
+            assertFalse(viewModel.uiState.value.isSaving)
+            assertEquals("기록을 저장하지 못했습니다. 다시 시도해주세요.", viewModel.uiState.value.saveError)
+            assertEquals(food.name, viewModel.uiState.value.foodName)
+            assertEquals(food.id, viewModel.uiState.value.selectedFoodItemId)
+            assertEquals("420", viewModel.uiState.value.calories)
+            failMealInsert = false
+            viewModel.saveRecord { successCount++ }
+            viewModel.saveRecord { successCount++ }
+            advanceUntilIdle()
+            assertEquals(1, successCount)
+            assertEquals(1, insertedMeals.size)
+        }
 
     @Test
     fun `저장 음식의 빠른 섭취량은 기준 칼로리와 제공량에 비례한다`() {

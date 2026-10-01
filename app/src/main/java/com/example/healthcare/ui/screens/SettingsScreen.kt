@@ -210,7 +210,7 @@ internal enum class SettingsSection(val title: String, val description: String) 
     BODY("내 신체정보", "성별, 나이, 키와 몸무게"),
     ENERGY("에너지 목표", "BMR, 활동 수준, 유지 칼로리와 섭취 목표"),
     WEIGHT("체중 목표", "목표 체중과 기간별 섭취 계획"),
-    RECOMMENDATION("추천 설정", "식사 배분, 알레르기와 선호 음식"),
+    RECOMMENDATION("추천 설정", "좋아하는 음식과 피하고 싶은 음식"),
     FOOD_DATA("음식 데이터", "공식 데이터 버전과 자동 업데이트"),
     DISPLAY("화면 설정", "글씨 크기"),
     APP_INFO("앱 정보", "버전과 이용 안내")
@@ -467,7 +467,7 @@ private fun MealPreferenceLinkCard(onClick: () -> Unit) {
         Surface(onClick = onClick, color = androidx.compose.ui.graphics.Color.Transparent) {
             ListItem(
                 headlineContent = { Text("식사 추천 설정") },
-                supportingContent = { Text("식사 배분, 알레르기 주의와 선호 조건") },
+                supportingContent = { Text("좋아하는 음식, 피하고 싶은 음식과 식사 배분") },
                 leadingContent = { Icon(Icons.Rounded.RestaurantMenu, contentDescription = null) },
                 trailingContent = { Icon(Icons.Rounded.ChevronRight, contentDescription = "식사 추천 설정 열기") },
                 colors = ListItemDefaults.colors(containerColor = MaterialTheme.colorScheme.surface)
@@ -731,7 +731,7 @@ internal fun SettingsContent(
             item {
                 SectionHeader(
                     title = "추천과 식사 취향",
-                    supportingText = "식사 배분, 알레르기, 선호와 조리 조건을 관리합니다.",
+                    supportingText = "식사 배분, 알레르기, 피하고 싶은 음식과 조리 조건을 관리합니다.",
                     modifier = Modifier.padding(top = 14.dp)
                 )
             }

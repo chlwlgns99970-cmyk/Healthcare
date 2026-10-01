@@ -8,6 +8,9 @@ import com.example.healthcare.data.database.AppDatabase
 import com.example.healthcare.data.InMemoryRecommendationCycleStore
 import com.example.healthcare.data.RecommendationCyclePolicy
 import com.example.healthcare.data.RecommendationCycleStore
+import com.example.healthcare.data.StableRecommendationPolicy
+import com.example.healthcare.domain.FoodPreferencePolicy
+import com.example.healthcare.domain.MealRecommendationTheme
 import com.example.healthcare.data.entity.DailyMealPlan
 import com.example.healthcare.data.entity.MealRecord
 import com.example.healthcare.domain.Macronutrients
@@ -28,6 +31,8 @@ import java.time.LocalTime
 import java.time.format.DateTimeFormatter
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
 
 data class MealRecommendationWithIngredients(
     val recommendation: ScoredMealRecommendation,
@@ -54,15 +59,50 @@ open class MealCoachRepository(
     private val foodItemDao: FoodItemDao,
     private val mealRecordDao: MealRecordDao,
     private val recommendationCycleStore: RecommendationCycleStore = InMemoryRecommendationCycleStore()
-) {
+) : MealPreferenceRepository {
     private val dateFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd")
     private val timeFormatter = DateTimeFormatter.ofPattern("HH:mm")
+    private val dailySelectionMutex = Mutex()
 
-    open val preference: Flow<UserMealPreference> = coachDao.observePreference().map { it ?: defaultPreference() }
-    open val excludedFoods: Flow<List<UserExcludedFood>> = coachDao.observeExcludedFoods()
+    override val preference: Flow<UserMealPreference> = coachDao.observePreference().map { it ?: defaultPreference() }
+    override val excludedFoods: Flow<List<UserExcludedFood>> = coachDao.observeExcludedFoods()
     open val templateCount: Flow<Int> = coachDao.observeTemplateCount()
 
-    open suspend fun ensureDefaultPreference(): UserMealPreference {
+    /** Reuses the verified template/ingredient data without consuming a recommendation page. */
+    open suspend fun dailyPlanSeeds(): List<RecommendationSeed> {
+        val templates = com.example.healthcare.domain.DailyMealPlanEngine.slots
+            .flatMap { coachDao.getTemplatesForMeal(it.name) }.distinctBy { it.id }
+        return templates.map { template ->
+            val ingredients = coachDao.getIngredients(template.id)
+            val foods = ingredients.map { foodItemDao.findById(it.foodItemId) }
+            val verified = ingredients.isNotEmpty() && ingredients.zip(foods).all { (ingredient, food) ->
+                food != null && ingredient.amount.isFinite() && ingredient.amount > 0 &&
+                    food.referenceAmount > 0 && food.energyKcal > 0 && ingredient.unit.equals(food.unit, true)
+            }
+            RecommendationSeed(template.copy(totalKcal = if (verified) ingredients.zip(foods).sumOf { (ingredient, food) ->
+                NutritionRepository.calculateCalories(requireNotNull(food), ingredient.amount)
+            } else 0), ingredientNames = foods.mapNotNull { it?.name }.toSet(),
+                ingredientCategories = foods.mapNotNull { it?.category }.toSet(),
+                allergenTags = template.allergens.split('|').filter(String::isNotBlank).toSet(),
+                ingredientInfoComplete = MealRecommendationEngine.hasCompleteIngredientInfo(template.tags),
+                dataCompleteness = if (verified) 1.0 else 0.0)
+        }
+    }
+
+    fun dailyCycleSnapshot(scope: String) = recommendationCycleStore.read(scope)
+    fun saveDailyCycleSnapshot(scope: String, snapshot: com.example.healthcare.data.RecommendationCycleSnapshot) =
+        recommendationCycleStore.write(scope, snapshot)
+
+    open suspend fun dailyPlanDetail(templateId: String, mealType: MealType, budgetKcal: Int): MealRecommendationWithIngredients? {
+        val preference = ensureDefaultPreference()
+        val excluded = coachDao.getExcludedFoods()
+        return recommendationById(templateId, mealType, budgetKcal, preference,
+            excluded.filter { it.exclusionType != "ALLERGY" }.map { it.normalizedFoodName }.toSet(),
+            excluded.filter { it.exclusionType == "ALLERGY" }.map { it.normalizedFoodName }.toSet(),
+            preference.preferredFoods.split('|').filter(String::isNotBlank).toSet())
+    }
+
+    override suspend fun ensureDefaultPreference(): UserMealPreference {
         val existing = coachDao.getPreference()
         if (existing != null) return existing
         val created = defaultPreference()
@@ -70,12 +110,12 @@ open class MealCoachRepository(
         return created
     }
 
-    open suspend fun savePreference(preference: UserMealPreference) {
+    override suspend fun savePreference(preference: UserMealPreference) {
         require(MealCoachCalculator.validateRatios(preference)) { "활성 식사의 배분 합계는 100%여야 합니다." }
         coachDao.savePreference(preference.copy(updatedAt = System.currentTimeMillis()))
     }
 
-    open suspend fun addExcludedFood(name: String, type: String) {
+    override suspend fun addExcludedFood(name: String, type: String): Boolean {
         val normalized = if (type == "ALLERGY") {
             requireNotNull(FoodAllergenPolicy.canonicalize(name)) {
                 "지원하는 알레르기 원인을 선택해 주세요."
@@ -84,16 +124,16 @@ open class MealCoachRepository(
             MealRecommendationEngine.normalizeFoodName(name)
         }
         require(normalized.isNotBlank()) { "제외할 음식이나 재료 이름이 필요합니다." }
-        coachDao.addExcludedFood(
+        return coachDao.addExcludedFood(
             UserExcludedFood(
                 normalizedFoodName = normalized,
                 exclusionType = type,
                 createdAt = System.currentTimeMillis()
             )
-        )
+        ) > 0L
     }
 
-    open suspend fun deleteExcludedFood(food: UserExcludedFood) = coachDao.deleteExcludedFood(food)
+    override suspend fun deleteExcludedFood(food: UserExcludedFood) = coachDao.deleteExcludedFood(food)
 
     open suspend fun ensureDailyPlan(
         localDate: LocalDate,
@@ -127,6 +167,18 @@ open class MealCoachRepository(
         }
         requireNotNull(plan) to coachDao.getPlannedMeals(requireNotNull(plan).id)
     }
+
+    /** Four-slot day recommendations can include a snack even if an older schedule disabled it. */
+    open suspend fun ensureDailyConsumptionSlot(localDate: LocalDate, target: Int, meal: MealType, kcal: Int): PlannedMeal =
+        database.withTransaction {
+            val (plan, meals) = ensureDailyPlan(localDate, target, ensureDefaultPreference())
+            meals.firstOrNull { it.mealType == meal.name } ?: run {
+                val now = System.currentTimeMillis()
+                coachDao.savePlannedMeals(listOf(PlannedMeal(dailyMealPlanId = plan.id, mealType = meal.name,
+                    plannedKcal = kcal, status = "PLANNED", createdAt = now, updatedAt = now)))
+                requireNotNull(coachDao.getPlannedMeals(plan.id).firstOrNull { it.mealType == meal.name })
+            }
+        }
 
     open suspend fun recommendations(
         mealType: MealType,
@@ -164,6 +216,138 @@ open class MealCoachRepository(
         return template
     }
 
+    /**
+     * 홈과 추천 화면이 같은 날짜에는 같은 후보를 보여주도록 안정 ID 목록을 저장합니다.
+     * 제외 조건이 바뀌면 여전히 유효한 후보는 유지하고, 조건에서 벗어난 자리만 교체합니다.
+     */
+    open suspend fun getOrCreateTodayRecommendations(
+        localDate: LocalDate,
+        mealType: MealType,
+        budgetKcal: Int,
+        limit: Int = 3
+    ): MealRecommendationSearchResult {
+        return stableRecommendations(localDate, mealType, budgetKcal, limit, null)
+    }
+
+    open suspend fun getOrCreateThemeRecommendations(
+        localDate: LocalDate,
+        mealType: MealType,
+        budgetKcal: Int,
+        theme: MealRecommendationTheme,
+        limit: Int = 3
+    ): MealRecommendationSearchResult = stableRecommendations(localDate, mealType, budgetKcal, limit, theme)
+
+    open suspend fun recommendationThemeCounts(
+        mealType: MealType,
+        budgetKcal: Int
+    ): Map<MealRecommendationTheme, Int> = MealRecommendationTheme.entries.associateWith { theme ->
+        searchInternal(mealType, budgetKcal, RecommendationStage.EXACT, theme = theme, applyCycle = false,
+            limit = Int.MAX_VALUE).recommendations.size
+    }
+
+    private suspend fun stableRecommendations(
+        localDate: LocalDate,
+        mealType: MealType,
+        budgetKcal: Int,
+        limit: Int,
+        theme: MealRecommendationTheme?
+    ): MealRecommendationSearchResult = dailySelectionMutex.withLock {
+        val preference = ensureDefaultPreference()
+        val all = searchInternal(mealType, budgetKcal, RecommendationStage.EXACT,
+            theme = theme, applyCycle = false, limit = Int.MAX_VALUE)
+        val candidates = all.recommendations.associateBy { it.recommendation.template.id }
+        val scope = "${theme?.name ?: "HOME"}_${localDate.format(dateFormatter)}_${mealType.name}"
+        val cycleScope = if (theme == null) mealType.name else "THEME_${mealType.name}_${theme.name}"
+        val snapshot = recommendationCycleStore.read(cycleScope)
+        val preferredTokens = preference.preferredFoods.split('|').filter(String::isNotBlank).toSet()
+        val preferredIds = candidates.values.filter { bundle ->
+            val template = bundle.recommendation.template
+            val foods = bundle.ingredients.mapNotNull { foodItemDao.findById(it.foodItemId) }
+            FoodPreferencePolicy.matches(RecommendationSeed(template, bundle.ingredientNames.toSet(),
+                ingredientCategories = foods.mapNotNull { it.category }.toSet()), preferredTokens)
+        }.map { it.recommendation.template.id }.toSet()
+        val fingerprint = preferredTokens.sorted().joinToString("|")
+        val preserved = StableRecommendationPolicy.preserve(
+            storedIds = recommendationCycleStore.readStableSelection(scope).take(limit),
+            eligibleIds = candidates.keys,
+            preferredIds = preferredIds,
+            preferenceChanged = recommendationCycleStore.readStablePreference(scope) != fingerprint,
+            unseenPreferredIds = preferredIds - snapshot.seenTemplateIds,
+            limit = limit
+        )
+        val selection = RecommendationCyclePolicy.select(candidates.keys.toList(),
+            snapshot.copy(seenTemplateIds = snapshot.seenTemplateIds + preserved),
+            limit = candidates.size)
+        val added = selection.selectedTemplateIds.filterNot(preserved::contains).take((limit - preserved.size).coerceAtLeast(0))
+        val chosenIds = (preserved + added).distinct().take(limit)
+        // Consume only the displayed page, retaining history across calorie/taste changes.
+        if (added.isNotEmpty()) recommendationCycleStore.write(cycleScope, selection.updatedSnapshot.copy(
+            seenTemplateIds = (if (selection.cycleRestarted) emptySet() else snapshot.seenTemplateIds) + chosenIds,
+            lastShownTemplateId = added.last()
+        ))
+        recommendationCycleStore.writeStableSelection(scope, chosenIds)
+        recommendationCycleStore.writeStablePreference(scope, fingerprint)
+        all.copy(recommendations = chosenIds.mapNotNull(candidates::get),
+            hasMoreCandidates = candidates.keys.any { it !in chosenIds && it !in snapshot.seenTemplateIds })
+    }
+
+    private suspend fun recommendationById(
+        templateId: String,
+        mealType: MealType,
+        budgetKcal: Int,
+        preference: UserMealPreference,
+        dislikes: Set<String>,
+        allergy: Set<String>,
+        preferred: Set<String>
+    ): MealRecommendationWithIngredients? {
+        val template = coachDao.getTemplate(templateId) ?: return null
+        if (!template.supportedMealTypes.contains("|${mealType.name}|")) return null
+        val ingredients = coachDao.getIngredients(templateId)
+        val foods = ingredients.map { foodItemDao.findById(it.foodItemId) }
+        val verified = ingredients.isNotEmpty() && ingredients.size == foods.size &&
+            ingredients.zip(foods).all { (ingredient, food) ->
+                food != null && ingredient.amount > 0 && food.referenceAmount > 0 &&
+                    food.energyKcal > 0 && ingredient.unit.equals(food.unit, ignoreCase = true)
+            }
+        if (!verified) return null
+        val verifiedCalories = ingredients.zip(foods).sumOf { (ingredient, food) ->
+            NutritionRepository.calculateCalories(requireNotNull(food), ingredient.amount)
+        }
+        val recentUseCount = coachDao.getRecentConsumedTemplateIds().count { it == templateId }
+        val allergenTokens = template.allergens.split('|').filter(String::isNotBlank).toSet()
+        val seed = RecommendationSeed(
+            template = template.copy(totalKcal = verifiedCalories),
+            ingredientNames = foods.mapNotNull { it?.name }.toSet(),
+            ingredientCategories = foods.mapNotNull { it?.category }.toSet(),
+            allergenTags = allergenTokens,
+            ingredientInfoComplete = MealRecommendationEngine.hasCompleteIngredientInfo(template.tags),
+            recentUseCount = recentUseCount,
+            dataCompleteness = 1.0
+        )
+        val scored = MealRecommendationEngine.recommend(
+            candidates = listOf(seed),
+            budgetKcal = budgetKcal,
+            excludedNames = dislikes,
+            allergyNames = allergy,
+            preferredNames = preferred,
+            dietType = preference.dietType,
+            cookingMode = preference.cookingMode,
+            budgetLevel = preference.budgetLevel,
+            recommendationDiversity = preference.recommendationDiversity,
+            limit = 1,
+            stage = RecommendationStage.CLOSEST_VERIFIED
+        ).firstOrNull() ?: return null
+        return MealRecommendationWithIngredients(
+            recommendation = scored,
+            ingredients = ingredients,
+            ingredientNames = foods.mapNotNull { it?.name },
+            declaredAllergens = allergenTokens.filterNot { it.equals("UNKNOWN", true) }.toSet(),
+            matchedAllergens = MealRecommendationEngine.matchedAllergens(seed, allergy),
+            ingredientInfoComplete = seed.ingredientInfoComplete,
+            allergenInfoComplete = allergenTokens.none { it.equals("UNKNOWN", true) }
+        )
+    }
+
     open suspend fun searchRecommendations(
         mealType: MealType,
         budgetKcal: Int,
@@ -171,6 +355,18 @@ open class MealCoachRepository(
         extraCookingMode: String? = null,
         excludedTemplateIds: Set<String> = emptySet(),
         limit: Int = 3
+    ): MealRecommendationSearchResult = searchInternal(mealType, budgetKcal, stage, extraCookingMode,
+        excludedTemplateIds, limit)
+
+    private suspend fun searchInternal(
+        mealType: MealType,
+        budgetKcal: Int,
+        stage: RecommendationStage,
+        extraCookingMode: String? = null,
+        excludedTemplateIds: Set<String> = emptySet(),
+        limit: Int = 3,
+        theme: MealRecommendationTheme? = null,
+        applyCycle: Boolean = true
     ): MealRecommendationSearchResult {
         val preference = ensureDefaultPreference()
         val excluded = coachDao.getExcludedFoods()
@@ -205,6 +401,7 @@ open class MealCoachRepository(
                 RecommendationSeed(
                     template = template.copy(totalKcal = verifiedCalories),
                     ingredientNames = namesByTemplate[template.id].orEmpty().toSet(),
+                    ingredientCategories = foods.mapNotNull { it?.category }.toSet(),
                     allergenTags = template.allergens.split('|').filter(String::isNotBlank).toSet(),
                     ingredientInfoComplete = MealRecommendationEngine.hasCompleteIngredientInfo(template.tags),
                     recentUseCount = recentUseCounts[template.id] ?: 0,
@@ -225,18 +422,20 @@ open class MealCoachRepository(
             stage = stage,
             allowedCookingModes = if (extraCookingMode == null) setOf(preference.cookingMode)
                 else setOf(preference.cookingMode, extraCookingMode),
-            excludedTemplateIds = excludedTemplateIds
+            excludedTemplateIds = excludedTemplateIds,
+            mealType = mealType,
+            theme = theme
         )
-        val scope = mealType.name
+        val scope = if (theme == null) mealType.name else "THEME_${mealType.name}_${theme.name}"
         val cycleSelection = RecommendationCyclePolicy.select(
             eligibleTemplateIds = allScored.map { it.template.id },
             snapshot = recommendationCycleStore.read(scope),
             limit = limit
         )
-        if (allScored.isNotEmpty()) {
+        if (applyCycle && allScored.isNotEmpty()) {
             recommendationCycleStore.write(scope, cycleSelection.updatedSnapshot)
         }
-        val selectedIds = cycleSelection.selectedTemplateIds.toSet()
+        val selectedIds = if (applyCycle) cycleSelection.selectedTemplateIds.toSet() else allScored.take(limit).map { it.template.id }.toSet()
         val bundles = allScored.filter { it.template.id in selectedIds }.map { recommendation ->
             val seed = seeds.first { it.template.id == recommendation.template.id }
             val allergenTokens = seed.allergenTags.filter(String::isNotBlank)

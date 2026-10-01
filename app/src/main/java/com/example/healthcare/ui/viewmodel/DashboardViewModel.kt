@@ -10,11 +10,13 @@ import com.example.healthcare.data.repository.EnergyProfileRepository
 import com.example.healthcare.data.repository.GoalRepository
 import com.example.healthcare.data.repository.MealRepository
 import com.example.healthcare.data.repository.MealCoachRepository
+import com.example.healthcare.data.repository.TodayMealPlanRepository
 import com.example.healthcare.data.entity.UserMealPreference
 import com.example.healthcare.domain.EnergyBalanceCalculator
 import com.example.healthcare.domain.DailyIntakeTimeline
 import com.example.healthcare.domain.MealCoachCalculator
 import com.example.healthcare.domain.Macronutrients
+import com.example.healthcare.domain.DashboardSummaryPolicy
 import java.time.LocalDate
 import java.time.LocalTime
 import java.time.format.DateTimeFormatter
@@ -58,7 +60,18 @@ data class TodayCoachUiState(
     val previewRecommendationProteinGrams: Double? = null,
     val previewRecommendationFatGrams: Double? = null,
     val isRecommendationLoading: Boolean = false,
-    val recommendationError: Boolean = false
+    val recommendationError: Boolean = false,
+    val previewRecommendations: List<RecommendationPreviewUi> = emptyList(),
+    val dailyThemeLabel: String? = null,
+    val dailyPlanKcal: Int? = null,
+    val dailyPlanTarget: Int? = null
+)
+
+data class RecommendationPreviewUi(
+    val templateId: String,
+    val name: String,
+    val kcal: Int,
+    val reason: String
 )
 
 internal fun recommendationMealsForDate(
@@ -84,11 +97,14 @@ class DashboardViewModel(
     private val goalRepository: GoalRepository,
     private val energyProfileRepository: EnergyProfileRepository,
     private val mealCoachRepository: MealCoachRepository? = null,
-    private val nowProvider: () -> LocalTime = LocalTime::now
+    private val nowProvider: () -> LocalTime = LocalTime::now,
+    sessionVariantProvider: () -> Int = { (System.currentTimeMillis() / 1_000L).toInt() },
+    private val todayMealPlanRepository: TodayMealPlanRepository? = null
 ) : ViewModel() {
 
     private val dateFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd")
     private val _selectedDate = MutableStateFlow(LocalDate.now())
+    private val sessionMessageVariant = sessionVariantProvider()
     val selectedDate: StateFlow<LocalDate> = _selectedDate.asStateFlow()
 
     val intakeTimeline: StateFlow<DailyIntakeTimeline> = combine(
@@ -139,50 +155,32 @@ class DashboardViewModel(
         com.example.healthcare.util.CalorieUtils.getCalorieStatusText(total, target)
     }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), "계산 중...")
 
+    val situationMessage: StateFlow<String> = combine(meals, targetCalories, _selectedDate) { records, target, date ->
+        DashboardSummaryPolicy.situationMessage(
+            selectedDate = date,
+            today = LocalDate.now(),
+            now = nowProvider(),
+            meals = records,
+            targetCalories = target,
+            variant = sessionMessageVariant
+        )
+    }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), "오늘 첫 식사를 기록해보세요.")
+
     private val mealPreference = mealCoachRepository?.preference
         ?: MutableStateFlow(MealCoachRepository.defaultPreference())
     private val templateCount = mealCoachRepository?.templateCount ?: MutableStateFlow(0)
+    private val excludedFoods = mealCoachRepository?.excludedFoods ?: MutableStateFlow(emptyList())
 
     val todayCoachUiState: StateFlow<TodayCoachUiState> = combine(
-        energyUiState,
-        mealPreference,
-        _selectedDate,
-        templateCount
-    ) { energy, preference, date, availableTemplates ->
+        energyUiState, mealPreference, _selectedDate,
+        todayMealPlanRepository?.currentPlan ?: MutableStateFlow(null), meals
+    ) { energy, preference, date, saved, records ->
         val state = createTodayCoachState(energy, preference, date)
-        if (
-            date == LocalDate.now() && state.nextMealType != null && state.nextMealBudgetKcal != null
-        ) {
-            if (availableTemplates == 0) {
-                return@combine state.copy(isRecommendationLoading = true)
-            }
-            val result = runCatching {
-                mealCoachRepository?.getOrCreateTodayRecommendation(
-                    localDate = date,
-                    targetCalories = state.targetCalories,
-                    preference = preference,
-                    mealType = state.nextMealType,
-                    budgetKcal = state.nextMealBudgetKcal
-                )
-            }
-            val template = result.getOrNull()
-            state.copy(
-                previewRecommendationTemplateId = template?.id,
-                previewRecommendationName = template?.name,
-                previewRecommendationKcal = template?.totalKcal,
-                previewRecommendationCarbohydrateGrams = template?.carbohydrateGrams,
-                previewRecommendationProteinGrams = template?.proteinGrams,
-                previewRecommendationFatGrams = template?.fatGrams,
-                recommendationError = result.isFailure || template == null
-            )
-        } else {
-            state
-        }
-    }.stateIn(
-        viewModelScope,
-        SharingStarted.WhileSubscribed(5000),
-        TodayCoachUiState()
-    )
+        val today = saved?.takeIf { it.date == date.toString() && date == LocalDate.now() }
+        state.copy(dailyThemeLabel = today?.theme?.label,
+            dailyPlanKcal = today?.totalKcal,
+            dailyPlanTarget = today?.targetKcal)
+    }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), TodayCoachUiState())
 
     init {
         mealCoachRepository?.let { repository ->

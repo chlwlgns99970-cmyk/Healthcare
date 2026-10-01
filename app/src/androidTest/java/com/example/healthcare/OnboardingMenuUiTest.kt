@@ -11,6 +11,8 @@ import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.captureToImage
 import androidx.compose.ui.test.hasScrollAction
+import androidx.compose.ui.test.SemanticsMatcher
+import androidx.compose.ui.test.getUnclippedBoundsInRoot
 import androidx.compose.ui.test.hasText
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onFirst
@@ -19,6 +21,7 @@ import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onRoot
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performScrollToNode
+import androidx.compose.ui.semantics.SemanticsProperties
 import androidx.compose.ui.graphics.asAndroidBitmap
 import androidx.compose.ui.unit.Density
 import androidx.compose.ui.unit.dp
@@ -122,6 +125,8 @@ class OnboardingMenuUiTest {
     }
 
     @Test fun homeCoreIntakeStepsEnergyAndRecordActionFitAt360Dp() {
+        var recommendationOpenCount = 0
+        var recordOpenCount = 0
         composeRule.setContent {
             HealthCareTheme(darkTheme = false) {
                 Box(Modifier.width(360.dp).height(800.dp)) {
@@ -132,7 +137,8 @@ class OnboardingMenuUiTest {
                         targetCalories = 1_900,
                         statusText = "목표까지 650kcal",
                         energyState = DashboardEnergyUiState(),
-                        onPreviousDay = {}, onNextDay = {}, onAddRecord = {}, onOpenEnergySettings = {},
+                        onPreviousDay = {}, onNextDay = {}, onAddRecord = { recordOpenCount++ }, onOpenEnergySettings = {},
+                        onOpenRecommendations = { recommendationOpenCount++ },
                         bodyProfile = BodyProfile(BodySex.MALE, 35, 175.0, 70.4),
                         nutrition = Macronutrients(120.0, 65.0, 38.0),
                         stepCounterState = StepCounterUiState(StepCounterStatus.AVAILABLE, 6_428)
@@ -140,27 +146,39 @@ class OnboardingMenuUiTest {
                 }
             }
         }
-        composeRule.onNodeWithText("좋은 아침이에요.").assertIsDisplayed()
+        composeRule.onNodeWithText("오늘 첫 식사를 기록해보세요.").assertIsDisplayed()
         composeRule.onNodeWithText("탄수화물").assertIsDisplayed()
         composeRule.onNodeWithText("120g").assertIsDisplayed()
         composeRule.onNodeWithText("아침").assertIsDisplayed()
         composeRule.onNodeWithText("오늘 활동").assertIsDisplayed()
         composeRule.onNodeWithText("6,428 걸음").assertIsDisplayed()
-        composeRule.onNodeWithText("오늘의 추천 식사").assertIsDisplayed()
-        assertTrue(composeRule.onAllNodes(hasScrollAction()).fetchSemanticsNodes().isEmpty())
+        composeRule.onNodeWithText("약 4.7 km · 약 170 kcal").assertIsDisplayed()
+        composeRule.onNodeWithText("오늘 식사 스타일을 골라보세요").assertIsDisplayed()
+        composeRule.onNodeWithText("추천 고르기").assertIsDisplayed()
+        assertHomeFitsVertically()
+        composeRule.onNodeWithTag("dashboard-open-daily-plan").assertIsDisplayed().performClick()
+        composeRule.onNodeWithTag("dashboard-meal-breakfast").assertIsDisplayed().performClick()
+        composeRule.runOnIdle {
+            assertEquals(1, recommendationOpenCount)
+            assertEquals(1, recordOpenCount)
+        }
         capture("home-overview-360.png")
     }
 
     @Test fun combinedSystemAndAppLargeTextKeepsWalkingEstimateReachable() {
+        var recommendationOpenCount = 0
+        var recordOpenCount = 0
         composeRule.setContent {
             CompositionLocalProvider(LocalDensity provides Density(1f, 1.3f)) {
                 HealthCareTheme(darkTheme = false, appFontScale = 1.3f) {
                     Box(Modifier.width(360.dp).height(800.dp)) {
+                        assertEquals(1.69f, LocalDensity.current.fontScale, 0.001f)
                         DashboardContent(
                             selectedDate = LocalDate.now(), meals = emptyList(), totalCalories = 0,
                             targetCalories = 2_000, statusText = "목표까지 2,000kcal",
                             energyState = DashboardEnergyUiState(), onPreviousDay = {}, onNextDay = {},
-                            onAddRecord = {}, onOpenEnergySettings = {},
+                            onAddRecord = { recordOpenCount++ }, onOpenEnergySettings = {},
+                            onOpenRecommendations = { recommendationOpenCount++ },
                             bodyProfile = BodyProfile(BodySex.FEMALE, 42, 163.5, 58.2),
                             stepCounterState = StepCounterUiState(StepCounterStatus.AVAILABLE, 5_000)
                         )
@@ -172,9 +190,35 @@ class OnboardingMenuUiTest {
         composeRule.onNodeWithText("아침").assertIsDisplayed()
         composeRule.onNodeWithText("오늘 활동").assertIsDisplayed()
         composeRule.onNodeWithText("5,000 걸음").assertIsDisplayed()
-        composeRule.onNodeWithText("오늘의 추천 식사").assertIsDisplayed()
-        assertTrue(composeRule.onAllNodes(hasScrollAction()).fetchSemanticsNodes().isEmpty())
+        composeRule.onNodeWithText("약 3.4 km · 약 102 kcal").assertIsDisplayed()
+        composeRule.onNodeWithText("오늘 식사 스타일을 골라보세요").assertIsDisplayed()
+        composeRule.onNodeWithText("추천 고르기").assertIsDisplayed()
+        assertHomeFitsVertically()
+        composeRule.onNodeWithTag("dashboard-open-daily-plan").assertIsDisplayed().performClick()
+        composeRule.onNodeWithTag("dashboard-meal-breakfast").assertIsDisplayed().performClick()
+        composeRule.runOnIdle {
+            assertEquals(1, recommendationOpenCount)
+            assertEquals(1, recordOpenCount)
+        }
         capture("home-overview-360-large.png")
+    }
+
+    private fun assertHomeFitsVertically() {
+        // The daily plan summary and all meal actions must fit without vertical scrolling.
+        assertTrue(composeRule.onAllNodes(hasScrollAction() and
+            SemanticsMatcher.keyIsDefined(SemanticsProperties.VerticalScrollAxisRange)).fetchSemanticsNodes().isEmpty())
+        val home = composeRule.onNodeWithTag("dashboard-root").getUnclippedBoundsInRoot()
+        val firstMeal = composeRule.onNodeWithTag("dashboard-meal-breakfast").getUnclippedBoundsInRoot()
+        val lastMeal = composeRule.onNodeWithTag("dashboard-meal-snack").getUnclippedBoundsInRoot()
+        val intake = composeRule.onNodeWithTag("dashboard-calorie-target").getUnclippedBoundsInRoot()
+        val recommendation = composeRule.onNodeWithTag("dashboard-recommendation-card").getUnclippedBoundsInRoot()
+        val summaryAction = composeRule.onNodeWithTag("dashboard-open-daily-plan").getUnclippedBoundsInRoot()
+        assertTrue(firstMeal.top >= home.top)
+        assertTrue(lastMeal.bottom <= intake.top)
+        assertTrue(intake.bottom <= recommendation.top)
+        assertTrue(recommendation.bottom <= home.bottom)
+        assertTrue(summaryAction.top >= recommendation.top && summaryAction.bottom <= recommendation.bottom)
+        assertTrue(summaryAction.bottom - summaryAction.top >= 48.dp)
     }
 
     private fun capture(name: String) {

@@ -60,6 +60,13 @@ class BodyProfileStore(context: Context) : BodyProfilePersistence {
 
     override fun readExerciseWeight(): Double? = exercisePreferences.getString("weight_kg", null)?.toDoubleOrNull()
 
+    // Only the onboarding progress lives here; food choices use user_meal_preferences.
+    fun isTasteSetupPending(): Boolean = preferences.getBoolean("taste_setup_pending", false)
+
+    fun setTasteSetupPending(pending: Boolean) {
+        preferences.edit(commit = true) { putBoolean("taste_setup_pending", pending) }
+    }
+
     override fun save(profile: BodyProfile) {
         require(BodyProfileCalculator.validate(
             profile.sex,

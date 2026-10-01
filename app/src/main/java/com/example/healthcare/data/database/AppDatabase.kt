@@ -47,7 +47,7 @@ import com.example.healthcare.data.entity.UserMealPreference
         RecognitionSession::class,
         RecognitionCandidate::class
     ],
-    version = 7,
+    version = 8,
     exportSchema = false
 )
 @TypeConverters(Converters::class)
@@ -73,7 +73,7 @@ abstract class AppDatabase : RoomDatabase() {
                 )
                     .addMigrations(
                         MIGRATION_1_2, MIGRATION_2_3, MIGRATION_3_4, MIGRATION_4_5,
-                        MIGRATION_5_6, MIGRATION_6_7
+                        MIGRATION_5_6, MIGRATION_6_7, MIGRATION_7_8
                     )
                     .build()
                 INSTANCE = instance
@@ -274,6 +274,23 @@ abstract class AppDatabase : RoomDatabase() {
                 db.execSQL("ALTER TABLE frequent_foods ADD COLUMN carbohydrateGrams REAL")
                 db.execSQL("ALTER TABLE frequent_foods ADD COLUMN proteinGrams REAL")
                 db.execSQL("ALTER TABLE frequent_foods ADD COLUMN fatGrams REAL")
+            }
+        }
+
+        val MIGRATION_7_8 = object : Migration(7, 8) {
+            override fun migrate(db: SupportSQLiteDatabase) {
+                // 기존 행은 사용자가 저장해 둔 음식이므로 자주 먹는 음식으로 그대로 보존합니다.
+                db.execSQL("ALTER TABLE frequent_foods ADD COLUMN isFrequent INTEGER NOT NULL DEFAULT 1")
+                db.execSQL("ALTER TABLE frequent_foods ADD COLUMN foodItemId TEXT")
+                db.execSQL("ALTER TABLE frequent_foods ADD COLUMN sourceType TEXT")
+                db.execSQL("ALTER TABLE frequent_foods ADD COLUMN sourceFoodCode TEXT")
+                db.execSQL("ALTER TABLE frequent_foods ADD COLUMN brand TEXT")
+                // v7의 isFavorite는 '내 음식 저장' 때 자동 설정되던 값이므로 사용자의 명시적 별표로 승격하지 않습니다.
+                db.execSQL("UPDATE frequent_foods SET isFavorite = 0")
+                db.execSQL(
+                    "CREATE UNIQUE INDEX IF NOT EXISTS index_frequent_foods_foodItemId " +
+                        "ON frequent_foods(foodItemId)"
+                )
             }
         }
     }

@@ -108,6 +108,108 @@ class FoodSearchPolicyTest {
         assertFalse(FoodSearchPolicy.deduplicationKey(first) == FoodSearchPolicy.deduplicationKey(anotherBasis))
     }
 
+    @Test fun sameNormalizedDisplayNameCreatesOneGroupWithoutLosingProducts() {
+        val general = food("참치김밥", "밥류", "g").copy(
+            id = "general", sourceFoodCode = "general", carbohydrateGrams = 35.0,
+            proteinGrams = 9.0, fatGrams = 7.0
+        )
+        val cu = general.copy(
+            id = "cu", sourceType = "K-FIND-PRODUCT", sourceFoodCode = "cu-1",
+            name = "참치 김밥", normalizedName = "참치김밥", brand = "CU",
+            referenceAmount = 180.0, energyKcal = 370.0, carbohydrateGrams = 52.0
+        )
+        val gs = general.copy(
+            id = "gs", sourceType = "K-FIND-PRODUCT", sourceFoodCode = "gs-1",
+            brand = "GS25", referenceAmount = 165.0, energyKcal = 345.0,
+            proteinGrams = 11.0
+        )
+
+        val groups = FoodSearchPolicy.groupSearchResults(listOf(gs, cu, general), "참치김밥")
+
+        assertEquals(1, groups.size)
+        assertEquals(3, groups.single().size)
+        assertEquals(2, groups.single().alternatives.size)
+        val preserved = listOf(groups.single().representative) + groups.single().alternatives
+        assertEquals(setOf("general", "cu", "gs"), preserved.map(FoodItem::id).toSet())
+        assertEquals(setOf(null, "CU", "GS25"), preserved.map(FoodItem::brand).toSet())
+        assertEquals(setOf(100.0, 180.0, 165.0), preserved.map(FoodItem::referenceAmount).toSet())
+        assertEquals(setOf(128.0, 370.0, 345.0), preserved.map(FoodItem::energyKcal).toSet())
+    }
+
+    @Test fun canonicalDishOrderAndBrandPrefixesCreateOneFoodKindGroup() {
+        val official = food("김밥_참치", "밥류", "g").copy(id = "official", sourceFoodCode = "official")
+        val spaced = food("참치 김밥", "밥류", "g").copy(id = "spaced", sourceFoodCode = "spaced")
+        val branded = food("CU 참치김밥", "밥류", "g").copy(
+            id = "cu", sourceFoodCode = "cu", sourceType = "K-FIND-PRODUCT", brand = "CU"
+        )
+
+        val group = FoodSearchPolicy.groupSearchResults(listOf(branded, spaced, official), "참치김밥").single()
+
+        assertEquals("참치김밥", group.key)
+        assertEquals("official", group.representative.id)
+        assertEquals(setOf("official", "spaced", "cu"),
+            (listOf(group.representative) + group.alternatives).map(FoodItem::id).toSet())
+    }
+
+    @Test fun basicAliasRanksAheadOfBrandProductsForTofuAndEggQueries() {
+        val tofu = food("두부_단단한 것_생것", "두류", "g").copy(
+            id = "tofu", sourceType = "USDA-SR-LEGACY", aliases = "|두부|일반두부|"
+        )
+        val tofuSnack = food("두부과자", "과자류", "g").copy(
+            id = "snack", sourceType = "K-FIND-PRODUCT", normalizedName = "두부과자"
+        )
+        val egg = food("달걀_삶은 것", "난류", "g").copy(
+            id = "egg", sourceType = "USDA-SR-LEGACY", aliases = "|달걀|계란|삶은달걀|삶은계란|"
+        )
+
+        assertTrue(FoodSearchPolicy.searchRank(tofu, "두부") < FoodSearchPolicy.searchRank(tofuSnack, "두부"))
+        assertEquals(FoodSearchPolicy.searchRank(egg, "달걀"), FoodSearchPolicy.searchRank(egg, "계란"))
+        assertEquals(5, FoodSearchPolicy.searchRank(egg, "삶은 계란"))
+    }
+
+    @Test fun semanticallyDifferentTunaGimbapNamesRemainSeparateGroups() {
+        val tuna = food("참치김밥", "밥류", "g").copy(id = "tuna", sourceFoodCode = "tuna")
+        val tunaMayo = tuna.copy(
+            id = "tuna-mayo", sourceFoodCode = "tuna-mayo", name = "참치마요김밥",
+            normalizedName = "참치마요김밥"
+        )
+
+        val groups = FoodSearchPolicy.groupSearchResults(listOf(tunaMayo, tuna), "참치김밥")
+
+        assertEquals(2, groups.size)
+        assertEquals("tuna", groups.first().representative.id)
+        assertEquals(setOf("참치김밥", "참치마요김밥"), groups.map { it.key }.toSet())
+    }
+
+    @Test fun brandQueryChoosesMatchingBrandAsRepresentative() {
+        val base = food("참치김밥", "밥류", "g").copy(
+            sourceType = "K-FIND-PRODUCT", normalizedName = "참치김밥"
+        )
+        val gs = base.copy(id = "gs", sourceFoodCode = "gs", brand = "GS25")
+        val cu = base.copy(id = "cu", sourceFoodCode = "cu", brand = "CU")
+
+        val group = FoodSearchPolicy.groupSearchResults(listOf(gs, cu), "CU 참치김밥").single()
+
+        assertEquals("cu", group.representative.id)
+        assertEquals("CU", group.representative.brand)
+    }
+
+    @Test fun representativeSelectionIsDeterministicRegardlessOfInputOrder() {
+        val incomplete = food("참치김밥", "밥류", "g").copy(
+            id = "b", sourceFoodCode = "b", carbohydrateGrams = 30.0
+        )
+        val complete = incomplete.copy(
+            id = "a", sourceFoodCode = "a", proteinGrams = 10.0, fatGrams = 8.0
+        )
+
+        val first = FoodSearchPolicy.groupSearchResults(listOf(incomplete, complete), "참치김밥").single()
+        val second = FoodSearchPolicy.groupSearchResults(listOf(complete, incomplete), "참치김밥").single()
+
+        assertEquals("a", first.representative.id)
+        assertEquals(first.representative.id, second.representative.id)
+        assertEquals(first.alternatives.map(FoodItem::id), second.alternatives.map(FoodItem::id))
+    }
+
     private fun food(name: String, category: String, unit: String) = FoodItem(
         id = "test", sourceType = "K-FIND", sourceFoodCode = "test", name = name,
         normalizedName = name.replace("_", ""), category = category,

@@ -12,6 +12,7 @@ import com.example.healthcare.data.repository.EnergyProfileRepository
 import com.example.healthcare.data.repository.GoalRepository
 import com.example.healthcare.data.repository.MealRepository
 import com.example.healthcare.data.repository.MealCoachRepository
+import com.example.healthcare.data.repository.TodayMealPlanRepository
 import com.example.healthcare.data.repository.NutritionRepository
 import com.example.healthcare.data.repository.RecognitionRepository
 import com.example.healthcare.data.update.FoodDataUpdateCoordinator
@@ -32,14 +33,16 @@ class ViewModelFactory(
     private val recognitionRepository: RecognitionRepository,
     private val bodyProfileStore: BodyProfilePersistence,
     private val weightGoalStore: WeightGoalPersistence,
-    private val foodDataUpdateCoordinator: FoodDataUpdateCoordinator? = null
+    private val foodDataUpdateCoordinator: FoodDataUpdateCoordinator? = null,
+    private val todayMealPlanRepository: TodayMealPlanRepository? = null
 ) : ViewModelProvider.Factory {
 
     @Suppress("UNCHECKED_CAST")
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         return when {
             modelClass.isAssignableFrom(DashboardViewModel::class.java) -> {
-                DashboardViewModel(mealRepository, goalRepository, energyProfileRepository, mealCoachRepository) as T
+                DashboardViewModel(mealRepository, goalRepository, energyProfileRepository, mealCoachRepository,
+                    todayMealPlanRepository = todayMealPlanRepository) as T
             }
             modelClass.isAssignableFrom(AddRecordViewModel::class.java) -> {
                 AddRecordViewModel(
@@ -67,6 +70,9 @@ class ViewModelFactory(
             }
             modelClass.isAssignableFrom(MealPlanViewModel::class.java) -> {
                 MealPlanViewModel(mealCoachRepository, nutritionRepository) as T
+            }
+            modelClass.isAssignableFrom(TodayMealPlanViewModel::class.java) -> {
+                TodayMealPlanViewModel(requireNotNull(todayMealPlanRepository)) as T
             }
             modelClass.isAssignableFrom(MealPreferenceViewModel::class.java) -> {
                 MealPreferenceViewModel(mealCoachRepository) as T

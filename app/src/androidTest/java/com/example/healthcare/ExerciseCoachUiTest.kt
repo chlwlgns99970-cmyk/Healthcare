@@ -17,11 +17,14 @@ import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.onAllNodesWithText
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.hasSetTextAction
+import androidx.compose.ui.test.SemanticsMatcher
+import androidx.compose.ui.test.getUnclippedBoundsInRoot
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performScrollToNode
 import androidx.compose.ui.test.performTextReplacement
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.semantics.SemanticsProperties
 import androidx.compose.ui.unit.Density
 import androidx.compose.ui.unit.dp
 import com.example.healthcare.ui.screens.DashboardContent
@@ -31,6 +34,7 @@ import com.example.healthcare.ui.viewmodel.DashboardEnergyUiState
 import com.example.healthcare.domain.ExerciseActivity
 import java.time.LocalDate
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertTrue
 import org.junit.Rule
 import org.junit.Test
 
@@ -120,6 +124,13 @@ class ExerciseCoachUiTest {
         }
         rule.onNodeWithTag("exercise-over-character", useUnmergedTree = true).assertExists()
         rule.onNodeWithTag("exercise-coach-cta").assertIsDisplayed()
-        assertEquals(0, rule.onAllNodes(hasScrollAction()).fetchSemanticsNodes().size)
+        // The recommendation carousel may scroll horizontally; the home must fit vertically.
+        assertEquals(0, rule.onAllNodes(hasScrollAction() and
+            SemanticsMatcher.keyIsDefined(SemanticsProperties.VerticalScrollAxisRange)).fetchSemanticsNodes().size)
+        val cta = rule.onNodeWithTag("exercise-coach-cta").getUnclippedBoundsInRoot()
+        val home = rule.onNodeWithTag("dashboard-root").getUnclippedBoundsInRoot()
+        val firstMeal = rule.onNodeWithTag("dashboard-meal-breakfast").getUnclippedBoundsInRoot()
+        assertTrue("The exercise action must stay above the meal rows inside the home.",
+            cta.top >= home.top && cta.bottom <= firstMeal.top)
     }
 }

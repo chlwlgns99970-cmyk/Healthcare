@@ -1,6 +1,9 @@
 package com.example.healthcare.domain
 
 import com.example.healthcare.data.entity.MealTemplate
+import com.example.healthcare.data.model.MealType
+import java.text.Normalizer
+import java.util.Locale
 import kotlin.math.abs
 import kotlin.math.max
 
@@ -10,7 +13,8 @@ data class RecommendationSeed(
     val allergenTags: Set<String> = emptySet(),
     val ingredientInfoComplete: Boolean = true,
     val recentUseCount: Int = 0,
-    val dataCompleteness: Double = 1.0
+    val dataCompleteness: Double = 1.0,
+    val ingredientCategories: Set<String> = emptySet()
 )
 
 data class ScoredMealRecommendation(
@@ -18,7 +22,8 @@ data class ScoredMealRecommendation(
     val score: Double,
     val calorieDifference: Int,
     val toleranceKcal: Int,
-    val reason: String
+    val reason: String,
+    val appliedReasons: List<String> = emptyList()
 )
 
 enum class RecommendationStage { EXACT, WIDER_CALORIES, EXPANDED_MODE, CLOSEST_VERIFIED }
@@ -30,7 +35,7 @@ object MealRecommendationEngine {
         allergyNames: Set<String>,
         dietType: String
     ): Boolean {
-        if (seed.template.totalKcal <= 0 || seed.dataCompleteness < 1.0 ||
+        if (seed.template.totalKcal <= 0 || !seed.dataCompleteness.isFinite() || seed.dataCompleteness < 1.0 ||
             seed.ingredientNames.isEmpty() || seed.template.source.isBlank()) return false
         val dislikes = excludedNames.map(::normalizeFoodName).filter(String::isNotBlank).toSet()
         val searchable = (seed.ingredientNames + seed.template.name)
@@ -64,15 +69,22 @@ object MealRecommendationEngine {
         limit: Int = 3,
         stage: RecommendationStage = RecommendationStage.EXACT,
         allowedCookingModes: Set<String> = setOf(cookingMode),
-        excludedTemplateIds: Set<String> = emptySet()
+        excludedTemplateIds: Set<String> = emptySet(),
+        mealType: MealType? = null,
+        theme: MealRecommendationTheme? = null
     ): List<ScoredMealRecommendation> {
         if (budgetKcal <= 0 || limit <= 0) return emptyList()
-        val preferred = preferredNames.map(::normalizeFoodName).filter(String::isNotBlank).toSet()
+        val preferred = preferredNames.filter { normalizeFoodName(it).isNotBlank() }.toSet()
         val filtered = candidates.filter { seed ->
-            seed.template.id !in excludedTemplateIds &&
+            (mealType == null || supportsMeal(seed.template, mealType)) &&
                 passesHardFilters(seed, excludedNames, allergyNames, dietType) &&
                 ("ANY" in allowedCookingModes || allowedCookingModes.any { containsToken(seed.template.tags, it) }) &&
                 costWithinBudget(seed.template.costLevel, budgetLevel)
+        }.distinctBy { it.template.id }
+        val themed = if (theme == null) filtered else {
+            // Relative themes require a concrete meal; never compare breakfast to lunch or snacks.
+            if (mealType == null) return emptyList()
+            MealRecommendationThemePolicy.select(filtered, theme, mealType)
         }
 
         val baseTolerance = max((budgetKcal * 0.10).toInt(), 80)
@@ -81,14 +93,14 @@ object MealRecommendationEngine {
             RecommendationStage.CLOSEST_VERIFIED -> Int.MAX_VALUE
             else -> max((budgetKcal * 0.20).toInt(), 150)
         }
-        val inRange = filtered.filter { abs(it.template.totalKcal - budgetKcal) <= tolerance }
+        val inRange = themed.filter {
+            it.template.id !in excludedTemplateIds && abs(it.template.totalKcal - budgetKcal) <= tolerance
+        }
 
         return inRange.map { seed ->
             val calorieFit = (1.0 - abs(seed.template.totalKcal - budgetKcal).toDouble() / max(budgetKcal, 1)).coerceIn(0.0, 1.0)
-            val searchable = (seed.ingredientNames + seed.template.name).map(::normalizeFoodName)
-            val preferenceFit = if (preferred.isEmpty()) 0.5 else if (
-                searchable.any { name -> preferred.any { pref -> name.contains(pref) || pref.contains(name) } }
-            ) 1.0 else 0.0
+            val preferenceMatched = FoodPreferencePolicy.matches(seed, preferred)
+            val preferenceFit = if (preferred.isEmpty()) 0.5 else if (preferenceMatched) 1.0 else 0.0
             val variety = when (recommendationDiversity) {
                 "FAMILIAR" -> if (seed.recentUseCount > 0) 1.0 else 0.5
                 "VARIED" -> (1.0 - seed.recentUseCount * 0.4).coerceIn(0.0, 1.0)
@@ -96,31 +108,55 @@ object MealRecommendationEngine {
             }
             val score = calorieFit * 55.0 + preferenceFit * 20.0 + variety * 15.0 +
                 seed.dataCompleteness.coerceIn(0.0, 1.0) * 10.0
+            val appliedReasons = buildList {
+                if (preferenceMatched) add("좋아하는 음식 취향을 반영했어요.")
+                if (theme != null) add(when (theme) {
+                    MealRecommendationTheme.LIGHT -> "같은 식사 후보 중 칼로리가 낮은 쪽에서 골랐어요."
+                    MealRecommendationTheme.BALANCED -> "표시된 탄단지 열량비 기준에 맞는 메뉴예요."
+                    MealRecommendationTheme.FILLING -> "같은 식사 후보 중 칼로리가 높은 쪽에서 골랐어요."
+                })
+                if (stage != RecommendationStage.CLOSEST_VERIFIED) {
+                    add("현재 식사의 칼로리 참고 범위에 맞는 후보예요.")
+                }
+                if (excludedNames.any { normalizeFoodName(it).isNotBlank() }) {
+                    add("피하고 싶은 음식·재료를 제외한 후보예요.")
+                }
+                if (excludedTemplateIds.isNotEmpty()) add("다른 추천과 겹치지 않게 골랐어요.")
+            }
             val reason = when {
+                preferenceMatched -> appliedReasons.first()
+                theme != null -> appliedReasons.first { it != "좋아하는 음식 취향을 반영했어요." }
                 calorieFit >= 0.95 -> "다음 한 끼의 참고 범위에 가까워요."
                 recommendationDiversity == "FAMILIAR" && seed.recentUseCount > 0 ->
                     "최근 선택했던 익숙한 식단이에요."
                 seed.recentUseCount == 0 && variety >= 0.75 -> "최근 식단과 겹치지 않는 선택이에요."
-                else -> "등록한 제외 음식 조건을 통과한 식단이에요."
+                excludedNames.any { normalizeFoodName(it).isNotBlank() } -> "피하고 싶은 음식·재료를 제외한 후보예요."
+                stage == RecommendationStage.CLOSEST_VERIFIED -> "현재 식사 참고 칼로리와 가까운 후보부터 골랐어요."
+                else -> "현재 식사의 칼로리 참고 범위에 맞는 후보예요."
             }
             ScoredMealRecommendation(
                 template = seed.template,
                 score = score,
                 calorieDifference = seed.template.totalKcal - budgetKcal,
                 toleranceKcal = tolerance,
-                reason = reason
+                reason = reason,
+                appliedReasons = (listOf(reason) + appliedReasons).distinct()
             )
-        }.sortedWith(if (stage == RecommendationStage.CLOSEST_VERIFIED) {
+        }.sortedWith((if (stage == RecommendationStage.CLOSEST_VERIFIED) {
             compareBy<ScoredMealRecommendation> { abs(it.calorieDifference) }.thenByDescending { it.score }
         } else {
             compareByDescending<ScoredMealRecommendation> { it.score }.thenBy { abs(it.calorieDifference) }
-        })
+        }).thenBy { it.template.id })
+            .distinctBy { normalizeFoodName(it.template.name) }
             .take(limit)
     }
 
-    fun normalizeFoodName(value: String): String = value
-        .lowercase()
+    fun normalizeFoodName(value: String): String = Normalizer.normalize(value, Normalizer.Form.NFKC)
+        .lowercase(Locale.ROOT)
         .replace(Regex("[^0-9a-z가-힣]"), "")
+
+    fun supportsMeal(template: MealTemplate, mealType: MealType): Boolean =
+        containsToken(template.supportedMealTypes, mealType.name)
 
     fun hasCompleteIngredientInfo(tags: String): Boolean = containsToken(tags, "INGREDIENTS_COMPLETE")
 

@@ -216,6 +216,20 @@ class MealRecommendationEngineTest {
         assertEquals(listOf("cook"), expanded.map { it.template.id })
     }
 
+    @Test
+    fun recommendationReasonOnlyMentionsExclusionsWhenTheyWereApplied() {
+        val candidate = seed("meal", 720, setOf("현미밥")).copy(recentUseCount = 5)
+        val withoutExclusion = MealRecommendationEngine.recommend(
+            listOf(candidate), 650, emptySet(), emptySet(), emptySet(), "GENERAL", limit = 1
+        ).single()
+        val withExclusion = MealRecommendationEngine.recommend(
+            listOf(candidate), 650, setOf("오이"), emptySet(), emptySet(), "GENERAL", limit = 1
+        ).single()
+
+        assertTrue("피하고 싶은" !in withoutExclusion.reason)
+        assertTrue("피하고 싶은" in withExclusion.reason)
+    }
+
     private fun seed(
         id: String,
         kcal: Int,

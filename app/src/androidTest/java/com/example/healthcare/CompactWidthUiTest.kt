@@ -55,6 +55,7 @@ import java.time.LocalTime
 import org.junit.Rule
 import org.junit.Test
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertTrue
 
 class CompactWidthUiTest {
     @get:Rule
@@ -63,7 +64,7 @@ class CompactWidthUiTest {
     @Test
     fun dashboardAndSettingsRemainUsableAt360Dp() {
         var screen by mutableIntStateOf(0)
-        var energyOpened = false
+        var reportOpened = false
         composeRule.setContent {
             HealthCareTheme {
                 Box(Modifier.width(360.dp).height(800.dp)) {
@@ -78,7 +79,8 @@ class CompactWidthUiTest {
                             onPreviousDay = {},
                             onNextDay = {},
                             onAddRecord = {},
-                            onOpenEnergySettings = { energyOpened = true }
+                            onOpenEnergySettings = {},
+                            onOpenHistory = { reportOpened = true }
                         )
                     } else {
                         SettingsContent(
@@ -107,12 +109,21 @@ class CompactWidthUiTest {
         composeRule.onNodeWithText("300 kcal 초과").assertIsDisplayed()
         composeRule.onNodeWithText("아침").assertIsDisplayed()
         composeRule.onNodeWithText("오늘 활동").assertIsDisplayed()
-        val mealTops = listOf("breakfast", "snack", "lunch", "dinner").map { meal ->
-            composeRule.onNodeWithTag("dashboard-meal-$meal").fetchSemanticsNode().boundsInRoot.top
+        // The dashboard's current visual order is breakfast, lunch, dinner, then snack.
+        // Resolve each stable tag directly instead of relying on semantics traversal order.
+        val mealNodes = listOf("breakfast", "lunch", "dinner", "snack").map { meal ->
+            composeRule.onNodeWithTag("dashboard-meal-$meal").assertIsDisplayed().fetchSemanticsNode()
         }
+        assertEquals(4, mealNodes.map { it.id }.distinct().size)
+        val mealBounds = mealNodes.map { it.boundsInRoot }
+        val mealTops = mealBounds.map { it.top }
         assertEquals(mealTops.sorted(), mealTops)
+        mealBounds.forEach { assertTrue("식사 카드가 빈 영역입니다: $it", it.width > 0f && it.height > 0f) }
+        mealBounds.zipWithNext().forEach { (previous, next) ->
+            assertTrue("식사 카드가 서로 겹칩니다: $previous / $next", previous.bottom <= next.top)
+        }
         composeRule.onNodeWithTag("dashboard-calorie-target").performClick()
-        composeRule.runOnIdle { assert(energyOpened) }
+        composeRule.runOnIdle { assertTrue(reportOpened) }
 
         composeRule.runOnIdle { screen = 1 }
         scrollTo("3,600")

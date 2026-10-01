@@ -26,13 +26,19 @@ import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.tooling.preview.Preview
@@ -46,6 +52,7 @@ import com.example.healthcare.domain.PortionGuide
 import com.example.healthcare.domain.RecommendationStage
 import com.example.healthcare.domain.FoodSearchPolicy
 import com.example.healthcare.domain.MealRecommendationEngine
+import com.example.healthcare.domain.MealRecommendationTheme
 import com.example.healthcare.ui.components.SectionHeader
 import com.example.healthcare.ui.components.WellnessCard
 import com.example.healthcare.ui.components.WellnessEmptyState
@@ -70,12 +77,16 @@ fun MealPlanScreen(
     onBack: () -> Unit,
     onSaved: () -> Unit,
     dailyRemainingKcal: Int = targetKcal,
+    initialTemplateId: String? = null,
     onSearchFood: () -> Unit = {},
-    onOpenPreferences: () -> Unit = {}
+    onOpenPreferences: () -> Unit = {},
+    showThemes: Boolean = false,
+    dailyTemplateId: String? = null
 ) {
     val state by viewModel.uiState.collectAsState()
-    LaunchedEffect(mealType, budgetKcal, targetKcal) {
-        viewModel.load(mealType, budgetKcal, targetKcal, dailyRemainingKcal)
+    LaunchedEffect(mealType, budgetKcal, targetKcal, initialTemplateId) {
+        if (dailyTemplateId != null) viewModel.loadDailyDetail(dailyTemplateId, mealType, budgetKcal, targetKcal)
+        else viewModel.load(mealType, budgetKcal, targetKcal, dailyRemainingKcal, initialTemplateId)
     }
     LaunchedEffect(viewModel) { viewModel.saveCompletedEvents.collect { onSaved() } }
     MealPlanContent(
@@ -95,7 +106,11 @@ fun MealPlanScreen(
         onSaveConsumption = viewModel::confirmConsumed,
         onConsumedRatio = viewModel::setConsumedRatio,
         onFoodSpecific = viewModel::chooseFoodSpecificConsumption,
-        onIngredientConsumedRatio = viewModel::setIngredientConsumedRatio
+        onIngredientConsumedRatio = viewModel::setIngredientConsumedRatio,
+        showThemes = showThemes,
+        onSelectTheme = viewModel::selectTheme,
+        onShowTodayRecommendations = viewModel::showTodayRecommendations,
+        detailOnly = dailyTemplateId != null
     )
 }
 
@@ -117,7 +132,11 @@ internal fun MealPlanContent(
     onAdvanceFallback: () -> Unit = {},
     onExpandCookingMode: (String) -> Unit = {},
     onSearchFood: () -> Unit = {},
-    onOpenPreferences: () -> Unit = {}
+    onOpenPreferences: () -> Unit = {},
+    showThemes: Boolean = false,
+    onSelectTheme: (MealRecommendationTheme) -> Unit = {},
+    onShowTodayRecommendations: () -> Unit = {},
+    detailOnly: Boolean = false
 ) {
     Scaffold(containerColor = MaterialTheme.colorScheme.background) { innerPadding ->
         LazyColumn(
@@ -125,10 +144,42 @@ internal fun MealPlanContent(
             contentPadding = PaddingValues(WellnessSpacing.ScreenHorizontal, 12.dp, WellnessSpacing.ScreenHorizontal, WellnessSpacing.Section),
             verticalArrangement = Arrangement.spacedBy(10.dp)
         ) {
-            item {
+            if (detailOnly) item {
+                TextButton(onClick = onBack, modifier = Modifier.heightIn(min = 48.dp)) { Text("하루 식단으로 돌아가기") }
+            }
+            if (showThemes) {
+                item {
+                    Text("오늘 뭐 먹지?", style = MaterialTheme.typography.headlineSmall,
+                        modifier = Modifier.semantics { heading() })
+                    Text("메뉴를 고르거나 테마로 살펴보세요.", style = MaterialTheme.typography.bodyMedium)
+                    TextButton(onClick = onOpenPreferences) { Text("음식 취향 설정") }
+                }
+                MealRecommendationTheme.entries.forEach { theme ->
+                    item {
+                        Surface(onClick = { onSelectTheme(theme) },
+                            enabled = !state.isLoading,
+                            color = if (state.selectedTheme == theme) MaterialTheme.colorScheme.secondaryContainer
+                                else MaterialTheme.colorScheme.surface,
+                            shape = MaterialTheme.shapes.large,
+                            modifier = Modifier.fillMaxWidth().testTag("recommendation-theme-${theme.name}")) {
+                            Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                                Text((if (state.selectedTheme == theme) "✓ " else "") + theme.label,
+                                    style = MaterialTheme.typography.titleMedium)
+                                Text("메뉴 ${state.themeCounts[theme]?.coerceAtMost(3) ?: 0}개",
+                                    style = MaterialTheme.typography.labelMedium)
+                            }
+                        }
+                    }
+                }
+                if (state.selectedTheme != null) item {
+                    Text(state.selectedTheme.description, style = MaterialTheme.typography.bodySmall)
+                    TextButton(onClick = onShowTodayRecommendations) { Text("오늘의 추천으로 돌아가기") }
+                }
+            }
+            if (!detailOnly) item {
                 Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                     FilterChip(selected = true, onClick = {}, label = { Text("식사 추천") }, modifier = Modifier.weight(1f))
-                    FilterChip(
+                    if (state.selectedTheme == null) FilterChip(
                         selected = false,
                         onClick = onRefresh,
                         enabled = !state.isLoading,
@@ -170,6 +221,7 @@ internal fun MealPlanContent(
                     WellnessEmptyState(
                         Icons.Rounded.RestaurantMenu,
                         when {
+                            state.selectedTheme != null -> "현재 조건에 맞는 메뉴가 없어요."
                             state.templateCount == 0 -> "추천 데이터가 준비되지 않았어요"
                             state.verifiedCandidateCount == 0 -> "조건에 맞는 검증 식단이 아직 없어요"
                             state.stage == RecommendationStage.EXACT -> "딱 맞는 식단은 없어요"
@@ -181,10 +233,16 @@ internal fun MealPlanContent(
                         else "알레르기·제외 음식·식단 제한은 그대로 지키며 다음 조건을 직접 선택해 넓힐 수 있어요."
                     )
                 }
-            } else {
+                if (state.selectedTheme != null) item {
+                    OutlinedButton(onClick = onOpenPreferences, modifier = Modifier.fillMaxWidth()
+                        .testTag("recommendation-empty-preferences")) {
+                        Text("음식 취향 설정")
+                    }
+                }
+            } else if (!detailOnly) {
                 item { ReferenceRecommendationLayout(state = state, onSelect = onSelect) }
             }
-            if (!state.isLoading && !state.loadError && !state.hasMore && state.selectedMeal == null) {
+            if (!state.isLoading && !state.loadError && !state.hasMore && state.selectedMeal == null && state.selectedTheme == null) {
                 item {
                     RecommendationFallbackActions(state, onAdvanceFallback, onExpandCookingMode,
                         onSearchFood, onOpenPreferences)
@@ -195,8 +253,12 @@ internal fun MealPlanContent(
                 item {
                     WellnessCard(Modifier.fillMaxWidth(), containerColor = MaterialTheme.colorScheme.tertiaryContainer) {
                         Column(Modifier.padding(WellnessSpacing.CardContent), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                            if (detailOnly) RecommendationPhoto(templateId = selected.templateId,
+                                foodName = selected.templateName, contentDescription = "${selected.templateName} 추천 이미지",
+                                modifier = Modifier.fillMaxWidth().height(160.dp))
                             Text(selected.templateName, style = MaterialTheme.typography.titleLarge)
-                            Text(selected.reason, style = MaterialTheme.typography.bodySmall)
+                            Text(selected.reason, style = MaterialTheme.typography.bodySmall,
+                                modifier = Modifier.testTag("recommendation-selected-reason"))
                             RecommendationDataNotices(
                                 matchedAllergens = selected.matchedAllergens,
                                 ingredientInfoComplete = selected.ingredientInfoComplete,
@@ -330,7 +392,9 @@ internal fun ReferenceRecommendationLayout(
             template.name,
             style = MaterialTheme.typography.headlineSmall,
             fontWeight = FontWeight.Medium,
-            modifier = Modifier.semantics { heading() }
+            modifier = Modifier.semantics { heading() },
+            maxLines = 2,
+            overflow = TextOverflow.Ellipsis
         )
         Text(
             main.recommendation.reason,
@@ -338,6 +402,13 @@ internal fun ReferenceRecommendationLayout(
             color = MaterialTheme.colorScheme.onSurfaceVariant,
             maxLines = 1
         )
+        var showReasons by remember(template.id) { mutableStateOf(false) }
+        TextButton(onClick = { showReasons = !showReasons }) { Text("추천 이유") }
+        if (showReasons) {
+            main.recommendation.appliedReasons.forEach { reason ->
+                Text(reason, style = MaterialTheme.typography.bodySmall)
+            }
+        }
         RecommendationDataNotices(
             matchedAllergens = main.matchedAllergens,
             ingredientInfoComplete = main.ingredientInfoComplete,
@@ -378,7 +449,7 @@ internal fun ReferenceRecommendationLayout(
                             Text(alternativeTemplate.name,
                                 style = MaterialTheme.typography.labelMedium,
                                 fontWeight = FontWeight.SemiBold,
-                                maxLines = 1)
+                                maxLines = 1, overflow = TextOverflow.Ellipsis)
                             Text("약 ${formatKcal(alternativeTemplate.totalKcal)} kcal",
                                 style = MaterialTheme.typography.labelSmall,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant)

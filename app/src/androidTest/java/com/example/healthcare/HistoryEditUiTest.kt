@@ -19,6 +19,7 @@ import androidx.compose.ui.test.hasText
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onFirst
 import androidx.compose.ui.test.onNodeWithTag
+import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performImeAction
@@ -30,6 +31,7 @@ import com.example.healthcare.data.entity.MealRecord
 import com.example.healthcare.data.model.MealType
 import com.example.healthcare.ui.screens.HistoryEditPane
 import com.example.healthcare.ui.screens.HistoryDetailPane
+import com.example.healthcare.ui.screens.HistoryItemCard
 import com.example.healthcare.ui.theme.HealthCareTheme
 import com.example.healthcare.ui.viewmodel.MealEditUiState
 import java.time.LocalDate
@@ -41,6 +43,41 @@ import org.junit.Test
 class HistoryEditUiTest {
     @get:Rule
     val composeRule = createComposeRule()
+
+    @Test
+    fun listCardHasVisibleOneClickEditActionSeparateFromDetail() {
+        val meal = MealRecord(
+            id = 44,
+            date = "2026-09-29",
+            time = "08:10",
+            mealType = MealType.BREAKFAST,
+            foodName = "참치김밥",
+            calories = 420
+        )
+        var detailClicks = 0
+        var editClicks = 0
+        composeRule.setContent {
+            HealthCareTheme {
+                val density = LocalDensity.current
+                CompositionLocalProvider(LocalDensity provides Density(density.density, 1.3f)) {
+                    Box(Modifier.width(360.dp)) {
+                        HistoryItemCard(
+                            meal = meal,
+                            onClick = { detailClicks++ },
+                            onEdit = { editClicks++ }
+                        )
+                    }
+                }
+            }
+        }
+
+        composeRule.onNodeWithText("수정").assertIsDisplayed()
+        composeRule.onNodeWithContentDescription("참치김밥 기록 수정").performClick()
+        composeRule.runOnIdle {
+            assertEquals(1, editClicks)
+            assertEquals(0, detailClicks)
+        }
+    }
 
     @Test
     fun detailShowsVisibleEditActionAndUsesExistingCallback() {

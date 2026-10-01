@@ -20,12 +20,16 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
+import androidx.compose.foundation.layout.imePadding
+import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.rounded.ArrowBack
 import androidx.compose.material.icons.rounded.Add
@@ -33,6 +37,8 @@ import androidx.compose.material.icons.rounded.CameraAlt
 import androidx.compose.material.icons.rounded.Delete
 import androidx.compose.material.icons.rounded.Refresh
 import androidx.compose.material.icons.rounded.Settings
+import androidx.compose.material.icons.rounded.Star
+import androidx.compose.material.icons.rounded.StarBorder
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
@@ -65,10 +71,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.semantics.LiveRegionMode
 import androidx.compose.ui.semantics.liveRegion
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.ui.text.input.ImeAction
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.core.app.ActivityCompat
@@ -78,6 +87,12 @@ import coil.compose.AsyncImage
 import com.example.healthcare.data.entity.FrequentFood
 import com.example.healthcare.data.entity.MealRecord
 import com.example.healthcare.data.model.MealType
+import com.example.healthcare.domain.FoodSearchPolicy
+import com.example.healthcare.domain.Macronutrients
+import com.example.healthcare.ui.components.MacroSummaryRow
+import com.example.healthcare.ui.components.WellnessCard
+import com.example.healthcare.ui.components.WellnessTopAppBar
+import com.example.healthcare.ui.theme.WellnessSpacing
 import com.example.healthcare.data.photo.model.PhotoAnalysisPolicy
 import com.example.healthcare.data.photo.model.PhotoAnalysisProgress
 import com.example.healthcare.ui.theme.HealthCareTheme
@@ -106,6 +121,7 @@ fun AddRecordScreen(
     initialAction: QuickRecordAction? = null,
     initialDate: LocalDate? = null,
     initialMealType: MealType? = null,
+    returnToParentFromSearch: Boolean = false,
     onRecordSaved: (MealType) -> Unit = { onBack() },
     onInitialActionConsumed: () -> Unit = {},
     onImmersiveChanged: (Boolean) -> Unit = {},
@@ -145,12 +161,18 @@ fun AddRecordScreen(
     var permissionRequested by rememberSaveable { mutableStateOf(false) }
     var pendingCapturePurpose by rememberSaveable { mutableStateOf(CapturePurpose.FOOD_PHOTO) }
 
-    BackHandler(enabled = photoState !is PhotoAnalysisUiState.Idle || smartState.mode != SmartInputMode.HUB) {
+    val inputBack: () -> Unit = {
         when {
             smartState.isCompanionSearch -> viewModel?.cancelCompanionSearch()
             photoState !is PhotoAnalysisUiState.Idle -> viewModel?.cancelPhotoFlow()
+            smartState.mode == SmartInputMode.QUICK_RECORD -> viewModel?.returnToFoodSearch()
+            smartState.mode == SmartInputMode.SEARCH && returnToParentFromSearch -> onBack()
+            smartState.mode == SmartInputMode.HUB -> onBack()
             else -> viewModel?.showSmartInputHub()
         }
+    }
+    BackHandler(enabled = photoState !is PhotoAnalysisUiState.Idle || smartState.mode != SmartInputMode.HUB) {
+        inputBack()
     }
 
     val permissionLauncher = rememberLauncherForActivityResult(
@@ -221,13 +243,7 @@ fun AddRecordScreen(
         }
         if (initialAction != null) onInitialActionConsumed()
     }
-    val smartInputBack: () -> Unit = {
-        when {
-            smartState.isCompanionSearch -> viewModel?.cancelCompanionSearch()
-            smartState.mode == SmartInputMode.HUB -> onBack()
-            else -> viewModel?.showSmartInputHub()
-        }
-    }
+    val smartInputBack = inputBack
     val searchQueryChanged: (String) -> Unit = { query ->
         if (smartState.isCompanionSearch) viewModel?.onCompanionSearchChange(query)
         else viewModel?.onFoodSearchChange(query)
@@ -291,9 +307,13 @@ fun AddRecordScreen(
                 onBrandBack = { viewModel?.clearSelectedProductBrand() },
                 onBrandCategorySelected = { viewModel?.selectBrandCategory(it) },
                 frequentFoods = foodsHolder.value,
+                favoriteFoods = favoritesHolder.value,
                 onFoodCategorySelected = { viewModel?.selectFoodCategory(it) },
                 onFrequentFoodSelected = { viewModel?.selectFrequentFood(it) },
                 onFrequentFoodDeleted = { viewModel?.deleteFrequentFood(it) },
+                onFavoriteFoodSelected = { viewModel?.selectFavoriteFood(it) },
+                onFavoriteToggle = { viewModel?.toggleFavorite(it) },
+                onFavoriteRemoved = { viewModel?.removeFavorite(it) },
                 onOpenHistory = onOpenHistory
             )
         } else WellnessManualRecordScreen(
@@ -357,9 +377,13 @@ fun AddRecordScreen(
                     onBrandBack = { viewModel?.clearSelectedProductBrand() },
                     onBrandCategorySelected = { viewModel?.selectBrandCategory(it) },
                     frequentFoods = foodsHolder.value,
+                    favoriteFoods = favoritesHolder.value,
                     onFoodCategorySelected = { viewModel?.selectFoodCategory(it) },
                     onFrequentFoodSelected = { viewModel?.selectFrequentFood(it) },
                     onFrequentFoodDeleted = { viewModel?.deleteFrequentFood(it) },
+                    onFavoriteFoodSelected = { viewModel?.selectFavoriteFood(it) },
+                    onFavoriteToggle = { viewModel?.toggleFavorite(it) },
+                    onFavoriteRemoved = { viewModel?.removeFavorite(it) },
                     onOpenHistory = onOpenHistory
                 )
                 PhotoEntryErrorDialog(
@@ -399,6 +423,17 @@ fun AddRecordScreen(
                 viewModel = viewModel,
                 mealTypeLocked = initialMealType != null
             )
+        } else if (smartState.mode == SmartInputMode.QUICK_RECORD) {
+            QuickFoodRecordScreen(
+                state = uiState,
+                favoriteFoods = favoritesHolder.value,
+                recentMeals = recentMealsHolder.value,
+                mealTypeLocked = initialMealType != null,
+                onBack = { viewModel?.returnToFoodSearch() },
+                onDetails = { viewModel?.showManualDetails() },
+                onSaved = onRecordSaved,
+                viewModel = viewModel
+            )
         } else {
             SmartFoodInputScreen(
                 state = smartState,
@@ -426,9 +461,13 @@ fun AddRecordScreen(
                 onBrandBack = { viewModel?.clearSelectedProductBrand() },
                 onBrandCategorySelected = { viewModel?.selectBrandCategory(it) },
                 frequentFoods = foodsHolder.value,
+                favoriteFoods = favoritesHolder.value,
                 onFoodCategorySelected = { viewModel?.selectFoodCategory(it) },
                 onFrequentFoodSelected = { viewModel?.selectFrequentFood(it) },
                 onFrequentFoodDeleted = { viewModel?.deleteFrequentFood(it) },
+                onFavoriteFoodSelected = { viewModel?.selectFavoriteFood(it) },
+                onFavoriteToggle = { viewModel?.toggleFavorite(it) },
+                onFavoriteRemoved = { viewModel?.removeFavorite(it) },
                 onOpenHistory = onOpenHistory
             )
         }
@@ -436,6 +475,212 @@ fun AddRecordScreen(
 }
 
 enum class QuickRecordAction { PHOTO, SEARCH, BARCODE }
+
+@Composable
+internal fun QuickFoodRecordScreen(
+    state: AddRecordUiState,
+    favoriteFoods: List<FrequentFood>,
+    recentMeals: List<MealRecord>,
+    mealTypeLocked: Boolean,
+    onBack: () -> Unit,
+    onDetails: () -> Unit,
+    onSaved: (MealType) -> Unit,
+    viewModel: AddRecordViewModel?
+) {
+    val keyboard = LocalSoftwareKeyboardController.current
+    val selectedFood = state.selectedFood
+    val favorite = favoriteFoods.firstOrNull { saved ->
+        (state.selectedFoodItemId != null && saved.foodItemId == state.selectedFoodItemId) ||
+            (selectedFood == null && saved.foodName == state.foodName && saved.calories.toString() == state.calories)
+    }
+    val recent = recentMeals.firstOrNull { meal ->
+        state.selectedFoodItemId?.let { meal.foodItemId == it }
+            ?: (FoodSearchPolicy.normalize(meal.foodName) == FoodSearchPolicy.normalize(state.foodName))
+    }
+    val amount = state.servingAmount.trim().replace(',', '.').toDoubleOrNull()?.takeIf { it > 0.0 }
+    val nutrition = when {
+        selectedFood != null && amount != null && selectedFood.unit.equals(state.servingUnit, ignoreCase = true) ->
+            Macronutrients.forFood(selectedFood, amount)
+        else -> Macronutrients(
+            state.estimatedCarbohydrateGrams,
+            state.estimatedProteinGrams,
+            state.estimatedFatGrams
+        ).scaled(state.selectedServingRatio ?: 1.0)
+    }
+
+    Scaffold(
+        containerColor = MaterialTheme.colorScheme.background,
+        topBar = {
+            WellnessTopAppBar(
+                title = "빠른 기록",
+                navigationIcon = {
+                    IconButton(onClick = onBack, modifier = Modifier.size(48.dp)) {
+                        Icon(Icons.AutoMirrored.Rounded.ArrowBack, contentDescription = "음식 검색으로 돌아가기")
+                    }
+                }
+            )
+        }
+    ) { innerPadding ->
+        LazyColumn(
+            modifier = Modifier.fillMaxSize().padding(innerPadding).imePadding().navigationBarsPadding(),
+            contentPadding = PaddingValues(
+                start = WellnessSpacing.ScreenHorizontal,
+                end = WellnessSpacing.ScreenHorizontal,
+                top = WellnessSpacing.Compact,
+                bottom = WellnessSpacing.Section
+            ),
+            verticalArrangement = Arrangement.spacedBy(WellnessSpacing.CardGap)
+        ) {
+            item {
+                WellnessCard {
+                    Column(
+                        Modifier.fillMaxWidth().padding(WellnessSpacing.CardContent),
+                        verticalArrangement = Arrangement.spacedBy(8.dp)
+                    ) {
+                        Row(
+                            Modifier.fillMaxWidth(),
+                            verticalAlignment = Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.spacedBy(8.dp)
+                        ) {
+                            Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(3.dp)) {
+                                Text(state.foodName, style = MaterialTheme.typography.headlineSmall, maxLines = 2)
+                                selectedFood?.brand?.takeIf(String::isNotBlank)?.let {
+                                    Text(it, style = MaterialTheme.typography.bodyMedium,
+                                        color = MaterialTheme.colorScheme.onSurfaceVariant)
+                                }
+                                Text(
+                                    selectedFood?.servingDescription
+                                        ?: "저장한 기준 ${state.servingAmount}${state.servingUnit}",
+                                    style = MaterialTheme.typography.bodySmall,
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                                )
+                            }
+                            TextButton(
+                                onClick = {
+                                    if (favorite != null) viewModel?.removeFavorite(favorite)
+                                    else selectedFood?.let { viewModel?.toggleFavorite(it) }
+                                },
+                                enabled = favorite != null || selectedFood != null,
+                                modifier = Modifier.heightIn(min = 48.dp)
+                            ) {
+                                Icon(
+                                    if (favorite != null) Icons.Rounded.Star else Icons.Rounded.StarBorder,
+                                    contentDescription = if (favorite != null) {
+                                        "${state.foodName} 즐겨찾기 해제"
+                                    } else {
+                                        "${state.foodName} 즐겨찾기 추가"
+                                    }
+                                )
+                                Spacer(Modifier.size(5.dp))
+                                Text(if (favorite != null) "즐겨찾기됨" else "즐겨찾기")
+                            }
+                        }
+                        Text(
+                            if (mealTypeLocked) {
+                                "${state.mealType.displayName}에서 시작한 기록이에요. 식사 구분은 그대로 유지해요."
+                            } else {
+                                "${state.mealType.displayName} 식사로 바로 기록해요."
+                            },
+                            style = MaterialTheme.typography.labelLarge,
+                            color = MaterialTheme.colorScheme.primary
+                        )
+                    }
+                }
+            }
+            recent?.takeIf { it.servingAmount != null && !it.servingUnit.isNullOrBlank() }?.let { meal ->
+                item {
+                    OutlinedButton(
+                        onClick = { viewModel?.applyRecentAmount(meal) },
+                        modifier = Modifier.fillMaxWidth().heightIn(min = 48.dp)
+                    ) {
+                        Text("최근 기록 ${formatQuickAmount(requireNotNull(meal.servingAmount))}${meal.servingUnit} 사용")
+                    }
+                }
+            }
+            item {
+                PortionSelector(
+                    state = state,
+                    onPreset = { viewModel?.selectPortionPreset(it) },
+                    onReferenceRatio = { ratio, label -> viewModel?.selectReferencePortion(ratio, label) },
+                    onUnknown = { viewModel?.startUnknownPortion() },
+                    onVessel = { viewModel?.choosePortionVessel(it) },
+                    onFraction = { viewModel?.choosePortionFraction(it) },
+                    onPrecise = { viewModel?.useCustomServing() }
+                )
+            }
+            if (state.preciseAmountOpen) {
+                item {
+                    WellnessCard {
+                        Column(
+                            Modifier.fillMaxWidth().padding(WellnessSpacing.CardContent),
+                            verticalArrangement = Arrangement.spacedBy(8.dp)
+                        ) {
+                            Text("직접 입력", style = MaterialTheme.typography.titleMedium)
+                            Text(
+                                "확인된 단위 ${state.referenceServingUnit ?: state.servingUnit} 그대로 입력해요.",
+                                style = MaterialTheme.typography.bodySmall,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant
+                            )
+                            OutlinedTextField(
+                                value = state.servingAmount,
+                                onValueChange = { viewModel?.onServingAmountChange(it) },
+                                label = { Text("먹은 양") },
+                                suffix = { Text(state.referenceServingUnit ?: state.servingUnit) },
+                                singleLine = true,
+                                keyboardOptions = KeyboardOptions(
+                                    keyboardType = KeyboardType.Decimal,
+                                    imeAction = ImeAction.Done
+                                ),
+                                keyboardActions = KeyboardActions(onDone = { keyboard?.hide() }),
+                                modifier = Modifier.fillMaxWidth()
+                            )
+                        }
+                    }
+                }
+            }
+            if (state.calories.isNotBlank()) {
+                item {
+                    WellnessCard(containerColor = MaterialTheme.colorScheme.primaryContainer) {
+                        Column(
+                            Modifier.fillMaxWidth().padding(WellnessSpacing.CardContent),
+                            verticalArrangement = Arrangement.spacedBy(6.dp)
+                        ) {
+                            Text("기록할 칼로리", style = MaterialTheme.typography.labelLarge)
+                            Text(
+                                "${state.calories} kcal",
+                                style = MaterialTheme.typography.headlineMedium,
+                                fontWeight = FontWeight.Bold,
+                                color = MaterialTheme.colorScheme.primary
+                            )
+                            MacroSummaryRow(nutrition)
+                        }
+                    }
+                }
+            }
+            state.saveError?.let { error ->
+                item { Text(error, color = MaterialTheme.colorScheme.error, style = MaterialTheme.typography.bodyMedium) }
+            }
+            item {
+                Button(
+                    onClick = { viewModel?.saveRecord(onSaved) },
+                    enabled = !state.isSaving,
+                    modifier = Modifier.fillMaxWidth().heightIn(min = 54.dp)
+                ) {
+                    if (state.isSaving) CircularProgressIndicator(Modifier.size(22.dp), strokeWidth = 2.dp)
+                    else Text("${state.mealType.displayName}에 기록")
+                }
+            }
+            item {
+                TextButton(onClick = onDetails, modifier = Modifier.fillMaxWidth().heightIn(min = 48.dp)) {
+                    Text("자세히 입력")
+                }
+            }
+        }
+    }
+}
+
+private fun formatQuickAmount(value: Double): String =
+    if (value % 1.0 == 0.0) value.toInt().toString() else value.toString()
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
