@@ -1,0 +1,41 @@
+{
+  "checkedDate": "2026-10-05",
+  "queries": [
+    "\"두릅숙회초고추장\" (레시피 OR 조리 OR 재료) (site:go.kr OR site:re.kr OR site:edu OR site:school.kr)",
+    "\"냉이 콩나물 된장 국\" (레시피 OR 조리 OR 재료) (site:go.kr OR site:re.kr OR site:edu OR site:school.kr)",
+    "\"고추잎 김치\" (레시피 OR 조리 OR 재료) (site:go.kr OR site:re.kr OR site:edu OR site:school.kr)",
+    "\"갑오징어 핫바\" (레시피 OR 조리 OR 재료) (site:go.kr OR site:re.kr OR site:edu OR site:school.kr)"
+  ],
+  "foods": [
+    {
+      "recipeId": "MFDS-321",
+      "name": "두릅숙회/초고추장",
+      "query": "\"두릅숙회초고추장\" (레시피 OR 조리 OR 재료) (site:go.kr OR site:re.kr OR site:edu OR site:school.kr)",
+      "strategy": "NAME_VARIANT_PUBLIC_CATERING_EDUCATION",
+      "snippetsAreNotNumericEvidence": true
+    },
+    {
+      "recipeId": "MFDS-322",
+      "name": "냉이콩나물된장국",
+      "query": "\"냉이 콩나물 된장 국\" (레시피 OR 조리 OR 재료) (site:go.kr OR site:re.kr OR site:edu OR site:school.kr)",
+      "strategy": "NAME_VARIANT_PUBLIC_CATERING_EDUCATION",
+      "snippetsAreNotNumericEvidence": true
+    },
+    {
+      "recipeId": "MFDS-327",
+      "name": "고추잎김치",
+      "query": "\"고추잎 김치\" (레시피 OR 조리 OR 재료) (site:go.kr OR site:re.kr OR site:edu OR site:school.kr)",
+      "strategy": "NAME_VARIANT_PUBLIC_CATERING_EDUCATION",
+      "snippetsAreNotNumericEvidence": true
+    },
+    {
+      "recipeId": "MFDS-331",
+      "name": "갑오징어핫바",
+      "query": "\"갑오징어 핫바\" (레시피 OR 조리 OR 재료) (site:go.kr OR site:re.kr OR site:edu OR site:school.kr)",
+      "strategy": "NAME_VARIANT_PUBLIC_CATERING_EDUCATION",
+      "snippetsAreNotNumericEvidence": true
+    }
+  ],
+  "result": "미취학 아동의 영양교육을 위한 사전연구A Preliminary Study on Nutritional Education for (https://her.re.kr/upload/pdf/khea-17-3-23-3.pdf)\nciteturn362search0 [wordlim: 200] Published: 6 months ago; 쇠고기, 계, 배추김치의 순으로 나타났다. ... 줄기가 있는 샐러리나 끈적끈적한 질감, 물렁물렁한 질감 같은 익숙치 않은 texture를 갖는 식품을 싫어하므로 물렁물렁한 texture의 야채, 강한 flavor의 간, 양파, 내장, 고기, 돼지고기 등의 식품은 조리방법을 변경하여 어린이가 먹을 수 있는 상태로 변경시켜야 하겠다. ... 먹어본 경험이 없는 식품으로는 콩팥, 내장, 간, 고추잎, 표고버섯, 뱅어포, 고사리류Lowenberg<sup>35)</sup>에 의하면 어린아이들이 식품을 씹을 수 있는 능력은 그 식품의 texture에 따라 달라진다고 하였다.\n미취학 아동의 영양교육을 위한 사전연구9육성은 부모에 의하여 크게 영향받으며, 특히 어머니에게서 영향받는 식습관의 내용이 훨씬 다양하다고 보고하고 있다. 그러므로 부모에 대한 영양교육이 또한 시급하다.마도, 고구마, 꿀, 오렌지, 쇠고기 순으로  \n보고하고 있으며, 이<sup>34</sup>의 조사결과에 의하면  \n주식에 있어서는 쌀밥, 국수, 식빵을, 좋아  \n하며, 동물성 부식에서는 쇠고기, 계란, 햄  \n소세지, 닭고기, 생선, 버터 등을 식물성 부  \n식에서는 김치, 해초류등을 좋아한다고 보  \n고하고 있다. 미취학 아동<sup>34</sup>은 또한 부드러  \n운 맛이 나는 식품을 좋아하며 자극성이 강  \n한 맛이나 익숙치 못한 texture의 식품은  \n싫어한다고 보고되고 있다. 대체로 과일류  \n를 좋아하나, 야채류는 씹는데 곧 싫증을 내  \n게 된다고 한다.4. 식품에 대한 기호 조사 결과를 표 18\n~표 22에 요약하였다.좋아하여 잘 먹는 식품은 김, 꿀, 포도,\n딸기, 복숭아, 바나나, 사과, 식빵, 쌀밥,\n쇠고기, 계, 배추김치의 순으로 나타났다.\n임의의 조사결과에 의하면 기호성이 높은 식\n품으로 복숭아, 사과, 딸기, 김, 계란, 도표 19.　싫어하여 안 먹는 식품(　)に％<table>\n  <tr>\n    <td>굴</td>\n    <td>가지</td>\n    <td>간</td>\n    <td>양파</td>\n    <td>고추잎</td>\n    <td>도라지</td>\n    <td>잡곡밥</td>\n    <td>고사리</td>\n    <td>호박</td>\n    <td>콩팥, 내장</td>\n    <td>돼지고기</td>\n  </tr>\n  <tr>\n    <td>35(41.2)</td>\n    <td>30(37.0)</td>\n    <td>26(32.1)</td>\n    <td>26(32.1)</td>\n    <td>25(31.3)</td>\n    <td>24(28.9)</td>\n    <td>24(27.9)</td>\n    <td>23(27.7)</td>\n    <td>20(23.8)</td>\n    <td>18(20.9)</td>\n    <td>16(19.5)</td>\n  </tr>\n</table>싫어하여 안 먹는 식품은 굴, 가지, 간,\n양파, 고추잎, 도라지, 잡곡밥, 고사리, 호\n박, 콩팥, 내장, 돼지고기의 순으로 혐기성\n이 높게 나타났다. 임의의 조사결과에 의하\n면 양파, 쇠간, 고추잎, 도라지, 토란, 깻\n잎, 가지, 양배추, 미나리, 고사리의 순으\n로 나타났으며, 혐기의 주된 이유는 비위 상\n하는 냄새, 매운맛, 물렁거리는 질감등 식\n품자체의 성질 때문으로 나타나 어린이는\n자극성 없는 부드러운 음식을 좋아하였다고\n보고하고 있으며, 이사의 조사에 의하면 싫\n어하는 식품으로는 주식에 있어서는 잡곡밥,\n동물성 부식에 있어서는 굴, 조개류, 돼지\n고기를 싫어하고, 식물성 부식류에 있어서\n는 나물류를 싫어하는 경향이 있다고 보고\n하고 있다.줄기가 있는 샐러리나 끈적끈적한 질감, 물렁물렁한 질감 같은 익숙치 않은 texture를 갖는 식품을 싫어하므로 물렁물렁한 texture의 야채, 강한 flavor의 간, 양파, 내장, 고기, 돼지고기 등의 식품은 조리방법을 변경하여 어린이가 먹을 수 있는 상태로 변경시켜야 하겠다.잡곡밥은 쌀 외에 입에서 느끼는 이질물\n질에 대한 저항감으로 일반적으로 어린이들\n이 싫어하는 경향을 나타내고 있다. 정부<sup>36)</sup>\n는 1970년대부터 국민영양 향상을 위해, 또\n한 주곡의 소비절약을 위해 혼분식을 계몽,\n장려하여 왔다. 그러나 아직 잡곡밥에 대한\n인식이 부족한 상태이므로 계속 교육하여\n가정에서 잡곡밥이 습관화되도록 하여야\n겠다.특별한 기호 없이 먹는 식품으로는 다시마, 당근, 양배추, 호박, 묵, 도라지, 감자,  \n돼지고기, 표고버섯의 순을 나타내고 있다.  \n먹어본 경험이 없는 식품으로는 콩팥, 내장, 간, 고추잎, 표고버섯, 뱅어포, 고사리류Lowenberg<sup>35)</sup>에 의하면 어린아이들이 식품을 씹을 수 있는 능력은 그 식품의 texture에 따라 달라진다고 하였다. 즉 걸음마를\n하는 아이들에게는 썰은 야채나 작게 썬 은연한 고기를 줄 수 있으며, 어린아이들은−31",
+  "quantitiesAcceptedFromSnippets": false
+}

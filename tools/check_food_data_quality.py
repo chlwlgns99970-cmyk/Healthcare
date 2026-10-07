@@ -4,6 +4,7 @@
 import csv
 import json
 import math
+import re
 from collections import Counter, defaultdict
 from pathlib import Path
 
@@ -37,7 +38,8 @@ def nonnegative_number(value):
 def main():
     base_foods = read_csv("food_items.csv")
     product_foods = read_csv("product_items.csv")
-    foods = base_foods + product_foods
+    franchise_foods = read_csv("franchise_official_items.csv")
+    foods = base_foods + product_foods + franchise_foods
     ingredients = read_csv("meal_template_ingredients.csv")
     by_id = {food["id"]: food for food in foods}
     codes = defaultdict(set)
@@ -48,6 +50,15 @@ def main():
         "totalFoods": len(foods),
         "baseFoods": len(base_foods),
         "productFoods": len(product_foods),
+        "franchiseFoods": len(franchise_foods),
+        "kcalUsable": sum(nonnegative_number(food["energyKcal"]) for food in foods),
+        "macroComplete": sum(all(nonnegative_number(food[field]) for field in
+            ("carbohydrateGrams", "proteinGrams", "fatGrams")) for food in foods),
+        "officialServing": sum(
+            "공식 총내용량" in food["servingDescription"] or bool(re.search(
+                r"공식\s*(?:(?:HOT|ICE)\s+)?(?:제공량\s*)?[0-9.]+\s*(개|줄|봉|병|캔|팩|컵|잔|조각|인분)\s*[0-9.]+\s*(g|ml)",
+                food["servingDescription"], re.I))
+            for food in foods),
         "productsWithOfficialTotal": sum(
             "공식 총내용량" in food["servingDescription"] for food in product_foods
         ),
@@ -55,7 +66,7 @@ def main():
             "포장단위 " in food["servingDescription"] for food in product_foods
         ),
         "solidCategoryVolumeBasisNeedsReview": sum(
-            food["unit"].lower() == "ml" and food["category"] not in FLUID_OR_MIXED
+            food["sourceType"] == "K-FIND" and food["unit"].lower() == "ml" and food["category"] not in FLUID_OR_MIXED
             for food in foods
         ),
         "fluidCategoryMissingUnit": sum(

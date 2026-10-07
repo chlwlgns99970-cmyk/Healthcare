@@ -2,6 +2,7 @@ package com.example.healthcare
 
 import android.app.Application
 import com.example.healthcare.data.AppFontSizeStore
+import com.example.healthcare.data.FoodMetadataStore
 import com.example.healthcare.data.appupdate.AndroidApkIdentityReader
 import com.example.healthcare.data.appupdate.ApkUpdateVerifier
 import com.example.healthcare.data.appupdate.AppUpdateManager
@@ -11,6 +12,8 @@ import com.example.healthcare.data.appupdate.PrivateUpdateApkDownloader
 import com.example.healthcare.data.appupdate.SystemAppInstaller
 import com.example.healthcare.data.SharedPreferencesRecommendationCycleStore
 import com.example.healthcare.data.TodayMealPlanStore
+import com.example.healthcare.data.RecommendationLearningStore
+import com.example.healthcare.data.SharedPreferencesRecommendationLearningPersistence
 import com.example.healthcare.data.repository.TodayMealPlanRepository
 import com.example.healthcare.data.BodyProfileStore
 import com.example.healthcare.data.WeightGoalStore
@@ -53,15 +56,18 @@ class HealthcareApplication : Application() {
     val weightGoalStore by lazy { WeightGoalStore(this) }
     val appFontSizeStore by lazy { AppFontSizeStore(this) }
     val stepCounterRepository by lazy { StepCounterRepository(this) }
-    val foodRepository by lazy { FoodRepository(database.frequentFoodDao()) }
-    val nutritionRepository by lazy { NutritionRepository(database.foodItemDao()) }
+    val recommendationLearningStore by lazy { RecommendationLearningStore(SharedPreferencesRecommendationLearningPersistence(this)) }
+    val foodRepository by lazy { FoodRepository(database.frequentFoodDao(), recommendationLearningStore) }
+    val foodMetadataStore by lazy { FoodMetadataStore(this) }
+    val nutritionRepository by lazy { NutritionRepository(database.foodItemDao(), metadataLoader = foodMetadataStore::ensureLoaded) }
     val mealCoachRepository by lazy {
         MealCoachRepository(
             database = database,
             coachDao = database.mealCoachDao(),
             foodItemDao = database.foodItemDao(),
             mealRecordDao = database.mealRecordDao(),
-            recommendationCycleStore = SharedPreferencesRecommendationCycleStore(this)
+            recommendationCycleStore = SharedPreferencesRecommendationCycleStore(this),
+            recommendationLearningStore = recommendationLearningStore
         )
     }
     val recognitionRepository by lazy { RecognitionRepository(database.recognitionDao()) }
@@ -133,7 +139,9 @@ class HealthcareApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
+        appUpdateManager.checkOnColdStart()
         applicationScope.launch {
+            foodMetadataStore.ensureLoaded()
             BundledFoodDataSeeder(
                 context = this@HealthcareApplication,
                 database = database

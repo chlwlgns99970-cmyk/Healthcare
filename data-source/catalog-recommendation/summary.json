@@ -1,0 +1,63 @@
+{
+  "checkedAt": "2026-10-04",
+  "parserVersion": "catalog-recommendation-group-review-v1",
+  "stableTemplates": 292,
+  "before": {
+    "sourcedGroups": 163,
+    "styleEligible": 115,
+    "perMeal": {
+      "BREAKFAST": 44,
+      "LUNCH": 101,
+      "DINNER": 102,
+      "SNACK": 7
+    }
+  },
+  "after": {
+    "sourcedGroups": 168,
+    "sourcedIngredients": 168,
+    "styleEligible": 120,
+    "unresolved": 124,
+    "perMeal": {
+      "BREAKFAST": 48,
+      "LUNCH": 105,
+      "DINNER": 106,
+      "SNACK": 8
+    }
+  },
+  "newSourcedTemplateIds": [
+    "kfind-catalog-d103-141000000-0001",
+    "kfind-catalog-d103-168000000-0001",
+    "kfind-catalog-d104-194000000-0001",
+    "kfind-catalog-d114-601000000-0001",
+    "kfind-catalog-d202-083000000-0021"
+  ],
+  "newStyleTemplateIds": [
+    "kfind-catalog-d101-039000000-0001",
+    "kfind-catalog-d104-194000000-0001",
+    "kfind-catalog-d105-200000000-0001",
+    "kfind-catalog-d114-601000000-0001",
+    "kfind-catalog-d202-083000000-0021"
+  ],
+  "removedStyleTemplateIds": [],
+  "nutritionTransferred": 0,
+  "servingTransferredFromRecipes": 0,
+  "policyWeightsChanged": 0,
+  "officialAllergenDeclarationsAdded": 0,
+  "allReferenceRecipeAllergensRemainUnknown": true,
+  "rejectedJoins": [
+    {
+      "food": "기피편",
+      "source": "조선예가 공식 기피편 제품 소개",
+      "reason": "SPECIFIC_BRANDED_PRODUCT_IS_NOT_A_GENERIC_DISH_IDENTITY"
+    },
+    {
+      "food": "베지텐더 밸런스랩",
+      "source": "CJ 공식 인접 담백아삭 베지랩 소개",
+      "reason": "ADJACENT_PRODUCT_FALAFEL_CHICKPEA_FRYING_IS_NOT_THIS_PRODUCT"
+    }
+  ],
+  "remainingUnresolvedReasons": {
+    "NO_EXACT_PUBLIC_OR_OFFICIAL_INGREDIENT_EVIDENCE": 87,
+    "OFFICIAL_PRODUCT_COMPOSITION_UNRESOLVED": 37
+  }
+}

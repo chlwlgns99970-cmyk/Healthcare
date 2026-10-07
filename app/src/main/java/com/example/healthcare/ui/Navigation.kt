@@ -27,6 +27,9 @@ data object DashboardRoute : NavKey
 @Serializable
 data object AddRecordRoute : NavKey
 
+@Serializable
+data object RecordCompletionRoute : NavKey
+
 /**
  * 기록 내역 화면 경로
  */
@@ -56,7 +59,8 @@ data class MealPlanRoute(
     val mealType: String,
     val budgetKcal: Int,
     val targetKcal: Int,
-    val dailyTemplateId: String? = null
+    val dailyTemplateId: String? = null,
+    val dailyPortion: Double = 1.0
 ) : NavKey
 
 @Serializable

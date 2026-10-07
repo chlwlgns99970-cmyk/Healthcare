@@ -1,0 +1,36 @@
+{
+  "status": "PARTIAL",
+  "beforeAppComplete": 361,
+  "appComplete": 381,
+  "total": 516,
+  "added": 20,
+  "states": {
+    "REFERENCE_COMPLETE": 349,
+    "ORIGINAL_COMPLETE": 41,
+    "PARTIAL": 120,
+    "UNRESOLVED": 6
+  },
+  "newTotalFromOriginalRequest": 119,
+  "remaining": 135,
+  "dataTests": 25,
+  "unitTests": [
+    {
+      "name": "FullRecipeReferenceTest",
+      "tests": 6
+    },
+    {
+      "name": "RecipeMenuCompletionTest",
+      "tests": 4
+    },
+    {
+      "name": "SearchRecipeFollowupTest",
+      "tests": 2
+    }
+  ],
+  "samsungFollowup": "PASS",
+  "samsungTestCount": 20,
+  "privateDataRestored": true,
+  "DBVersion": 8,
+  "migrations": 0,
+  "productionOperations": 0
+}

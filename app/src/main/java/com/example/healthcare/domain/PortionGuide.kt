@@ -45,7 +45,7 @@ object PortionGuide {
     const val JJOLMYEON_SERVING_GRAMS = 450.0
     const val JJOLMYEON_SOURCE = "식품안전나라 외식 영양성분 자료집 · 쫄면 1인분 450g · https://www.foodsafetykorea.go.kr/upload/20150824/20150824011539_1440389739434.pdf"
     private val officialTotalPattern = Regex("공식 총내용량\\s+([0-9]+(?:\\.[0-9]+)?)(g|ml)", RegexOption.IGNORE_CASE)
-    private val packageUnitPattern = Regex("포장단위\\s+(봉|캔|병|팩|개|조각|줄)")
+    private val packageUnitPattern = Regex("포장단위\\s+(봉|캔|병|팩|개|콘|컵|통|조각|줄)")
 
     fun presets(food: FoodItem): List<PortionPreset> {
         if (!validFood(food)) return emptyList()
@@ -205,10 +205,22 @@ object PortionGuide {
     }
 
     fun resultServingSummary(food: FoodItem): String {
-        val packageInfo = verifiedPackage(food) ?: return "영양정보 ${formatAmount(food.referenceAmount)}${food.unit} 기준 · 약 ${food.energyKcal.roundToInt()} kcal"
-        val calories = food.energyKcal * packageInfo.amount / food.referenceAmount
-        val label = if (packageInfo.packageUnit == "제품") "제품 전체" else "1${packageInfo.packageUnit}"
-        return "$label ${formatAmount(packageInfo.amount)}${packageInfo.unit} · ${calories.roundToInt()} kcal"
+        val choice = FoodAmountPolicy.defaultChoice(food)
+        if (choice != null && choice.unit !in setOf("g", "ml")) {
+            val nutrition = FoodAmountPolicy.calculate(food,1.0,choice.unit)
+            if (nutrition != null) {
+                val label = if (choice.unit == "제품 전체") choice.unit else "1${choice.unit}"
+                return "$label · ${nutrition.calories} kcal"
+            }
+        }
+        return "영양정보 ${formatAmount(food.referenceAmount)}${food.unit} 기준 · 약 ${food.energyKcal.roundToInt()} kcal"
+    }
+
+    fun resultServingBasis(food: FoodItem): String? = FoodAmountPolicy.defaultChoice(food)?.let { choice ->
+        if (choice.unit in setOf("g","ml") || choice.unit==choice.basisUnit) null else {
+            val label=if (choice.unit=="제품 전체") choice.unit else "1${choice.unit}"
+            "$label ${formatAmount(choice.basisAmountPerUnit)}${choice.basisUnit} 기준"
+        }
     }
 
     fun presetSupportingText(food: FoodItem, preset: PortionPreset): String? = estimate(food, preset)?.let { estimate ->

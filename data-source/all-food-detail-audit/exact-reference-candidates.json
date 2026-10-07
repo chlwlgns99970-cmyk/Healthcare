@@ -1,0 +1,210 @@
+[
+  {
+    "foodId": "kfind-d403-174320000-0001",
+    "name": "칼국수_소고기",
+    "category": "면 및 만두류",
+    "candidates": [
+      "MENUZEN-D031020"
+    ]
+  },
+  {
+    "foodId": "kfind-d703-174320000-0001",
+    "name": "칼국수_소고기",
+    "category": "면 및 만두류",
+    "candidates": [
+      "MENUZEN-D031020"
+    ]
+  },
+  {
+    "foodId": "kfind-d701-078000000-0001",
+    "name": "유부 초밥",
+    "category": "밥류",
+    "candidates": [
+      "MENUZEN-D016010"
+    ]
+  },
+  {
+    "foodId": "kfind-d501-078000000-0001",
+    "name": "유부 초밥",
+    "category": "밥류",
+    "candidates": [
+      "MENUZEN-D016010"
+    ]
+  },
+  {
+    "foodId": "kfind-d401-078000000-0001",
+    "name": "유부 초밥",
+    "category": "밥류",
+    "candidates": [
+      "MENUZEN-D016010"
+    ]
+  },
+  {
+    "foodId": "kfind-d709-452000000-0001",
+    "name": "소고기 완자전",
+    "category": "전·적 및 부침류",
+    "candidates": [
+      "MENUZEN-D092007"
+    ]
+  },
+  {
+    "foodId": "kfind-d509-452000000-0001",
+    "name": "소고기 완자전",
+    "category": "전·적 및 부침류",
+    "candidates": [
+      "MENUZEN-D092007"
+    ]
+  },
+  {
+    "foodId": "kfind-d609-452000000-0001",
+    "name": "소고기 완자전",
+    "category": "전·적 및 부침류",
+    "candidates": [
+      "MENUZEN-D092007"
+    ]
+  },
+  {
+    "foodId": "kfind-d409-452000000-0001",
+    "name": "소고기 완자전",
+    "category": "전·적 및 부침류",
+    "candidates": [
+      "MENUZEN-D092007"
+    ]
+  },
+  {
+    "foodId": "kfind-d401-070000000-0001",
+    "name": "소고기 국밥",
+    "category": "밥류",
+    "candidates": [
+      "MENUZEN-D015004"
+    ]
+  },
+  {
+    "foodId": "kfind-d110-476140000-0001",
+    "name": "버섯볶음_느타리버섯",
+    "category": "볶음류",
+    "candidates": [
+      "MENUZEN-D103032"
+    ]
+  },
+  {
+    "foodId": "kfind-d705-283000000-0001",
+    "name": "멸치 미역국",
+    "category": "국 및 탕류",
+    "candidates": [
+      "MENUZEN-D051047"
+    ]
+  },
+  {
+    "foodId": "kfind-d611-551000000-0001",
+    "name": "메추리알 돼지고기장조림",
+    "category": "조림류",
+    "candidates": [
+      "MENUZEN-D112008"
+    ]
+  },
+  {
+    "foodId": "kfind-d711-551000000-0001",
+    "name": "메추리알 돼지고기장조림",
+    "category": "조림류",
+    "candidates": [
+      "MENUZEN-D112008"
+    ]
+  },
+  {
+    "foodId": "kfind-d511-551000000-0001",
+    "name": "메추리알 돼지고기장조림",
+    "category": "조림류",
+    "candidates": [
+      "MENUZEN-D112008"
+    ]
+  },
+  {
+    "foodId": "kfind-d411-551000000-0001",
+    "name": "메추리알 돼지고기장조림",
+    "category": "조림류",
+    "candidates": [
+      "MENUZEN-D112008"
+    ]
+  },
+  {
+    "foodId": "kfind-d505-216410000-0001",
+    "name": "된장국_호박잎",
+    "category": "국 및 탕류",
+    "candidates": [
+      "MENUZEN-D052121"
+    ]
+  },
+  {
+    "foodId": "kfind-d105-216410000-0001",
+    "name": "된장국_호박잎",
+    "category": "국 및 탕류",
+    "candidates": [
+      "MENUZEN-D052121"
+    ]
+  },
+  {
+    "foodId": "kfind-d105-216070000-0001",
+    "name": "된장국_냉이",
+    "category": "국 및 탕류",
+    "candidates": [
+      "MENUZEN-D052073"
+    ]
+  },
+  {
+    "foodId": "kfind-d605-216050000-0001",
+    "name": "된장국_근대",
+    "category": "국 및 탕류",
+    "candidates": [
+      "MENUZEN-D052005"
+    ]
+  },
+  {
+    "foodId": "kfind-d505-216050000-0001",
+    "name": "된장국_근대",
+    "category": "국 및 탕류",
+    "candidates": [
+      "MENUZEN-D052005"
+    ]
+  },
+  {
+    "foodId": "kfind-d705-216050000-0001",
+    "name": "된장국_근대",
+    "category": "국 및 탕류",
+    "candidates": [
+      "MENUZEN-D052005"
+    ]
+  },
+  {
+    "foodId": "kfind-d411-548040000-0001",
+    "name": "돼지고기 장조림_메추리알",
+    "category": "조림류",
+    "candidates": [
+      "MENUZEN-D112008"
+    ]
+  },
+  {
+    "foodId": "kfind-d511-548040000-0001",
+    "name": "돼지고기 장조림_메추리알",
+    "category": "조림류",
+    "candidates": [
+      "MENUZEN-D112008"
+    ]
+  },
+  {
+    "foodId": "kfind-d301-004280000-0001",
+    "name": "국밥_소고기",
+    "category": "밥류",
+    "candidates": [
+      "MENUZEN-D015004"
+    ]
+  },
+  {
+    "foodId": "kfind-d114-605160000-0001",
+    "name": "겉절이_상추",
+    "category": "생채·무침류",
+    "candidates": [
+      "MENUZEN-D132103"
+    ]
+  }
+]

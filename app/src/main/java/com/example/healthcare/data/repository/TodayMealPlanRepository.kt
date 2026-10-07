@@ -48,6 +48,11 @@ class TodayMealPlanRepository(
         val todayRecords = records.getMealsByDate(day).first()
         val seeds = withContext(Dispatchers.IO) { coach.dailyPlanSeeds() }
         val stored = store.state.value?.takeIf { it.date == day && it.theme == theme }
+        if (alternate || replace != null) {
+            stored?.meals?.filter { replace == null || it.mealType == replace }
+                ?.forEach { coach.recordRecommendationReplacement(it.templateId) }
+        }
+        val learnedScores = coach.learnedScores(seeds)
         val favoriteNames = favorites?.favoriteFoods?.first()?.map { it.foodName }?.toSet().orEmpty()
         val plan = withContext(Dispatchers.Default) {
             val pools = DailyMealPlanEngine.candidates(seeds, theme, preference, dislikes, allergies)
@@ -56,11 +61,13 @@ class TodayMealPlanRepository(
             val fixed = if (!alternate && stored != null && smallTargetChange) stored.meals.mapNotNull { saved ->
                 if (saved.mealType == replace || saved.mealType in recorded) return@mapNotNull null
                 pools[saved.mealType]?.firstOrNull { it.template.id == saved.templateId }?.let { seed ->
-                    saved.mealType to DailyPlanMeal(saved.mealType, seed.template.id, seed.template.name, seed.template.totalKcal,
-                        DailyMealThemePolicy.nutrition(seed), saved.portion,
+                    val serving = RecommendationServingPolicy.selected(seed, saved.mealType, saved.portion) ?: return@mapNotNull null
+                    saved.mealType to DailyPlanMeal(saved.mealType, seed.template.id, seed.template.name, serving.kcal,
+                        serving.nutrition, saved.portion,
                         matchedAllergens = MealRecommendationEngine.matchedAllergens(seed, allergies),
                         ingredientInfoComplete = seed.ingredientInfoComplete, allergenInfoComplete = "UNKNOWN" !in seed.allergenTags,
-                        foodGroups = seed.ingredientCategories, preferenceMatched = FoodPreferencePolicy.matches(seed,
+                        foodGroups = if (theme == DailyRecommendationTheme.SLOW_AGING_STYLE) SlowAgingStylePolicy.groups(seed) else seed.ingredientCategories,
+                        amountLabels = serving.labels, preferenceMatched = FoodPreferencePolicy.matches(seed,
                             preference.preferredFoods.split('|').filter(String::isNotBlank).toSet()))
                 }
             }.orEmpty().toMap() else emptyMap()
@@ -72,7 +79,7 @@ class TodayMealPlanRepository(
             }
             val priorIds = if (replace != null) stored?.meals?.filter { it.mealType == replace }?.map { it.templateId }?.toSet().orEmpty() else emptySet()
             DailyMealPlanEngine.generate(day, target, theme, seeds, preference, dislikes, allergies, todayRecords,
-                fixed, seen, if (alternate) stored?.signatures.orEmpty().toSet() else emptySet(), priorIds, favoriteNames)
+                fixed, seen, if (alternate) stored?.signatures.orEmpty().toSet() else emptySet(), priorIds, favoriteNames, learnedScores)
         } ?: run {
             if (!alternate && replace == null && store.state.value?.theme == theme) validatedPlan.value = null
             return@withLock null

@@ -28,6 +28,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.SideEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -45,19 +46,27 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.example.healthcare.data.model.MealType
+import com.example.healthcare.data.entity.MealRecord
 import com.example.healthcare.data.entity.MealTemplate
 import com.example.healthcare.data.repository.MealRecommendationWithIngredients
 import com.example.healthcare.domain.ScoredMealRecommendation
+import com.example.healthcare.domain.RecommendationServingPolicy
 import com.example.healthcare.domain.PortionGuide
 import com.example.healthcare.domain.RecommendationStage
 import com.example.healthcare.domain.FoodSearchPolicy
 import com.example.healthcare.domain.MealRecommendationEngine
 import com.example.healthcare.domain.MealRecommendationTheme
+import com.example.healthcare.ui.DraftExitGuard
+import com.example.healthcare.ui.LocalDraftExitGuardRegistration
 import com.example.healthcare.ui.components.SectionHeader
 import com.example.healthcare.ui.components.WellnessCard
 import com.example.healthcare.ui.components.WellnessEmptyState
 import com.example.healthcare.ui.components.MacroSummaryRow
 import com.example.healthcare.ui.components.RecommendationPhoto
+import com.example.healthcare.ui.components.FoodAmountInput
+import com.example.healthcare.ui.components.ContextualAllergyNotice
+import com.example.healthcare.domain.FoodAmountPolicy
+import com.example.healthcare.domain.FoodMetadataPolicy
 import com.example.healthcare.domain.Macronutrients
 import com.example.healthcare.ui.theme.WellnessSpacing
 import com.example.healthcare.ui.theme.HealthCareTheme
@@ -81,14 +90,18 @@ fun MealPlanScreen(
     onSearchFood: () -> Unit = {},
     onOpenPreferences: () -> Unit = {},
     showThemes: Boolean = false,
-    dailyTemplateId: String? = null
+    dailyTemplateId: String? = null,
+    dailyPortion: Double = 1.0,
+    onSavedRecord: (MealRecord) -> Unit = { onSaved() }
 ) {
     val state by viewModel.uiState.collectAsState()
-    LaunchedEffect(mealType, budgetKcal, targetKcal, initialTemplateId) {
-        if (dailyTemplateId != null) viewModel.loadDailyDetail(dailyTemplateId, mealType, budgetKcal, targetKcal)
+    val registerDraft = LocalDraftExitGuardRegistration.current
+    SideEffect { registerDraft(DraftExitGuard(viewModel.hasUnsavedInput, state.isSaving, viewModel::resetToRoot)) }
+    LaunchedEffect(mealType, budgetKcal, targetKcal, initialTemplateId, dailyPortion) {
+        if (dailyTemplateId != null) viewModel.loadDailyDetail(dailyTemplateId, mealType, budgetKcal, targetKcal, dailyPortion)
         else viewModel.load(mealType, budgetKcal, targetKcal, dailyRemainingKcal, initialTemplateId)
     }
-    LaunchedEffect(viewModel) { viewModel.saveCompletedEvents.collect { onSaved() } }
+    LaunchedEffect(viewModel) { viewModel.saveCompletedEvents.collect { onSavedRecord(it) } }
     MealPlanContent(
         state = state,
         onBack = onBack,
@@ -102,11 +115,14 @@ fun MealPlanScreen(
         onIngredientIncluded = viewModel::setIngredientIncluded,
         onShowReplacements = viewModel::showReplacements,
         onReplace = viewModel::replaceIngredient,
-        onConfirm = viewModel::requestConsumptionConfirmation,
+        onConfirm = viewModel::recordRecommendedAmount,
+        onChangeAmount = viewModel::requestConsumptionConfirmation,
         onSaveConsumption = viewModel::confirmConsumed,
         onConsumedRatio = viewModel::setConsumedRatio,
         onFoodSpecific = viewModel::chooseFoodSpecificConsumption,
         onIngredientConsumedRatio = viewModel::setIngredientConsumedRatio,
+        onIngredientQuantity = viewModel::setIngredientQuantity,
+        onIngredientQuantityUnit = viewModel::setIngredientQuantityUnit,
         showThemes = showThemes,
         onSelectTheme = viewModel::selectTheme,
         onShowTodayRecommendations = viewModel::showTodayRecommendations,
@@ -114,6 +130,7 @@ fun MealPlanScreen(
     )
 }
 
+@OptIn(androidx.compose.foundation.layout.ExperimentalLayoutApi::class)
 @Composable
 internal fun MealPlanContent(
     state: MealPlanUiState,
@@ -125,10 +142,13 @@ internal fun MealPlanContent(
     onShowReplacements: (Long) -> Unit,
     onReplace: (Long, com.example.healthcare.data.entity.FoodItem) -> Unit,
     onConfirm: () -> Unit,
+    onChangeAmount: () -> Unit = {},
     onSaveConsumption: () -> Unit = {},
     onConsumedRatio: (Double) -> Unit = {},
     onFoodSpecific: () -> Unit = {},
     onIngredientConsumedRatio: (Long, Double) -> Unit = { _, _ -> },
+    onIngredientQuantity: (Long, String) -> Unit = { _, _ -> },
+    onIngredientQuantityUnit: (Long, String) -> Unit = { _, _ -> },
     onAdvanceFallback: () -> Unit = {},
     onExpandCookingMode: (String) -> Unit = {},
     onSearchFood: () -> Unit = {},
@@ -260,16 +280,26 @@ internal fun MealPlanContent(
                             Text(selected.reason, style = MaterialTheme.typography.bodySmall,
                                 modifier = Modifier.testTag("recommendation-selected-reason"))
                             RecommendationDataNotices(
-                                matchedAllergens = selected.matchedAllergens,
-                                ingredientInfoComplete = selected.ingredientInfoComplete,
-                                allergenInfoComplete = selected.allergenInfoComplete
+                                configuredAllergies = state.configuredAllergies,
+                                matchedAllergens = selected.matchedAllergens + selected.declaredAllergens +
+                                    selected.ingredients.filter { it.included }.flatMap {
+                                        FoodMetadataPolicy.lookup(it.foodItem.id)?.allergens.orEmpty()
+                                    },
+                                allergenInfoComplete = selected.allergenInfoComplete ||
+                                    (selected.ingredients.any { it.included } && selected.ingredients.filter { it.included }
+                                        .all { FoodMetadataPolicy.lookup(it.foodItem.id)?.allergenInfoComplete == true }),
+                                decisionPoint = true,
+                                mayContainAllergens = selected.ingredients.filter { it.included }.flatMap {
+                                    FoodMetadataPolicy.lookup(it.foodItem.id)?.mayContainAllergens.orEmpty()
+                                }.toSet()
                             )
-                            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                                listOf(0.75, 1.0, 1.25).forEach { ratio ->
+                            androidx.compose.foundation.layout.FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                                selected.servingOptions.forEach { serving ->
+                                    val ratio = serving.portion
                                     FilterChip(
                                         selected = selected.portionRatio == ratio,
                                         onClick = { onAdjustPortion(ratio) },
-                                        label = { Text("${(ratio * 100).toInt()}%") }
+                                        label = { Text(serving.labels.firstOrNull()?.substringAfter(" · ") ?: "${serving.kcal} kcal") }
                                     )
                                 }
                             }
@@ -278,7 +308,10 @@ internal fun MealPlanContent(
                                     ingredient = ingredient,
                                     onIncludedChange = { onIngredientIncluded(ingredient.ingredientId, it) },
                                     onShowReplacements = { onShowReplacements(ingredient.ingredientId) },
-                                    onReplace = { onReplace(ingredient.ingredientId, it) }
+                                    onReplace = { onReplace(ingredient.ingredientId, it) },
+                                    onQuantity = { onIngredientQuantity(ingredient.ingredientId, it) },
+                                    onQuantityUnit = { onIngredientQuantityUnit(ingredient.ingredientId, it) },
+                                    enabled = !state.isSaving && !state.saved
                                 )
                             }
                             Text("추천한 양 · 약 ${formatKcal(selected.totalCalories)} kcal", style = MaterialTheme.typography.titleLarge,
@@ -297,6 +330,9 @@ internal fun MealPlanContent(
                                     Text(if (state.saved) "기록됨" else "먹었어요")
                                 }
                             }
+                            if (!state.showConsumptionConfirm && !state.saved) OutlinedButton(
+                                onClick = onChangeAmount,
+                                modifier = Modifier.fillMaxWidth()) { Text("먹은 양이 달라요") }
                             if (state.showConsumptionConfirm && !state.saved) {
                                 Text("추천한 양만큼 드셨나요?", style = MaterialTheme.typography.titleLarge,
                                     modifier = Modifier.semantics { heading() })
@@ -342,7 +378,8 @@ internal fun MealPlanContent(
                                 Text("약 ${formatKcal(selected.consumedCalories)} kcal",
                                     style = MaterialTheme.typography.headlineMedium)
                                 MacroSummaryRow(selected.consumedNutrition)
-                                Button(onClick = onSaveConsumption, enabled = !state.isSaving,
+                                Button(onClick = onSaveConsumption, enabled = !state.isSaving &&
+                                    selected.ingredients.filter { it.included }.all { it.amountValid },
                                     modifier = Modifier.fillMaxWidth().heightIn(min = 52.dp)) {
                                     Text("이 양으로 기록")
                                 }
@@ -410,9 +447,15 @@ internal fun ReferenceRecommendationLayout(
             }
         }
         RecommendationDataNotices(
-            matchedAllergens = main.matchedAllergens,
-            ingredientInfoComplete = main.ingredientInfoComplete,
-            allergenInfoComplete = main.allergenInfoComplete
+            configuredAllergies = state.configuredAllergies,
+            matchedAllergens = main.matchedAllergens + main.declaredAllergens + main.ingredients.flatMap {
+                FoodMetadataPolicy.lookup(it.foodItemId)?.allergens.orEmpty()
+            },
+            allergenInfoComplete = main.allergenInfoComplete,
+            decisionPoint = false,
+            mayContainAllergens = main.ingredients.flatMap {
+                FoodMetadataPolicy.lookup(it.foodItemId)?.mayContainAllergens.orEmpty()
+            }.toSet()
         )
         Row(horizontalArrangement = Arrangement.spacedBy(7.dp)) {
             RecommendationMetric("약 ${formatKcal(template.totalKcal)} kcal")
@@ -491,34 +534,14 @@ private fun missingMacroMessage(carbohydrate: Double?, protein: Double?, fat: Do
 
 @Composable
 private fun RecommendationDataNotices(
+    configuredAllergies: Set<String>,
     matchedAllergens: Set<String>,
-    ingredientInfoComplete: Boolean,
-    allergenInfoComplete: Boolean
+    allergenInfoComplete: Boolean,
+    decisionPoint: Boolean,
+    mayContainAllergens: Set<String> = emptySet()
 ) {
-    val shownAllergens = matchedAllergens.filterNot {
-        it.equals("UNKNOWN", ignoreCase = true)
-    }
-    if (shownAllergens.isNotEmpty()) {
-        Text(
-            "알레르기 주의 · ${shownAllergens.joinToString("·")} 포함",
-            style = MaterialTheme.typography.bodySmall,
-            color = MaterialTheme.colorScheme.error
-        )
-    }
-    if (!ingredientInfoComplete) {
-        Text(
-            "원재료 정보 일부 미확인",
-            style = MaterialTheme.typography.bodySmall,
-            color = MaterialTheme.colorScheme.onSurfaceVariant
-        )
-    }
-    if (!allergenInfoComplete) {
-        Text(
-            "알레르기 정보 일부 미확인",
-            style = MaterialTheme.typography.bodySmall,
-            color = MaterialTheme.colorScheme.onSurfaceVariant
-        )
-    }
+    ContextualAllergyNotice(configuredAllergies, matchedAllergens, allergenInfoComplete, decisionPoint,
+        mayContainAllergens = mayContainAllergens)
 }
 
 @Composable
@@ -571,23 +594,37 @@ private fun IngredientConfirmation(
     ingredient: RecommendedIngredientUi,
     onIncludedChange: (Boolean) -> Unit,
     onShowReplacements: () -> Unit,
-    onReplace: (com.example.healthcare.data.entity.FoodItem) -> Unit
+    onReplace: (com.example.healthcare.data.entity.FoodItem) -> Unit,
+    onQuantity: (String) -> Unit,
+    onQuantityUnit: (String) -> Unit,
+    enabled: Boolean
 ) {
     Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
         Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically) {
             Checkbox(
                 checked = ingredient.included,
-                onCheckedChange = onIncludedChange
+                onCheckedChange = onIncludedChange,
+                enabled = enabled
             )
             Column(Modifier.weight(1f)) {
                 Text(FoodSearchPolicy.displayName(ingredient.foodItem), style = MaterialTheme.typography.titleSmall)
-                Text("${PortionGuide.recommendationLabel(ingredient.foodItem, ingredient.amount)} · 약 ${formatKcal(ingredient.calories)} kcal",
+                Text("${RecommendationServingPolicy.label(ingredient.foodItem, ingredient.amount)} · 약 ${formatKcal(ingredient.calories)} kcal",
                     style = MaterialTheme.typography.bodySmall)
                 Text("약 ${ingredient.amount.formatAmount()}${ingredient.unit} 기준 · 실제 음식 양에 따라 달라질 수 있어요.",
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant)
             }
-            OutlinedButton(onClick = onShowReplacements, enabled = ingredient.included) { Text("교체") }
+            OutlinedButton(onClick = onShowReplacements, enabled = enabled && ingredient.included) { Text("교체") }
+        }
+        if (ingredient.included) {
+            Column(Modifier.testTag("recommendation-amount-${ingredient.ingredientId}")) {
+                FoodAmountInput(amount = ingredient.displayedQuantity, unit = ingredient.displayedUnit,
+                    choices = FoodAmountPolicy.choices(ingredient.foodItem), onAmount = onQuantity,
+                    onUnit = onQuantityUnit, enabled = enabled,
+                    error = ingredient.quantityError ?: if (!ingredient.amountValid) "계산 기준량을 확인해 주세요." else null)
+                Text("이 양에 아래에서 선택하는 먹은 비율을 적용해 기록해요.",
+                    style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+            }
         }
         if (ingredient.showReplacements) {
             if (ingredient.replacements.isEmpty()) {

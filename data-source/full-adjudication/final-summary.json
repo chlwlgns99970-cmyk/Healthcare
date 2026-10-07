@@ -1,0 +1,205 @@
+{
+  "status": "COMPLETE",
+  "recipe": {
+    "recipeCount": 516,
+    "ingredientRows": 4258,
+    "identityCounts": {
+      "AMBIGUOUS_IDENTITY": 1719,
+      "LINKED": 2248,
+      "EXCLUDED_NON_CALORIC_OR_PROCESS_ITEM": 290,
+      "NO_OFFICIAL_NUTRITION_MATCH": 1
+    },
+    "unitCounts": {
+      "DIRECT_MASS": 3068,
+      "UNIT_CONVERSION_UNVERIFIED": 1035,
+      "EXCLUDED_NON_CALORIC_OR_PROCESS_ITEM": 144,
+      "OFFICIAL_SOURCE_EQUIVALENCE": 11
+    },
+    "ingredientCounts": {
+      "AMBIGUOUS_IDENTITY": 1241,
+      "LINKED": 1827,
+      "UNIT_CONVERSION_UNVERIFIED": 899,
+      "EXCLUDED_NON_CALORIC_OR_PROCESS_ITEM": 290,
+      "NO_OFFICIAL_NUTRITION_MATCH": 1
+    },
+    "recipeStates": {
+      "PARTIAL_LINKED": 407,
+      "COMPLETE_LINKED": 13,
+      "UNLINKABLE": 96
+    },
+    "publishedRecipeCount": 72,
+    "publishedCompleteCount": 3,
+    "linkedFoodCount": 230,
+    "publishedIngredientRows": 1015,
+    "assetSha256": "5d43bc9417d0e415de70ca5b20a2066baa9b5598533e06b2bbad4d60c21ff2b0"
+  },
+  "menu": {
+    "totalUnknownBefore": 229,
+    "categoryAssigned": 157,
+    "categoryUnresolvable": 72,
+    "unreviewed": 0,
+    "countsByCategory": {
+      "사이드": 75,
+      "샐러드·포케": 1,
+      "김밥": 23,
+      "음료": 13,
+      "샌드위치": 3,
+      "베이커리": 3,
+      "분식": 7,
+      "한식": 14,
+      "디저트": 5,
+      "일식": 2,
+      "족발·보쌈": 2,
+      "치킨": 2,
+      "도시락": 1,
+      "카페": 1,
+      "토스트": 1,
+      "샤브샤브": 4
+    }
+  },
+  "basis": {
+    "totalCatalogRows": 67354,
+    "allCatalogRowsScanned": true,
+    "kfindRowsCompared": 66761,
+    "sourceWorkbooks": [
+      {
+        "file": "kfind-food-db-2026-08-28.xlsx",
+        "sha256": "1ef3551f9a1d0ee87891d6306fa22bbd6a7ffcc90f2c70a4a184dbfe3fce6ea6",
+        "sourceRows": 19617,
+        "matchedAssetRows": 19617
+      },
+      {
+        "file": "kfind-processed-food-db-2026-08-28.xlsx",
+        "sha256": "b074d98e75d2d087dc1b193f0056affbf9afd14524c9ccb556cb2b20978504f7",
+        "sourceRows": 316734,
+        "matchedAssetRows": 47144
+      }
+    ],
+    "suspiciousFound": 15676,
+    "sourceConfirmed": 15666,
+    "parserCorrected": 0,
+    "unresolved": 10,
+    "countsBySuspicion": {
+      "SOLID_WITH_VOLUME_BASIS": 4015,
+      "REFERENCE_LARGER_THAN_PACKAGE": 8751,
+      "BEVERAGE_WITH_MASS_BASIS": 4712
+    },
+    "parserMismatches": [],
+    "assetHashesBefore": {
+      "food_items.csv": "ccf6a9b2322ad5e75fe29f13ffb7c4bf719c2cca5cd3b459f104d659231261b4",
+      "product_items.csv": "3f659d78f279b65115e17d8194bd686560bca018dea701aaa1a9585261bbe18e",
+      "franchise_official_items.csv": "4a44591f8d8c6ce8276bee5449e90ced1ca513555c2920718ba9722e5ada06e3"
+    },
+    "assetHashesAfter": {
+      "food_items.csv": "ccf6a9b2322ad5e75fe29f13ffb7c4bf719c2cca5cd3b459f104d659231261b4",
+      "product_items.csv": "3f659d78f279b65115e17d8194bd686560bca018dea701aaa1a9585261bbe18e",
+      "franchise_official_items.csv": "4a44591f8d8c6ce8276bee5449e90ced1ca513555c2920718ba9722e5ada06e3"
+    }
+  },
+  "unreviewedIngredientIdentity": 0,
+  "unreviewedIngredientUnit": 0,
+  "unreviewedMenu": 0,
+  "kimbap": {
+    "recipeCount": 2,
+    "ingredientRows": 37,
+    "counts": {
+      "AMBIGUOUS_IDENTITY": 6,
+      "LINKED": 13,
+      "UNIT_CONVERSION_UNVERIFIED": 14,
+      "EXCLUDED_NON_CALORIC_OR_PROCESS_ITEM": 4
+    }
+  },
+  "completeExamples": [
+    {
+      "name": "갈치구이",
+      "foodId": "kfind-d408-355000000-0001",
+      "officialBasis": "100ml",
+      "officialKcal": 147.0,
+      "recipeBasis": "공식 레시피 4인분 전체 재료량",
+      "recipeUrl": "https://www.foodsafetykorea.go.kr/popup/sensuousmenuView.do?rcp_menu_no=158",
+      "ingredients": [
+        {
+          "name": "갈치",
+          "grams": 280.0,
+          "estimatedKcal": 417.2,
+          "nutrientName": "갈치, 생것",
+          "source": "https://www.nics.go.kr/food/kfi/fct/fctIntro/list?menuId=PS03562"
+        },
+        {
+          "name": "소금",
+          "grams": 4.0,
+          "estimatedKcal": 0.0,
+          "nutrientName": "Salt, table",
+          "source": "https://fdc.nal.usda.gov/food-details/173468/nutrients"
+        }
+      ]
+    },
+    {
+      "name": "알감자구이",
+      "foodId": "kfind-d408-356000000-0001",
+      "officialBasis": "100ml",
+      "officialKcal": 123.0,
+      "recipeBasis": "공식 레시피 4인분 전체 재료량",
+      "recipeUrl": "https://www.foodsafetykorea.go.kr/popup/sensuousmenuView.do?rcp_menu_no=247",
+      "ingredients": [
+        {
+          "name": "감자",
+          "grams": 520.0,
+          "estimatedKcal": 400.4,
+          "nutrientName": "Potatoes, flesh and skin, raw",
+          "source": "https://fdc.nal.usda.gov/food-details/170026/nutrients"
+        },
+        {
+          "name": "소금",
+          "grams": 2.0,
+          "estimatedKcal": 0.0,
+          "nutrientName": "Salt, table",
+          "source": "https://fdc.nal.usda.gov/food-details/173468/nutrients"
+        }
+      ]
+    },
+    {
+      "name": "꽃게찜",
+      "foodId": "kfind-d407-357000000-0001",
+      "officialBasis": "100ml",
+      "officialKcal": 52.0,
+      "recipeBasis": "공식 레시피 4인분 전체 재료량",
+      "recipeUrl": "https://www.foodsafetykorea.go.kr/popup/sensuousmenuView.do?rcp_menu_no=263",
+      "ingredients": [
+        {
+          "name": "꽃게",
+          "grams": 350.0,
+          "estimatedKcal": 269.5,
+          "nutrientName": "게, 꽃게, 생것",
+          "source": "https://www.nics.go.kr/food/kfi/fct/fctIntro/list?menuId=PS03562"
+        }
+      ]
+    }
+  ],
+  "nolboo": {
+    "brandMenus": 17,
+    "storeMenus": 7,
+    "portionOptions": 47,
+    "branchesChecked": 47,
+    "nutritionConfirmed": 0,
+    "completeIngredientsConfirmed": 0,
+    "partialDescriptions": 14,
+    "originDeclarations": 9,
+    "allergensConfirmed": 0,
+    "currentSalesVerified": false,
+    "currentHomepageCatalogVerified": false
+  },
+  "tests": {
+    "data": 11,
+    "unit": 12,
+    "samsungDistinct": 7,
+    "allPassed": true
+  },
+  "databaseVersion": 8,
+  "migration": false,
+  "userDataPreserved": true,
+  "productionVersionCode": 7,
+  "productionVersionName": "1.0.6",
+  "productionChanges": 0,
+  "questionRequired": false
+}

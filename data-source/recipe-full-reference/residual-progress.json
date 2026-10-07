@@ -1,0 +1,24 @@
+{
+  "originalLinked": 2382,
+  "originalExcluded": 154,
+  "originalUnresolved": 1722,
+  "primaryGapsBefore": {
+    "identity": 850,
+    "amount": 563,
+    "unit": 332,
+    "source": 1,
+    "nutrition": 1
+  },
+  "primaryGapsAfter": {
+    "identity": 850,
+    "amount": 563,
+    "unit": 307,
+    "source": 1,
+    "nutrition": 1
+  },
+  "residualRowsWithPublishedCompleteReference": 928,
+  "originalRowsChanged": 25,
+  "originalAmountOverrides": 0,
+  "conflictsReviewed": 238,
+  "conflictConversionsAccepted": 25
+}

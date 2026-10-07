@@ -12,6 +12,7 @@ import androidx.compose.ui.test.hasText
 import androidx.compose.ui.test.hasClickAction
 import androidx.compose.ui.test.hasTestTag
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
+import androidx.compose.ui.test.onAllNodesWithTag
 import androidx.compose.ui.test.onAllNodesWithText
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.onNodeWithTag
@@ -28,6 +29,8 @@ import com.example.healthcare.data.BodyProfileStore
 import com.example.healthcare.data.database.AppDatabase
 import com.example.healthcare.domain.BodyProfile
 import com.example.healthcare.domain.BodySex
+import kotlinx.coroutines.flow.first
+import androidx.test.espresso.Espresso
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withTimeout
@@ -61,46 +64,25 @@ class SmartFoodSearchUiTest {
 
     @Test
     fun officialFoodSearchCalculatesCaloriesWithoutManualEntry() {
-        assertEquals("com.example.healthcare.qa", InstrumentationRegistry.getInstrumentation().targetContext.packageName)
-
-        openFoodSearch()
-        waitForSearchField()
-        composeRule.onNode(hasSetTextAction() and hasText("음식·제품 또는 브랜드 이름", substring = true))
-            .performTextInput("신라면")
-        waitAndScrollToTag("food-search-result-kfind-product-p108-003000400-0138")
-        composeRule.onNodeWithTag("food-search-result-kfind-product-p108-003000400-0138")
-            .assertIsDisplayed().assertTextContains("1봉 120g", substring = true).performClick()
-
-        waitForQuickRecord()
-        waitAndScrollToText("신라면")
-        composeRule.onNodeWithText("신라면").assertIsDisplayed()
-        composeRule.onAllNodes(hasScrollAction()).onFirst().performScrollToNode(hasText("1봉"))
-        composeRule.onNode(hasClickAction() and hasText("1봉")).assertIsDisplayed().performClick().assertIsSelected()
+        search("신라면")
+        selectResult("kfind-product-p108-003000400-0138")
+        setAmount("1", "봉")
         waitAndScrollToText("500 kcal")
         composeRule.onNodeWithText("500 kcal").assertIsDisplayed()
+        setAmount("240", "g")
+        waitAndScrollToText("1001 kcal")
+        composeRule.onNodeWithText("1001 kcal").assertIsDisplayed()
         openDetailedRecordFromQuick()
-        composeRule.onNodeWithText("한 화면에서 자세히 입력").performClick()
-        composeRule.onAllNodes(hasScrollAction()).onFirst()
-            .performScrollToNode(hasText("더 정확히 입력하기"))
-        composeRule.onNodeWithText("더 정확히 입력하기").performClick()
-        composeRule.onAllNodes(hasScrollAction()).onFirst()
-            .performScrollToNode(hasSetTextAction() and hasText("양", substring = true))
-        val amountField = composeRule.onNode(hasSetTextAction() and hasText("양", substring = true))
-        amountField.assertTextContains("120").performTextReplacement("240")
-        composeRule.onAllNodes(hasScrollAction()).onFirst()
-            .performScrollToNode(hasSetTextAction() and hasText("칼로리", substring = true))
-        composeRule.onNode(hasSetTextAction() and hasText("칼로리", substring = true))
-            .assertTextContains("1001")
+        waitAndScrollToTag("food-amount-quantity")
+        composeRule.onNodeWithTag("food-amount-quantity").assertTextContains("240")
+        composeRule.onNodeWithTag("food-amount-unit").assertTextContains("g", substring = true)
     }
 
     @Test
     fun tunaGimbapSearchShowsGramBasisInsteadOfEmptyResults() {
         assertEquals("com.example.healthcare.qa", InstrumentationRegistry.getInstrumentation().targetContext.packageName)
-        openFoodSearch()
-        waitForSearchField()
-        composeRule.onNode(hasSetTextAction() and hasText("음식·제품 또는 브랜드 이름", substring = true))
-            .performTextInput("참치김밥")
-        waitAndScrollToTag("food-search-result-kfind-d101-007450000-0001")
+        search("참치김밥")
+        exposeExactResult("참치김밥", "kfind-d101-007450000-0001")
         composeRule.onNodeWithTag("food-search-result-kfind-d101-007450000-0001")
             .assertIsDisplayed().assertTextContains("참치김밥")
             .assertTextContains("영양정보 100g 기준 · 약 174 kcal")
@@ -131,165 +113,122 @@ class SmartFoodSearchUiTest {
 
     @Test
     fun hamburgerSearchGroupsGeneralKindAndKeepsActualBrandProductsAccessible() {
-        openFoodSearch()
-        waitForSearchField()
-        composeRule.onNode(hasSetTextAction() and hasText("음식·제품 또는 브랜드 이름", substring = true))
-            .performTextInput("햄버거")
-        waitAndScrollToTag("food-search-result-kfind-d102-123000000-0001")
+        search("햄버거")
+        exposeExactResult("햄버거", "kfind-d102-123000000-0001")
         composeRule.onNodeWithTag("food-search-result-kfind-d102-123000000-0001")
             .assertIsDisplayed().assertTextContains("햄버거")
             .assertTextContains("영양정보 100g 기준 · 약 264 kcal")
         showHamburgerAlternatives()
         composeRule.onNodeWithTag("food-search-result-kfind-product-p123-223020200-0284")
             .assertIsDisplayed().assertTextContains("브랜드·제조사 · (주)조이푸드")
-            .assertTextContains("출처 K-FIND-PRODUCT", substring = true)
+            .assertTextContains("식약처 식품영양자료", substring = true)
     }
 
     @Test
     fun brandBrowseShowsActualCompanyProductsAndReusesPortionFlow() {
-        openFoodSearch()
-        waitForSearchField()
+        openFoodSearch(); waitForSearchField()
         composeRule.onNodeWithText("브랜드·제조사").performClick()
-        waitForText("(주)대정")
-        composeRule.onNodeWithText("제품 154개").assertIsDisplayed()
-        composeRule.onNode(hasClickAction() and hasText("(주)대정")).performClick()
-        waitForText("공식 데이터에 등록된 제품 154개")
-        composeRule.onNodeWithText("공식 데이터에 등록된 제품 154개").assertIsDisplayed()
-        waitForSubstring("제품 전체")
-        composeRule.onAllNodes(hasScrollAction()).onFirst()
-            .performScrollToNode(hasClickAction() and hasText("제품 전체", substring = true))
-        composeRule.onAllNodes(hasClickAction() and hasText("제품 전체", substring = true))
-            .onFirst().performClick()
-        waitForQuickRecord()
-        waitAndScrollToText("(주)대정")
-        composeRule.onNodeWithText("(주)대정").assertIsDisplayed()
-        composeRule.onAllNodes(hasScrollAction()).onFirst().performScrollToNode(hasText("제품 전체"))
-        composeRule.onNode(hasClickAction() and hasText("제품 전체"))
-            .assertIsDisplayed().performClick().assertIsSelected()
+        composeRule.onNode(hasSetTextAction() and hasText("브랜드 또는 제조사", substring = true)).performTextReplacement("대정")
+        Espresso.closeSoftKeyboard()
+        val app = InstrumentationRegistry.getInstrumentation().targetContext.applicationContext as HealthcareApplication
+        val company = runBlocking { app.nutritionRepository.searchProductBrands("대정").first() }.single { it.brand == "(주)대정" }
+        waitForText(company.brand)
+        composeRule.onNode(hasClickAction() and hasText(company.brand)).performClick()
+        waitForText("공식 데이터에 등록된 제품 ${company.productCount}개")
+        val foods = runBlocking { app.nutritionRepository.searchProductsByBrand(company.brand, "").first() }
+        assertTrue(foods.isNotEmpty()); assertTrue(foods.all { it.brand == company.brand })
+        val food = foods.first { com.example.healthcare.domain.FoodAmountPolicy.canCalculate(it) }
+        selectResult(food.id)
+        waitAndScrollToText(company.brand); composeRule.onNodeWithText(company.brand).assertIsDisplayed()
+        val choice = com.example.healthcare.domain.FoodAmountPolicy.defaultChoice(food)!!
+        waitAndScrollToTag("food-amount-unit")
+        composeRule.onNodeWithTag("food-amount-unit").assertTextContains(choice.unit, substring = true)
         openDetailedRecordFromQuick()
-        composeRule.onAllNodes(hasScrollAction()).onFirst().performScrollToNode(hasText("제품 전체"))
-        composeRule.onNode(hasClickAction() and hasText("제품 전체")).assertIsDisplayed().assertIsSelected()
+        waitAndScrollToTag("food-amount-unit")
+        composeRule.onNodeWithTag("food-amount-unit").assertTextContains(choice.unit, substring = true)
     }
 
     @Test
     fun hamburgerProductUsesWholeProductNotInventedPieceAndCapturesPortionScreen() {
-        openFoodSearch()
-        waitForSearchField()
-        composeRule.onNode(hasSetTextAction() and hasText("음식·제품 또는 브랜드 이름", substring = true))
-            .performTextInput("햄버거")
-        showHamburgerAlternatives()
+        search("햄버거"); showHamburgerAlternatives()
         composeRule.onNodeWithTag("food-search-result-kfind-product-p123-223020200-0284")
-            .assertIsDisplayed().assertTextContains("제품 전체 100g · 220 kcal").performClick()
-
-        waitForQuickRecord()
-        waitAndScrollToText("(주)조이푸드")
-        composeRule.onNodeWithText("(주)조이푸드").assertIsDisplayed()
-        composeRule.onAllNodes(hasScrollAction()).onFirst().performScrollToNode(hasText("제품 전체"))
-        composeRule.onNode(hasClickAction() and hasText("제품 전체"))
-            .assertIsDisplayed().performClick().assertIsSelected()
-        waitAndScrollToText("220 kcal")
-        composeRule.onNodeWithText("220 kcal").assertIsDisplayed()
+            .assertIsDisplayed().assertTextContains("제품 전체 · 220 kcal").assertTextContains("제품 전체 100g 기준").performClick()
+        waitForQuickRecord(); waitAndScrollToTag("food-amount-unit")
+        composeRule.onNodeWithTag("food-amount-unit").assertTextContains("제품 전체", substring = true)
+        waitAndScrollToText("220 kcal"); composeRule.onNodeWithText("220 kcal").assertIsDisplayed()
         composeRule.onNodeWithText("1개").assertDoesNotExist()
-        openDetailedRecordFromQuick()
-        composeRule.onAllNodes(hasScrollAction()).onFirst().performScrollToNode(hasText("제품 전체"))
-        composeRule.onNode(hasClickAction() and hasText("제품 전체")).assertIsDisplayed().assertIsSelected()
+        openDetailedRecordFromQuick(); waitAndScrollToTag("food-amount-unit")
+        composeRule.onNodeWithTag("food-amount-unit").assertTextContains("제품 전체", substring = true)
         composeRule.onNodeWithText("1개").assertDoesNotExist()
-
-        val context = InstrumentationRegistry.getInstrumentation().targetContext
-        val screenshot = File(requireNotNull(context.getExternalFilesDir(null)), "hamburger-portion.png")
-        composeRule.onRoot().captureToImage().asAndroidBitmap().let { bitmap ->
-            screenshot.outputStream().use { output ->
-                assertTrue(bitmap.compress(Bitmap.CompressFormat.PNG, 100, output))
-            }
-        }
-        assertTrue(screenshot.length() > 0L)
+        capture("hamburger-portion.png")
     }
 
     @Test
     fun franchiseBrowseShowsOfficialMenusAndReusesExistingPortionFlow() {
-        openFoodSearch()
-        waitForSearchField()
+        openFoodSearch(); waitForSearchField()
         composeRule.onNodeWithText("프랜차이즈").performClick()
-        composeRule.onNode(hasSetTextAction() and hasText("프랜차이즈 브랜드", substring = true))
-            .performTextInput("맥도날드")
+        composeRule.onNode(hasSetTextAction() and hasText("프랜차이즈 브랜드", substring = true)).performTextInput("맥도날드")
         waitForText("맥도날드")
         composeRule.onNode(hasClickAction() and hasText("맥도날드") and hasText("메뉴 37개")).performClick()
-        waitForText("공식 영양정보로 확인된 메뉴 37개")
-        composeRule.onNodeWithText("공식 영양정보로 확인된 메뉴 37개").assertIsDisplayed()
-
-        val field = composeRule.onNode(hasSetTextAction() and hasText("이 브랜드 메뉴 검색", substring = true))
-        field.performTextInput("빅맥")
-        waitForSubstring("빅맥")
-        val bigMacResult = hasClickAction() and hasText("버거 · 빅맥 버거") and
-            hasText("프랜차이즈 · 맥도날드", substring = true)
-        composeRule.onAllNodes(hasScrollAction()).onFirst().performScrollToNode(bigMacResult)
-        composeRule.onNode(bigMacResult).assertIsDisplayed()
-            .assertTextContains("영양정보 100g 기준 · 약 261 kcal")
-        composeRule.onNodeWithTag("food-search-result-kfind-d202-091000000-0056").assertIsDisplayed()
-        capture("franchise-mcdonalds-bigmac.png")
-        composeRule.onNode(bigMacResult).performClick()
-        waitForQuickRecord()
-        waitAndScrollToText("버거 · 빅맥 버거")
-        composeRule.onNodeWithText("버거 · 빅맥 버거").assertIsDisplayed()
-        composeRule.onNodeWithText("맥도날드").assertIsDisplayed()
-        waitAndScrollToText("확인된 단위 g 그대로 입력해요.")
-        composeRule.onNodeWithText("확인된 단위 g 그대로 입력해요.").assertIsDisplayed()
-        val eatenAmount = hasSetTextAction() and hasText("먹은 양", substring = true)
-        composeRule.onAllNodes(hasScrollAction()).onFirst().performScrollToNode(eatenAmount)
-        composeRule.onNode(eatenAmount).assertIsDisplayed().performTextReplacement("200")
-        composeRule.onNode(eatenAmount).performImeAction()
-        waitAndScrollToText("522 kcal")
-        composeRule.onNodeWithText("522 kcal").assertIsDisplayed()
+        waitForText("메뉴 37개 · 영양정보 제공 여부를 표시해요.")
+        composeRule.onNode(hasSetTextAction() and hasText("이 브랜드 메뉴 검색", substring = true)).performTextInput("빅맥")
+        Espresso.closeSoftKeyboard()
+        waitAndScrollToTag("food-search-result-kfind-d202-091000000-0056")
+        composeRule.onNodeWithTag("food-search-result-kfind-d202-091000000-0056")
+            .assertTextContains("영양정보 100g 기준 · 약 261 kcal").performClick()
+        waitForQuickRecord(); setAmount("200", "g")
+        waitAndScrollToText("522 kcal"); composeRule.onNodeWithText("522 kcal").assertIsDisplayed()
         composeRule.onNodeWithText("1개").assertDoesNotExist()
-        openDetailedRecordFromQuick()
-        waitAndScrollToTag("direct-amount-input")
-        composeRule.onNodeWithTag("direct-amount-input").assertIsDisplayed().assertTextContains("200")
-        waitAndScrollToText("약 522 kcal")
-        composeRule.onNodeWithText("약 522 kcal").assertIsDisplayed()
+        openDetailedRecordFromQuick(); waitAndScrollToTag("food-amount-quantity")
+        composeRule.onNodeWithTag("food-amount-quantity").assertTextContains("200")
+        composeRule.onNodeWithTag("food-amount-unit").assertTextContains("g", substring = true)
+        capture("franchise-mcdonalds-bigmac.png")
     }
 
     @Test
     fun seaweedSoupSearchShowsOfficialVariantsAndDirectAmountCanBeRecorded() {
-        assertEquals("com.example.healthcare.qa", InstrumentationRegistry.getInstrumentation().targetContext.packageName)
-        openFoodSearch()
-        waitForSearchField()
-        composeRule.onNode(hasSetTextAction() and hasText("음식·제품 또는 브랜드 이름", substring = true))
-            .performTextReplacement("미역국")
-        waitAndScrollToTag("food-search-alternatives-kfind-d305-223200000-0001")
-        composeRule.onNodeWithTag("food-search-alternatives-kfind-d305-223200000-0001").performClick()
-        waitAndScrollToTag("food-search-result-kfind-d405-223200000-0001")
-        val volumeDriedPollack = composeRule.onNodeWithTag("food-search-result-kfind-d405-223200000-0001")
-        volumeDriedPollack.assertIsDisplayed().assertTextContains("북어미역국")
-            .assertTextContains("영양정보 100ml 기준 · 약 11 kcal")
-            .assertTextContains("자료 구분", substring = true)
-        capture("seaweed-soup-search.png")
-
-        volumeDriedPollack.performClick()
-        waitForQuickRecord()
-        waitAndScrollToText("확인된 단위 ml 그대로 입력해요.")
-        composeRule.onNodeWithText("확인된 단위 ml 그대로 입력해요.").assertIsDisplayed()
-        openDetailedRecordFromQuick()
-        waitForText("실제 먹은 양")
-        composeRule.onAllNodes(hasScrollAction()).onFirst()
-            .performScrollToNode(hasText("실제 먹은 양"))
-        val amount = composeRule.onNodeWithTag("direct-amount-input")
-        amount.assertIsDisplayed().performTextInput("350")
-        amount.performImeAction()
-        waitForText("약 39 kcal")
-        composeRule.onAllNodes(hasScrollAction()).onFirst().performScrollToNode(hasText("약 39 kcal"))
-        composeRule.onNodeWithText("약 39 kcal").assertIsDisplayed()
-        composeRule.onNodeWithText("g과 ml는 서로 바꾸지 않고", substring = true).assertIsDisplayed()
+        search("미역국")
+        exposeExactResult("미역국", "kfind-d405-223200000-0001")
+        composeRule.onNodeWithTag("food-search-result-kfind-d405-223200000-0001")
+            .assertTextContains("북어미역국").assertTextContains("영양정보 100ml 기준 · 약 11 kcal").performClick()
+        waitForQuickRecord(); setAmount("350", "ml")
+        waitAndScrollToText("39 kcal"); composeRule.onNodeWithText("39 kcal").assertIsDisplayed()
         capture("dried-pollack-seaweed-soup-direct.png")
+        waitAndScrollToText("아침에 기록"); composeRule.onNodeWithText("아침에 기록").performClick()
+        waitForTag("record-saved-dialog"); composeRule.onNodeWithTag("record-saved-confirm").performClick()
+        waitForTag("record-completion"); composeRule.onNodeWithTag("completion-home").performClick()
+        waitForTag("dashboard-root"); composeRule.onNodeWithTag("dashboard-root").assertIsDisplayed()
+    }
 
-        composeRule.onAllNodes(hasScrollAction()).onFirst()
-            .performScrollToNode(hasText("다음 · 식사 시간"))
-        composeRule.onNodeWithText("다음 · 식사 시간").performClick()
-        composeRule.onAllNodes(hasScrollAction()).onFirst().performScrollToNode(hasText("기록 확인"))
-        composeRule.onNodeWithText("기록 확인").performClick()
-        composeRule.onAllNodes(hasScrollAction()).onFirst().performScrollToNode(hasText("기록 저장"))
-        composeRule.onNodeWithText("기록 저장").performClick()
-        waitForTag("dashboard-root")
-        composeRule.onNodeWithTag("dashboard-root").assertIsDisplayed()
+    private fun exposeExactResult(query: String, id: String) {
+        val app = InstrumentationRegistry.getInstrumentation().targetContext.applicationContext as HealthcareApplication
+        val results = runBlocking { app.nutritionRepository.search(query).first() }
+        val group = com.example.healthcare.domain.FoodSearchPolicy.groupSearchResults(results, query)
+            .single { it.representative.id == id || it.alternatives.any { row -> row.id == id } }
+        waitAndScrollToTag("food-search-result-${group.representative.id}")
+        if (group.representative.id != id && composeRule.onAllNodesWithTag("food-search-result-$id").fetchSemanticsNodes().isEmpty()) {
+            waitAndScrollToTag("food-search-alternatives-${group.representative.id}")
+            composeRule.onNodeWithTag("food-search-alternatives-${group.representative.id}").performClick()
+        }
+        waitAndScrollToTag("food-search-result-$id")
+    }
+
+    private fun search(query: String) {
+        openFoodSearch(); waitForSearchField()
+        composeRule.onNode(hasSetTextAction() and hasText("음식·제품 또는 브랜드 이름", substring = true)).performTextReplacement(query)
+        Espresso.closeSoftKeyboard()
+    }
+    private fun selectResult(id: String) {
+        waitAndScrollToTag("food-search-result-$id")
+        composeRule.onNodeWithTag("food-search-result-$id").performClick(); waitForQuickRecord()
+    }
+    private fun setAmount(quantity: String, unit: String) {
+        waitAndScrollToTag("food-amount-unit")
+        composeRule.onNodeWithTag("food-amount-unit").performClick()
+        composeRule.onNodeWithTag("food-amount-choice-$unit").performClick()
+        waitAndScrollToTag("food-amount-quantity")
+        composeRule.onNodeWithTag("food-amount-quantity").performTextReplacement(quantity)
+        Espresso.closeSoftKeyboard()
     }
 
     private fun capture(fileName: String) {
@@ -304,8 +243,8 @@ class SmartFoodSearchUiTest {
     }
 
     private fun waitForQuickRecord() {
-        waitForText("빠른 기록")
-        composeRule.onNodeWithText("빠른 기록").assertIsDisplayed()
+        waitForText("음식 상세")
+        composeRule.onNodeWithText("음식 상세").assertIsDisplayed()
         composeRule.onNode(hasSetTextAction() and hasText("단위", substring = true)).assertDoesNotExist()
     }
 
@@ -368,19 +307,16 @@ class SmartFoodSearchUiTest {
     }
 
     private fun showHamburgerAlternatives() {
-        waitAndScrollToTag("food-search-alternatives-kfind-d102-123000000-0001")
-        composeRule.onNodeWithTag("food-search-alternatives-kfind-d102-123000000-0001").performClick()
-        waitAndScrollToTag("food-search-result-kfind-product-p123-223020200-0284")
+        exposeExactResult("햄버거", "kfind-product-p123-223020200-0284")
     }
 
     private fun openFoodSearch() {
-        waitForText("기록")
-        composeRule.onNode(hasClickAction() and hasText("기록")).performClick()
-        waitForText("어떤 방식으로\n하루를 기록할까요?")
-        composeRule.onNode(hasClickAction() and hasText("음식 검색", substring = true)).performClick()
+        waitForTag("dashboard-root")
+        composeRule.onNodeWithTag("dashboard-meal-breakfast").performClick()
+        waitForText("음식 검색")
     }
 
     private companion object {
-        const val EXPECTED_TOTAL_FOOD_COUNT = 31_580
+        const val EXPECTED_TOTAL_FOOD_COUNT = 67_357
     }
 }

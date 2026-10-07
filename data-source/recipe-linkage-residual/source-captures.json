@@ -1,0 +1,78 @@
+[
+  {
+    "url": "https://www.nifs.go.kr/portal/pw/rschB/actionRsltPblcViewPopup.do?rsltpubSeq=21613&histSeq=7",
+    "rawFile": "data-source/recipe-linkage-residual/raw/nifs-standard-index.html",
+    "sha256": "9086df9fb025536c51dc3eac101d902d04e760647635661ca650d2c247b66886",
+    "checkedAt": "2026-10-05",
+    "status": "CAPTURED"
+  },
+  {
+    "url": "https://www.foodsafetykorea.go.kr/upload/20170417/20170417053825_1492418305214.pdf",
+    "rawFile": "data-source/recipe-linkage-residual/raw/mfds-cookbook-2013.pdf",
+    "sha256": "a0c70b598bbc86fc097eee604552e52838c4dea831fd8536af45d0d2f8396614",
+    "checkedAt": "2026-10-05",
+    "status": "CAPTURED"
+  },
+  {
+    "url": "https://stdict.korean.go.kr/search/searchResult.do?pageSize=10&searchKeyword=%ED%86%B5%EA%B9%A8",
+    "rawFile": "data-source/recipe-linkage-residual/raw/official-whole-sesame-search.html",
+    "sha256": "64e861a338d45b2e79665255f4ed75df88909be02f6d703afce0f2816e746f92",
+    "checkedAt": "2026-10-05",
+    "status": "CAPTURED"
+  },
+  {
+    "url": "https://stdict.korean.go.kr/search/searchView.do?word_no=348863&searchKeywordTo=3",
+    "rawFile": "data-source/recipe-linkage-residual/raw/whole-sesame-definition.html",
+    "sha256": "9b97067843725126201fadbc72dd9f7b94dbf518737f31c3a2f12263db9a82f1",
+    "checkedAt": "2026-10-05",
+    "status": "CAPTURED"
+  },
+  {
+    "url": "https://www.nongsaro.go.kr/portal/ps/psv/psvr/psvrc/rdaInterDtl.ps?cntntsNo=34300&menuId=PS00063",
+    "rawFile": "data-source/recipe-linkage-residual/raw/rda-sesame-definition.html",
+    "sha256": "4e5f975eedef423e2dd61089de2eaa7a68a2909b505b053b8feb56e1fe275a28",
+    "checkedAt": "2026-10-05",
+    "status": "CAPTURED"
+  },
+  {
+    "url": "https://www.nifs.go.kr/portal/pw/rschB/filedownload.do?fleOrd=0022164&fileType=FF_11&filename=1737697923096.pdf&fileOpen=FA_01&typeGbn=Y&gbn=rslt&rsltpubSeq=21613&rsltpubStanYr=2023&ord=0013787",
+    "rawFile": "data-source/recipe-linkage-residual/raw/nifs-standard-2023.pdf",
+    "sha256": "e3fdeddece66a44eb24974dd06feda220503d6d2b1320a38bea07006889f837f",
+    "checkedAt": "2026-10-05",
+    "status": "CAPTURED",
+    "purpose": "OFFICIAL_NUTRITION_SEARCH"
+  },
+  {
+    "url": "https://various.foodsafetykorea.go.kr/nutrient/general/down/list.do",
+    "rawFile": "data-source/recipe-linkage-residual/raw/kfind-download.html",
+    "sha256": "068e7c15971e7375595d555fcd1a51f2b0db6af00aa99622bad1cbc9cdb22e91",
+    "checkedAt": "2026-10-05",
+    "status": "CAPTURED"
+  },
+  {
+    "url": "https://various.foodsafetykorea.go.kr/nutrient/general/down/historyList.do",
+    "rawFile": "data-source/recipe-linkage-residual/raw/kfind-history.html",
+    "sha256": "ba4ea1819093734de5f6f8d63f9195e87f86bf6418f4af60a947160e6d1484fe",
+    "checkedAt": "2026-10-05",
+    "status": "CAPTURED"
+  },
+  {
+    "url": "https://www.foodsafetykorea.go.kr/popup/sensuousmenuView.do?rcp_menu_no=223",
+    "rawFile": "data-source/recipe-linkage-residual/raw/mfds-223-original-refresh.html",
+    "sha256": "a146aab9a4d106d3eb80394cb0e55b78178febc1816a476687aa03037a152fb1",
+    "checkedAt": "2026-10-05",
+    "status": "CAPTURED"
+  },
+  {
+    "url": "https://www.foodsafetykorea.go.kr/portal/sensuousmenuList.do?menu_grp=MENU_NEW03&menu_no=3012",
+    "status": "FAILED",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "url": "https://www.ksf.com.gr/our-products/octopus-ink-paste",
+    "rawFile": "data-source/recipe-linkage-residual/raw/ksf-octopus-ink.html",
+    "sha256": "ba93cdbe841a2760720dc891b829c685a90ba59ab4169853fc4e60f1f1748511",
+    "checkedAt": "2026-10-05",
+    "status": "CAPTURED"
+  }
+]

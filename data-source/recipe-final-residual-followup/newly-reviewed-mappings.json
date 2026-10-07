@@ -1,0 +1,369 @@
+[
+  {
+    "originalRecipeId": "MFDS-141",
+    "originalName": "메추리알조림",
+    "selectedId": "MENUZEN-D112009",
+    "selectedName": "메추리알장조림",
+    "foodIds": [
+      "kfind-d111-532040000-0001",
+      "kfind-d411-532040000-0001",
+      "kfind-d511-553000000-0001",
+      "kfind-d611-553000000-0001",
+      "kfind-d711-553000000-0001"
+    ],
+    "method": "WHOLE_NAMED_SAME_DISH_REFERENCE",
+    "reason": "동일 명칭·명시 qualifier·조리형태의 독립 전체 구성. 변형명 보존; 원본 누락량에 역대입하지 않음",
+    "sourceUrl": "https://www.nics.go.kr/food/kfi/mgnNewmenumkFoodSelectNew/selectFoodDetail.json?fdCode=D112009",
+    "sourceSha256": "3434abc39471407db61232f25ef75592032f4d2ff864fd5a1a22e58bb0c032f3",
+    "compositionKind": "REFERENCE_RECIPE",
+    "ingredientCount": 8,
+    "testMethod": "reviewedMapping01"
+  },
+  {
+    "originalRecipeId": "MFDS-258",
+    "originalName": "숙주나물무침",
+    "selectedId": "MENUZEN-D132020",
+    "selectedName": "숙주나물",
+    "foodIds": [
+      "kfind-d113-584000000-0001",
+      "kfind-d413-584000000-0001",
+      "kfind-d513-584000000-0001",
+      "kfind-d613-584000000-0001",
+      "kfind-d713-584000000-0001"
+    ],
+    "method": "WHOLE_NAMED_SAME_DISH_REFERENCE",
+    "reason": "동일 명칭·명시 qualifier·조리형태의 독립 전체 구성. 변형명 보존; 원본 누락량에 역대입하지 않음",
+    "sourceUrl": "https://www.nics.go.kr/food/kfi/mgnNewmenumkFoodSelectNew/selectFoodDetail.json?fdCode=D132020",
+    "sourceSha256": "ef11fc63629799d657642d5ea433c74e85f275eb43562818da80a91c8bf7fd39",
+    "compositionKind": "REFERENCE_RECIPE",
+    "ingredientCount": 5,
+    "testMethod": "reviewedMapping02"
+  },
+  {
+    "originalRecipeId": "MFDS-307",
+    "originalName": "배추들깨국",
+    "selectedId": "MENUZEN-D051194",
+    "selectedName": "배추들깨국",
+    "foodIds": [
+      "kfind-d405-225130000-0001",
+      "kfind-d505-225130000-0001",
+      "kfind-d605-225130000-0001"
+    ],
+    "method": "WHOLE_NAMED_SAME_DISH_REFERENCE",
+    "reason": "동일 명칭·명시 qualifier·조리형태의 독립 전체 구성. 변형명 보존; 원본 누락량에 역대입하지 않음",
+    "sourceUrl": "https://www.nics.go.kr/food/kfi/mgnNewmenumkFoodSelectNew/selectFoodDetail.json?fdCode=D051194",
+    "sourceSha256": "42f47d93c287acedd84f8d759362c030b00d03f0dd1bc6b46e06253191a17ee0",
+    "compositionKind": "REFERENCE_RECIPE",
+    "ingredientCount": 8,
+    "testMethod": "reviewedMapping03"
+  },
+  {
+    "originalRecipeId": "MFDS-320",
+    "originalName": "취나물된장무침",
+    "selectedId": "MENUZEN-D132034",
+    "selectedName": "취나물무침(된장)",
+    "foodIds": [
+      "kfind-d113-595050000-0001",
+      "kfind-d413-595050000-0001",
+      "kfind-d513-595050000-0001",
+      "kfind-d613-595050000-0001",
+      "kfind-d713-595050000-0001"
+    ],
+    "method": "WHOLE_NAMED_SAME_DISH_REFERENCE",
+    "reason": "취나물무침(된장)의 정확한 된장 취나물 숙채 전체 구성; qualifier 보존",
+    "sourceUrl": "https://www.nics.go.kr/food/kfi/mgnNewmenumkFoodSelectNew/selectFoodDetail.json?fdCode=D132034",
+    "sourceSha256": "f17ffc85d64e5a4235d900edcab3b386becc68407edc769b156f6308d6b9c050",
+    "compositionKind": "REFERENCE_RECIPE",
+    "ingredientCount": 7,
+    "testMethod": "reviewedMapping04"
+  },
+  {
+    "originalRecipeId": "MFDS-328",
+    "originalName": "두부양념조림",
+    "selectedId": "MENUZEN-D114004",
+    "selectedName": "두부조림(돼지고기)",
+    "foodIds": [
+      "kfind-d111-517000000-0001",
+      "kfind-d411-517000000-0001",
+      "kfind-d511-517000000-0001",
+      "kfind-d611-517000000-0001",
+      "kfind-d711-517000000-0001"
+    ],
+    "method": "WHOLE_NAMED_SAME_DISH_REFERENCE",
+    "reason": "두부 중심 돼지고기 간장 조림 전체 독립 배합, 돼지고기 qualifier 보존",
+    "sourceUrl": "https://www.nics.go.kr/food/kfi/mgnNewmenumkFoodSelectNew/selectFoodDetail.json?fdCode=D114004",
+    "sourceSha256": "0b23e909e546753b9d06a162c093377c947fd9f87f47a231f87a88809b18f95b",
+    "compositionKind": "REFERENCE_RECIPE",
+    "ingredientCount": 8,
+    "testMethod": "reviewedMapping05"
+  },
+  {
+    "originalRecipeId": "MFDS-314",
+    "originalName": "북어맑은국",
+    "selectedId": "KDCA-281-8494",
+    "selectedName": "북어국, 무",
+    "foodIds": [
+      "kfind-d405-226150000-0001",
+      "kfind-d505-226150000-0001",
+      "kfind-d605-226150000-0001",
+      "kfind-d705-226150000-0001"
+    ],
+    "method": "WHOLE_NAMED_SAME_DISH_REFERENCE",
+    "reason": "북어국, 무 조사평균의 전체 구성; 무 포함 명칭·조사용 표시 보존",
+    "sourceUrl": "https://knhanes.kdca.go.kr/knhanes/archive/wsiEtcPblcnDtl.do",
+    "sourceSha256": "294b5f4138cb460d475726ecf660e4fbbe80592ba0edf5cfb10b99f3e57ad071",
+    "compositionKind": "SURVEY_AVERAGE",
+    "ingredientCount": 18,
+    "testMethod": "reviewedMapping06"
+  },
+  {
+    "originalRecipeId": "MFDS-225",
+    "originalName": "오징어무국",
+    "selectedId": "MENUZEN-D051131",
+    "selectedName": "오징어국",
+    "foodIds": [
+      "kfind-d105-242000000-0001",
+      "kfind-d405-242000000-0001",
+      "kfind-d505-242000000-0001",
+      "kfind-d605-242000000-0001",
+      "kfind-d705-242000000-0001"
+    ],
+    "method": "WHOLE_NAMED_SAME_DISH_REFERENCE",
+    "reason": "동일 명칭·명시 qualifier·조리형태의 독립 전체 구성. 변형명 보존; 원본 누락량에 역대입하지 않음",
+    "sourceUrl": "https://www.nics.go.kr/food/kfi/mgnNewmenumkFoodSelectNew/selectFoodDetail.json?fdCode=D051131",
+    "sourceSha256": "13872ba051eca3b529506d066a3ccda36399582b3e7ce90d26d046a997b8f1f7",
+    "compositionKind": "REFERENCE_RECIPE",
+    "ingredientCount": 6,
+    "testMethod": "reviewedMapping07"
+  },
+  {
+    "originalRecipeId": "MFDS-284",
+    "originalName": "꼬치어묵국",
+    "selectedId": "MENUZEN-D051173",
+    "selectedName": "꼬치어묵국",
+    "foodIds": [
+      "kfind-d405-310000000-0001",
+      "kfind-d505-310000000-0001",
+      "kfind-d605-310000000-0001",
+      "kfind-d705-310000000-0001"
+    ],
+    "method": "WHOLE_NAMED_SAME_DISH_REFERENCE",
+    "reason": "같은 꼬치어묵국 제목·어묵 국 조리형태; 전체 배합 사용",
+    "sourceUrl": "https://www.nics.go.kr/food/kfi/mgnNewmenumkFoodSelectNew/selectFoodDetail.json?fdCode=D051173",
+    "sourceSha256": "ad2a948e10d35eb6a5f2eb1afbb9d59192d8f00d6b44e4595488b0875eab2126",
+    "compositionKind": "REFERENCE_RECIPE",
+    "ingredientCount": 8,
+    "testMethod": "reviewedMapping08"
+  },
+  {
+    "originalRecipeId": "MFDS-228",
+    "originalName": "달걀야채오믈렛",
+    "selectedId": "MENUZEN-D095013",
+    "selectedName": "오믈렛",
+    "foodIds": [
+      "kfind-d409-457000000-0001",
+      "kfind-d509-457000000-0001",
+      "kfind-d609-457000000-0001"
+    ],
+    "method": "WHOLE_NAMED_SAME_DISH_REFERENCE",
+    "reason": "동일 명칭·명시 qualifier·조리형태의 독립 전체 구성. 변형명 보존; 원본 누락량에 역대입하지 않음",
+    "sourceUrl": "https://www.nics.go.kr/food/kfi/mgnNewmenumkFoodSelectNew/selectFoodDetail.json?fdCode=D095013",
+    "sourceSha256": "be50e0fd70e0809a5fa0fadcad0a8bd7d8d9d27dc366fbcafb0f8d2b035b501f",
+    "compositionKind": "REFERENCE_RECIPE",
+    "ingredientCount": 8,
+    "testMethod": "reviewedMapping09"
+  },
+  {
+    "originalRecipeId": "MFDS-271",
+    "originalName": "고구마줄기볶음",
+    "selectedId": "MENUZEN-D103009",
+    "selectedName": "고구마줄기볶음",
+    "foodIds": [
+      "kfind-d113-568000000-0001",
+      "kfind-d313-568000000-0001",
+      "kfind-d413-568000000-0001",
+      "kfind-d513-568000000-0001",
+      "kfind-d613-568000000-0001",
+      "kfind-d713-568000000-0001"
+    ],
+    "method": "WHOLE_NAMED_SAME_DISH_REFERENCE",
+    "reason": "동일 명칭·명시 qualifier·조리형태의 독립 전체 구성. 변형명 보존; 원본 누락량에 역대입하지 않음",
+    "sourceUrl": "https://www.nics.go.kr/food/kfi/mgnNewmenumkFoodSelectNew/selectFoodDetail.json?fdCode=D103009",
+    "sourceSha256": "5fcdf711085e2f369663867ca4a19917fe2f7c01e5bab1fe5dea9a825760b57f",
+    "compositionKind": "REFERENCE_RECIPE",
+    "ingredientCount": 8,
+    "testMethod": "reviewedMapping10"
+  },
+  {
+    "originalRecipeId": "RDA-89945",
+    "originalName": "밀가루수제비(수제비, 밀가루자베기)",
+    "selectedId": "MENUZEN-D031009",
+    "selectedName": "수제비",
+    "foodIds": [
+      "kfind-d103-160000000-0001"
+    ],
+    "method": "WHOLE_NAMED_SAME_DISH_REFERENCE",
+    "reason": "동일 명칭·명시 qualifier·조리형태의 독립 전체 구성. 변형명 보존; 원본 누락량에 역대입하지 않음",
+    "sourceUrl": "https://www.nics.go.kr/food/kfi/mgnNewmenumkFoodSelectNew/selectFoodDetail.json?fdCode=D031009",
+    "sourceSha256": "0582767a29cc33e9e0a14ab2297fdaf1ac13563a13fc9afeb1bf47e65b922a5a",
+    "compositionKind": "REFERENCE_RECIPE",
+    "ingredientCount": 9,
+    "testMethod": "reviewedMapping11"
+  },
+  {
+    "originalRecipeId": "RDA-90393",
+    "originalName": "만둣국(병시)",
+    "selectedId": "MENUZEN-D051147",
+    "selectedName": "만두국",
+    "foodIds": [
+      "kfind-d303-151000000-0001"
+    ],
+    "method": "WHOLE_NAMED_SAME_DISH_REFERENCE",
+    "reason": "동일 명칭·명시 qualifier·조리형태의 독립 전체 구성. 변형명 보존; 원본 누락량에 역대입하지 않음",
+    "sourceUrl": "https://www.nics.go.kr/food/kfi/mgnNewmenumkFoodSelectNew/selectFoodDetail.json?fdCode=D051147",
+    "sourceSha256": "87f371dff403f89e436470906192ae86d0425385fd84d10fbc029e4e8ff380d5",
+    "compositionKind": "REFERENCE_RECIPE",
+    "ingredientCount": 16,
+    "testMethod": "reviewedMapping12"
+  },
+  {
+    "originalRecipeId": "RDA-DIET-89421-0",
+    "originalName": "두부김치",
+    "selectedId": "KDCA-281-3306",
+    "selectedName": "두부김치, 돼지고기",
+    "foodIds": [
+      "kfind-d310-466000000-0001",
+      "kfind-d410-466000000-0001",
+      "kfind-d510-466000000-0001",
+      "kfind-d710-466000000-0001"
+    ],
+    "method": "WHOLE_NAMED_SAME_DISH_REFERENCE",
+    "reason": "두부·김치·돼지고기를 중심으로 한 두부김치, 돼지고기의 전체 조사 평균. 찌개와 구분하며 조사 평균 표시 유지",
+    "sourceUrl": "https://knhanes.kdca.go.kr/knhanes/archive/wsiEtcPblcnDtl.do",
+    "sourceSha256": "294b5f4138cb460d475726ecf660e4fbbe80592ba0edf5cfb10b99f3e57ad071",
+    "compositionKind": "SURVEY_AVERAGE",
+    "ingredientCount": 22,
+    "testMethod": "reviewedMapping13"
+  },
+  {
+    "originalRecipeId": "MFDS-200",
+    "originalName": "주꾸미볶음",
+    "selectedId": "KDCA-281-3710",
+    "selectedName": "주꾸미볶음, 채소",
+    "foodIds": [
+      "kfind-d310-493000000-0001",
+      "kfind-d410-493000000-0001",
+      "kfind-d610-493000000-0001"
+    ],
+    "method": "WHOLE_NAMED_SAME_DISH_REFERENCE",
+    "reason": "주꾸미볶음, 채소의 같은 주꾸미·채소 볶음 전체 조사평균. 먹물 자체 영양의 원본 누락에 역대입하지 않음",
+    "sourceUrl": "https://knhanes.kdca.go.kr/knhanes/archive/wsiEtcPblcnDtl.do",
+    "sourceSha256": "294b5f4138cb460d475726ecf660e4fbbe80592ba0edf5cfb10b99f3e57ad071",
+    "compositionKind": "SURVEY_AVERAGE",
+    "ingredientCount": 32,
+    "testMethod": "reviewedMapping14"
+  },
+  {
+    "originalRecipeId": "MFDS-203",
+    "originalName": "달래오이무침",
+    "selectedId": "KDCA-281-7626",
+    "selectedName": "오이생채, 달래",
+    "foodIds": [
+      "kfind-d514-644430000-0001",
+      "kfind-d614-644430000-0001"
+    ],
+    "method": "WHOLE_NAMED_SAME_DISH_REFERENCE",
+    "reason": "오이생채, 달래의 생 오이·달래 무침 전체 조사평균. 오이 개량종 그대로의 공개nutrition 항목을 사용; 다다기 품종을 추정하지 않음",
+    "sourceUrl": "https://knhanes.kdca.go.kr/knhanes/archive/wsiEtcPblcnDtl.do",
+    "sourceSha256": "294b5f4138cb460d475726ecf660e4fbbe80592ba0edf5cfb10b99f3e57ad071",
+    "compositionKind": "SURVEY_AVERAGE",
+    "ingredientCount": 15,
+    "testMethod": "reviewedMapping15"
+  },
+  {
+    "originalRecipeId": "MFDS-275",
+    "originalName": "건새우아욱국",
+    "selectedId": "MENUZEN-D052124",
+    "selectedName": "마른새우아욱국",
+    "foodIds": [
+      "kfind-d505-306440000-0001"
+    ],
+    "method": "WHOLE_NAMED_SAME_DISH_REFERENCE",
+    "reason": "아욱·된장·마른 새우 중심 국 전체 배합; 건새우 qualifier 보존",
+    "sourceUrl": "https://www.nics.go.kr/food/kfi/mgnNewmenumkFoodSelectNew/selectFoodDetail.json?fdCode=D052124",
+    "sourceSha256": "34c2d419cda4aa8d498a8fe6ed2bfa94f41f537b04ced28807d0703481ea80c9",
+    "compositionKind": "REFERENCE_RECIPE",
+    "ingredientCount": 8,
+    "testMethod": "reviewedMapping16"
+  },
+  {
+    "originalRecipeId": "MFDS-297",
+    "originalName": "도라지오이무침",
+    "selectedId": "MENUZEN-D132096",
+    "selectedName": "도라지오이무침",
+    "foodIds": [
+      "kfind-d514-619260000-0001",
+      "kfind-d614-619260000-0001",
+      "kfind-d714-619260000-0001"
+    ],
+    "method": "WHOLE_NAMED_SAME_DISH_REFERENCE",
+    "reason": "같은 도라지·오이 고추장 생채 전체 배합. 참고의 감식초는 원본 없는 식초량에 역대입하지 않음",
+    "sourceUrl": "https://www.nics.go.kr/food/kfi/mgnNewmenumkFoodSelectNew/selectFoodDetail.json?fdCode=D132096",
+    "sourceSha256": "3759be3cef5e3b6aede60b8be908c9319fb14d7d2de22d466323be66fa58191e",
+    "compositionKind": "REFERENCE_RECIPE",
+    "ingredientCount": 10,
+    "testMethod": "reviewedMapping17"
+  },
+  {
+    "originalRecipeId": "MFDS-324",
+    "originalName": "마늘쫑새우볶음",
+    "selectedId": "KDCA-281-12175",
+    "selectedName": "마늘쫑볶음, 건새우",
+    "foodIds": [
+      "kfind-d410-469050000-0001",
+      "kfind-d510-469050000-0001",
+      "kfind-d710-469050000-0001"
+    ],
+    "method": "WHOLE_NAMED_SAME_DISH_REFERENCE",
+    "reason": "마늘쫑볶음, 건새우의 전체 조사평균; 건새우 qualifier와 조사용 표시 보존",
+    "sourceUrl": "https://knhanes.kdca.go.kr/knhanes/archive/wsiEtcPblcnDtl.do",
+    "sourceSha256": "294b5f4138cb460d475726ecf660e4fbbe80592ba0edf5cfb10b99f3e57ad071",
+    "compositionKind": "SURVEY_AVERAGE",
+    "ingredientCount": 11,
+    "testMethod": "reviewedMapping18"
+  },
+  {
+    "originalRecipeId": "MFDS-205",
+    "originalName": "콩나물겨자채",
+    "selectedId": "MENUZEN-D132037",
+    "selectedName": "콩나물무침(겨자, 미나리)",
+    "foodIds": [
+      "kfind-d414-721000000-0001",
+      "kfind-d514-721000000-0001"
+    ],
+    "method": "WHOLE_NAMED_SAME_DISH_REFERENCE",
+    "reason": "콩나물무침(겨자, 미나리)의 데친 콩나물 겨자 냉채 전체 참고 배합. 미나리 변형명 유지; 원본 해파리 nutrition을 대체하지 않음",
+    "sourceUrl": "https://www.nics.go.kr/food/kfi/mgnNewmenumkFoodSelectNew/selectFoodDetail.json?fdCode=D132037",
+    "sourceSha256": "1ead7c01b26907d43a7f49e12f6cbc949c5e5fa049f568ffca8a5f7842788d30",
+    "compositionKind": "REFERENCE_RECIPE",
+    "ingredientCount": 10,
+    "testMethod": "reviewedMapping19"
+  },
+  {
+    "originalRecipeId": "MFDS-346",
+    "originalName": "콩나물겨자냉채",
+    "selectedId": "MENUZEN-D132037",
+    "selectedName": "콩나물무침(겨자, 미나리)",
+    "foodIds": [
+      "kfind-d414-721000000-0001",
+      "kfind-d514-721000000-0001"
+    ],
+    "method": "WHOLE_NAMED_SAME_DISH_REFERENCE",
+    "reason": "콩나물무침(겨자, 미나리)의 데친 콩나물 겨자 냉채 전체 배합. 미나리 변형명 유지; 오이 양을 역대입하지 않음",
+    "sourceUrl": "https://www.nics.go.kr/food/kfi/mgnNewmenumkFoodSelectNew/selectFoodDetail.json?fdCode=D132037",
+    "sourceSha256": "1ead7c01b26907d43a7f49e12f6cbc949c5e5fa049f568ffca8a5f7842788d30",
+    "compositionKind": "REFERENCE_RECIPE",
+    "ingredientCount": 10,
+    "testMethod": "reviewedMapping20"
+  }
+]

@@ -1,6 +1,9 @@
 package com.example.healthcare.ui.screens
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
@@ -15,6 +18,8 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyListState
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
@@ -51,6 +56,8 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateMapOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
@@ -60,6 +67,7 @@ import androidx.compose.ui.graphics.FilterQuality
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.imageResource
 import androidx.compose.ui.semantics.heading
@@ -69,6 +77,8 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.example.healthcare.data.entity.FoodBrandSummary
 import com.example.healthcare.R
+import com.example.healthcare.HealthcareApplication
+import com.example.healthcare.data.entity.UserExcludedFood
 import com.example.healthcare.data.entity.FoodItem
 import com.example.healthcare.data.entity.FrequentFood
 import com.example.healthcare.data.entity.MealRecord
@@ -77,7 +87,12 @@ import com.example.healthcare.domain.NutritionBasisCandidate
 import com.example.healthcare.domain.FoodSearchPolicy
 import com.example.healthcare.domain.FoodBrowseCategory
 import com.example.healthcare.domain.FranchiseCatalog
+import com.example.healthcare.domain.FranchiseMenu
 import com.example.healthcare.domain.PortionGuide
+import com.example.healthcare.domain.FoodAmountPolicy
+import com.example.healthcare.domain.FoodMetadataPolicy
+import com.example.healthcare.ui.components.ContextualAllergyNotice
+import kotlinx.coroutines.flow.flowOf
 import com.example.healthcare.ui.components.SectionHeader
 import com.example.healthcare.ui.components.WellnessCard
 import com.example.healthcare.ui.components.WellnessEmptyState
@@ -110,6 +125,8 @@ internal fun SmartFoodInputScreen(
     onManual: () -> Unit,
     onRegisterBarcode: () -> Unit,
     onRepeatRecent: (MealRecord) -> Unit,
+    onRecentAmountSelected: (MealRecord) -> Unit = {},
+    onRepeatSaved: (FrequentFood) -> Unit = {},
     onSearchModeSelected: (FoodSearchMode) -> Unit = {},
     onBrandSelected: (FoodBrandSummary) -> Unit = {},
     onBrandBack: () -> Unit = {},
@@ -122,8 +139,19 @@ internal fun SmartFoodInputScreen(
     onFavoriteFoodSelected: (FrequentFood) -> Unit = {},
     onFavoriteToggle: (FoodItem) -> Unit = {},
     onFavoriteRemoved: (FrequentFood) -> Unit = {},
-    onOpenHistory: () -> Unit = {}
+    onOpenHistory: () -> Unit = {},
+    onOfficialMenuSelected: (FranchiseMenu) -> Unit = {},
+    configuredAllergies: Set<String>? = null,
+    searchListState: LazyListState = rememberLazyListState()
 ) {
+    val application = LocalContext.current.applicationContext as? HealthcareApplication
+    val allergySource = remember(application, configuredAllergies) {
+        if (configuredAllergies == null) application?.mealCoachRepository?.excludedFoods
+            ?: flowOf(emptyList<UserExcludedFood>()) else flowOf(emptyList<UserExcludedFood>())
+    }
+    val excludedFoods by allergySource.collectAsState(initial = emptyList())
+    val allergies = configuredAllergies ?: excludedFoods.filter { it.exclusionType == "ALLERGY" }
+        .map { it.normalizedFoodName }.toSet()
     Scaffold(
         topBar = {
             if (state.mode != SmartInputMode.HUB) {
@@ -157,9 +185,11 @@ internal fun SmartFoodInputScreen(
                 onManual = onManual,
                 onOpenHistory = onOpenHistory,
                 onRepeatRecent = onRepeatRecent,
+                onRecentAmountSelected = onRecentAmountSelected,
                 modifier = Modifier.padding(innerPadding)
             )
             SmartInputMode.SEARCH -> FoodSearchContent(
+                listState = searchListState,
                 state = state,
                 onQueryChange = onSearchQueryChange,
                 onFoodSelected = onFoodSelected,
@@ -176,6 +206,9 @@ internal fun SmartFoodInputScreen(
                 onFavoriteFoodSelected = onFavoriteFoodSelected,
                 onFavoriteToggle = onFavoriteToggle,
                 onFavoriteRemoved = onFavoriteRemoved,
+                onRepeatSaved = onRepeatSaved,
+                onOfficialMenuSelected = onOfficialMenuSelected,
+                configuredAllergies = allergies,
                 modifier = Modifier.padding(innerPadding)
             )
             SmartInputMode.QUICK_RECORD -> LoadingContent("빠른 기록을 준비하고 있어요", Modifier.padding(innerPadding))
@@ -224,13 +257,14 @@ private fun SmartInputHub(
     onManual: () -> Unit,
     onOpenHistory: () -> Unit,
     onRepeatRecent: (MealRecord) -> Unit,
+    onRecentAmountSelected: (MealRecord) -> Unit,
     modifier: Modifier = Modifier
 ) {
     BoxWithConstraints(modifier = modifier.fillMaxSize()) {
         val dense = androidx.compose.ui.platform.LocalDensity.current.fontScale >= 1.4f || maxHeight < 600.dp
         val gap = if (dense) 6.dp else 10.dp
         Column(
-            modifier = Modifier.fillMaxSize().padding(
+            modifier = Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(
                 horizontal = WellnessSpacing.ScreenHorizontal,
                 vertical = if (dense) 5.dp else WellnessSpacing.Compact
             ),
@@ -293,24 +327,27 @@ private fun SmartInputHub(
             }
             SelectedDateRecordSummary(dateMeals = dateMeals, onOpenHistory = onOpenHistory)
             if (recentMeals.isNotEmpty()) {
-                Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                    Text("최근 음식", style = MaterialTheme.typography.labelLarge)
-                    recentMeals.take(3).forEach { meal ->
-                        Surface(
-                            onClick = { onRepeatRecent(meal) },
-                            shape = MaterialTheme.shapes.small,
-                            color = MaterialTheme.colorScheme.surfaceVariant,
-                            modifier = Modifier.weight(1f).height(34.dp)
-                        ) {
-                            Text(meal.foodName, style = MaterialTheme.typography.labelSmall,
-                                maxLines = 1, overflow = TextOverflow.Ellipsis,
-                                modifier = Modifier.padding(horizontal = 8.dp, vertical = 7.dp))
+                Text("최근 음식", style = MaterialTheme.typography.labelLarge)
+                LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                    items(recentMeals.take(3), key = { it.id }) { meal ->
+                        OutlinedCard(onClick = { onRecentAmountSelected(meal) },
+                            modifier = Modifier.widthIn(min = 160.dp, max = 230.dp).testTag("recent-food-${meal.id}")) {
+                            Column(Modifier.padding(12.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                                Text(meal.foodName, style = MaterialTheme.typography.labelLarge, maxLines = 2)
+                                TextButton(onClick = { onRecentAmountSelected(meal) },
+                                    modifier = Modifier.testTag("change-recent-amount-${meal.id}")) { Text(listOfNotNull(meal.portionDisplayLabel ?: meal.servingAmount?.let {
+                                    com.example.healthcare.domain.RecordedAmountSnapshot.format(it) + meal.servingUnit.orEmpty()
+                                }, meal.calories.takeIf { it > 0 }?.let { "$it kcal" } ?: "칼로리 미확인").joinToString(" · "),
+                                    style = MaterialTheme.typography.bodySmall) }
+                                TextButton(onClick = { onRepeatRecent(meal) },
+                                    modifier = Modifier.testTag("repeat-recent-${meal.id}")) {
+                                    Text("같은 양으로 기록", style = MaterialTheme.typography.labelLarge)
+                                }
+                            }
                         }
                     }
                 }
             }
-            androidx.compose.foundation.layout.Spacer(Modifier.weight(1f))
         }
     }
 }
@@ -487,6 +524,7 @@ private fun SmartInputAction(
 
 @Composable
 private fun FoodSearchContent(
+    listState: LazyListState,
     state: SmartInputUiState,
     onQueryChange: (String) -> Unit,
     onFoodSelected: (FoodItem) -> Unit,
@@ -503,18 +541,40 @@ private fun FoodSearchContent(
     onFavoriteFoodSelected: (FrequentFood) -> Unit,
     onFavoriteToggle: (FoodItem) -> Unit,
     onFavoriteRemoved: (FrequentFood) -> Unit,
+    onRepeatSaved: (FrequentFood) -> Unit,
+    onOfficialMenuSelected: (FranchiseMenu) -> Unit,
+    configuredAllergies: Set<String>,
     modifier: Modifier = Modifier
 ) {
     val brandFoods = state.brandProducts.filter { food ->
-        state.selectedBrandCategory == null || food.category == state.selectedBrandCategory
+        state.selectedBrandCategory == null || if (state.searchMode == FoodSearchMode.FRANCHISE)
+            FranchiseCatalog.matchesFilter(food, state.selectedBrandCategory)
+        else food.category == state.selectedBrandCategory
     }
     val officialMenuReferences = state.selectedBrand?.let {
-        FranchiseCatalog.officialMenuNames(it.brand, state.searchQuery)
-    }.orEmpty()
+        FranchiseCatalog.officialMenus(it.brand, state.searchQuery)
+    }.orEmpty().filter { menu -> state.selectedBrandCategory == null ||
+        FranchiseCatalog.matchesFilter(menu, state.selectedBrandCategory) }
     val groupedResults = FoodSearchPolicy.groupSearchResults(state.searchResults, state.searchQuery)
+    val visibleBrands = if (state.searchMode == FoodSearchMode.FRANCHISE) state.brandResults
+        else FoodSearchPolicy.visibleBrands(state.brandResults)
+    val directBrand = visibleBrands.firstOrNull { brand ->
+        FranchiseCatalog.canonicalBrandForQuery(state.searchQuery) == brand.brand ||
+            FoodSearchPolicy.queries(state.searchQuery).any { it == FoodSearchPolicy.normalize(brand.brand) }
+    }
+    val directOfficialMenus = if (state.selectedBrand == null && state.searchMode == FoodSearchMode.FOOD) {
+        directBrand?.let { brand ->
+            val nutrientNames = state.searchResults.filter { it.brand == brand.brand }
+                .map { FoodSearchPolicy.normalize(it.name) }.toSet()
+            FranchiseCatalog.officialMenus(brand.brand,state.searchQuery).filterNot {
+                FoodSearchPolicy.normalize(it.name) in nutrientNames
+            }
+        }.orEmpty()
+    } else emptyList()
     val expandedGroups = remember(state.searchQuery, state.searchResults) { mutableStateMapOf<String, Boolean>() }
     val favoriteIds = favoriteFoods.mapNotNull(FrequentFood::foodItemId).toSet()
     LazyColumn(
+        state = listState,
         modifier = modifier.fillMaxSize(),
         contentPadding = PaddingValues(WellnessSpacing.ScreenHorizontal, WellnessSpacing.Compact, WellnessSpacing.ScreenHorizontal, WellnessSpacing.Section),
         verticalArrangement = Arrangement.spacedBy(12.dp)
@@ -530,13 +590,10 @@ private fun FoodSearchContent(
                 },
                 supportingText = when {
                     state.isCompanionSearch -> "각 음식의 실제 영양정보를 따로 계산해 합산해요."
-                    state.selectedBrand != null && state.searchMode == FoodSearchMode.FRANCHISE &&
-                        state.selectedBrand.productCount == 0 && officialMenuReferences.isNotEmpty() ->
-                        "공식 메뉴명 ${officialMenuReferences.size}개 · 영양정보 미확인"
                     state.selectedBrand != null && state.searchMode == FoodSearchMode.FRANCHISE ->
-                        "공식 영양정보로 확인된 메뉴 ${state.selectedBrand.productCount}개"
+                        "메뉴 ${state.selectedBrand.productCount}개 · 영양정보 제공 여부를 표시해요."
                     state.selectedBrand != null -> "공식 데이터에 등록된 제품 ${state.selectedBrand.productCount}개"
-                    state.searchMode == FoodSearchMode.FRANCHISE -> "공식 영양정보가 확인된 외식 브랜드만 보여드려요."
+                    state.searchMode == FoodSearchMode.FRANCHISE -> "브랜드의 공식 메뉴와 확인된 영양정보를 찾아요."
                     state.searchMode == FoodSearchMode.BRAND -> "공식 데이터의 업체명을 그대로 보여드려요."
                     else -> "음식·제품·프랜차이즈 이름을 입력해도 괜찮아요."
                 }
@@ -577,11 +634,11 @@ private fun FoodSearchContent(
                             label = { Text("전체") }
                         )
                     }
-                    items(FranchiseCatalog.categories, key = { it }) { category ->
+                    items(FranchiseCatalog.brandFilterCategories, key = { it.label }) { category ->
                         FilterChip(
-                            selected = state.selectedBrandCategory == category,
-                            onClick = { onBrandCategorySelected(category) },
-                            label = { Text(category) }
+                            selected = state.selectedBrandCategory == category.label,
+                            onClick = { onBrandCategorySelected(category.label) },
+                            label = { Text(category.label) }
                         )
                     }
                 }
@@ -673,6 +730,8 @@ private fun FoodSearchContent(
                                                 style = MaterialTheme.typography.bodySmall,
                                                 color = MaterialTheme.colorScheme.onSurfaceVariant
                                             )
+                                            TextButton(onClick = { onRepeatSaved(food) },
+                                                modifier = Modifier.testTag("repeat-saved-${food.id}")) { Text("같은 양으로 기록") }
                                         }
                                         IconButton(onClick = { onFavoriteRemoved(food) }, modifier = Modifier.size(48.dp)) {
                                             Icon(Icons.Rounded.Star, contentDescription = "${food.foodName} 즐겨찾기 해제")
@@ -707,6 +766,8 @@ private fun FoodSearchContent(
                                             style = MaterialTheme.typography.bodySmall,
                                             color = MaterialTheme.colorScheme.onSurfaceVariant
                                         )
+                                        TextButton(onClick = { onRepeatSaved(food) },
+                                            modifier = Modifier.testTag("repeat-frequent-${food.id}")) { Text("같은 양으로 기록") }
                                     }
                                     IconButton(onClick = { onFrequentFoodDeleted(food) }) {
                                         Icon(Icons.Rounded.Delete, contentDescription = "${food.foodName} 자주 먹는 음식에서 삭제")
@@ -724,20 +785,20 @@ private fun FoodSearchContent(
         if (state.isSearching) item { CircularProgressIndicator(Modifier.padding(20.dp)) }
         when {
             state.searchMode in setOf(FoodSearchMode.BRAND, FoodSearchMode.FRANCHISE) && state.selectedBrand == null -> {
-                if (state.searchQuery.isNotBlank() && !state.isSearching && state.brandResults.isEmpty()) {
+                if (state.searchQuery.isNotBlank() && !state.isSearching && visibleBrands.isEmpty()) {
                     item {
                         WellnessEmptyState(
                             icon = Icons.Rounded.RestaurantMenu,
                             title = if (state.searchMode == FoodSearchMode.FRANCHISE) "해당 프랜차이즈를 찾지 못했어요"
                                 else "해당 브랜드·제조사를 찾지 못했어요",
                             message = if (state.searchMode == FoodSearchMode.FRANCHISE)
-                                "공식 K-FIND 영양정보가 확인된 브랜드만 제공해요."
+                                "브랜드 공식 메뉴와 공공 영양정보에 등록된 브랜드를 제공해요."
                             else "공식 데이터의 업체명과 다를 수 있어요. 이름을 짧게 다시 검색해 주세요."
                         )
                     }
                 }
-                items(state.brandResults, key = FoodBrandSummary::brand) { brand ->
-                    OutlinedCard(onClick = { onBrandSelected(brand) }, modifier = Modifier.fillMaxWidth()) {
+                items(visibleBrands, key = FoodBrandSummary::brand) { brand ->
+                    OutlinedCard(onClick = { onBrandSelected(brand) }, modifier = Modifier.fillMaxWidth().testTag("brand-result-${brand.brand}")) {
                         Row(
                             Modifier.fillMaxWidth().padding(16.dp),
                             horizontalArrangement = Arrangement.spacedBy(12.dp),
@@ -746,9 +807,8 @@ private fun FoodSearchContent(
                             Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(4.dp)) {
                                 Text(brand.brand, style = MaterialTheme.typography.titleMedium, maxLines = 2,
                                     overflow = TextOverflow.Ellipsis)
-                                Text(if (state.searchMode == FoodSearchMode.FRANCHISE && brand.productCount == 0)
-                                    "공식 영양정보가 확인된 메뉴 없음"
-                                else "${if (state.searchMode == FoodSearchMode.FRANCHISE) "메뉴" else "제품"} ${brand.productCount}개", style = MaterialTheme.typography.bodyMedium,
+                                Text(if (state.searchMode == FoodSearchMode.FRANCHISE && brand.productCount == 0) "공식 메뉴 자료 확인 필요"
+                                    else "${if (state.searchMode == FoodSearchMode.FRANCHISE) "메뉴" else "제품"} ${brand.productCount}개", style = MaterialTheme.typography.bodyMedium,
                                     color = MaterialTheme.colorScheme.onSurfaceVariant)
                             }
                             Icon(Icons.Rounded.ChevronRight, contentDescription = null)
@@ -757,7 +817,9 @@ private fun FoodSearchContent(
                 }
             }
             state.selectedBrand != null -> {
-                if (state.brandCategories.isNotEmpty()) {
+                val visibleBrandCategories = (state.brandCategories + listOfNotNull(state.selectedBrandCategory)
+                    .filter { label -> FranchiseCatalog.filterCategories.any { it.label == label } }).distinct()
+                if (visibleBrandCategories.isNotEmpty()) {
                     item {
                         LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                             item {
@@ -767,7 +829,7 @@ private fun FoodSearchContent(
                                     label = { Text("전체") }
                                 )
                             }
-                            items(state.brandCategories, key = { it }) { category ->
+                            items(visibleBrandCategories, key = { it }) { category ->
                                 FilterChip(
                                     selected = state.selectedBrandCategory == category,
                                     onClick = { onBrandCategorySelected(category) },
@@ -781,8 +843,11 @@ private fun FoodSearchContent(
                     item {
                         WellnessEmptyState(
                             icon = Icons.Rounded.RestaurantMenu,
-                            title = "조건에 맞는 제품이 없어요",
-                            message = "검색어를 지우거나 다른 분류를 선택해 주세요."
+                            title = if (state.searchMode == FoodSearchMode.FRANCHISE && state.selectedBrand.productCount == 0)
+                                "이 브랜드의 메뉴 자료를 확인 중이에요" else "조건에 맞는 제품이 없어요",
+                            message = if (state.searchMode == FoodSearchMode.FRANCHISE && state.selectedBrand.productCount == 0)
+                                "확인된 메뉴와 영양정보가 아직 없습니다. 다른 브랜드를 선택하거나 확인한 정보로 직접 기록해 주세요."
+                                else "검색어를 지우거나 다른 분류를 선택해 주세요."
                         )
                     }
                 }
@@ -791,23 +856,17 @@ private fun FoodSearchContent(
                         food = food,
                         isFavorite = food.id in favoriteIds,
                         onFoodSelected = onFoodSelected,
-                        onFavoriteToggle = onFavoriteToggle
+                        onFavoriteToggle = onFavoriteToggle,
+                        configuredAllergies = configuredAllergies
                     )
                 }
                 if (officialMenuReferences.isNotEmpty()) {
                     item {
-                        Text("공식 메뉴명 참고", style = MaterialTheme.typography.titleSmall,
+                        Text("공식 메뉴 · 직접 기록", style = MaterialTheme.typography.titleSmall,
                             color = MaterialTheme.colorScheme.primary)
                     }
-                    items(officialMenuReferences, key = { "official-menu-$it" }) { menuName ->
-                        OutlinedCard(Modifier.fillMaxWidth()) {
-                            Column(Modifier.fillMaxWidth().padding(16.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
-                                Text(menuName, style = MaterialTheme.typography.titleMedium)
-                                Text("영양정보 없음 · 기록 항목으로 선택할 수 없어요",
-                                    style = MaterialTheme.typography.bodySmall,
-                                    color = MaterialTheme.colorScheme.onSurfaceVariant)
-                            }
-                        }
+                    items(officialMenuReferences, key = FranchiseMenu::id) { menu ->
+                        OfficialFranchiseMenuCard(menu, configuredAllergies, onOfficialMenuSelected)
                     }
                     item {
                         OutlinedButton(onClick = onManual, modifier = Modifier.fillMaxWidth()) {
@@ -824,7 +883,7 @@ private fun FoodSearchContent(
                         color = MaterialTheme.colorScheme.onSurfaceVariant)
                 }
                 if (state.searchQuery.isNotBlank() && !state.isSearching && state.searchResults.isEmpty() &&
-                    state.brandResults.isEmpty()) {
+                    visibleBrands.isEmpty() && directOfficialMenus.isEmpty()) {
                     item {
                         WellnessEmptyState(
                             icon = Icons.Rounded.RestaurantMenu,
@@ -841,39 +900,54 @@ private fun FoodSearchContent(
                         Text(if (state.isCompanionSearch) "기록 화면으로 돌아가기" else "직접 입력으로 전환")
                     } }
                 }
-                groupedResults.forEach { group ->
-                    val expanded = expandedGroups[group.key] == true
-                    item(key = "name-group-${group.key}") {
-                        FoodSearchResultCard(
-                            food = group.representative,
-                            isFavorite = group.representative.id in favoriteIds,
-                            alternativeCount = group.alternatives.size,
-                            alternativesExpanded = expanded,
-                            onAlternativesToggle = {
-                                expandedGroups[group.key] = !expanded
-                            },
-                            onFoodSelected = onFoodSelected,
-                            onFavoriteToggle = onFavoriteToggle
-                        )
+                val brandGroups = if (directBrand != null) groupedResults.filter {
+                    it.representative.brand == directBrand.brand
+                } else emptyList()
+                val otherGroups = groupedResults.filterNot { it in brandGroups }
+                listOf(brandGroups, otherGroups).forEachIndexed { sectionIndex, groups ->
+                    if (sectionIndex == 1 && directOfficialMenus.isNotEmpty()) {
+                        item { Text("${directBrand?.brand} 공식 메뉴", style = MaterialTheme.typography.titleSmall,
+                            color = MaterialTheme.colorScheme.primary) }
+                        items(directOfficialMenus, key = { "direct-menu-${it.id}" }) { menu ->
+                            OfficialFranchiseMenuCard(menu, configuredAllergies, onOfficialMenuSelected)
+                        }
                     }
-                    if (expanded) {
-                        items(group.alternatives, key = { "alternative-${it.id}" }) { food ->
+                    groups.forEach { group ->
+                        val expanded = expandedGroups[group.key] == true
+                        item(key = "name-group-${group.key}") {
                             FoodSearchResultCard(
-                                food = food,
-                                isFavorite = food.id in favoriteIds,
+                                food = group.representative,
+                                isFavorite = group.representative.id in favoriteIds,
+                                alternativeCount = group.alternatives.size,
+                                alternativesExpanded = expanded,
+                                onAlternativesToggle = {
+                                    expandedGroups[group.key] = !expanded
+                                },
                                 onFoodSelected = onFoodSelected,
-                                onFavoriteToggle = onFavoriteToggle
+                                onFavoriteToggle = onFavoriteToggle,
+                                configuredAllergies = configuredAllergies
                             )
+                        }
+                        if (expanded) {
+                            items(group.alternatives, key = { "alternative-${it.id}" }) { food ->
+                                FoodSearchResultCard(
+                                    food = food,
+                                    isFavorite = food.id in favoriteIds,
+                                    onFoodSelected = onFoodSelected,
+                                    onFavoriteToggle = onFavoriteToggle,
+                                    configuredAllergies = configuredAllergies
+                                )
+                            }
                         }
                     }
                 }
-                if (state.brandResults.isNotEmpty()) {
+                if (visibleBrands.isNotEmpty()) {
                     item {
                         Text("관련 프랜차이즈", style = MaterialTheme.typography.titleSmall,
                             color = MaterialTheme.colorScheme.primary,
                             modifier = Modifier.padding(top = 8.dp))
                     }
-                    items(state.brandResults.take(8), key = { "related-${it.brand}" }) { brand ->
+                    items(visibleBrands.take(8), key = { "related-${it.brand}" }) { brand ->
                         OutlinedCard(onClick = { onBrandSelected(brand) }, modifier = Modifier.fillMaxWidth()) {
                             Row(
                                 Modifier.fillMaxWidth().padding(16.dp),
@@ -889,7 +963,7 @@ private fun FoodSearchContent(
                                     )
                                 }
                                 Text(
-                                    if (brand.productCount > 0) "메뉴 ${brand.productCount}개" else "영양정보 미확인",
+                                    "메뉴 ${brand.productCount}개",
                                     style = MaterialTheme.typography.labelMedium
                                 )
                             }
@@ -917,12 +991,12 @@ private fun FoodSearchResultCard(
     onFavoriteToggle: (FoodItem) -> Unit,
     alternativeCount: Int = 0,
     alternativesExpanded: Boolean = false,
-    onAlternativesToggle: () -> Unit = {}
+    onAlternativesToggle: () -> Unit = {},
+    configuredAllergies: Set<String> = emptySet()
 ) {
-    val needsReview = FoodSearchPolicy.needsBasisReview(food)
+    val needsReview = !FoodAmountPolicy.canCalculate(food)
     Card(
         onClick = { onFoodSelected(food) },
-        enabled = !needsReview,
         modifier = Modifier.fillMaxWidth().testTag("food-search-result-${food.id}"),
         colors = CardDefaults.cardColors(
             containerColor = if (needsReview) MaterialTheme.colorScheme.surfaceVariant else MaterialTheme.colorScheme.surface
@@ -965,13 +1039,32 @@ private fun FoodSearchResultCard(
                     color = MaterialTheme.colorScheme.secondary)
             }
             if (needsReview) {
-                Text("영양정보 단위 확인 필요", style = MaterialTheme.typography.bodyLarge)
-                Text("공식 영양정보 단위를 일상적인 섭취량으로 바로 바꾸기 어려워요. 다른 항목을 선택하거나 직접 입력해 주세요.",
+                Text("먹은 양과 칼로리를 직접 확인해요", style = MaterialTheme.typography.bodyLarge)
+                Text("선택하면 음식 이름을 채운 직접 입력으로 이어져요.",
                     style = MaterialTheme.typography.bodySmall)
+                if (food.energyKcal.isFinite() && food.energyKcal > 0) {
+                    Text("원본 기준 ${com.example.healthcare.domain.RecordedAmountSnapshot.format(food.referenceAmount)}${food.unit} · ${NumberFormat.getNumberInstance().format(food.energyKcal)} kcal",
+                        style = MaterialTheme.typography.bodySmall)
+                }
             } else {
                 Text(PortionGuide.resultServingSummary(food), style = MaterialTheme.typography.bodyLarge)
+                PortionGuide.resultServingBasis(food)?.let { basis ->
+                    Text(basis, style = MaterialTheme.typography.bodySmall)
+                }
             }
-            Text("${food.category?.let { "$it · " }.orEmpty()}출처 ${food.sourceType} · 데이터 ${food.dataVersion}",
+            val metadata = FoodMetadataPolicy.lookup(food.id)
+            metadata?.let {
+                ContextualAllergyNotice(configuredAllergies, it.allergens, it.allergenInfoComplete,
+                    decisionPoint = false, mayContainAllergens = it.mayContainAllergens)
+            }
+            // Composition evidence may be a reference recipe; it is not the nutrition source.
+            val sourceName = when {
+                food.sourceType == "OFFICIAL-BRAND-NUTRITION" -> "브랜드 공식 영양정보"
+                food.sourceType.startsWith("K-FIND") -> "식약처 식품영양자료"
+                food.sourceType == "USDA-SR-LEGACY" -> "USDA 식품영양자료"
+                else -> metadata?.sourceName?.takeIf(String::isNotBlank) ?: food.sourceType
+            }
+            Text("${food.category?.let { "$it · " }.orEmpty()}$sourceName${metadata?.checkedAt?.takeIf(String::isNotBlank)?.let { " · 확인 $it" }.orEmpty()}",
                 style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
             if (alternativeCount > 0) {
                 TextButton(
@@ -981,9 +1074,34 @@ private fun FoodSearchResultCard(
                         .align(Alignment.End)
                         .testTag("food-search-alternatives-${food.id}")
                 ) {
-                    Text(if (alternativesExpanded) "다른 제품 접기" else "다른 제품 ${alternativeCount}개")
+                    Text(FoodSearchPolicy.alternativesLabel(food, alternativeCount, alternativesExpanded))
                 }
             }
+        }
+    }
+}
+
+@Composable
+private fun OfficialFranchiseMenuCard(menu: FranchiseMenu, configuredAllergies: Set<String>,
+    onSelected: (FranchiseMenu) -> Unit) {
+    OutlinedCard(onClick = { onSelected(menu) },
+        modifier = Modifier.fillMaxWidth().testTag("franchise-menu-${menu.id}")) {
+        Column(Modifier.fillMaxWidth().padding(16.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+            Text(menu.name, style = MaterialTheme.typography.titleMedium)
+            Text(menu.brand, style = MaterialTheme.typography.labelMedium)
+            Text(menu.energyKcal?.takeIf { it.isFinite() && it >= 0 }?.let {
+                "${NumberFormat.getNumberInstance().format(it)} kcal · 확인한 양으로 직접 기록"
+            } ?: "영양정보 미제공 · 메뉴 이름을 넣고 직접 기록",
+                style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+            FoodMetadataPolicy.lookup(menu.id)?.let {
+                ContextualAllergyNotice(configuredAllergies, it.allergens, it.allergenInfoComplete,
+                    decisionPoint = false, mayContainAllergens = it.mayContainAllergens)
+            }
+            Text(if (menu.saleState == "PUBLIC_TOURISM_STORE_MENU") "출처: 공공 관광 매장 메뉴 · 서울 신길로 39 · 확인 ${menu.verifiedAt}"
+                else if (menu.saleState == "OFFICIAL_ORDER_BRAND_SALES_UNVERIFIED")
+                    "출처: 공식 주문 브랜드 메뉴 · 현재 판매 여부 미확인 · 원문 갱신 ${menu.sourceDate} · 확인 ${menu.verifiedAt}"
+                else "출처: 브랜드 공식 메뉴 · 확인 ${menu.verifiedAt}", style = MaterialTheme.typography.labelSmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant)
         }
     }
 }

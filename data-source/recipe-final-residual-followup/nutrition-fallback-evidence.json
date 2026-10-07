@@ -1,0 +1,23 @@
+[
+  {
+    "ingredient": "오이, 개량종, 생것",
+    "code": "R106-148010001-0000",
+    "name": "오이_개량종_생것",
+    "basis": "같은 재료·개량종·생것·100g. 다다기 품종 추정 없음",
+    "sourceArtifact": "data-source/recipe-linkage-strategy/public-raw-nutrients.json"
+  },
+  {
+    "ingredient": "키위, 생것",
+    "code": "MFDS-LEGACY-2096",
+    "name": "키위, 생것",
+    "basis": "식약처 공개 기존 DB exact generic 이름·생것·100g. 골드/그린 추정 없음",
+    "sourceArtifact": "data-source/recipe-linkage-strategy/mfds-legacy-nutrients-rows.json"
+  },
+  {
+    "ingredient": "조미료",
+    "code": "MFDS-LEGACY-4574",
+    "name": "조미료",
+    "basis": "식약처 공개 기존 DB 동일 generic 이름·조미료류·100g. 특정 제조사/MSG/추출액으로 대체 없음",
+    "sourceArtifact": "data-source/recipe-linkage-strategy/mfds-legacy-nutrients-rows.json"
+  }
+]

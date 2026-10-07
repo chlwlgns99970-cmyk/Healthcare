@@ -1,0 +1,13 @@
+{
+  "officialCompositionCount": 613,
+  "officialIngredientRows": 13165,
+  "matchedReferenceCount": 43,
+  "matchedDishCount": 26,
+  "completeReferenceCount": 5,
+  "amountRowsWithSeparateSurveyReference": 161,
+  "originalAmountResolved": 0,
+  "originalRecipeCompletionAdded": 0,
+  "appAssetChanged": false,
+  "warning": "조사 평균 자료는 원본 중량·조리 레시피를 확정하지 않음",
+  "sourceSha256": "294b5f4138cb460d475726ecf660e4fbbe80592ba0edf5cfb10b99f3e57ad071"
+}

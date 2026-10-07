@@ -12,6 +12,7 @@ import com.example.healthcare.data.appupdate.AppReleaseMetadata
 import com.example.healthcare.data.appupdate.AppUpdatePhase
 import com.example.healthcare.data.appupdate.AppUpdateUiState
 import com.example.healthcare.ui.components.AppUpdateOverlay
+import com.example.healthcare.ui.screens.SettingsScreen
 import com.example.healthcare.ui.theme.HealthCareTheme
 import org.junit.Rule
 import org.junit.Test
@@ -96,6 +97,22 @@ class AppUpdateUiTest {
         composeRule.onNodeWithText("다시 시도").assertIsDisplayed().performClick()
         composeRule.runOnIdle { assertEquals(1, retries) }
         composeRule.onAllNodesWithText("SIGNER_READ_FAILED").assertCountEquals(0)
+    }
+
+    @Test
+    fun settingsManualUpdateCheckRemainsAvailable() {
+        var checks = 0
+        composeRule.setContent {
+            HealthCareTheme {
+                SettingsScreen(
+                    initialSection = "APP_INFO",
+                    onCheckAppUpdate = { checks++ }
+                )
+            }
+        }
+
+        composeRule.onNodeWithText("앱 업데이트").assertIsDisplayed().performClick()
+        composeRule.runOnIdle { assertEquals(1, checks) }
     }
 
     private fun release() = AppReleaseMetadata(

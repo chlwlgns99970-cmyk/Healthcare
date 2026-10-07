@@ -15,6 +15,7 @@ import androidx.compose.ui.test.hasText
 import androidx.compose.ui.test.isRoot
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onAllNodesWithText
+import androidx.compose.ui.test.onAllNodesWithTag
 import androidx.compose.ui.test.onFirst
 import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithTag
@@ -136,9 +137,12 @@ class QaRuntimeUiTest {
         replace("메모 (선택)", EDITED_MEMO)
         scrollTo(hasText("수정 저장"))
         composeRule.onNodeWithText("수정 저장").performClick()
-        composeRule.waitUntil(timeoutMillis = TIMEOUT_MILLIS) {
-            composeRule.onAllNodesWithText("기록을 수정했어요").fetchSemanticsNodes().isNotEmpty()
-        }
+        composeRule.waitUntil(TIMEOUT_MILLIS) { composeRule.onAllNodesWithText("저장 완료").fetchSemanticsNodes().isNotEmpty() }
+        composeRule.onNodeWithTag("record-saved-confirm").performClick()
+        composeRule.waitUntil(TIMEOUT_MILLIS) { composeRule.onAllNodesWithTag("record-completion").fetchSemanticsNodes().isNotEmpty() }
+        composeRule.onNodeWithTag("completion-home").performClick()
+        composeRule.onNodeWithText("통계").performClick()
+        composeRule.onNodeWithText("식사 기록").performClick()
         scrollTo(hasText(EDITED_FOOD_NAME))
         composeRule.onNodeWithText(EDITED_FOOD_NAME).assertIsDisplayed().performClick()
         scrollTo(hasText(EDITED_MEMO))
@@ -147,6 +151,8 @@ class QaRuntimeUiTest {
         composeRule.onAllNodes(hasScrollAction()).onFirst().performScrollToIndex(0)
         awaitDashboardTotal(startingCalories + 2_170)
 
+        composeRule.onNodeWithText("통계").performClick()
+        composeRule.onNodeWithText("식사 기록").performClick()
         scrollTo(hasText(deletableRecordName))
         composeRule.onNodeWithText(deletableRecordName).performClick()
         scrollTo(hasText("기록 삭제"))
@@ -217,6 +223,17 @@ class QaRuntimeUiTest {
     }
 
     private fun awaitDashboardTotal(calories: Int) {
+        if (composeRule.onAllNodesWithText("기록 저장").fetchSemanticsNodes().isNotEmpty()) {
+            composeRule.waitUntil(TIMEOUT_MILLIS) {
+                composeRule.onAllNodesWithTag("record-saved-confirm").fetchSemanticsNodes().isNotEmpty()
+            }
+        }
+        if (composeRule.onAllNodesWithText("저장 완료").fetchSemanticsNodes().isNotEmpty()) {
+            composeRule.onNodeWithTag("record-saved-confirm").performClick()
+            composeRule.waitUntil(TIMEOUT_MILLIS) { composeRule.onAllNodesWithTag("record-completion").fetchSemanticsNodes().isNotEmpty() }
+            composeRule.onNodeWithTag("completion-home").performClick()
+        }
+        composeRule.onNodeWithTag("bottom-tab-DASHBOARD").performClick()
         val value = formatTotal(calories)
         try {
             val inMealHistory = composeRule.onAllNodesWithText("식사 기록").fetchSemanticsNodes().isNotEmpty()

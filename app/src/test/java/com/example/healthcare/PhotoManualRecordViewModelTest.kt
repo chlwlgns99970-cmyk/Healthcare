@@ -27,6 +27,9 @@ import com.example.healthcare.ui.viewmodel.SmartInputMode
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.test.UnconfinedTestDispatcher
 import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.test.StandardTestDispatcher
 import kotlinx.coroutines.test.advanceUntilIdle
@@ -36,6 +39,7 @@ import kotlinx.coroutines.test.setMain
 import org.junit.After
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
+import org.junit.Assert.assertNotNull
 import org.junit.Assert.assertNull
 import org.junit.Assert.assertTrue
 import org.junit.Before
@@ -44,8 +48,221 @@ import java.io.File
 
 @OptIn(ExperimentalCoroutinesApi::class)
 class PhotoManualRecordViewModelTest {
+    @Test fun foodSearchConditionsSurviveDetailAndManualBack() = runTest(dispatcher.scheduler) {
+        viewModel.showFoodSearch()
+        viewModel.onFoodSearchChange("김밥")
+        viewModel.selectFoodCategory(com.example.healthcare.domain.FoodBrowseCategory.RICE_NOODLE)
+        advanceUntilIdle()
+        val before = viewModel.smartInputState.value
+        viewModel.selectSearchFood(verifiedFood("roll", "김밥", "밥류", 100.0, "g", 200.0))
+        viewModel.returnToFoodSearch()
+        assertEquals(before.searchQuery, viewModel.smartInputState.value.searchQuery)
+        assertEquals(before.searchResults, viewModel.smartInputState.value.searchResults)
+        assertEquals(before.selectedFoodCategory, viewModel.smartInputState.value.selectedFoodCategory)
+        viewModel.showManualEntry()
+        viewModel.showFoodSearch()
+        assertEquals("김밥", viewModel.smartInputState.value.searchQuery)
+        viewModel.showCompanionSearch("계란")
+        viewModel.cancelCompanionSearch()
+        viewModel.returnToFoodSearch()
+        assertEquals("김밥", viewModel.smartInputState.value.searchQuery)
+        assertEquals(before.selectedFoodCategory, viewModel.smartInputState.value.selectedFoodCategory)
+    }
+
+    @Test fun franchiseSearchConditionsSurviveBrandAndFoodDetailBack() = runTest(dispatcher.scheduler) {
+        viewModel.selectFoodSearchMode(com.example.healthcare.ui.viewmodel.FoodSearchMode.FRANCHISE)
+        viewModel.onFoodSearchChange("피자스쿨")
+        viewModel.selectBrandCategory("피자")
+        advanceUntilIdle()
+        val before = viewModel.smartInputState.value
+        viewModel.selectProductBrand(FoodBrandSummary("피자스쿨", 10))
+        advanceUntilIdle()
+        assertNull(viewModel.smartInputState.value.selectedBrandCategory)
+        viewModel.selectSearchFood(verifiedFood("pizza", "고구마피자", "피자", 100.0, "g", 200.0))
+        viewModel.returnToFoodSearch()
+        assertEquals("피자스쿨", viewModel.smartInputState.value.selectedBrand?.brand)
+        viewModel.clearSelectedProductBrand()
+        assertEquals("피자스쿨", viewModel.smartInputState.value.searchQuery)
+        assertEquals("피자", viewModel.smartInputState.value.selectedBrandCategory)
+        assertEquals(before.brandResults, viewModel.smartInputState.value.brandResults)
+    }
+    @Test fun verifiedRollDecimalUsesSameUnroundedNutritionRatio() = runTest(dispatcher.scheduler) {
+        val food = verifiedFood("roll", "백종원한줄김밥", "밥류", 100.0, "g", 137.0).copy(
+            sourceType = "K-FIND-PRODUCT", servingDescription = "100g 기준 · 공식 총내용량 216g · 포장단위 줄",
+            carbohydrateGrams = 30.0, proteinGrams = 5.0, fatGrams = null)
+        viewModel.selectVerifiedFood(food)
+        assertEquals("줄", viewModel.uiState.value.foodQuantityUnit)
+        assertEquals("296", viewModel.uiState.value.calories)
+        viewModel.onFoodQuantityChange("0,5")
+        assertEquals("108", viewModel.uiState.value.servingAmount)
+        assertEquals("148", viewModel.uiState.value.calories)
+        viewModel.saveRecord {}
+        advanceUntilIdle()
+        val saved = insertedMeals.single()
+        assertEquals("0.5줄", saved.portionDisplayLabel)
+        assertEquals(32.4, saved.carbohydrateGrams!!, 0.0001)
+        assertNull(saved.fatGrams)
+        assertEquals(0.5, com.example.healthcare.domain.RecordedAmountSnapshot.from(saved)!!.quantity, 0.0)
+    }
+
+    @Test fun unresolvedSelectionFillsManualNameSourceWithoutCaloriesOrGuessedAmount() {
+        viewModel.selectVerifiedFood(verifiedFood("valid", "김밥", "밥류", 100.0, "g", 200.0))
+        val unresolved = verifiedFood("unknown", "계란김밥", "밥류", 100.0, "ml", 97.0)
+        viewModel.selectVerifiedFood(unresolved)
+        assertEquals(SmartInputMode.MANUAL, viewModel.smartInputState.value.mode)
+        assertEquals("계란김밥", viewModel.uiState.value.foodName)
+        assertEquals("", viewModel.uiState.value.calories)
+        assertEquals("", viewModel.uiState.value.servingAmount)
+        assertEquals("", viewModel.uiState.value.servingUnit)
+        assertTrue(viewModel.uiState.value.sourceDescription.orEmpty().contains("K-FIND"))
+        assertNull(viewModel.uiState.value.selectedPortion)
+    }
+
+    @Test fun invalidQuantityNeverSavesAStaleCaloriePreview() = runTest(dispatcher.scheduler) {
+        val food = verifiedFood("invalid", "백종원한줄김밥", "밥류", 100.0, "g", 137.0).copy(
+            sourceType = "K-FIND-PRODUCT", servingDescription = "공식 총내용량 216g · 포장단위 줄")
+        viewModel.selectVerifiedFood(food)
+        listOf("0", "-1", "10001", "NaN", "").forEach {
+            viewModel.onFoodQuantityChange(it)
+            viewModel.saveRecord {}
+            assertEquals("", viewModel.uiState.value.calories)
+        }
+        advanceUntilIdle()
+        assertTrue(insertedMeals.isEmpty())
+    }
+
+    @Test fun recentOneTapUsesCurrentMealAndDateAndBlocksRepeatedSuccessfulTaps() = runTest(dispatcher.scheduler) {
+        val old = MealRecord(id = 22, date = "2026-09-20", time = "08:00", mealType = MealType.BREAKFAST,
+            foodName = "김밥", calories = 296, servingAmount = 216.0, servingUnit = "g",
+            portionPresetId = "amount/줄/216.0/1.0", portionDisplayLabel = "1줄", carbohydrateGrams = 40.0,
+            proteinGrams = null, plannedMealId = 99)
+        val selectedDate = java.time.LocalDate.of(2026, 10, 1)
+        viewModel.onDateChange(selectedDate)
+        viewModel.onMealTypeChange(MealType.LUNCH)
+        var success = 0
+        viewModel.repeatRecentMeal(old) { success++ }
+        viewModel.repeatRecentMeal(old) { success++ }
+        advanceUntilIdle()
+        viewModel.repeatRecentMeal(old) { success++ }
+        advanceUntilIdle()
+        val saved = insertedMeals.single()
+        assertEquals(1, success)
+        assertEquals("2026-10-01", saved.date)
+        assertEquals(MealType.LUNCH, saved.mealType)
+        assertEquals(old.calories, saved.calories)
+        assertEquals(old.portionPresetId, saved.portionPresetId)
+        assertNull(saved.proteinGrams)
+        assertNull(saved.plannedMealId)
+    }
+
+    @Test fun savedOneTapKeepsStoredNutrientsWhenSourceChanged() = runTest(dispatcher.scheduler) {
+        registeredProducts += verifiedFood("changed", "변경 제품", "밥류", 100.0, "g", 999.0)
+        val saved = FrequentFood(foodName = "저장 음식", defaultServing = "85g", calories = 210,
+            carbohydrateGrams = 30.0, proteinGrams = null, fatGrams = 5.0, foodItemId = "changed")
+        viewModel.onMealTypeChange(MealType.DINNER)
+        var success = 0
+        viewModel.repeatSavedFood(saved) { success++ }
+        viewModel.repeatSavedFood(saved) { success++ }
+        advanceUntilIdle()
+        val record = insertedMeals.single()
+        assertEquals(1, success)
+        assertEquals(MealType.DINNER, record.mealType)
+        assertEquals(210, record.calories)
+        assertEquals(30.0, record.carbohydrateGrams!!, 0.0)
+        assertNull(record.proteinGrams)
+    }
+
+    @Test fun newNavigationSessionCanRepeatAgainWithoutClearingTheInSessionDoubleTapGuard() = runTest(dispatcher.scheduler) {
+        val meal = MealRecord(date = "2026-09-20", time = "08:00", mealType = MealType.BREAKFAST,
+            foodName = "음식", calories = 200, servingAmount = 100.0, servingUnit = "g")
+        var success = 0
+        viewModel.repeatRecentMeal(meal) { success++ }
+        advanceUntilIdle()
+        viewModel.repeatRecentMeal(meal) { success++ }
+        advanceUntilIdle()
+        assertEquals(1, success)
+        viewModel.beginRecordSession()
+        viewModel.onMealTypeChange(MealType.DINNER)
+        viewModel.repeatRecentMeal(meal) { success++ }
+        viewModel.repeatRecentMeal(meal) { success++ }
+        advanceUntilIdle()
+        assertEquals(2, success)
+        assertEquals(MealType.DINNER, insertedMeals.last().mealType)
+    }
+
+    @Test fun repeatFailureRetainsMealAmountAndAllowsOneRetry() = runTest(dispatcher.scheduler) {
+        val old = MealRecord(date = "2026-09-20", time = "08:00", mealType = MealType.BREAKFAST,
+            foodName = "김밥", calories = 296, servingAmount = 216.0, servingUnit = "g",
+            portionPresetId = "amount/줄/216.0/1.0", portionDisplayLabel = "1줄")
+        viewModel.onMealTypeChange(MealType.SNACK)
+        failMealInsert = true
+        var success = 0
+        viewModel.repeatRecentMeal(old) { success++ }
+        advanceUntilIdle()
+        assertEquals(0, success)
+        assertEquals(MealType.SNACK, viewModel.uiState.value.mealType)
+        assertEquals("1", viewModel.uiState.value.foodQuantity)
+        assertEquals("줄", viewModel.uiState.value.foodQuantityUnit)
+        assertFalse(viewModel.uiState.value.isSaving)
+        failMealInsert = false
+        viewModel.repeatRecentMeal(old) { success++ }
+        advanceUntilIdle()
+        assertEquals(1, success)
+        assertEquals(1, insertedMeals.size)
+    }
+
+    @Test fun recentAmountCanChangeWithoutOriginalSourceAndKeepsNullMacros() {
+        viewModel.selectRecentMeal(MealRecord(date = "2026-09-20", time = "08:00", mealType = MealType.BREAKFAST,
+            foodName = "김밥", calories = 296, servingAmount = 216.0, servingUnit = "g",
+            portionPresetId = "amount/줄/216.0/1.0", portionDisplayLabel = "1줄", foodItemId = "removed",
+            carbohydrateGrams = 40.0, proteinGrams = null))
+        viewModel.onFoodQuantityChange("0.5")
+        assertEquals("148", viewModel.uiState.value.calories)
+        assertEquals("108", viewModel.uiState.value.servingAmount)
+        viewModel.onFoodQuantityUnitChange("g")
+        assertEquals("108", viewModel.uiState.value.foodQuantity)
+        assertEquals("148", viewModel.uiState.value.calories)
+        assertNull(viewModel.uiState.value.estimatedProteinGrams)
+    }
+
+    @Test fun legacyMissingAmountAndMalformedSavedServingAreNeverGuessed() {
+        viewModel.selectRecentMeal(MealRecord(date = "2026-09-20", time = "08:00", mealType = MealType.BREAKFAST,
+            foodName = "이전 음식", calories = 200))
+        assertEquals("", viewModel.uiState.value.servingAmount)
+        assertEquals("", viewModel.uiState.value.servingUnit)
+        viewModel.selectFavoriteFood(FrequentFood(foodName = "양 미확인", defaultServing = "알 수 없음", calories = 200))
+        assertEquals("", viewModel.uiState.value.servingAmount)
+        assertEquals("", viewModel.uiState.value.servingUnit)
+    }
+
+    @Test fun invalidStoredQuantityCannotBeSavedByEnteringCaloriesAgain() = runTest(dispatcher.scheduler) {
+        viewModel.selectRecentMeal(MealRecord(date = "2026-09-20", time = "08:00", mealType = MealType.BREAKFAST,
+            foodName = "김밥", calories = 296, servingAmount = 216.0, servingUnit = "g",
+            portionPresetId = "amount/줄/216.0/1.0", portionDisplayLabel = "1줄"))
+        viewModel.onFoodQuantityChange("0")
+        viewModel.onCaloriesChange("296")
+        viewModel.saveRecord {}
+        advanceUntilIdle()
+        assertTrue(insertedMeals.isEmpty())
+        assertTrue(viewModel.uiState.value.saveError != null)
+    }
+
+    @Test fun sameAmountSavedCardNeverSubstitutesADifferentRecentQuantity() = runTest(dispatcher.scheduler) {
+        backgroundScope.launch(UnconfinedTestDispatcher(testScheduler)) { viewModel.recentMeals.collect {} }
+        recentFixtures.value = listOf(MealRecord(id = 9, date = "2026-09-20", time = "08:00",
+            mealType = MealType.BREAKFAST, foodName = "같은 제품", calories = 750,
+            servingAmount = 300.0, servingUnit = "g", foodItemId = "same-source"))
+        advanceUntilIdle()
+        viewModel.repeatSavedFood(FrequentFood(foodName = "같은 제품", defaultServing = "100g",
+            calories = 200, foodItemId = "same-source")) {}
+        advanceUntilIdle()
+        assertEquals(200, insertedMeals.single().calories)
+        assertEquals(100.0, insertedMeals.single().servingAmount!!, 0.0)
+    }
+
     private val dispatcher = StandardTestDispatcher()
     private val insertedMeals = mutableListOf<MealRecord>()
+    private val recentFixtures = MutableStateFlow<List<MealRecord>>(emptyList())
     private val registeredProducts = mutableListOf<FoodItem>()
     private val savedFrequentFoods = mutableListOf<FrequentFood>()
     private var analysisCalls = 0
@@ -67,7 +284,7 @@ class PhotoManualRecordViewModelTest {
 
         override suspend fun updateMeal(meal: MealRecord) = Unit
         override suspend fun deleteMeal(meal: MealRecord) = Unit
-        override fun getAllMeals(): Flow<List<MealRecord>> = flowOf(emptyList())
+        override fun getAllMeals(): Flow<List<MealRecord>> = recentFixtures
         override fun getMealsByDate(date: String): Flow<List<MealRecord>> = flowOf(emptyList())
         override fun getTotalCaloriesByDate(date: String): Flow<Int?> = flowOf(0)
         override fun getNutritionByDate(date: String): Flow<List<com.example.healthcare.data.model.MealNutritionRow>> = flowOf(emptyList())
@@ -104,6 +321,7 @@ class PhotoManualRecordViewModelTest {
             limit: Int
         ): Flow<List<FoodItem>> = flowOf(emptyList())
         override fun observeFranchiseBrands(brands: List<String>): Flow<List<FoodBrandSummary>> = flowOf(emptyList())
+        override fun observeAllFranchiseFoods(brands: List<String>): Flow<List<FoodItem>> = flowOf(emptyList())
         override fun observeFranchiseFoods(
             brand: String,
             normalizedQuery: String,
@@ -170,6 +388,7 @@ class PhotoManualRecordViewModelTest {
     fun `홈에서 고른 네 식사 구분은 저장과 성공 피드백까지 유지된다`() = runTest(dispatcher.scheduler) {
         val mealTypes = listOf(MealType.BREAKFAST, MealType.SNACK, MealType.LUNCH, MealType.DINNER)
         mealTypes.forEach { mealType ->
+            viewModel.beginRecordSession()
             viewModel.onMealTypeChange(mealType)
             viewModel.onFoodNameChange("${mealType.displayName} 테스트")
             viewModel.onCaloriesChange("100")
@@ -193,6 +412,7 @@ class PhotoManualRecordViewModelTest {
             )
 
             listOf(MealType.BREAKFAST, MealType.SNACK, MealType.LUNCH, MealType.DINNER).forEach { mealType ->
+                viewModel.beginRecordSession()
                 viewModel.onMealTypeChange(mealType)
                 viewModel.selectVerifiedFood(packageFood)
                 assertEquals(SmartInputMode.QUICK_RECORD, viewModel.smartInputState.value.mode)
@@ -277,7 +497,7 @@ class PhotoManualRecordViewModelTest {
             assertEquals("removed-product", viewModel.uiState.value.selectedFoodItemId)
             assertEquals("85", viewModel.uiState.value.servingAmount)
             assertEquals("210", viewModel.uiState.value.calories)
-            assertEquals("보통", viewModel.uiState.value.selectedPortion?.label)
+            assertEquals("85g", viewModel.uiState.value.selectedPortion?.label)
 
             viewModel.removeFavorite(favorite)
             advanceUntilIdle()
@@ -285,7 +505,7 @@ class PhotoManualRecordViewModelTest {
         }
 
     @Test
-    fun `즐겨찾기 원본 FoodItem이 있으면 최신 원본 영양정보로 빠른 기록한다`() =
+    fun `즐겨찾기 원본 FoodItem이 바뀌어도 저장한 영양 snapshot으로 빠른 기록한다`() =
         runTest(dispatcher.scheduler) {
             val currentFood = verifiedFood(
                 "favorite-current", "참치김밥", "밥류", 180.0, "g", 430.0
@@ -312,8 +532,8 @@ class PhotoManualRecordViewModelTest {
             advanceUntilIdle()
 
             assertEquals(SmartInputMode.QUICK_RECORD, viewModel.smartInputState.value.mode)
-            assertEquals(currentFood, viewModel.uiState.value.selectedFood)
-            assertEquals("430", viewModel.uiState.value.calories)
+            assertNull(viewModel.uiState.value.selectedFood)
+            assertEquals("400", viewModel.uiState.value.calories)
         }
 
     @Test
@@ -327,11 +547,17 @@ class PhotoManualRecordViewModelTest {
             viewModel.selectPortionPreset(requireNotNull(PortionGuide.defaultPreset(food)))
             failMealInsert = true
             var successCount = 0
+            val confirmation = com.example.healthcare.ui.viewmodel.RecordSaveConfirmationViewModel()
+            val onSaved: (MealType) -> Unit = {
+                successCount++
+                confirmation.saved(com.example.healthcare.domain.RecordCompletion(requireNotNull(viewModel.completedRecord.value)))
+            }
 
-            viewModel.saveRecord { successCount++ }
+            viewModel.saveRecord(onSaved)
             advanceUntilIdle()
 
             assertEquals(0, successCount)
+            assertNull(confirmation.pending.value)
             assertTrue(insertedMeals.isEmpty())
             assertFalse(viewModel.uiState.value.isSaving)
             assertEquals("기록을 저장하지 못했습니다. 다시 시도해주세요.", viewModel.uiState.value.saveError)
@@ -339,11 +565,16 @@ class PhotoManualRecordViewModelTest {
             assertEquals(food.id, viewModel.uiState.value.selectedFoodItemId)
             assertEquals("420", viewModel.uiState.value.calories)
             failMealInsert = false
-            viewModel.saveRecord { successCount++ }
-            viewModel.saveRecord { successCount++ }
+            viewModel.saveRecord(onSaved)
+            viewModel.saveRecord(onSaved)
+            assertTrue(viewModel.uiState.value.isSaving)
+            assertNull(confirmation.pending.value)
             advanceUntilIdle()
             assertEquals(1, successCount)
             assertEquals(1, insertedMeals.size)
+            assertEquals(420, confirmation.pending.value!!.record.calories)
+            assertNotNull(confirmation.confirm())
+            assertNull(confirmation.confirm())
         }
 
     @Test
@@ -422,6 +653,7 @@ class PhotoManualRecordViewModelTest {
             assertEquals(15.0, favorite.proteinGrams!!, 0.0001)
             assertEquals(7.5, favorite.fatGrams!!, 0.0001)
 
+            viewModel.beginRecordSession()
             viewModel.selectFrequentFood(favorite)
             viewModel.selectServingRatio(0.5)
             viewModel.saveRecord {}
@@ -524,7 +756,7 @@ class PhotoManualRecordViewModelTest {
     }
 
     @Test
-    fun `고형 음식 ml 기준은 UI를 우회해도 직접 기록 선택되지 않는다`() = runTest(dispatcher.scheduler) {
+    fun `고형 음식 ml 기준 선택은 이름을 채운 수동 기록으로 연결하고 칼로리를 만들지 않는다`() = runTest(dispatcher.scheduler) {
         val unsafe = FoodItem(
             id = "kfind-solid-volume", sourceType = "K-FIND", sourceFoodCode = "solid-volume",
             name = "김밥_참치", normalizedName = "김밥참치", category = "밥류",
@@ -533,8 +765,10 @@ class PhotoManualRecordViewModelTest {
         )
         viewModel.selectVerifiedFood(unsafe)
         assertNull(viewModel.uiState.value.selectedFood)
-        assertNull(viewModel.uiState.value.selectedFoodItemId)
-        assertTrue(viewModel.smartInputState.value.message.orEmpty().contains("바로 바꾸기 어려워요"))
+        assertEquals(unsafe.id, viewModel.uiState.value.selectedFoodItemId)
+        assertEquals(SmartInputMode.MANUAL, viewModel.smartInputState.value.mode)
+        assertEquals(com.example.healthcare.domain.FoodSearchPolicy.displayName(unsafe), viewModel.uiState.value.foodName)
+        assertEquals("", viewModel.uiState.value.calories)
 
         viewModel.saveRecord {}
         advanceUntilIdle()
@@ -568,8 +802,8 @@ class PhotoManualRecordViewModelTest {
     @Test
     fun `검색 음식은 먹은 양을 고르기 전 기준량 그대로 저장되지 않는다`() = runTest(dispatcher.scheduler) {
         val rice = FoodItem(
-            id = "official-rice", sourceType = "K-FIND", sourceFoodCode = "rice", name = "흰밥",
-            normalizedName = "흰밥", category = "밥류", referenceAmount = 100.0, unit = "g",
+            id = "official-rice", sourceType = "K-FIND", sourceFoodCode = "rice", name = "중량 음식",
+            normalizedName = "중량음식", category = "기타", referenceAmount = 100.0, unit = "g",
             energyKcal = 140.0, servingDescription = "100g 기준", dataVersion = "test",
             createdAt = 1, updatedAt = 1
         )
@@ -578,7 +812,8 @@ class PhotoManualRecordViewModelTest {
         advanceUntilIdle()
 
         assertTrue(insertedMeals.isEmpty())
-        assertEquals("먹은 양을 선택하거나 더 정확히 입력해 주세요.", viewModel.uiState.value.saveError)
+        assertEquals("", viewModel.uiState.value.calories)
+        assertTrue(viewModel.uiState.value.caloriesError != null)
     }
 
     @Test
@@ -793,6 +1028,47 @@ class PhotoManualRecordViewModelTest {
         }
         assertEquals(2, viewModel.uiState.value.companionFoods.size)
         assertEquals(398, viewModel.uiState.value.companionFoods.sumOf { it.calories })
+    }
+
+    @Test fun completionSnapshotIsPublishedOnlyAfterSuccessfulInsert() = runTest(dispatcher.scheduler) {
+        viewModel.onFoodNameChange("수동 점심")
+        viewModel.onCaloriesChange("321")
+        viewModel.onMealTypeChange(MealType.LUNCH)
+        assertNull(viewModel.completedRecord.value)
+        viewModel.saveRecord {}
+        advanceUntilIdle()
+        assertEquals(insertedMeals.single(), viewModel.completedRecord.value)
+        assertEquals("수동 점심", viewModel.completedRecord.value!!.foodName)
+        assertEquals(MealType.LUNCH, viewModel.completedRecord.value!!.mealType)
+    }
+
+    @Test fun completionFailureRetainsInputAndAllowsRetry() = runTest(dispatcher.scheduler) {
+        viewModel.onFoodNameChange("다시 저장")
+        viewModel.onCaloriesChange("220")
+        failMealInsert = true
+        viewModel.saveRecord {}
+        advanceUntilIdle()
+        assertNull(viewModel.completedRecord.value)
+        assertEquals("다시 저장", viewModel.uiState.value.foodName)
+        assertEquals("220", viewModel.uiState.value.calories)
+        assertNotNull(viewModel.uiState.value.saveError)
+        failMealInsert = false
+        viewModel.saveRecord {}
+        advanceUntilIdle()
+        assertNotNull(viewModel.completedRecord.value)
+        assertEquals(1, insertedMeals.size)
+    }
+
+    @Test fun completionBackAndRepeatedSaveDoNotInsertAgain() = runTest(dispatcher.scheduler) {
+        viewModel.onFoodNameChange("한 번만")
+        viewModel.onCaloriesChange("200")
+        viewModel.saveRecord {}
+        advanceUntilIdle()
+        viewModel.saveRecord {}
+        advanceUntilIdle()
+        assertEquals(1, insertedMeals.size)
+        viewModel.beginRecordSession()
+        assertNull(viewModel.completedRecord.value)
     }
 
     private fun verifiedFood(

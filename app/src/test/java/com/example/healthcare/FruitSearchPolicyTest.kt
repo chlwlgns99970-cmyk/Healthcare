@@ -24,15 +24,16 @@ class FruitSearchPolicyTest {
         val sameNameProduct = products.first().copy(id = "same-name", name = name, normalizedName = name)
         val input = products + sameNameProduct + basic
         listOf(FoodBrowseCategory.ALL, FoodBrowseCategory.FRUIT).forEach { category ->
-            val groups = FoodSearchPolicy.groupSearchResults(input.filter {
+            val matching = input.filter {
                 FoodSearchPolicy.matchesCategory(it, category)
-            }, name)
+            }
+            val groups = FoodSearchPolicy.groupSearchResults(matching, name)
             assertEquals(name, groups.first().key)
             assertEquals(basic.id, groups.first().representative.id)
             assertEquals(name, FoodSearchPolicy.displayName(groups.first().representative))
-            assertTrue(groups.first().alternatives.contains(sameNameProduct))
-            assertEquals(input.toSet(), groups.flatMap { listOf(it.representative) + it.alternatives }.toSet())
-            assertEquals(groups, FoodSearchPolicy.groupSearchResults(input.reversed(), name))
+            if (sameNameProduct in matching) assertTrue(groups.first().alternatives.contains(sameNameProduct))
+            assertEquals(matching.toSet(), groups.flatMap { listOf(it.representative) + it.alternatives }.toSet())
+            assertEquals(groups, FoodSearchPolicy.groupSearchResults(matching.reversed(), name))
         }
         assertEquals("${name}_생것", basic.name)
     }

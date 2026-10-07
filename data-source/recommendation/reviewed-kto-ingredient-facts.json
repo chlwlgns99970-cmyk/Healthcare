@@ -1,0 +1,207 @@
+{
+  "231502": {
+    "ingredients": "백미|카레가루|감자|당근|양파|고기",
+    "groups": "REFINED_GRAIN|ROOT_STARCH|VEGETABLE|MEAT_UNSPECIFIED",
+    "cook": "SIMMERED",
+    "notes": "본문의 한국 카레라이스 조리 설명만 사용; 일본식 루의 밀가루는 한국 음식 구성으로 복사하지 않음; 고기 종류 미확정"
+  },
+  "231562": {
+    "ingredients": "쌀|채소|햄|고기|달걀",
+    "groups": "GRAIN_UNSPECIFIED|VEGETABLE|PROCESSED_MEAT|EGG|MEAT_UNSPECIFIED",
+    "cook": "PAN_COOKED",
+    "notes": "전형적 볶음밥 구성의 햄 확인; 케첩/데미글라스/카레 소스는 변형으로 기술되어 포함 여부 미확정"
+  },
+  "179834": {
+    "ingredients": "두부|김치",
+    "groups": "LEGUME_SOY|VEGETABLE",
+    "cook": "ASSEMBLED",
+    "notes": "데운 두부와 익은 김치라는 본문 구성; 볶음김치는 선택 대체 구성"
+  },
+  "179219": {
+    "ingredients": "꽃게|김치",
+    "groups": "SEAFOOD|VEGETABLE",
+    "cook": "SIMMERED"
+  },
+  "178299": {
+    "ingredients": "대구|콩나물|미나리",
+    "groups": "FISH|VEGETABLE",
+    "cook": "BRAISED"
+  },
+  "178046": {
+    "ingredients": "도토리묵|쌀|김치|오이|김|멸치육수",
+    "groups": "ROOT_STARCH|GRAIN_UNSPECIFIED|VEGETABLE",
+    "cook": "ASSEMBLED",
+    "notes": "조는 선택 재료라 MIXED_GRAIN 태그를 추가하지 않음; 육수용 멸치만으로 생선 주재료 태그를 추가하지 않음"
+  },
+  "231392": {
+    "ingredients": "풋고추|튀김옷",
+    "groups": "VEGETABLE",
+    "cook": "DEEP_FRIED",
+    "notes": "당면·채소·고기는 소의 가능한 종류이므로 해당 구성은 추정하지 않음"
+  },
+  "179919": {
+    "ingredients": "고구마|당류 시럽",
+    "groups": "ROOT_STARCH",
+    "cook": "DEEP_FRIED",
+    "negative": "SUGAR_HEAVY_DESSERT",
+    "notes": "본문에 튀긴 고구마를 설탕·물엿·꿀 기반 시럽으로 코팅한 디저트로 명시; 개별 당류 종류/함량은 미확정"
+  },
+  "180155": {
+    "ingredients": "오리고기|채소|부추",
+    "groups": "POULTRY|VEGETABLE",
+    "cook": "PAN_COOKED",
+    "notes": "본문의 생오리고기 불고기 조리 부분만 사용; 훈제오리는 다른 섭취 방법이며 건강효과 설명은 반영하지 않음"
+  },
+  "181465": {
+    "ingredients": "쌀|날치알|당근|오이|단무지|김",
+    "groups": "GRAIN_UNSPECIFIED|FISH|VEGETABLE",
+    "cook": "ASSEMBLED",
+    "notes": "본문에 명시된 날치알밥의 일반 구성만 사용; 연어알·성게알·문어는 다른 변형이므로 추가하지 않음"
+  },
+  "178056": {
+    "ingredients": "쌀|양파|당근",
+    "groups": "GRAIN_UNSPECIFIED|VEGETABLE",
+    "cook": "PAN_COOKED",
+    "notes": "본문의 기본 볶음밥 구성; 달걀·새우·부추·돼지고기는 선택 구성이라 추가하지 않음"
+  },
+  "178926": {
+    "ingredients": "쌀|단무지|달걀|어묵|당근|시금치|김",
+    "groups": "GRAIN_UNSPECIFIED|VEGETABLE|EGG|PROCESSED_FISH",
+    "cook": "ASSEMBLED",
+    "notes": "치즈·김치는 변형이라 포함 여부 미확정; 어묵은 가공수산물로 별도 태그이며 생선 우선 점수에 포함하지 않음"
+  },
+  "231570": {
+    "ingredients": "임연수어",
+    "groups": "FISH",
+    "cook": "GRILLED"
+  },
+  "231523": {
+    "ingredients": "가자미",
+    "groups": "FISH",
+    "cook": "GRILLED"
+  },
+  "178959": {
+    "ingredients": "인스턴트 면|달걀|파",
+    "groups": "GRAIN_UNSPECIFIED|EGG",
+    "cook": "SIMMERED",
+    "notes": "오징어·문어·콩나물은 선택 재료이므로 추가하지 않음; 양념용 파를 주요 채소 식품군으로 추가하지 않음"
+  },
+  "231465": {
+    "ingredients": "쌀|당면|채소|고기",
+    "groups": "GRAIN_UNSPECIFIED|VEGETABLE|MEAT_UNSPECIFIED",
+    "cook": "PAN_COOKED",
+    "notes": "고기 종류가 명시되지 않아 RED_MEAT 또는 POULTRY로 추정하지 않음"
+  },
+  "178082": {
+    "ingredients": "찹쌀|밤|대추|연잎",
+    "groups": "GRAIN_UNSPECIFIED|ROOT_STARCH",
+    "cook": "STEAMED",
+    "notes": "밤은 전분성 식재료로 구분; 연잎은 포장·조리 용도라 채소 섭취군으로 집계하지 않고 소량 대추는 하루 과일군으로 집계하지 않음"
+  },
+  "231433": {
+    "ingredients": "만두|김치|파|버섯|두부|멸치|다시마|쇠고기 양지 육수",
+    "groups": "LEGUME_SOY|VEGETABLE|RED_MEAT",
+    "cook": "SIMMERED",
+    "notes": "양지 육수도 원재료 근거에 보존; 만두 소의 상세 구성은 미확정"
+  },
+  "178129": {
+    "ingredients": "곰치",
+    "groups": "FISH",
+    "cook": "SIMMERED",
+    "notes": "본문이 곰치를 생선 식재료로 명시; 그 밖의 국 재료는 추정하지 않음"
+  },
+  "231596": {
+    "ingredients": "곡물|채소|찹쌀|대추|밤|은행|버섯",
+    "groups": "MIXED_GRAIN|VEGETABLE|ROOT_STARCH",
+    "cook": "BOILED",
+    "notes": "본문에 여러 곡물·채소 구성 명시; 통곡물 도정도 미확인, 밤·은행을 지방성 견과류처럼 점수화하지 않음"
+  },
+  "180163": {
+    "ingredients": "낙지|박",
+    "groups": "SEAFOOD|VEGETABLE",
+    "cook": "SIMMERED"
+  },
+  "178304": {
+    "ingredients": "소 무릎 연골|힘줄|쇠고기 양지|쇠고기 사태|파|마늘|후추",
+    "groups": "RED_MEAT",
+    "cook": "SIMMERED",
+    "notes": "본문의 파·마늘은 향신재료로만 보존; 관절 건강효과 문구를 가져오지 않음"
+  },
+  "179290": {
+    "ingredients": "꿩|채소|당면|간장",
+    "groups": "POULTRY|VEGETABLE|GRAIN_UNSPECIFIED",
+    "cook": "SIMMERED",
+    "notes": "소량 물로 끓이는 설명 확인; 달콤한 양념은 기술됐으나 당류 함량은 미확정"
+  },
+  "179974": {
+    "ingredients": "쌀떡|꿀 또는 설탕 소",
+    "groups": "GRAIN_UNSPECIFIED",
+    "cook": "UNKNOWN",
+    "negative": "SUGAR_HEAVY_DESSERT",
+    "notes": "본문에 꿀/설탕을 넣은 달콤한 떡으로 명시; 두 재료를 모두 실제 함유한다고 확정하지 않음"
+  },
+  "178268": {
+    "ingredients": "꽁치 통조림|김치|마늘|무|파",
+    "groups": "FISH|VEGETABLE",
+    "cook": "SIMMERED"
+  },
+  "178339": {
+    "ingredients": "소시지|햄|쇠고기|베이컨|치즈",
+    "groups": "PROCESSED_MEAT|RED_MEAT|DAIRY",
+    "cook": "SIMMERED",
+    "notes": "본문에 명시된 가공육 구성; 다른 부재료를 음식명으로 추정하지 않음"
+  },
+  "179264": {
+    "ingredients": "닭|감자|고춧가루 양념",
+    "groups": "POULTRY|ROOT_STARCH",
+    "cook": "SIMMERED",
+    "notes": "본문에서 추가 채소가 명시되지 않아 닭볶음탕 이름으로 채소를 추정하지 않음"
+  },
+  "178869": {
+    "ingredients": "면|콩나물|양배추|오이|당근|매콤달콤한 소스",
+    "groups": "GRAIN_UNSPECIFIED|VEGETABLE",
+    "cook": "ASSEMBLED",
+    "notes": "양념 당류 함량은 미확정; 콩나물은 채소로 분류하며 콩 단백질군으로 중복 집계하지 않음"
+  },
+  "178632": {
+    "ingredients": "골뱅이|북어|파|식초|고춧가루",
+    "groups": "SEAFOOD|FISH",
+    "cook": "UNHEATED",
+    "notes": "국수는 추가 선택 사항이라 포함 여부 미확정; 파만으로 주요 채소군을 집계하지 않음"
+  },
+  "179704": {
+    "ingredients": "면|돼지고기|채소|해물|닭 또는 돼지 뼈 육수",
+    "groups": "GRAIN_UNSPECIFIED|RED_MEAT|VEGETABLE|SEAFOOD",
+    "cook": "SIMMERED",
+    "notes": "육수는 선택 종류로 보존하며 닭이 항상 포함됐다고 확정하지 않음"
+  },
+  "178480": {
+    "ingredients": "닭모래집|양파|고추|피망|버섯",
+    "groups": "POULTRY|VEGETABLE",
+    "cook": "PAN_COOKED"
+  },
+  "231494": {
+    "ingredients": "쌀떡|라면|어묵|파|고추장|고춧가루|설탕",
+    "groups": "GRAIN_UNSPECIFIED|PROCESSED_FISH",
+    "cook": "SIMMERED",
+    "notes": "본문의 다른 채소는 풍미용 추가로 기술되어 주요 채소군에 넣지 않음; 삶은 달걀·치즈·소시지는 선택 사항"
+  },
+  "179458": {
+    "ingredients": "오리|약재|통마늘|대추|밤",
+    "groups": "POULTRY|ROOT_STARCH",
+    "cook": "SIMMERED",
+    "notes": "건강효과 설명은 반영하지 않고 본문의 조리 재료만 사용; 소량 향신재료를 채소·과일군으로 집계하지 않음"
+  },
+  "178911": {
+    "ingredients": "달걀",
+    "groups": "EGG",
+    "cook": "PAN_COOKED",
+    "notes": "계란/달걀 같은 식재료 명칭 차이만 연결; 본문의 양파·당근은 can be added 선택 사항이므로 재료·VEGETABLE 식품군을 추가하지 않음"
+  },
+  "178921": {
+    "ingredients": "김|당면|양파|당근|파",
+    "groups": "GRAIN_UNSPECIFIED|VEGETABLE",
+    "cook": "DEEP_FRIED",
+    "notes": "본문 제목 Deep-Fried Laver Roll과 김·당면·양파·당근 구성 및 deep-fried 조리 설명이 있는 김말이튀김 reference만 연결; oil 종류·전체 알레르기를 추정하지 않음"
+  }
+}

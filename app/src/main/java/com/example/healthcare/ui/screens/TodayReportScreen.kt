@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -30,6 +31,8 @@ import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.unit.dp
 import com.example.healthcare.domain.DashboardSummaryPolicy
 import com.example.healthcare.domain.TodayFoodReport
+import com.example.healthcare.domain.NextMealGuidance
+import com.example.healthcare.data.model.MealType
 import com.example.healthcare.ui.components.MacroSummaryRow
 import com.example.healthcare.ui.components.WellnessCard
 import com.example.healthcare.ui.components.WellnessEmptyState
@@ -45,16 +48,18 @@ import java.util.Locale
 fun TodayReportScreen(
     viewModel: DashboardViewModel,
     onBack: () -> Unit,
-    onAddRecord: () -> Unit
+    onAddRecord: () -> Unit,
+    onNextMealRecommendation: ((MealType) -> Unit)? = null
 ) {
     val date by viewModel.selectedDate.collectAsState()
     val meals by viewModel.meals.collectAsState()
-    val target by viewModel.targetCalories.collectAsState()
+    val target by viewModel.configuredTargetCalories.collectAsState()
+    val guidance by viewModel.nextMealGuidance.collectAsState()
     val nutrition by viewModel.dailyNutrition.collectAsState()
     val report = remember(meals, target, nutrition) {
         DashboardSummaryPolicy.report(meals, target, nutrition)
     }
-    TodayReportContent(date, report, onBack, onAddRecord)
+    TodayReportContent(date, report, onBack, onAddRecord, guidance, onNextMealRecommendation)
 }
 
 @Composable
@@ -62,7 +67,9 @@ internal fun TodayReportContent(
     date: LocalDate,
     report: TodayFoodReport,
     onBack: () -> Unit,
-    onAddRecord: () -> Unit
+    onAddRecord: () -> Unit,
+    guidance: NextMealGuidance? = null,
+    onNextMealRecommendation: ((MealType) -> Unit)? = null
 ) {
     Scaffold(
         topBar = {
@@ -107,7 +114,8 @@ internal fun TodayReportContent(
                     Column(Modifier.padding(WellnessSpacing.CardContent), verticalArrangement = Arrangement.spacedBy(10.dp)) {
                         Text("오늘 섭취", style = MaterialTheme.typography.labelLarge)
                         Text(
-                            "${report.totalCalories.formatted()} kcal",
+                            if (report.foods.isNotEmpty() && report.foods.all { it.calories == null }) "확인 가능한 열량 없음"
+                            else "${report.totalCalories.formatted()} kcal",
                             style = MaterialTheme.typography.headlineLarge
                         )
                         Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
@@ -121,6 +129,31 @@ internal fun TodayReportContent(
                             } ?: "—")
                         }
                         MacroSummaryRow(report.nutrition)
+                    }
+                }
+            }
+            guidance?.let { next ->
+                item(key = "next-meal-guidance") {
+                    WellnessCard(Modifier.fillMaxWidth().testTag("next-meal-guidance")) {
+                        Column(Modifier.padding(WellnessSpacing.CardContent), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                            Text("다음 식사 안내", style = MaterialTheme.typography.titleMedium,
+                                modifier = Modifier.semantics { heading() })
+                            Text(next.message, style = MaterialTheme.typography.bodyMedium,
+                                modifier = Modifier.testTag("next-meal-guidance-message"))
+                            if (next.targetCalories != null && next.remainingCalories != null) {
+                                Text("오늘 목표 ${next.targetCalories.formatted()} kcal · 남은 목표 약 ${next.remainingCalories.formatted()} kcal",
+                                    style = MaterialTheme.typography.bodySmall,
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                    modifier = Modifier.testTag("next-meal-remaining"))
+                            }
+                            val nextMeal = next.nextMeal
+                            if (next.range != null && nextMeal != null && date == LocalDate.now() && onNextMealRecommendation != null) {
+                                Button(onClick = { onNextMealRecommendation(nextMeal) },
+                                    modifier = Modifier.fillMaxWidth().heightIn(min = 48.dp).testTag("next-meal-recommendation")) {
+                                    Text("${nextMeal.displayName} 추천 보기")
+                                }
+                            }
+                        }
                     }
                 }
             }

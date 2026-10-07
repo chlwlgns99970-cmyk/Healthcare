@@ -1,0 +1,37 @@
+{
+  "recipeCount": 516,
+  "ingredientRows": 4258,
+  "identityCounts": {
+    "AMBIGUOUS_IDENTITY": 1558,
+    "LINKED": 2545,
+    "EXCLUDED_NON_CALORIC_OR_PROCESS_ITEM": 154,
+    "NO_OFFICIAL_NUTRITION_MATCH": 1
+  },
+  "unitCounts": {
+    "DIRECT_MASS": 3068,
+    "UNIT_CONVERSION_UNVERIFIED": 904,
+    "OFFICIAL_REVIEWED_STANDARD_PORTION": 7,
+    "EXCLUDED_NON_CALORIC_OR_PROCESS_ITEM": 144,
+    "OFFICIAL_FOOD_PORTION": 124,
+    "OFFICIAL_SOURCE_EQUIVALENCE": 11
+  },
+  "ingredientCounts": {
+    "AMBIGUOUS_IDENTITY": 1126,
+    "LINKED": 2072,
+    "UNIT_CONVERSION_UNVERIFIED": 904,
+    "EXCLUDED_NON_CALORIC_OR_PROCESS_ITEM": 154,
+    "RECIPE_SOURCE_INCOMPLETE": 1,
+    "NO_OFFICIAL_NUTRITION_MATCH": 1
+  },
+  "recipeStates": {
+    "PARTIAL_LINKED": 419,
+    "COMPLETE_LINKED": 29,
+    "UNLINKABLE": 68
+  },
+  "publishedRecipeCount": 76,
+  "publishedCompleteCount": 6,
+  "linkedFoodCount": 244,
+  "publishedIngredientRows": 1077,
+  "assetSha256": "2f72e00a8ad4d90ecb6e136615ef2361a7ae9c4912faca72f5c20930e38d2cbd",
+  "publicationUpdated": true
+}

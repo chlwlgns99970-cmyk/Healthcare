@@ -9,6 +9,8 @@ import com.example.healthcare.data.InMemoryRecommendationCycleStore
 import com.example.healthcare.data.RecommendationCyclePolicy
 import com.example.healthcare.data.RecommendationCycleStore
 import com.example.healthcare.data.StableRecommendationPolicy
+import com.example.healthcare.data.RecommendationLearningStore
+import com.example.healthcare.domain.RecommendationLearningPolicy
 import com.example.healthcare.domain.FoodPreferencePolicy
 import com.example.healthcare.domain.MealRecommendationTheme
 import com.example.healthcare.data.entity.DailyMealPlan
@@ -22,7 +24,10 @@ import com.example.healthcare.data.model.MealType
 import com.example.healthcare.data.model.RecordSource
 import com.example.healthcare.domain.MealCoachCalculator
 import com.example.healthcare.domain.FoodAllergenPolicy
+import com.example.healthcare.domain.FoodMetadataPolicy
+import com.example.healthcare.data.entity.FoodItem
 import com.example.healthcare.domain.MealRecommendationEngine
+import com.example.healthcare.domain.RecommendationServingPolicy
 import com.example.healthcare.domain.RecommendationSeed
 import com.example.healthcare.domain.RecommendationStage
 import com.example.healthcare.domain.ScoredMealRecommendation
@@ -30,6 +35,7 @@ import java.time.LocalDate
 import java.time.LocalTime
 import java.time.format.DateTimeFormatter
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
@@ -58,7 +64,8 @@ open class MealCoachRepository(
     private val coachDao: MealCoachDao,
     private val foodItemDao: FoodItemDao,
     private val mealRecordDao: MealRecordDao,
-    private val recommendationCycleStore: RecommendationCycleStore = InMemoryRecommendationCycleStore()
+    private val recommendationCycleStore: RecommendationCycleStore = InMemoryRecommendationCycleStore(),
+    private val recommendationLearningStore: RecommendationLearningStore = RecommendationLearningStore()
 ) : MealPreferenceRepository {
     private val dateFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd")
     private val timeFormatter = DateTimeFormatter.ofPattern("HH:mm")
@@ -67,6 +74,29 @@ open class MealCoachRepository(
     override val preference: Flow<UserMealPreference> = coachDao.observePreference().map { it ?: defaultPreference() }
     override val excludedFoods: Flow<List<UserExcludedFood>> = coachDao.observeExcludedFoods()
     open val templateCount: Flow<Int> = coachDao.observeTemplateCount()
+
+    open suspend fun learnedScores(seeds: List<RecommendationSeed>): Map<String, Double> =
+        RecommendationLearningPolicy.scores(seeds, mealRecordDao.getAllMeals().first(),
+            database.frequentFoodDao().getFavoriteFoods().first(), recommendationLearningStore.snapshot(),
+            System.currentTimeMillis())
+
+    /** Called only by an explicit request for another menu; passive display/detail has no penalty. */
+    open fun recordRecommendationReplacement(templateId: String) = recommendationLearningStore.recordReplacement(templateId)
+
+    override suspend fun resetRecommendationLearning() {
+        recommendationLearningStore.reset(mealRecordDao.getAllMeals().first(),
+            database.frequentFoodDao().getFavoriteFoods().first())
+    }
+
+    private suspend fun recentTemplateCounts(): Map<String, Int> {
+        val snapshot = recommendationLearningStore.snapshot()
+        if (snapshot.resetAt == null) return coachDao.getRecentConsumedTemplateIds().groupingBy { it }.eachCount()
+        return mealRecordDao.getAllMeals().first().filter {
+            it.id > snapshot.resetRecordId && it.createdAtEpochMillis > snapshot.resetAt && it.plannedMealId != null
+        }.sortedByDescending { it.createdAtEpochMillis }.take(30)
+            .mapNotNull { coachDao.getPlannedMeal(requireNotNull(it.plannedMealId))?.selectedTemplateId }
+            .groupingBy { it }.eachCount()
+    }
 
     /** Reuses the verified template/ingredient data without consuming a recommendation page. */
     open suspend fun dailyPlanSeeds(): List<RecommendationSeed> {
@@ -83,9 +113,11 @@ open class MealCoachRepository(
                 NutritionRepository.calculateCalories(requireNotNull(food), ingredient.amount)
             } else 0), ingredientNames = foods.mapNotNull { it?.name }.toSet(),
                 ingredientCategories = foods.mapNotNull { it?.category }.toSet(),
-                allergenTags = template.allergens.split('|').filter(String::isNotBlank).toSet(),
+                allergenTags = evidenceAllergens(template.allergens, foods),
                 ingredientInfoComplete = MealRecommendationEngine.hasCompleteIngredientInfo(template.tags),
-                dataCompleteness = if (verified) 1.0 else 0.0)
+                dataCompleteness = if (verified) 1.0 else 0.0,
+                servingsByMeal = com.example.healthcare.domain.DailyMealPlanEngine.slots.associateWith {
+                    RecommendationServingPolicy.options(ingredients, foods, it) })
         }
     }
 
@@ -313,8 +345,8 @@ open class MealCoachRepository(
         val verifiedCalories = ingredients.zip(foods).sumOf { (ingredient, food) ->
             NutritionRepository.calculateCalories(requireNotNull(food), ingredient.amount)
         }
-        val recentUseCount = coachDao.getRecentConsumedTemplateIds().count { it == templateId }
-        val allergenTokens = template.allergens.split('|').filter(String::isNotBlank).toSet()
+        val recentUseCount = recentTemplateCounts()[templateId] ?: 0
+        val allergenTokens = evidenceAllergens(template.allergens, foods)
         val seed = RecommendationSeed(
             template = template.copy(totalKcal = verifiedCalories),
             ingredientNames = foods.mapNotNull { it?.name }.toSet(),
@@ -322,7 +354,8 @@ open class MealCoachRepository(
             allergenTags = allergenTokens,
             ingredientInfoComplete = MealRecommendationEngine.hasCompleteIngredientInfo(template.tags),
             recentUseCount = recentUseCount,
-            dataCompleteness = 1.0
+            dataCompleteness = 1.0,
+            servingsByMeal = mapOf(mealType to RecommendationServingPolicy.options(ingredients, foods, mealType))
         )
         val scored = MealRecommendationEngine.recommend(
             candidates = listOf(seed),
@@ -335,7 +368,9 @@ open class MealCoachRepository(
             budgetLevel = preference.budgetLevel,
             recommendationDiversity = preference.recommendationDiversity,
             limit = 1,
-            stage = RecommendationStage.CLOSEST_VERIFIED
+            stage = RecommendationStage.CLOSEST_VERIFIED,
+            mealType = mealType,
+            learnedScores = learnedScores(listOf(seed))
         ).firstOrNull() ?: return null
         return MealRecommendationWithIngredients(
             recommendation = scored,
@@ -373,9 +408,7 @@ open class MealCoachRepository(
         val allergy = excluded.filter { it.exclusionType == "ALLERGY" }.map { it.normalizedFoodName }.toSet()
         val otherExcluded = excluded.filter { it.exclusionType != "ALLERGY" }.map { it.normalizedFoodName }.toSet()
         val preferred = preference.preferredFoods.split('|').filter(String::isNotBlank).toSet()
-        val recentUseCounts = coachDao.getRecentConsumedTemplateIds()
-            .groupingBy { it }
-            .eachCount()
+        val recentUseCounts = recentTemplateCounts()
 
         val templates = coachDao.getTemplatesForMeal(mealType.name)
         val ingredientsByTemplate = templates.associate { template ->
@@ -402,10 +435,11 @@ open class MealCoachRepository(
                     template = template.copy(totalKcal = verifiedCalories),
                     ingredientNames = namesByTemplate[template.id].orEmpty().toSet(),
                     ingredientCategories = foods.mapNotNull { it?.category }.toSet(),
-                    allergenTags = template.allergens.split('|').filter(String::isNotBlank).toSet(),
+                    allergenTags = evidenceAllergens(template.allergens, foods),
                     ingredientInfoComplete = MealRecommendationEngine.hasCompleteIngredientInfo(template.tags),
                     recentUseCount = recentUseCounts[template.id] ?: 0,
-                    dataCompleteness = if (verified && verifiedCalories > 0) 1.0 else 0.0
+                    dataCompleteness = if (verified && verifiedCalories > 0) 1.0 else 0.0,
+                    servingsByMeal = mapOf(mealType to RecommendationServingPolicy.options(ingredients, foods, mealType))
                 )
             }
         val allScored = MealRecommendationEngine.recommend(
@@ -424,7 +458,8 @@ open class MealCoachRepository(
                 else setOf(preference.cookingMode, extraCookingMode),
             excludedTemplateIds = excludedTemplateIds,
             mealType = mealType,
-            theme = theme
+            theme = theme,
+            learnedScores = learnedScores(seeds)
         )
         val scope = if (theme == null) mealType.name else "THEME_${mealType.name}_${theme.name}"
         val cycleSelection = RecommendationCyclePolicy.select(
@@ -478,9 +513,19 @@ open class MealCoachRepository(
         nutrition: Macronutrients = Macronutrients.Unknown,
         confirmedName: String? = null,
         portionLabel: String? = null,
-        portionRatio: Double? = null
+        portionRatio: Double? = null,
+        foodItemId: String? = null,
+        amountSnapshot: com.example.healthcare.domain.RecordedAmountSnapshot? = null,
+        amountSourceReference: String? = null,
+        amountEstimationType: com.example.healthcare.domain.PortionEstimationType? = null
     ): Long = database.withTransaction {
         require(finalCalories > 0) { "최종 칼로리는 0보다 커야 합니다." }
+        amountSnapshot?.let { snapshot ->
+            require(!foodItemId.isNullOrBlank() && snapshot.quantity.isFinite() && snapshot.quantity > 0 &&
+                snapshot.basisPerUnit.isFinite() && snapshot.basisPerUnit > 0 &&
+                (snapshot.quantity * snapshot.basisPerUnit) in 0.0000001..com.example.healthcare.domain.FoodAmountPolicy.MAX_BASIS_AMOUNT &&
+                snapshot.unit.isNotBlank() && snapshot.basisUnit.isNotBlank()) { "확인한 음식 양이 유효하지 않습니다." }
+        }
         val planned = requireNotNull(coachDao.getPlannedMeal(plannedMealId))
         check(planned.status != "CONSUMED") { "이미 기록한 추천 식사입니다." }
         val alreadyRecorded = database.openHelper.writableDatabase.query(
@@ -504,11 +549,13 @@ open class MealCoachRepository(
                 proteinGrams = nutrition.proteinGrams,
                 fatGrams = nutrition.fatGrams,
                 memo = "추천 식단에서 확인 후 기록",
-                servingAmount = portionRatio,
-                servingUnit = portionRatio?.let { "추천 분량" },
-                portionDisplayLabel = portionLabel,
-                portionEstimationType = portionLabel?.let { "VISUAL_ESTIMATE" },
-                portionSourceReference = portionLabel?.let { "선택한 추천 식단의 사용자 확인 비율" },
+                servingAmount = amountSnapshot?.let { it.quantity * it.basisPerUnit } ?: portionRatio,
+                servingUnit = amountSnapshot?.basisUnit ?: portionRatio?.let { "추천 분량" },
+                portionPresetId = amountSnapshot?.presetId,
+                portionDisplayLabel = amountSnapshot?.label ?: portionLabel,
+                portionEstimationType = amountEstimationType?.name ?: portionLabel?.let { "VISUAL_ESTIMATE" },
+                portionSourceReference = amountSourceReference ?: portionLabel?.let { "선택한 추천 식단의 사용자 확인 비율" },
+                foodItemId = foodItemId,
                 source = RecordSource.RECOMMENDATION,
                 plannedMealId = plannedMealId,
                 createdAtEpochMillis = now,
@@ -519,10 +566,28 @@ open class MealCoachRepository(
         plannedMealId
     }
 
+    open suspend fun confirmConsumedRecord(
+        plannedMealId: Long, date: LocalDate, time: LocalTime, finalCalories: Int,
+        nutrition: Macronutrients = Macronutrients.Unknown, confirmedName: String? = null,
+        portionLabel: String? = null, portionRatio: Double? = null, foodItemId: String? = null,
+        amountSnapshot: com.example.healthcare.domain.RecordedAmountSnapshot? = null,
+        amountSourceReference: String? = null,
+        amountEstimationType: com.example.healthcare.domain.PortionEstimationType? = null
+    ): MealRecord {
+        confirmConsumed(plannedMealId, date, time, finalCalories, nutrition, confirmedName, portionLabel,
+            portionRatio, foodItemId, amountSnapshot, amountSourceReference, amountEstimationType)
+        return requireNotNull(mealRecordDao.getAllMeals().first().singleOrNull { it.plannedMealId == plannedMealId }) {
+            "저장한 추천 기록을 확인하지 못했습니다."
+        }
+    }
+
     companion object {
         fun defaultPreference(now: Long = System.currentTimeMillis()) = UserMealPreference(
             createdAt = now,
             updatedAt = now
         )
     }
+
+    private fun evidenceAllergens(declaration: String, foods: List<FoodItem?>): Set<String> =
+        FoodMetadataPolicy.allergenTags(declaration.split('|').filter(String::isNotBlank).toSet(), foods.map { it?.id })
 }

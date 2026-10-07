@@ -74,13 +74,13 @@ class BodyProfileStore(context: Context) : BodyProfilePersistence {
             profile.heightCm.toString(),
             profile.weightKg.toString()
         ).isValid)
-        preferences.edit(commit = true) {
+        check(preferences.edit().apply {
             putString(KEY_SEX, profile.sex.name)
             putInt(KEY_AGE, profile.ageYears)
             putString(KEY_HEIGHT, profile.heightCm.toString())
             putString(KEY_WEIGHT, profile.weightKg.toString())
-        }
-        exercisePreferences.edit(commit = true) { putString("weight_kg", profile.weightKg.toString()) }
+        }.commit()) { "Body profile persistence failed" }
+        check(exercisePreferences.edit().apply { putString("weight_kg", profile.weightKg.toString()) }.commit()) { "Exercise weight persistence failed" }
     }
 
     /** 운동 화면에서 바꾼 몸무게도 유효한 신체정보가 있으면 같은 값으로 맞춘다. */
@@ -89,7 +89,7 @@ class BodyProfileStore(context: Context) : BodyProfilePersistence {
         if (current != null && weightKg in BodyProfileCalculator.MIN_WEIGHT_KG..BodyProfileCalculator.MAX_WEIGHT_KG) {
             save(current.copy(weightKg = weightKg))
         } else {
-            exercisePreferences.edit(commit = true) { putString("weight_kg", weightKg.toString()) }
+            check(exercisePreferences.edit().apply { putString("weight_kg", weightKg.toString()) }.commit()) { "Exercise weight persistence failed" }
         }
     }
 

@@ -27,26 +27,7 @@ class DailyPlanAuditTest {
             }; i++
         }; values += value.toString(); return values
     }
-    private fun seeds(): List<RecommendationSeed> {
-        val assets = "app/src/main/assets/fooddata/"
-        val foods = rows(assets + "food_items.csv").associateBy { it.getValue("id") }
-        val ingredients = rows(assets + "meal_template_ingredients.csv").groupBy { it.getValue("mealTemplateId") }
-        return rows(assets + "meal_templates.csv").map { t ->
-            val linked = ingredients.getValue(t.getValue("id"))
-            fun nutrient(key: String): Double? = linked.map { i ->
-                val f = foods.getValue(i.getValue("foodItemId"))
-                f[key]?.toDoubleOrNull()?.times(i.getValue("amount").toDouble() / f.getValue("referenceAmount").toDouble())
-            }.takeIf { it.all { v -> v != null } }?.sumOf { requireNotNull(it) }
-            RecommendationSeed(MealTemplate(t.getValue("id"), t.getValue("name"), t.getValue("supportedMealTypes"),
-                requireNotNull(nutrient("energyKcal")).roundToInt(), nutrient("proteinGrams"), nutrient("carbohydrateGrams"), nutrient("fatGrams"),
-                t.getValue("preparationMinutes").toInt(), t.getValue("costLevel"), t.getValue("tags"), t.getValue("allergens"),
-                t.getValue("excludedDietTypes"), t["cuisineType"], t.getValue("source"), 0, 0),
-                ingredientNames = linked.map { foods.getValue(it.getValue("foodItemId")).getValue("name") }.toSet(),
-                ingredientCategories = linked.map { foods.getValue(it.getValue("foodItemId")).getValue("category") }.toSet(),
-                ingredientInfoComplete = "|INGREDIENTS_COMPLETE|" in t.getValue("tags"),
-                allergenTags = t.getValue("allergens").split('|').filter(String::isNotBlank).toSet())
-        }
-    }
+    private fun seeds(): List<RecommendationSeed> = ServingAssetFixture().seeds()
     @Test fun auditHas292UniqueCompleteIdsAndExactNutrition() {
         val seeds = seeds()
         val audit = rows("data-source/recommendation/theme-eligibility-audit.csv")

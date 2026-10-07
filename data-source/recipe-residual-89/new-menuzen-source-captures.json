@@ -1,0 +1,26 @@
+[
+  {
+    "url": "https://www.nics.go.kr/food/kfi/mgnNewmenumkFoodSelectNew/selectFoodDetail.json?fdCode=D093012",
+    "checkedAt": "2026-10-05",
+    "cacheReused": false,
+    "finalUrl": "https://www.nics.go.kr/food/kfi/mgnNewmenumkFoodSelectNew/selectFoodDetail.json?fdCode=D093012",
+    "contentType": "text/plain; charset=UTF-8",
+    "httpStatus": 200,
+    "rawFile": "data-source/recipe-residual-89/raw/7c9df4d111311601b963",
+    "sha256": "4796765f456b52fcbb1610284eb1ae11b237338e47f5fc515bca790100e49ec4",
+    "bytes": 2563,
+    "status": "CAPTURED"
+  },
+  {
+    "url": "https://www.nics.go.kr/food/kfi/mgnNewmenumkFoodSelectNew/selectFoodDetail.json?fdCode=D132016",
+    "checkedAt": "2026-10-05",
+    "cacheReused": false,
+    "finalUrl": "https://www.nics.go.kr/food/kfi/mgnNewmenumkFoodSelectNew/selectFoodDetail.json?fdCode=D132016",
+    "contentType": "text/plain; charset=UTF-8",
+    "httpStatus": 200,
+    "rawFile": "data-source/recipe-residual-89/raw/a1a9fd90f3f3986caad4",
+    "sha256": "393abea7a080426244bf2e38642d818f983aa89212e48d5f218b4b95e68cf6a0",
+    "bytes": 3144,
+    "status": "CAPTURED"
+  }
+]

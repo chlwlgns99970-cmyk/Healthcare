@@ -1,0 +1,193 @@
+family,query,normalizedQuery,expectedFoodItemId,expectedName,sourceType,productCount
+라면,짜파게티,짜파게티,official-retail-nongshim-p0000dyw-single-140g,올리브 짜파게티,OFFICIAL-RETAIL-PRODUCT,35
+라면,짜 파 게 티,짜파게티,official-retail-nongshim-p0000dyw-single-140g,올리브 짜파게티,OFFICIAL-RETAIL-PRODUCT,35
+라면,올리브 짜파게티,올리브짜파게티,official-retail-nongshim-p0000dyw-single-140g,올리브 짜파게티,OFFICIAL-RETAIL-PRODUCT,35
+라면,농심 올리브 짜파게티,농심올리브짜파게티,official-retail-nongshim-p0000dyw-single-140g,올리브 짜파게티,OFFICIAL-RETAIL-PRODUCT,35
+라면,신라면,신라면,kfind-product-p108-003000400-0138,신라면,K-FIND-PRODUCT,54
+라면,신 라 면,신라면,kfind-product-p108-003000400-0138,신라면,K-FIND-PRODUCT,54
+라면,진라면,진라면,kfind-product-p123-201020300-4779,진라면 볶음밥,K-FIND-PRODUCT,20
+라면,진 라 면,진라면,kfind-product-p123-201020300-4779,진라면 볶음밥,K-FIND-PRODUCT,20
+라면,진라면 볶음밥,진라면볶음밥,kfind-product-p123-201020300-4779,진라면 볶음밥,K-FIND-PRODUCT,20
+라면,불닭볶음면,불닭볶음면,kfind-product-p108-009000400-0021,불닭볶음면,K-FIND-PRODUCT,37
+라면,불 닭 볶 음 면,불닭볶음면,kfind-product-p108-009000400-0021,불닭볶음면,K-FIND-PRODUCT,37
+라면,삼양식품(주)원주공장 불닭볶음면,삼양식품주원주공장불닭볶음면,kfind-product-p108-009000400-0021,불닭볶음면,K-FIND-PRODUCT,37
+라면,너구리,너구리,kfind-product-p108-003000400-0051,너구리컵,K-FIND-PRODUCT,14
+라면,너 구 리,너구리,kfind-product-p108-003000400-0051,너구리컵,K-FIND-PRODUCT,14
+라면,너구리컵,너구리컵,kfind-product-p108-003000400-0051,너구리컵,K-FIND-PRODUCT,14
+라면,(주)농심 너구리컵,주농심너구리컵,kfind-product-p108-003000400-0051,너구리컵,K-FIND-PRODUCT,14
+라면,팔도비빔면,팔도비빔면,kfind-product-p108-009000400-0084,팔도비빔면,K-FIND-PRODUCT,25
+라면,팔 도 비 빔 면,팔도비빔면,kfind-product-p108-009000400-0084,팔도비빔면,K-FIND-PRODUCT,25
+라면,(주)팔도 팔도비빔면,주팔도팔도비빔면,kfind-product-p108-009000400-0084,팔도비빔면,K-FIND-PRODUCT,25
+우동·면제품,생생우동,생생우동,kfind-product-p108-011000200-0061,생생우동봉지,K-FIND-PRODUCT,4
+우동·면제품,생 생 우 동,생생우동,kfind-product-p108-011000200-0061,생생우동봉지,K-FIND-PRODUCT,4
+우동·면제품,생생우동봉지,생생우동봉지,kfind-product-p108-011000200-0061,생생우동봉지,K-FIND-PRODUCT,4
+우동·면제품,(주)농심 생생우동봉지,주농심생생우동봉지,kfind-product-p108-011000200-0061,생생우동봉지,K-FIND-PRODUCT,4
+우동·면제품,메밀소바,메밀소바,kfind-product-p108-002000200-0006,메밀소바,K-FIND-PRODUCT,35
+우동·면제품,메 밀 소 바,메밀소바,kfind-product-p108-002000200-0006,메밀소바,K-FIND-PRODUCT,35
+우동·면제품,㈜미정 메밀소바,주미정메밀소바,kfind-product-p108-002000200-0006,메밀소바,K-FIND-PRODUCT,35
+우유,바나나맛우유,바나나맛우유,kfind-product-p119-204020400-0807,바나나맛우유,K-FIND-PRODUCT,17
+우유,바 나 나 맛 우 유,바나나맛우유,kfind-product-p119-204020400-0807,바나나맛우유,K-FIND-PRODUCT,17
+우유,서울우유,서울우유,kfind-product-p119-101010100-0075,서울우유,K-FIND-PRODUCT,231
+우유,서 울 우 유,서울우유,kfind-product-p119-101010100-0075,서울우유,K-FIND-PRODUCT,231
+우유,매일우유,매일우유,kfind-product-p119-101010100-0053,매일우유,K-FIND-PRODUCT,28
+우유,매 일 우 유,매일우유,kfind-product-p119-101010100-0053,매일우유,K-FIND-PRODUCT,28
+두유,베지밀,베지밀,kfind-product-p109-500050200-0118,녹차 베지밀,K-FIND-PRODUCT,38
+두유,베 지 밀,베지밀,kfind-product-p109-500050200-0118,녹차 베지밀,K-FIND-PRODUCT,38
+두유,녹차 베지밀,녹차베지밀,kfind-product-p109-500050200-0118,녹차 베지밀,K-FIND-PRODUCT,38
+두유,(주)정.식품 녹차 베지밀,주정식품녹차베지밀,kfind-product-p109-500050200-0118,녹차 베지밀,K-FIND-PRODUCT,38
+두유,삼육두유,삼육두유,kfind-product-p109-500050200-0609,삼육두유,K-FIND-PRODUCT,33
+두유,삼 육 두 유,삼육두유,kfind-product-p109-500050200-0609,삼육두유,K-FIND-PRODUCT,33
+탄산·음료,코카콜라,코카콜라,kfind-product-p109-401040100-0479,코카콜라,K-FIND-PRODUCT,105
+탄산·음료,코 카 콜 라,코카콜라,kfind-product-p109-401040100-0479,코카콜라,K-FIND-PRODUCT,105
+탄산·음료,칠성사이다,칠성사이다,kfind-product-p109-401040100-0445,칠성사이다,K-FIND-PRODUCT,30
+탄산·음료,칠 성 사 이 다,칠성사이다,kfind-product-p109-401040100-0445,칠성사이다,K-FIND-PRODUCT,30
+탄산·음료,포카리스웨트,포카리스웨트,kfind-product-p109-801080100-1518,포카리스웨트,K-FIND-PRODUCT,4
+탄산·음료,포 카 리 스 웨 트,포카리스웨트,kfind-product-p109-801080100-1518,포카리스웨트,K-FIND-PRODUCT,4
+탄산·음료,동아오츠카(주) 포카리스웨트,동아오츠카주포카리스웨트,kfind-product-p109-801080100-1518,포카리스웨트,K-FIND-PRODUCT,4
+탄산·음료,토레타,토레타,kfind-product-p109-801080100-1989,토레타!,K-FIND-PRODUCT,8
+탄산·음료,토 레 타,토레타,kfind-product-p109-801080100-1989,토레타!,K-FIND-PRODUCT,8
+탄산·음료,토레타!,토레타,kfind-product-p109-801080100-1989,토레타!,K-FIND-PRODUCT,8
+탄산·음료,해태에이치티비주식회사 토레타!,해태에이치티비주식회사토레타,kfind-product-p109-801080100-1989,토레타!,K-FIND-PRODUCT,8
+탄산·음료,제주삼다수,제주삼다수,kfind-product-p109-303030300-0906,제주삼다수제주감귤,K-FIND-PRODUCT,3
+탄산·음료,제 주 삼 다 수,제주삼다수,kfind-product-p109-303030300-0906,제주삼다수제주감귤,K-FIND-PRODUCT,3
+탄산·음료,제주삼다수제주감귤,제주삼다수제주감귤,kfind-product-p109-303030300-0906,제주삼다수제주감귤,K-FIND-PRODUCT,3
+탄산·음료,제주특별자치도개발공사 제주삼다수제주감귤,제주특별자치도개발공사제주삼다수제주감귤,kfind-product-p109-303030300-0906,제주삼다수제주감귤,K-FIND-PRODUCT,3
+과자,새우깡,새우깡,kfind-product-p101-106000100-0968,새우깡,K-FIND-PRODUCT,15
+과자,새 우 깡,새우깡,kfind-product-p101-106000100-0968,새우깡,K-FIND-PRODUCT,15
+과자,포카칩,포카칩,kfind-product-p101-106000100-1874,포카칩어니언맛,K-FIND-PRODUCT,9
+과자,포 카 칩,포카칩,kfind-product-p101-106000100-1874,포카칩어니언맛,K-FIND-PRODUCT,9
+과자,포카칩어니언맛,포카칩어니언맛,kfind-product-p101-106000100-1874,포카칩어니언맛,K-FIND-PRODUCT,9
+과자,(주)오리온 포카칩어니언맛,주오리온포카칩어니언맛,kfind-product-p101-106000100-1874,포카칩어니언맛,K-FIND-PRODUCT,9
+과자,꼬깔콘,꼬깔콘,kfind-product-p101-106000100-0272,꼬깔콘빼빼로,K-FIND-PRODUCT,20
+과자,꼬 깔 콘,꼬깔콘,kfind-product-p101-106000100-0272,꼬깔콘빼빼로,K-FIND-PRODUCT,20
+과자,꼬깔콘빼빼로,꼬깔콘빼빼로,kfind-product-p101-106000100-0272,꼬깔콘빼빼로,K-FIND-PRODUCT,20
+과자,초코파이,초코파이,kfind-product-p101-412000400-0875,초코파이,K-FIND-PRODUCT,128
+과자,초 코 파 이,초코파이,kfind-product-p101-412000400-0875,초코파이,K-FIND-PRODUCT,128
+과자,빼빼로,빼빼로,kfind-product-p103-102020500-0162,빼빼로,K-FIND-PRODUCT,48
+과자,빼 빼 로,빼빼로,kfind-product-p103-102020500-0162,빼빼로,K-FIND-PRODUCT,48
+초콜릿,가나,가나,kfind-product-p103-101020100-0018,가나블랙,K-FIND-PRODUCT,60
+초콜릿,가 나,가나,kfind-product-p103-101020100-0018,가나블랙,K-FIND-PRODUCT,60
+초콜릿,가나블랙,가나블랙,kfind-product-p103-101020100-0018,가나블랙,K-FIND-PRODUCT,60
+초콜릿,롯데제과(주) 가나블랙,롯데제과주가나블랙,kfind-product-p103-101020100-0018,가나블랙,K-FIND-PRODUCT,60
+초콜릿,크런키,크런키,kfind-product-p103-101020500-0892,크런키,K-FIND-PRODUCT,47
+초콜릿,크 런 키,크런키,kfind-product-p103-101020500-0892,크런키,K-FIND-PRODUCT,47
+초콜릿,롯데제과(주) 크런키,롯데제과주크런키,kfind-product-p103-101020500-0892,크런키,K-FIND-PRODUCT,47
+초콜릿,킷캣,킷캣,kfind-product-p102-101010100-1265,그린티 킷캣 선데,K-FIND-PRODUCT,2
+초콜릿,킷 캣,킷캣,kfind-product-p102-101010100-1265,그린티 킷캣 선데,K-FIND-PRODUCT,2
+초콜릿,그린티 킷캣 선데,그린티킷캣선데,kfind-product-p102-101010100-1265,그린티 킷캣 선데,K-FIND-PRODUCT,2
+초콜릿,동그린주식회사 그린티 킷캣 선데,동그린주식회사그린티킷캣선데,kfind-product-p102-101010100-1265,그린티 킷캣 선데,K-FIND-PRODUCT,2
+시리얼,콘푸로스트,콘푸로스트,kfind-product-p116-400040000-0081,콘푸로스트,K-FIND-PRODUCT,3
+시리얼,콘 푸 로 스 트,콘푸로스트,kfind-product-p116-400040000-0081,콘푸로스트,K-FIND-PRODUCT,3
+시리얼,농심켈로그(주) 콘푸로스트,농심켈로그주콘푸로스트,kfind-product-p116-400040000-0081,콘푸로스트,K-FIND-PRODUCT,3
+시리얼,첵스초코,첵스초코,kfind-product-p116-400040000-0051,오곡으로 만든 첵스초코,K-FIND-PRODUCT,9
+시리얼,첵 스 초 코,첵스초코,kfind-product-p116-400040000-0051,오곡으로 만든 첵스초코,K-FIND-PRODUCT,9
+시리얼,오곡으로 만든 첵스초코,오곡으로만든첵스초코,kfind-product-p116-400040000-0051,오곡으로 만든 첵스초코,K-FIND-PRODUCT,9
+시리얼,농심켈로그 주식회사 오곡으로 만든 첵스초코,농심켈로그주식회사오곡으로만든첵스초코,kfind-product-p116-400040000-0051,오곡으로 만든 첵스초코,K-FIND-PRODUCT,9
+시리얼,그래놀라,그래놀라,kfind-product-p101-103000400-0138,그래놀라쿠키,K-FIND-PRODUCT,121
+시리얼,그 래 놀 라,그래놀라,kfind-product-p101-103000400-0138,그래놀라쿠키,K-FIND-PRODUCT,121
+시리얼,그래놀라쿠키,그래놀라쿠키,kfind-product-p101-103000400-0138,그래놀라쿠키,K-FIND-PRODUCT,121
+즉석밥,햇반,햇반,kfind-product-p123-201020300-2924,햇반,K-FIND-PRODUCT,119
+즉석밥,햇 반,햇반,kfind-product-p123-201020300-2924,햇반,K-FIND-PRODUCT,119
+즉석밥,오뚜기밥,오뚜기밥,kfind-product-p123-201020300-1391,맛있는 오뚜기밥,K-FIND-PRODUCT,12
+즉석밥,오 뚜 기 밥,오뚜기밥,kfind-product-p123-201020300-1391,맛있는 오뚜기밥,K-FIND-PRODUCT,12
+즉석밥,맛있는 오뚜기밥,맛있는오뚜기밥,kfind-product-p123-201020300-1391,맛있는 오뚜기밥,K-FIND-PRODUCT,12
+즉석밥,주식회사 오뚜기 맛있는 오뚜기밥,주식회사오뚜기맛있는오뚜기밥,kfind-product-p123-201020300-1391,맛있는 오뚜기밥,K-FIND-PRODUCT,12
+죽·국,비비고단호박죽,비비고단호박죽,kfind-product-p123-205020300-0594,비비고 단호박죽,K-FIND-PRODUCT,2
+죽·국,비 비 고 단 호 박 죽,비비고단호박죽,kfind-product-p123-205020300-0594,비비고 단호박죽,K-FIND-PRODUCT,2
+죽·국,비비고 단호박죽,비비고단호박죽,kfind-product-p123-205020300-0594,비비고 단호박죽,K-FIND-PRODUCT,2
+죽·국,씨제이제일제당(주) 진천 BLOSSOM CAMPUS 3동 비비고 단호박죽,씨제이제일제당주진천blossomcampus3동비비고단호박죽,kfind-product-p123-205020300-0594,비비고 단호박죽,K-FIND-PRODUCT,2
+죽·국,양반전복죽,양반전복죽,kfind-product-p123-205020300-0887,양반 전복죽,K-FIND-PRODUCT,1
+죽·국,양 반 전 복 죽,양반전복죽,kfind-product-p123-205020300-0887,양반 전복죽,K-FIND-PRODUCT,1
+죽·국,양반 전복죽,양반전복죽,kfind-product-p123-205020300-0887,양반 전복죽,K-FIND-PRODUCT,1
+죽·국,(주)동원F&B 양반 전복죽,주동원fb양반전복죽,kfind-product-p123-205020300-0887,양반 전복죽,K-FIND-PRODUCT,1
+죽·국,양반죽,양반죽,kfind-product-p123-205020300-0906,양반백합죽,K-FIND-PRODUCT,50
+죽·국,양 반 죽,양반죽,kfind-product-p123-205020300-0906,양반백합죽,K-FIND-PRODUCT,50
+죽·국,양반백합죽,양반백합죽,kfind-product-p123-205020300-0906,양반백합죽,K-FIND-PRODUCT,50
+죽·국,(주)동원에프앤비 양반백합죽,주동원에프앤비양반백합죽,kfind-product-p123-205020300-0906,양반백합죽,K-FIND-PRODUCT,50
+죽·국,비비고육개장,비비고육개장,kfind-product-p123-207020300-0385,비비고 육개장,K-FIND-PRODUCT,1
+죽·국,비 비 고 육 개 장,비비고육개장,kfind-product-p123-207020300-0385,비비고 육개장,K-FIND-PRODUCT,1
+죽·국,비비고 육개장,비비고육개장,kfind-product-p123-207020300-0385,비비고 육개장,K-FIND-PRODUCT,1
+죽·국,씨제이제일제당㈜ ㈜ 교동식품 비비고 육개장,씨제이제일제당주주교동식품비비고육개장,kfind-product-p123-207020300-0385,비비고 육개장,K-FIND-PRODUCT,1
+냉동제품,고향만두,고향만두,kfind-product-p123-302030100-3286,고향만두,K-FIND-PRODUCT,10
+냉동제품,고 향 만 두,고향만두,kfind-product-p123-302030100-3286,고향만두,K-FIND-PRODUCT,10
+냉동제품,해태제과식품(주)광주공장 고향만두,해태제과식품주광주공장고향만두,kfind-product-p123-302030100-3286,고향만두,K-FIND-PRODUCT,10
+냉동제품,비비고왕교자,비비고왕교자,kfind-product-p123-302030100-0336,비비고왕교자,K-FIND-PRODUCT,7
+냉동제품,비 비 고 왕 교 자,비비고왕교자,kfind-product-p123-302030100-0336,비비고왕교자,K-FIND-PRODUCT,7
+냉동제품,씨제이제일제당(주) 비비고왕교자,씨제이제일제당주비비고왕교자,kfind-product-p123-302030100-0336,비비고왕교자,K-FIND-PRODUCT,7
+냉동제품,사옹원,사옹원,kfind-product-p123-217020300-0713,라볶이,K-FIND-PRODUCT,53
+냉동제품,사 옹 원,사옹원,kfind-product-p123-217020300-0713,라볶이,K-FIND-PRODUCT,53
+냉동제품,라볶이,라볶이,kfind-product-p123-217020300-0713,라볶이,K-FIND-PRODUCT,53
+냉동제품,(주)사옹원 라볶이,주사옹원라볶이,kfind-product-p123-217020300-0713,라볶이,K-FIND-PRODUCT,53
+햄·통조림,스팸,스팸,kfind-product-p117-800050200-0400,스팸튀김,K-FIND-PRODUCT,255
+햄·통조림,스 팸,스팸,kfind-product-p117-800050200-0400,스팸튀김,K-FIND-PRODUCT,255
+햄·통조림,스팸튀김,스팸튀김,kfind-product-p117-800050200-0400,스팸튀김,K-FIND-PRODUCT,255
+햄·통조림,씨제이제일제당(주)진천 BLOSSOM CAMPUS 스팸튀김,씨제이제일제당주진천blossomcampus스팸튀김,kfind-product-p117-800050200-0400,스팸튀김,K-FIND-PRODUCT,255
+햄·통조림,리챔,리챔,kfind-product-p117-100010300-0084,매운리챔,K-FIND-PRODUCT,74
+햄·통조림,리 챔,리챔,kfind-product-p117-100010300-0084,매운리챔,K-FIND-PRODUCT,74
+햄·통조림,매운리챔,매운리챔,kfind-product-p117-100010300-0084,매운리챔,K-FIND-PRODUCT,74
+햄·통조림,(주)동원에프앤비 매운리챔,주동원에프앤비매운리챔,kfind-product-p117-100010300-0084,매운리챔,K-FIND-PRODUCT,74
+햄·통조림,동원참치,동원참치,kfind-product-p108-003000400-0067,동원참치라면,K-FIND-PRODUCT,31
+햄·통조림,동 원 참 치,동원참치,kfind-product-p108-003000400-0067,동원참치라면,K-FIND-PRODUCT,31
+햄·통조림,동원참치라면,동원참치라면,kfind-product-p108-003000400-0067,동원참치라면,K-FIND-PRODUCT,31
+요거트·치즈,요플레,요플레,kfind-product-p119-202040200-0361,요플레딸기,K-FIND-PRODUCT,98
+요거트·치즈,요 플 레,요플레,kfind-product-p119-202040200-0361,요플레딸기,K-FIND-PRODUCT,98
+요거트·치즈,요플레딸기,요플레딸기,kfind-product-p119-202040200-0361,요플레딸기,K-FIND-PRODUCT,98
+요거트·치즈,(주)빙그레 요플레딸기,주빙그레요플레딸기,kfind-product-p119-202040200-0361,요플레딸기,K-FIND-PRODUCT,98
+요거트·치즈,서울우유체다,서울우유체다,kfind-product-p119-900090200-0139,서울우유 체다치즈,K-FIND-PRODUCT,5
+요거트·치즈,서 울 우 유 체 다,서울우유체다,kfind-product-p119-900090200-0139,서울우유 체다치즈,K-FIND-PRODUCT,5
+요거트·치즈,서울우유 체다치즈,서울우유체다치즈,kfind-product-p119-900090200-0139,서울우유 체다치즈,K-FIND-PRODUCT,5
+요거트·치즈,서울우유협동조합 거창공장 서울우유 체다치즈,서울우유협동조합거창공장서울우유체다치즈,kfind-product-p119-900090200-0139,서울우유 체다치즈,K-FIND-PRODUCT,5
+커피,레쓰비,레쓰비,kfind-product-p102-103010300-0127,레쓰비,K-FIND-PRODUCT,21
+커피,레 쓰 비,레쓰비,kfind-product-p102-103010300-0127,레쓰비,K-FIND-PRODUCT,21
+커피,롯데푸드(주) 레쓰비,롯데푸드주레쓰비,kfind-product-p102-103010300-0127,레쓰비,K-FIND-PRODUCT,21
+커피,TOP,top,kfind-product-p101-415000400-0977,냉동피자,K-FIND-PRODUCT,9
+커피,T O P,top,kfind-product-p101-415000400-0977,냉동피자,K-FIND-PRODUCT,9
+커피,냉동피자,냉동피자,kfind-product-p101-415000400-0977,냉동피자,K-FIND-PRODUCT,9
+커피,바리스타룰스,바리스타룰스,kfind-product-p109-201020000-2151,바리스타룰스 돌체라떼,K-FIND-PRODUCT,21
+커피,바 리 스 타 룰 스,바리스타룰스,kfind-product-p109-201020000-2151,바리스타룰스 돌체라떼,K-FIND-PRODUCT,21
+커피,바리스타룰스 돌체라떼,바리스타룰스돌체라떼,kfind-product-p109-201020000-2151,바리스타룰스 돌체라떼,K-FIND-PRODUCT,21
+커피,매일유업(주) 청양공장 바리스타룰스 돌체라떼,매일유업주청양공장바리스타룰스돌체라떼,kfind-product-p109-201020000-2151,바리스타룰스 돌체라떼,K-FIND-PRODUCT,21
+소스,케찹,케찹,kfind-product-p113-203020300-0005,케찹,K-FIND-PRODUCT,16
+소스,케 찹,케찹,kfind-product-p113-203020300-0005,케찹,K-FIND-PRODUCT,16
+소스,(주)동원홈푸드 케찹,주동원홈푸드케찹,kfind-product-p113-203020300-0005,케찹,K-FIND-PRODUCT,16
+소스,마요네즈,마요네즈,kfind-product-p113-202020200-0015,케요네즈,K-FIND-PRODUCT,65
+소스,마 요 네 즈,마요네즈,kfind-product-p113-202020200-0015,케요네즈,K-FIND-PRODUCT,65
+소스,케요네즈,케요네즈,kfind-product-p113-202020200-0015,케요네즈,K-FIND-PRODUCT,65
+소스,주식회사 오뚜기 케요네즈,주식회사오뚜기케요네즈,kfind-product-p113-202020200-0015,케요네즈,K-FIND-PRODUCT,65
+소스,드레싱,드레싱,kfind-product-p113-205020400-0017,랜치드레싱,K-FIND-PRODUCT,254
+소스,드 레 싱,드레싱,kfind-product-p113-205020400-0017,랜치드레싱,K-FIND-PRODUCT,254
+소스,랜치드레싱,랜치드레싱,kfind-product-p113-205020400-0017,랜치드레싱,K-FIND-PRODUCT,254
+소스,주식회사 에스피씨삼립 청주공장 랜치드레싱,주식회사에스피씨삼립청주공장랜치드레싱,kfind-product-p113-205020400-0017,랜치드레싱,K-FIND-PRODUCT,254
+아이스크림,메로나,메로나,kfind-product-p102-103010300-0149,메로나,K-FIND-PRODUCT,24
+아이스크림,메 로 나,메로나,kfind-product-p102-103010300-0149,메로나,K-FIND-PRODUCT,24
+아이스크림,(주)빙그레 메로나,주빙그레메로나,kfind-product-p102-103010300-0149,메로나,K-FIND-PRODUCT,24
+아이스크림,투게더,투게더,kfind-product-p102-101010100-0631,투게더,K-FIND-PRODUCT,23
+아이스크림,투 게 더,투게더,kfind-product-p102-101010100-0631,투게더,K-FIND-PRODUCT,23
+아이스크림,(주)빙그레 투게더,주빙그레투게더,kfind-product-p102-101010100-0631,투게더,K-FIND-PRODUCT,23
+아이스크림,부라보,부라보,official-retail-binggrae-pack-846,부라보 딸기,OFFICIAL-RETAIL-PRODUCT,23
+아이스크림,부 라 보,부라보,official-retail-binggrae-pack-846,부라보 딸기,OFFICIAL-RETAIL-PRODUCT,23
+아이스크림,부라보 딸기,부라보딸기,official-retail-binggrae-pack-846,부라보 딸기,OFFICIAL-RETAIL-PRODUCT,23
+아이스크림,빙그레 부라보 딸기,빙그레부라보딸기,official-retail-binggrae-pack-846,부라보 딸기,OFFICIAL-RETAIL-PRODUCT,23
+아이스크림,빵또아,빵또아,official-retail-binggrae-pack-638,빵또아 부드러운,OFFICIAL-RETAIL-PRODUCT,7
+아이스크림,빵 또 아,빵또아,official-retail-binggrae-pack-638,빵또아 부드러운,OFFICIAL-RETAIL-PRODUCT,7
+아이스크림,빵또아 부드러운,빵또아부드러운,official-retail-binggrae-pack-638,빵또아 부드러운,OFFICIAL-RETAIL-PRODUCT,7
+아이스크림,빙그레 빵또아 부드러운,빙그레빵또아부드러운,official-retail-binggrae-pack-638,빵또아 부드러운,OFFICIAL-RETAIL-PRODUCT,7
+아이스크림,붕어싸만코,붕어싸만코,official-retail-binggrae-pack-55,떡붕어싸만코,OFFICIAL-RETAIL-PRODUCT,31
+아이스크림,붕 어 싸 만 코,붕어싸만코,official-retail-binggrae-pack-55,떡붕어싸만코,OFFICIAL-RETAIL-PRODUCT,31
+아이스크림,떡붕어싸만코,떡붕어싸만코,official-retail-binggrae-pack-55,떡붕어싸만코,OFFICIAL-RETAIL-PRODUCT,31
+아이스크림,빙그레 떡붕어싸만코,빙그레떡붕어싸만코,official-retail-binggrae-pack-55,떡붕어싸만코,OFFICIAL-RETAIL-PRODUCT,31
+아이스크림,설레임,설레임,kfind-product-p101-103000100-2406,롯샌X설레임,K-FIND-PRODUCT,25
+아이스크림,설 레 임,설레임,kfind-product-p101-103000100-2406,롯샌X설레임,K-FIND-PRODUCT,25
+아이스크림,롯샌X설레임,롯샌x설레임,kfind-product-p101-103000100-2406,롯샌X설레임,K-FIND-PRODUCT,25
+아이스크림,롯데웰푸드(주) 롯샌X설레임,롯데웰푸드주롯샌x설레임,kfind-product-p101-103000100-2406,롯샌X설레임,K-FIND-PRODUCT,25
+아이스크림,뽕따,뽕따,official-retail-binggrae-pack-649,뽕따 소다,OFFICIAL-RETAIL-PRODUCT,4
+아이스크림,뽕 따,뽕따,official-retail-binggrae-pack-649,뽕따 소다,OFFICIAL-RETAIL-PRODUCT,4
+아이스크림,뽕따 소다,뽕따소다,official-retail-binggrae-pack-649,뽕따 소다,OFFICIAL-RETAIL-PRODUCT,4
+아이스크림,빙그레 뽕따 소다,빙그레뽕따소다,official-retail-binggrae-pack-649,뽕따 소다,OFFICIAL-RETAIL-PRODUCT,4
+아이스크림,월드콘,월드콘,kfind-product-p102-101010100-0505,월드콘XQ,K-FIND-PRODUCT,23
+아이스크림,월 드 콘,월드콘,kfind-product-p102-101010100-0505,월드콘XQ,K-FIND-PRODUCT,23
+아이스크림,월드콘XQ,월드콘xq,kfind-product-p102-101010100-0505,월드콘XQ,K-FIND-PRODUCT,23
+아이스크림,롯데제과(주) 월드콘XQ,롯데제과주월드콘xq,kfind-product-p102-101010100-0505,월드콘XQ,K-FIND-PRODUCT,23
+아이스크림,구구크러스터,구구크러스터,kfind-product-p102-101010100-0034,구구크러스터,K-FIND-PRODUCT,6
+아이스크림,구 구 크 러 스 터,구구크러스터,kfind-product-p102-101010100-0034,구구크러스터,K-FIND-PRODUCT,6
+아이스크림,롯데웰푸드주식회사천안공장 구구크러스터,롯데웰푸드주식회사천안공장구구크러스터,kfind-product-p102-101010100-0034,구구크러스터,K-FIND-PRODUCT,6

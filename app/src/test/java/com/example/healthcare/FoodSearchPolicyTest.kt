@@ -9,6 +9,12 @@ import org.junit.Assert.assertTrue
 import org.junit.Test
 
 class FoodSearchPolicyTest {
+    @Test fun groupedResultLabelsUseCasesAndDistinguishBrandProductsFromGenericFoods() {
+        val generic = food("김밥", "밥류", "g")
+        assertEquals("같은 이름의 다른 음식 3건 보기", FoodSearchPolicy.alternativesLabel(generic, 3))
+        assertEquals("다른 제품 1건 보기", FoodSearchPolicy.alternativesLabel(generic.copy(brand = "검증 제조사"), 1))
+        assertEquals("다른 결과 접기", FoodSearchPolicy.alternativesLabel(generic, 3, expanded = true))
+    }
     @Test fun spacingPunctuationAndCompatibilityCharactersNormalizeWithoutChangingSourceName() {
         assertEquals("참치김밥", FoodSearchPolicy.normalize(" 참치-김밥 "))
         assertEquals("참치김밥", FoodSearchPolicy.normalize("참치 김밥"))
@@ -208,6 +214,24 @@ class FoodSearchPolicyTest {
         assertEquals("a", first.representative.id)
         assertEquals(first.representative.id, second.representative.id)
         assertEquals(first.alternatives.map(FoodItem::id), second.alternatives.map(FoodItem::id))
+    }
+
+    @Test fun numerousSourceVersionsCannotMakeOtherMatchingProductsUnreachable() {
+        val popular=(1..80).map { index -> food("요플레 플레인","유가공품류","g").copy(
+            id="plain-$index",sourceFoodCode="plain-$index",sourceType="K-FIND-PRODUCT",brand="빙그레",energyKcal=100.0+index) }
+        val strawberry=food("요플레 딸기","유가공품류","g").copy(id="strawberry",sourceType="K-FIND-PRODUCT",brand="빙그레")
+        val visible=FoodSearchPolicy.rankedSearchResults(popular+strawberry,"요플레")
+        assertEquals(81,visible.size)
+        assertTrue(visible.any { it.id==strawberry.id })
+        assertEquals(popular.map(FoodItem::id).toSet(),visible.filter { it.id.startsWith("plain-") }.map(FoodItem::id).toSet())
+    }
+
+    @Test fun equalNutritionOnDifferentProductReportsKeepsBothIdentities() {
+        val first=food("동일 상품명","유가공품류","g").copy(id="pack-a",sourceType="K-FIND-PRODUCT",sourceFoodCode="report-a")
+        val second=first.copy(id="pack-b",sourceFoodCode="report-b")
+        assertEquals(2,FoodSearchPolicy.rankedSearchResults(listOf(first,second),"동일 상품명").size)
+        val grouped=FoodSearchPolicy.groupSearchResults(listOf(first,second),"동일 상품명").single()
+        assertEquals(1,grouped.alternatives.size)
     }
 
     private fun food(name: String, category: String, unit: String) = FoodItem(

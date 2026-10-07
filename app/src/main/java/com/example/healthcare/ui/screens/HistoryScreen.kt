@@ -103,11 +103,15 @@ import com.example.healthcare.ui.theme.NutritionCarbohydrate
 import com.example.healthcare.ui.theme.NutritionProtein
 import com.example.healthcare.ui.theme.NutritionFat
 import com.example.healthcare.domain.Macronutrients
+import com.example.healthcare.domain.RecordInsights
+import com.example.healthcare.domain.RecordPeriodSummary
+import com.example.healthcare.ui.components.FoodAmountInput
 import com.example.healthcare.data.model.MealNutritionRow
 import com.example.healthcare.ui.theme.HealthCareTheme
 import com.example.healthcare.ui.theme.WellnessSpacing
 import com.example.healthcare.ui.viewmodel.HistoryViewModel
 import com.example.healthcare.ui.viewmodel.MealEditUiState
+import com.example.healthcare.ui.viewmodel.draftValues
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.delay
 import java.text.NumberFormat
@@ -119,7 +123,8 @@ import kotlin.math.roundToInt
 
 @OptIn(ExperimentalMaterial3AdaptiveApi::class)
 @Composable
-fun HistoryScreen(viewModel: HistoryViewModel? = null) {
+fun HistoryScreen(viewModel: HistoryViewModel? = null, onAddRecord: () -> Unit = {},
+    openMeals: Boolean = false, onRecordEdited: (MealRecord) -> Unit = {}) {
     // The adaptive navigator saves its content key in the activity state. Keep only the
     // stable Room ID there; a MealRecord is not Bundle-saveable and crashes on teardown.
     val navigator = rememberListDetailPaneScaffoldNavigator<Long>()
@@ -135,7 +140,14 @@ fun HistoryScreen(viewModel: HistoryViewModel? = null) {
     val statusText by viewModel?.dailyCalorieStatus?.collectAsState() ?: remember { mutableStateOf("") }
     val editState by viewModel?.editState?.collectAsState() ?: remember { mutableStateOf(MealEditUiState()) }
     val timeline by viewModel?.intakeTimeline?.collectAsState() ?: remember { mutableStateOf(DailyIntakeTimeline.Empty) }
-    var selectedHubSection by rememberSaveable { mutableStateOf<String?>(null) }
+    val allMeals by viewModel?.allMeals?.collectAsState() ?: remember { mutableStateOf(emptyList()) }
+    var selectedHubSection by rememberSaveable { mutableStateOf<String?>(if (openMeals) "MEALS" else null) }
+    val registerExitGuard = com.example.healthcare.ui.LocalDraftExitGuardRegistration.current
+    val editBaseline = remember(editState.original?.id) { editState.draftValues() }
+    androidx.compose.runtime.SideEffect {
+        registerExitGuard(com.example.healthcare.ui.DraftExitGuard(editState.isEditing && editState.draftValues() != editBaseline,
+            editState.isSaving, discard = { viewModel?.cancelEditing() }))
+    }
     var editFeedback by rememberSaveable { mutableStateOf<String?>(null) }
     LaunchedEffect(editFeedback) {
         if (editFeedback != null) {
@@ -149,6 +161,8 @@ fun HistoryScreen(viewModel: HistoryViewModel? = null) {
             selectedDate = selectedDate,
             timeline = timeline,
             nutrition = nutrition,
+            allMeals = allMeals,
+            onAddRecord = onAddRecord,
             onSelected = { selectedHubSection = it.name }
         )
         return
@@ -174,6 +188,8 @@ fun HistoryScreen(viewModel: HistoryViewModel? = null) {
                 initialChartDays = if (hubSection == HistoryHubSection.THIRTY_DAYS) 30 else 7,
                 screenTitle = hubSection.title,
                 onBackToHub = { selectedHubSection = null },
+                allMeals = allMeals,
+                onAddRecord = onAddRecord,
                 onItemClick = { meal ->
                     scope.launch { navigator.navigateTo(ListDetailPaneScaffoldRole.Detail, meal.id) }
                 },
@@ -199,14 +215,15 @@ fun HistoryScreen(viewModel: HistoryViewModel? = null) {
                     onTimeChange = { viewModel?.onEditTimeChange(it) },
                     onServingAmountChange = { viewModel?.onEditServingAmountChange(it) },
                     onServingUnitChange = { viewModel?.onEditServingUnitChange(it) },
+                    onQuantityChange = { viewModel?.onEditQuantityChange(it) },
+                    onQuantityUnitChange = { viewModel?.onEditQuantityUnitChange(it) },
                     onPortionSelected = { viewModel?.selectEditPortion(it) },
                     onPortionRatio = { ratio, label -> viewModel?.selectEditRatio(ratio, label) },
                     onPreciseEdit = { viewModel?.showPreciseEdit() },
                     onMemoChange = { viewModel?.onEditMemoChange(it) },
                     onSave = {
-                        viewModel?.saveMealEdit {
-                            editFeedback = "기록을 수정했어요"
-                            scope.launch { navigator.navigateBack() }
+                        viewModel?.saveMealEdit { saved ->
+                            onRecordEdited(saved)
                         }
                     },
                     onBack = { viewModel?.cancelEditing() }
@@ -247,6 +264,8 @@ private fun HistoryHubContent(
     selectedDate: LocalDate,
     timeline: DailyIntakeTimeline,
     nutrition: Macronutrients,
+    allMeals: List<MealRecord>,
+    onAddRecord: () -> Unit,
     onSelected: (HistoryHubSection) -> Unit
 ) {
     var chartDays by rememberSaveable { mutableIntStateOf(7) }
@@ -273,7 +292,7 @@ private fun HistoryHubContent(
                             selected = chartDays == days,
                             onClick = { chartDays = days },
                             label = { Text(label) },
-                            modifier = Modifier.weight(1f)
+                            modifier = Modifier.weight(1f).testTag("history-period-$days")
                         )
                     }
                     FilterChip(
@@ -283,6 +302,9 @@ private fun HistoryHubContent(
                         modifier = Modifier.weight(1f)
                     )
                 }
+            }
+            item {
+                RecordPeriodSummaryCard(RecordInsights.period(allMeals, selectedDate, chartDays), onAddRecord)
             }
             item {
                 WellnessCard(Modifier.fillMaxWidth()) {
@@ -308,6 +330,26 @@ private fun HistoryHubContent(
                             style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
                     }
                 }
+            }
+        }
+    }
+}
+
+@Composable
+internal fun RecordPeriodSummaryCard(summary: RecordPeriodSummary, onAddRecord: () -> Unit = {}) {
+    WellnessCard(Modifier.fillMaxWidth().testTag("history-period-summary")) {
+        Column(Modifier.padding(WellnessSpacing.CardContent), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+            Text("최근 ${summary.days}일 요약", style = MaterialTheme.typography.titleMedium,
+                modifier = Modifier.semantics { heading() })
+            summary.lines.forEach { line -> Text(line, style = MaterialTheme.typography.bodyMedium) }
+            if (summary.nutrition.hasAnyKnownValue) {
+                Text("확인 가능한 탄단지 합계", style = MaterialTheme.typography.labelLarge,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant)
+                MacroSummaryRow(summary.nutrition)
+            }
+            if (summary.recordedDays == 0) {
+                Button(onClick = onAddRecord, modifier = Modifier.fillMaxWidth().heightIn(min = 48.dp)
+                    .testTag("history-summary-add-record")) { Text("음식 기록하기") }
             }
         }
     }
@@ -362,7 +404,9 @@ fun HistoryListPane(
     nutrition: Macronutrients = Macronutrients.Unknown,
     initialChartDays: Int = 7,
     screenTitle: String = "기록과 통계",
-    onBackToHub: (() -> Unit)? = null
+    onBackToHub: (() -> Unit)? = null,
+    allMeals: List<MealRecord> = meals,
+    onAddRecord: () -> Unit = {}
 ) {
     val dateFormatter = DateTimeFormatter.ofPattern("yyyy년 M월 d일")
     val mealsOnly = screenTitle == HistoryHubSection.MEALS.title
@@ -448,6 +492,9 @@ fun HistoryListPane(
                 }
             }
             if (!mealsOnly) {
+                item {
+                    RecordPeriodSummaryCard(RecordInsights.period(allMeals, selectedDate, chartDays), onAddRecord)
+                }
                 item {
                     WellnessCard {
                         Box(Modifier.padding(WellnessSpacing.CardContent)) {
@@ -749,6 +796,8 @@ internal fun HistoryEditPane(
     onTimeChange: (java.time.LocalTime) -> Unit,
     onServingAmountChange: (String) -> Unit,
     onServingUnitChange: (String) -> Unit,
+    onQuantityChange: ((String) -> Unit)? = null,
+    onQuantityUnitChange: ((String) -> Unit)? = null,
     onPortionSelected: (PortionPreset) -> Unit = {},
     onPortionRatio: (Double, String) -> Unit = { _, _ -> },
     onPreciseEdit: () -> Unit = {},
@@ -838,19 +887,11 @@ internal fun HistoryEditPane(
                             Text("저장한 양 · $it", style = MaterialTheme.typography.bodyLarge,
                                 color = MaterialTheme.colorScheme.primary)
                         }
-                        val presets = state.selectedFood?.let(PortionGuide::presets).orEmpty()
-                        if (presets.isNotEmpty()) {
-                            presets.forEach { preset ->
-                                FilterChip(
-                                    selected = state.portionPresetId == preset.id,
-                                    onClick = { onPortionSelected(preset) },
-                                    label = { Text(preset.label) },
-                                    leadingIcon = if (state.portionPresetId == preset.id) {
-                                        { Icon(Icons.Rounded.ChevronRight, contentDescription = "선택됨") }
-                                    } else null
-                                )
-                            }
-                        }
+                        FoodAmountInput(amount = state.quantity.ifBlank { state.servingAmount },
+                            unit = state.quantityUnit.ifBlank { state.servingUnit }, choices = state.amountChoices,
+                            onAmount = onQuantityChange ?: onServingAmountChange,
+                            onUnit = onQuantityUnitChange ?: onServingUnitChange,
+                            enabled = !state.isSaving, error = state.servingAmountError)
                         Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
                             listOf(0.5 to "절반", 1.0 to "같은 양", 1.5 to "한 번 반").forEach { (ratio, label) ->
                                 FilterChip(
@@ -860,33 +901,15 @@ internal fun HistoryEditPane(
                                 )
                             }
                         }
-                        Text("선택한 양을 바탕으로 한 예상 칼로리예요.", style = MaterialTheme.typography.bodySmall,
+                        Text("약 ${state.calories} kcal", style = MaterialTheme.typography.titleMedium,
+                            modifier = Modifier.testTag("history-edit-calorie-preview"))
+                        MacroSummaryRow(state.nutritionPreview)
+                        Text("저장 당시의 양과 영양정보를 기준으로 계산해요.", style = MaterialTheme.typography.bodySmall,
                             color = MaterialTheme.colorScheme.onSurfaceVariant)
-                        TextButton(onClick = onPreciseEdit) { Text("더 정확히 입력하기") }
-                        if (state.preciseAmountOpen || state.portionDisplayLabel == null) {
-                            Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
-                                OutlinedTextField(
-                                    value = state.servingAmount,
-                                    onValueChange = onServingAmountChange,
-                                    label = { Text("양") },
-                                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Decimal, imeAction = ImeAction.Done),
-                                    keyboardActions = dismissKeyboard,
-                                    singleLine = true,
-                                    isError = state.servingAmountError != null,
-                                    supportingText = state.servingAmountError?.let { message -> { Text(message) } },
-                                    modifier = Modifier.weight(1f).withErrorSemantics(state.servingAmountError)
-                                )
-                                OutlinedTextField(
-                                    value = state.servingUnit,
-                                    onValueChange = onServingUnitChange,
-                                    label = { Text("단위") },
-                                    singleLine = true,
-                                    keyboardOptions = KeyboardOptions(imeAction = ImeAction.Done),
-                                    keyboardActions = dismissKeyboard,
-                                    modifier = Modifier.weight(1f)
-                                )
-                            }
-                        }
+                        if (state.amountChoices.isEmpty()) OutlinedTextField(
+                            value = state.servingUnit, onValueChange = onServingUnitChange,
+                            label = { Text("단위 (선택)") }, singleLine = true,
+                            enabled = !state.isSaving, modifier = Modifier.fillMaxWidth())
                     }
                 }
             }

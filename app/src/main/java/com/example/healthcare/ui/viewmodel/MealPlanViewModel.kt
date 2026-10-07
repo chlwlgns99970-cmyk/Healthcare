@@ -2,14 +2,24 @@ package com.example.healthcare.ui.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.healthcare.data.entity.MealRecord
 import com.example.healthcare.data.entity.FoodItem
 import com.example.healthcare.data.model.MealType
 import com.example.healthcare.data.repository.MealCoachRepository
 import com.example.healthcare.data.repository.MealRecommendationWithIngredients
 import com.example.healthcare.data.repository.NutritionRepository
+import com.example.healthcare.domain.RecommendationServingPolicy
+import com.example.healthcare.domain.RecommendationServing
 import com.example.healthcare.domain.PortionGuide
 import com.example.healthcare.domain.Macronutrients
 import com.example.healthcare.domain.FoodSearchPolicy
+import com.example.healthcare.domain.FoodAmountPolicy
+import com.example.healthcare.domain.FoodAmountUnit
+import com.example.healthcare.domain.FoodMetadataPolicy
+import com.example.healthcare.domain.AllergyNoticePolicy
+import com.example.healthcare.domain.RecordedAmountSnapshot
+import com.example.healthcare.domain.PortionEstimationType
+import com.example.healthcare.domain.PortionQuality
 import com.example.healthcare.domain.RecommendationStage
 import com.example.healthcare.domain.MealRecommendationTheme
 import kotlinx.coroutines.flow.combine
@@ -39,10 +49,49 @@ data class RecommendedIngredientUi(
     val adjustmentStep: Double?,
     val replacements: List<FoodItem> = emptyList(),
     val showReplacements: Boolean = false,
-    val consumedRatio: Double = 1.0
+    val consumedRatio: Double = 1.0,
+    val quantityInput: String? = null,
+    val quantityUnit: String? = null,
+    val quantityError: String? = null
 ) {
+    val amountChoice: FoodAmountUnit? get() = FoodAmountPolicy.choices(foodItem)
+        .firstOrNull { it.unit == quantityUnit } ?: FoodAmountPolicy.defaultChoice(foodItem)
+    val displayedQuantity: String get() = quantityInput ?: amountChoice?.let {
+        RecordedAmountSnapshot.format(kotlin.math.round(amount / it.basisAmountPerUnit * 1000000.0) / 1000000.0)
+    }.orEmpty()
+    val displayedUnit: String get() = amountChoice?.unit.orEmpty()
+    val amountValid: Boolean get() = quantityError == null &&
+        FoodAmountPolicy.canonicalUnit(unit) == FoodAmountPolicy.canonicalUnit(foodItem.unit) &&
+        FoodAmountPolicy.parseAmount(displayedQuantity)?.let {
+            FoodAmountPolicy.calculate(foodItem, it, displayedUnit)
+        } != null
+    val consumedAmount get() = if (amountValid && consumedRatio > 0.0) {
+        FoodAmountPolicy.parseAmount(displayedQuantity)?.let {
+            FoodAmountPolicy.calculate(foodItem, it * consumedRatio, displayedUnit)
+        }
+    } else null
     val nutrition: Macronutrients
-        get() = Macronutrients.forFood(foodItem, amount).scaled(consumedRatio)
+        get() = consumedAmount?.let { Macronutrients(it.carbohydrateGrams, it.proteinGrams, it.fatGrams) }
+            ?: Macronutrients.Unknown
+
+    fun withQuantity(value: String): RecommendedIngredientUi {
+        val result = FoodAmountPolicy.parseAmount(value)?.let { FoodAmountPolicy.calculate(foodItem, it, displayedUnit) }
+        return if (result == null) copy(quantityInput = value,
+            quantityError = "0보다 큰 유효한 먹은 양을 입력해 주세요.")
+        else copy(quantityInput = value, quantityUnit = displayedUnit, quantityError = null,
+            amount = result.basisAmount, unit = result.basisUnit, calories = result.calories)
+    }
+
+    fun withQuantityUnit(value: String): RecommendedIngredientUi {
+        val choice = FoodAmountPolicy.choices(foodItem).firstOrNull { it.unit == value } ?: return this
+        if (quantityError != null) return copy(quantityUnit = value).withQuantity(displayedQuantity)
+        return copy(quantityUnit = value).withQuantity(RecordedAmountSnapshot.format(amount / choice.basisAmountPerUnit))
+    }
+
+    fun consumedSnapshot(): RecordedAmountSnapshot? = consumedAmount?.let { result ->
+        amountChoice?.let { choice -> RecordedAmountSnapshot(result.basisAmount / choice.basisAmountPerUnit,
+            choice.unit, choice.basisAmountPerUnit, result.basisUnit) }
+    }
 }
 
 data class SelectedMealUi(
@@ -55,14 +104,30 @@ data class SelectedMealUi(
     val matchedAllergens: Set<String> = emptySet(),
     val ingredientInfoComplete: Boolean = true,
     val allergenInfoComplete: Boolean = true,
-    val portionRatio: Double = 1.0
+    val portionRatio: Double = 1.0,
+    val servingOptions: List<RecommendationServing> = emptyList()
 ) {
     val consumedCalories: Int get() = ingredients.filter(RecommendedIngredientUi::included)
-        .sumOf { (it.calories * it.consumedRatio).roundToInt() }
+        .sumOf { it.consumedAmount?.calories ?: 0 }
     val consumedNutrition: Macronutrients
         get() = Macronutrients.knownSum(
             ingredients.filter(RecommendedIngredientUi::included).map(RecommendedIngredientUi::nutrition)
         )
+}
+
+/** A changed composition cannot retain the previous meal's complete label or allergy matches. */
+internal fun SelectedMealUi.withIngredientEvidence(changed: List<RecommendedIngredientUi>,
+    configuredAllergies: Set<String>): SelectedMealUi {
+    val included = changed.filter(RecommendedIngredientUi::included)
+    val tags = FoodMetadataPolicy.allergenTags(emptySet(), included.map { it.foodItem.id })
+    val complete = "UNKNOWN" !in tags
+    val declared = tags - "UNKNOWN"
+    return copy(ingredients = changed, totalCalories = included.sumOf { it.calories },
+        declaredAllergens = declared,
+        matchedAllergens = AllergyNoticePolicy.resolve(configuredAllergies, declared, complete, false).matchedCauses,
+        ingredientInfoComplete = included.isNotEmpty() && included.all {
+            FoodMetadataPolicy.lookup(it.foodItem.id)?.ingredientInfoComplete == true },
+        allergenInfoComplete = complete)
 }
 
 data class MealPlanUiState(
@@ -91,7 +156,8 @@ data class MealPlanUiState(
     val showConsumptionConfirm: Boolean = false,
     val foodSpecificConsumption: Boolean = false,
     val consumedRatio: Double = 1.0,
-    val message: String? = null
+    val message: String? = null,
+    val configuredAllergies: Set<String> = emptySet()
 )
 
 class MealPlanViewModel(
@@ -100,8 +166,30 @@ class MealPlanViewModel(
 ) : ViewModel() {
     private val _uiState = MutableStateFlow(MealPlanUiState())
     val uiState: StateFlow<MealPlanUiState> = _uiState.asStateFlow()
-    private val saveCompleted = Channel<Unit>(Channel.BUFFERED)
+    private val saveCompleted = Channel<MealRecord>(Channel.BUFFERED)
     val saveCompletedEvents = saveCompleted.receiveAsFlow()
+    private var initialSelection: SelectedMealUi? = null
+    val hasUnsavedInput: Boolean get() {
+        val selected = _uiState.value.selectedMeal ?: return false
+        val initial = initialSelection ?: return false
+        return selected.ingredients.size != initial.ingredients.size ||
+            (!_uiState.value.foodSpecificConsumption && _uiState.value.consumedRatio != 1.0) ||
+            selected.ingredients.zip(initial.ingredients).any { (now, before) ->
+            now.foodItem.id != before.foodItem.id || now.included != before.included ||
+                now.displayedUnit != before.displayedUnit ||
+                kotlin.math.abs(now.amount - before.amount) > 0.00001 || now.quantityError != null ||
+                now.consumedRatio != before.consumedRatio
+        }
+    }
+
+    fun resetToRoot() {
+        if (_uiState.value.isSaving) return
+        initialSelection = null
+        dailyDetailRequest = null
+        _uiState.update { it.copy(selectedMeal = null, saved = false, showConsumptionConfirm = false,
+            foodSpecificConsumption = false, consumedRatio = 1.0, message = null) }
+    }
+
     private var conditionsChangedDuringLoad = false
     private var pendingLoad: (() -> Unit)? = null
     private var dailyDetailRequest: (() -> Unit)? = null
@@ -112,6 +200,9 @@ class MealPlanViewModel(
             combine(mealCoachRepository.preference, mealCoachRepository.excludedFoods) { preference, excluded ->
                 preference to excluded
             }.collect { conditions ->
+                _uiState.update { it.copy(configuredAllergies = conditions.second
+                    .filter { food -> food.exclusionType == "ALLERGY" }
+                    .map { food -> food.normalizedFoodName }.toSet()) }
                 val changed = previous != null && previous != conditions
                 previous = conditions
                 if (changed) {
@@ -155,7 +246,8 @@ class MealPlanViewModel(
             }
             return
         }
-        _uiState.value = MealPlanUiState(mealType = mealType, budgetKcal = budgetKcal,
+        _uiState.value = MealPlanUiState(configuredAllergies = _uiState.value.configuredAllergies,
+            mealType = mealType, budgetKcal = budgetKcal,
             targetKcal = targetKcal, dailyRemainingKcal = dailyRemainingKcal)
         if (budgetKcal <= 0 || targetKcal <= 0) {
             _uiState.update { it.copy(hasLoaded = true, loadError = true,
@@ -166,12 +258,15 @@ class MealPlanViewModel(
     }
 
     /** Opens the exact standard-portion item selected by the day planner, without selecting a legacy page. */
-    fun loadDailyDetail(templateId: String, mealType: MealType, kcal: Int, targetKcal: Int) {
-        dailyDetailRequest = { loadDailyDetail(templateId, mealType, kcal, targetKcal) }
-        _uiState.value = MealPlanUiState(mealType = mealType, budgetKcal = kcal, targetKcal = targetKcal,
+    fun loadDailyDetail(templateId: String, mealType: MealType, kcal: Int, targetKcal: Int, portion: Double = 1.0) {
+        dailyDetailRequest = { loadDailyDetail(templateId, mealType, kcal, targetKcal, portion) }
+        _uiState.value = MealPlanUiState(configuredAllergies = _uiState.value.configuredAllergies,
+            mealType = mealType, budgetKcal = kcal, targetKcal = targetKcal,
             dailyRemainingKcal = targetKcal, isLoading = true)
         viewModelScope.launch {
-            val bundle = runCatching { mealCoachRepository.dailyPlanDetail(templateId, mealType, kcal) }
+            val bundle = runCatching { mealCoachRepository.dailyPlanDetail(templateId, mealType, kcal)?.let {
+                it.copy(recommendation = it.recommendation.copy(portion = portion))
+            } }
             _uiState.update { it.copy(isLoading = false, hasLoaded = true,
                 recommendations = listOfNotNull(bundle.getOrNull()), loadError = bundle.isFailure || bundle.getOrNull() == null,
                 message = if (bundle.getOrNull() == null) "현재 조건에 맞는 메뉴가 없어요." else null) }
@@ -221,7 +316,7 @@ class MealPlanViewModel(
             page.forEach { bundle ->
                 portionLabels[bundle.recommendation.template.id] = bundle.ingredients.mapNotNull { ingredient ->
                     nutritionRepository.findById(ingredient.foodItemId)?.let { food ->
-                        "${FoodSearchPolicy.displayName(food)} · ${PortionGuide.recommendationLabel(food, ingredient.amount)}"
+                        "${FoodSearchPolicy.displayName(food)} · ${RecommendationServingPolicy.label(food, ingredient.amount * bundle.recommendation.portion)}"
                     }
                 }
             }
@@ -295,6 +390,9 @@ class MealPlanViewModel(
             if (state.budgetKcal > 0 && state.targetKcal > 0) loadStage()
             return
         }
+        val replacedId = state.selectedMeal?.templateId
+            ?: state.recommendations.firstOrNull()?.recommendation?.template?.id
+        replacedId?.let(mealCoachRepository::recordRecommendationReplacement)
         _uiState.update { it.copy(selectedMeal = null, showConsumptionConfirm = false, foodSpecificConsumption = false) }
         loadStage(keepCurrentWhenEmpty = !state.hasMore)
     }
@@ -324,15 +422,20 @@ class MealPlanViewModel(
     fun selectRecommendation(index: Int) {
         val bundle = _uiState.value.recommendations.getOrNull(index) ?: return
         viewModelScope.launch {
+            val sourceFoods = bundle.ingredients.map { nutritionRepository.findById(it.foodItemId) }
+            val options = RecommendationServingPolicy.options(bundle.ingredients, sourceFoods, _uiState.value.mealType)
+            val serving = options.firstOrNull { kotlin.math.abs(it.portion - bundle.recommendation.portion) < 0.000001 }
+                ?: options.minByOrNull { kotlin.math.abs(it.kcal - bundle.recommendation.template.totalKcal) }
+                ?: return@launch
             val foods = bundle.ingredients.mapNotNull { ingredient ->
                 nutritionRepository.findById(ingredient.foodItemId)?.let { food ->
                     RecommendedIngredientUi(
                         ingredientId = ingredient.id,
                         foodItem = food,
                         baseAmount = ingredient.amount,
-                        amount = ingredient.amount,
+                        amount = ingredient.amount * serving.portion,
                         unit = ingredient.unit,
-                        calories = NutritionRepository.calculateCalories(food, ingredient.amount),
+                        calories = NutritionRepository.calculateCalories(food, ingredient.amount * serving.portion),
                         adjustable = ingredient.adjustable,
                         minimumAmount = ingredient.minimumAmount,
                         maximumAmount = ingredient.maximumAmount,
@@ -353,7 +456,8 @@ class MealPlanViewModel(
                         declaredAllergens = bundle.declaredAllergens,
                         matchedAllergens = bundle.matchedAllergens,
                         ingredientInfoComplete = bundle.ingredientInfoComplete,
-                        allergenInfoComplete = bundle.allergenInfoComplete
+                        allergenInfoComplete = bundle.allergenInfoComplete,
+                        portionRatio = serving.portion, servingOptions = options
                     ),
                     message = null,
                     showConsumptionConfirm = false,
@@ -361,35 +465,22 @@ class MealPlanViewModel(
                     consumedRatio = 1.0
                 )
             }
+            initialSelection = _uiState.value.selectedMeal
         }
     }
 
     fun adjustPortion(ratio: Double) {
-        if (ratio !in 0.5..1.5) return
+        if (_uiState.value.isSaving || _uiState.value.saved) return
         _uiState.update { state ->
             val selected = state.selectedMeal ?: return@update state
+            if (selected.servingOptions.none { kotlin.math.abs(it.portion - ratio) < 0.000001 }) return@update state
             val adjusted = selected.ingredients.map { ingredient ->
-                if (!ingredient.adjustable) ingredient else {
-                    val raw = ingredient.baseAmount * ratio
-                    val stepped = ingredient.adjustmentStep?.takeIf { it > 0.0 }?.let { step ->
-                        (raw / step).roundToInt() * step
-                    } ?: raw
-                    val amount = stepped
-                        .coerceAtLeast(ingredient.minimumAmount ?: stepped)
-                        .coerceAtMost(ingredient.maximumAmount ?: stepped)
-                    ingredient.copy(
-                        amount = amount,
-                        calories = NutritionRepository.calculateCalories(ingredient.foodItem, amount)
-                    )
-                }
+                val amount = ingredient.baseAmount * ratio
+                ingredient.copy(amount = amount, calories = NutritionRepository.calculateCalories(ingredient.foodItem, amount),
+                    quantityInput = null, quantityError = null)
             }
-            state.copy(
-                selectedMeal = selected.copy(
-                    ingredients = adjusted,
-                    totalCalories = adjusted.filter(RecommendedIngredientUi::included).sumOf { it.calories },
-                    portionRatio = ratio
-                )
-            )
+            state.copy(selectedMeal = selected.copy(ingredients = adjusted,
+                totalCalories = adjusted.filter(RecommendedIngredientUi::included).sumOf { it.calories }, portionRatio = ratio))
         }
     }
 
@@ -400,12 +491,23 @@ class MealPlanViewModel(
                 if (ingredient.ingredientId == ingredientId) ingredient.copy(included = included) else ingredient
             }
             state.copy(
-                selectedMeal = selected.copy(
-                    ingredients = changed,
-                    totalCalories = changed.filter(RecommendedIngredientUi::included).sumOf { it.calories }
-                ),
+                selectedMeal = selected.withIngredientEvidence(changed, state.configuredAllergies),
                 message = null
             )
+        }
+    }
+
+    fun setIngredientQuantity(ingredientId: Long, value: String) = changeIngredientAmount(ingredientId) { it.withQuantity(value) }
+
+    fun setIngredientQuantityUnit(ingredientId: Long, value: String) = changeIngredientAmount(ingredientId) { it.withQuantityUnit(value) }
+
+    private fun changeIngredientAmount(ingredientId: Long, change: (RecommendedIngredientUi) -> RecommendedIngredientUi) {
+        if (_uiState.value.isSaving || _uiState.value.saved) return
+        _uiState.update { state ->
+            val meal = state.selectedMeal ?: return@update state
+            val ingredients = meal.ingredients.map { if (it.ingredientId == ingredientId) change(it) else it }
+            state.copy(selectedMeal = meal.copy(ingredients = ingredients,
+                totalCalories = ingredients.filter(RecommendedIngredientUi::included).sumOf { it.calories }), message = null)
         }
     }
 
@@ -448,15 +550,15 @@ class MealPlanViewModel(
                         maximumAmount = if (sameUnit) ingredient.maximumAmount else null,
                         adjustmentStep = if (sameUnit) ingredient.adjustmentStep else null,
                         replacements = emptyList(),
-                        showReplacements = false
+                        showReplacements = false,
+                        quantityInput = null,
+                        quantityUnit = null,
+                        quantityError = null
                     )
                 }
             }
             state.copy(
-                selectedMeal = selected.copy(
-                    ingredients = changed,
-                    totalCalories = changed.filter(RecommendedIngredientUi::included).sumOf { it.calories }
-                )
+                selectedMeal = selected.withIngredientEvidence(changed, state.configuredAllergies)
             )
         }
     }
@@ -464,6 +566,12 @@ class MealPlanViewModel(
     fun requestConsumptionConfirmation() {
         if (_uiState.value.selectedMeal == null || _uiState.value.saved) return
         _uiState.update { it.copy(showConsumptionConfirm = true, foodSpecificConsumption = false, consumedRatio = 1.0) }
+    }
+
+    /** The default recommendation amount is already explicit, so it records in one action. */
+    fun recordRecommendedAmount() {
+        requestConsumptionConfirmation()
+        confirmConsumed()
     }
 
     fun setConsumedRatio(ratio: Double) {
@@ -501,6 +609,10 @@ class MealPlanViewModel(
             return
         }
         val includedIngredients = selected.ingredients.filter(RecommendedIngredientUi::included)
+        if (includedIngredients.any { !it.amountValid }) {
+            _uiState.update { it.copy(message = "선택한 음식의 먹은 양을 확인해 주세요.") }
+            return
+        }
         if (includedIngredients.isEmpty() || selected.consumedCalories <= 0) {
             _uiState.update { it.copy(message = "실제로 먹은 항목을 하나 이상 선택해 주세요.") }
             return
@@ -516,28 +628,41 @@ class MealPlanViewModel(
                     requireNotNull(plannedMeals.firstOrNull { it.mealType == state.mealType.name })
                 }
                 mealCoachRepository.selectTemplate(planned.id, selected.templateId)
-                mealCoachRepository.confirmConsumed(
+                val consumedIngredients = includedIngredients.filter { it.consumedRatio > 0 }
+                val single = consumedIngredients.singleOrNull()
+                val amountLabels = consumedIngredients.joinToString(" + ") { ingredient ->
+                    "${FoodSearchPolicy.displayName(ingredient.foodItem)} ${ingredient.consumedSnapshot()?.label.orEmpty()}"
+                }
+                mealCoachRepository.confirmConsumedRecord(
                     plannedMealId = planned.id,
                     date = LocalDate.now(),
                     time = LocalTime.now(),
                     finalCalories = selected.consumedCalories,
                     nutrition = selected.consumedNutrition,
-                    confirmedName = includedIngredients.joinToString(" + ") { it.foodItem.name }.ifBlank { selected.templateName },
+                    confirmedName = consumedIngredients.joinToString(" + ") { it.foodItem.name }.ifBlank { selected.templateName },
                     portionRatio = if (state.foodSpecificConsumption) 1.0 else state.consumedRatio,
-                    portionLabel = if (state.foodSpecificConsumption) "음식별 실제 먹은 비율 확인" else when (state.consumedRatio) {
+                    portionLabel = amountLabels + " · " + if (state.foodSpecificConsumption) "음식별 실제 먹은 비율 확인" else when (state.consumedRatio) {
                         1.0 -> "추천한 양을 다 먹었어요"
                         0.9 -> "추천한 양을 거의 다 먹었어요"
                         0.5 -> "추천한 양의 절반 정도 먹었어요"
                         else -> "추천한 양을 조금 먹었어요"
-                    }
+                    },
+                    foodItemId = single?.foodItem?.id,
+                    amountSnapshot = single?.consumedSnapshot(),
+                    amountSourceReference = single?.amountChoice?.evidence,
+                    amountEstimationType = single?.amountChoice?.let { choice -> when (choice.quality) {
+                        PortionQuality.OFFICIAL_SERVING -> PortionEstimationType.OFFICIAL_SERVING
+                        PortionQuality.VERIFIED_CONVERSION -> PortionEstimationType.HOUSEHOLD_UNIT
+                        else -> PortionEstimationType.MANUAL_AMOUNT
+                    } }
                 )
-            }.onSuccess {
+            }.onSuccess { record ->
                 _uiState.update { it.copy(
                     isSaving = false, saved = true, selectedMeal = null,
                     showConsumptionConfirm = false, foodSpecificConsumption = false,
                     consumedRatio = 1.0, message = "오늘 기록에 한 번만 저장했습니다."
                 ) }
-                saveCompleted.send(Unit)
+                saveCompleted.send(record)
             }.onFailure { error ->
                 _uiState.update {
                     it.copy(

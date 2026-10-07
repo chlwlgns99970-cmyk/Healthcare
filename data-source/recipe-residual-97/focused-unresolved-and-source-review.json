@@ -1,0 +1,30 @@
+{
+  "checkedAt": "2026-10-05",
+  "unresolvedFoods": [
+    {"recipeId":"MFDS-139","name":"부추보리밥","decision":"UNRESOLVED_WITH_EXHAUSTED_EVIDENCE","originalReview":"4인분 부추40g·보리40g·쌀360g·강된장20g. 원문 조리법의 불린 율무는 재료 목록의 보리와 불일치한다. 강된장 제품/배합 정체도 지정하지 않는다.","referenceReview":"보리밥·상추쌈보리밥은 부추와 강된장 전체 배합이 없으며 재료를 추가 합성할 수 없다. 새로운 학교/공공급식 검색 receipt 확인.","remaining":"원본 기관의 보리/율무 정정 또는 부추·강된장을 포함한 하나의 완전 정량 조리법 필요."},
+    {"recipeId":"MFDS-175","name":"홍합달래전","decision":"UNRESOLVED_WITH_EXHAUSTED_EVIDENCE","originalReview":"달걀40, 고추3, 달래240, 밀가루80, 양파40, 콩기름20, 파24, 홍합60으로 g 단위가 원문에 없다. 동일 recipe의 단위를 타 음식에서 추정하지 않는다.","referenceReview":"MENUZEN-D091013 홍합전의 정량 구성은 있으나 달래 중심 배합과 같은 것으로 확인되지 않는다. 앱 홍합산적은 꼬치 적이며 홍합·달래 혼합 반죽전과 다르다. 새 학교/공공급식 검색에서 공개 조리 배합 확인 실패; 개인 블로그는 제외.","remaining":"기관 원본 단위 확인 또는 홍합·달래 혼합 반죽전 전체 정량 recipe 및 동일 Food 필요."},
+    {"recipeId":"MFDS-301","name":"멸치호두조림","decision":"UNRESOLVED_WITH_EXHAUSTED_EVIDENCE","originalReview":"간장40, 멸치60, 엿12, 콩기름4, 호두12로 명시 단위가 없으며 조리법의 후춧가루 양도 없다.","referenceReview":"새 농식품정보누리 nttId215259 원문 확인. 제목과 달리 훈제문어·장어포·불특정 견과류 볶음이며 깨소금 약간과 대파1뿌리 미정량. 호두량을 다른 recipe에서 가져오지 않음.","remaining":"동일 음식의 전체 정량 단일 recipe와 호두 qualifier까지 같은 앱 Food 필요."},
+    {"recipeId":"MFDS-308","name":"미역/초고추장","decision":"UNRESOLVED_WITH_EXHAUSTED_EVIDENCE","originalReview":"미역280g만 있고 함께 곁들인 초장의 양이 없다. 미역의 종류/초기 상태도 불명확하다.","referenceReview":"완전 초고추장 reference만으로 미역과 곁들인 한 음식 전체 배합을 만들 수 없다. 미역초무침은 채소와 양념을 무치는 다른 형태이며 미역 숙회+별도 초장과 임의 동일시하지 않는다.","remaining":"미역 종·상태와 함께 낸 초장량이 명시된 한 recipe 필요."},
+    {"recipeId":"MFDS-321","name":"두릅숙회/초고추장","decision":"UNRESOLVED_WITH_EXHAUSTED_EVIDENCE","originalReview":"두릅200g만 있고 초고추장량과 두릅 종이 없다.","referenceReview":"새로 재검토한 대한당뇨병학회 봄 식단의 두릅70g·초고추장10g은 식단표이며 조리 recipe로 표시할 수 없다. 메뉴젠 두릅나물(고추장)은 파·마늘·간장·참기름 등으로 무치는 구성. 공개 개인 recipe는 제외. 일반 초고추장 nutrition 항목의 존재는 원본 초장 사용량의 근거가 아니다.","remaining":"같은 숙회와 곁들인 초장량을 명시한 정량 조리법 필요."},
+    {"recipeId":"RDA-91764","name":"곤달비밥(곤드레밥, 곤드레나물밥)","decision":"UNRESOLVED_WITH_EXHAUSTED_EVIDENCE","originalReview":"쌀360g, 곤달비(곤드레)300g, 물470mL, 들기름2큰술, 소금약간. 제목/재료의 곤달비·곤드레 혼용과 소금 미정량.","referenceReview":"농사로 인테러뱅34272와 별도의 공식 작물 분류에서 곤달비와 곤드레를 따로 열거한다. 원본 괄호를 종 동의어로 삼을 수 없다. 대한당뇨병학회 곤드레 보리밥도 곤달비 배합의 증거가 아니다.","remaining":"원본 기관의 식물 정체 정정 또는 곤달비로 특정된 독립 전체 recipe 필요."}
+  ],
+  "nutrition1": {
+    "recipeId":"MFDS-295",
+    "ingredient":"주꾸미 먹물",
+    "result":"UNRESOLVED",
+    "newSourcesReviewed":[
+      {"url":"https://pubmed.ncbi.nlm.nih.gov/41455332/","reason":"Amphioctopus fangsiao 근육/식용부 수분·단백질 연구이며 먹물100g nutrition이 아니다."},
+      {"url":"https://pubmed.ncbi.nlm.nih.gov/42114495/","reason":"같은 종의 간췌장 조직·전사체와 먹물 합성 연구. 먹물 자체의 100g 에너지/탄단지 성분표를 제공하지 않는다. 직접 본문 접근 제한도 기록."},
+      {"url":"https://cir.nii.ac.jp/crid/1390001204740918016?lang=en","reason":"오징어/문어 먹물 추출성분·항균성 연구 서지. 주꾸미 먹물100g 식용 nutrition을 확인하지 못함."}
+    ],
+    "substituteUsed":false,
+    "zeroKcalInvented":false
+  },
+  "source1": {
+    "recipeId":"MFDS-223",
+    "result":"ORIGINAL_SOURCE_UNRESOLVED",
+    "original":"딸기잼(4인분)-81g만 있는 원본 원문 cache를 다시 확인. ingredient decomposition 없음.",
+    "newReference":"농촌진흥청 저자 학회 논문 kjfp-22-6-817의 SJ0 원료 비율70%/30% 확인. 냉동 설향 nutrition와 정확한 일반 잼 Food가 미연결이며 원본 MFDS223 recipe 출처를 복원한 것은 아님.",
+    "selfCompositeRejected":"MENUZEN-D212044 딸기잼→딸기, 잼100g은 자기 참조. 구두점 차이로 완전 판정을 회피하지 못하도록 공통 validator 보강."
+  }
+}

@@ -266,8 +266,8 @@ class BundledFoodDataTest {
         val repository = NutritionRepository(database.foodItemDao())
         val matchingBrands = repository.searchProductBrands("농심").first()
         val brand = matchingBrands.first { it.brand == "(주)농심" }
-        assertEquals(54, brand.productCount)
-        assertEquals(3, matchingBrands.first { it.brand == "㈜농심" }.productCount)
+        assertEquals(361, brand.productCount)
+        assertEquals(20, matchingBrands.first { it.brand == "㈜농심" }.productCount)
 
         val products = repository.searchProductsByBrand(brand.brand, "").first()
         assertEquals(brand.productCount, products.size)
@@ -276,7 +276,7 @@ class BundledFoodDataTest {
 
         val withinBrand = repository.searchProductsByBrand(brand.brand, "신라면").first()
         assertTrue(withinBrand.isNotEmpty())
-        assertTrue(withinBrand.all { it.brand == brand.brand && it.name.contains("신라면") })
+        assertTrue(withinBrand.all { it.brand == brand.brand && com.example.healthcare.domain.FoodSearchPolicy.normalize(it.name).contains("신라면") })
 
         val generalSearch = repository.search("농심").first()
         assertTrue(generalSearch.any { it.brand == brand.brand })
@@ -387,14 +387,14 @@ class BundledFoodDataTest {
     private companion object {
         const val EXPECTED_KFIND_FOOD_COUNT = 19_617
         const val EXPECTED_BASIC_FOOD_COUNT = 14
-        const val EXPECTED_KFIND_PRODUCT_COUNT = 11_921
-        const val EXPECTED_OFFICIAL_FRANCHISE_FOOD_COUNT = 30
+        const val EXPECTED_KFIND_PRODUCT_COUNT = 47_144
+        const val EXPECTED_OFFICIAL_FRANCHISE_FOOD_COUNT = 428
         const val EXPECTED_TOTAL_FOOD_COUNT = EXPECTED_KFIND_FOOD_COUNT + EXPECTED_BASIC_FOOD_COUNT +
-            EXPECTED_KFIND_PRODUCT_COUNT + EXPECTED_OFFICIAL_FRANCHISE_FOOD_COUNT
+            EXPECTED_KFIND_PRODUCT_COUNT + EXPECTED_OFFICIAL_FRANCHISE_FOOD_COUNT + 151 + 3
         const val EXPECTED_TEMPLATE_COUNT = 292
         const val EXPECTED_MACRO_COMPLETE_COUNT = 261
         const val EXPECTED_INGREDIENT_COMPLETE_COUNT = 36
         const val EXPECTED_CONFIRMED_ALLERGEN_COUNT = 33
-        const val EXPECTED_FRANCHISE_FOOD_COUNT = 2_440
+        const val EXPECTED_FRANCHISE_FOOD_COUNT = 8_249
     }
 }

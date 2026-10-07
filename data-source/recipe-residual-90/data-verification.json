@@ -1,0 +1,109 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "01 all90 adjudicated",
+      "status": "PASS",
+      "detail": "90 unique dishes"
+    },
+    {
+      "name": "02 search evidence coverage",
+      "status": "PASS",
+      "detail": "90 dish-specific routes/receipts"
+    },
+    {
+      "name": "03 prior failures preserved",
+      "status": "PASS",
+      "detail": "no discarded prior rejection ledger"
+    },
+    {
+      "name": "04 recipe516",
+      "status": "PASS",
+      "detail": "unchanged"
+    },
+    {
+      "name": "05 complete426 physical",
+      "status": "PASS",
+      "detail": "CSV rows independently verify426"
+    },
+    {
+      "name": "06 remaining90",
+      "status": "PASS",
+      "detail": "unchanged"
+    },
+    {
+      "name": "07 physical/ledger agreement",
+      "status": "PASS",
+      "detail": "516 states"
+    },
+    {
+      "name": "08 PARTIAL80",
+      "status": "PASS",
+      "detail": "unchanged"
+    },
+    {
+      "name": "09 UNRESOLVED6",
+      "status": "PASS",
+      "detail": "unchanged"
+    },
+    {
+      "name": "10 nutrition4",
+      "status": "PASS",
+      "detail": "each adjudicated; no ingredient-sum official kcal"
+    },
+    {
+      "name": "11 Food67357 unique",
+      "status": "PASS",
+      "detail": "no new foodId"
+    },
+    {
+      "name": "12 baseline assets byte preservation",
+      "status": "PASS",
+      "detail": "all7 baseline assets identical"
+    },
+    {
+      "name": "13 all main code protected",
+      "status": "PASS",
+      "detail": "DB/MealRecord/popup/Home/calculation/preferences all same SHA"
+    },
+    {
+      "name": "14 zero publication",
+      "status": "PASS",
+      "detail": "0 ORIGINAL /0 REFERENCE additions"
+    },
+    {
+      "name": "15 unverified unit withheld",
+      "status": "PASS",
+      "detail": "6 source numbers retained without g assumption"
+    },
+    {
+      "name": "16 publisher fails closed",
+      "status": "PASS",
+      "detail": "no unit approval => no mutations"
+    },
+    {
+      "name": "17 captured raw provenance",
+      "status": "PASS",
+      "detail": "all captured original bytes SHA checked, inaccessible responses separated"
+    },
+    {
+      "name": "18 QA packages current assets",
+      "status": "PASS",
+      "detail": "QA APK all7 assets byte-identical"
+    }
+  ],
+  "counts": {
+    "total": 516,
+    "beforeComplete": 426,
+    "afterComplete": 426,
+    "beforeRemaining": 90,
+    "afterRemaining": 90,
+    "PARTIAL": 80,
+    "UNRESOLVED": 6,
+    "FOOD_NUTRITION_MISSING": 4,
+    "newOriginal": 0,
+    "newReference": 0,
+    "newFood": 0
+  },
+  "protectedChangedFiles": []
+}

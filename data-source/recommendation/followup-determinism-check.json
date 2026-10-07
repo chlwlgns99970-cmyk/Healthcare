@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-10-04",
+  "offlineGeneratorRerun": true,
+  "networkCalls": 0,
+  "outputsUnchanged": true,
+  "sourceSha256": {
+    "data-source\\recommendation\\official-public-recipe-facts.csv": "9e2104cb956f06eb4917d687cf87ec32dce9498a512ced8e615ed98dca873603",
+    "data-source\\recommendation\\official-followup-public-recipe-index.csv": "e1f7172b23c0a6c19ea66d6ec564166630020f059950062ae64c84b3210de04d",
+    "data-source\\recommendation\\official-followup-public-recipe-facts.csv": "d5cee10661981dab7ae3afebfa9579c9e8c47373b4ad66fe25e3ed7d6c628724",
+    "data-source\\recommendation\\followup-public-diet-source-audit.json": "ec89c4f6a78351460eb0a08347cadf17b229c5f66ddced3b43e59bbfe5230b3c",
+    "data-source\\recommendation\\reviewed-followup-brand-groups.csv": "4c8fd38dea784bf31b5069aec65059fd01a81d81982fd637a7bb1fa7e9954e44",
+    "data-source\\recommendation\\verified-food-groups.csv": "6894f59025b30c26db4a47e67f45b2e7597b2e8b8230b76651ab7880c05f76d4",
+    "data-source\\recommendation\\recommendation-ingredient-research.csv": "ce2b3005655799dc395f1a7941e6d5d197865b51c4a8e264650276469b5ac19e",
+    "data-source\\recommendation\\ingredient-evidence-summary.json": "6be928f714ec834c84eb12a81f7cb8ffe60c6beace52394abd3e9c6871856c3a",
+    "data-source\\recommendation\\theme-eligibility-audit.csv": "e89fab4356869777d54feebc60ed4d8e1d8c14c080bc4f30f4e339bba9ad8b46",
+    "data-source\\recommendation\\followup-ingredient-evidence-summary.json": "6ae7b97c03378528a261a256a971547db35ddd38a94a5cfa29a82cf127ce25f9",
+    "app\\src\\main\\java\\com\\example\\healthcare\\domain\\GeneratedIngredientGroups.kt": "1fa2212575cda2cf56ab5c50dbd66c511cc804ff70c3f8bbb3f2a638e67d5bbc"
+  },
+  "focusedDataTests": 7,
+  "focusedTestsWholeSuiteExecuted": false
+}

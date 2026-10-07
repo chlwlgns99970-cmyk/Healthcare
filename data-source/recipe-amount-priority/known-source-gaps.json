@@ -1,0 +1,26 @@
+{
+  "webfootOctopusInk": {
+    "recipeId": "MFDS-295",
+    "ingredient": "주꾸미먹물",
+    "checkedSources": [
+      "기존 RDA 10.4/MFDS/공공 원재료 영양 인덱스",
+      "KDCA 음식별 재료량 613개"
+    ],
+    "result": "동일 종 먹물 자체의 기준량별 공식 열량 없음; 몸통·다른 종 먹물 값 사용 금지",
+    "resolved": false
+  },
+  "originalJam": {
+    "recipeId": "MFDS-223",
+    "checkedSources": [
+      "https://www.foodsafetykorea.go.kr/upload/20170417/20170417053825_1492418305244.pdf",
+      "https://www.foodsafetykorea.go.kr/upload/20170417/20170417053825_1492418305266.pdf",
+      "https://www.foodsafetykorea.go.kr/upload/20170417/20170417053825_1492418305289.pdf",
+      "https://www.foodsafetykorea.go.kr/upload/20170417/20170417053825_1492418305314.pdf",
+      "https://www.foodsafetykorea.go.kr/upload/20181011/20181011105845_1539223125726.pdf",
+      "https://www.foodsafetykorea.go.kr/upload/20190401/20190401023441_1554096881164.pdf"
+    ],
+    "result": "동일 4인분 원본의 딸기·당류별 실제 투입량 확인 못함; 완제품 열량 역산 금지",
+    "originalAmountOverridden": false,
+    "resolved": false
+  }
+}

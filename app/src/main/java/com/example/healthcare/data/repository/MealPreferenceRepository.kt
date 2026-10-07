@@ -12,4 +12,5 @@ interface MealPreferenceRepository {
     suspend fun savePreference(preference: UserMealPreference)
     suspend fun addExcludedFood(name: String, type: String): Boolean
     suspend fun deleteExcludedFood(food: UserExcludedFood)
+    suspend fun resetRecommendationLearning() = Unit
 }

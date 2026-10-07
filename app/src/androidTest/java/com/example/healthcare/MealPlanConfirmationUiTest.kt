@@ -34,7 +34,7 @@ import org.junit.Test
 class MealPlanConfirmationUiTest {
     @get:Rule val composeRule = createComposeRule()
 
-    @Test fun eatingRecommendationRequiresExplicitPortionConfirmation() {
+    @Test fun recommendedAmountSavesDirectlyAndChangedAmountOpensExistingConfirmation() {
         val food = FoodItem("rice", "K-FIND", "rice", "흰밥", "흰밥", category = "밥류",
             referenceAmount = 100.0, unit = "g", energyKcal = 140.0,
             servingDescription = "100g 기준", dataVersion = "test", createdAt = 0, updatedAt = 0)
@@ -50,7 +50,8 @@ class MealPlanConfirmationUiTest {
             HealthCareTheme {
                 Box(Modifier.width(360.dp).height(760.dp)) {
                     MealPlanContent(state, {}, {}, {}, {}, { _, _ -> }, {}, { _, _ -> },
-                        onConfirm = { state = state.copy(showConsumptionConfirm = true) },
+                        onConfirm = { saveCount++ },
+                        onChangeAmount = { state = state.copy(showConsumptionConfirm = true) },
                         onSaveConsumption = { saveCount++ },
                         onConsumedRatio = { ratio ->
                             state = state.copy(consumedRatio = ratio,
@@ -64,7 +65,10 @@ class MealPlanConfirmationUiTest {
         }
         composeRule.onAllNodes(hasScrollAction()).onFirst().performScrollToNode(hasText("먹었어요"))
         composeRule.onNodeWithText("먹었어요").performClick()
-        assertEquals(0, saveCount)
+        assertEquals(1, saveCount)
+        composeRule.onNodeWithText("추천한 양만큼 드셨나요?").assertDoesNotExist()
+        composeRule.onAllNodes(hasScrollAction()).onFirst().performScrollToNode(hasText("먹은 양이 달라요"))
+        composeRule.onNodeWithText("먹은 양이 달라요").performClick()
         composeRule.onAllNodes(hasScrollAction()).onFirst().performScrollToNode(hasText("추천한 양만큼 드셨나요?"))
         composeRule.onNodeWithText("추천한 양만큼 드셨나요?").assertIsDisplayed()
         composeRule.onAllNodes(hasScrollAction()).onFirst().performScrollToNode(hasText("절반 정도 먹었어요"))
@@ -72,7 +76,7 @@ class MealPlanConfirmationUiTest {
         composeRule.onAllNodes(hasScrollAction()).onFirst().performScrollToNode(hasText("이 양으로 기록"))
         composeRule.onNodeWithText("약 70 kcal", substring = true).assertIsDisplayed()
         composeRule.onNodeWithText("이 양으로 기록").performClick()
-        assertEquals(1, saveCount)
+        assertEquals(2, saveCount)
     }
 
     @Test fun emptyRecommendationOffersChangedConditionAndDirectSearchAt360Dp() {

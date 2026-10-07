@@ -1,0 +1,1574 @@
+[
+  {
+    "recipeId": "RDA-DIET-89406-0",
+    "name": "묵밥",
+    "foodsScanned": 67354,
+    "candidates": [
+      {
+        "foodId": "kfind-d301-015000000-0001",
+        "name": "묵밥",
+        "category": "밥류",
+        "source": "K-FIND",
+        "brand": "",
+        "referenceAmount": "100",
+        "unit": "g",
+        "officialEnergyKcal": "68",
+        "aliases": "",
+        "matchedKeys": [
+          "묵밥"
+        ],
+        "matchType": "QUALIFIED_NAME",
+        "publicationAuthorized": false
+      },
+      {
+        "foodId": "kfind-d501-015000000-0001",
+        "name": "묵밥",
+        "category": "밥류",
+        "source": "K-FIND",
+        "brand": "",
+        "referenceAmount": "100",
+        "unit": "ml",
+        "officialEnergyKcal": "69",
+        "aliases": "",
+        "matchedKeys": [
+          "묵밥"
+        ],
+        "matchType": "QUALIFIED_NAME",
+        "publicationAuthorized": false
+      },
+      {
+        "foodId": "kfind-d401-015000000-0001",
+        "name": "묵밥",
+        "category": "밥류",
+        "source": "K-FIND",
+        "brand": "",
+        "referenceAmount": "100",
+        "unit": "ml",
+        "officialEnergyKcal": "70",
+        "aliases": "",
+        "matchedKeys": [
+          "묵밥"
+        ],
+        "matchType": "QUALIFIED_NAME",
+        "publicationAuthorized": false
+      },
+      {
+        "foodId": "kfind-d701-015000000-0001",
+        "name": "묵밥",
+        "category": "밥류",
+        "source": "K-FIND",
+        "brand": "",
+        "referenceAmount": "100",
+        "unit": "ml",
+        "officialEnergyKcal": "70",
+        "aliases": "",
+        "matchedKeys": [
+          "묵밥"
+        ],
+        "matchType": "QUALIFIED_NAME",
+        "publicationAuthorized": false
+      }
+    ],
+    "newFoodCreated": false,
+    "status": "REVIEW_REQUIRED",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-107",
+    "name": "오리구이곰피쌈",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-108",
+    "name": "양상추샐러드",
+    "foodsScanned": 67354,
+    "candidates": [
+      {
+        "foodId": "kfind-d614-704000000-0001",
+        "name": "양상추 샐러드",
+        "category": "생채·무침류",
+        "source": "K-FIND",
+        "brand": "",
+        "referenceAmount": "100",
+        "unit": "ml",
+        "officialEnergyKcal": "79",
+        "aliases": "",
+        "matchedKeys": [
+          "양상추샐러드"
+        ],
+        "matchType": "QUALIFIED_NAME",
+        "publicationAuthorized": false
+      },
+      {
+        "foodId": "kfind-d414-704000000-0001",
+        "name": "양상추 샐러드",
+        "category": "생채·무침류",
+        "source": "K-FIND",
+        "brand": "",
+        "referenceAmount": "100",
+        "unit": "ml",
+        "officialEnergyKcal": "78",
+        "aliases": "",
+        "matchedKeys": [
+          "양상추샐러드"
+        ],
+        "matchType": "QUALIFIED_NAME",
+        "publicationAuthorized": false
+      },
+      {
+        "foodId": "kfind-d514-704000000-0001",
+        "name": "양상추 샐러드",
+        "category": "생채·무침류",
+        "source": "K-FIND",
+        "brand": "",
+        "referenceAmount": "100",
+        "unit": "ml",
+        "officialEnergyKcal": "79",
+        "aliases": "",
+        "matchedKeys": [
+          "양상추샐러드"
+        ],
+        "matchType": "QUALIFIED_NAME",
+        "publicationAuthorized": false
+      },
+      {
+        "foodId": "kfind-d714-704000000-0001",
+        "name": "양상추 샐러드",
+        "category": "생채·무침류",
+        "source": "K-FIND",
+        "brand": "",
+        "referenceAmount": "100",
+        "unit": "ml",
+        "officialEnergyKcal": "78",
+        "aliases": "",
+        "matchedKeys": [
+          "양상추샐러드"
+        ],
+        "matchType": "QUALIFIED_NAME",
+        "publicationAuthorized": false
+      },
+      {
+        "foodId": "kfind-d114-640230000-0001",
+        "name": "샐러드_양상추",
+        "category": "생채·무침류",
+        "source": "K-FIND",
+        "brand": "",
+        "referenceAmount": "100",
+        "unit": "g",
+        "officialEnergyKcal": "126",
+        "aliases": "|샐러드|양상추|",
+        "matchedKeys": [
+          "양상추샐러드"
+        ],
+        "matchType": "QUALIFIED_NAME",
+        "publicationAuthorized": false
+      }
+    ],
+    "newFoodCreated": false,
+    "status": "REVIEW_REQUIRED",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-109",
+    "name": "머위대볶음",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-110",
+    "name": "새싹비빔국수",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-112",
+    "name": "바지락 수제비볶음",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-116",
+    "name": "민들레 생채",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-120",
+    "name": "취나물 들깨무침",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-121",
+    "name": "롤빵샌드위치",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-126",
+    "name": "개조개오븐구이",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-127",
+    "name": "토마토소박이",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-128",
+    "name": "오이우무냉국",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-131",
+    "name": "풋마늘반건오징어김치",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-138",
+    "name": "게맛살오이냉채",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-139",
+    "name": "부추보리밥",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-140",
+    "name": "쑥절편꽃말이떡",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-143",
+    "name": "두부과일샐러드",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-151",
+    "name": "도토리묵소면무침",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-154",
+    "name": "단호박경단",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-166",
+    "name": "호박가지전",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-167",
+    "name": "취나물비빔밥",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-169",
+    "name": "닭쟁반국수",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-170",
+    "name": "찐만두",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-175",
+    "name": "홍합달래전",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-178",
+    "name": "딸기주스",
+    "foodsScanned": 67354,
+    "candidates": [
+      {
+        "foodId": "kfind-d220-716000000-0205",
+        "name": "과ㆍ채주스_딸기주스",
+        "category": "음료 및 차류",
+        "source": "K-FIND",
+        "brand": "메가커피",
+        "referenceAmount": "100",
+        "unit": "ml",
+        "officialEnergyKcal": "33",
+        "aliases": "|과채주스|딸기주스|",
+        "matchedKeys": [
+          "딸기주스"
+        ],
+        "matchType": "METADATA_ALIAS_REQUIRES_WHOLE_IDENTITY_REVIEW",
+        "publicationAuthorized": false
+      },
+      {
+        "foodId": "kfind-d220-716000000-0206",
+        "name": "과ㆍ채주스_딸기주스",
+        "category": "음료 및 차류",
+        "source": "K-FIND",
+        "brand": "이디야",
+        "referenceAmount": "100",
+        "unit": "ml",
+        "officialEnergyKcal": "65",
+        "aliases": "|과채주스|딸기주스|",
+        "matchedKeys": [
+          "딸기주스"
+        ],
+        "matchType": "METADATA_ALIAS_REQUIRES_WHOLE_IDENTITY_REVIEW",
+        "publicationAuthorized": false
+      },
+      {
+        "foodId": "kfind-d220-716000000-0197",
+        "name": "과ㆍ채주스_딸기 주스",
+        "category": "음료 및 차류",
+        "source": "K-FIND",
+        "brand": "팔공티",
+        "referenceAmount": "100",
+        "unit": "g",
+        "officialEnergyKcal": "34",
+        "aliases": "|과채주스|딸기주스|",
+        "matchedKeys": [
+          "딸기주스"
+        ],
+        "matchType": "METADATA_ALIAS_REQUIRES_WHOLE_IDENTITY_REVIEW",
+        "publicationAuthorized": false
+      },
+      {
+        "foodId": "kfind-d220-716000000-0196",
+        "name": "과ㆍ채주스_딸기 주스",
+        "category": "음료 및 차류",
+        "source": "K-FIND",
+        "brand": "커피베이",
+        "referenceAmount": "100",
+        "unit": "ml",
+        "officialEnergyKcal": "43",
+        "aliases": "|과채주스|딸기주스|",
+        "matchedKeys": [
+          "딸기주스"
+        ],
+        "matchType": "METADATA_ALIAS_REQUIRES_WHOLE_IDENTITY_REVIEW",
+        "publicationAuthorized": false
+      },
+      {
+        "foodId": "kfind-d220-716000000-0195",
+        "name": "과ㆍ채주스_딸기 주스",
+        "category": "음료 및 차류",
+        "source": "K-FIND",
+        "brand": "카페루앤비",
+        "referenceAmount": "100",
+        "unit": "ml",
+        "officialEnergyKcal": "36",
+        "aliases": "|과채주스|딸기주스|",
+        "matchedKeys": [
+          "딸기주스"
+        ],
+        "matchType": "METADATA_ALIAS_REQUIRES_WHOLE_IDENTITY_REVIEW",
+        "publicationAuthorized": false
+      },
+      {
+        "foodId": "kfind-d220-716000000-0194",
+        "name": "과ㆍ채주스_딸기 주스",
+        "category": "음료 및 차류",
+        "source": "K-FIND",
+        "brand": "카페띠아모",
+        "referenceAmount": "100",
+        "unit": "g",
+        "officialEnergyKcal": "42",
+        "aliases": "|과채주스|딸기주스|",
+        "matchedKeys": [
+          "딸기주스"
+        ],
+        "matchType": "METADATA_ALIAS_REQUIRES_WHOLE_IDENTITY_REVIEW",
+        "publicationAuthorized": false
+      },
+      {
+        "foodId": "kfind-d220-716000000-0031",
+        "name": "과ㆍ채주스_딸기 주스",
+        "category": "음료 및 차류",
+        "source": "K-FIND",
+        "brand": "탐앤탐스",
+        "referenceAmount": "100",
+        "unit": "g",
+        "officialEnergyKcal": "81",
+        "aliases": "|과채주스|딸기주스|",
+        "matchedKeys": [
+          "딸기주스"
+        ],
+        "matchType": "METADATA_ALIAS_REQUIRES_WHOLE_IDENTITY_REVIEW",
+        "publicationAuthorized": false
+      },
+      {
+        "foodId": "kfind-d220-716000000-0030",
+        "name": "과ㆍ채주스_딸기 주스",
+        "category": "음료 및 차류",
+        "source": "K-FIND",
+        "brand": "커피에반하다",
+        "referenceAmount": "100",
+        "unit": "g",
+        "officialEnergyKcal": "90",
+        "aliases": "|과채주스|딸기주스|",
+        "matchedKeys": [
+          "딸기주스"
+        ],
+        "matchType": "METADATA_ALIAS_REQUIRES_WHOLE_IDENTITY_REVIEW",
+        "publicationAuthorized": false
+      },
+      {
+        "foodId": "kfind-d220-716000000-0029",
+        "name": "과ㆍ채주스_딸기 주스",
+        "category": "음료 및 차류",
+        "source": "K-FIND",
+        "brand": "카페봄봄",
+        "referenceAmount": "100",
+        "unit": "g",
+        "officialEnergyKcal": "51",
+        "aliases": "|과채주스|딸기주스|",
+        "matchedKeys": [
+          "딸기주스"
+        ],
+        "matchType": "METADATA_ALIAS_REQUIRES_WHOLE_IDENTITY_REVIEW",
+        "publicationAuthorized": false
+      },
+      {
+        "foodId": "kfind-d220-716000000-0027",
+        "name": "과ㆍ채주스_딸기 주스",
+        "category": "음료 및 차류",
+        "source": "K-FIND",
+        "brand": "이디야",
+        "referenceAmount": "100",
+        "unit": "g",
+        "officialEnergyKcal": "63",
+        "aliases": "|과채주스|딸기주스|",
+        "matchedKeys": [
+          "딸기주스"
+        ],
+        "matchType": "METADATA_ALIAS_REQUIRES_WHOLE_IDENTITY_REVIEW",
+        "publicationAuthorized": false
+      },
+      {
+        "foodId": "kfind-d220-716000000-0026",
+        "name": "과ㆍ채주스_딸기 주스",
+        "category": "음료 및 차류",
+        "source": "K-FIND",
+        "brand": "메가커피",
+        "referenceAmount": "100",
+        "unit": "g",
+        "officialEnergyKcal": "27",
+        "aliases": "|과채주스|딸기주스|",
+        "matchedKeys": [
+          "딸기주스"
+        ],
+        "matchType": "METADATA_ALIAS_REQUIRES_WHOLE_IDENTITY_REVIEW",
+        "publicationAuthorized": false
+      },
+      {
+        "foodId": "kfind-d220-716000000-0020",
+        "name": "과ㆍ채주스_딸기 주스",
+        "category": "음료 및 차류",
+        "source": "K-FIND",
+        "brand": "토프레소",
+        "referenceAmount": "100",
+        "unit": "g",
+        "officialEnergyKcal": "36",
+        "aliases": "|과채주스|딸기주스|",
+        "matchedKeys": [
+          "딸기주스"
+        ],
+        "matchType": "METADATA_ALIAS_REQUIRES_WHOLE_IDENTITY_REVIEW",
+        "publicationAuthorized": false
+      },
+      {
+        "foodId": "kfind-product-p109-302030200-2671",
+        "name": "딸기주스",
+        "category": "음료류",
+        "source": "K-FIND-PRODUCT",
+        "brand": "정읍시 농산물가공센터",
+        "referenceAmount": "100",
+        "unit": "ml",
+        "officialEnergyKcal": "60",
+        "aliases": "|과채주스|정읍시농산물가공센터|정읍시농산물가공센터딸기주스|",
+        "matchedKeys": [
+          "딸기주스"
+        ],
+        "matchType": "QUALIFIED_NAME",
+        "publicationAuthorized": false
+      },
+      {
+        "foodId": "kfind-product-p109-303030300-2717",
+        "name": "딸기주스",
+        "category": "음료류",
+        "source": "K-FIND-PRODUCT",
+        "brand": "주식회사핀코퍼레이션",
+        "referenceAmount": "100",
+        "unit": "g",
+        "officialEnergyKcal": "108",
+        "aliases": "|과채음료|주식회사핀코퍼레이션|주식회사핀코퍼레이션딸기주스|핀코퍼레이션|핀코퍼레이션딸기주스|",
+        "matchedKeys": [
+          "딸기주스"
+        ],
+        "matchType": "QUALIFIED_NAME",
+        "publicationAuthorized": false
+      },
+      {
+        "foodId": "kfind-product-p109-302030200-4119",
+        "name": "딸기주스",
+        "category": "음료류",
+        "source": "K-FIND-PRODUCT",
+        "brand": "(주)우양(청양공장)",
+        "referenceAmount": "100",
+        "unit": "ml",
+        "officialEnergyKcal": "59",
+        "aliases": "|과채주스|우양청양공장|우양청양공장딸기주스|주우양청양공장|주우양청양공장딸기주스|",
+        "matchedKeys": [
+          "딸기주스"
+        ],
+        "matchType": "QUALIFIED_NAME",
+        "publicationAuthorized": false
+      },
+      {
+        "foodId": "kfind-product-p109-302030200-0637",
+        "name": "딸기주스",
+        "category": "음료류",
+        "source": "K-FIND-PRODUCT",
+        "brand": "(주)풀무원녹즙",
+        "referenceAmount": "100",
+        "unit": "ml",
+        "officialEnergyKcal": "58",
+        "aliases": "|과채주스|주풀무원녹즙|주풀무원녹즙딸기주스|풀무원녹즙|풀무원녹즙딸기주스|",
+        "matchedKeys": [
+          "딸기주스"
+        ],
+        "matchType": "QUALIFIED_NAME",
+        "publicationAuthorized": false
+      },
+      {
+        "foodId": "kfind-product-p109-302030200-0639",
+        "name": "딸기주스",
+        "category": "음료류",
+        "source": "K-FIND-PRODUCT",
+        "brand": "(주)휴온스푸디언스",
+        "referenceAmount": "100",
+        "unit": "ml",
+        "officialEnergyKcal": "48",
+        "aliases": "|과채주스|주휴온스푸디언스|주휴온스푸디언스딸기주스|휴온스푸디언스|휴온스푸디언스딸기주스|",
+        "matchedKeys": [
+          "딸기주스"
+        ],
+        "matchType": "QUALIFIED_NAME",
+        "publicationAuthorized": false
+      },
+      {
+        "foodId": "kfind-product-p109-302030200-2914",
+        "name": "딸기주스",
+        "category": "음료류",
+        "source": "K-FIND-PRODUCT",
+        "brand": "채움에프앤비농업회사법인주식회사",
+        "referenceAmount": "100",
+        "unit": "ml",
+        "officialEnergyKcal": "49",
+        "aliases": "|과채주스|채움에프앤비농업회사법인|채움에프앤비농업회사법인딸기주스|채움에프앤비농업회사법인주식회사|채움에프앤비농업회사법인주식회사딸기주스|",
+        "matchedKeys": [
+          "딸기주스"
+        ],
+        "matchType": "QUALIFIED_NAME",
+        "publicationAuthorized": false
+      },
+      {
+        "foodId": "kfind-product-p109-302030200-6428",
+        "name": "딸기주스",
+        "category": "음료류",
+        "source": "K-FIND-PRODUCT",
+        "brand": "포천시농산물종합가공센터",
+        "referenceAmount": "100",
+        "unit": "ml",
+        "officialEnergyKcal": "53",
+        "aliases": "|과채주스|포천시농산물종합가공센터|포천시농산물종합가공센터딸기주스|",
+        "matchedKeys": [
+          "딸기주스"
+        ],
+        "matchType": "QUALIFIED_NAME",
+        "publicationAuthorized": false
+      }
+    ],
+    "newFoodCreated": false,
+    "status": "REVIEW_REQUIRED",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-181",
+    "name": "감자베이컨볶음",
+    "foodsScanned": 67354,
+    "candidates": [
+      {
+        "foodId": "kfind-d610-450032500-0001",
+        "name": "감자볶음_감자_베이컨",
+        "category": "볶음류",
+        "source": "K-FIND",
+        "brand": "",
+        "referenceAmount": "100",
+        "unit": "ml",
+        "officialEnergyKcal": "53",
+        "aliases": "|감자|감자볶음|베이컨|",
+        "matchedKeys": [
+          "감자베이컨볶음"
+        ],
+        "matchType": "QUALIFIED_NAME",
+        "publicationAuthorized": false
+      },
+      {
+        "foodId": "kfind-d510-450032500-0001",
+        "name": "감자볶음_감자_베이컨",
+        "category": "볶음류",
+        "source": "K-FIND",
+        "brand": "",
+        "referenceAmount": "100",
+        "unit": "ml",
+        "officialEnergyKcal": "50",
+        "aliases": "|감자|감자볶음|베이컨|",
+        "matchedKeys": [
+          "감자베이컨볶음"
+        ],
+        "matchType": "QUALIFIED_NAME",
+        "publicationAuthorized": false
+      }
+    ],
+    "newFoodCreated": false,
+    "status": "REVIEW_REQUIRED",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-192",
+    "name": "바나나스무디",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-206",
+    "name": "주꾸미수제비",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-210",
+    "name": "고구마돈육강정",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-212",
+    "name": "배추말이찜",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-214",
+    "name": "상추, 오이, 당근쌈",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-220",
+    "name": "우엉떡조림",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-221",
+    "name": "가자미생선까스",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-223",
+    "name": "딸기잼",
+    "foodsScanned": 67354,
+    "candidates": [
+      {
+        "foodId": "kfind-product-p105-001000100-0049",
+        "name": "딸기잼",
+        "category": "잼류",
+        "source": "K-FIND-PRODUCT",
+        "brand": "(주)오뚜기",
+        "referenceAmount": "100",
+        "unit": "g",
+        "officialEnergyKcal": "260",
+        "aliases": "|오뚜기|오뚜기딸기잼|잼|주오뚜기|주오뚜기딸기잼|",
+        "matchedKeys": [
+          "딸기잼"
+        ],
+        "matchType": "QUALIFIED_NAME",
+        "publicationAuthorized": false
+      },
+      {
+        "foodId": "kfind-product-p105-001000100-0754",
+        "name": "디즈니 칩앤데일_딸기잼",
+        "category": "잼류",
+        "source": "K-FIND-PRODUCT",
+        "brand": "주식회사대상다이브스",
+        "referenceAmount": "100",
+        "unit": "g",
+        "officialEnergyKcal": "275",
+        "aliases": "|대상다이브스|대상다이브스디즈니칩앤데일|대상다이브스디즈니칩앤데일딸기잼|대상다이브스딸기잼|디즈니칩앤데일|딸기잼|잼|주식회사대상다이브스|주식회사대상다이브스디즈니칩앤데일|주식회사대상다이브스디즈니칩앤데일딸기잼|주식회사대상다이브스딸기잼|",
+        "matchedKeys": [
+          "딸기잼"
+        ],
+        "matchType": "METADATA_ALIAS_REQUIRES_WHOLE_IDENTITY_REVIEW",
+        "publicationAuthorized": false
+      },
+      {
+        "foodId": "kfind-product-p105-001000100-1087",
+        "name": "딸기잼",
+        "category": "잼류",
+        "source": "K-FIND-PRODUCT",
+        "brand": "(주)신세계푸드음성공장",
+        "referenceAmount": "100",
+        "unit": "g",
+        "officialEnergyKcal": "223",
+        "aliases": "|신세계푸드음성공장|신세계푸드음성공장딸기잼|잼|주신세계푸드음성공장|주신세계푸드음성공장딸기잼|",
+        "matchedKeys": [
+          "딸기잼"
+        ],
+        "matchType": "QUALIFIED_NAME",
+        "publicationAuthorized": false
+      }
+    ],
+    "newFoodCreated": false,
+    "status": "REVIEW_REQUIRED",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-224",
+    "name": "참다래샐러드",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-229",
+    "name": "갑오징어어묵볶음",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-230",
+    "name": "호두잔멸치조림",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-231",
+    "name": "닭가슴살해파리냉채",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-235",
+    "name": "과일야채샐러드",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-240",
+    "name": "고구마떡볶이",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-241",
+    "name": "김치콩나물밥",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-243",
+    "name": "고구마김치피자",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-244",
+    "name": "완두콩스프",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-246",
+    "name": "마사과쥬스",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-249",
+    "name": "단호박카레라이스",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-250",
+    "name": "갑오징어국",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-253",
+    "name": "감샐러드",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-254",
+    "name": "고사리녹두전",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-265",
+    "name": "꽃게해물탕",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-269",
+    "name": "새우살달걀찜",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-273",
+    "name": "호두버섯무침",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-274",
+    "name": "골뱅이대구포무침",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-277",
+    "name": "가자미전",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-279",
+    "name": "고등어김치찜",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-280",
+    "name": "두부구이/달래장",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-282",
+    "name": "느타리버섯전",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-290",
+    "name": "떡꼬치구이",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-291",
+    "name": "돌나물묵무침",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-295",
+    "name": "주꾸미먹물달걀찜",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-296",
+    "name": "호두멸치조림",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-301",
+    "name": "멸치호두조림",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-302",
+    "name": "단호박샌드위치",
+    "foodsScanned": 67354,
+    "candidates": [
+      {
+        "foodId": "kfind-product-p123-224020200-0664",
+        "name": "단호박샌드위치",
+        "category": "즉석식품류",
+        "source": "K-FIND-PRODUCT",
+        "brand": "(주)빠띠쁘레",
+        "referenceAmount": "100",
+        "unit": "g",
+        "officialEnergyKcal": "117",
+        "aliases": "|빠띠쁘레|빠띠쁘레단호박샌드위치|샌드위치|주빠띠쁘레|주빠띠쁘레단호박샌드위치|",
+        "matchedKeys": [
+          "단호박샌드위치"
+        ],
+        "matchType": "QUALIFIED_NAME",
+        "publicationAuthorized": false
+      },
+      {
+        "foodId": "kfind-product-p123-224020200-2769",
+        "name": "단호박 샌드위치",
+        "category": "즉석식품류",
+        "source": "K-FIND-PRODUCT",
+        "brand": "주식회사 제이스",
+        "referenceAmount": "100",
+        "unit": "g",
+        "officialEnergyKcal": "120",
+        "aliases": "|샌드위치|제이스|제이스단호박샌드위치|주식회사제이스|주식회사제이스단호박샌드위치|",
+        "matchedKeys": [
+          "단호박샌드위치"
+        ],
+        "matchType": "QUALIFIED_NAME",
+        "publicationAuthorized": false
+      }
+    ],
+    "newFoodCreated": false,
+    "status": "REVIEW_REQUIRED",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-304",
+    "name": "목이버섯꼬막볶음",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-305",
+    "name": "주꾸미콩나물찜",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-308",
+    "name": "미역/초고추장",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-313",
+    "name": "도라지진미채무침",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-315",
+    "name": "참다래주스",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-318",
+    "name": "주꾸미떡볶이",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-319",
+    "name": "연근두부채소전",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-321",
+    "name": "두릅숙회/초고추장",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-322",
+    "name": "냉이콩나물된장국",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-327",
+    "name": "고추잎김치",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-331",
+    "name": "갑오징어핫바",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-333",
+    "name": "수삼튀김",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-340",
+    "name": "닭봉구이",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-342",
+    "name": "냉이찹쌀전",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-348",
+    "name": "주꾸미잡채",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-91",
+    "name": "죽순콩나물밥",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-93",
+    "name": "멍게비빔밥",
+    "foodsScanned": 67354,
+    "candidates": [
+      {
+        "foodId": "kfind-d301-018180000-0001",
+        "name": "비빔밥_멍게",
+        "category": "밥류",
+        "source": "K-FIND",
+        "brand": "",
+        "referenceAmount": "100",
+        "unit": "g",
+        "officialEnergyKcal": "137",
+        "aliases": "|멍게|비빔밥|",
+        "matchedKeys": [
+          "멍게비빔밥"
+        ],
+        "matchType": "QUALIFIED_NAME",
+        "publicationAuthorized": false
+      }
+    ],
+    "newFoodCreated": false,
+    "status": "REVIEW_REQUIRED",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-96",
+    "name": "애호박젓국",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-97",
+    "name": "키조개샤브샤브",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-99",
+    "name": "가자미쑥국",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "RDA-90151",
+    "name": "백합죽",
+    "foodsScanned": 67354,
+    "candidates": [
+      {
+        "foodId": "kfind-d304-183000000-0001",
+        "name": "백합죽",
+        "category": "죽 및 스프류",
+        "source": "K-FIND",
+        "brand": "",
+        "referenceAmount": "100",
+        "unit": "g",
+        "officialEnergyKcal": "65",
+        "aliases": "",
+        "matchedKeys": [
+          "백합죽"
+        ],
+        "matchType": "QUALIFIED_NAME",
+        "publicationAuthorized": false
+      },
+      {
+        "foodId": "kfind-product-p123-205020300-0528",
+        "name": "백합죽",
+        "category": "즉석식품류",
+        "source": "K-FIND-PRODUCT",
+        "brand": "(주)동원F&B",
+        "referenceAmount": "100",
+        "unit": "g",
+        "officialEnergyKcal": "61",
+        "aliases": "|동원fb|동원fb백합죽|주동원fb|주동원fb백합죽|죽|",
+        "matchedKeys": [
+          "백합죽"
+        ],
+        "matchType": "QUALIFIED_NAME",
+        "publicationAuthorized": false
+      }
+    ],
+    "newFoodCreated": false,
+    "status": "REVIEW_REQUIRED",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "RDA-90925",
+    "name": "바람떡(개피떡)",
+    "foodsScanned": 67354,
+    "candidates": [
+      {
+        "foodId": "kfind-d302-054000000-0001",
+        "name": "개피떡(바람떡)",
+        "category": "빵 및 과자류",
+        "source": "K-FIND",
+        "brand": "",
+        "referenceAmount": "100",
+        "unit": "g",
+        "officialEnergyKcal": "206",
+        "aliases": "",
+        "matchedKeys": [
+          "개피떡바람떡",
+          "바람떡개피떡"
+        ],
+        "matchType": "QUALIFIED_NAME",
+        "publicationAuthorized": false
+      }
+    ],
+    "newFoodCreated": false,
+    "status": "REVIEW_REQUIRED",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "RDA-91134",
+    "name": "메밀전병(총떡, 메밀전)",
+    "foodsScanned": 67354,
+    "candidates": [
+      {
+        "foodId": "kfind-product-p123-209030100-0004",
+        "name": "메밀전병",
+        "category": "즉석식품류",
+        "source": "K-FIND-PRODUCT",
+        "brand": "(주)푸르온",
+        "referenceAmount": "100",
+        "unit": "g",
+        "officialEnergyKcal": "180",
+        "aliases": "|전|주푸르온|주푸르온메밀전병|푸르온|푸르온메밀전병|",
+        "matchedKeys": [
+          "메밀전병"
+        ],
+        "matchType": "QUALIFIED_NAME",
+        "publicationAuthorized": false
+      }
+    ],
+    "newFoodCreated": false,
+    "status": "REVIEW_REQUIRED",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "RDA-91353",
+    "name": "백합죽",
+    "foodsScanned": 67354,
+    "candidates": [
+      {
+        "foodId": "kfind-d304-183000000-0001",
+        "name": "백합죽",
+        "category": "죽 및 스프류",
+        "source": "K-FIND",
+        "brand": "",
+        "referenceAmount": "100",
+        "unit": "g",
+        "officialEnergyKcal": "65",
+        "aliases": "",
+        "matchedKeys": [
+          "백합죽"
+        ],
+        "matchType": "QUALIFIED_NAME",
+        "publicationAuthorized": false
+      },
+      {
+        "foodId": "kfind-product-p123-205020300-0528",
+        "name": "백합죽",
+        "category": "즉석식품류",
+        "source": "K-FIND-PRODUCT",
+        "brand": "(주)동원F&B",
+        "referenceAmount": "100",
+        "unit": "g",
+        "officialEnergyKcal": "61",
+        "aliases": "|동원fb|동원fb백합죽|주동원fb|주동원fb백합죽|죽|",
+        "matchedKeys": [
+          "백합죽"
+        ],
+        "matchType": "QUALIFIED_NAME",
+        "publicationAuthorized": false
+      }
+    ],
+    "newFoodCreated": false,
+    "status": "REVIEW_REQUIRED",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "RDA-91764",
+    "name": "곤달비밥(곤드레밥, 곤드레나물밥)",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "RDA-91829",
+    "name": "물메기국(곰치국)",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "RDA-92425",
+    "name": "백합죽",
+    "foodsScanned": 67354,
+    "candidates": [
+      {
+        "foodId": "kfind-d304-183000000-0001",
+        "name": "백합죽",
+        "category": "죽 및 스프류",
+        "source": "K-FIND",
+        "brand": "",
+        "referenceAmount": "100",
+        "unit": "g",
+        "officialEnergyKcal": "65",
+        "aliases": "",
+        "matchedKeys": [
+          "백합죽"
+        ],
+        "matchType": "QUALIFIED_NAME",
+        "publicationAuthorized": false
+      },
+      {
+        "foodId": "kfind-product-p123-205020300-0528",
+        "name": "백합죽",
+        "category": "즉석식품류",
+        "source": "K-FIND-PRODUCT",
+        "brand": "(주)동원F&B",
+        "referenceAmount": "100",
+        "unit": "g",
+        "officialEnergyKcal": "61",
+        "aliases": "|동원fb|동원fb백합죽|주동원fb|주동원fb백합죽|죽|",
+        "matchedKeys": [
+          "백합죽"
+        ],
+        "matchType": "QUALIFIED_NAME",
+        "publicationAuthorized": false
+      }
+    ],
+    "newFoodCreated": false,
+    "status": "REVIEW_REQUIRED",
+    "questionRequired": false
+  },
+  {
+    "recipeId": "MFDS-186",
+    "name": "두릅산적",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": true
+  },
+  {
+    "recipeId": "MFDS-238",
+    "name": "도라지양념구이",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": true
+  },
+  {
+    "recipeId": "MFDS-239",
+    "name": "딸기롤샌드위치",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": true
+  },
+  {
+    "recipeId": "MFDS-255",
+    "name": "연근치즈구이",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": true
+  },
+  {
+    "recipeId": "MFDS-256",
+    "name": "도토리묵밥",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": true
+  },
+  {
+    "recipeId": "MFDS-306",
+    "name": "잣스프",
+    "foodsScanned": 67354,
+    "candidates": [],
+    "newFoodCreated": false,
+    "status": "NO_EXACT_EXISTING_FOOD",
+    "questionRequired": true
+  }
+]

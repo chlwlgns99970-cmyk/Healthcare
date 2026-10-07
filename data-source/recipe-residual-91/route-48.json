@@ -1,0 +1,86 @@
+{
+  "foods": [
+    {
+      "recipeId": "MFDS-256",
+      "name": "도토리묵밥",
+      "variants": [
+        "도토리묵밥",
+        "도토리묵 밥"
+      ],
+      "classification": "FOOD_NUTRITION_MISSING"
+    },
+    {
+      "recipeId": "MFDS-265",
+      "name": "꽃게해물탕",
+      "variants": [
+        "꽃게해물탕",
+        "꽃게 해물탕"
+      ],
+      "classification": "PARTIAL"
+    },
+    {
+      "recipeId": "MFDS-269",
+      "name": "새우살달걀찜",
+      "variants": [
+        "새우살달걀찜"
+      ],
+      "classification": "PARTIAL"
+    },
+    {
+      "recipeId": "MFDS-273",
+      "name": "호두버섯무침",
+      "variants": [
+        "호두버섯무침",
+        "호두 버섯 무침"
+      ],
+      "classification": "PARTIAL"
+    }
+  ],
+  "queries": [
+    {
+      "q": "\"도토리묵밥\" 정량 조리",
+      "domains": [
+        "go.kr",
+        "ac.kr",
+        "or.kr",
+        "semie.cooking",
+        "ottogi.co.kr",
+        "sempio.com"
+      ]
+    },
+    {
+      "q": "\"꽃게해물탕\" 정량 조리",
+      "domains": [
+        "go.kr",
+        "ac.kr",
+        "or.kr",
+        "semie.cooking",
+        "ottogi.co.kr",
+        "sempio.com"
+      ]
+    },
+    {
+      "q": "\"새우살달걀찜\" 정량 조리",
+      "domains": [
+        "go.kr",
+        "ac.kr",
+        "or.kr",
+        "semie.cooking",
+        "ottogi.co.kr",
+        "sempio.com"
+      ]
+    },
+    {
+      "q": "\"호두버섯무침\" 정량 조리",
+      "domains": [
+        "go.kr",
+        "ac.kr",
+        "or.kr",
+        "semie.cooking",
+        "ottogi.co.kr",
+        "sempio.com"
+      ]
+    }
+  ],
+  "result": "<312EC7A5C1F62E687770> (https://mhc.cbe.go.kr/upload/na_old/dc520bb5-50ad-48b0-94dc-cf1475f299ba/2017/15129900741.pdf)\nciteturn511search12 [wordlim: 200] Published: 8.8 years ago; ① 도토리묵은 적당한 크기로 잘라 준비하고, 양파, 치커리, 오이 등 채소는 먹기 좋은 크기로 자른다.② 간장, 고춧가루, 다진 마늘, 통깨 등을 혼합하여 양념장을 만든 후 도토리묵이 부서지지 않게 채소와 함께 버무리면 완성된다. ... 왼쪽에 도토리묵밥 사진이 있고, 오른쪽에 재료와 조리법이 배치된 음식 조리 설명 페이지.\n--------------------------------------------------------------------------------\n도토리묵밥\n\n<table id=\"e1\">\n<tr>\n<th rowspan=\"2\">재 료 명< (https://mhc.cbe.go.kr/upload/na_old/dc520bb5-50ad-48b0-94dc-cf1475f299ba/2018/15440146732.pdf)\nciteturn511search13 [wordlim: 200] Published: 7.8 years ago; <th colspan=\"2\">1인당량(g)</th><th rowspan=\"2\">조 리 방 법</th> ... - 달걀 지단을 고명으로 올려주면 색감이 훨씬 좋다 ... <td>도토리묵밥, 다진김치, 찰호떡, 무생채, 감귤주스</td> ... 왼쪽: 식판에 담긴 도토리묵밥 식단 사진.밥, 국그릇, 반찬 칸에 다진김치와 무생채, 작은 용기의 감귤주스가 보임.<br>\n--------------------------------------------------------------------------------\n발\n간\n등\n록\n번\n호\n11-1390802-000102-01 (https://www.rda.go.kr/download_file/act/bookcafe065.PDF)\nciteturn511search14 [wordlim: 200] Published: 2.0 years ago; 도토리묵밥 ... 을담은전설로서박달재의도토리묵이 ... 에서말린다음국간장에담가숙성시킨 ... 부어밥과함께낸다(강원도). ... 서끓는간장양념장을넣고조리다가 ... 던음식으로, 조선시대중엽과거를보 ... 러가는박달도령에게정성을다해도토\n--------------------------------------------------------------------------------\n (https://www.dietitian.or.kr/paper_board_view_contents.do?bbs_idx=78475)\nciteturn511search0 [wordlim: 200] Crawled: last month; 아침상을 차리느니 공복에 일하는 편이 낫다고 말하다가도, 불규칙한 식습관에 부쩍 나빠진 건강을 생각하면 약간의 귀찮음은 감수하고 싶어진다. ... 보통 묵밥은 뜨거운 국물에 신김치를 올려 담백하게 먹는 음식이에요. ... 도토리묵 400g, 오이 1/4개, 신김치 60g, 대파 5cm, 청양고추 1개, 쑥갓 적당량, 국간장 1/2큰술, 설탕 1과 1/2큰술, 식초 2큰술, 소금·통깨 약간씩, 도토리묵 양념(국간장 1/2큰술, 다진 파 1작은술, 맛소금·통깨·참기름 약간씩), 다시마 국물(물 2와 1/4컵, 다시마 10×10cm 1개, 디포리 1줌, 보리새우 2큰술)\n--------------------------------------------------------------------------------\nA Guide to Translating Korean Food (https://datalab.visitkorea.or.kr/common/board/Download.do?bcIdx=306156&cbIdx=1129&streFileNm=4e05d4e7-3afe-4e3d-9125-a1a6de297a52.pdf)\nciteturn511search15 [wordlim: 200] Published: 1.3 years ago; \t(2) 도토리 이외의 묵 재료를 표기한 ‘묵밥’은 ‘묵 재료 + 粉こんにゃく + 入り + クッパ’ ... \t(2) ‘생선구이쌈밥’과 같이 다른 음식과 함께 제공하는 ‘쌈밥’은 ‘음식명 + 野菜包みご飯’\n--------------------------------------------------------------------------------\n여수관광문화 > 숙박·음식·쇼핑 > 음식점 > 지정업소 > 도민안심식당 (https://www.yeosu.go.kr/tour/lodge_food/food/group_restaurant/domin?idx=6324&mode=foodView)\nciteturn511search1 [wordlim: 200] Crawled: last week; 홈 > 숙박·음식·쇼핑 > 음식점 > 지정업소 > 도민안심식당 ... 화장실 ...   * 조식가능 ... #### 대표 꽃게해물찜 평점점 ... 총 0 개의 등록된 리뷰가 있습니다. ...   * 한상 ... #### 대표 꽃게해물탕 평점점\n"
+}

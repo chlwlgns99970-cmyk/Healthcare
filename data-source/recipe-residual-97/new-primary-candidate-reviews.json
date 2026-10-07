@@ -1,0 +1,53 @@
+[
+  {
+    "recipeIds": ["MFDS-108"],
+    "candidate": "마늘칩 그린샐러드",
+    "sourceInstitution": "대한당뇨병학회",
+    "sourceUrl": "https://www.diabetes.or.kr/upload/tinymce/recipe_summer9.jpg",
+    "sourceSha256": "b8f7ab9ea5240b5bd8f28097167de0ab414740091caa685a176aa9bc6048ad6c",
+    "rawFile": "data-source/recipe-full-reference/raw/c37430977c64ca5777a1",
+    "visuallyReviewed": true,
+    "ingredients": "마늘10g, 새싹20g, 양상추70g; 다진양파5g, 다진마늘5g, 간장5g, 그린스위트2g, 올리브오일2.5g, 발사믹식초5g, 참기름2.5g",
+    "decision": "NOT_COMPLETE",
+    "reason": "정량 배합은 있지만 새싹의 종을 지정하지 않는다. 기존 nutrition DB의 알파파·브로콜리·배추 등 새싹을 임의로 선택할 수 없다. 그린스위트도 특정 제품 영양 근거가 필요하다.",
+    "checkedAt": "2026-10-05"
+  },
+  {
+    "recipeIds": ["RDA-91134"],
+    "candidate": "메밀전병",
+    "sourceInstitution": "대한당뇨병학회",
+    "sourceUrl": "https://www.diabetes.or.kr/upload/tinymce/recipe_summer11.jpg",
+    "sourceSha256": "07614ff996ce62efa5acdb83de07348ee68fd764a32582879dc920cae06332f0",
+    "rawFile": "data-source/recipe-full-reference/raw/cbc2a9750114089f3d4e",
+    "visuallyReviewed": true,
+    "ingredients": "메밀가루30g, 배추김치50g, 두부40g, 돈육40g; 다진마늘2.5g, 맛술5g, 소금3g, 후추약간; 다진파2.5g, 통깨2g, 참기름2.5g",
+    "decision": "NOT_COMPLETE",
+    "reason": "후추 사용량 약간을 정량으로 만들 수 없다. 원본 소 구성과도 따로 비교해야 하며 다른 조리법의 후추량을 가져오지 않는다.",
+    "checkedAt": "2026-10-05"
+  },
+  {
+    "recipeIds": ["MFDS-230", "MFDS-296", "MFDS-301"],
+    "candidate": "멸치호두조림",
+    "sourceInstitution": "농식품정보누리",
+    "sourceUrl": "https://www.foodnuri.go.kr/portal/bbs/B0000279/view.do?nttId=215259&menuNo=300056",
+    "sourceSha256": "33390f233db2bb3b54adf82e8d89ca50b752b8771f5bedc0013c7b7dc0bafb7e",
+    "rawFile": "data-source/recipe-full-reference/raw/39cba4c2dfc6c5126057",
+    "ingredients": "지리멸치200g, 훈제문어150g, 장어포100g, 대파1뿌리, 견과류100g; 올리브유3큰술, 참기름1큰술, 깨소금약간",
+    "decision": "NOT_COMPLETE_OR_VERIFIED_SAME_COMPOSITION",
+    "reason": "제목은 멸치호두조림이지만 원문은 훈제문어·장어포·불특정 견과류 볶음이다. 호두를 특정하지 않으며 깨소금량·대파 크기·훈제문어 nutrition도 확정하지 못했다. 제목만으로 호두 배합에 붙이지 않는다.",
+    "checkedAt": "2026-10-05"
+  },
+  {
+    "recipeIds": ["MFDS-223"],
+    "candidate": "딸기잼 SJ0 대조군",
+    "sourceInstitution": "농촌진흥청 국립농업과학원 / 한국식품저장유통학회",
+    "sourceUrl": "https://www.ekosfop.or.kr/archive/view_article?pid=kjfp-22-6-817",
+    "sourceSha256": "2582ad2b149cc9cb795ab6f40fd47fef9f38b213f0736e6645ffaa6617e29b34",
+    "rawFile": "data-source/recipe-full-reference/raw/bd69be8e839a768b28e4",
+    "document": "쌀당화액 첨가량에 따른 딸기잼의 품질특성, 2015;22(6):817-822, Table 1 및 실험재료·제조 방법",
+    "ingredients": "냉동 설향 딸기70%, 백설탕30%, 쌀당화액0% (SJ0)",
+    "decision": "QUANTIFIED_RECIPE_WITH_NUTRITION_AND_FOOD_ID_GAPS",
+    "reason": "한 연구의 완전 원료 비율은 확인했지만 냉동 설향 nutrition이 현재 DB에 없고 생 설향으로 상태를 바꿀 수 없다. 완제품 100g의 배합량으로 해석하지 않는다. 기존 제조사 잼을 이 연구의 완제품과 동일시하지 않는다. MFDS-223 원본 조리 recipe source의 해결로 계산하지 않는다.",
+    "checkedAt": "2026-10-05"
+  }
+]

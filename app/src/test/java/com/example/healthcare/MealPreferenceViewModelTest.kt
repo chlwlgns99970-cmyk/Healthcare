@@ -235,6 +235,82 @@ class MealPreferenceViewModelTest {
         assertEquals(1, repository.saveCount)
     }
 
+    @Test
+    fun learningResetRequiresConfirmationAndCancellationChangesNothing() = runTest {
+        val repository = FakePreferenceRepository()
+        val viewModel = MealPreferenceViewModel(repository)
+        advanceUntilIdle()
+        viewModel.confirmLearningReset()
+        advanceUntilIdle()
+        assertEquals(0, repository.learningResetCount)
+        viewModel.requestLearningReset()
+        assertTrue(viewModel.uiState.value.showLearningResetConfirmation)
+        viewModel.cancelLearningReset()
+        viewModel.confirmLearningReset()
+        advanceUntilIdle()
+        assertEquals(0, repository.learningResetCount)
+    }
+
+    @Test
+    fun confirmedLearningResetIsSingleAndPreservesExplicitPreferenceExclusionsAndDraft() = runTest {
+        val existing = MealCoachRepository.defaultPreference().copy(preferredFoods = "|우동|", dietType = "VEGETARIAN")
+        val repository = FakePreferenceRepository(existing)
+        val exclusion = UserExcludedFood(1, "땅콩", "ALLERGY", 123)
+        repository.excludedFoods.value = listOf(exclusion)
+        val viewModel = MealPreferenceViewModel(repository)
+        advanceUntilIdle()
+        viewModel.onPreferredInput("새로운 미저장 취향")
+        viewModel.requestLearningReset()
+        viewModel.confirmLearningReset()
+        viewModel.confirmLearningReset()
+        advanceUntilIdle()
+        assertEquals(1, repository.learningResetCount)
+        assertEquals(0, repository.saveCount)
+        assertEquals(existing, repository.preference.value)
+        assertEquals(listOf(exclusion), repository.excludedFoods.value)
+        assertEquals("새로운 미저장 취향", viewModel.uiState.value.preferredInput)
+        assertFalse(viewModel.uiState.value.isResettingLearning)
+        assertNotNull(viewModel.uiState.value.message)
+    }
+
+    @Test
+    fun failedLearningResetKeepsSettingsAndAllowsConfirmedRetry() = runTest {
+        val repository = FakePreferenceRepository()
+        val viewModel = MealPreferenceViewModel(repository)
+        advanceUntilIdle()
+        repository.failLearningReset = true
+        viewModel.requestLearningReset()
+        viewModel.confirmLearningReset()
+        advanceUntilIdle()
+        assertFalse(viewModel.uiState.value.isResettingLearning)
+        assertNotNull(viewModel.uiState.value.error)
+        repository.failLearningReset = false
+        viewModel.requestLearningReset()
+        viewModel.confirmLearningReset()
+        advanceUntilIdle()
+        assertEquals(1, repository.learningResetCount)
+        assertNull(viewModel.uiState.value.error)
+    }
+
+    @Test fun settingsFailureKeepsInputAndRetryAcknowledgesOneWrite() = runTest {
+        val repository = FakePreferenceRepository()
+        val vm = MealPreferenceViewModel(repository)
+        advanceUntilIdle()
+        vm.onPreferredInput("새로운 입력")
+        repository.failSave = true
+        vm.save(); advanceUntilIdle()
+        assertNull(vm.saveAcknowledgement.pending.value)
+        assertEquals("새로운 입력", vm.uiState.value.preferredInput)
+        assertNotNull(vm.uiState.value.error)
+        repository.failSave = false
+        vm.save(); vm.save(); advanceUntilIdle()
+        assertEquals(1, repository.saveCount)
+        assertNotNull(vm.saveAcknowledgement.pending.value)
+        vm.save(); advanceUntilIdle(); assertEquals(1, repository.saveCount)
+        assertNotNull(vm.saveAcknowledgement.confirm())
+        assertNull(vm.saveAcknowledgement.confirm())
+    }
+
     private class FakePreferenceRepository(
         initial: UserMealPreference = MealCoachRepository.defaultPreference()
     ) : MealPreferenceRepository {
@@ -242,6 +318,12 @@ class MealPreferenceViewModelTest {
         override val excludedFoods = MutableStateFlow(emptyList<UserExcludedFood>())
         var saveCount = 0
         var failSave = false
+        var learningResetCount = 0
+        var failLearningReset = false
+        override suspend fun resetRecommendationLearning() {
+            if (failLearningReset) error("forced reset failure")
+            learningResetCount++
+        }
         override suspend fun ensureDefaultPreference(): UserMealPreference = preference.value
         override suspend fun savePreference(preference: UserMealPreference) {
             if (failSave) error("forced save failure")

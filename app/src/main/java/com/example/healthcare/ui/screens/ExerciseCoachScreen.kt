@@ -71,6 +71,11 @@ internal fun ExerciseCoachScreen(
 ) {
     var weightInput by remember(weightKg) { mutableStateOf(weightKg?.toString().orEmpty()) }
     var weightError by remember { mutableStateOf(false) }
+    var saved by androidx.compose.runtime.saveable.rememberSaveable { mutableStateOf(false) }
+    var saveError by androidx.compose.runtime.saveable.rememberSaveable { mutableStateOf<String?>(null) }
+    if (saved) {
+        com.example.healthcare.ui.components.RecordSavedDialog(false, body = "저장되었습니다.") { saved = false }
+    }
     var selectedActivity by remember { mutableStateOf<ExerciseActivity?>(null) }
     val keyboard = LocalSoftwareKeyboardController.current
     Scaffold(
@@ -129,10 +134,12 @@ internal fun ExerciseCoachScreen(
                         Button(onClick = {
                             val parsed = ExerciseCoachCalculator.validateWeight(weightInput)
                             if (parsed == null) weightError = true else {
-                                onSaveWeight(parsed)
-                                keyboard?.hide()
+                                if (!saved) runCatching { onSaveWeight(parsed) }
+                                    .onSuccess { saved = true; saveError = null; keyboard?.hide() }
+                                    .onFailure { saveError = "몸무게를 저장하지 못했습니다. 다시 시도해 주세요." }
                             }
-                        }) { Text("몸무게 저장") }
+                        }, enabled = !saved) { Text("몸무게 저장") }
+                        saveError?.let { Text(it, color = MaterialTheme.colorScheme.error) }
                     }
                 }
             }

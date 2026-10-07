@@ -1,0 +1,152 @@
+{
+  "verifiedAt": "2026-10-04",
+  "originalSources": [
+    {
+      "file": "kfind-food-db-2026-08-28.xlsx",
+      "sha256": "1EF3551F9A1D0EE87891D6306FA22BBD6A7FFCC90F2C70A4A184DBFE3FCE6EA6",
+      "rowsScanned": 19617,
+      "allColumnsScanned": 160,
+      "hiddenColumns": [],
+      "hiddenColumnInspection": "Original OOXML worksheet col hidden=true/1 attributes inspected; all row columns were read regardless of UI visibility.",
+      "matches": [
+        {
+          "sheet": "음식(19,617건)",
+          "sourceRow": 18587,
+          "fields": {
+            "식품코드": "D401-007560000-0001",
+            "식품명": "김밥_고추",
+            "식품기원명": "외식(재료량 기반 산출함량)",
+            "식품중분류명": "고추",
+            "영양성분함량기준량": "100ml",
+            "에너지(kcal)": "94",
+            "단백질(g)": "3.20",
+            "지방(g)": "1.63",
+            "탄수화물(g)": "16.50",
+            "출처명": "식품의약품안전처",
+            "1인(회)분량 참고량": "",
+            "식품중량": "400ml",
+            "업체명": "해당없음",
+            "데이터생성방법명": "산출",
+            "데이터생성일자": "2024-01-31",
+            "데이터기준일자": "2026-08-28 00:00:00"
+          }
+        },
+        {
+          "sheet": "음식(19,617건)",
+          "sourceRow": 18588,
+          "fields": {
+            "식품코드": "D501-007030000-0001",
+            "식품명": "김밥_계란",
+            "식품기원명": "초등학교급식(재료량 기반 산출 함량)",
+            "식품중분류명": "계란",
+            "영양성분함량기준량": "100ml",
+            "에너지(kcal)": "99",
+            "단백질(g)": "4.30",
+            "지방(g)": "2.10",
+            "탄수화물(g)": "15.13",
+            "출처명": "식품의약품안전처",
+            "1인(회)분량 참고량": "",
+            "식품중량": "400ml",
+            "업체명": "해당없음",
+            "데이터생성방법명": "산출",
+            "데이터생성일자": "2024-01-31",
+            "데이터기준일자": "2026-08-28 00:00:00"
+          }
+        },
+        {
+          "sheet": "음식(19,617건)",
+          "sourceRow": 18589,
+          "fields": {
+            "식품코드": "D401-007030000-0001",
+            "식품명": "김밥_계란",
+            "식품기원명": "외식(재료량 기반 산출함량)",
+            "식품중분류명": "계란",
+            "영양성분함량기준량": "100ml",
+            "에너지(kcal)": "97",
+            "단백질(g)": "4.30",
+            "지방(g)": "2.34",
+            "탄수화물(g)": "14.22",
+            "출처명": "식품의약품안전처",
+            "1인(회)분량 참고량": "",
+            "식품중량": "400ml",
+            "업체명": "해당없음",
+            "데이터생성방법명": "산출",
+            "데이터생성일자": "2024-01-31",
+            "데이터기준일자": "2026-08-28 00:00:00"
+          }
+        }
+      ]
+    },
+    {
+      "file": "kfind-processed-food-db-2026-08-28.xlsx",
+      "sha256": "B074D98E75D2D087DC1B193F0056AFFBF9AFD14524C9CCB556CB2B20978504F7",
+      "rowsScanned": 316734,
+      "allColumnsScanned": 166,
+      "hiddenColumns": [],
+      "hiddenColumnInspection": "Original OOXML worksheet col hidden=true/1 attributes inspected; all row columns were read regardless of UI visibility.",
+      "matches": [
+        {
+          "sheet": "가공식품DB(316,734건",
+          "sourceRow": 297315,
+          "fields": {
+            "식품코드": "P123-203020300-0275",
+            "식품명": "계란김밥",
+            "식품기원명": "가공식품",
+            "식품중분류명": "즉석섭취·편의식품류",
+            "영양성분함량기준량": "100g",
+            "에너지(kcal)": "170",
+            "단백질(g)": "6.09",
+            "지방(g)": "5.22",
+            "탄수화물(g)": "24.35",
+            "출처명": "식품의약품안전처",
+            "1회 섭취참고량": "210g",
+            "식품중량": "1150g",
+            "품목제조보고번호": "200804930741445",
+            "제조사명": "농업회사법인주식회사한우물",
+            "데이터생성방법명": "수집",
+            "데이터생성일자": "2024-07-23",
+            "데이터기준일자": "2026-08-28 00:00:00"
+          }
+        }
+      ]
+    }
+  ],
+  "publicSources": [
+    {
+      "url": "https://various.foodsafetykorea.go.kr/nutrient/general/down/list.do",
+      "result": "Official K-FIND original snapshot. Exact food codes and both complete source workbooks inspected, including tail serving fields."
+    },
+    {
+      "url": "https://www.haushop.co.kr/",
+      "result": "Manufacturer's official shop confirms 농업회사법인(주)한우물 / 김제시 용지면 백자1길112; manufacturer is unrelated to anonymous generic D401/D501 recipe records."
+    },
+    {
+      "url": "https://www.ssg.com/item/itemView.ssg?itemId=1000612560269",
+      "result": "Retailer's original product disclosures match 한우물 계란김밥 230gx5 / 1150g manufacturer identity. Raw standardized intake reference is 210g; neither is a generic roll conversion."
+    },
+    {
+      "url": "https://kobongmin.com/renewal/03_menu/02.php",
+      "result": "Official 매운김밥 is a different branded recipe, without a matching anonymous K-FIND food code or a verified serving mass."
+    }
+  ],
+  "decisions": [
+    {
+      "foodCodes": [
+        "D401-007560000-0001",
+        "D401-007030000-0001",
+        "D501-007030000-0001"
+      ],
+      "state": "UNRESOLVED_SOLID_VOLUME_BASIS",
+      "verifiedServing": null,
+      "reason": "Each original nutrition basis is 100ml, total 400ml, household reference empty, manufacturer absent. No identity-specific g mass, density or explicit roll-count conversion was established. Preserve original nutrition/unit and manual-input fallback; do not borrow 216g or a manufacturer's different product."
+    },
+    {
+      "foodCodes": [
+        "P123-203020300-0275"
+      ],
+      "state": "DISTINCT_MANUFACTURER_PRODUCT",
+      "reason": "Same display name alone is insufficient identity. Preserve its 100g/170kcal, total1150g and source metadata; 210g intake reference is not 1줄 mass and 230gx5 retail pack is not a conversion for generic egg/chili rolls."
+    }
+  ],
+  "addedGenericServingConversions": 0
+}

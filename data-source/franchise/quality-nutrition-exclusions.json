@@ -1,0 +1,443 @@
+[
+  {
+    "brand": "슬로우캘리",
+    "name": "연어 포케 (현미밥&샐러드)",
+    "reason": "OFFICIAL_ENERGY_MACRO_CONTRADICTION",
+    "originalNutrients": {
+      "category": "샐러드·포케",
+      "referenceAmount": "351",
+      "energyKcal": "627.8",
+      "sodiumMilligrams": "422.3",
+      "carbohydrateGrams": "61.7",
+      "fatGrams": "9.9",
+      "proteinGrams": "26.4"
+    },
+    "sourceUrl": "https://slowcali.co.kr/bbs/content.php?co_id=menu"
+  },
+  {
+    "brand": "슬로우캘리",
+    "name": "연어 포케 (메밀면&샐러드)",
+    "reason": "OFFICIAL_ENERGY_MACRO_CONTRADICTION",
+    "originalNutrients": {
+      "category": "샐러드·포케",
+      "referenceAmount": "351",
+      "energyKcal": "536.3",
+      "sodiumMilligrams": "389.8",
+      "carbohydrateGrams": "52.8",
+      "fatGrams": "9",
+      "proteinGrams": "30.5"
+    },
+    "sourceUrl": "https://slowcali.co.kr/bbs/content.php?co_id=menu"
+  },
+  {
+    "brand": "슬로우캘리",
+    "name": "연어 포케 (샐러드 ONLY)",
+    "reason": "OFFICIAL_ENERGY_MACRO_CONTRADICTION",
+    "originalNutrients": {
+      "category": "샐러드·포케",
+      "referenceAmount": "251",
+      "energyKcal": "379.8",
+      "sodiumMilligrams": "219.2",
+      "carbohydrateGrams": "18.3",
+      "fatGrams": "8.6",
+      "proteinGrams": "24.8"
+    },
+    "sourceUrl": "https://slowcali.co.kr/bbs/content.php?co_id=menu"
+  },
+  {
+    "brand": "슬로우캘리",
+    "name": "문어 포케 (샐러드 ONLY)",
+    "reason": "OFFICIAL_ENERGY_MACRO_CONTRADICTION",
+    "originalNutrients": {
+      "category": "샐러드·포케",
+      "referenceAmount": "236",
+      "energyKcal": "295.1",
+      "sodiumMilligrams": "195.1",
+      "carbohydrateGrams": "18.2",
+      "fatGrams": "7.5",
+      "proteinGrams": "26.3"
+    },
+    "sourceUrl": "https://slowcali.co.kr/bbs/content.php?co_id=menu"
+  },
+  {
+    "brand": "슬로우캘리",
+    "name": "올인원 포케 (샐러드 ONLY)",
+    "reason": "OFFICIAL_ENERGY_MACRO_CONTRADICTION",
+    "originalNutrients": {
+      "category": "샐러드·포케",
+      "referenceAmount": "281",
+      "energyKcal": "350.8",
+      "sodiumMilligrams": "250.1",
+      "carbohydrateGrams": "18.3",
+      "fatGrams": "8.6",
+      "proteinGrams": "30.6"
+    },
+    "sourceUrl": "https://slowcali.co.kr/bbs/content.php?co_id=menu"
+  },
+  {
+    "brand": "슬로우캘리",
+    "name": "라임폰즈 문어 포케 (샐러드 ONLY)",
+    "reason": "OFFICIAL_ENERGY_MACRO_CONTRADICTION",
+    "originalNutrients": {
+      "category": "샐러드·포케",
+      "referenceAmount": "256",
+      "energyKcal": "288",
+      "sodiumMilligrams": "183",
+      "carbohydrateGrams": "17.5",
+      "fatGrams": "7",
+      "proteinGrams": "25.1"
+    },
+    "sourceUrl": "https://slowcali.co.kr/bbs/content.php?co_id=menu"
+  },
+  {
+    "brand": "슬로우캘리",
+    "name": "트러플 버섯 포케 (샐러드 ONLY)",
+    "reason": "OFFICIAL_ENERGY_MACRO_CONTRADICTION",
+    "originalNutrients": {
+      "category": "샐러드·포케",
+      "referenceAmount": "301",
+      "energyKcal": "251.5",
+      "sodiumMilligrams": "151.5",
+      "carbohydrateGrams": "23.5",
+      "fatGrams": "6.8",
+      "proteinGrams": "10.2"
+    },
+    "sourceUrl": "https://slowcali.co.kr/bbs/content.php?co_id=menu"
+  },
+  {
+    "brand": "슬로우캘리",
+    "name": "블랙페퍼 치킨 통밀랩",
+    "reason": "OFFICIAL_ENERGY_MACRO_CONTRADICTION",
+    "originalNutrients": {
+      "category": "샐러드·포케",
+      "referenceAmount": "232",
+      "energyKcal": "481",
+      "sodiumMilligrams": "1351",
+      "carbohydrateGrams": "36",
+      "fatGrams": "16",
+      "proteinGrams": "27"
+    },
+    "sourceUrl": "https://slowcali.co.kr/bbs/content.php?co_id=menu"
+  },
+  {
+    "brand": "슬로우캘리",
+    "name": "트러플 머쉬룸 스프",
+    "reason": "OFFICIAL_ENERGY_MACRO_CONTRADICTION",
+    "originalNutrients": {
+      "category": "샐러드·포케",
+      "referenceAmount": "240",
+      "energyKcal": "240",
+      "sodiumMilligrams": "569",
+      "carbohydrateGrams": "21.9",
+      "fatGrams": "36.4",
+      "proteinGrams": "3.5"
+    },
+    "sourceUrl": "https://slowcali.co.kr/bbs/content.php?co_id=menu"
+  },
+  {
+    "brand": "슬로우캘리",
+    "name": "콘 크림 스프",
+    "reason": "OFFICIAL_ENERGY_MACRO_CONTRADICTION",
+    "originalNutrients": {
+      "category": "샐러드·포케",
+      "referenceAmount": "240",
+      "energyKcal": "219",
+      "sodiumMilligrams": "595",
+      "carbohydrateGrams": "23.6",
+      "fatGrams": "28.9",
+      "proteinGrams": "3.5"
+    },
+    "sourceUrl": "https://slowcali.co.kr/bbs/content.php?co_id=menu"
+  },
+  {
+    "brand": "슬로우캘리",
+    "name": "단호박 스프",
+    "reason": "OFFICIAL_ENERGY_MACRO_CONTRADICTION",
+    "originalNutrients": {
+      "category": "샐러드·포케",
+      "referenceAmount": "240",
+      "energyKcal": "279",
+      "sodiumMilligrams": "123",
+      "carbohydrateGrams": "28",
+      "fatGrams": "40",
+      "proteinGrams": "3.9"
+    },
+    "sourceUrl": "https://slowcali.co.kr/bbs/content.php?co_id=menu"
+  },
+  {
+    "brand": "슬로우캘리",
+    "name": "애사비 에이드",
+    "reason": "OFFICIAL_ENERGY_MACRO_CONTRADICTION",
+    "originalNutrients": {
+      "category": "샐러드·포케",
+      "referenceAmount": "473",
+      "energyKcal": "0",
+      "sodiumMilligrams": "21.7",
+      "carbohydrateGrams": "30.2",
+      "fatGrams": "0",
+      "proteinGrams": "0"
+    },
+    "sourceUrl": "https://slowcali.co.kr/bbs/content.php?co_id=menu"
+  },
+  {
+    "brand": "써브웨이",
+    "name": "머쉬룸 수프",
+    "reason": "NUTRITION_BASIS_MISSING",
+    "sourceUrl": "https://www.subway.co.kr/menuView/sidedrink?menuItemIdx=1317"
+  },
+  {
+    "brand": "써브웨이",
+    "name": "머쉬룸 수프",
+    "reason": "NUTRITION_BASIS_MISSING",
+    "sourceUrl": "https://www.subway.co.kr/menuView/sidedrink?menuItemIdx=1317"
+  },
+  {
+    "brand": "써브웨이",
+    "name": "콘 수프",
+    "reason": "NUTRITION_BASIS_MISSING",
+    "sourceUrl": "https://www.subway.co.kr/menuView/sidedrink?menuItemIdx=1465"
+  },
+  {
+    "brand": "써브웨이",
+    "name": "콘 수프",
+    "reason": "NUTRITION_BASIS_MISSING",
+    "sourceUrl": "https://www.subway.co.kr/menuView/sidedrink?menuItemIdx=1465"
+  },
+  {
+    "brand": "써브웨이",
+    "name": "포테이토 베이컨 수프",
+    "reason": "NUTRITION_BASIS_MISSING",
+    "sourceUrl": "https://www.subway.co.kr/menuView/sidedrink?menuItemIdx=1565"
+  },
+  {
+    "brand": "써브웨이",
+    "name": "포테이토 베이컨 수프",
+    "reason": "NUTRITION_BASIS_MISSING",
+    "sourceUrl": "https://www.subway.co.kr/menuView/sidedrink?menuItemIdx=1565"
+  },
+  {
+    "brand": "에그드랍",
+    "name": "치킨 클럽샌드위치",
+    "reason": "WEIGHT_UNIT_NOT_DECLARED",
+    "originalValues": [
+      "181",
+      "374kcal",
+      "8.4g",
+      "17.1g",
+      "5.8g",
+      "887mg",
+      "0"
+    ],
+    "sourceUrl": "https://eggdrop.com/menu/view.php?seq=141"
+  },
+  {
+    "brand": "에그드랍",
+    "name": "클럽샌드위치",
+    "reason": "WEIGHT_UNIT_NOT_DECLARED",
+    "originalValues": [
+      "166",
+      "381kcal",
+      "14.3g",
+      "14.3g",
+      "5.2g",
+      "5.3mg",
+      "0"
+    ],
+    "sourceUrl": "https://eggdrop.com/menu/view.php?seq=142"
+  },
+  {
+    "brand": "에그드랍",
+    "name": "햄 앤 치즈 길거리 토스트",
+    "reason": "WEIGHT_UNIT_NOT_DECLARED",
+    "originalValues": [
+      "223",
+      "579kcal",
+      "17.4g",
+      "22.2g",
+      "7g",
+      "1162mg",
+      "0"
+    ],
+    "sourceUrl": "https://eggdrop.com/menu/view.php?seq=159"
+  },
+  {
+    "brand": "에그드랍",
+    "name": "비프 앤 치즈 길거리 토스트",
+    "reason": "WEIGHT_UNIT_NOT_DECLARED",
+    "originalValues": [
+      "242",
+      "643kcal",
+      "17.2g",
+      "27.7g",
+      "8.2g",
+      "1074mg",
+      "0"
+    ],
+    "sourceUrl": "https://eggdrop.com/menu/view.php?seq=165"
+  },
+  {
+    "brand": "에그드랍",
+    "name": "아보 베이컨 길거리 토스트",
+    "reason": "WEIGHT_UNIT_NOT_DECLARED",
+    "originalValues": [
+      "233",
+      "607kcal",
+      "16.7g",
+      "21.9g",
+      "5.2g",
+      "936mg",
+      "0"
+    ],
+    "sourceUrl": "https://eggdrop.com/menu/view.php?seq=166"
+  },
+  {
+    "brand": "에그드랍",
+    "name": "해쉬브라운",
+    "reason": "WEIGHT_UNIT_NOT_DECLARED",
+    "originalValues": [
+      "58",
+      "129kcal",
+      "0.24g",
+      "1.29g",
+      "0.48g",
+      "267mg",
+      "0"
+    ],
+    "sourceUrl": "https://eggdrop.com/menu/view.php?seq=172"
+  },
+  {
+    "brand": "에그드랍",
+    "name": "베이컨 체다 해쉬브라운",
+    "reason": "WEIGHT_UNIT_NOT_DECLARED",
+    "originalValues": [
+      "80",
+      "192kcal",
+      "4.06g",
+      "0.86g",
+      "2.64g",
+      "316mg",
+      "0"
+    ],
+    "sourceUrl": "https://eggdrop.com/menu/view.php?seq=173"
+  },
+  {
+    "brand": "에그드랍",
+    "name": "브리오슈",
+    "reason": "WEIGHT_UNIT_NOT_DECLARED",
+    "originalValues": [
+      "40",
+      "133kcal",
+      "1.2g",
+      "3.6g",
+      "1.2g",
+      "158.0mg",
+      "0"
+    ],
+    "sourceUrl": "https://eggdrop.com/menu/view.php?seq=225"
+  },
+  {
+    "brand": "에그드랍",
+    "name": "갈릭버터",
+    "reason": "WEIGHT_UNIT_NOT_DECLARED",
+    "originalValues": [
+      "40",
+      "139kcal",
+      "1.3g",
+      "3.6g",
+      "1.4g",
+      "154.2mg",
+      "0"
+    ],
+    "sourceUrl": "https://eggdrop.com/menu/view.php?seq=226"
+  },
+  {
+    "brand": "에그드랍",
+    "name": "프렌치 토스트",
+    "reason": "WEIGHT_UNIT_NOT_DECLARED",
+    "originalValues": [
+      "55",
+      "145kcal",
+      "3.5g",
+      "5.0g",
+      "1.4g",
+      "181.8mg",
+      "0"
+    ],
+    "sourceUrl": "https://eggdrop.com/menu/view.php?seq=227"
+  },
+  {
+    "brand": "에그드랍",
+    "name": "햄 치즈 베이글",
+    "reason": "WEIGHT_UNIT_NOT_DECLARED",
+    "originalValues": [
+      "161",
+      "452kcal",
+      "6.4g",
+      "16.1g",
+      "6.3g",
+      "782.5mg",
+      ""
+    ],
+    "sourceUrl": "https://eggdrop.com/menu/view.php?seq=250"
+  },
+  {
+    "brand": "에그드랍",
+    "name": "BLT 베이글",
+    "reason": "WEIGHT_UNIT_NOT_DECLARED",
+    "originalValues": [
+      "272",
+      "623kcal",
+      "16.3g",
+      "24.5g",
+      "6g",
+      "995.5mg",
+      ""
+    ],
+    "sourceUrl": "https://eggdrop.com/menu/view.php?seq=251"
+  },
+  {
+    "brand": "에그드랍",
+    "name": "에그 베이컨 디럭스",
+    "reason": "WEIGHT_UNIT_NOT_DECLARED",
+    "originalValues": [
+      "232",
+      "654kcal",
+      "9.3g",
+      "27.8g",
+      "7.2g",
+      "1067.2mg",
+      ""
+    ],
+    "sourceUrl": "https://eggdrop.com/menu/view.php?seq=253"
+  },
+  {
+    "brand": "에그드랍",
+    "name": "에그 BLT 디럭스",
+    "reason": "WEIGHT_UNIT_NOT_DECLARED",
+    "originalValues": [
+      "328",
+      "788.5kcal",
+      "6.6g",
+      "31.8g",
+      "11.8g",
+      "1384.5mg",
+      ""
+    ],
+    "sourceUrl": "https://eggdrop.com/menu/view.php?seq=262"
+  },
+  {
+    "brand": "에그드랍",
+    "name": "에그 햄 치즈 디럭스",
+    "reason": "WEIGHT_UNIT_NOT_DECLARED",
+    "originalValues": [
+      "336",
+      "839.1kcal",
+      "28.1g",
+      "27.9g",
+      "13.9g",
+      "1503.1mg",
+      ""
+    ],
+    "sourceUrl": "https://eggdrop.com/menu/view.php?seq=263"
+  }
+]

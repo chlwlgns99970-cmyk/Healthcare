@@ -11,6 +11,8 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.assertIsSelected
+import androidx.compose.ui.test.assertTextContains
+import androidx.compose.ui.test.hasSetTextAction
 import androidx.compose.ui.test.hasScrollAction
 import androidx.compose.ui.test.hasTestTag
 import androidx.compose.ui.test.hasText
@@ -151,6 +153,7 @@ class PortionSelectorUiTest {
         val state = AddRecordUiState(
             foodName = "북어미역국", calories = "67", servingAmount = "350", servingUnit = "g",
             selectedFood = soup, selectedFoodItemId = soup.id, preciseAmountOpen = true,
+            foodQuantity = "350", foodQuantityUnit = "g",
             referenceCalories = 19, referenceServingAmount = 100.0, referenceServingUnit = "g"
         )
         composeRule.setContent {
@@ -166,12 +169,13 @@ class PortionSelectorUiTest {
                 }
             }
         }
-        composeRule.onAllNodes(hasScrollAction()).onFirst().performScrollToNode(hasText("실제 먹은 양"))
-        composeRule.onNodeWithText("실제 먹은 양").assertIsDisplayed()
-        composeRule.onAllNodes(hasScrollAction()).onFirst().performScrollToNode(hasTestTag("direct-amount-input"))
-        composeRule.onNodeWithTag("direct-amount-input").assertIsDisplayed()
-        composeRule.onAllNodes(hasScrollAction()).onFirst().performScrollToNode(hasText("약 67 kcal"))
-        composeRule.onNodeWithText("약 67 kcal").assertIsDisplayed()
+        composeRule.onAllNodes(hasScrollAction()).onFirst().performScrollToNode(hasTestTag("food-amount-input"))
+        composeRule.onNodeWithTag("food-amount-input").assertIsDisplayed()
+        composeRule.onAllNodes(hasScrollAction()).onFirst().performScrollToNode(hasTestTag("food-amount-quantity"))
+        composeRule.onNodeWithTag("food-amount-quantity").assertIsDisplayed()
+        val calorieField = hasSetTextAction() and hasText("칼로리")
+        composeRule.onAllNodes(hasScrollAction()).onFirst().performScrollToNode(calorieField)
+        composeRule.onNode(calorieField).assertIsDisplayed().assertTextContains("67")
         composeRule.onNodeWithText("0.5배").assertDoesNotExist()
         composeRule.onNodeWithText("1배").assertDoesNotExist()
     }

@@ -1,0 +1,161 @@
+[
+  {
+    "recipeId": "RDA-89514",
+    "name": "호박죽",
+    "recipeUrl": "https://www.nics.go.kr/food/kfi/tfSrch08/view?menuId=PS03520&tfcode=89514",
+    "basis": "Original whole recipe input quantities; not one serving or selected product formulation",
+    "ingredients": [
+      {
+        "name": "늙은 호박",
+        "grams": 3000.0,
+        "kcalPer100g": 38,
+        "estimatedKcal": 1140.0,
+        "nutritionSourceUrl": "https://www.nics.go.kr/food/kfi/fct/fctIntro/list?menuId=PS03562"
+      },
+      {
+        "name": "찹쌀가루",
+        "grams": 400.0,
+        "kcalPer100g": 377,
+        "estimatedKcal": 1508.0,
+        "nutritionSourceUrl": "https://www.nics.go.kr/food/kfi/fct/fctIntro/list?menuId=PS03562"
+      },
+      {
+        "name": "멥쌀가루",
+        "grams": 300.0,
+        "kcalPer100g": 378,
+        "estimatedKcal": 1134.0,
+        "nutritionSourceUrl": "https://www.nics.go.kr/food/kfi/fct/fctIntro/list?menuId=PS03562"
+      },
+      {
+        "name": "팥",
+        "grams": 210.0,
+        "kcalPer100g": 329.0,
+        "estimatedKcal": 690.9,
+        "nutritionSourceUrl": "https://fdc.nal.usda.gov/food-details/173727/nutrients"
+      },
+      {
+        "name": "소금",
+        "grams": 54.0,
+        "kcalPer100g": 0.0,
+        "estimatedKcal": 0.0,
+        "nutritionSourceUrl": "https://fdc.nal.usda.gov/food-details/173468/nutrients"
+      }
+    ]
+  },
+  {
+    "recipeId": "MFDS-148",
+    "name": "현미밥",
+    "recipeUrl": "https://www.foodsafetykorea.go.kr/popup/sensuousmenuView.do?rcp_menu_no=148",
+    "basis": "Original whole recipe input quantities; not one serving or selected product formulation",
+    "ingredients": [
+      {
+        "name": "현미",
+        "grams": 360.0,
+        "kcalPer100g": 357,
+        "estimatedKcal": 1285.2,
+        "nutritionSourceUrl": "https://www.nics.go.kr/food/kfi/fct/fctIntro/list?menuId=PS03562"
+      }
+    ]
+  },
+  {
+    "recipeId": "RDA-DIET-89332-3",
+    "name": "곤드레나물밥",
+    "recipeUrl": "https://api.nongsaro.go.kr/sample/rest/recomendDiet/recomendDiet.jsp?cntntsNo=89332&tabNo=3",
+    "basis": "Original whole recipe input quantities; not one serving or selected product formulation",
+    "ingredients": [
+      {
+        "name": "곤드레나물(말린 것)",
+        "grams": 10.0,
+        "kcalPer100g": 290,
+        "estimatedKcal": 29.0,
+        "nutritionSourceUrl": "https://www.nics.go.kr/food/kfi/fct/fctIntro/list?menuId=PS03562"
+      },
+      {
+        "name": "백미",
+        "grams": 60.0,
+        "kcalPer100g": 366,
+        "estimatedKcal": 219.6,
+        "nutritionSourceUrl": "https://www.nics.go.kr/food/kfi/fct/fctIntro/list?menuId=PS03562"
+      },
+      {
+        "name": "현미",
+        "grams": 30.0,
+        "kcalPer100g": 357,
+        "estimatedKcal": 107.1,
+        "nutritionSourceUrl": "https://www.nics.go.kr/food/kfi/fct/fctIntro/list?menuId=PS03562"
+      },
+      {
+        "name": "참기름",
+        "grams": 2.0,
+        "kcalPer100g": 920,
+        "estimatedKcal": 18.4,
+        "nutritionSourceUrl": "https://www.nics.go.kr/food/kfi/fct/fctIntro/list?menuId=PS03562"
+      },
+      {
+        "name": "소금",
+        "grams": 1.5,
+        "kcalPer100g": 0.0,
+        "estimatedKcal": 0.0,
+        "nutritionSourceUrl": "https://fdc.nal.usda.gov/food-details/173468/nutrients"
+      }
+    ]
+  },
+  {
+    "recipeId": "MFDS-247",
+    "name": "알감자구이",
+    "recipeUrl": "https://www.foodsafetykorea.go.kr/popup/sensuousmenuView.do?rcp_menu_no=247",
+    "basis": "Original whole recipe input quantities; not one serving or selected product formulation",
+    "ingredients": [
+      {
+        "name": "감자",
+        "grams": 520.0,
+        "kcalPer100g": 77.0,
+        "estimatedKcal": 400.4,
+        "nutritionSourceUrl": "https://fdc.nal.usda.gov/food-details/170026/nutrients"
+      },
+      {
+        "name": "소금",
+        "grams": 2.0,
+        "kcalPer100g": 0.0,
+        "estimatedKcal": 0.0,
+        "nutritionSourceUrl": "https://fdc.nal.usda.gov/food-details/173468/nutrients"
+      }
+    ]
+  },
+  {
+    "recipeId": "MFDS-173",
+    "name": "어묵국",
+    "recipeUrl": "https://www.foodsafetykorea.go.kr/popup/sensuousmenuView.do?rcp_menu_no=173",
+    "basis": "Original whole recipe input quantities; not one serving or selected product formulation",
+    "ingredients": [
+      {
+        "name": "어묵",
+        "grams": 280.0,
+        "kcalPer100g": 221.0,
+        "estimatedKcal": 618.8,
+        "nutritionSourceUrl": "https://various.foodsafetykorea.go.kr/nutrient/general/down/list.do"
+      },
+      {
+        "name": "대파",
+        "grams": 20.0,
+        "kcalPer100g": 23,
+        "estimatedKcal": 4.6,
+        "nutritionSourceUrl": "https://www.nics.go.kr/food/kfi/fct/fctIntro/list?menuId=PS03562"
+      },
+      {
+        "name": "다진마늘",
+        "grams": 4.0,
+        "kcalPer100g": 149.0,
+        "estimatedKcal": 5.96,
+        "nutritionSourceUrl": "https://fdc.nal.usda.gov/food-details/169230/nutrients"
+      },
+      {
+        "name": "소금",
+        "grams": 8.0,
+        "kcalPer100g": 0.0,
+        "estimatedKcal": 0.0,
+        "nutritionSourceUrl": "https://fdc.nal.usda.gov/food-details/173468/nutrients"
+      }
+    ]
+  }
+]

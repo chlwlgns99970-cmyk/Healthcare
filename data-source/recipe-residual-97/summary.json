@@ -1,0 +1,54 @@
+{
+  "total": 516,
+  "scope": 97,
+  "beforeAppComplete": 419,
+  "afterAppComplete": 421,
+  "initialClassification": {
+    "B": 8,
+    "C": 82,
+    "A": 6,
+    "D": 1
+  },
+  "finalScopeDispositions": {
+    "PARTIAL_WITH_EXHAUSTED_EVIDENCE": 83,
+    "UNRESOLVED_WITH_EXHAUSTED_EVIDENCE": 6,
+    "QUESTION_REQUIRED_NEW_FOOD": 6,
+    "REFERENCE_COMPLETE": 2
+  },
+  "states": {
+    "REFERENCE_COMPLETE": 386,
+    "ORIGINAL_COMPLETE": 41,
+    "PARTIAL": 83,
+    "UNRESOLVED": 6
+  },
+  "completeWithoutFoodId": 6,
+  "remaining": 95,
+  "conflictsResolved": 0,
+  "conflictsUnresolved": 212,
+  "originalIngredientProgress": {
+    "total": 4258,
+    "states": {
+      "AMBIGUOUS_IDENTITY": 850,
+      "LINKED": 2384,
+      "UNIT_CONVERSION_UNVERIFIED": 868,
+      "EXCLUDED_NON_CALORIC_OR_PROCESS_ITEM": 154,
+      "RECIPE_SOURCE_INCOMPLETE": 1,
+      "NO_OFFICIAL_NUTRITION_MATCH": 1
+    },
+    "unresolvedByCause": {
+      "identity": 850,
+      "amount": 563,
+      "unit": 305,
+      "source": 1,
+      "nutrition": 1
+    },
+    "newOriginalLinks": 2,
+    "conflicts": {
+      "UNRESOLVED": 212,
+      "RESOLVED_THIS_RECIPE_DIRECT_GRAMS": 1
+    }
+  },
+  "assetSha256": "adc972ed0fd023eabcf29c8fdba3f7419e02a3e5037f5616b9a60332dc93ce8a",
+  "status": "PARTIAL",
+  "productionDeployments": 0
+}

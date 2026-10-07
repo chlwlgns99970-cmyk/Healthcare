@@ -74,7 +74,7 @@ class FruitRecordLayoutFailureUiTest {
             "fruit-record-qa/search-360dp-font130.png")
         output.parentFile!!.mkdirs()
         output.outputStream().use { compose.onRoot().captureToImage().asAndroidBitmap().compress(Bitmap.CompressFormat.PNG, 100, it) }
-        listOf(name, kcal, compose.onNodeWithText("다른 제품 1개", useUnmergedTree = true)).forEach { node ->
+        listOf(name, kcal, compose.onNodeWithText("같은 이름의 다른 음식 1건 보기", useUnmergedTree = true)).forEach { node ->
             node.assertIsDisplayed()
             val layouts = mutableListOf<TextLayoutResult>()
             node.performSemanticsAction(SemanticsActions.GetTextLayoutResult) { it(layouts) }

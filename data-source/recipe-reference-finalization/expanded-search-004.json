@@ -1,0 +1,42 @@
+{
+  "checkedAt": "2026-10-05",
+  "strategy": "제조사·대학·병원·한식진흥원으로 기관 범위 확장",
+  "foods": [
+    {
+      "id": "MFDS-131",
+      "name": "풋마늘반건오징어김치",
+      "variants": [
+        "풋마늘반건오징어김치"
+      ],
+      "cores": []
+    },
+    {
+      "id": "MFDS-138",
+      "name": "게맛살오이냉채",
+      "variants": [
+        "게맛살오이냉채"
+      ],
+      "cores": []
+    },
+    {
+      "id": "MFDS-139",
+      "name": "부추보리밥",
+      "variants": [
+        "부추보리밥"
+      ],
+      "cores": []
+    },
+    {
+      "id": "MFDS-140",
+      "name": "쑥절편꽃말이떡",
+      "variants": [
+        "쑥절편꽃말이떡"
+      ],
+      "cores": []
+    }
+  ],
+  "result": {
+    "status": "fulfilled",
+    "value": "Empty search results\nNo results were found for the provided queries"
+  }
+}

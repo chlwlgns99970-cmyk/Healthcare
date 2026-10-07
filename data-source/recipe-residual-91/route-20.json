@@ -1,0 +1,86 @@
+{
+  "foods": [
+    {
+      "recipeId": "MFDS-169",
+      "name": "닭쟁반국수",
+      "variants": [
+        "닭쟁반국수",
+        "닭 쟁반국수"
+      ],
+      "classification": "PARTIAL"
+    },
+    {
+      "recipeId": "MFDS-170",
+      "name": "찐만두",
+      "variants": [
+        "찐만두"
+      ],
+      "classification": "PARTIAL"
+    },
+    {
+      "recipeId": "MFDS-175",
+      "name": "홍합달래전",
+      "variants": [
+        "홍합달래전",
+        "홍합 달래 전"
+      ],
+      "classification": "UNRESOLVED"
+    },
+    {
+      "recipeId": "MFDS-178",
+      "name": "딸기주스",
+      "variants": [
+        "딸기주스",
+        "딸기 주스"
+      ],
+      "classification": "PARTIAL"
+    }
+  ],
+  "queries": [
+    {
+      "q": "\"닭쟁반국수\" 레시피 중량",
+      "domains": [
+        "go.kr",
+        "ac.kr",
+        "or.kr",
+        "semie.cooking",
+        "ottogi.co.kr",
+        "sempio.com"
+      ]
+    },
+    {
+      "q": "\"찐만두\" 레시피 중량",
+      "domains": [
+        "go.kr",
+        "ac.kr",
+        "or.kr",
+        "semie.cooking",
+        "ottogi.co.kr",
+        "sempio.com"
+      ]
+    },
+    {
+      "q": "\"홍합달래전\" 레시피 중량",
+      "domains": [
+        "go.kr",
+        "ac.kr",
+        "or.kr",
+        "semie.cooking",
+        "ottogi.co.kr",
+        "sempio.com"
+      ]
+    },
+    {
+      "q": "\"딸기주스\" 레시피 중량",
+      "domains": [
+        "go.kr",
+        "ac.kr",
+        "or.kr",
+        "semie.cooking",
+        "ottogi.co.kr",
+        "sempio.com"
+      ]
+    }
+  ],
+  "result": "용례 찾기 - 찐만두 | 국립국어원 (https://www.korean.go.kr/front/roman/romanView.do?mn_id=98&pageIndex=1&roman_seq=9505)\nciteturn504search0 [wordlim: 200] Crawled: 4 months ago; 우리말  | 찐만두\n\n  *   * 현재 본문 위치 : Image: 첫 화면 사전·국어지식 국어의 로마자 표기법 용례 찾기\n\nImage: OPEN 출처표시 : 공공누리 공공저작물 자유이용허락\n\n로마자표기법은 공공저작물 자유이용허락 표시 기준(공공누리, KOGL) 제 1유형 조건에 따라 누구나 이용할 수 있습니다. 자유이용의 경우, 이용자께서는 반드시 저작물의 출처를 구체적으로 표시하여야 합니다.\n\n목록 이전 다음\n\n우리말, 로마자 표기, 결정근거 등으로 구성된 용례 보기\n우리말  | 찐만두\n로마자 표기  | jjin-mandu(O) chjin-mandu(X)\n결정근거  | 제2장 제1항, 제2장 제2항\n--------------------------------------------------------------------------------\nTariff_Schedule_of_the_Republic_of_Korea_kor.pdf (https://fta.motir.go.kr/webmodule/_PSD_FTA/nz/2/kor/Tariff_Schedule_of_the_Republic_of_Korea_kor.pdf)\nciteturn504search12 [wordlim: 200] Published: 11.6 years ago; Crawled: 10 months ago; | 2008994000 | 소금에 절인 초피 | 45 | 10 |  | ... | 2009311000 | 레몬주스 | 50 | 7 |  | ... | 2009801020 | 딸기주스 | 50 | 15 |  |\n--------------------------------------------------------------------------------\nfull_agreement_kor (https://fta.motir.go.kr/webmodule/_PSD_FTA/c_america/2/full_agreement_kor.pdf)\nciteturn504search13 [wordlim: 200] Published: 1.5 years ago; macrocarpon)ㆍ바치니움 옥시코코스(Vaccinium oxycoccos)ㆍ바치 ... 딸기주스 ... 인스턴트 커피의 조제품 ... 설탕ㆍ레몬이나 이들의 대용물을 함유한 것\n--------------------------------------------------------------------------------\n2. 08-07편집중.hwp (https://www.kiep.go.kr/galleryDownload.es?bid=0001&list_no=1294&seq=1)\nciteturn504search14 [wordlim: 200] Published: 17.6 years ago; <tr><td>2008111000</td><td>피넛버터(조제저장처리)</td><td>50.0</td><td>5</td><td>4,318</td></tr> ... <tr><td>2009311000</td><td>레몬주스(브릭스 값이 20을 초과하지 않은 것)</td><td>50.0</td><td>0</td><td>27</td></tr> ... <tr><td>2009801020</td><td>딸기주스</td><td>50.0</td><td>0</td><td>837</td></tr> ... 102 | 일본농업의 경쟁력과 한·일 FTA의 시사점\n--------------------------------------------------------------------------------\n치유와 힐링의 자연드림 (https://www.icoop.or.kr/mobile/goodsmall.phtm?act=detail&gc=50000KMA00)\nciteturn504search1 [wordlim: 200] Crawled: 2 months ago; 중량(규격)  | 500g내외 ... 얼음이 곱게 갈리면, 씻어둔 딸기를 넣고 5초 동안 갈아주시면 시원하고 맛있는 딸기주스가 완성됩니다. ... 주스는 취향에 따라 시럽은 빼고 물의 양을 줄이고 갈아드셔도 좋으며, 시럽 대신 꿀을 넣으셔도 좋습니다. ... ※ 딸기는 한 육묘에서 계속해서 꽃이 나오기 때문에 설향은 11월 말부터 5월 초순까지 수확하여 공급합니다.\n--------------------------------------------------------------------------------\n치유와 힐링의 자연드림 (https://www.icoop.or.kr/mobile/goodsmall.phtm?act=detail&gc=50000K7B00&gg=A02)\nciteturn504search2 [wordlim: 200] Crawled: 5 months ago; 중량(규격)  | 500g내외 ... 얼음이 곱게 갈리면, 씻어둔 딸기를 넣고 5초 동안 갈아주시면 시원하고 맛있는 딸기주스가 완성됩니다. ... 주스는 취향에 따라 시럽은 빼고 물의 양을 줄이고 갈아드셔도 좋으며, 시럽 대신 꿀을 넣으셔도 좋습니다. ... ※ 딸기는 한 육묘에서 계속해서 꽃이 나오기 때문에 설향은 11월 말부터 5월 초순까지 수확하여 공급합니다.\n--------------------------------------------------------------------------------\n2025년 7월 식단표 (https://info.childcare.go.kr/info/pnis/search/PnisFileDownload.jsp?STCODE=48123000038&flag=DNLL&wkyymm=202507)\nciteturn504search15 [wordlim: 200] Published: 1.3 years ago; 찐만두⑤⑥⑩ ...  제철 식재료(오이, 수박) 다양한 음식 경험 제공 ... ▶영양소분석표, 조리지시서(레시피) 별첨(참고) ... 식품표시사항의 원재료 및 함량 확인 ... 식품표시사항 중 원재료명에 명태·\n--------------------------------------------------------------------------------\n부담없이 더 가볍게! 채소만두 | 새미네부엌 플랫폼 (https://semie.cooking/recipe-lab/archive/vegetable-buchu-mandu)\nciteturn504search3 [wordlim: 200] Published: 4.0 years ago; Crawled: last week; 레시피 ... 중강불로 예열한 팬에 식용유 2스푼을 두른 후, 양파와 두부를 넣고 물기가 없어지도록 5분간 볶아주세요. ... 만두 10개 분량! ... 채식 만두 채소요리 담백한요리 군만두 아이간식 찐만두 손만두 채소만두 두부만두\n--------------------------------------------------------------------------------\n(제118회-본회의 제4차부록) 552004년도 (https://council.goryeong.go.kr/record/appendixDownload.do?key=bcaf44f4041e62e142d50cad2aae2520e01247cd144d28d4ab20b758524a7217)\nciteturn504search16 [wordlim: 200] Published: 6 months ago; (제118회_본회의 제4차부록) 77딸기주스 생산사업□ 사업목적○ 매년 4~5월에 집중 출하되는 쨈딸기의 가격폭락을 막고 대량소비처를 개발하여 딸기농가의 소득증대에 기여□ 연간 쨈말기 생산량 : 5,000톤추진상황○ 2002년 딸기 화이바 시범생산 : 5,000병 ... 대책○ 2002년도 생산자단체의 요청에 의거 17,000천원으로 경북과학대학에 의뢰하여 딸기쥬스 생산공정을 개발하였고, 앞으로 쌍림농협의 투자여건이 조성되면 투자하도록 유도하고\n--------------------------------------------------------------------------------\n누리 PICK(상세) | 농식품 PICK | 농식품 트렌드 | 농식품정보누리 (https://www.foodnuri.go.kr/portal/bbs/B0000284/view.do?menuNo=300054&nttId=225255&pageIndex=)\nciteturn504search4 [wordlim: 200] Published: 7.7 years ago; Crawled: 2 months ago; 다양한 레시피 딸기 딸기잼부터 딸기주스, 딸기 케이크까지 달콤한 맛과 향기로 어디에나 어울리는 레드푸드 딸기, 딸기에는 안토시아닌이 풍부하여 백내장과 같은 눈의 질병을 회복시키는 효과가 있습니다. ... 네기 오니 봄이다 봄동 아삭한 식감이 일품인 봄동은 봄을 가장 먼저 알리는 채소 중 하나로 겉절이, 나물 무침, 국거리, 쌈 채소등으로 많이 애용하고 있습니다.\n--------------------------------------------------------------------------------\n[딸기칼로리][딸기잼만드는법] 딸기의 모든 것 (https://tongblog.sdm.go.kr/2445)\nciteturn504search5 [wordlim: 200] Published: 12.5 years ago; Crawled: last week; 탐스럽고 향긋한 딸기칼로리와 딸기 고르는 법과 다양한 레시피 여러분께 소개해드릴게요! ... 가장 많이 만드는 딸기잼, 스트로베리리조또 , 딸기주스, 딸기케익, 딸기스무디 등 다양한 레시피가 있어요.\n--------------------------------------------------------------------------------\n<BBE7B7CAB7CE20BECBBEC6BAB8B4C220C7D0B1B3C7F5BDC528BCF6C1A43032292E687770> (https://www.ice.go.kr/upload/board/3144/2019/04/1555044884821.pdf)\nciteturn504search17 [wordlim: 200] Published: 10.8 years ago; Crawled: 10.8 years ago; 모둠에서 가장 먹고 싶은 것을 정하기 → 모둠원이 반 친구들과 지내면서 가장 중요하다고 생각되는 가치나 욕구를 2개씩 선택하여 종이에 쓰기(NVC 욕구 카드 이용하면 좋으나 없으면 스스로 생각해 볼 수 있음) → 그 중에서 가장 중요하다고 생각하는 가치에 스티커 투표(1명당 3개의 스티커 배부) → 가장 많이 선택한 가치를 음식이름으로 선정(예-존중피자, 재미 딸기주스, 공동체 햄버거 등) ... 정해진 음식을 만들기 위해 필요한 재료를 말하면서 큰 도화지에 음식 그리기(예: 공동체 햄버거에는 물건을 서로 빌려주고 도와주는 스테이크가 필요해.\n--------------------------------------------------------------------------------\n담양 대나무축제 | 문화관광축제 | 대한민국 구석구석 축제 (https://korean.visitkorea.or.kr/kfes/detail/fstvlDetail.do%3Bjsessionid%3D25E06A1CF893188A98E10F6104865806.instance2?Flag=Y&cmsCntntsId=506480)\nciteturn504search6 [wordlim: 200] Crawled: 3 weeks ago;   * Image: 죽순 소시지 ...   * Image: 딸기주스딸기주스 4,000원\n--------------------------------------------------------------------------------\n교내 식당 주간식단표 (https://www.pknu.ac.kr/main/399?action=view&no=725419)\nciteturn504search7 [wordlim: 200] Published: 3 months ago; Crawled: 3 days ago; 중식(학생, 교직원: 5,500원,외부인: 6,500원)  | 잡곡밥/현미밥 햄김치찌개 숙주닭살볶음 떡갈비&소스 실곤약무침 김구이 마카로니샐러드 그린샐러드 발사믹/오렌지드레싱 깍두기  | 잡곡밥/현미밥 소고기샤브국 치킨까스&치폴레소스 감자조림 가지볶음 미역무침 푸실리샐러드 그린샐러드 오리엔탈/키위드레싱 배추김치  | 잡곡밥/현미밥 황태국 찜닭 소떡소떡 중화풍버섯볶음 무생채 펜네샐러드 그린샐러드 발사믹/요거트드레싱 배추김치  | 잡곡밥/현미밥 매운콩나물국 돈육볶음 연두부&양념 짜장떡볶이 호박볶음 파르팔레샐러드 그린샐러드 오리엔탈/흑임자드레싱 배추김치  | 잡곡밥/현미밥 시락국 닭갈비볶음 찐만두 삼색나물 비빔고추장 빵가루샐러드 그린샐러드 발사믹/유자드레싱 배추김치  | Open 11:30 Close 14:00 ☎ 629-7515\n--------------------------------------------------------------------------------\nK2Web Wizard (https://ell.korea.ac.kr/bbs/cwms/507/259865/artclView.do)\nciteturn504search8 [wordlim: 200] Published: 1.3 years ago; Crawled: 5 months ago; 여러분의 소중한 의견을 반영하여 향후 전공자율선택제도를 우리 대학에 안착 및 확대하기 위한 체계적인 방안을 마련하고자 하오니, 많은 참여를 부탁드립니다. ... ● 참여혜택: 추첨을 통한 쿠폰(이디야 딸기주스) 증정\n--------------------------------------------------------------------------------\n■TEST-mobile■ (https://mj8-u9b-f3x.icoop.or.kr/mobile/goodsmall.phtm?act=detail&gc=50000K7B00)\nciteturn504search9 [wordlim: 200] Crawled: 3 days ago; 중량설명  | 500g내외/1팩 ... 얼음이 곱게 갈리면, 씻어둔 딸기를 넣고 5초 동안 갈아주시면 시원하고 맛있는 딸기주스가 완성됩니다. ... 주스는 취향에 따라 시럽은 빼고 물의 양을 줄이고 갈아드셔도 좋으며, 시럽 대신 꿀을 넣으셔도 좋습니다. ... ※ 딸기는 한 육묘에서 계속해서 꽃이 나오기 때문에 설향은 11월 말부터 5월 초순까지 수확하여 공급합니다.\n--------------------------------------------------------------------------------\n늘숲> 여행지 | '열린 관광' 모두의 여행:대한민국 구석구석 (https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=7050b3ce-84b6-4ec1-b8d8-6cde7cabb485)\nciteturn504search10 [wordlim: 200] Crawled: 3 days ago; 바로 옆 늘숲 딸기농장에서 직접 재배한 생딸기로 만든 딸기라떼, 딸기주스, 딸기스무디가 대표 메뉴다. ... 저녁에는 기네스, 칭따오 등 맥주도 판다. ... 직접 로스팅한 원두를 사용해 아메리카노도 맛이 좋다는 평이다.\n--------------------------------------------------------------------------------\n카페블루포트_가격인상안내.pdf (https://swwu.ac.kr/download/1786512616386/index.html)\nciteturn504search11 [wordlim: 200] Crawled: last month; 얼그레이 크림커피 ... 엘리자베스 레몬티 ... 3페이지 중 2페이지 ... 딸기주스 ... 딸기바나나주스\n"
+}

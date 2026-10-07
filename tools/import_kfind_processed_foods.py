@@ -37,6 +37,7 @@ PACKAGE_PATTERN = re.compile(
 NON_NAME_CHARACTERS = re.compile(r"[^0-9a-z가-힣]")
 HANGUL_NAME = re.compile(r"[가-힣]")
 CUP_RAMEN_MARKERS = ("컵", "cup", "사발", "용기")
+SINGLE_KIMBAP_ROLL = re.compile(r"(?<![0-9])(?:한|1)줄")
 
 # These are search-oriented product families requested for this app. They do not
 # assign nutrients or serving sizes; they only decide which official rows to bundle.
@@ -121,6 +122,18 @@ def package_unit(
 ) -> str | None:
     if total is None:
         return None
+    normalized_name = normalize_name(name)
+    # Only a ready-to-eat product whose official name explicitly says one roll.
+    # A generic kimbap name, 210g intake reference, kit, or ingredient is not roll evidence.
+    if (
+        representative == "주먹밥/김밥/초밥"
+        and "김밥" in normalized_name
+        and SINGLE_KIMBAP_ROLL.search(normalized_name)
+        and not any(marker in normalized_name for marker in ("김밥용", "키트", "세트", "반제"))
+        and total[1] == "g"
+        and total[0] > 0
+    ):
+        return "줄"
     marker = PACKAGE_PATTERN.search(name)
     if marker:
         unit = (marker.group(1) or marker.group(2)).replace("봉지", "봉")
@@ -132,7 +145,6 @@ def package_unit(
                 return None
         return unit
 
-    normalized_name = normalize_name(name)
     is_ramen = normalize_name(representative) == "라면" or "라면" in normalized_name
     is_bag_reference = "봉지" in intake_reference
     is_single_bag_weight = total[1] == "g" and 30.0 <= total[0] <= 250.0
@@ -288,6 +300,10 @@ def main() -> None:
         "outputSha256": hashlib.sha256(output_path.read_bytes()).hexdigest().upper(),
     }
     print(json.dumps(summary, ensure_ascii=True, indent=2))
+    # Keep classification, official product-report identity and upstream attribution
+    # in a sidecar; Room v8 and the source nutrition basis do not change.
+    from extract_food_identity_fields import main as restore_identity_fields
+    restore_identity_fields()
 
 
 if __name__ == "__main__":

@@ -1,0 +1,597 @@
+[
+  {
+    "recipeId": "RDA-DIET-89239-1",
+    "ingredientIndex": 2,
+    "ingredient": "청",
+    "originalSpan": "청",
+    "candidate": "청,홍고추8g"
+  },
+  {
+    "recipeId": "RDA-DIET-89252-1",
+    "ingredientIndex": 6,
+    "ingredient": "통깨",
+    "originalSpan": "통깨 약간",
+    "candidate": "통깨약간(양념장1)청장4g"
+  },
+  {
+    "recipeId": "RDA-DIET-89267-0",
+    "ingredientIndex": 1,
+    "ingredient": "청",
+    "originalSpan": "청",
+    "candidate": "청,홍고추8g"
+  },
+  {
+    "recipeId": "RDA-DIET-89275-0",
+    "ingredientIndex": 1,
+    "ingredient": "소금",
+    "originalSpan": "소금 약간",
+    "candidate": "소금약간(양념)고춧가루1g"
+  },
+  {
+    "recipeId": "RDA-DIET-89289-0",
+    "ingredientIndex": 16,
+    "ingredient": "참기름",
+    "originalSpan": "참기름 약간",
+    "candidate": "참기름0.3g"
+  },
+  {
+    "recipeId": "RDA-DIET-89348-1",
+    "ingredientIndex": 6,
+    "ingredient": "통깨",
+    "originalSpan": "통깨 약간",
+    "candidate": "통깨약간(양념장1)청장4g"
+  },
+  {
+    "recipeId": "RDA-DIET-89362-1",
+    "ingredientIndex": 1,
+    "ingredient": "청",
+    "originalSpan": "청",
+    "candidate": "청,홍고추8g"
+  },
+  {
+    "recipeId": "RDA-DIET-89386-0",
+    "ingredientIndex": 1,
+    "ingredient": "소금",
+    "originalSpan": "소금 약간",
+    "candidate": "소금약간,후춧가루약간,올리브유3g"
+  },
+  {
+    "recipeId": "RDA-DIET-89386-0",
+    "ingredientIndex": 2,
+    "ingredient": "후춧가루",
+    "originalSpan": "후춧가루 약간",
+    "candidate": "후춧가루약간,올리브유3g"
+  },
+  {
+    "recipeId": "RDA-DIET-89423-3",
+    "ingredientIndex": 1,
+    "ingredient": "보리",
+    "originalSpan": "보리 14.3",
+    "candidate": "보리밥식단소개영양소열량651kcal,당질104g"
+  },
+  {
+    "recipeId": "RDA-DIET-89427-1",
+    "ingredientIndex": 1,
+    "ingredient": "수수",
+    "originalSpan": "수수 19.0",
+    "candidate": "수수밥식단소개영양소열량661kcal,당질123g"
+  },
+  {
+    "recipeId": "RDA-DIET-89427-4",
+    "ingredientIndex": 1,
+    "ingredient": "무",
+    "originalSpan": "무 6.6",
+    "candidate": "무침식단소개영양소열량661kcal,당질123g"
+  },
+  {
+    "recipeId": "RDA-DIET-89428-2",
+    "ingredientIndex": 1,
+    "ingredient": "보리",
+    "originalSpan": "보리 14.3",
+    "candidate": "보리밥식단소개영양소열량625kcal,당질101g"
+  },
+  {
+    "recipeId": "RDA-DIET-89431-1",
+    "ingredientIndex": 0,
+    "ingredient": "미역",
+    "originalSpan": "미역 5.3",
+    "candidate": "미역국식단소개영양소열량668kcal,당질97g"
+  },
+  {
+    "recipeId": "RDA-DIET-89431-4",
+    "ingredientIndex": 4,
+    "ingredient": "조",
+    "originalSpan": "조 3.4",
+    "candidate": "조섬유0.7g"
+  },
+  {
+    "recipeId": "RDA-DIET-89433-3",
+    "ingredientIndex": 1,
+    "ingredient": "보리",
+    "originalSpan": "보리 14.3",
+    "candidate": "보리밥식단소개영양소열량682kcal,당질116g"
+  },
+  {
+    "recipeId": "RDA-DIET-89435-1",
+    "ingredientIndex": 1,
+    "ingredient": "수수",
+    "originalSpan": "수수 19.0",
+    "candidate": "수수밥식단소개영양소열량634kcal,당질116g"
+  },
+  {
+    "recipeId": "RDA-DIET-89436-5",
+    "ingredientIndex": 0,
+    "ingredient": "꼬막",
+    "originalSpan": "꼬막 25.7",
+    "candidate": "꼬막찜식단소개영양소열량623kcal,당질105g"
+  },
+  {
+    "recipeId": "RDA-DIET-89438-1",
+    "ingredientIndex": 1,
+    "ingredient": "보리",
+    "originalSpan": "보리 14.3",
+    "candidate": "보리밥식단소개영양소열량614kcal,당질96g"
+  },
+  {
+    "recipeId": "RDA-DIET-89439-2",
+    "ingredientIndex": 1,
+    "ingredient": "수수",
+    "originalSpan": "수수 19.0",
+    "candidate": "수수밥식단소개영양소열량668kcal,당질126g"
+  },
+  {
+    "recipeId": "RDA-DIET-89440-2",
+    "ingredientIndex": 1,
+    "ingredient": "보리",
+    "originalSpan": "보리 14.3",
+    "candidate": "보리밥식단소개영양소열량691kcal,당질105g"
+  },
+  {
+    "recipeId": "RDA-DIET-89442-2",
+    "ingredientIndex": 1,
+    "ingredient": "보리",
+    "originalSpan": "보리 14.3",
+    "candidate": "보리밥식단소개영양소열량626kcal,당질103g"
+  },
+  {
+    "recipeId": "RDA-DIET-89443-0",
+    "ingredientIndex": 0,
+    "ingredient": "두부",
+    "originalSpan": "두부 25.3",
+    "candidate": "두부식단소개영양소열량649kcal,당질106g"
+  },
+  {
+    "recipeId": "RDA-DIET-89443-4",
+    "ingredientIndex": 4,
+    "ingredient": "조",
+    "originalSpan": "조 3.4",
+    "candidate": "조섬유0.7g"
+  },
+  {
+    "recipeId": "RDA-DIET-89447-1",
+    "ingredientIndex": 1,
+    "ingredient": "보리",
+    "originalSpan": "보리 14.3",
+    "candidate": "보리밥식단소개영양소열량608kcal,당질98g"
+  },
+  {
+    "recipeId": "RDA-DIET-89448-4",
+    "ingredientIndex": 0,
+    "ingredient": "꽃게",
+    "originalSpan": "꽃게 88.1",
+    "candidate": "꽃게탕식단소개영양소열량621kcal,당질101g"
+  },
+  {
+    "recipeId": "RDA-DIET-89449-0",
+    "ingredientIndex": 1,
+    "ingredient": "수수",
+    "originalSpan": "수수 19.0",
+    "candidate": "수수밥식단소개영양소열량740kcal,당질129g"
+  },
+  {
+    "recipeId": "RDA-DIET-89450-2",
+    "ingredientIndex": 0,
+    "ingredient": "감자",
+    "originalSpan": "감자 71.3",
+    "candidate": "감자국식단소개영양소열량613kcal,당질115g"
+  },
+  {
+    "recipeId": "RDA-DIET-89451-3",
+    "ingredientIndex": 1,
+    "ingredient": "보리",
+    "originalSpan": "보리 14.3",
+    "candidate": "보리밥식단소개영양소열량638kcal,당질114g"
+  },
+  {
+    "recipeId": "RDA-DIET-89452-5",
+    "ingredientIndex": 0,
+    "ingredient": "깻잎",
+    "originalSpan": "깻잎 8",
+    "candidate": "깻잎찜식단소개영양소열량641kcal,당질105g"
+  },
+  {
+    "recipeId": "RDA-DIET-89456-1",
+    "ingredientIndex": 1,
+    "ingredient": "수수",
+    "originalSpan": "수수 19.0",
+    "candidate": "수수밥식단소개영양소열량619kcal,당질120g"
+  },
+  {
+    "recipeId": "RDA-DIET-89458-0",
+    "ingredientIndex": 1,
+    "ingredient": "보리",
+    "originalSpan": "보리 14.3",
+    "candidate": "보리밥식단소개영양소열량679kcal,당질121g"
+  },
+  {
+    "recipeId": "MFDS-107",
+    "ingredientIndex": 3,
+    "ingredient": "올리브유",
+    "originalSpan": "올리브유 4",
+    "candidate": "올리브유4양념장:오미자액기스1g"
+  },
+  {
+    "recipeId": "MFDS-151",
+    "ingredientIndex": 4,
+    "ingredient": "쑥갓",
+    "originalSpan": "쑥갓 20",
+    "candidate": "쑥갓20,상추20g"
+  },
+  {
+    "recipeId": "MFDS-93",
+    "ingredientIndex": 10,
+    "ingredient": "간 양파",
+    "originalSpan": "간 양파 3",
+    "candidate": "간양파3,매실액3g"
+  },
+  {
+    "recipeId": "RDA-89701",
+    "ingredientIndex": 4,
+    "ingredient": "깻잎",
+    "originalSpan": "깻잎 약간",
+    "candidate": "깻잎약간,소금약간,풋고추15g"
+  },
+  {
+    "recipeId": "RDA-89701",
+    "ingredientIndex": 5,
+    "ingredient": "소금",
+    "originalSpan": "소금 약간",
+    "candidate": "소금약간,풋고추15g"
+  },
+  {
+    "recipeId": "RDA-89806",
+    "ingredientIndex": 1,
+    "ingredient": "실고추",
+    "originalSpan": "실고추 약간",
+    "candidate": "실고추약간부재료[양념]실파50g"
+  },
+  {
+    "recipeId": "RDA-90171",
+    "ingredientIndex": 9,
+    "ingredient": "국간장",
+    "originalSpan": "국간장 약간",
+    "candidate": "국간장약간부재료<멸치장국국물>멸치20g"
+  },
+  {
+    "recipeId": "RDA-90193",
+    "ingredientIndex": 0,
+    "ingredient": "배추김치",
+    "originalSpan": "배추김치 적량",
+    "candidate": "배추김치적량,두부150g"
+  },
+  {
+    "recipeId": "RDA-90419",
+    "ingredientIndex": 10,
+    "ingredient": "대파",
+    "originalSpan": "대파 적량",
+    "candidate": "대파적량,마늘적량부재료<양념>다진파120g"
+  },
+  {
+    "recipeId": "RDA-90419",
+    "ingredientIndex": 11,
+    "ingredient": "마늘",
+    "originalSpan": "마늘 적량",
+    "candidate": "마늘적량부재료<양념>다진파120g"
+  },
+  {
+    "recipeId": "RDA-90431",
+    "ingredientIndex": 4,
+    "ingredient": "소금",
+    "originalSpan": "소금 적량",
+    "candidate": "소금적량,대파35g"
+  },
+  {
+    "recipeId": "RDA-90446",
+    "ingredientIndex": 4,
+    "ingredient": "국간장",
+    "originalSpan": "국간장 적량",
+    "candidate": "국간장적량,소금적량,생태(동태)540g"
+  },
+  {
+    "recipeId": "RDA-90446",
+    "ingredientIndex": 5,
+    "ingredient": "소금",
+    "originalSpan": "소금 적량",
+    "candidate": "소금적량,생태(동태)540g"
+  },
+  {
+    "recipeId": "RDA-90448",
+    "ingredientIndex": 12,
+    "ingredient": "전분",
+    "originalSpan": "전분 적량",
+    "candidate": "전분적량,참기름약간,소금약간,달걀50g"
+  },
+  {
+    "recipeId": "RDA-90448",
+    "ingredientIndex": 13,
+    "ingredient": "참기름",
+    "originalSpan": "참기름 약간",
+    "candidate": "참기름약간,소금약간,달걀50g"
+  },
+  {
+    "recipeId": "RDA-90448",
+    "ingredientIndex": 14,
+    "ingredient": "소금",
+    "originalSpan": "소금 약간",
+    "candidate": "소금약간,달걀50g"
+  },
+  {
+    "recipeId": "RDA-90668",
+    "ingredientIndex": 6,
+    "ingredient": "녹말 가루",
+    "originalSpan": "녹말 가루 약간",
+    "candidate": "녹말가루약간부재료<시럽>설탕150g"
+  },
+  {
+    "recipeId": "RDA-90730",
+    "ingredientIndex": 1,
+    "ingredient": "설탕(또는 꿀)",
+    "originalSpan": "설탕(또는 꿀) 약간",
+    "candidate": "설탕(또는꿀)약간,참깨(또는검은깨,흑임자)60g"
+  },
+  {
+    "recipeId": "RDA-90732",
+    "ingredientIndex": 4,
+    "ingredient": "후춧가루",
+    "originalSpan": "후춧가루 약간",
+    "candidate": "후춧가루약간,닭고기300g"
+  },
+  {
+    "recipeId": "RDA-90761",
+    "ingredientIndex": 5,
+    "ingredient": "소금",
+    "originalSpan": "소금약간",
+    "candidate": "소금약간,국간장28g"
+  },
+  {
+    "recipeId": "RDA-90776",
+    "ingredientIndex": 8,
+    "ingredient": "소금",
+    "originalSpan": "소금 약간",
+    "candidate": "소금약간,간장약간부재료<양념>간장35g"
+  },
+  {
+    "recipeId": "RDA-90776",
+    "ingredientIndex": 8,
+    "ingredient": "소금",
+    "originalSpan": "소금 약간",
+    "candidate": "소금3g"
+  },
+  {
+    "recipeId": "RDA-90776",
+    "ingredientIndex": 9,
+    "ingredient": "간장",
+    "originalSpan": "간장 약간",
+    "candidate": "간장약간부재료<양념>간장35g"
+  },
+  {
+    "recipeId": "RDA-90845",
+    "ingredientIndex": 3,
+    "ingredient": "실고추",
+    "originalSpan": "실고추 약간",
+    "candidate": "실고추약간부재료<양념장>간장50g"
+  },
+  {
+    "recipeId": "RDA-90859",
+    "ingredientIndex": 7,
+    "ingredient": "소금",
+    "originalSpan": "소금 약간",
+    "candidate": "소금약간부재료<양념>간장8g"
+  },
+  {
+    "recipeId": "RDA-90860",
+    "ingredientIndex": 7,
+    "ingredient": "석이버섯",
+    "originalSpan": "석이버섯 약간",
+    "candidate": "석이버섯약간부재료<고기양념>간장7g"
+  },
+  {
+    "recipeId": "RDA-90860",
+    "ingredientIndex": 14,
+    "ingredient": "후춧가루",
+    "originalSpan": "후춧가루 약간",
+    "candidate": "후춧가루약간,실고추약간<양념장>간장17g"
+  },
+  {
+    "recipeId": "RDA-90860",
+    "ingredientIndex": 15,
+    "ingredient": "실고추",
+    "originalSpan": "실고추 약간",
+    "candidate": "실고추약간<양념장>간장17g"
+  },
+  {
+    "recipeId": "RDA-90860",
+    "ingredientIndex": 23,
+    "ingredient": "후춧가루",
+    "originalSpan": "후춧가루 약간",
+    "candidate": "후춧가루약간,실고추약간<양념장>간장17g"
+  },
+  {
+    "recipeId": "RDA-90877",
+    "ingredientIndex": 14,
+    "ingredient": "후춧가루",
+    "originalSpan": "후춧가루 약간",
+    "candidate": "후춧가루약간<김치양념>참기름1g"
+  },
+  {
+    "recipeId": "RDA-90882",
+    "ingredientIndex": 10,
+    "ingredient": "소금",
+    "originalSpan": "소금 적량",
+    "candidate": "소금4g"
+  },
+  {
+    "recipeId": "RDA-90882",
+    "ingredientIndex": 10,
+    "ingredient": "소금",
+    "originalSpan": "소금 적량",
+    "candidate": "소금2g"
+  },
+  {
+    "recipeId": "RDA-90882",
+    "ingredientIndex": 11,
+    "ingredient": "후춧가루",
+    "originalSpan": "후춧가루 약간",
+    "candidate": "후춧가루약간부재료<닭고기양념>소금4g"
+  },
+  {
+    "recipeId": "RDA-90882",
+    "ingredientIndex": 17,
+    "ingredient": "후춧가루",
+    "originalSpan": "후춧가루 약간",
+    "candidate": "후춧가루약간부재료<닭고기양념>소금4g"
+  },
+  {
+    "recipeId": "RDA-90887",
+    "ingredientIndex": 2,
+    "ingredient": "실고추",
+    "originalSpan": "실고추 약간",
+    "candidate": "실고추약간부재료<양념>간장35g"
+  },
+  {
+    "recipeId": "RDA-91018",
+    "ingredientIndex": 1,
+    "ingredient": "내장(양, 곱창, 곤자소니)",
+    "originalSpan": "내장(양, 곱창, 곤자소니) 적량",
+    "candidate": "내장(양,곱창,곤자소니)적량,무400g"
+  },
+  {
+    "recipeId": "RDA-91164",
+    "ingredientIndex": 2,
+    "ingredient": "통깨",
+    "originalSpan": "통깨 약간",
+    "candidate": "통깨약간,실고추약간,북어280g"
+  },
+  {
+    "recipeId": "RDA-91164",
+    "ingredientIndex": 3,
+    "ingredient": "실고추",
+    "originalSpan": "실고추 약간",
+    "candidate": "실고추약간,북어280g"
+  },
+  {
+    "recipeId": "RDA-91282",
+    "ingredientIndex": 5,
+    "ingredient": "식용유",
+    "originalSpan": "식용유 적량",
+    "candidate": "식용유적량,꿀150g"
+  },
+  {
+    "recipeId": "RDA-91841",
+    "ingredientIndex": 13,
+    "ingredient": "소금",
+    "originalSpan": "소금",
+    "candidate": "소금,후춧가루약간<장국국물>멸치30g"
+  },
+  {
+    "recipeId": "RDA-91841",
+    "ingredientIndex": 14,
+    "ingredient": "후춧가루",
+    "originalSpan": "후춧가루 약간",
+    "candidate": "후춧가루약간<장국국물>멸치30g"
+  },
+  {
+    "recipeId": "RDA-92339",
+    "ingredientIndex": 17,
+    "ingredient": "후춧가루",
+    "originalSpan": "후춧가루 약간",
+    "candidate": "후춧가루약간<양념고추장>고추장70g"
+  },
+  {
+    "recipeId": "RDA-92346",
+    "ingredientIndex": 6,
+    "ingredient": "국간장",
+    "originalSpan": "국간장 약간",
+    "candidate": "국간장약간,소금약간부재료<양념>국간장5g"
+  },
+  {
+    "recipeId": "RDA-92346",
+    "ingredientIndex": 7,
+    "ingredient": "소금",
+    "originalSpan": "소금 약간",
+    "candidate": "소금약간부재료<양념>국간장5g"
+  },
+  {
+    "recipeId": "RDA-92346",
+    "ingredientIndex": 7,
+    "ingredient": "소금",
+    "originalSpan": "소금 약간",
+    "candidate": "소금2g"
+  },
+  {
+    "recipeId": "RDA-92370",
+    "ingredientIndex": 8,
+    "ingredient": "후춧가루",
+    "originalSpan": "후춧가루 약간",
+    "candidate": "후춧가루약간부재료<초간장>간장34g"
+  },
+  {
+    "recipeId": "RDA-92597",
+    "ingredientIndex": 11,
+    "ingredient": "후춧가루",
+    "originalSpan": "후춧가루 약간",
+    "candidate": "후춧가루약간<초간장>간장34g"
+  },
+  {
+    "recipeId": "RDA-92627",
+    "ingredientIndex": 7,
+    "ingredient": "소금",
+    "originalSpan": "소금 약간",
+    "candidate": "소금약간부재료<낙지양념>고춧가루2g"
+  },
+  {
+    "recipeId": "RDA-92629",
+    "ingredientIndex": 15,
+    "ingredient": "소금",
+    "originalSpan": "소금 약간",
+    "candidate": "소금약간부재료<쇠고기양념>간장17g"
+  },
+  {
+    "recipeId": "RDA-92629",
+    "ingredientIndex": 15,
+    "ingredient": "소금",
+    "originalSpan": "소금 약간",
+    "candidate": "소금3g"
+  },
+  {
+    "recipeId": "RDA-92629",
+    "ingredientIndex": 15,
+    "ingredient": "소금",
+    "originalSpan": "소금 약간",
+    "candidate": "소금2g"
+  },
+  {
+    "recipeId": "RDA-92629",
+    "ingredientIndex": 22,
+    "ingredient": "후춧가루",
+    "originalSpan": "후춧가루 약간",
+    "candidate": "후춧가루약간<숙주양념>소금2g"
+  },
+  {
+    "recipeId": "RDA-92629",
+    "ingredientIndex": 25,
+    "ingredient": "후춧가루",
+    "originalSpan": "후춧가루 약간",
+    "candidate": "후춧가루약간<숙주양념>소금2g"
+  }
+]

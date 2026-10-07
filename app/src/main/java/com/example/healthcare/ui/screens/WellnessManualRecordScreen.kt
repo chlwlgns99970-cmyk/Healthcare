@@ -62,6 +62,8 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import com.example.healthcare.ui.components.FoodAmountInput
+import com.example.healthcare.ui.components.RecordFoodMetadataNotice
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
@@ -132,7 +134,8 @@ internal fun WellnessManualRecordScreen(
         containerColor = MaterialTheme.colorScheme.background,
         topBar = {
             WellnessTopAppBar(
-                title = if (photoPath == null) "기록 추가" else "사진으로 기록",
+                title = if (uiState.detailFood != null || uiState.detailMenu != null) "음식 상세"
+                    else if (photoPath == null) "기록 추가" else "사진으로 기록",
                 navigationIcon = {
                     IconButton(onClick = {
                         if (!showAll && step > 0) step -= 1 else onBack()
@@ -153,6 +156,16 @@ internal fun WellnessManualRecordScreen(
             ),
             verticalArrangement = Arrangement.spacedBy(WellnessSpacing.CardGap)
         ) {
+            uiState.detailFood?.takeIf { it.id == uiState.selectedFoodItemId }?.let { food ->
+                item { FoodDetailEvidenceModel(com.example.healthcare.domain.FoodDetailPolicy.forFood(food)) }
+            }
+            uiState.detailMenu?.takeIf { it.recordName == uiState.foodName }?.let { menu ->
+                item { FoodDetailEvidenceModel(com.example.healthcare.domain.FoodDetailPolicy.forMenu(menu)) }
+            }
+            uiState.selectedFoodItemId?.takeIf { uiState.selectedFood == null && uiState.detailFood == null &&
+                com.example.healthcare.domain.RecipeCaloriePolicy.lookup(it).isNotEmpty() }?.let { foodId ->
+                item { RecipeReferenceCard(foodId, showOriginalBasis = true) }
+            }
             item {
                 Column(verticalArrangement = Arrangement.spacedBy(7.dp)) {
                     Text(if (showAll) "한 화면에서 자세히 입력" else "${step + 1} / ${stepLabels.size}  ${stepLabels[step.coerceAtMost(confirmStep)]}",
@@ -254,12 +267,29 @@ internal fun WellnessManualRecordScreen(
                         supportingText = uiState.nameError?.let { { Text(it) } },
                         modifier = Modifier.fillMaxWidth()
                     )
+                    uiState.sourceDescription?.let {
+                        Text("먹은 양과 확인한 칼로리를 직접 입력해주세요.", style = MaterialTheme.typography.bodyMedium)
+                        Text(it, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                    }
                 }
             }
             }
+            if (showAll || step == 1 || step == confirmStep) {
+                item { RecordFoodMetadataNotice(uiState.selectedFoodItemId, uiState.foodName, uiState.sourceDescription) }
+            }
             if (showAll || step == 1) {
             item {
-                PortionSelector(
+                if (uiState.amountChoices.isNotEmpty()) FoodAmountInput(
+                    amount = uiState.foodQuantity, unit = uiState.foodQuantityUnit,
+                    choices = uiState.amountChoices, onAmount = { viewModel?.onFoodQuantityChange(it) },
+                    onUnit = { viewModel?.onFoodQuantityUnitChange(it) }, enabled = !uiState.isSaving
+                )
+                if (uiState.amountChoices.isNotEmpty() && !uiState.portionHelpOpen) {
+                    OutlinedButton(onClick = { viewModel?.startUnknownPortion() }, modifier = Modifier.fillMaxWidth()) {
+                        Text("먹은 양을 잘 모르겠어요")
+                    }
+                }
+                if (uiState.amountChoices.isEmpty() || uiState.portionHelpOpen) PortionSelector(
                     state = uiState,
                     onPreset = { viewModel?.selectPortionPreset(it) },
                     onReferenceRatio = { ratio, label -> viewModel?.selectReferencePortion(ratio, label) },
@@ -269,7 +299,7 @@ internal fun WellnessManualRecordScreen(
                     onPrecise = { viewModel?.useCustomServing() }
                 )
             }
-            if (uiState.preciseAmountOpen || uiState.pendingProductBarcode != null) {
+            if ((uiState.preciseAmountOpen || uiState.pendingProductBarcode != null) && uiState.amountChoices.isEmpty()) {
                 item {
                     val directFood = uiState.selectedFood
                         ?.takeIf(PortionGuide::requiresDirectAmount)

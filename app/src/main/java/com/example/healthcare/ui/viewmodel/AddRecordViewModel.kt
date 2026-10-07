@@ -25,6 +25,10 @@ import com.example.healthcare.data.repository.NutritionRepository
 import com.example.healthcare.data.repository.RecognitionRepository
 import com.example.healthcare.domain.NutritionBasisCandidate
 import com.example.healthcare.domain.FoodSearchPolicy
+import com.example.healthcare.domain.FoodAmountPolicy
+import com.example.healthcare.domain.FoodAmountUnit
+import com.example.healthcare.domain.PortionQuality
+import com.example.healthcare.domain.RecordedAmountSnapshot
 import com.example.healthcare.domain.FoodBrowseCategory
 import com.example.healthcare.domain.NutritionLabelParseResult
 import com.example.healthcare.domain.NutritionLabelParser
@@ -76,8 +80,15 @@ class AddRecordViewModel(
     val photoState: StateFlow<PhotoAnalysisUiState> = _photoState.asStateFlow()
     private var analysisJob: Job? = null
     private var searchJob: Job? = null
+    private var brandSearchOrigin: SmartInputUiState? = null
+    private var companionSearchOrigin: SmartInputUiState? = null
     private var capturePurpose: CapturePurpose = CapturePurpose.FOOD_PHOTO
     private var barcodeScanActive = false
+    private var repeatCompleted = false
+    private val _completedRecord = MutableStateFlow<MealRecord?>(null)
+    val completedRecord: StateFlow<MealRecord?> = _completedRecord.asStateFlow()
+    private val _draftGeneration = MutableStateFlow(0)
+    val draftGeneration: StateFlow<Int> = _draftGeneration.asStateFlow()
 
     private val _smartInputState = MutableStateFlow(
         SmartInputUiState(photoAnalysisAvailable = photoAnalysisRepository.isConfigured)
@@ -105,6 +116,28 @@ class AddRecordViewModel(
         }
     }
 
+    /** Activity-scoped ViewModels can outlive a completed navigation entry. */
+    fun beginRecordSession() {
+        if (repeatCompleted) {
+            _uiState.value = AddRecordUiState()
+            _draftGeneration.value += 1
+            showSmartInputHub()
+        }
+        repeatCompleted = false
+        _completedRecord.value = null
+    }
+
+    fun resetRecordDraft() {
+        if (_uiState.value.isSaving) return
+        searchJob?.cancel()
+        cancelPhotoFlow()
+        _uiState.value = AddRecordUiState()
+        _draftGeneration.value += 1
+        _smartInputState.value = SmartInputUiState(photoAnalysisAvailable = photoAnalysisRepository.isConfigured)
+        repeatCompleted = false
+        _completedRecord.value = null
+    }
+
     fun onFoodNameChange(name: String) {
         _uiState.update {
             val keepLabelEstimate = it.recordSource == RecordSource.NUTRITION_LABEL && it.selectedFoodItemId == null
@@ -117,6 +150,8 @@ class AddRecordViewModel(
                 selectedServingRatio = if (keepLabelEstimate) it.selectedServingRatio else null,
                 selectedFoodItemId = null,
                 selectedFood = null,
+                detailFood = null, detailMenu = null,
+                storedAmountSnapshot = null, foodQuantity = "", foodQuantityUnit = "", sourceDescription = null,
                 estimatedCarbohydrateGrams = if (keepLabelEstimate) it.estimatedCarbohydrateGrams else null,
                 estimatedProteinGrams = if (keepLabelEstimate) it.estimatedProteinGrams else null,
                 estimatedFatGrams = if (keepLabelEstimate) it.estimatedFatGrams else null,
@@ -157,6 +192,7 @@ class AddRecordViewModel(
                 saveError = null
             )
         }
+        syncQuantityFromBasis()
     }
 
     fun onServingUnitChange(unit: String) {
@@ -170,6 +206,7 @@ class AddRecordViewModel(
                 caloriesError = null
             )
         }
+        syncQuantityFromBasis()
     }
 
     fun onFoodSearchChange(query: String) {
@@ -263,7 +300,7 @@ class AddRecordViewModel(
         }
     }
 
-    private fun searchFranchiseBrands(query: String, filterQuery: String = query) {
+    private fun searchFranchiseBrands(query: String) {
         val repository = nutritionRepository
         _smartInputState.update {
             it.copy(searchQuery = query, message = null, searchResults = emptyList())
@@ -275,13 +312,17 @@ class AddRecordViewModel(
         }
         searchJob = viewModelScope.launch {
             _smartInputState.update { it.copy(isSearching = true) }
-            repository.searchFranchiseBrands(filterQuery).collectLatest { results ->
+            val category = _smartInputState.value.selectedBrandCategory
+            val brandsFlow = if (category == null) repository.searchFranchiseBrands(query)
+                else repository.searchFranchiseBrandsByCategory(category, query)
+            brandsFlow.collectLatest { results ->
                 _smartInputState.update { it.copy(brandResults = results, isSearching = false) }
             }
         }
     }
 
     fun selectProductBrand(brand: FoodBrandSummary) {
+        brandSearchOrigin = _smartInputState.value
         searchJob?.cancel()
         _smartInputState.update {
             it.copy(
@@ -303,6 +344,11 @@ class AddRecordViewModel(
 
     fun clearSelectedProductBrand() {
         searchJob?.cancel()
+        brandSearchOrigin?.let { origin ->
+            _smartInputState.value = origin.copy(mode = SmartInputMode.SEARCH)
+            brandSearchOrigin = null
+            return
+        }
         _smartInputState.update {
             it.copy(
                 selectedBrand = null,
@@ -325,7 +371,7 @@ class AddRecordViewModel(
         val state = _smartInputState.value
         _smartInputState.update { it.copy(selectedBrandCategory = category) }
         if (state.searchMode == FoodSearchMode.FRANCHISE && state.selectedBrand == null) {
-            searchFranchiseBrands("", category.orEmpty())
+            searchFranchiseBrands(state.searchQuery)
         }
     }
 
@@ -350,7 +396,12 @@ class AddRecordViewModel(
                     state.copy(
                         brandProducts = products,
                         brandCategories = if (query.isBlank()) {
-                            products.mapNotNull(FoodItem::category).distinct().sorted()
+                            if (state.searchMode == FoodSearchMode.FRANCHISE) {
+                                (products.mapNotNull(com.example.healthcare.domain.FoodMenuCategoryPolicy::categoryOf) +
+                                    com.example.healthcare.domain.FranchiseCatalog.officialMenus(selectedBrand.brand)
+                                        .mapNotNull(com.example.healthcare.domain.FoodMenuCategoryPolicy::categoryOf))
+                                    .distinct().sorted()
+                            } else products.mapNotNull(FoodItem::category).distinct().sorted()
                         } else state.brandCategories,
                         isSearching = false
                     )
@@ -372,12 +423,7 @@ class AddRecordViewModel(
                 ocrPortionPreset = null,
                 ocrPreciseOpen = false,
                 isCompanionSearch = false,
-                searchMode = FoodSearchMode.FOOD,
-                selectedBrand = null,
-                brandResults = emptyList(),
-                brandProducts = emptyList(),
-                brandCategories = emptyList(),
-                selectedBrandCategory = null
+                isSearching = false
             )
         }
     }
@@ -410,6 +456,11 @@ class AddRecordViewModel(
     }
 
     fun showFoodSearch() {
+        if (_smartInputState.value.searchQuery.isNotBlank() ||
+            _smartInputState.value.searchMode != FoodSearchMode.FOOD) {
+            returnToFoodSearch()
+            return
+        }
         _smartInputState.update {
             it.copy(
                 mode = SmartInputMode.SEARCH,
@@ -430,6 +481,7 @@ class AddRecordViewModel(
             _uiState.update { it.copy(saveError = "먼저 음식 검색에서 기본 음식을 선택해 주세요.") }
             return
         }
+        companionSearchOrigin = _smartInputState.value
         _smartInputState.update {
             it.copy(mode = SmartInputMode.SEARCH, message = null, isCompanionSearch = true,
                 searchMode = FoodSearchMode.FOOD, searchQuery = initialQuery, searchResults = emptyList(),
@@ -440,6 +492,12 @@ class AddRecordViewModel(
     }
 
     fun cancelCompanionSearch() {
+        searchJob?.cancel()
+        companionSearchOrigin?.let { origin ->
+            _smartInputState.value = origin.copy(mode = SmartInputMode.MANUAL, message = null, isCompanionSearch = false)
+            companionSearchOrigin = null
+            return
+        }
         _smartInputState.update {
             it.copy(mode = SmartInputMode.MANUAL, message = null, isCompanionSearch = false,
                 searchQuery = "", searchResults = emptyList(), isSearching = false)
@@ -450,10 +508,33 @@ class AddRecordViewModel(
         if (_smartInputState.value.isCompanionSearch) addCompanionFood(food) else selectVerifiedFood(food)
     }
 
+    fun selectOfficialFranchiseMenu(menu: com.example.healthcare.domain.FranchiseMenu) {
+        _draftGeneration.value += 1
+        if (_uiState.value.isSaving) return
+        val context = _uiState.value
+        _uiState.value = AddRecordUiState(foodName = menu.recordName, date = context.date, time = context.time,
+            mealType = context.mealType, sourceDescription = menu.sourceDescription,
+            detailMenu = menu,
+            recordSource = RecordSource.MANUAL)
+        _smartInputState.update { it.copy(mode = SmartInputMode.MANUAL, message = "공식 영양정보가 없는 메뉴예요. 확인한 먹은 양과 칼로리를 입력해 주세요.") }
+    }
+
     fun selectVerifiedFood(food: FoodItem, source: RecordSource = RecordSource.FOOD_SEARCH) {
-        if (FoodSearchPolicy.needsBasisReview(food)) {
+        _draftGeneration.value += 1
+        val defaultUnit = FoodAmountPolicy.defaultChoice(food)
+        if (defaultUnit == null) {
+            _uiState.update { it.copy(foodName = FoodSearchPolicy.displayName(food), calories = "",
+                servingAmount = "", servingUnit = "", selectedFood = null, selectedFoodItemId = food.id,
+                detailFood = food, detailMenu = null,
+                referenceCalories = null, referenceServingAmount = null, referenceServingUnit = null,
+                selectedServingRatio = null, estimatedCarbohydrateGrams = null, estimatedProteinGrams = null,
+                estimatedFatGrams = null, selectedPortion = null, recordSource = source,
+                selectedBarcode = food.barcode, foodQuantity = "", foodQuantityUnit = "",
+                storedAmountSnapshot = null, companionFoods = emptyList(), pendingProductBarcode = null,
+                preciseAmountOpen = false, saveError = null,
+                sourceDescription = "출처 ${food.sourceType} · ${food.servingDescription}", nameError = null, caloriesError = null) }
             _smartInputState.update {
-                it.copy(message = "이 항목은 공식 영양정보 단위를 일상적인 섭취량으로 바로 바꾸기 어려워요. 다른 항목을 선택하거나 직접 입력해 주세요.")
+                it.copy(mode = SmartInputMode.MANUAL, message = "이 음식은 먹은 양과 확인한 칼로리를 직접 입력해주세요.")
             }
             return
         }
@@ -472,6 +553,8 @@ class AddRecordViewModel(
                 selectedServingRatio = if (requiresDirectAmount) null else 1.0,
                 selectedFoodItemId = food.id,
                 selectedFood = food,
+                detailFood = null, detailMenu = null,
+                storedAmountSnapshot = null,
                 estimatedCarbohydrateGrams = null,
                 estimatedProteinGrams = null,
                 estimatedFatGrams = null,
@@ -490,15 +573,12 @@ class AddRecordViewModel(
         _smartInputState.update {
             it.copy(
                 mode = SmartInputMode.QUICK_RECORD,
-                searchQuery = "",
-                searchResults = emptyList(),
-                selectedBrand = null,
-                brandResults = emptyList(),
-                brandProducts = emptyList(),
-                brandCategories = emptyList(),
-                selectedBrandCategory = null
+                message = null
             )
         }
+        val quantity = if (defaultUnit.unit in setOf("g", "ml")) "" else "1"
+        _uiState.update { it.copy(foodQuantity = quantity, foodQuantityUnit = defaultUnit.unit, sourceDescription = null) }
+        onFoodQuantityChange(quantity)
         viewModelScope.launch {
             runCatching {
                 persistRecognition(
@@ -511,6 +591,46 @@ class AddRecordViewModel(
                 )
             }
         }
+    }
+
+    fun onFoodQuantityChange(value: String) {
+        val state = _uiState.value
+        val food = state.selectedFood
+        if (food == null) {
+            val choice = state.amountChoices.firstOrNull { it.unit == state.foodQuantityUnit } ?: return
+            val quantity = FoodAmountPolicy.parseAmount(value)
+            val reference = state.referenceServingAmount ?: return
+            val calories = state.referenceCalories ?: return
+            val result = quantity?.let { FoodAmountPolicy.calculateSnapshot(reference, choice.basisUnit,
+                calories, Macronutrients(state.estimatedCarbohydrateGrams, state.estimatedProteinGrams,
+                    state.estimatedFatGrams), it * choice.basisAmountPerUnit) }
+            _uiState.update { it.copy(foodQuantity = value,
+                servingAmount = result?.basisAmount?.let(::formatAmount).orEmpty(),
+                servingUnit = choice.basisUnit, calories = result?.calories?.toString().orEmpty(),
+                selectedServingRatio = result?.basisAmount?.div(reference),
+                selectedPortion = result?.let { RecordedAmountSnapshot(requireNotNull(quantity), choice.unit,
+                    choice.basisAmountPerUnit, choice.basisUnit).portion(choice.evidence) },
+                caloriesError = null, saveError = null) }
+            return
+        }
+        val unit = state.foodQuantityUnit.ifBlank { FoodAmountPolicy.defaultChoice(food)?.unit.orEmpty() }
+        val quantity = FoodAmountPolicy.parseAmount(value)
+        val choice = FoodAmountPolicy.choices(food).firstOrNull { it.unit == unit } ?: return
+        val result = quantity?.let { FoodAmountPolicy.calculate(food, it, unit) }
+        _uiState.update { it.copy(foodQuantity = value, foodQuantityUnit = unit,
+            servingAmount = result?.basisAmount?.let(::formatAmount).orEmpty(), servingUnit = choice.basisUnit,
+            calories = result?.calories?.toString().orEmpty(), selectedServingRatio = result?.basisAmount?.div(food.referenceAmount),
+            selectedPortion = result?.let { RecordedAmountSnapshot(requireNotNull(quantity), unit, choice.basisAmountPerUnit, choice.basisUnit).portion(choice.evidence,
+                if (choice.quality == PortionQuality.OFFICIAL_SERVING) PortionEstimationType.OFFICIAL_SERVING else PortionEstimationType.MANUAL_AMOUNT) },
+            preciseAmountOpen = true, caloriesError = null, saveError = null) }
+    }
+
+    fun onFoodQuantityUnitChange(unit: String) {
+        val state = _uiState.value
+        val choice = state.amountChoices.firstOrNull { it.unit == unit } ?: return
+        val amount = FoodAmountPolicy.parseAmount(state.servingAmount)?.div(choice.basisAmountPerUnit)
+        _uiState.update { it.copy(foodQuantityUnit = unit) }
+        onFoodQuantityChange(amount?.let(::formatAmount) ?: if (unit in setOf("g", "ml")) "" else "1")
     }
 
     fun beginBarcodeScan(): Boolean {
@@ -579,29 +699,28 @@ class AddRecordViewModel(
     }
 
     fun selectFrequentFood(food: FrequentFood) {
-        selectSavedFood(food, SmartInputMode.MANUAL)
+        selectSavedFood(food, SmartInputMode.QUICK_RECORD)
     }
 
     fun selectFavoriteFood(food: FrequentFood) {
-        val foodItemId = food.foodItemId
-        if (foodItemId == null || nutritionRepository == null) {
-            selectSavedFood(food, SmartInputMode.QUICK_RECORD)
-            return
-        }
-        viewModelScope.launch {
-            val currentFood = runCatching { nutritionRepository.findById(foodItemId) }.getOrNull()
-            if (currentFood == null) selectSavedFood(food, SmartInputMode.QUICK_RECORD)
-            else selectVerifiedFood(currentFood)
-        }
+        selectSavedFood(food, SmartInputMode.QUICK_RECORD)
     }
 
     private fun selectSavedFood(food: FrequentFood, destination: SmartInputMode) {
-        val (servingAmount, servingUnit) = parseServing(food.defaultServing)
+        _draftGeneration.value += 1
+        val serving = parseServing(food.defaultServing)
+        val servingAmount = serving?.first
+        val servingUnit = serving?.second.orEmpty()
+        val storedConversion = recentMeals.value.firstOrNull {
+            food.foodItemId != null && it.foodItemId == food.foodItemId && it.calories == food.calories &&
+                it.servingAmount == servingAmount && it.servingUnit == servingUnit
+        }?.let(RecordedAmountSnapshot::from)
+        val snapshot = storedConversion ?: servingAmount?.let { RecordedAmountSnapshot(it, servingUnit, 1.0, servingUnit) }
         _uiState.update {
             it.copy(
                 foodName = food.foodName,
                 calories = food.calories.toString(),
-                servingAmount = formatAmount(servingAmount),
+                servingAmount = servingAmount?.let(::formatAmount).orEmpty(),
                 servingUnit = servingUnit,
                 foodSearch = "",
                 referenceCalories = food.calories,
@@ -610,19 +729,15 @@ class AddRecordViewModel(
                 selectedServingRatio = 1.0,
                 selectedFoodItemId = food.foodItemId,
                 selectedFood = null,
+                detailFood = null, detailMenu = null,
+                foodQuantity = snapshot?.quantity?.let(::formatAmount).orEmpty(), foodQuantityUnit = snapshot?.unit.orEmpty(),
+                storedAmountSnapshot = snapshot,
+                sourceDescription = null, companionFoods = emptyList(), preciseAmountOpen = false,
                 estimatedCarbohydrateGrams = food.carbohydrateGrams,
                 estimatedProteinGrams = food.proteinGrams,
                 estimatedFatGrams = food.fatGrams,
-                selectedPortion = if (destination == SmartInputMode.QUICK_RECORD) {
-                    PortionPreset(
-                        id = "reference-1.0",
-                        label = "보통",
-                        amount = servingAmount,
-                        unit = servingUnit,
-                        estimationType = PortionEstimationType.MANUAL_AMOUNT,
-                        sourceReference = "사용자가 저장한 영양정보",
-                        description = "저장된 음식의 기본 양이에요."
-                    )
+                selectedPortion = if (destination == SmartInputMode.QUICK_RECORD && servingAmount != null) {
+                    requireNotNull(snapshot).portion("사용자가 저장한 영양정보")
                 } else null,
                 selectedBarcode = null,
                 pendingProductBarcode = null,
@@ -635,6 +750,10 @@ class AddRecordViewModel(
     }
 
     fun toggleFavorite(food: FoodItem) {
+        if (!FoodAmountPolicy.canCalculate(food) || food.energyKcal <= 0) {
+            _smartInputState.update { it.copy(message = "먹은 양과 칼로리를 확인한 뒤 저장해주세요.") }
+            return
+        }
         val isFavorite = favoriteFoods.value.any { it.foodItemId == food.id }
         val snapshot = FrequentFood(
             foodName = FoodSearchPolicy.displayName(food),
@@ -672,32 +791,12 @@ class AddRecordViewModel(
     }
 
     fun applyRecentAmount(meal: MealRecord) {
-        val state = _uiState.value
-        val amount = meal.servingAmount?.takeIf { it.isFinite() && it > 0.0 } ?: return
-        val unit = meal.servingUnit?.takeIf(String::isNotBlank) ?: return
-        val food = state.selectedFood
-        if (food != null && !food.unit.equals(unit, ignoreCase = true)) return
-        _uiState.update {
-            it.copy(
-                servingAmount = formatAmount(amount),
-                servingUnit = unit,
-                calories = meal.calories.toString(),
-                selectedServingRatio = it.referenceServingAmount?.takeIf { reference -> reference > 0.0 }
-                    ?.let { reference -> amount / reference },
-                selectedPortion = PortionPreset(
-                    id = "recent-${meal.id}",
-                    label = "최근 기록 ${formatAmount(amount)}$unit",
-                    amount = amount,
-                    unit = unit,
-                    estimationType = PortionEstimationType.MANUAL_AMOUNT,
-                    sourceReference = "사용자의 최근 기록",
-                    description = "이전에 직접 저장한 양이에요. 공식 제공량은 아니에요."
-                ),
-                preciseAmountOpen = false,
-                caloriesError = null,
-                saveError = null
-            )
-        }
+        if (meal.servingAmount?.takeIf { it.isFinite() && it > 0 } == null || meal.servingUnit.isNullOrBlank()) return
+        selectRecentMeal(meal)
+        if (meal.portionDisplayLabel == null) _uiState.update { it.copy(selectedPortion = PortionPreset(
+            "recent-${meal.id}", "최근 기록 ${formatAmount(requireNotNull(meal.servingAmount))}${meal.servingUnit}",
+            meal.servingAmount, requireNotNull(meal.servingUnit), PortionEstimationType.MANUAL_AMOUNT,
+            "사용자의 최근 기록", "이전에 직접 저장한 양이에요. 공식 제공량은 아니에요.")) }
     }
 
     fun deleteFrequentFood(food: FrequentFood) {
@@ -707,13 +806,16 @@ class AddRecordViewModel(
     }
 
     fun selectRecentMeal(meal: MealRecord) {
-        val servingAmount = meal.servingAmount ?: 1.0
-        val servingUnit = meal.servingUnit?.takeIf { it.isNotBlank() } ?: "인분"
+        _draftGeneration.value += 1
+        val servingAmount = meal.servingAmount?.takeIf { it.isFinite() && it > 0 }
+        val servingUnit = meal.servingUnit?.takeIf { it.isNotBlank() }.orEmpty()
+        val snapshot = RecordedAmountSnapshot.from(meal) ?: servingAmount?.takeIf { servingUnit.isNotBlank() }
+            ?.let { RecordedAmountSnapshot(it, servingUnit, 1.0, servingUnit) }
         _uiState.update {
             it.copy(
                 foodName = meal.foodName,
-                calories = meal.calories.toString(),
-                servingAmount = formatAmount(servingAmount),
+                calories = meal.calories.takeIf { it > 0 }?.toString().orEmpty(),
+                servingAmount = servingAmount?.let(::formatAmount).orEmpty(),
                 servingUnit = servingUnit,
                 foodSearch = "",
                 referenceCalories = meal.calories,
@@ -722,14 +824,19 @@ class AddRecordViewModel(
                 selectedServingRatio = 1.0,
                 selectedFoodItemId = meal.foodItemId,
                 selectedFood = null,
+                detailFood = null, detailMenu = null,
+                storedAmountSnapshot = snapshot,
+                foodQuantity = snapshot?.quantity?.let(::formatAmount).orEmpty(),
+                foodQuantityUnit = snapshot?.unit.orEmpty(), sourceDescription = null,
+                companionFoods = emptyList(), preciseAmountOpen = false,
                 estimatedCarbohydrateGrams = meal.carbohydrateGrams,
                 estimatedProteinGrams = meal.proteinGrams,
                 estimatedFatGrams = meal.fatGrams,
-                selectedPortion = meal.portionDisplayLabel?.let { label ->
+                selectedPortion = meal.portionDisplayLabel?.takeIf { servingAmount != null }?.let { label ->
                     PortionPreset(
                         id = meal.portionPresetId ?: "previous",
                         label = label,
-                        amount = servingAmount,
+                        amount = requireNotNull(servingAmount),
                         unit = servingUnit,
                         estimationType = runCatching { PortionEstimationType.valueOf(meal.portionEstimationType.orEmpty()) }
                             .getOrDefault(PortionEstimationType.VISUAL_ESTIMATE),
@@ -746,17 +853,30 @@ class AddRecordViewModel(
         }
     }
 
-    fun repeatRecentMeal(meal: MealRecord, onSuccess: () -> Unit) {
+    fun openRecentAmount(meal: MealRecord) {
         if (_uiState.value.isSaving) return
+        selectRecentMeal(meal)
+        _smartInputState.update { it.copy(mode = SmartInputMode.QUICK_RECORD, message = null) }
+    }
+
+    fun repeatRecentMeal(meal: MealRecord, onSuccess: () -> Unit) {
+        if (_uiState.value.isSaving || repeatCompleted) return
+        if (meal.calories <= 0) {
+            selectRecentMeal(meal)
+            _smartInputState.update { it.copy(mode = SmartInputMode.MANUAL, message = "칼로리를 확인해 주세요.") }
+            return
+        }
+        selectRecentMeal(meal)
+        val context = _uiState.value
         _uiState.update { it.copy(isSaving = true, saveError = null) }
         viewModelScope.launch {
             try {
                 val now = System.currentTimeMillis()
-                mealRepository.insertMeal(
-                    meal.copy(
+                val repeatedRecord = meal.copy(
                         id = 0,
-                        date = LocalDate.now().format(dateFormatter),
-                        time = LocalTime.now().format(timeFormatter),
+                        date = context.date.format(dateFormatter),
+                        time = context.time.format(timeFormatter),
+                        mealType = context.mealType,
                         source = RecordSource.RECENT_REPEAT,
                         photoAnalysisId = null,
                         photoRequestId = null,
@@ -765,14 +885,36 @@ class AddRecordViewModel(
                         createdAtEpochMillis = now,
                         updatedAtEpochMillis = now
                     )
-                )
+                mealRepository.insertMeal(repeatedRecord)
+                repeatCompleted = true
+                _completedRecord.value = repeatedRecord
                 onSuccess()
             } catch (_: Exception) {
                 _uiState.update { it.copy(saveError = "최근 음식을 다시 기록하지 못했습니다.") }
+                _smartInputState.update { it.copy(mode = SmartInputMode.QUICK_RECORD) }
             } finally {
                 _uiState.update { it.copy(isSaving = false) }
             }
         }
+    }
+
+    fun repeatSavedFood(food: FrequentFood, onSuccess: (MealType) -> Unit) {
+        if (_uiState.value.isSaving || repeatCompleted) return
+        selectSavedFood(food, SmartInputMode.QUICK_RECORD)
+        val state = _uiState.value
+        val amount = parsePositiveAmount(state.servingAmount)
+        if (amount == null || state.servingUnit.isBlank()) {
+            _uiState.update { it.copy(saveError = "저장된 양이 없어 먹은 양을 확인해 주세요.") }
+            return
+        }
+        repeatRecentMeal(MealRecord(date = state.date.format(dateFormatter), time = state.time.format(timeFormatter),
+            mealType = state.mealType, foodName = state.foodName, calories = state.calories.toIntOrNull() ?: 0,
+            carbohydrateGrams = state.estimatedCarbohydrateGrams, proteinGrams = state.estimatedProteinGrams,
+            fatGrams = state.estimatedFatGrams, servingAmount = amount, servingUnit = state.servingUnit,
+            portionPresetId = state.selectedPortion?.id, portionDisplayLabel = state.selectedPortion?.label,
+            portionEstimationType = state.selectedPortion?.estimationType?.name,
+            portionSourceReference = state.selectedPortion?.sourceReference, foodItemId = state.selectedFoodItemId),
+            onSuccess = { onSuccess(state.mealType) })
     }
 
     fun selectServingRatio(ratio: Double) {
@@ -790,6 +932,7 @@ class AddRecordViewModel(
                 caloriesError = null
             )
         }
+        syncQuantityFromBasis()
     }
 
     fun updateCompanionPortion(selectionId: String, preset: PortionPreset) {
@@ -886,6 +1029,7 @@ class AddRecordViewModel(
             }
         }
         _uiState.update { it.copy(portionHelpOpen = false) }
+        syncQuantityFromBasis()
     }
 
     fun selectReferencePortion(ratio: Double, label: String) {
@@ -912,6 +1056,7 @@ class AddRecordViewModel(
                 selectedServingRatio = ratio, caloriesError = null, saveError = null
             )
         }
+        syncQuantityFromBasis()
     }
 
     private fun applyPortion(preset: PortionPreset) {
@@ -921,16 +1066,31 @@ class AddRecordViewModel(
             it.copy(
                 servingAmount = formatAmount(estimate.amount), servingUnit = estimate.unit,
                 calories = estimate.calories.toString(), selectedPortion = preset,
+                preciseAmountOpen = false,
                 selectedServingRatio = estimate.amount / food.referenceAmount,
                 caloriesError = null, saveError = null
             )
         }
+        syncQuantityFromBasis()
+    }
+
+    private fun syncQuantityFromBasis() {
+        val state = _uiState.value
+        val choice = state.amountChoices.firstOrNull { it.unit == state.foodQuantityUnit } ?: return
+        val basis = parsePositiveAmount(state.servingAmount)
+        _uiState.update { it.copy(foodQuantity = basis?.div(choice.basisAmountPerUnit)?.let(::formatAmount).orEmpty()) }
     }
 
     fun saveRecord(onSuccess: (MealType) -> Unit) {
+        if (repeatCompleted) return
         val state = _uiState.value
         val manualPhotoPath = (_photoState.value as? PhotoAnalysisUiState.ManualEntry)?.photoPath
         var hasError = false
+        if (state.amountChoices.isNotEmpty() &&
+            (parsePositiveAmount(state.foodQuantity) == null || parsePositiveAmount(state.servingAmount) == null)) {
+            _uiState.update { it.copy(saveError = "먹은 양을 0보다 큰 계산 가능한 숫자로 입력해 주세요.") }
+            hasError = true
+        }
         if (state.foodName.isBlank()) {
             _uiState.update { it.copy(nameError = "음식 이름을 입력해주세요.") }
             hasError = true
@@ -1016,10 +1176,11 @@ class AddRecordViewModel(
                         portionPresetId = state.selectedPortion?.id,
                         portionDisplayLabel = state.selectedPortion?.label,
                         portionEstimationType = state.selectedPortion?.estimationType?.name,
-                        portionSourceReference = state.selectedPortion?.sourceReference,
+                        portionSourceReference = state.selectedPortion?.sourceReference ?: state.sourceDescription,
                         source = if (registeredProduct != null) RecordSource.BARCODE else state.recordSource,
                         foodItemId = registeredProduct?.id ?: state.selectedFoodItemId,
-                        barcode = registeredProduct?.barcode ?: state.selectedBarcode
+                        barcode = registeredProduct?.barcode ?: state.selectedBarcode,
+                        createdAtEpochMillis = now, updatedAtEpochMillis = now
                     )
                 val companionRecords = state.companionFoods.map { entry ->
                     val nutrition = Macronutrients.forFood(entry.food, entry.portion.amount)
@@ -1047,9 +1208,11 @@ class AddRecordViewModel(
                 }
                 if (companionRecords.isEmpty()) mealRepository.insertMeal(primaryRecord)
                 else mealRepository.insertPhotoMeals(listOf(primaryRecord) + companionRecords)
+                repeatCompleted = true
+                _completedRecord.value = primaryRecord
 
                 if (state.saveAsFrequent) {
-                    foodRepository.insertFoodIfAbsent(
+                    runCatching { foodRepository.insertFoodIfAbsent(
                         FrequentFood(
                             foodName = state.foodName.trim(),
                             defaultServing = servingDescription(state.servingAmount, state.servingUnit),
@@ -1064,10 +1227,10 @@ class AddRecordViewModel(
                             sourceFoodCode = primaryFood?.sourceFoodCode,
                             brand = primaryFood?.brand
                         )
-                    )
+                    ) }
                 }
                 if (manualPhotoPath != null) {
-                    photoProcessor?.deleteTemporaryPhoto(manualPhotoPath)
+                    runCatching { photoProcessor?.deleteTemporaryPhoto(manualPhotoPath) }
                     _photoState.value = PhotoAnalysisUiState.Idle
                 }
                 val savedMealType = state.mealType
@@ -1433,9 +1596,17 @@ class AddRecordViewModel(
         )
     }
 
+    val photoSaveAcknowledgement = SaveAcknowledgement<Unit>()
+
+    fun confirmPhotoSave(): Boolean {
+        if (photoSaveAcknowledgement.confirm() == null) return false
+        _photoState.value = PhotoAnalysisUiState.Idle
+        return true
+    }
+
     fun savePhotoAnalysisRecords(onSuccess: () -> Unit) {
         val result = _photoState.value as? PhotoAnalysisUiState.Result ?: return
-        if (result.isSaving) return
+        if (result.isSaving || photoSaveAcknowledgement.isPending) return
 
         var hasError = false
         val validatedItems = result.items.map { item ->
@@ -1533,7 +1704,8 @@ class AddRecordViewModel(
                     }
                 }
                 photoProcessor?.deleteTemporaryPhoto(result.photoPath)
-                _photoState.value = PhotoAnalysisUiState.Idle
+                photoSaveAcknowledgement.saved(Unit)
+                _photoState.value = result.copy(isSaving = false)
                 onSuccess()
             } catch (_: Exception) {
                 _photoState.value = result.copy(
@@ -1635,10 +1807,10 @@ class AddRecordViewModel(
         PhotoAnalysisUiState.Camera, PhotoAnalysisUiState.Idle -> null
     }
 
-    private fun parseServing(value: String): Pair<Double, String> {
-        val match = Regex("""^\s*(\d+(?:\.\d+)?)\s*(.*)$""").matchEntire(value)
-        val amount = match?.groupValues?.get(1)?.toDoubleOrNull() ?: 1.0
-        val unit = match?.groupValues?.get(2)?.trim().orEmpty().ifBlank { "인분" }
+    private fun parseServing(value: String): Pair<Double, String>? {
+        val match = Regex("""^\s*(\d+(?:[.,]\d+)?)\s*(\S.*)$""").matchEntire(value) ?: return null
+        val amount = FoodAmountPolicy.parseAmount(match.groupValues[1]) ?: return null
+        val unit = match.groupValues[2].trim().takeIf { it.isNotBlank() } ?: return null
         return amount to unit
     }
 
@@ -1646,7 +1818,7 @@ class AddRecordViewModel(
         if (value == value.toLong().toDouble()) value.toLong().toString() else value.toString()
 
     private fun parsePositiveAmount(value: String): Double? =
-        value.trim().replace(',', '.').toDoubleOrNull()?.takeIf { it.isFinite() && it > 0.0 }
+        FoodAmountPolicy.parseAmount(value)
 
     private fun AddRecordUiState.hasReferenceFood(): Boolean =
         referenceCalories != null && referenceServingAmount != null && referenceServingUnit != null
@@ -1783,6 +1955,13 @@ data class AddRecordUiState(
     val selectedServingRatio: Double? = null,
     val selectedFoodItemId: String? = null,
     val selectedFood: FoodItem? = null,
+    /** Source facts remain visible when the existing amount policy requires manual recording. */
+    val detailFood: FoodItem? = null,
+    val detailMenu: com.example.healthcare.domain.FranchiseMenu? = null,
+    val foodQuantity: String = "",
+    val foodQuantityUnit: String = "",
+    val sourceDescription: String? = null,
+    val storedAmountSnapshot: RecordedAmountSnapshot? = null,
     val estimatedCarbohydrateGrams: Double? = null,
     val estimatedProteinGrams: Double? = null,
     val estimatedFatGrams: Double? = null,
@@ -1794,7 +1973,17 @@ data class AddRecordUiState(
     val selectedBarcode: String? = null,
     val pendingProductBarcode: String? = null,
     val recordSource: RecordSource = RecordSource.MANUAL
-)
+) {
+    val amountChoices: List<FoodAmountUnit> get() {
+        selectedFood?.let { return FoodAmountPolicy.choices(it) }
+        val snapshot = storedAmountSnapshot ?: return emptyList()
+        val choices = mutableListOf(FoodAmountUnit(snapshot.unit, snapshot.basisPerUnit, snapshot.basisUnit,
+            "저장 당시 ${RecordedAmountSnapshot.format(snapshot.basisPerUnit)}${snapshot.basisUnit} / 1${snapshot.unit}", PortionQuality.VERIFIED_CONVERSION))
+        if (snapshot.basisUnit != snapshot.unit) choices += FoodAmountUnit(snapshot.basisUnit, 1.0, snapshot.basisUnit,
+            "저장 당시 영양정보 기준", PortionQuality.WEIGHT_ONLY)
+        return choices
+    }
+}
 
 enum class CapturePurpose { FOOD_PHOTO, NUTRITION_LABEL }
 
@@ -1921,3 +2110,5 @@ data class EditablePhotoFoodItem(
     val verifiedReferenceUnit: String? = null,
     val nutritionMatchMessage: String? = null
 )
+
+internal fun AddRecordUiState.draftValues(): List<Any?> = listOf(foodName, calories, servingAmount, servingUnit, foodQuantity, foodQuantityUnit, mealType, date, time, memo, companionFoods, saveAsFrequent)

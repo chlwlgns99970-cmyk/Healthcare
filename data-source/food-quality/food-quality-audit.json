@@ -1,0 +1,45 @@
+{
+  "parserVersion": "linked-food-metadata-v2",
+  "checkedAt": "2026-10-04",
+  "before": {
+    "totalFoods": 31680,
+    "kcal": 31680,
+    "macroComplete": 18234,
+    "officialServing": 11979,
+    "householdUnitEvidence": 465,
+    "ingredientsKnownPartialOrComplete": 33,
+    "ingredientsCompleteDeclaration": 0,
+    "allergenEvidenceKnown": 4,
+    "allergenCompleteDeclaration": 2,
+    "foodGroupsVerified": 33,
+    "provenanceLinked": 31680
+  },
+  "after": {
+    "totalFoods": 67354,
+    "kcal": 67354,
+    "macroComplete": 53702,
+    "officialServing": 47291,
+    "householdUnitEvidence": 1233,
+    "ingredientsKnownPartialOrComplete": 599,
+    "ingredientsCompleteDeclaration": 3,
+    "allergenEvidenceKnown": 478,
+    "allergenCompleteDeclaration": 280,
+    "foodGroupsVerified": 184,
+    "provenanceLinked": 67354
+  },
+  "metadataIdentities": 70016,
+  "joinConflicts": [],
+  "allFoodAndMenuEvidence": {
+    "ingredientKnown": 1475,
+    "allergenKnown": 1188,
+    "allergenCompleteLabel": 454,
+    "foodGroupKnown": 184
+  },
+  "sidecarSha256": "4D11A76B460FCC07A86C158FC724FA7A40776189A3C74148EE570A735F07B63E",
+  "coveragePolicy": "Partial reviewed composition counts separately from full ingredient and allergen declarations; source classification does not certify recipe composition.",
+  "unresolvedProductIngredients": {
+    "exactReportNumberRestored": 47145,
+    "officialApi": "https://www.foodsafetykorea.go.kr/api/openApiInfo.do?svc_no=C002",
+    "publicSearchProbe": "Official domestic-food search AJAX returns HTML instead of requested JSON, both normal and session requests; authenticated C002 API needs a service key. No value inferred."
+  }
+}

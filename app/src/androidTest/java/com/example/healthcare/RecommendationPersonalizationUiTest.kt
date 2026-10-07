@@ -91,8 +91,10 @@ class RecommendationPersonalizationUiTest {
     private val viewModels = ViewModelStore()
     private lateinit var focusManager: FocusManager
     private var nativeDensity = 1f
+    private var originalMetadata: Collection<com.example.healthcare.domain.FoodMetadata> = emptyList()
 
     @Before fun isolatedQaFixture() {
+        originalMetadata = com.example.healthcare.domain.FoodMetadataPolicy.snapshot()
         val context = InstrumentationRegistry.getInstrumentation().targetContext
         assertEquals("com.example.healthcare.qa", context.packageName)
         database = Room.inMemoryDatabaseBuilder(context, AppDatabase::class.java).build()
@@ -105,6 +107,7 @@ class RecommendationPersonalizationUiTest {
     @After fun closeFixture() {
         InstrumentationRegistry.getInstrumentation().runOnMainSync { viewModels.clear() }
         database.close()
+        com.example.healthcare.domain.FoodMetadataPolicy.install(originalMetadata)
     }
 
     @Test fun firstTasteSetupAllowsSkipAndAccessibleChipsAt360DpAndLargeText() {
@@ -626,13 +629,19 @@ class RecommendationPersonalizationUiTest {
                 id = "taste-food-$index", sourceType = "K-FIND", sourceFoodCode = "taste-food-$index",
                 name = if (index == 0) "오이 현미밥" else "두부 현미밥 $index",
                 normalizedName = if (index == 0) "오이현미밥" else "두부현미밥$index",
-                category = "밥류", referenceAmount = 100.0, unit = "g", energyKcal = kcal.toDouble(),
+                    // Exercise preferences at the supplied measured amount, not invented rice servings.
+                    category = "QA 검증 메뉴", referenceAmount = 100.0, unit = "g", energyKcal = kcal.toDouble(),
                 carbohydrateGrams = kcal * 0.55 / 4, proteinGrams = kcal * 0.20 / 4,
                 fatGrams = kcal * 0.25 / 9, servingDescription = "100g 기준", dataVersion = "test",
                 createdAt = 0, updatedAt = 0
             )
         }
         database.foodItemDao().upsertAll(foods)
+        com.example.healthcare.domain.FoodMetadataPolicy.install(originalMetadata + foods.map {
+            com.example.healthcare.domain.FoodMetadata(foodId=it.id, allergens=setOf("대두"),
+                allergenInfoComplete=true, allergenStatus="CONFIRMED_LABEL",
+                sourceReference="https://qa.invalid/isolated-label/${it.id}", checkedAt=LocalDate.now().toString())
+        })
         database.mealCoachDao().upsertTemplates(calories.mapIndexed { index, kcal ->
             MealTemplate(
                 id = "taste-menu-$index", name = foods[index].name,

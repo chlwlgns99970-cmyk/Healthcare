@@ -339,3 +339,7 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+    # The current bundled subset is joined only by exact source food code.
+    # Restore usable source fields without adding guessed recipes or allergens.
+    from extract_food_identity_fields import main as restore_identity_fields
+    restore_identity_fields()

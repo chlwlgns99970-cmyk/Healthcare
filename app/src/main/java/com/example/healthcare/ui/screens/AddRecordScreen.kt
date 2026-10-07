@@ -61,6 +61,7 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -97,7 +98,14 @@ import com.example.healthcare.data.photo.model.PhotoAnalysisPolicy
 import com.example.healthcare.data.photo.model.PhotoAnalysisProgress
 import com.example.healthcare.ui.theme.HealthCareTheme
 import com.example.healthcare.ui.viewmodel.AddRecordUiState
+import com.example.healthcare.ui.viewmodel.draftValues
 import com.example.healthcare.ui.viewmodel.AddRecordViewModel
+import com.example.healthcare.ui.components.FoodAmountInput
+import com.example.healthcare.ui.components.RecordFoodMetadataNotice
+import com.example.healthcare.domain.FoodAmountPolicy
+import com.example.healthcare.domain.FoodMetadataPolicy
+import com.example.healthcare.domain.FranchiseCatalog
+import com.example.healthcare.domain.RecordedAmountSnapshot
 import com.example.healthcare.ui.viewmodel.CapturePurpose
 import com.example.healthcare.ui.viewmodel.EditablePhotoFoodItem
 import com.example.healthcare.ui.viewmodel.PhotoAnalysisError
@@ -127,6 +135,13 @@ fun AddRecordScreen(
     onImmersiveChanged: (Boolean) -> Unit = {},
     onOpenHistory: () -> Unit = {}
 ) {
+    val pendingPhotoSave by viewModel?.photoSaveAcknowledgement?.pending?.collectAsState()
+        ?: remember { mutableStateOf<Unit?>(null) }
+    if (pendingPhotoSave != null) {
+        com.example.healthcare.ui.components.RecordSavedDialog(false) {
+            if (viewModel?.confirmPhotoSave() == true) onBack()
+        }
+    }
     val context = LocalContext.current
     val uiStateHolder = viewModel?.uiState?.collectAsStateCompat() ?: remember { mutableStateOf(AddRecordUiState()) }
     val foodsHolder = viewModel?.frequentFoods?.collectAsStateCompat()
@@ -144,7 +159,51 @@ fun AddRecordScreen(
     val uiState = uiStateHolder.value
     val photoState = photoHolder.value
     val smartState = smartHolder.value
+    val registerExitGuard = com.example.healthcare.ui.LocalDraftExitGuardRegistration.current
+    val draftGeneration by viewModel?.draftGeneration?.collectAsStateCompat() ?: remember { mutableStateOf(0) }
+    val draftBaseline = remember(draftGeneration) {
+        uiState.copy(date = initialDate ?: uiState.date, mealType = initialMealType ?: uiState.mealType).draftValues()
+    }
+    androidx.compose.runtime.SideEffect {
+        registerExitGuard(com.example.healthcare.ui.DraftExitGuard(
+            hasChanges = uiState.draftValues() != draftBaseline,
+            isSaving = uiState.isSaving,
+            discard = { viewModel?.resetRecordDraft() }
+        ))
+    }
+    var pendingRecent by remember { mutableStateOf<MealRecord?>(null) }
+    var pendingSaved by remember { mutableStateOf<FrequentFood?>(null) }
+    val repeatRecent: (MealRecord) -> Unit = { meal ->
+        if (!uiState.isSaving) {
+            if (initialMealType != null) viewModel?.repeatRecentMeal(meal) { onRecordSaved(initialMealType) }
+            else pendingRecent = meal
+        }
+    }
+    val repeatSaved: (FrequentFood) -> Unit = { food ->
+        if (!uiState.isSaving) {
+            if (initialMealType != null) viewModel?.repeatSavedFood(food, onRecordSaved)
+            else pendingSaved = food
+        }
+    }
+    if (pendingRecent != null || pendingSaved != null) {
+        AlertDialog(onDismissRequest = { pendingRecent = null; pendingSaved = null },
+            title = { Text("어느 식사에 기록할까요?") },
+            text = { Column {
+                MealType.entries.forEach { mealType ->
+                    TextButton(enabled = !uiState.isSaving, onClick = {
+                        viewModel?.onMealTypeChange(mealType)
+                        pendingRecent?.let { viewModel?.repeatRecentMeal(it) { onRecordSaved(mealType) } }
+                        pendingSaved?.let { viewModel?.repeatSavedFood(it, onRecordSaved) }
+                        pendingRecent = null; pendingSaved = null
+                    }, modifier = Modifier.fillMaxWidth().heightIn(min = 48.dp)) { Text(mealType.displayName) }
+                }
+            } }, confirmButton = {},
+            dismissButton = { TextButton(onClick = { pendingRecent = null; pendingSaved = null }) { Text("취소") } })
+    }
 
+    val searchListState = rememberLazyListState()
+    val brandMenuListState = rememberLazyListState()
+    LaunchedEffect(viewModel) { viewModel?.beginRecordSession() }
     LaunchedEffect(viewModel, initialDate) {
         initialDate?.let { viewModel?.onDateChange(it) }
     }
@@ -166,6 +225,7 @@ fun AddRecordScreen(
             smartState.isCompanionSearch -> viewModel?.cancelCompanionSearch()
             photoState !is PhotoAnalysisUiState.Idle -> viewModel?.cancelPhotoFlow()
             smartState.mode == SmartInputMode.QUICK_RECORD -> viewModel?.returnToFoodSearch()
+            smartState.mode == SmartInputMode.SEARCH && smartState.selectedBrand != null -> viewModel?.clearSelectedProductBrand()
             smartState.mode == SmartInputMode.SEARCH && returnToParentFromSearch -> onBack()
             smartState.mode == SmartInputMode.HUB -> onBack()
             else -> viewModel?.showSmartInputHub()
@@ -295,6 +355,7 @@ fun AddRecordScreen(
                 onNutritionLabel = requestNutritionLabelCapture, onSearch = { viewModel?.showFoodSearch() },
                 onSearchQueryChange = searchQueryChanged,
                 onFoodSelected = { viewModel?.selectSearchFood(it) },
+                    onOfficialMenuSelected = { viewModel?.selectOfficialFranchiseMenu(it) },
                 onUseBarcodeItem = { viewModel?.useBarcodeItem() },
                 onOcrCandidateSelected = { viewModel?.selectOcrCandidate(it) },
                 onOcrAmountChange = { viewModel?.onOcrConsumedAmountChange(it) },
@@ -341,7 +402,7 @@ fun AddRecordScreen(
             onDateChange = { viewModel?.onDateChange(it) },
             onTimeChange = { viewModel?.onTimeChange(it) },
             onMemoChange = { viewModel?.onMemoChange(it) },
-            onSave = { viewModel?.savePhotoAnalysisRecords(onBack) },
+            onSave = { viewModel?.savePhotoAnalysisRecords {} },
             onRetryAnalysis = {
                 viewModel?.analyzePhoto(Locale.getDefault().toLanguageTag(), ZoneId.systemDefault().id)
             },
@@ -362,6 +423,7 @@ fun AddRecordScreen(
                     onSearch = { viewModel?.showFoodSearch() },
                     onSearchQueryChange = searchQueryChanged,
                     onFoodSelected = { viewModel?.selectSearchFood(it) },
+                    onOfficialMenuSelected = { viewModel?.selectOfficialFranchiseMenu(it) },
                     onUseBarcodeItem = { viewModel?.useBarcodeItem() },
                     onOcrCandidateSelected = { viewModel?.selectOcrCandidate(it) },
                     onOcrAmountChange = { viewModel?.onOcrConsumedAmountChange(it) },
@@ -371,7 +433,9 @@ fun AddRecordScreen(
                     onConfirmOcr = { viewModel?.confirmOcrResult() },
                     onManual = { viewModel?.showManualEntry() },
                     onRegisterBarcode = { viewModel?.showBarcodeManualRegistration() },
-                    onRepeatRecent = { viewModel?.repeatRecentMeal(it, onBack) },
+                    onRepeatRecent = repeatRecent,
+                    onRecentAmountSelected = { viewModel?.openRecentAmount(it) },
+                    onRepeatSaved = repeatSaved,
                     onSearchModeSelected = { viewModel?.selectFoodSearchMode(it) },
                     onBrandSelected = { viewModel?.selectProductBrand(it) },
                     onBrandBack = { viewModel?.clearSelectedProductBrand() },
@@ -436,6 +500,7 @@ fun AddRecordScreen(
             )
         } else {
             SmartFoodInputScreen(
+                searchListState = if (smartState.selectedBrand == null) searchListState else brandMenuListState,
                 state = smartState,
                 recentMeals = recentMealsHolder.value,
                 dateMeals = selectedDateMealsHolder.value,
@@ -446,6 +511,7 @@ fun AddRecordScreen(
                 onSearch = { viewModel?.showFoodSearch() },
                 onSearchQueryChange = searchQueryChanged,
                 onFoodSelected = { viewModel?.selectSearchFood(it) },
+                    onOfficialMenuSelected = { viewModel?.selectOfficialFranchiseMenu(it) },
                 onUseBarcodeItem = { viewModel?.useBarcodeItem() },
                 onOcrCandidateSelected = { viewModel?.selectOcrCandidate(it) },
                 onOcrAmountChange = { viewModel?.onOcrConsumedAmountChange(it) },
@@ -455,7 +521,9 @@ fun AddRecordScreen(
                 onConfirmOcr = { viewModel?.confirmOcrResult() },
                 onManual = { viewModel?.showManualEntry() },
                 onRegisterBarcode = { viewModel?.showBarcodeManualRegistration() },
-                onRepeatRecent = { viewModel?.repeatRecentMeal(it, onBack) },
+                onRepeatRecent = repeatRecent,
+                    onRecentAmountSelected = { viewModel?.openRecentAmount(it) },
+                    onRepeatSaved = repeatSaved,
                 onSearchModeSelected = { viewModel?.selectFoodSearchMode(it) },
                 onBrandSelected = { viewModel?.selectProductBrand(it) },
                 onBrandBack = { viewModel?.clearSelectedProductBrand() },
@@ -512,7 +580,7 @@ internal fun QuickFoodRecordScreen(
         containerColor = MaterialTheme.colorScheme.background,
         topBar = {
             WellnessTopAppBar(
-                title = "빠른 기록",
+                title = "음식 상세",
                 navigationIcon = {
                     IconButton(onClick = onBack, modifier = Modifier.size(48.dp)) {
                         Icon(Icons.AutoMirrored.Rounded.ArrowBack, contentDescription = "음식 검색으로 돌아가기")
@@ -587,6 +655,11 @@ internal fun QuickFoodRecordScreen(
                     }
                 }
             }
+            selectedFood?.let { food ->
+                item {
+                    FoodDetailEvidence(food)
+                }
+            }
             recent?.takeIf { it.servingAmount != null && !it.servingUnit.isNullOrBlank() }?.let { meal ->
                 item {
                     OutlinedButton(
@@ -598,7 +671,23 @@ internal fun QuickFoodRecordScreen(
                 }
             }
             item {
-                PortionSelector(
+                Text("얼마나 먹었나요?", style = MaterialTheme.typography.titleMedium)
+                if (state.amountChoices.isNotEmpty()) FoodAmountInput(
+                    amount = state.foodQuantity, unit = state.foodQuantityUnit,
+                    choices = state.amountChoices,
+                    onAmount = { viewModel?.onFoodQuantityChange(it) },
+                    onUnit = { viewModel?.onFoodQuantityUnitChange(it) },
+                    enabled = !state.isSaving,
+                    error = if (state.foodQuantity.isNotBlank() && FoodAmountPolicy.parseAmount(state.foodQuantity) == null)
+                        "0보다 큰 계산 가능한 수량을 입력해 주세요." else null
+                )
+                RecordFoodMetadataNotice(state.selectedFoodItemId, state.foodName, state.sourceDescription)
+                if (state.amountChoices.isNotEmpty() && !state.portionHelpOpen) {
+                    OutlinedButton(onClick = { viewModel?.startUnknownPortion() }, modifier = Modifier.fillMaxWidth()) {
+                        Text("먹은 양을 잘 모르겠어요")
+                    }
+                }
+                if (state.amountChoices.isEmpty() || state.portionHelpOpen) PortionSelector(
                     state = state,
                     onPreset = { viewModel?.selectPortionPreset(it) },
                     onReferenceRatio = { ratio, label -> viewModel?.selectReferencePortion(ratio, label) },
@@ -608,7 +697,7 @@ internal fun QuickFoodRecordScreen(
                     onPrecise = { viewModel?.useCustomServing() }
                 )
             }
-            if (state.preciseAmountOpen) {
+            if (state.preciseAmountOpen && state.amountChoices.isEmpty()) {
                 item {
                     WellnessCard {
                         Column(
@@ -679,6 +768,96 @@ internal fun QuickFoodRecordScreen(
     }
 }
 
+/** Uses only source facts already attached to this exact food identity. */
+@Composable
+private fun FoodDetailEvidence(food: com.example.healthcare.data.entity.FoodItem) {
+    FoodDetailEvidenceModel(com.example.healthcare.domain.FoodDetailPolicy.forFood(food))
+}
+
+@Composable
+internal fun FoodDetailEvidenceModel(model: com.example.healthcare.domain.FoodDetailModel) {
+    WellnessCard {
+        Column(Modifier.fillMaxWidth().padding(WellnessSpacing.CardContent), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+            Text("칼로리 근거", style = MaterialTheme.typography.titleMedium)
+            Text("${model.nutritionBasis} · ${model.nutrition.first().value}",
+                style = MaterialTheme.typography.bodyLarge, color = MaterialTheme.colorScheme.primary)
+            Text(model.nutrition.drop(1).joinToString(" · ") { "${it.label} ${it.value}" },
+                style = MaterialTheme.typography.bodyMedium)
+            if (model.basisNeedsReview) Text("원문 영양 기준량은 검토가 필요해요. 확인한 먹은 양과 칼로리를 직접 입력해 주세요.",
+                style = MaterialTheme.typography.bodySmall)
+            if (model.nutrition.all { it.value == "미확인" }) Text("현재 확인된 상세 영양정보가 없습니다.",
+                style = MaterialTheme.typography.bodyMedium)
+            model.facts.forEach { fact ->
+                Text("${fact.label} · ${fact.value}", style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant)
+            }
+        }
+    }
+    model.ingredientText?.let { ingredients ->
+        WellnessCard {
+            Column(Modifier.fillMaxWidth().padding(WellnessSpacing.CardContent), verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                Text(model.ingredientLabel, style = MaterialTheme.typography.titleMedium)
+                Text(ingredients, style = MaterialTheme.typography.bodyMedium)
+                Text(if (model.ingredientIsReference) "공공 조리자료의 참고 구성입니다. 선택한 음식의 실제 배합은 달라질 수 있어요."
+                    else "원문에서 확인한 재료 정보입니다. 재료별 양과 영양 근거가 있는 구성만 아래에 표시해요.",
+                    style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+            }
+        }
+    }
+    if (model.referenceRecipe.isNotEmpty()) WellnessCard {
+        Column(Modifier.fillMaxWidth().padding(WellnessSpacing.CardContent), verticalArrangement = Arrangement.spacedBy(6.dp)) {
+            Text("공공 레시피 원문 참고", style = MaterialTheme.typography.titleMedium)
+            model.referenceRecipe.forEach { Text("${it.label} · ${it.value}", style = MaterialTheme.typography.bodySmall) }
+            Text("별도 공개 레시피의 원문 재료 표입니다. 선택한 음식의 실제 배합이나 기록 영양값을 바꾸지 않으며, 재료별 영양 연결이 완료된 구성은 아닙니다.",
+                style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+        }
+    }
+    RecipeReferenceCard(model.foodId)
+}
+
+@Composable
+internal fun RecipeReferenceCard(foodId: String, showOriginalBasis: Boolean = false) {
+    com.example.healthcare.domain.RecipeCaloriePolicy.lookupCompositions(foodId).forEach { recipeRows ->
+    recipeRows.firstOrNull()?.let { recipe ->
+        WellnessCard {
+            Column(Modifier.fillMaxWidth().padding(WellnessSpacing.CardContent), verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                if (showOriginalBasis && recipe.foodReferenceKcal != null && recipe.foodReferenceAmount != null) {
+                    Text("원문 영양 기준 · 기준량 검토 필요",style = MaterialTheme.typography.titleSmall)
+                    Text("${RecordedAmountSnapshot.format(recipe.foodReferenceAmount)}${recipe.foodReferenceUnit} 기준 · ${RecordedAmountSnapshot.format(recipe.foodReferenceKcal)} kcal")
+                    Text("원문 기준량을 그대로 표시합니다. 실제 먹은 양의 열량은 확인 후 직접 입력해 주세요.",style = MaterialTheme.typography.bodySmall)
+                }
+                val surveyAverage = recipe.compositionKind == "SURVEY_AVERAGE"
+                Text(if (surveyAverage) "재료별 예상 열량 · 공공 조사 평균 참고 구성"
+                    else if (recipe.compositionKind == "ORIGINAL" && recipe.recipeComplete) "재료별 예상 열량"
+                    else if (recipe.compositionKind == "ORIGINAL") "재료별 예상 열량 · 확인 가능한 재료 기준"
+                    else "재료별 예상 열량 · 공식 레시피 참고 구성", style = MaterialTheme.typography.titleMedium)
+                if (recipe.sourceInstitution.isNotBlank()) Text("출처 기관 · ${recipe.sourceInstitution}", style = MaterialTheme.typography.bodySmall)
+                if (recipe.compositionKind == "ORIGINAL") Text("원본 레시피에서 확인한 구성", style = MaterialTheme.typography.bodySmall)
+                else Text(if (surveyAverage) "별도 공공 조사 평균 참고 구성 · 원본의 누락 중량을 대체한 값이 아닙니다."
+                    else "별도 공식 참고 구성 · 원본의 누락 중량을 대체한 값이 아닙니다.", style = MaterialTheme.typography.bodySmall)
+                if (surveyAverage) Text("식이 조사 평균 자료로, 음식 조리를 위한 정보로 사용하기에는 적절하지 않습니다.", style = MaterialTheme.typography.bodySmall)
+                if (!surveyAverage && recipe.recipeName.contains("김밥")) {
+                    Text("공식 김밥 레시피 참고 구성 · 선택한 음식의 실제 배합은 아닙니다.", style = MaterialTheme.typography.bodySmall)
+                }
+                Text("${recipe.recipeName} · ${recipe.recipeBasis}", style = MaterialTheme.typography.bodyMedium)
+                Text(recipe.ingredientText, style = MaterialTheme.typography.bodySmall)
+                recipeRows.forEach { row ->
+                    Text("${row.ingredientName} ${RecordedAmountSnapshot.format(row.amountGrams)}g · 약 ${kotlin.math.round(row.estimatedKcal).toInt()} kcal")
+                }
+                Text(if (surveyAverage) "공공 조사 평균 재료량과 개별 식품 영양정보를 기준으로 계산한 참고 예상값입니다."
+                    else "공식 구성의 재료량과 개별 식품 영양정보를 기준으로 계산한 참고 예상값입니다.", style = MaterialTheme.typography.bodySmall)
+                Text(if (recipe.recipeComplete && surveyAverage) "공공 조사 평균 구성의 모든 재료가 연결되었습니다."
+                    else if (recipe.recipeComplete) "공식 참고 레시피의 모든 주요 재료가 연결되었습니다."
+                    else "확인 가능한 재료 기준 · 일부 재료만 표시합니다. 전체 재료의 합계가 아닙니다.", style = MaterialTheme.typography.bodySmall)
+                Text("이 참고 레시피는 선택한 식품의 확정 배합이 아니며, 기록할 열량에는 반영하지 않습니다.", style = MaterialTheme.typography.bodySmall)
+                Text("레시피 출처 · ${recipe.recipeUrl}", style = MaterialTheme.typography.bodySmall)
+                recipeRows.forEach { row -> Text("재료 영양 출처 · ${row.nutrientName} · ${row.nutrientUrl}", style = MaterialTheme.typography.bodySmall) }
+            }
+        }
+    }
+    }
+}
+
 private fun formatQuickAmount(value: Double): String =
     if (value % 1.0 == 0.0) value.toInt().toString() else value.toString()
 
@@ -701,7 +880,8 @@ private fun ManualRecordScreen(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text(if (photoPath == null) "식사 기록 추가" else "사진으로 기록") },
+                title = { Text(if (uiState.detailFood != null || uiState.detailMenu != null) "음식 상세"
+                    else if (photoPath == null) "식사 기록 추가" else "사진으로 기록") },
                 navigationIcon = {
                     IconButton(onClick = onBack) {
                         Icon(Icons.AutoMirrored.Rounded.ArrowBack, contentDescription = "뒤로 가기")
@@ -715,6 +895,16 @@ private fun ManualRecordScreen(
             contentPadding = PaddingValues(16.dp),
             verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
+            uiState.detailFood?.takeIf { it.id == uiState.selectedFoodItemId }?.let { food ->
+                item { FoodDetailEvidence(food) }
+            }
+            uiState.detailMenu?.takeIf { it.recordName == uiState.foodName }?.let { menu ->
+                item { FoodDetailEvidenceModel(com.example.healthcare.domain.FoodDetailPolicy.forMenu(menu)) }
+            }
+            uiState.selectedFoodItemId?.takeIf { uiState.selectedFood == null && uiState.detailFood == null &&
+                com.example.healthcare.domain.RecipeCaloriePolicy.lookup(it).isNotEmpty() }?.let { foodId ->
+                item { RecipeReferenceCard(foodId,showOriginalBasis = true) }
+            }
             if (photoPath == null) {
                 item {
                     Text("음식 사진을 찍고 기록을 작성해 보세요.")
@@ -798,6 +988,10 @@ private fun ManualRecordScreen(
                 }
             }
             item {
+                uiState.sourceDescription?.let {
+                    Text("먹은 양과 확인한 칼로리를 직접 입력해주세요.", style = MaterialTheme.typography.bodyMedium)
+                    Text(it, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                }
                 OutlinedTextField(
                     value = uiState.foodName,
                     onValueChange = { viewModel?.onFoodNameChange(it) },
@@ -808,7 +1002,11 @@ private fun ManualRecordScreen(
                 )
             }
             item {
-                Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                if (uiState.amountChoices.isNotEmpty()) FoodAmountInput(
+                    amount = uiState.foodQuantity, unit = uiState.foodQuantityUnit,
+                    choices = uiState.amountChoices, onAmount = { viewModel?.onFoodQuantityChange(it) },
+                    onUnit = { viewModel?.onFoodQuantityUnitChange(it) }, enabled = !uiState.isSaving
+                ) else Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                     OutlinedTextField(
                         value = uiState.servingAmount,
                         onValueChange = { viewModel?.onServingAmountChange(it) },
@@ -824,7 +1022,7 @@ private fun ManualRecordScreen(
                     )
                 }
             }
-            if (uiState.referenceCalories != null) {
+            if (uiState.referenceCalories != null && uiState.amountChoices.isEmpty()) {
                 item {
                     Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
                         Text("빠른 섭취량", style = MaterialTheme.typography.titleSmall)

@@ -1,0 +1,9 @@
+{
+  "queries": [
+    "site:foodsafetykorea.go.kr \"토마토소박이\" \"70g\"",
+    "site:foodsafetykorea.go.kr \"딸기잼\" \"재료\" \"g\"",
+    "site:foodsafetykorea.go.kr \"바나나스무디\" 레시피",
+    "site:foodsafetykorea.go.kr \"새우\" \"달걀찜\" 재료"
+  ],
+  "result": "Empty search results\nNo results were found for the provided queries"
+}

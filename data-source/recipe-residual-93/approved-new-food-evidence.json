@@ -1,0 +1,58 @@
+[
+  {
+    "originalRecipeId": "MFDS-186",
+    "name": "두릅산적",
+    "foodId": "rda-menuzen-d093044",
+    "foodCreated": true,
+    "sourceType": "RDA-MENUZEN",
+    "sourceFoodCode": "D093044",
+    "referenceId": "MENUZEN-D093044",
+    "sourceUrl": "https://www.nics.go.kr/food/kfi/mgnNewmenumkFoodSelectNew/selectFoodDetail.json?fdCode=D093044",
+    "rawFile": "data-source/recipe-full-reference/raw/3b6a77dc29f47bf3fba9",
+    "sourceSha256": "d259aaf0e287afc3af730296b72fc0a20a317d85bcde0dda1a04682b8d18b9b5",
+    "reportedNutritionHeader": {
+      "fdNm": "두릅적",
+      "totalFat": "12.9",
+      "totalFoodWgh": "144.8",
+      "totalProtein": "14.4",
+      "lclasNm": "전류",
+      "totalEnergy": "221.8",
+      "totalCarbohydrate": "11.1"
+    },
+    "normalization": "기관 totalEnergy/totalCarbohydrate/totalProtein/totalFat/totalFoodWgh 그대로. 자체 ingredient kcal 합계 사용 0",
+    "duplicateRowsScanned": 67354,
+    "sameExistingFoodCandidates": [],
+    "nutritionUnknown": [
+      "sodiumMilligrams"
+    ],
+    "checkedAt": "2026-10-05"
+  },
+  {
+    "originalRecipeId": "MFDS-238",
+    "name": "도라지양념구이",
+    "foodId": "rda-menuzen-d083004",
+    "foodCreated": true,
+    "sourceType": "RDA-MENUZEN",
+    "sourceFoodCode": "D083004",
+    "referenceId": "MENUZEN-D083004",
+    "sourceUrl": "https://www.nics.go.kr/food/kfi/mgnNewmenumkFoodSelectNew/selectFoodDetail.json?fdCode=D083004",
+    "rawFile": "data-source/recipe-full-reference/raw/2739090ed1ac97d4c7d8",
+    "sourceSha256": "12e8ec771ef9e8543f5388852fc4bbb37620754f97c831ab17aa9f7623b0e834",
+    "reportedNutritionHeader": {
+      "fdNm": "도라지구이(고추장)",
+      "totalFat": "8.4",
+      "totalFoodWgh": "112",
+      "totalProtein": "2.2",
+      "lclasNm": "구이류",
+      "totalEnergy": "167.9",
+      "totalCarbohydrate": "22.7"
+    },
+    "normalization": "기관 totalEnergy/totalCarbohydrate/totalProtein/totalFat/totalFoodWgh 그대로. 자체 ingredient kcal 합계 사용 0",
+    "duplicateRowsScanned": 67354,
+    "sameExistingFoodCandidates": [],
+    "nutritionUnknown": [
+      "sodiumMilligrams"
+    ],
+    "checkedAt": "2026-10-05"
+  }
+]

@@ -1,0 +1,216 @@
+[
+  {
+    "originalGenericName": "고등어조림",
+    "selectedReferenceId": "MENUZEN-D111005",
+    "selectedReferenceName": "고등어조림(고추장)",
+    "ingredientOverlap": 10,
+    "candidateIds": [
+      "MENUZEN-D111005",
+      "MENUZEN-D111053"
+    ],
+    "reason": "동일 일반 음식명·조리형태의 공식 명명 변형. 완전 구성과 원본 재료 문맥의 겹침을 우선; 원본 배합으로 확정하지 않고 변형명을 그대로 표시"
+  },
+  {
+    "originalGenericName": "고등어찌개",
+    "selectedReferenceId": "MENUZEN-D061004",
+    "selectedReferenceName": "고등어찌개(고추장, 된장)",
+    "ingredientOverlap": 6,
+    "candidateIds": [
+      "MENUZEN-D061004"
+    ],
+    "reason": "동일 일반 음식명·조리형태의 공식 명명 변형. 완전 구성과 원본 재료 문맥의 겹침을 우선; 원본 배합으로 확정하지 않고 변형명을 그대로 표시"
+  },
+  {
+    "originalGenericName": "골뱅이무침",
+    "selectedReferenceId": "MENUZEN-D133002",
+    "selectedReferenceName": "골뱅이무침(초고추장)",
+    "ingredientOverlap": 6,
+    "candidateIds": [
+      "MENUZEN-D133002"
+    ],
+    "reason": "동일 일반 음식명·조리형태의 공식 명명 변형. 완전 구성과 원본 재료 문맥의 겹침을 우선; 원본 배합으로 확정하지 않고 변형명을 그대로 표시"
+  },
+  {
+    "originalGenericName": "김밥",
+    "selectedReferenceId": "MENUZEN-D016001",
+    "selectedReferenceName": "김밥(게맛살)",
+    "ingredientOverlap": 5,
+    "candidateIds": [
+      "MENUZEN-D016001",
+      "MENUZEN-D016003",
+      "MENUZEN-D016004",
+      "MENUZEN-D016002"
+    ],
+    "reason": "동일 일반 음식명·조리형태의 공식 명명 변형. 완전 구성과 원본 재료 문맥의 겹침을 우선; 원본 배합으로 확정하지 않고 변형명을 그대로 표시"
+  },
+  {
+    "originalGenericName": "김치찌개",
+    "selectedReferenceId": "MENUZEN-D065004",
+    "selectedReferenceName": "김치찌개(돼지고기, 된장)",
+    "ingredientOverlap": 11,
+    "candidateIds": [
+      "MENUZEN-D065004",
+      "MENUZEN-D065003",
+      "MENUZEN-D065006",
+      "MENUZEN-D065005"
+    ],
+    "reason": "동일 일반 음식명·조리형태의 공식 명명 변형. 완전 구성과 원본 재료 문맥의 겹침을 우선; 원본 배합으로 확정하지 않고 변형명을 그대로 표시"
+  },
+  {
+    "originalGenericName": "낙지볶음",
+    "selectedReferenceId": "MENUZEN-D101006",
+    "selectedReferenceName": "낙지볶음(고추장)",
+    "ingredientOverlap": 11,
+    "candidateIds": [
+      "MENUZEN-D101006"
+    ],
+    "reason": "동일 일반 음식명·조리형태의 공식 명명 변형. 완전 구성과 원본 재료 문맥의 겹침을 우선; 원본 배합으로 확정하지 않고 변형명을 그대로 표시"
+  },
+  {
+    "originalGenericName": "닭볶음탕",
+    "selectedReferenceId": "MENUZEN-D112006",
+    "selectedReferenceName": "닭볶음탕(고추장)",
+    "ingredientOverlap": 8,
+    "candidateIds": [
+      "MENUZEN-D112006"
+    ],
+    "reason": "동일 일반 음식명·조리형태의 공식 명명 변형. 완전 구성과 원본 재료 문맥의 겹침을 우선; 원본 배합으로 확정하지 않고 변형명을 그대로 표시"
+  },
+  {
+    "originalGenericName": "돼지갈비찜",
+    "selectedReferenceId": "MENUZEN-D072003",
+    "selectedReferenceName": "돼지갈비찜(고추장)",
+    "ingredientOverlap": 5,
+    "candidateIds": [
+      "MENUZEN-D072003"
+    ],
+    "reason": "동일 일반 음식명·조리형태의 공식 명명 변형. 완전 구성과 원본 재료 문맥의 겹침을 우선; 원본 배합으로 확정하지 않고 변형명을 그대로 표시"
+  },
+  {
+    "originalGenericName": "돼지고기장조림",
+    "selectedReferenceId": "MENUZEN-D112008",
+    "selectedReferenceName": "돼지고기장조림(메추리알)",
+    "ingredientOverlap": 7,
+    "candidateIds": [
+      "MENUZEN-D112008",
+      "MENUZEN-D112026",
+      "MENUZEN-D112007"
+    ],
+    "reason": "동일 일반 음식명·조리형태의 공식 명명 변형. 완전 구성과 원본 재료 문맥의 겹침을 우선; 원본 배합으로 확정하지 않고 변형명을 그대로 표시"
+  },
+  {
+    "originalGenericName": "미역국",
+    "selectedReferenceId": "MENUZEN-D051047",
+    "selectedReferenceName": "미역국(멸치)",
+    "ingredientOverlap": 6,
+    "candidateIds": [
+      "MENUZEN-D051047",
+      "MENUZEN-D051049",
+      "MENUZEN-D051045",
+      "MENUZEN-D051044",
+      "MENUZEN-D051048",
+      "MENUZEN-D051050",
+      "MENUZEN-D051127",
+      "MENUZEN-D051129",
+      "MENUZEN-D051043",
+      "MENUZEN-D051046"
+    ],
+    "reason": "동일 일반 음식명·조리형태의 공식 명명 변형. 완전 구성과 원본 재료 문맥의 겹침을 우선; 원본 배합으로 확정하지 않고 변형명을 그대로 표시"
+  },
+  {
+    "originalGenericName": "뱅어포구이",
+    "selectedReferenceId": "MENUZEN-D081018",
+    "selectedReferenceName": "뱅어포구이(고추장)",
+    "ingredientOverlap": 4,
+    "candidateIds": [
+      "MENUZEN-D081018"
+    ],
+    "reason": "동일 일반 음식명·조리형태의 공식 명명 변형. 완전 구성과 원본 재료 문맥의 겹침을 우선; 원본 배합으로 확정하지 않고 변형명을 그대로 표시"
+  },
+  {
+    "originalGenericName": "빈대떡",
+    "selectedReferenceId": "MENUZEN-D095010",
+    "selectedReferenceName": "빈대떡(돼지고기)",
+    "ingredientOverlap": 3,
+    "candidateIds": [
+      "MENUZEN-D095010"
+    ],
+    "reason": "동일 일반 음식명·조리형태의 공식 명명 변형. 완전 구성과 원본 재료 문맥의 겹침을 우선; 원본 배합으로 확정하지 않고 변형명을 그대로 표시"
+  },
+  {
+    "originalGenericName": "알탕",
+    "selectedReferenceId": "MENUZEN-D061041",
+    "selectedReferenceName": "알탕(대구)",
+    "ingredientOverlap": 7,
+    "candidateIds": [
+      "MENUZEN-D061041"
+    ],
+    "reason": "동일 일반 음식명·조리형태의 공식 명명 변형. 완전 구성과 원본 재료 문맥의 겹침을 우선; 원본 배합으로 확정하지 않고 변형명을 그대로 표시"
+  },
+  {
+    "originalGenericName": "오징어찌개",
+    "selectedReferenceId": "MENUZEN-D061043",
+    "selectedReferenceName": "오징어찌개(고추장)",
+    "ingredientOverlap": 7,
+    "candidateIds": [
+      "MENUZEN-D061043"
+    ],
+    "reason": "동일 일반 음식명·조리형태의 공식 명명 변형. 완전 구성과 원본 재료 문맥의 겹침을 우선; 원본 배합으로 확정하지 않고 변형명을 그대로 표시"
+  },
+  {
+    "originalGenericName": "참나물무침",
+    "selectedReferenceId": "MENUZEN-D132078",
+    "selectedReferenceName": "참나물무침(된장)",
+    "ingredientOverlap": 3,
+    "candidateIds": [
+      "MENUZEN-D132078"
+    ],
+    "reason": "동일 일반 음식명·조리형태의 공식 명명 변형. 완전 구성과 원본 재료 문맥의 겹침을 우선; 원본 배합으로 확정하지 않고 변형명을 그대로 표시"
+  },
+  {
+    "originalGenericName": "칼국수",
+    "selectedReferenceId": "MENUZEN-D031020",
+    "selectedReferenceName": "칼국수(소고기)",
+    "ingredientOverlap": 10,
+    "candidateIds": [
+      "MENUZEN-D031020",
+      "MENUZEN-D031019"
+    ],
+    "reason": "동일 일반 음식명·조리형태의 공식 명명 변형. 완전 구성과 원본 재료 문맥의 겹침을 우선; 원본 배합으로 확정하지 않고 변형명을 그대로 표시"
+  },
+  {
+    "originalGenericName": "느타리버섯볶음",
+    "selectedReferenceId": "MENUZEN-D103032",
+    "selectedReferenceName": "버섯볶음(느타리버섯)",
+    "reason": "공식 제목 버섯볶음(느타리버섯)은 같은 주재료와 볶음 조리형태를 명시. 98g 전체 구성을 독립 참고 레시피로 표시",
+    "identitySource": null
+  },
+  {
+    "originalGenericName": "마늘쫑볶음",
+    "selectedReferenceId": "MENUZEN-D103025",
+    "selectedReferenceName": "마늘종볶음",
+    "reason": "국립국어원: 마늘종의 비표준 표기 마늘쫑",
+    "identitySource": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=73&pageIndex=1&qna_seq=328566"
+  },
+  {
+    "originalGenericName": "임연수구이",
+    "selectedReferenceId": "MENUZEN-D081031",
+    "selectedReferenceName": "임연수어구이",
+    "reason": "제조사 원문: 임연수구이의 생선은 임연수어",
+    "identitySource": "https://www.cjthemarket.com/the/product/product-main?areaNum=10&plnId=300004&prdCd=40190781"
+  },
+  {
+    "originalGenericName": "무조림(무시왁저기)",
+    "selectedReferenceId": "MENUZEN-D113009",
+    "selectedReferenceName": "무조림",
+    "reason": "원본 제목이 무조림의 향토 동의명을 괄호로 명시",
+    "identitySource": null
+  },
+  {
+    "originalGenericName": "밀가루수제비(수제비,밀가루자베기)",
+    "selectedReferenceId": "MENUZEN-D031010",
+    "selectedReferenceName": "수제비(계란, 소고기맛 조미료)",
+    "reason": "원본 제목의 수제비 동의명; 밀가루 수제비의 명명 변형 전체 참고 구성",
+    "identitySource": null
+  }
+]

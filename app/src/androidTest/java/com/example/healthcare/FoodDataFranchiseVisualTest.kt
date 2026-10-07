@@ -98,11 +98,11 @@ class FoodDataFranchiseVisualTest {
             }
         }
         rule.onNodeWithText("알레르기 주의 · 우유 포함").assertIsDisplayed()
-        rule.onNodeWithText("알레르기 주의 · 우유·밀 포함").assertDoesNotExist()
+        rule.onNodeWithText("알레르기 주의 · 밀·우유 포함").assertDoesNotExist()
         capture("recommendation-allergen-known.png")
 
         rule.runOnIdle { state = recommendationState(matchedAllergens = linkedSetOf("우유", "밀")) }
-        rule.onNodeWithText("알레르기 주의 · 우유·밀 포함").assertIsDisplayed()
+        rule.onNodeWithText("알레르기 주의 · 밀·우유 포함").assertIsDisplayed()
         capture("recommendation-allergen-multiple.png")
 
         rule.runOnIdle {
@@ -113,8 +113,8 @@ class FoodDataFranchiseVisualTest {
                 completeMacros = false
             )
         }
-        rule.onNodeWithText("원재료 정보 일부 미확인").assertIsDisplayed()
-        rule.onNodeWithText("알레르기 정보 일부 미확인").assertIsDisplayed()
+        rule.onNodeWithText("원재료 정보 일부 미확인").assertDoesNotExist()
+        rule.onNodeWithText("알레르기 정보 일부 미확인").assertDoesNotExist()
         rule.onNodeWithText("일부 영양정보 없음 · 탄수화물·지방").assertIsDisplayed()
         capture("recommendation-ingredient-partial.png")
 
@@ -156,7 +156,7 @@ class FoodDataFranchiseVisualTest {
             ingredientInfoComplete = ingredientInfoComplete,
             allergenInfoComplete = allergenInfoComplete
         )
-        return MealPlanUiState(recommendations = listOf(recommendation), hasLoaded = true)
+        return MealPlanUiState(recommendations = listOf(recommendation), hasLoaded = true, configuredAllergies = matchedAllergens)
     }
 
     @Test fun captureDistinctRecordHubImages() {

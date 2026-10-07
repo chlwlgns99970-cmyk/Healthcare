@@ -2,6 +2,7 @@ package com.example.healthcare.data.repository
 
 import com.example.healthcare.data.dao.FrequentFoodDao
 import com.example.healthcare.data.entity.FrequentFood
+import com.example.healthcare.data.RecommendationLearningStore
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.map
@@ -9,7 +10,8 @@ import kotlinx.coroutines.flow.map
 /**
  * 자주 먹는 음식 관련 데이터 처리를 담당하는 레포지토리
  */
-open class FoodRepository(private val frequentFoodDao: FrequentFoodDao) {
+open class FoodRepository(private val frequentFoodDao: FrequentFoodDao,
+    private val recommendationLearningStore: RecommendationLearningStore? = null) {
     open val allFoods: Flow<List<FrequentFood>> = frequentFoodDao.getAllFoods()
         .map { foods -> foods.filter(FrequentFood::isFrequent) }
     open val favoriteFoods: Flow<List<FrequentFood>> = frequentFoodDao.getFavoriteFoods()
@@ -57,6 +59,7 @@ open class FoodRepository(private val frequentFoodDao: FrequentFoodDao) {
 
     open suspend fun deleteFood(food: FrequentFood) {
         frequentFoodDao.deleteFood(food)
+        recommendationLearningStore?.favoriteChanged(food, false)
     }
 
     /** 즐겨찾기는 자주 먹는 음식과 독립적으로 유지하며 FoodItem 안정 ID로 중복을 막습니다. */
@@ -77,6 +80,7 @@ open class FoodRepository(private val frequentFoodDao: FrequentFoodDao) {
         if (saved == null) return false
         if (saved.isFrequent) frequentFoodDao.updateFood(saved.copy(isFavorite = false))
         else frequentFoodDao.deleteFood(saved)
+        recommendationLearningStore?.favoriteChanged(saved, false)
         return false
     }
 }

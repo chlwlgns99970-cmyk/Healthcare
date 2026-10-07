@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-10-04",
+  "parserVersion": "catalog-recommendation-portion-review-v1",
+  "previousActualPlanRows": 52,
+  "rowsExceedingOriginalOneMealReference": 16,
+  "distinctFoodsReviewed": 10,
+  "fixedGOnlyReferenceChoices": 8,
+  "discreteHouseholdFoodsRetained": 2,
+  "referenceMeaning": "음식의 1회 분량",
+  "healthMaximumIntroduced": false,
+  "blanketCapApplied": false,
+  "retainedEarlierExactChoices": {
+    "어탕": "150g",
+    "멸치볶음": "50g"
+  },
+  "originalNutritionBasisChanged": 0,
+  "templateAssetsChanged": 0,
+  "sourceSha256": "1EF3551F9A1D0EE87891D6306FA22BBD6A7FFCC90F2C70A4A184DBFE3FCE6EA6"
+}

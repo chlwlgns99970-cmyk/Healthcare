@@ -1,0 +1,829 @@
+[
+  {
+    "url": "https://mhc.cbe.go.kr/upload/dept-11/na/bbs_1407/2025/02/ABDAAF1F-A12F-34CD-91C9-91A1C282D627.pdf",
+    "checkedAt": "2026-10-06",
+    "status": "CAPTURED",
+    "matches": [
+      {
+        "recipeId": "MFDS-223",
+        "name": "딸기잼",
+        "pages": [
+          3,
+          13,
+          14,
+          34,
+          64,
+          65,
+          67,
+          68,
+          71,
+          74,
+          79,
+          82
+        ]
+      }
+    ],
+    "cacheReused": true,
+    "rawFile": "data-source/recipe-residual-89/raw/24f475672f020daf54f7",
+    "sha256": "d16445a60e6fc0dce76cdf6bcd413222d8aa20ca5a7fc18992a06f06cf84a20a",
+    "bytes": 39974179,
+    "textFile": "data-source/recipe-residual-91/24f475672f020daf54f7.txt",
+    "pageCount": 85
+  },
+  {
+    "url": "https://mhc.cbe.go.kr/upload/na_old/dc520bb5-50ad-48b0-94dc-cf1475f299ba/2017/15129900741.pdf",
+    "checkedAt": "2026-10-06",
+    "status": "CAPTURED",
+    "matches": [
+      {
+        "recipeId": "MFDS-170",
+        "name": "찐만두",
+        "pages": [
+          134
+        ]
+      },
+      {
+        "recipeId": "MFDS-223",
+        "name": "딸기잼",
+        "pages": [
+          72,
+          81
+        ]
+      },
+      {
+        "recipeId": "MFDS-241",
+        "name": "김치콩나물밥",
+        "pages": [
+          7,
+          136
+        ]
+      },
+      {
+        "recipeId": "MFDS-249",
+        "name": "단호박카레라이스",
+        "pages": [
+          9,
+          199
+        ]
+      },
+      {
+        "recipeId": "MFDS-256",
+        "name": "도토리묵밥",
+        "pages": [
+          196
+        ]
+      },
+      {
+        "recipeId": "MFDS-282",
+        "name": "느타리버섯전",
+        "pages": [
+          136
+        ]
+      },
+      {
+        "recipeId": "MFDS-313",
+        "name": "도라지진미채무침",
+        "pages": [
+          70
+        ]
+      },
+      {
+        "recipeId": "MFDS-327",
+        "name": "고추잎김치",
+        "pages": [
+          48
+        ]
+      },
+      {
+        "recipeId": "MFDS-340",
+        "name": "닭봉구이",
+        "pages": [
+          133,
+          145
+        ]
+      },
+      {
+        "recipeId": "MFDS-93",
+        "name": "멍게비빔밥",
+        "pages": [
+          128
+        ]
+      },
+      {
+        "recipeId": "RDA-91764",
+        "name": "곤달비밥(곤드레밥, 곤드레나물밥)",
+        "pages": [
+          70,
+          114
+        ]
+      }
+    ],
+    "cacheReused": true,
+    "rawFile": "data-source/recipe-residual-93/raw/97fb64066acf0a853bab",
+    "sha256": "fd6b5499155486fc58ef01b0332366205395bdc54c659054c62ecc364deabd12",
+    "bytes": 16152684,
+    "textFile": "data-source/recipe-residual-91/97fb64066acf0a853bab.txt",
+    "pageCount": 261
+  },
+  {
+    "url": "https://mhc.cbe.go.kr/upload/na_old/dc520bb5-50ad-48b0-94dc-cf1475f299ba/2018/15440146732.pdf",
+    "checkedAt": "2026-10-06",
+    "status": "CAPTURED",
+    "matches": [
+      {
+        "recipeId": "MFDS-192",
+        "name": "바나나스무디",
+        "pages": [
+          26
+        ]
+      },
+      {
+        "recipeId": "MFDS-223",
+        "name": "딸기잼",
+        "pages": [
+          44
+        ]
+      },
+      {
+        "recipeId": "MFDS-249",
+        "name": "단호박카레라이스",
+        "pages": [
+          31
+        ]
+      },
+      {
+        "recipeId": "MFDS-256",
+        "name": "도토리묵밥",
+        "pages": [
+          8
+        ]
+      },
+      {
+        "recipeId": "RDA-91764",
+        "name": "곤달비밥(곤드레밥, 곤드레나물밥)",
+        "pages": [
+          5,
+          33
+        ]
+      }
+    ],
+    "cacheReused": true,
+    "rawFile": "data-source/recipe-residual-89/raw/2b0b6ba79dc1dfd871a2",
+    "sha256": "eeb84f0b7105596d0f70289a31d6b1abf315449ec4d7742aa2bdccb243c7091d",
+    "bytes": 16136818,
+    "textFile": "data-source/recipe-residual-91/2b0b6ba79dc1dfd871a2.txt",
+    "pageCount": 67
+  },
+  {
+    "url": "https://mhc.cbe.go.kr/upload/na_old/dc520bb5-50ad-48b0-94dc-cf1475f299ba/2019/15731092491.pdf",
+    "checkedAt": "2026-10-06",
+    "status": "CAPTURED",
+    "matches": [
+      {
+        "recipeId": "MFDS-192",
+        "name": "바나나스무디",
+        "pages": [
+          41
+        ]
+      },
+      {
+        "recipeId": "MFDS-223",
+        "name": "딸기잼",
+        "pages": [
+          61
+        ]
+      },
+      {
+        "recipeId": "MFDS-244",
+        "name": "완두콩스프",
+        "pages": [
+          89,
+          99,
+          100
+        ]
+      },
+      {
+        "recipeId": "MFDS-249",
+        "name": "단호박카레라이스",
+        "pages": [
+          46
+        ]
+      },
+      {
+        "recipeId": "MFDS-256",
+        "name": "도토리묵밥",
+        "pages": [
+          11,
+          15,
+          23
+        ]
+      },
+      {
+        "recipeId": "RDA-91764",
+        "name": "곤달비밥(곤드레밥, 곤드레나물밥)",
+        "pages": [
+          20,
+          48
+        ]
+      }
+    ],
+    "cacheReused": true,
+    "rawFile": "data-source/recipe-residual-93/raw/850278b6eab430577e0c",
+    "sha256": "b26d889324775814111a93a4d463d81fd334b7194234a9e47da622399ca10d4d",
+    "bytes": 11057712,
+    "textFile": "data-source/recipe-residual-91/850278b6eab430577e0c.txt",
+    "pageCount": 111
+  },
+  {
+    "url": "https://semie.cooking/recipe-lab/archive/vegetable-buchu-mandu",
+    "checkedAt": "2026-10-06",
+    "status": "CAPTURED",
+    "matches": [
+      {
+        "recipeId": "MFDS-170",
+        "name": "찐만두",
+        "pages": [
+          1
+        ]
+      }
+    ],
+    "cacheReused": true,
+    "rawFile": "data-source/recipe-residual-91/raw/c92b80da287bc7ddcd25",
+    "sha256": "49c584b608d50e48738842566a49e688f8ce23597a562d6d7e1fb9bef9f9734b",
+    "bytes": 67412,
+    "textFile": "data-source/recipe-residual-91/c92b80da287bc7ddcd25.txt",
+    "pageCount": 1
+  },
+  {
+    "url": "https://tfs.ourhome.co.kr/menu/recommend/detail/317",
+    "checkedAt": "2026-10-06",
+    "status": "CAPTURED",
+    "matches": [],
+    "cacheReused": false,
+    "rawFile": "data-source/recipe-residual-91/raw/e447e5fe774df3412404",
+    "sha256": "e08b4075541fc1154cf69d4723ebf6ef908b45c428ba72b312a21512b3621662",
+    "bytes": 90569,
+    "textFile": "data-source/recipe-residual-91/e447e5fe774df3412404.txt",
+    "pageCount": 1
+  },
+  {
+    "url": "https://www.diabetes.or.kr/general/dietary/dietary_07.php",
+    "checkedAt": "2026-10-06",
+    "status": "CAPTURED",
+    "matches": [],
+    "cacheReused": true,
+    "rawFile": "data-source/recipe-full-reference/raw/614b56a820a7f886ee4b",
+    "sha256": "b178f39e87923e86bcbf3b24c2791fc0edb6c141aaf7d022f28225d275e3f3d4",
+    "bytes": 24054,
+    "textFile": "data-source/recipe-residual-91/614b56a820a7f886ee4b.txt",
+    "pageCount": 1
+  },
+  {
+    "url": "https://www.dietitian.or.kr/assets/ver2/food_online/html/main_popup/kda2019recipe2/index_10.html",
+    "checkedAt": "2026-10-06",
+    "status": "FAILED",
+    "matches": [],
+    "error": "HTTP Error 404: "
+  },
+  {
+    "url": "https://www.dietitian.or.kr/assets/ver2/food_online/html/main_popup/kda2019recipe2/index_100.html",
+    "checkedAt": "2026-10-06",
+    "status": "CAPTURED",
+    "matches": [],
+    "cacheReused": true,
+    "rawFile": "data-source/recipe-residual-91/raw/5185b867ccd92f797122",
+    "sha256": "8090b3ff359765f91bf35e8019b65fc422b729d0db2484dd762b5b4c3a234ba3",
+    "bytes": 21173,
+    "textFile": "data-source/recipe-residual-91/5185b867ccd92f797122.txt",
+    "pageCount": 1
+  },
+  {
+    "url": "https://www.dietitian.or.kr/assets/ver2/food_online/html/main_popup/kda2019recipe2/index_20.html",
+    "checkedAt": "2026-10-06",
+    "status": "CAPTURED",
+    "matches": [],
+    "cacheReused": false,
+    "rawFile": "data-source/recipe-residual-91/raw/daa5017cdf18c0144dd5",
+    "sha256": "c3f283ef1a58a1656847256b1093346622335c7153fddb99f4c8ee105418ce11",
+    "bytes": 15559,
+    "textFile": "data-source/recipe-residual-91/daa5017cdf18c0144dd5.txt",
+    "pageCount": 1
+  },
+  {
+    "url": "https://www.dietitian.or.kr/assets/ver2/food_online/html/main_popup/kda2019recipe2/index_30.html",
+    "checkedAt": "2026-10-06",
+    "status": "CAPTURED",
+    "matches": [],
+    "cacheReused": false,
+    "rawFile": "data-source/recipe-residual-91/raw/7e15ac23f98437afd0f9",
+    "sha256": "09728042dbccae8e043e21916496ce8c040484af485186b56581872a7c48350b",
+    "bytes": 16083,
+    "textFile": "data-source/recipe-residual-91/7e15ac23f98437afd0f9.txt",
+    "pageCount": 1
+  },
+  {
+    "url": "https://www.dietitian.or.kr/assets/ver2/food_online/html/main_popup/kda2019recipe2/index_40.html",
+    "checkedAt": "2026-10-06",
+    "status": "CAPTURED",
+    "matches": [],
+    "cacheReused": false,
+    "rawFile": "data-source/recipe-residual-91/raw/1519e41e3d33cb96655e",
+    "sha256": "33dd7e6430683d2f40a632b15b11c85caed9944bebd3e792637be91b38c7112d",
+    "bytes": 15828,
+    "textFile": "data-source/recipe-residual-91/1519e41e3d33cb96655e.txt",
+    "pageCount": 1
+  },
+  {
+    "url": "https://www.dietitian.or.kr/assets/ver2/food_online/html/main_popup/kda2019recipe2/index_50.html",
+    "checkedAt": "2026-10-06",
+    "status": "CAPTURED",
+    "matches": [],
+    "cacheReused": false,
+    "rawFile": "data-source/recipe-residual-91/raw/cdcb1fb4e8ccf25e931c",
+    "sha256": "a2b5f79a9813d5daaf53f10662dec6cf4082e796acdc7b3dd70115b2783aefdd",
+    "bytes": 15814,
+    "textFile": "data-source/recipe-residual-91/cdcb1fb4e8ccf25e931c.txt",
+    "pageCount": 1
+  },
+  {
+    "url": "https://www.dietitian.or.kr/assets/ver2/food_online/html/main_popup/kda2019recipe2/index_60.html",
+    "checkedAt": "2026-10-06",
+    "status": "CAPTURED",
+    "matches": [],
+    "cacheReused": false,
+    "rawFile": "data-source/recipe-residual-91/raw/552228582181fe478636",
+    "sha256": "e458aaabf8100684b3f8ccf293eb1c509e0af892c426e0351ef81b373707dc5b",
+    "bytes": 16693,
+    "textFile": "data-source/recipe-residual-91/552228582181fe478636.txt",
+    "pageCount": 1
+  },
+  {
+    "url": "https://www.dietitian.or.kr/assets/ver2/food_online/html/main_popup/kda2019recipe2/index_70.html",
+    "checkedAt": "2026-10-06",
+    "status": "CAPTURED",
+    "matches": [],
+    "cacheReused": false,
+    "rawFile": "data-source/recipe-residual-91/raw/7e0458eab0d5dfbb7ae5",
+    "sha256": "77ff0e3e28ef249a4123d98a7300608ff29518e7a55cf437db0660c24bf0abc0",
+    "bytes": 13219,
+    "textFile": "data-source/recipe-residual-91/7e0458eab0d5dfbb7ae5.txt",
+    "pageCount": 1
+  },
+  {
+    "url": "https://www.dietitian.or.kr/assets/ver2/food_online/html/main_popup/kda2019recipe2/index_80.html",
+    "checkedAt": "2026-10-06",
+    "status": "CAPTURED",
+    "matches": [],
+    "cacheReused": false,
+    "rawFile": "data-source/recipe-residual-91/raw/0105a51946dba9dc9294",
+    "sha256": "fa5cb6cabd41cdad65d76840a99e1e6b7d512855f040ac214d63dc016fb4fdd8",
+    "bytes": 17596,
+    "textFile": "data-source/recipe-residual-91/0105a51946dba9dc9294.txt",
+    "pageCount": 1
+  },
+  {
+    "url": "https://www.dietitian.or.kr/assets/ver2/food_online/html/main_popup/kda2019recipe2/index_90.html",
+    "checkedAt": "2026-10-06",
+    "status": "CAPTURED",
+    "matches": [],
+    "cacheReused": false,
+    "rawFile": "data-source/recipe-residual-91/raw/8169277a7bdf161e3831",
+    "sha256": "ef6df75129374eacc0d530e9be6a73f4c14decce3360ba4fe3efc7b541ec3150",
+    "bytes": 15962,
+    "textFile": "data-source/recipe-residual-91/8169277a7bdf161e3831.txt",
+    "pageCount": 1
+  },
+  {
+    "url": "https://www.dietitian.or.kr/board/old_down/%EC%B2%AD%EC%86%8C%EB%85%84%ED%8A%B9%EC%84%A0%EC%8B%9D%EB%8B%A8.pdf",
+    "checkedAt": "2026-10-06",
+    "status": "CAPTURED",
+    "matches": [
+      {
+        "recipeId": "MFDS-241",
+        "name": "김치콩나물밥",
+        "pages": [
+          2
+        ]
+      }
+    ],
+    "cacheReused": true,
+    "rawFile": "data-source/recipe-full-reference/raw/1b7579a0c900bec371b3",
+    "sha256": "830310f0df755ab9e9d5f8546e3132febbe1dbf11d768ebaae6877b4ba93ff0e",
+    "bytes": 480331,
+    "textFile": "data-source/recipe-residual-91/1b7579a0c900bec371b3.txt",
+    "pageCount": 4
+  },
+  {
+    "url": "https://www.dietitian.or.kr/paper_board_view_contents.do?bbs_idx=1205",
+    "checkedAt": "2026-10-06",
+    "status": "CAPTURED",
+    "matches": [],
+    "cacheReused": false,
+    "rawFile": "data-source/recipe-residual-91/raw/a69019c25a00ff5da1f4",
+    "sha256": "3480653ea495ca4144eda51df7d65b8440018322bb73629b187b3333b3ce4cfd",
+    "bytes": 5696,
+    "textFile": "data-source/recipe-residual-91/a69019c25a00ff5da1f4.txt",
+    "pageCount": 1
+  },
+  {
+    "url": "https://www.dietitian.or.kr/paper_board_view_contents.do?bbs_idx=3033",
+    "checkedAt": "2026-10-06",
+    "status": "CAPTURED",
+    "matches": [],
+    "cacheReused": false,
+    "rawFile": "data-source/recipe-residual-91/raw/136f859d7a1533035e3b",
+    "sha256": "307e0b1f0132d4766048a0edc42bfd9e040b65dc29252c28f5dd930169b3ddc7",
+    "bytes": 4900,
+    "textFile": "data-source/recipe-residual-91/136f859d7a1533035e3b.txt",
+    "pageCount": 1
+  },
+  {
+    "url": "https://www.dietitian.or.kr/paper_board_view_contents.do?bbs_idx=78475",
+    "checkedAt": "2026-10-06",
+    "status": "CAPTURED",
+    "matches": [
+      {
+        "recipeId": "MFDS-256",
+        "name": "도토리묵밥",
+        "pages": [
+          1
+        ]
+      }
+    ],
+    "cacheReused": false,
+    "rawFile": "data-source/recipe-residual-91/raw/2c4ee4c7a11f30684271",
+    "sha256": "2c45fde8d31924c8cb93aca63efa095c476e0c905e929beeee427d5f8f3a5503",
+    "bytes": 5071,
+    "textFile": "data-source/recipe-residual-91/2c4ee4c7a11f30684271.txt",
+    "pageCount": 1
+  },
+  {
+    "url": "https://www.foodnuri.go.kr/portal/bbs/B0000279/view.do?deleteCd=0&menuNo=300042&nttId=215110&pageIndex=96",
+    "checkedAt": "2026-10-06",
+    "status": "CAPTURED",
+    "matches": [
+      {
+        "recipeId": "MFDS-154",
+        "name": "단호박경단",
+        "pages": [
+          1
+        ]
+      }
+    ],
+    "cacheReused": true,
+    "rawFile": "data-source/recipe-residual-91/raw/5aa37f71999c07082acc",
+    "sha256": "1641c8bd1f2847edd0e7cbaacb419b483c2b5d9741690484f898f9a8a5695d2b",
+    "bytes": 86047,
+    "textFile": "data-source/recipe-residual-91/5aa37f71999c07082acc.txt",
+    "pageCount": 1
+  },
+  {
+    "url": "https://www.foodnuri.go.kr/portal/bbs/B0000279/view.do?deleteCd=0&menuNo=300056&nttId=215110&pageIndex=93&searchCnd=3",
+    "checkedAt": "2026-10-06",
+    "status": "CAPTURED",
+    "matches": [
+      {
+        "recipeId": "MFDS-154",
+        "name": "단호박경단",
+        "pages": [
+          1
+        ]
+      }
+    ],
+    "cacheReused": true,
+    "rawFile": "data-source/recipe-residual-93/raw/0e4fca5594e777eb6ef1",
+    "sha256": "806e41f1e543aa1dd2ab8ce41385d12c3bd87d5700430449593505393b7f11fa",
+    "bytes": 86318,
+    "textFile": "data-source/recipe-residual-91/0e4fca5594e777eb6ef1.txt",
+    "pageCount": 1
+  },
+  {
+    "url": "https://www.foodnuri.go.kr/portal/bbs/B0000279/view.do?deleteCd=0&menuNo=300056&nttId=215110&pageIndex=96&searchCnd=3",
+    "checkedAt": "2026-10-06",
+    "status": "CAPTURED",
+    "matches": [
+      {
+        "recipeId": "MFDS-154",
+        "name": "단호박경단",
+        "pages": [
+          1
+        ]
+      }
+    ],
+    "cacheReused": true,
+    "rawFile": "data-source/recipe-residual-91/raw/78705421f16c212b75ba",
+    "sha256": "784577fd013cb8c9f7cd94045734b9d2d95f6dbb833b2ee3e90bb777de01aa5b",
+    "bytes": 86361,
+    "textFile": "data-source/recipe-residual-91/78705421f16c212b75ba.txt",
+    "pageCount": 1
+  },
+  {
+    "url": "https://www.foodnuri.go.kr/portal/bbs/B0000279/view.do?deleteCd=0&menuNo=300056&nttId=215224&pageIndex=20&searchCnd=3",
+    "checkedAt": "2026-10-06",
+    "status": "CAPTURED",
+    "matches": [],
+    "cacheReused": false,
+    "rawFile": "data-source/recipe-residual-91/raw/3069e796b6ac4cb62c3e",
+    "sha256": "b5c8c4662ea5092f6debb10e59aff6ea837a8caa0d68e40a7c46e7187e5e1e03",
+    "bytes": 86302,
+    "textFile": "data-source/recipe-residual-91/3069e796b6ac4cb62c3e.txt",
+    "pageCount": 1
+  },
+  {
+    "url": "https://www.foodnuri.go.kr/portal/bbs/B0000279/view.do?menuNo=300056&nttId=215224&pageIndex=1",
+    "checkedAt": "2026-10-06",
+    "status": "CAPTURED",
+    "matches": [],
+    "cacheReused": false,
+    "rawFile": "data-source/recipe-residual-91/raw/a457371591f906f88785",
+    "sha256": "0786e1effba0b2549d55e68ca1dd8372843e3b782897b0a9eed95f092c978775",
+    "bytes": 86230,
+    "textFile": "data-source/recipe-residual-91/a457371591f906f88785.txt",
+    "pageCount": 1
+  },
+  {
+    "url": "https://www.fsis.go.kr/front/contents/cmsView.do?cate_id=0301&cnts_id=23797",
+    "checkedAt": "2026-10-06",
+    "status": "CAPTURED",
+    "matches": [
+      {
+        "recipeId": "RDA-90151",
+        "name": "백합죽",
+        "pages": [
+          1
+        ]
+      },
+      {
+        "recipeId": "RDA-91353",
+        "name": "백합죽",
+        "pages": [
+          1
+        ]
+      },
+      {
+        "recipeId": "RDA-92425",
+        "name": "백합죽",
+        "pages": [
+          1
+        ]
+      }
+    ],
+    "cacheReused": true,
+    "rawFile": "data-source/recipe-residual-91/raw/9918fef3de083e6a7748",
+    "sha256": "af8f84caf625c63ef1b0707c26a042c3ef8e7d788171ae05e960a8eb472c8f2f",
+    "bytes": 76426,
+    "textFile": "data-source/recipe-residual-91/9918fef3de083e6a7748.txt",
+    "pageCount": 1
+  },
+  {
+    "url": "https://www.goe.go.kr/resource/goe/na/bbs_2675/2025/11/schoolfoodservice_20251126.pdf",
+    "checkedAt": "2026-10-06",
+    "status": "CAPTURED",
+    "matches": [
+      {
+        "recipeId": "MFDS-249",
+        "name": "단호박카레라이스",
+        "pages": [
+          217
+        ]
+      },
+      {
+        "recipeId": "RDA-90151",
+        "name": "백합죽",
+        "pages": [
+          172
+        ]
+      },
+      {
+        "recipeId": "RDA-91353",
+        "name": "백합죽",
+        "pages": [
+          172
+        ]
+      },
+      {
+        "recipeId": "RDA-92425",
+        "name": "백합죽",
+        "pages": [
+          172
+        ]
+      }
+    ],
+    "cacheReused": true,
+    "rawFile": "data-source/recipe-residual-89/raw/522e84ce0fb67db212d9",
+    "sha256": "3860b5b655140237efac30fba08ccc522d4a84b50e9a8ad28c6cb60723006ae5",
+    "bytes": 13869168,
+    "textFile": "data-source/recipe-residual-91/522e84ce0fb67db212d9.txt",
+    "pageCount": 232
+  },
+  {
+    "url": "https://www.goe.go.kr/resource/old/BBSMSTR_000000030174/BBS_202309010502127700.pdf",
+    "checkedAt": "2026-10-06",
+    "status": "CAPTURED",
+    "matches": [
+      {
+        "recipeId": "MFDS-249",
+        "name": "단호박카레라이스",
+        "pages": [
+          217
+        ]
+      },
+      {
+        "recipeId": "RDA-90151",
+        "name": "백합죽",
+        "pages": [
+          172
+        ]
+      },
+      {
+        "recipeId": "RDA-91353",
+        "name": "백합죽",
+        "pages": [
+          172
+        ]
+      },
+      {
+        "recipeId": "RDA-92425",
+        "name": "백합죽",
+        "pages": [
+          172
+        ]
+      }
+    ],
+    "cacheReused": true,
+    "rawFile": "data-source/recipe-residual-93/raw/567f1fa0fc515dce702d",
+    "sha256": "3860b5b655140237efac30fba08ccc522d4a84b50e9a8ad28c6cb60723006ae5",
+    "bytes": 13869168,
+    "textFile": "data-source/recipe-residual-91/567f1fa0fc515dce702d.txt",
+    "pageCount": 232
+  },
+  {
+    "url": "https://www.goe.go.kr/resource/old/BBSMSTR_000000030174/BBS_202503040153062180.pdf",
+    "checkedAt": "2026-10-06",
+    "status": "CAPTURED",
+    "matches": [
+      {
+        "recipeId": "MFDS-308",
+        "name": "미역/초고추장",
+        "pages": [
+          72
+        ]
+      },
+      {
+        "recipeId": "RDA-91764",
+        "name": "곤달비밥(곤드레밥, 곤드레나물밥)",
+        "pages": [
+          18
+        ]
+      }
+    ],
+    "cacheReused": true,
+    "rawFile": "data-source/recipe-final-residual/raw/goe-school-recipes.pdf",
+    "sha256": "5f6351482958b38c7821f0ab1e8a34fa4197fca987036c0b46bbf0620a7dceb7",
+    "bytes": 9302278,
+    "textFile": "data-source/recipe-residual-91/goe-school-recipes.pdf.txt",
+    "pageCount": 84
+  },
+  {
+    "url": "https://www.kca.go.kr/webzine/board/view?div=kca_2304&linkId=536&menuId=MENU00324",
+    "checkedAt": "2026-10-06",
+    "status": "FAILED",
+    "matches": [],
+    "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>"
+  },
+  {
+    "url": "https://www.rda.go.kr/download_file/act/bookcafe065.PDF",
+    "checkedAt": "2026-10-06",
+    "status": "CAPTURED",
+    "matches": [
+      {
+        "recipeId": "MFDS-256",
+        "name": "도토리묵밥",
+        "pages": [
+          61,
+          117,
+          442,
+          446,
+          475,
+          478,
+          479,
+          480
+        ]
+      },
+      {
+        "recipeId": "MFDS-96",
+        "name": "애호박젓국",
+        "pages": [
+          275,
+          457,
+          469,
+          473
+        ]
+      },
+      {
+        "recipeId": "RDA-90151",
+        "name": "백합죽",
+        "pages": [
+          108,
+          198,
+          199,
+          235,
+          452,
+          482,
+          485,
+          495
+        ]
+      },
+      {
+        "recipeId": "RDA-90925",
+        "name": "바람떡(개피떡)",
+        "pages": [
+          34,
+          185,
+          252,
+          301,
+          303,
+          440,
+          451,
+          455,
+          459,
+          467,
+          469,
+          476
+        ]
+      },
+      {
+        "recipeId": "RDA-91134",
+        "name": "메밀전병(총떡, 메밀전)",
+        "pages": [
+          154,
+          155,
+          156,
+          157,
+          378,
+          449,
+          475,
+          478,
+          489
+        ]
+      },
+      {
+        "recipeId": "RDA-91353",
+        "name": "백합죽",
+        "pages": [
+          108,
+          198,
+          199,
+          235,
+          452,
+          482,
+          485,
+          495
+        ]
+      },
+      {
+        "recipeId": "RDA-91764",
+        "name": "곤달비밥(곤드레밥, 곤드레나물밥)",
+        "pages": [
+          54,
+          442,
+          474
+        ]
+      },
+      {
+        "recipeId": "RDA-91829",
+        "name": "물메기국(곰치국)",
+        "pages": [
+          56,
+          173,
+          174,
+          442,
+          450,
+          474,
+          475,
+          495
+        ]
+      },
+      {
+        "recipeId": "RDA-92425",
+        "name": "백합죽",
+        "pages": [
+          108,
+          198,
+          199,
+          235,
+          452,
+          482,
+          485,
+          495
+        ]
+      }
+    ],
+    "cacheReused": true,
+    "rawFile": "data-source/recipe-residual-93/raw/a47be3ac7f7d6a10239b",
+    "sha256": "569d2773b7829ccb14bcd289862d5340090fd8b423d17fa3d84d36c6471fae51",
+    "bytes": 25373442,
+    "textFile": "data-source/recipe-residual-91/a47be3ac7f7d6a10239b.txt",
+    "pageCount": 503
+  }
+]

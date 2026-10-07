@@ -1,0 +1,172 @@
+[
+  {
+    "menuId": "official-menu-nolboo-order-gp007840",
+    "name": "쭈곱새",
+    "category": "",
+    "status": "CATEGORY_UNRESOLVABLE",
+    "reason": "곱새 재료명/메뉴명은 확인되지만 조리 형태를 현 taxonomy에 확정할 설명이 없음",
+    "scope": "brand-wide",
+    "sourceUrl": "https://order.kakao.com/wapi/order/v1/menu_group?orderType=DELIVERY&brandCode=NOLBOO&menuGroupCode=GP007840",
+    "sourceSha256": "068863420d99de595fadc78c5d87851aa4bb8ca1f5db0e2c6bb73d7578bb31f8"
+  },
+  {
+    "menuId": "official-menu-nolboo-order-gp007839",
+    "name": "우곱새",
+    "category": "",
+    "status": "CATEGORY_UNRESOLVABLE",
+    "reason": "곱새 재료명/메뉴명은 확인되지만 조리 형태를 현 taxonomy에 확정할 설명이 없음",
+    "scope": "brand-wide",
+    "sourceUrl": "https://order.kakao.com/wapi/order/v1/menu_group?orderType=DELIVERY&brandCode=NOLBOO&menuGroupCode=GP007839",
+    "sourceSha256": "f138f005e6d2487fd8cef71ac7ccb85cc49d69d620e1b161a768e032bbfe1b4c"
+  },
+  {
+    "menuId": "official-menu-nolboo-order-gp003101",
+    "name": "놀부통핑세트",
+    "category": "부대찌개",
+    "status": "CATEGORY_ASSIGNED",
+    "reason": "공식 개별 설명이 주요 메뉴를 부대찌개로 명시하며 사리·음료는 부가 구성으로 구분됨",
+    "scope": "brand-wide",
+    "sourceUrl": "https://order.kakao.com/wapi/order/v1/menu_group?orderType=DELIVERY&brandCode=NOLBOO&menuGroupCode=GP003101",
+    "sourceSha256": "aeea6786f1b4657a8ee8d567c8c9a4ec2225b8b985643be4ebe40caa38d6e446"
+  },
+  {
+    "menuId": "official-menu-nolboo-order-gp003098",
+    "name": "놀부세트",
+    "category": "부대찌개",
+    "status": "CATEGORY_ASSIGNED",
+    "reason": "공식 개별 설명이 주요 메뉴를 부대찌개로 명시하며 사리·음료는 부가 구성으로 구분됨",
+    "scope": "brand-wide",
+    "sourceUrl": "https://order.kakao.com/wapi/order/v1/menu_group?orderType=DELIVERY&brandCode=NOLBOO&menuGroupCode=GP003098",
+    "sourceSha256": "673e710e1bfcd320db5b66f633f67033983a796afedad0f787e249d4b4ccaedb"
+  },
+  {
+    "menuId": "official-menu-nolboo-order-gp003100",
+    "name": "치즈놀부세트",
+    "category": "부대찌개",
+    "status": "CATEGORY_ASSIGNED",
+    "reason": "공식 개별 설명이 주요 메뉴를 부대찌개로 명시하며 사리·음료는 부가 구성으로 구분됨",
+    "scope": "brand-wide",
+    "sourceUrl": "https://order.kakao.com/wapi/order/v1/menu_group?orderType=DELIVERY&brandCode=NOLBOO&menuGroupCode=GP003100",
+    "sourceSha256": "6455d57a8747599962a15c558a3dc12a04357bb3411583cf365fed378a4653be"
+  },
+  {
+    "menuId": "official-menu-nolboo-order-gp003099",
+    "name": "우삼겹놀부세트",
+    "category": "부대찌개",
+    "status": "CATEGORY_ASSIGNED",
+    "reason": "공식 개별 설명이 주요 메뉴를 부대찌개로 명시하며 사리·음료는 부가 구성으로 구분됨",
+    "scope": "brand-wide",
+    "sourceUrl": "https://order.kakao.com/wapi/order/v1/menu_group?orderType=DELIVERY&brandCode=NOLBOO&menuGroupCode=GP003099",
+    "sourceSha256": "e10e7f38f4615a8bcafcd338544f7959a9b407feee1e74fae30366e7064c689b"
+  },
+  {
+    "menuId": "official-menu-nolboo-order-gp003097",
+    "name": "김치놀부세트",
+    "category": "부대찌개",
+    "status": "CATEGORY_ASSIGNED",
+    "reason": "공식 개별 설명이 주요 메뉴를 부대찌개로 명시하며 사리·음료는 부가 구성으로 구분됨",
+    "scope": "brand-wide",
+    "sourceUrl": "https://order.kakao.com/wapi/order/v1/menu_group?orderType=DELIVERY&brandCode=NOLBOO&menuGroupCode=GP003097",
+    "sourceSha256": "b87476e17de8546c61db40817c883a97439490140dd20bb59aae7a9221b99a01"
+  },
+  {
+    "menuId": "official-menu-nolboo-order-gp027407",
+    "name": "옛맛놀부세트",
+    "category": "부대찌개",
+    "status": "CATEGORY_ASSIGNED",
+    "reason": "공식 개별 설명이 주요 메뉴를 부대찌개로 명시하며 사리·음료는 부가 구성으로 구분됨",
+    "scope": "brand-wide",
+    "sourceUrl": "https://order.kakao.com/wapi/order/v1/menu_group?orderType=DELIVERY&brandCode=NOLBOO&menuGroupCode=GP027407",
+    "sourceSha256": "884ed5d5c120f6f8661c146d78b23a1bf6273503a40c4caa40710f10a873a407"
+  },
+  {
+    "menuId": "official-menu-nolboo-order-gp045445",
+    "name": "콩불놀부세트",
+    "category": "부대찌개",
+    "status": "CATEGORY_ASSIGNED",
+    "reason": "공식 개별 설명이 주요 메뉴를 부대찌개로 명시하며 사리·음료는 부가 구성으로 구분됨",
+    "scope": "brand-wide",
+    "sourceUrl": "https://order.kakao.com/wapi/order/v1/menu_group?orderType=DELIVERY&brandCode=NOLBOO&menuGroupCode=GP045445",
+    "sourceSha256": "bdb2378e51a4bdab634f9d97008b58a28ef0da84b33802997ffeabac8fb3ad04"
+  },
+  {
+    "menuId": "official-menu-nolboo-order-gp045444",
+    "name": "마라놀부세트",
+    "category": "부대찌개",
+    "status": "CATEGORY_ASSIGNED",
+    "reason": "공식 개별 설명이 주요 메뉴를 부대찌개로 명시하며 사리·음료는 부가 구성으로 구분됨",
+    "scope": "brand-wide",
+    "sourceUrl": "https://order.kakao.com/wapi/order/v1/menu_group?orderType=DELIVERY&brandCode=NOLBOO&menuGroupCode=GP045444",
+    "sourceSha256": "d8a459e1cd7eb16563381b5a8202a3cab08efd9b65a495d3647de5f285056985"
+  },
+  {
+    "menuId": "official-menu-nolboo-order-gp003102",
+    "name": "치즈통핑세트",
+    "category": "부대찌개",
+    "status": "CATEGORY_ASSIGNED",
+    "reason": "공식 개별 설명이 주요 메뉴를 부대찌개로 명시하며 사리·음료는 부가 구성으로 구분됨",
+    "scope": "brand-wide",
+    "sourceUrl": "https://order.kakao.com/wapi/order/v1/menu_group?orderType=DELIVERY&brandCode=NOLBOO&menuGroupCode=GP003102",
+    "sourceSha256": "6afd0718fd741737c78f00fdd058e0815e0813486587db283304404c0caa242f"
+  },
+  {
+    "menuId": "official-menu-nolboo-order-gp025490",
+    "name": "통오징어통핑세트",
+    "category": "부대찌개",
+    "status": "CATEGORY_ASSIGNED",
+    "reason": "공식 개별 설명이 주요 메뉴를 부대찌개로 명시하며 사리·음료는 부가 구성으로 구분됨",
+    "scope": "brand-wide",
+    "sourceUrl": "https://order.kakao.com/wapi/order/v1/menu_group?orderType=DELIVERY&brandCode=NOLBOO&menuGroupCode=GP025490",
+    "sourceSha256": "a24b1a5083c3e8409c386b28e77b09010339dbb8e31b2a631a1707ef976c32ef"
+  },
+  {
+    "menuId": "official-menu-nolboo-order-gp025489",
+    "name": "통오징어치즈통핑세트",
+    "category": "부대찌개",
+    "status": "CATEGORY_ASSIGNED",
+    "reason": "공식 개별 설명이 주요 메뉴를 부대찌개로 명시하며 사리·음료는 부가 구성으로 구분됨",
+    "scope": "brand-wide",
+    "sourceUrl": "https://order.kakao.com/wapi/order/v1/menu_group?orderType=DELIVERY&brandCode=NOLBOO&menuGroupCode=GP025489",
+    "sourceSha256": "58f5e3fe2452b97cc30b62d9b8f8228c16b9c55c22154113f5de6fed9b66e2f7"
+  },
+  {
+    "menuId": "official-menu-nolboo-order-2999089",
+    "name": "돈곱새 1인",
+    "category": "",
+    "status": "CATEGORY_UNRESOLVABLE",
+    "reason": "곱새 재료명/메뉴명은 확인되지만 조리 형태를 현 taxonomy에 확정할 설명이 없음",
+    "scope": "brand-wide",
+    "sourceUrl": "https://order.kakao.com/wapi/order/v1/menu_group?orderType=DELIVERY&brandCode=NOLBOO&menuGroupCode=2999089",
+    "sourceSha256": "0655003dcec0787774e841f87808a158f25681598267252d9863d61c4bbd5da6"
+  },
+  {
+    "menuId": "official-menu-nolboo-order-2999088",
+    "name": "햄곱새 1인",
+    "category": "",
+    "status": "CATEGORY_UNRESOLVABLE",
+    "reason": "곱새 재료명/메뉴명은 확인되지만 조리 형태를 현 taxonomy에 확정할 설명이 없음",
+    "scope": "brand-wide",
+    "sourceUrl": "https://order.kakao.com/wapi/order/v1/menu_group?orderType=DELIVERY&brandCode=NOLBOO&menuGroupCode=2999088",
+    "sourceSha256": "410a0d29e3b859f22b3006c53939c86f97c9566d0c539501d7f84703cf98849a"
+  },
+  {
+    "menuId": "official-menu-nolboo-order-gp013922",
+    "name": "[완조리] 알찬부대세트",
+    "category": "부대찌개",
+    "status": "CATEGORY_ASSIGNED",
+    "reason": "공식 개별 설명이 주요 메뉴를 부대찌개로 명시하며 사리·음료는 부가 구성으로 구분됨",
+    "scope": "brand-wide",
+    "sourceUrl": "https://order.kakao.com/wapi/order/v1/menu_group?orderType=DELIVERY&brandCode=NOLBOO&menuGroupCode=GP013922",
+    "sourceSha256": "e15b82eb422b8d530032207d3138e95b1ebaacf698fc4c8b91cbcae242755a46"
+  },
+  {
+    "menuId": "official-menu-nolboo-order-gp045446",
+    "name": "제육놀부세트",
+    "category": "",
+    "status": "CATEGORY_UNRESOLVABLE",
+    "reason": "제육놀부세트 개별 공식 설명이 비어 있어 세트 구성과 대표 요리 형태를 확정할 수 없음",
+    "scope": "brand-wide",
+    "sourceUrl": "https://order.kakao.com/wapi/order/v1/menu_group?orderType=DELIVERY&brandCode=NOLBOO&menuGroupCode=GP045446",
+    "sourceSha256": "5563751e65bf34806e3e4a12bfe3d57066e8ad7e459108d3b310dc1710bb5a81"
+  }
+]

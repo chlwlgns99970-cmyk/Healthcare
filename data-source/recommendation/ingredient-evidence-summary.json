@@ -1,0 +1,30 @@
+{
+  "rows": 292,
+  "sourcedGroups": 168,
+  "styleEligible": 120,
+  "unresolved": 124,
+  "unresolvedReasons": {
+    "NO_EXACT_PUBLIC_OR_OFFICIAL_INGREDIENT_EVIDENCE": 87,
+    "OFFICIAL_PRODUCT_COMPOSITION_UNRESOLVED": 37
+  },
+  "priorReviewedSnapshot": {
+    "sourcedGroups": 19,
+    "majorIngredientInformationKnown": 51,
+    "styleEligible": 16,
+    "snackEligible": 2
+  },
+  "original19EvidenceWithCurrentPolicy": 18,
+  "additionalCandidatesFromExpandedEvidenceUnderCurrentPolicy": 102,
+  "sameExpandedEvidenceWithBlanketRedMeatExclusion": 107,
+  "extraCandidatesFromRedMeatPenaltyInsteadOfBlanketExclusion": 13,
+  "originalIngredientCompleteTagsUnchanged": true,
+  "referenceAllergenStatus": "UNKNOWN",
+  "recipeFacts": 516,
+  "primaryEvidence": {
+    "recipe": 109,
+    "definition": 50,
+    "brand": 9
+  },
+  "parserVersion": "recommendation-composition-catalog-v3",
+  "checkedAt": "2026-10-04"
+}

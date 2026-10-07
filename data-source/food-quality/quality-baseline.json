@@ -1,0 +1,36 @@
+{
+  "checkedAt": "2026-10-04",
+  "foodMetrics": {
+    "totalFoods": 31680,
+    "kcal": 31680,
+    "macroComplete": 18234,
+    "officialServing": 11979,
+    "householdUnitEvidence": 465,
+    "ingredientsKnownPartialOrComplete": 33,
+    "ingredientsCompleteDeclaration": 0,
+    "allergenEvidenceKnown": 4,
+    "allergenCompleteDeclaration": 2,
+    "foodGroupsVerified": 33,
+    "provenanceLinked": 31680
+  },
+  "recommendation": {
+    "someVerifiedIngredients": 19,
+    "foodGroups": 19,
+    "allergenEvidence": 2,
+    "allergenCompleteLabel": 2
+  },
+  "franchise": {
+    "ingredientKnown": 0,
+    "allergenEvidence": 0
+  },
+  "scope": "Captured start-of-task assets; source-verified components are distinct from historic name-only COMPLETE flags.",
+  "capturedAssetSha256": {
+    "food_items.csv": "CCF6A9B2322AD5E75FE29F13FFB7C4BF719C2CCA5CD3B459F104D659231261B4",
+    "franchise_official_items.csv": "DD81238EE65F108E809173F8C9B6BF0131FC54C5CE82611B4295DC8B4B13E5CD",
+    "meal_templates.csv": "F6D2855BA77372DDE311E2065CBAEAD3D4348A25CBE52EBF390789707456F5A9",
+    "meal_template_ingredients.csv": "0A3B795901831AB7634227168E74E6E8C08950C1B4C3D8668944FF84620780DD",
+    "product_items.csv": "27B878B35A0CF5D5FB2218EDF25B06ED24E0D6E09DEF937893E25A9F570950DC",
+    "theme-eligibility-audit.csv": "C985886E048486EFA18096AC18316889842A7C5BFEE102436551FEB1FE21EF35",
+    "verified-food-groups.csv": "1AD075E119092435B64D0B3FBE502AA7A0E5AB5FA95F3E78C2B33AA41C649CB7"
+  }
+}

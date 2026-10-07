@@ -1,0 +1,4 @@
+sourceFoodCode,name,category,reason,sourceUrl,sourceHash,checkedAt
+BINGGRAE-PACK-1050,"팽이팽이 수박, 파인애플",빙과류,OFFICIAL_PAGE_SCRIPT_AND_API_NUTRITION_BASIS_CONFLICT,https://www.bing.co.kr/product/detail?PDT=201|https://www.bing.co.kr/product/get_idt_info,45484b75ee8ce57de00b0c285a93d92c4f72cdea7242026fa37f84f0c15fd213,2026-10-04
+BINGGRAE-PACK-881,아이스가이 온더락,빙과류,OFFICIAL_PACKAGE_OR_NUTRITION_UNRESOLVED,https://www.bing.co.kr/product/get_idt_info,98b0bb845f59fdd32d2e5c9170e5e8662ed4b3e105085c08e7ea42ec2877314b,2026-10-04
+BINGGRAE-PACK-888,"팽이팽이 오렌지, 포도",빙과류,OFFICIAL_PAGE_SCRIPT_AND_API_NUTRITION_BASIS_CONFLICT,https://www.bing.co.kr/product/detail?PDT=201|https://www.bing.co.kr/product/get_idt_info,0d231f4e280899365ac0b1b2005bf0efa9fc836abccc01d62fc43c0fe2194244,2026-10-04

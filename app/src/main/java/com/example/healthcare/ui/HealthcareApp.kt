@@ -15,6 +15,14 @@ import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.key as composeKey
+import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.mutableStateMapOf
+import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.TextButton
+import com.example.healthcare.domain.RecordCompletion
+import com.example.healthcare.ui.screens.RecordCompletionScreen
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -71,7 +79,25 @@ fun HealthcareApp() {
     var pendingSettingsSection by remember { mutableStateOf<String?>(null) }
     var pendingRecommendedTemplateId by remember { mutableStateOf<String?>(null) }
     var openSavedDayPlan by remember { mutableStateOf(false) }
+    var pendingNextRecommendationMeal by remember { mutableStateOf<MealType?>(null) }
     var immersiveRecord by remember { mutableStateOf(false) }
+    var rootGeneration by remember { mutableIntStateOf(0) }
+    val exitGuards = remember { mutableMapOf<androidx.navigation3.runtime.NavKey, DraftExitGuard>() }
+    var pendingTab by remember { mutableStateOf<TopLevelDestination?>(null) }
+    val saveConfirmation: com.example.healthcare.ui.viewmodel.RecordSaveConfirmationViewModel = viewModel()
+    val pendingSaveConfirmation by saveConfirmation.pending.collectAsState()
+    val completion by saveConfirmation.completed.collectAsState()
+    var showHistoryMeals by remember { mutableStateOf(false) }
+    val completeRecord: (com.example.healthcare.data.entity.MealRecord, Boolean) -> Unit = { record, edited ->
+        saveConfirmation.saved(RecordCompletion(record, edited))
+    }
+    val continueAfterSaveConfirmation: () -> Unit = {
+        if (saveConfirmation.confirm() != null) {
+            pendingQuickAction = null; pendingRecordDate = null; pendingMealType = null
+            immersiveRecord = false
+            backStack.clear(); backStack.add(RecordCompletionRoute)
+        }
+    }
     val localContext = LocalContext.current
     val app = localContext.applicationContext as HealthcareApplication
     val hostActivity = localContext as? Activity
@@ -79,9 +105,6 @@ fun HealthcareApp() {
     val appUpdateState by app.appUpdateManager.state.collectAsState()
     val snackbarHostState = remember { SnackbarHostState() }
     val appScope = rememberCoroutineScope()
-    LaunchedEffect(app) {
-        app.appUpdateManager.checkAutomatically()
-    }
     LaunchedEffect(appUpdateState.phase) {
         if (appUpdateState.phase == AppUpdatePhase.READY_TO_INSTALL) {
             hostActivity?.let(app.appUpdateManager::continueInstallation)
@@ -144,6 +167,7 @@ fun HealthcareApp() {
     val recordKeyboardVisible = (currentRoute == AddRecordRoute || currentRoute == HistoryRoute) &&
         WindowInsets.ime.getBottom(LocalDensity.current) > 0
     val selectedDestination = when (currentRoute) {
+        RecordCompletionRoute -> TopLevelDestination.ADD
         is MealPlanRoute, RecommendationsRoute -> TopLevelDestination.RECOMMENDATIONS
         MealPreferenceRoute -> TopLevelDestination.SETTINGS
         ActivityDetailRoute, TodayReportRoute -> TopLevelDestination.DASHBOARD
@@ -151,6 +175,31 @@ fun HealthcareApp() {
             ?: TopLevelDestination.DASHBOARD
     }
 
+    val moveToTab: (TopLevelDestination) -> Unit = { destination ->
+        exitGuards[currentRoute]?.discard?.invoke()
+        pendingQuickAction = null
+        if (destination == TopLevelDestination.ADD) {
+            pendingRecordDate = null; pendingMealType = null
+        }
+        if (destination == TopLevelDestination.RECOMMENDATIONS) {
+            pendingRecommendedTemplateId = null; openSavedDayPlan = false; pendingNextRecommendationMeal = null
+        }
+        pendingSettingsSection = null; showHistoryMeals = false
+        immersiveRecord = false
+        selectTabRoot(backStack, destination)
+        rootGeneration++
+    }
+    pendingTab?.let { destination ->
+        AlertDialog(onDismissRequest = { pendingTab = null },
+            title = { Text("작성 중인 내용을 버릴까요?") },
+            text = { Text("아직 저장하지 않은 입력이 있어요.") },
+            confirmButton = { TextButton(onClick = { pendingTab = null; moveToTab(destination) }) { Text("버리고 이동") } },
+            dismissButton = { TextButton(onClick = { pendingTab = null }) { Text("계속 작성") } })
+    }
+
+    pendingSaveConfirmation?.let {
+        com.example.healthcare.ui.components.RecordSavedDialog(it.edited, onConfirm = continueAfterSaveConfirmation)
+    }
     Scaffold(
         containerColor = MaterialTheme.colorScheme.background,
         contentWindowInsets = WindowInsets(0, 0, 0, 0),
@@ -158,17 +207,11 @@ fun HealthcareApp() {
         bottomBar = {
             if (!immersiveRecord && !recordKeyboardVisible && currentRoute != ExerciseCoachRoute) {
             FloatingNavigationDock(selectedDestination) { destination ->
-                if (currentRoute != destination.route) {
-                    if (destination == TopLevelDestination.ADD) {
-                        pendingRecordDate = null
-                        pendingMealType = null
-                    }
-                    if (destination == TopLevelDestination.RECOMMENDATIONS) {
-                        pendingRecommendedTemplateId = null
-                        openSavedDayPlan = false
-                    }
-                    backStack.clear()
-                    backStack.add(destination.route)
+                val guard = exitGuards[currentRoute]
+                when (tabSelectionDecision(guard)) {
+                    TabSelectionDecision.MOVE -> moveToTab(destination)
+                    TabSelectionDecision.CONFIRM_DISCARD -> pendingTab = destination
+                    TabSelectionDecision.WAIT_FOR_SAVE -> Unit
                 }
             }
             }
@@ -177,6 +220,10 @@ fun HealthcareApp() {
         Box(Modifier.fillMaxSize().padding(outerPadding)) {
             NavDisplay(backStack = backStack) { key ->
                 NavEntry(key) {
+                    CompositionLocalProvider(LocalDraftExitGuardRegistration provides { guard ->
+                        exitGuards[key] = guard
+                    }) {
+                    composeKey(rootGeneration) {
                     when (key) {
                         DashboardRoute -> DashboardScreen(
                             viewModel = dashboardViewModel,
@@ -211,6 +258,7 @@ fun HealthcareApp() {
                             },
                             onOpenRecommendations = { templateId ->
                                 pendingRecommendedTemplateId = null
+                                pendingNextRecommendationMeal = null
                                 openSavedDayPlan = coachState.dailyThemeLabel != null
                                 if (backStack.lastOrNull() != RecommendationsRoute) {
                                     backStack.add(RecommendationsRoute)
@@ -246,17 +294,25 @@ fun HealthcareApp() {
                                 pendingRecordDate = dashboardSelectedDate
                                 pendingMealType = null
                                 backStack.add(AddRecordRoute)
+                            },
+                            onNextMealRecommendation = { meal ->
+                                pendingNextRecommendationMeal = meal
+                                pendingRecommendedTemplateId = null
+                                openSavedDayPlan = app.todayMealPlanRepository.store.state.value
+                                    ?.date == LocalDate.now().toString()
+                                backStack.add(RecommendationsRoute)
                             }
                         )
                         RecommendationsRoute -> {
                             TodayRecommendationScreen(dailyPlanViewModel,
                                 openSaved = openSavedDayPlan,
+                                focusedMeal = pendingNextRecommendationMeal,
                                 onBack = { backStack.clear(); backStack.add(DashboardRoute) },
                                 onOpenPreferences = { backStack.add(MealPreferenceRoute) },
                                 onOpenEnergy = { pendingSettingsSection = "ENERGY"; backStack.add(SettingsRoute) },
                                 onOpenMeal = { meal, target ->
                                     openSavedDayPlan = true
-                                    backStack.add(MealPlanRoute(meal.mealType.name, meal.kcal, target, meal.templateId))
+                                    backStack.add(MealPlanRoute(meal.mealType.name, meal.kcal, target, meal.templateId, meal.portion))
                                 })
                         }
                         AddRecordRoute -> {
@@ -268,13 +324,10 @@ fun HealthcareApp() {
                                 initialMealType = pendingMealType,
                                 returnToParentFromSearch = backStack.size > 1,
                                 onRecordSaved = { mealType ->
-                                    if (finishRecordFlow(backStack)) {
-                                        pendingQuickAction = null
-                                        pendingRecordDate = null
-                                        pendingMealType = null
-                                        appScope.launch {
-                                            snackbarHostState.showSnackbar("${mealType.displayName} 식사에 기록했어요")
-                                        }
+                                    val saved = addViewModel.completedRecord.value
+                                    if (saved != null) completeRecord(saved, false)
+                                    else if (finishRecordFlow(backStack)) appScope.launch {
+                                        snackbarHostState.showSnackbar("${mealType.displayName} 식사에 기록했어요")
                                     }
                                 },
                                 onInitialActionConsumed = { pendingQuickAction = null },
@@ -290,7 +343,13 @@ fun HealthcareApp() {
                         }
                         HistoryRoute -> {
                             val historyViewModel: HistoryViewModel = viewModel(factory = viewModelFactory)
-                            HistoryScreen(viewModel = historyViewModel)
+                            HistoryScreen(viewModel = historyViewModel, openMeals = showHistoryMeals,
+                                onRecordEdited = { completeRecord(it, true) }, onAddRecord = {
+                                pendingQuickAction = QuickRecordAction.SEARCH
+                                pendingRecordDate = null
+                                pendingMealType = null
+                                backStack.add(AddRecordRoute)
+                            })
                         }
                         SettingsRoute -> {
                             SettingsScreen(
@@ -323,6 +382,7 @@ fun HealthcareApp() {
                                 budgetKcal = key.budgetKcal,
                                 targetKcal = key.targetKcal,
                                 dailyTemplateId = key.dailyTemplateId,
+                                dailyPortion = key.dailyPortion,
                                 dailyRemainingKcal = coachState.remainingCalories,
                                 viewModel = planViewModel,
                                 onSearchFood = {
@@ -334,11 +394,25 @@ fun HealthcareApp() {
                                 },
                                 onOpenPreferences = { backStack.add(MealPreferenceRoute) },
                                 onBack = { if (backStack.size > 1) backStack.removeAt(backStack.size - 1) },
+                                onSavedRecord = { completeRecord(it, false) },
                                 onSaved = {
                                     backStack.clear()
                                     backStack.add(DashboardRoute)
                                 }
                             )
+                        }
+                        RecordCompletionRoute -> {
+                            val saved = completion
+                            if (saved != null) RecordCompletionScreen(saved,
+                                onHome = { saveConfirmation.clearCompleted(); selectTabRoot(backStack, TopLevelDestination.DASHBOARD) },
+                                onHistory = {
+                                    val historyViewModel: HistoryViewModel = androidx.lifecycle.ViewModelProvider(
+                                        localContext as androidx.activity.ComponentActivity, viewModelFactory)[HistoryViewModel::class.java]
+                                    historyViewModel.onDateSelected(LocalDate.parse(saved.record.date))
+                                    saveConfirmation.clearCompleted(); showHistoryMeals = true
+                                    selectTabRoot(backStack, TopLevelDestination.HISTORY)
+                                })
+                            else LaunchedEffect(Unit) { selectTabRoot(backStack, TopLevelDestination.DASHBOARD) }
                         }
                         MealPreferenceRoute -> {
                             val preferenceViewModel: MealPreferenceViewModel = viewModel(factory = viewModelFactory)
@@ -347,6 +421,8 @@ fun HealthcareApp() {
                                 onBack = { if (backStack.size > 1) backStack.removeAt(backStack.size - 1) }
                             )
                         }
+                    }
+                    }
                     }
                 }
             }

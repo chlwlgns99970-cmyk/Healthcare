@@ -166,9 +166,11 @@ class EnergyViewModelTest {
         viewModel.onBmrChange("1500")
         viewModel.onActivityLevelSelected(ActivityLevel.MODERATE)
 
-        viewModel.saveEnergyProfile()
+        viewModel.saveEnergyProfile { viewModel.saveAcknowledgement.saved("energy") }
         advanceUntilIdle()
 
+        assertNull(viewModel.saveAcknowledgement.pending.value)
+        assertEquals("1500", viewModel.energyState.value.bmrInput)
         assertNull(viewModel.energyState.value.saveMessage)
         assertEquals("저장에 실패했어요. 다시 시도해주세요.", viewModel.energyState.value.saveError)
     }
@@ -300,6 +302,44 @@ class EnergyViewModelTest {
         dashboardCollection.cancel()
     }
 
+    @Test
+    fun `다음 식사 안내는 저장한 목표가 없으면 기본 2000을 사용하지 않는다`() = runTest(dispatcher.scheduler) {
+        val dashboard = DashboardViewModel(MealRepository(FakeMealDao(0)), GoalRepository(FakeGoalDao(null)),
+            EnergyProfileRepository(FakeEnergyProfileDao()))
+        val collection = backgroundScope.launch { dashboard.nextMealGuidance.collect {} }
+        advanceUntilIdle()
+        assertNull(dashboard.configuredTargetCalories.value)
+        assertNull(dashboard.nextMealGuidance.value.targetCalories)
+        assertNull(dashboard.nextMealGuidance.value.range)
+        collection.cancel()
+    }
+
+    @Test
+    fun `수동 목표가 없어도 설정한 BMR은 다음 식사 안내 목표가 된다`() = runTest(dispatcher.scheduler) {
+        val dashboard = DashboardViewModel(MealRepository(FakeMealDao(0)), GoalRepository(FakeGoalDao(null)),
+            EnergyProfileRepository(FakeEnergyProfileDao(energyProfile(TargetMode.BMR))))
+        val collection = backgroundScope.launch { dashboard.nextMealGuidance.collect {} }
+        advanceUntilIdle()
+        assertEquals(1500, dashboard.configuredTargetCalories.value)
+        assertEquals(1500, dashboard.nextMealGuidance.value.targetCalories)
+        collection.cancel()
+    }
+
+    @Test
+    fun `저장한 목표 변경이 다음 식사 안내에 즉시 반영된다`() = runTest(dispatcher.scheduler) {
+        val goals = FakeGoalDao(1850)
+        val dashboard = DashboardViewModel(MealRepository(FakeMealDao(0)), GoalRepository(goals),
+            EnergyProfileRepository(FakeEnergyProfileDao()))
+        val collection = backgroundScope.launch { dashboard.nextMealGuidance.collect {} }
+        advanceUntilIdle()
+        assertEquals(1850, dashboard.nextMealGuidance.value.targetCalories)
+        goals.insertGoal(CalorieGoal(targetCalories = 1800, startDate = today.toString()))
+        advanceUntilIdle()
+        assertEquals(1800, dashboard.nextMealGuidance.value.targetCalories)
+        assertEquals(1800, dashboard.nextMealGuidance.value.remainingCalories)
+        collection.cancel()
+    }
+
     private fun dashboardViewModel(
         intake: Int,
         goal: Int,
@@ -339,16 +379,16 @@ class EnergyViewModelTest {
         override fun getNutritionByDate(date: String): Flow<List<com.example.healthcare.data.model.MealNutritionRow>> = flowOf(emptyList())
     }
 
-    private class FakeGoalDao(goal: Int) : CalorieGoalDao {
-        private val goalFlow = MutableStateFlow(CalorieGoal(1, goal, "2020-01-01"))
+    private class FakeGoalDao(goal: Int?) : CalorieGoalDao {
+        private val goalFlow = MutableStateFlow(goal?.let { CalorieGoal(1, it, "2020-01-01") })
         private var nextId = 2L
-        val current: CalorieGoal get() = goalFlow.value
+        val current: CalorieGoal get() = requireNotNull(goalFlow.value)
         override suspend fun insertGoal(goal: CalorieGoal) {
             goalFlow.value = if (goal.id == 0L) goal.copy(id = nextId++) else goal
         }
         override fun getLatestGoal(): Flow<CalorieGoal?> = goalFlow
         override fun getGoalForDate(date: String): Flow<CalorieGoal?> = goalFlow
-        override fun getAllGoals(): Flow<List<CalorieGoal>> = flowOf(listOf(goalFlow.value))
+        override fun getAllGoals(): Flow<List<CalorieGoal>> = goalFlow.map { listOfNotNull(it) }
     }
 
     private class FakeEnergyProfileDao(initial: EnergyProfileHistory? = null) : EnergyProfileDao {

@@ -1,0 +1,132 @@
+{
+  "checkedAt": "2026-10-04",
+  "wholeFoodAudit": "food-quality-audit.json",
+  "baseline": {
+    "checkedAt": "2026-10-04",
+    "foodMetrics": {
+      "totalFoods": 31680,
+      "kcal": 31680,
+      "macroComplete": 18234,
+      "officialServing": 11979,
+      "householdUnitEvidence": 465,
+      "ingredientsKnownPartialOrComplete": 33,
+      "ingredientsCompleteDeclaration": 0,
+      "allergenEvidenceKnown": 4,
+      "allergenCompleteDeclaration": 2,
+      "foodGroupsVerified": 33,
+      "provenanceLinked": 31680
+    },
+    "recommendation": {
+      "someVerifiedIngredients": 19,
+      "foodGroups": 19,
+      "allergenEvidence": 2,
+      "allergenCompleteLabel": 2
+    },
+    "franchise": {
+      "ingredientKnown": 0,
+      "allergenEvidence": 0
+    },
+    "scope": "Captured start-of-task assets; source-verified components are distinct from historic name-only COMPLETE flags.",
+    "capturedAssetSha256": {
+      "food_items.csv": "CCF6A9B2322AD5E75FE29F13FFB7C4BF719C2CCA5CD3B459F104D659231261B4",
+      "franchise_official_items.csv": "DD81238EE65F108E809173F8C9B6BF0131FC54C5CE82611B4295DC8B4B13E5CD",
+      "meal_templates.csv": "F6D2855BA77372DDE311E2065CBAEAD3D4348A25CBE52EBF390789707456F5A9",
+      "meal_template_ingredients.csv": "0A3B795901831AB7634227168E74E6E8C08950C1B4C3D8668944FF84620780DD",
+      "product_items.csv": "27B878B35A0CF5D5FB2218EDF25B06ED24E0D6E09DEF937893E25A9F570950DC",
+      "theme-eligibility-audit.csv": "C985886E048486EFA18096AC18316889842A7C5BFEE102436551FEB1FE21EF35",
+      "verified-food-groups.csv": "1AD075E119092435B64D0B3FBE502AA7A0E5AB5FA95F3E78C2B33AA41C649CB7"
+    }
+  },
+  "franchise": {
+    "nutritionIdentities": {
+      "identities": 2707,
+      "linkedMetadata": 2707,
+      "ingredientKnown": 265,
+      "ingredientComplete": 0,
+      "allergenEvidence": 179,
+      "allergenCompleteLabel": 82,
+      "foodGroups": 1,
+      "staleCandidates": 177
+    },
+    "catalogMenus": {
+      "identities": 1272,
+      "linkedMetadata": 1272,
+      "ingredientKnown": 538,
+      "ingredientComplete": 0,
+      "allergenEvidence": 318,
+      "allergenCompleteLabel": 174,
+      "foodGroups": 0,
+      "staleCandidates": 187
+    },
+    "combinedSourceEntries": {
+      "identities": 3979,
+      "linkedMetadata": 3979,
+      "ingredientKnown": 803,
+      "ingredientComplete": 0,
+      "allergenEvidence": 497,
+      "allergenCompleteLabel": 256,
+      "foodGroups": 1,
+      "staleCandidates": 364
+    }
+  },
+  "recommendation": {
+    "templates": 292,
+    "researched": 292,
+    "someVerifiedIngredients": 163,
+    "foodGroups": 163,
+    "allergenEvidence": 8,
+    "allergenCompleteLabel": 8,
+    "researchSummary": {
+      "rows": 292,
+      "sourcedGroups": 163,
+      "styleEligible": 115,
+      "unresolved": 129,
+      "unresolvedReasons": {
+        "NO_EXACT_PUBLIC_OR_OFFICIAL_INGREDIENT_EVIDENCE": 91,
+        "OFFICIAL_PRODUCT_COMPOSITION_UNRESOLVED": 38
+      },
+      "priorReviewedSnapshot": {
+        "sourcedGroups": 19,
+        "majorIngredientInformationKnown": 51,
+        "styleEligible": 16,
+        "snackEligible": 2
+      },
+      "original19EvidenceWithCurrentPolicy": 18,
+      "additionalCandidatesFromExpandedEvidenceUnderCurrentPolicy": 97,
+      "sameExpandedEvidenceWithBlanketRedMeatExclusion": 102,
+      "extraCandidatesFromRedMeatPenaltyInsteadOfBlanketExclusion": 13,
+      "originalIngredientCompleteTagsUnchanged": true,
+      "referenceAllergenStatus": "UNKNOWN",
+      "recipeFacts": 516,
+      "primaryEvidence": {
+        "recipe": 108,
+        "definition": 47,
+        "brand": 8
+      },
+      "parserVersion": "recommendation-composition-followup-v2",
+      "checkedAt": "2026-10-04"
+    },
+    "beforeAllergenPolicy": {
+      "legacyCompleteFlag": 37,
+      "explicitOfficialDeclarations": 2,
+      "note": "Positive tags alone no longer certify a full declaration. Every exact linked food needs a confirmed label."
+    }
+  },
+  "runtimeAmountPolicy": {
+    "before": {
+      "OFFICIAL_SERVING": 11979,
+      "UNRESOLVED": 2382,
+      "VERIFIED_CONVERSION": 2709,
+      "VOLUME_ONLY": 811,
+      "WEIGHT_ONLY": 13799
+    },
+    "after": {
+      "OFFICIAL_SERVING": 11979,
+      "UNRESOLVED": 2382,
+      "VERIFIED_CONVERSION": 2709,
+      "VOLUME_ONLY": 811,
+      "WEIGHT_ONLY": 13963
+    }
+  },
+  "policy": "Ingredients describe observed components or public reference recipes, separately from complete ingredient declarations. Positive allergens, complete labels and cross-contact remain separate."
+}

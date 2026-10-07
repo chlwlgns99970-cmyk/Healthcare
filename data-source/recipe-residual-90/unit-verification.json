@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "tests": 26,
+  "suites": [
+    {
+      "name": "com.example.healthcare.FoodDetailPolicyTest",
+      "tests": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "com.example.healthcare.FullRecipeReferenceTest",
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "com.example.healthcare.RecipeMenuCompletionTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "com.example.healthcare.RecordSaveConfirmationTest",
+      "tests": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "com.example.healthcare.SaveAcknowledgementTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  ],
+  "execution": "Gradle UP-TO-DATE: unchanged code/assets reuse existing26 passing results; not26 newly executed tests",
+  "log": "app/build/recipe-residual-90-build.log"
+}

@@ -119,7 +119,8 @@ class PortionGuideTest {
         assertEquals(120.0, presets[1].amount, 0.0)
         assertEquals(500, PortionGuide.estimate(ramen, presets[1])?.calories)
         assertEquals(1000, PortionGuide.estimate(ramen, presets[3])?.calories)
-        assertEquals("1봉 120g · 500 kcal", PortionGuide.resultServingSummary(ramen))
+        assertEquals("1봉 · 500 kcal", PortionGuide.resultServingSummary(ramen))
+        assertEquals("1봉 120g 기준", PortionGuide.resultServingBasis(ramen))
         assertTrue(presets.all { it.sourceReference.contains("P108-003000400-0138") })
     }
 
@@ -135,7 +136,8 @@ class PortionGuideTest {
         assertEquals(listOf("제품의 절반", "제품 전체", "제품 1.5개", "제품 2개"),
             PortionGuide.presets(unmarked).map { it.label })
         assertFalse(PortionGuide.presets(unmarked).any { it.label.contains("조각") })
-        assertEquals("제품 전체 320g · 800 kcal", PortionGuide.resultServingSummary(unmarked))
+        assertEquals("제품 전체 · 800 kcal", PortionGuide.resultServingSummary(unmarked))
+        assertEquals("제품 전체 320g 기준", PortionGuide.resultServingBasis(unmarked))
     }
 
     @Test fun verifiedLineUnitIsOfferedOnlyWhenOfficialSourceSaysLine() {
@@ -167,7 +169,8 @@ class PortionGuideTest {
             sourceType = "K-FIND-PRODUCT",
             servingDescription = "100g 기준 · 공식 총내용량 180g"
         )
-        assertEquals("제품 전체 180g · 450 kcal", PortionGuide.resultServingSummary(packagedBurger))
+        assertEquals("제품 전체 · 450 kcal", PortionGuide.resultServingSummary(packagedBurger))
+        assertEquals("제품 전체 180g 기준", PortionGuide.resultServingBasis(packagedBurger))
         assertFalse(PortionGuide.presets(packagedBurger).any { it.label == "1개" })
     }
 
@@ -176,18 +179,21 @@ class PortionGuideTest {
             sourceType = "K-FIND-PRODUCT",
             servingDescription = "100ml 기준 · 공식 총내용량 500ml · 포장단위 병"
         )
-        assertEquals("1병 500ml · 220 kcal", PortionGuide.resultServingSummary(beverage))
+        assertEquals("1병 · 220 kcal", PortionGuide.resultServingSummary(beverage))
+        assertEquals("1병 500ml 기준", PortionGuide.resultServingBasis(beverage))
         assertEquals("1병", PortionGuide.presets(beverage)[1].label)
 
         val noPackageUnit = beverage.copy(servingDescription = "100ml 기준 · 공식 총내용량 200ml")
-        assertEquals("제품 전체 200ml · 88 kcal", PortionGuide.resultServingSummary(noPackageUnit))
+        assertEquals("제품 전체 · 88 kcal", PortionGuide.resultServingSummary(noPackageUnit))
+        assertEquals("제품 전체 200ml 기준", PortionGuide.resultServingBasis(noPackageUnit))
         assertFalse(PortionGuide.presets(noPackageUnit).any { it.label.contains("병") || it.label.contains("팩") })
 
         val pack = beverage.copy(
             energyKcal = 65.789,
             servingDescription = "100ml 기준 · 공식 총내용량 190ml · 포장단위 팩"
         )
-        assertEquals("1팩 190ml · 125 kcal", PortionGuide.resultServingSummary(pack))
+        assertEquals("1팩 · 125 kcal", PortionGuide.resultServingSummary(pack))
+        assertEquals("1팩 190ml 기준", PortionGuide.resultServingBasis(pack))
         assertEquals("1팩", PortionGuide.presets(pack)[1].label)
     }
 }

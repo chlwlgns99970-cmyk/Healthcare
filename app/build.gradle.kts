@@ -37,8 +37,8 @@ android {
         applicationId = "com.example.healthcare"
         minSdk = 24
         targetSdk = 37
-        versionCode = 7
-        versionName = "1.0.6"
+        versionCode = 8
+        versionName = "1.0.7"
 
         buildConfigField("String", "FOOD_ANALYSIS_BASE_URL", foodAnalysisBaseUrl.asBuildConfigString())
         buildConfigField(

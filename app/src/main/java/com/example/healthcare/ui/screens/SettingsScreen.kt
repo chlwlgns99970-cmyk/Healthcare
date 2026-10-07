@@ -125,10 +125,18 @@ fun SettingsScreen(
         ?: remember { mutableStateOf(WeightGoalUiState()) }
     val foodDataUpdateState by viewModel?.foodDataUpdateState?.collectAsState()
         ?: remember { mutableStateOf(FoodDataUpdateState()) }
-    var showGoalDialog by remember { mutableStateOf(false) }
+    var showGoalDialog by rememberSaveable { mutableStateOf(false) }
     var selectedSection by rememberSaveable { mutableStateOf<String?>(null) }
-    var newGoalText by remember { mutableStateOf("") }
+    var newGoalText by rememberSaveable { mutableStateOf("") }
     val targetCalories = currentGoal?.targetCalories ?: 2000
+    val registerExitGuard = com.example.healthcare.ui.LocalDraftExitGuardRegistration.current
+    androidx.compose.runtime.SideEffect {
+        registerExitGuard(com.example.healthcare.ui.DraftExitGuard(
+            viewModel?.hasUnsavedInput == true || (showGoalDialog && newGoalText != targetCalories.toString()),
+            isGoalSaving || energyState.isSaving || bodyProfileState.isSaving || weightGoalState.isApplying || weightGoalState.isApplyingIntakeTarget,
+            discard = { viewModel?.discardSettingsDraft(); showGoalDialog = false }
+        ))
+    }
 
     LaunchedEffect(initialSection) {
         if (initialSection != null && runCatching { SettingsSection.valueOf(initialSection) }.isSuccess) {
@@ -137,18 +145,29 @@ fun SettingsScreen(
         }
     }
 
+    val pendingSave by viewModel?.saveAcknowledgement?.pending?.collectAsState()
+        ?: remember { mutableStateOf<String?>(null) }
     if (showGoalDialog) {
         GoalDialog(
             value = newGoalText,
-            isSaving = isGoalSaving,
+            isSaving = isGoalSaving || pendingSave != null,
             onValueChange = { newGoalText = it.filter(Char::isDigit).take(5) },
-            onDismiss = { showGoalDialog = false },
+            onDismiss = { if (pendingSave == null) showGoalDialog = false },
             onSave = {
                 viewModel?.updateGoal(newGoalText.toIntOrNull() ?: 0) {
-                    showGoalDialog = false
+                    viewModel.saveAcknowledgement.saved("goal")
                 }
             }
         )
+    }
+
+    if (pendingSave != null) {
+        com.example.healthcare.ui.components.RecordSavedDialog(false, body = "저장되었습니다.") {
+            when (viewModel?.saveAcknowledgement?.confirm()) {
+                "goal" -> showGoalDialog = false
+                "body" -> viewModel?.bodyProfileState?.value?.weightInput?.toDoubleOrNull()?.let(onBodyWeightSaved)
+            }
+        }
     }
 
     val section = selectedSection?.let { runCatching { SettingsSection.valueOf(it) }.getOrNull() }
@@ -184,12 +203,12 @@ fun SettingsScreen(
         onActivityLevelSelected = { viewModel?.onActivityLevelSelected(it) },
         onCustomPalChange = { viewModel?.onCustomPalChange(it) },
         onTargetModeSelected = { viewModel?.onTargetModeSelected(it) },
-        onSaveEnergyProfile = { viewModel?.saveEnergyProfile() },
+        onSaveEnergyProfile = { viewModel?.saveEnergyProfile { viewModel.saveAcknowledgement.saved("energy") } },
         onBodySexSelected = { viewModel?.onBodySexSelected(it) },
         onBodyAgeChange = { viewModel?.onBodyAgeChange(it) },
         onBodyHeightChange = { viewModel?.onBodyHeightChange(it) },
         onBodyWeightChange = { viewModel?.onBodyWeightChange(it) },
-        onSaveBodyProfile = { viewModel?.saveBodyProfile(onBodyWeightSaved) },
+        onSaveBodyProfile = { viewModel?.saveBodyProfile { viewModel.saveAcknowledgement.saved("body") } },
         onUseEstimatedBmr = { viewModel?.useEstimatedBmr() },
         onWeightGoalTargetChange = { viewModel?.onWeightGoalTargetChange(it) },
         onWeightGoalWeeksChange = { viewModel?.onWeightGoalWeeksChange(it) },

@@ -15,10 +15,11 @@ interface FoodItemDao {
 
     @Query(
         "SELECT * FROM food_items " +
-            "WHERE sourceType != 'K-FIND-PRODUCT' AND (" +
+            "WHERE sourceType NOT IN ('K-FIND-PRODUCT', 'OFFICIAL-RETAIL-PRODUCT') AND (" +
             "normalizedName LIKE '%' || :normalizedQuery || '%' " +
             "OR aliases LIKE '%' || :normalizedQuery || '%' " +
-            "OR replace(lower(COALESCE(brand, '')), ' ', '') LIKE '%' || :normalizedQuery || '%') " +
+            "OR replace(lower(COALESCE(brand, '')), ' ', '') LIKE '%' || :normalizedQuery || '%' " +
+            "OR replace(lower(COALESCE(brand, '')), ' ', '') || normalizedName LIKE '%' || :normalizedQuery || '%') " +
             "ORDER BY CASE WHEN sourceType = 'USDA-SR-LEGACY' AND " +
             "aliases LIKE '%|' || :normalizedQuery || '|%' THEN 0 ELSE 1 END, " +
             "CASE WHEN sourceType = 'K-FIND' AND lower(unit) = 'ml' AND " +
@@ -35,7 +36,7 @@ interface FoodItemDao {
 
     @Query(
         "SELECT * FROM food_items " +
-            "WHERE sourceType = 'K-FIND-PRODUCT' AND (" +
+            "WHERE sourceType IN ('K-FIND-PRODUCT', 'OFFICIAL-RETAIL-PRODUCT') AND (" +
             "normalizedName LIKE '%' || :normalizedQuery || '%' " +
             "OR aliases LIKE '%' || :normalizedQuery || '%' " +
             "OR replace(lower(COALESCE(brand, '')), ' ', '') || normalizedName " +
@@ -49,13 +50,13 @@ interface FoodItemDao {
 
     @Query(
         "SELECT brand, COUNT(*) AS productCount FROM food_items " +
-            "WHERE sourceType = 'K-FIND-PRODUCT' AND brand IS NOT NULL AND TRIM(brand) != '' " +
+            "WHERE sourceType IN ('K-FIND-PRODUCT', 'OFFICIAL-RETAIL-PRODUCT') AND brand IS NOT NULL AND TRIM(brand) != '' " +
             "GROUP BY brand ORDER BY productCount DESC, brand COLLATE NOCASE LIMIT :limit"
     )
     fun observeProductBrands(limit: Int = 4000): Flow<List<FoodBrandSummary>>
 
     @Query(
-        "SELECT * FROM food_items WHERE sourceType = 'K-FIND-PRODUCT' AND brand = :brand " +
+        "SELECT * FROM food_items WHERE sourceType IN ('K-FIND-PRODUCT', 'OFFICIAL-RETAIL-PRODUCT') AND brand = :brand " +
             "AND (:normalizedQuery = '' OR normalizedName LIKE '%' || :normalizedQuery || '%' " +
             "OR aliases LIKE '%' || :normalizedQuery || '%') " +
             "ORDER BY CASE WHEN normalizedName = :normalizedQuery THEN 0 " +
@@ -74,6 +75,9 @@ interface FoodItemDao {
             "GROUP BY brand ORDER BY productCount DESC, brand COLLATE NOCASE"
     )
     fun observeFranchiseBrands(brands: List<String>): Flow<List<FoodBrandSummary>>
+
+    @Query("SELECT * FROM food_items WHERE sourceType IN ('K-FIND', 'OFFICIAL-BRAND-NUTRITION') AND brand IN (:brands)")
+    fun observeAllFranchiseFoods(brands: List<String>): Flow<List<FoodItem>>
 
     @Query(
         "SELECT * FROM food_items WHERE sourceType IN ('K-FIND', 'OFFICIAL-BRAND-NUTRITION') AND brand = :brand " +

@@ -1,0 +1,949 @@
+[
+  {
+    "recipeId": "MFDS-146",
+    "name": "딸기바나나연두부쉐이크",
+    "basis": "원본 공식 레시피 전체 재료량 · 원본 완전 연결",
+    "ingredientText": "딸기 100g, 연두부 50g, 바나나 50g, 올리고당 10g",
+    "sourceUrl": "https://www.foodsafetykorea.go.kr/popup/sensuousmenuView.do?rcp_menu_no=146",
+    "sourceSha256": "ddcaf70ec36712ee9e3cd8dcbfe7dd931f692785fa8136aa5701838c9f742b74",
+    "inputs": [
+      {
+        "ingredient": "딸기",
+        "amountGrams": 100.0,
+        "nutrient": {
+          "code": "167762",
+          "name": "Strawberries, raw",
+          "energyKcal": 32.0,
+          "sourceUrl": "https://fdc.nal.usda.gov/food-details/167762/nutrients",
+          "sha256": "b80817294b8850530aaedf2e515c02593b1824f763a0ff356e5c2081643e6fd0",
+          "archiveUrl": "https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_sr_legacy_food_csv_2018-04.zip",
+          "checkedAt": "2026-10-05",
+          "referenceAmount": 100,
+          "unit": "g"
+        }
+      },
+      {
+        "ingredient": "연두부",
+        "amountGrams": 50.0,
+        "nutrient": {
+          "code": "D0150030009a",
+          "name": "두부, 연두부",
+          "energyKcal": 50,
+          "referenceAmount": 100,
+          "unit": "g",
+          "worksheetRow": 611,
+          "index": 568,
+          "attribution": "농촌진흥청, 2026. 국가표준식품성분 DB 10.4.",
+          "sourceUrl": "https://www.nics.go.kr/food/kfi/fct/fctIntro/list?menuId=PS03562",
+          "sha256": "271cc431f2991b3c0c049ec6e05fb59a040319e984ab71468184530de61dec50"
+        }
+      },
+      {
+        "ingredient": "바나나",
+        "amountGrams": 50.0,
+        "nutrient": {
+          "code": "173944",
+          "name": "Bananas, raw",
+          "energyKcal": 89.0,
+          "sourceUrl": "https://fdc.nal.usda.gov/food-details/173944/nutrients",
+          "sha256": "b80817294b8850530aaedf2e515c02593b1824f763a0ff356e5c2081643e6fd0",
+          "archiveUrl": "https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_sr_legacy_food_csv_2018-04.zip",
+          "checkedAt": "2026-10-05",
+          "referenceAmount": 100,
+          "unit": "g"
+        }
+      },
+      {
+        "ingredient": "올리고당",
+        "amountGrams": 10.0,
+        "nutrient": {
+          "code": "C0120050009a",
+          "name": "시럽, 올리고당",
+          "energyKcal": 299,
+          "referenceAmount": 100,
+          "unit": "g",
+          "worksheetRow": 556,
+          "index": 3465,
+          "attribution": "농촌진흥청, 2026. 국가표준식품성분 DB 10.4.",
+          "sourceUrl": "https://www.nics.go.kr/food/kfi/fct/fctIntro/list?menuId=PS03562",
+          "sha256": "271cc431f2991b3c0c049ec6e05fb59a040319e984ab71468184530de61dec50"
+        }
+      }
+    ],
+    "complete": true,
+    "compositionKind": "ORIGINAL",
+    "sourceInstitution": "식품의약품안전처"
+  },
+  {
+    "recipeId": "MFDS-183",
+    "name": "노각생채",
+    "basis": "원본 공식 레시피 전체 재료량 · 원본 완전 연결",
+    "ingredientText": "재료량(4인분) - 노각 280g, 고추장 20g, 설탕 4g, 참기름 4g, 소금4g",
+    "sourceUrl": "https://www.foodsafetykorea.go.kr/popup/sensuousmenuView.do?rcp_menu_no=183",
+    "sourceSha256": "499896f5045194d954e8dbbf7a86569af93af326b9af07ece26c2851da6e8b65",
+    "inputs": [
+      {
+        "ingredient": "노각",
+        "amountGrams": 280.0,
+        "nutrient": {
+          "code": "F1480030000a",
+          "name": "오이, 늙은오이, 생것",
+          "energyKcal": 9,
+          "referenceAmount": 100,
+          "unit": "g",
+          "worksheetRow": 1207,
+          "index": 1138,
+          "attribution": "농촌진흥청, 2026. 국가표준식품성분 DB 10.4.",
+          "sourceUrl": "https://www.nics.go.kr/food/kfi/fct/fctIntro/list?menuId=PS03562",
+          "sha256": "271cc431f2991b3c0c049ec6e05fb59a040319e984ab71468184530de61dec50"
+        }
+      },
+      {
+        "ingredient": "고추장",
+        "amountGrams": 20.0,
+        "nutrient": {
+          "code": "P112-010001000-0525",
+          "name": "고추장",
+          "energyKcal": 222.0,
+          "sourceUrl": "https://various.foodsafetykorea.go.kr/nutrient/general/down/list.do",
+          "sha256": "b074d98e75d2d087dc1b193f0056affbf9afd14524c9ccb556cb2b20978504f7",
+          "checkedAt": "2026-10-05",
+          "sourceIdentifier": "2024_RD_20046",
+          "worksheetRow": 293430,
+          "referenceAmount": 100,
+          "unit": "g",
+          "foodSubgroup": "고추장",
+          "attribution": "식품의약품안전처"
+        }
+      },
+      {
+        "ingredient": "설탕",
+        "amountGrams": 4.0,
+        "nutrient": {
+          "code": "169655",
+          "name": "Sugars, granulated",
+          "energyKcal": 387.0,
+          "sourceUrl": "https://fdc.nal.usda.gov/food-details/169655/nutrients",
+          "sha256": "b80817294b8850530aaedf2e515c02593b1824f763a0ff356e5c2081643e6fd0",
+          "archiveUrl": "https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_sr_legacy_food_csv_2018-04.zip",
+          "checkedAt": "2026-10-05",
+          "referenceAmount": 100,
+          "unit": "g"
+        }
+      },
+      {
+        "ingredient": "참기름",
+        "amountGrams": 4.0,
+        "nutrient": {
+          "code": "N0200000009a",
+          "name": "참기름",
+          "energyKcal": 920,
+          "referenceAmount": 100,
+          "unit": "g",
+          "worksheetRow": 3009,
+          "index": 2894,
+          "attribution": "농촌진흥청, 2026. 국가표준식품성분 DB 10.4.",
+          "sourceUrl": "https://www.nics.go.kr/food/kfi/fct/fctIntro/list?menuId=PS03562",
+          "sha256": "271cc431f2991b3c0c049ec6e05fb59a040319e984ab71468184530de61dec50"
+        }
+      },
+      {
+        "ingredient": "소금",
+        "amountGrams": 4.0,
+        "nutrient": {
+          "code": "173468",
+          "name": "Salt, table",
+          "energyKcal": 0.0,
+          "sourceUrl": "https://fdc.nal.usda.gov/food-details/173468/nutrients",
+          "sha256": "b80817294b8850530aaedf2e515c02593b1824f763a0ff356e5c2081643e6fd0",
+          "archiveUrl": "https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_sr_legacy_food_csv_2018-04.zip",
+          "checkedAt": "2026-10-05",
+          "referenceAmount": 100,
+          "unit": "g"
+        }
+      }
+    ],
+    "complete": true,
+    "compositionKind": "ORIGINAL",
+    "sourceInstitution": "식품의약품안전처"
+  },
+  {
+    "recipeId": "MFDS-217",
+    "name": "배오이무침",
+    "basis": "원본 공식 레시피 전체 재료량 · 원본 완전 연결",
+    "ingredientText": "재료량(4인분) - 오이 200g, 배 160g, 참기름 6g, 파 10g, 다진 마늘 6g, 고춧가루 4g, 소금 3g, 통깨 2g",
+    "sourceUrl": "https://www.foodsafetykorea.go.kr/popup/sensuousmenuView.do?rcp_menu_no=217",
+    "sourceSha256": "4ebaf6abb08f5abb71b60568f10ad2df932e6efe38033e5004a91fa2880cc058",
+    "inputs": [
+      {
+        "ingredient": "오이",
+        "amountGrams": 200.0,
+        "nutrient": {
+          "code": "168409",
+          "name": "Cucumber, with peel, raw",
+          "energyKcal": 15.0,
+          "sourceUrl": "https://fdc.nal.usda.gov/food-details/168409/nutrients",
+          "sha256": "b80817294b8850530aaedf2e515c02593b1824f763a0ff356e5c2081643e6fd0",
+          "archiveUrl": "https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_sr_legacy_food_csv_2018-04.zip",
+          "checkedAt": "2026-10-05",
+          "referenceAmount": 100,
+          "unit": "g"
+        }
+      },
+      {
+        "ingredient": "배",
+        "amountGrams": 160.0,
+        "nutrient": {
+          "code": "H0380000000a",
+          "name": "배, 생것",
+          "energyKcal": 45,
+          "referenceAmount": 100,
+          "unit": "g",
+          "worksheetRow": 1554,
+          "index": 1464,
+          "attribution": "농촌진흥청, 2026. 국가표준식품성분 DB 10.4.",
+          "sourceUrl": "https://www.nics.go.kr/food/kfi/fct/fctIntro/list?menuId=PS03562",
+          "sha256": "271cc431f2991b3c0c049ec6e05fb59a040319e984ab71468184530de61dec50"
+        }
+      },
+      {
+        "ingredient": "참기름",
+        "amountGrams": 6.0,
+        "nutrient": {
+          "code": "N0200000009a",
+          "name": "참기름",
+          "energyKcal": 920,
+          "referenceAmount": 100,
+          "unit": "g",
+          "worksheetRow": 3009,
+          "index": 2894,
+          "attribution": "농촌진흥청, 2026. 국가표준식품성분 DB 10.4.",
+          "sourceUrl": "https://www.nics.go.kr/food/kfi/fct/fctIntro/list?menuId=PS03562",
+          "sha256": "271cc431f2991b3c0c049ec6e05fb59a040319e984ab71468184530de61dec50"
+        }
+      },
+      {
+        "ingredient": "파",
+        "amountGrams": 10.0,
+        "nutrient": {
+          "code": "MFDS-LEGACY-1676",
+          "name": "파, 생것",
+          "energyKcal": 22.0,
+          "sourceUrl": "https://www.foodsafetykorea.go.kr/portal/healthyfoodlife/foodnutrient/downloadFoodNutrientDB.do",
+          "sourceRequest": "https://www.foodsafetykorea.go.kr/portal/healthyfoodlife/foodnutrient/downloadFoodNutrientDB.do|POST|code4=1&code2=&search_name=&menu_grp=MENU_GRP02&menu_no=403",
+          "sourceSha256": "4a16ddf14c90730ebce095fc42e2a034359d2cd1eb88d920ec999e8ec30142c9",
+          "sourceName": "식약처 공개 기존 식품영양 DB",
+          "dataYear": 2017,
+          "referenceAmount": 100,
+          "referenceUnit": "g",
+          "originalServingGrams": 100.0,
+          "originalServingKcal": 22.0,
+          "originalRecord": [
+            1676.0,
+            "채소류",
+            "파, 생것 ",
+            100.0,
+            22.0,
+            6.7,
+            1.2,
+            0.2,
+            "N/A",
+            17.0,
+            "N/A",
+            "N/A",
+            0.0,
+            "2017"
+          ],
+          "checkedAt": "2026-10-05"
+        }
+      },
+      {
+        "ingredient": "다진 마늘",
+        "amountGrams": 6.0,
+        "nutrient": {
+          "code": "169230",
+          "name": "Garlic, raw",
+          "energyKcal": 149.0,
+          "sourceUrl": "https://fdc.nal.usda.gov/food-details/169230/nutrients",
+          "sha256": "b80817294b8850530aaedf2e515c02593b1824f763a0ff356e5c2081643e6fd0",
+          "archiveUrl": "https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_sr_legacy_food_csv_2018-04.zip",
+          "checkedAt": "2026-10-05",
+          "referenceAmount": 100,
+          "unit": "g"
+        }
+      },
+      {
+        "ingredient": "고춧가루",
+        "amountGrams": 4.0,
+        "nutrient": {
+          "code": "R0070000005a",
+          "name": "고춧가루",
+          "energyKcal": 319,
+          "referenceAmount": 100,
+          "unit": "g",
+          "worksheetRow": 3160,
+          "index": 3022,
+          "attribution": "농촌진흥청, 2026. 국가표준식품성분 DB 10.4.",
+          "sourceUrl": "https://www.nics.go.kr/food/kfi/fct/fctIntro/list?menuId=PS03562",
+          "sha256": "271cc431f2991b3c0c049ec6e05fb59a040319e984ab71468184530de61dec50"
+        }
+      },
+      {
+        "ingredient": "소금",
+        "amountGrams": 3.0,
+        "nutrient": {
+          "code": "173468",
+          "name": "Salt, table",
+          "energyKcal": 0.0,
+          "sourceUrl": "https://fdc.nal.usda.gov/food-details/173468/nutrients",
+          "sha256": "b80817294b8850530aaedf2e515c02593b1824f763a0ff356e5c2081643e6fd0",
+          "archiveUrl": "https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_sr_legacy_food_csv_2018-04.zip",
+          "checkedAt": "2026-10-05",
+          "referenceAmount": 100,
+          "unit": "g"
+        }
+      },
+      {
+        "ingredient": "통깨",
+        "amountGrams": 2.0,
+        "nutrient": {
+          "code": "170151",
+          "name": "Seeds, sesame seeds, whole, roasted and toasted",
+          "energyKcal": 565.0,
+          "sourceUrl": "https://fdc.nal.usda.gov/food-details/170151/nutrients",
+          "sha256": "b80817294b8850530aaedf2e515c02593b1824f763a0ff356e5c2081643e6fd0",
+          "archiveUrl": "https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_sr_legacy_food_csv_2018-04.zip",
+          "checkedAt": "2026-10-05",
+          "referenceAmount": 100,
+          "unit": "g"
+        }
+      }
+    ],
+    "complete": true,
+    "compositionKind": "ORIGINAL",
+    "sourceInstitution": "식품의약품안전처"
+  },
+  {
+    "recipeId": "MFDS-219",
+    "name": "감자채튀김",
+    "basis": "원본 공식 레시피 전체 재료량 · 원본 완전 연결",
+    "ingredientText": "재료량(4인분) - 감자 280g, 콩기름 40g",
+    "sourceUrl": "https://www.foodsafetykorea.go.kr/popup/sensuousmenuView.do?rcp_menu_no=219",
+    "sourceSha256": "933cab005fb4dab9e9e98820548be07f008f268f62f55d98b0337355f133ba20",
+    "inputs": [
+      {
+        "ingredient": "감자",
+        "amountGrams": 280.0,
+        "nutrient": {
+          "code": "MFDS-LEGACY-545",
+          "name": "감자, 생것",
+          "energyKcal": 53.0,
+          "sourceUrl": "https://www.foodsafetykorea.go.kr/portal/healthyfoodlife/foodnutrient/downloadFoodNutrientDB.do",
+          "sourceRequest": "https://www.foodsafetykorea.go.kr/portal/healthyfoodlife/foodnutrient/downloadFoodNutrientDB.do|POST|code4=1&code2=&search_name=&menu_grp=MENU_GRP02&menu_no=403",
+          "sourceSha256": "4a16ddf14c90730ebce095fc42e2a034359d2cd1eb88d920ec999e8ec30142c9",
+          "sourceName": "식약처 공개 기존 식품영양 DB",
+          "dataYear": 2017,
+          "referenceAmount": 100,
+          "referenceUnit": "g",
+          "originalServingGrams": 100.0,
+          "originalServingKcal": 53.0,
+          "originalRecord": [
+            545.0,
+            "감자 및 전분류",
+            "감자, 생것 ",
+            100.0,
+            53.0,
+            16.07,
+            1.93,
+            0.03,
+            0.0,
+            1.0,
+            0.0,
+            0.02,
+            0.0,
+            "2017"
+          ],
+          "checkedAt": "2026-10-05"
+        }
+      },
+      {
+        "ingredient": "콩기름",
+        "amountGrams": 40.0,
+        "nutrient": {
+          "code": "171411",
+          "name": "Oil, soybean, salad or cooking",
+          "energyKcal": 884.0,
+          "sourceUrl": "https://fdc.nal.usda.gov/food-details/171411/nutrients",
+          "sha256": "b80817294b8850530aaedf2e515c02593b1824f763a0ff356e5c2081643e6fd0",
+          "archiveUrl": "https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_sr_legacy_food_csv_2018-04.zip",
+          "checkedAt": "2026-10-05",
+          "referenceAmount": 100,
+          "unit": "g"
+        }
+      }
+    ],
+    "complete": true,
+    "compositionKind": "ORIGINAL",
+    "sourceInstitution": "식품의약품안전처"
+  },
+  {
+    "recipeId": "MFDS-278",
+    "name": "열무된장무침",
+    "basis": "원본 공식 레시피 전체 재료량 · 원본 완전 연결",
+    "ingredientText": "재료량(4인분) 열무 280g, 된장 32g, 된장 32g, 다진 마늘 4g",
+    "sourceUrl": "https://www.foodsafetykorea.go.kr/popup/sensuousmenuView.do?rcp_menu_no=278",
+    "sourceSha256": "5451f665d72aa1dd1ea37c64a7d4fda5acc5876cbbab81c289974279f518233b",
+    "inputs": [
+      {
+        "ingredient": "열무",
+        "amountGrams": 280.0,
+        "nutrient": {
+          "code": "F1440000000a",
+          "name": "열무, 생것",
+          "energyKcal": 14,
+          "referenceAmount": 100,
+          "unit": "g",
+          "worksheetRow": 1199,
+          "index": 1130,
+          "attribution": "농촌진흥청, 2026. 국가표준식품성분 DB 10.4.",
+          "sourceUrl": "https://www.nics.go.kr/food/kfi/fct/fctIntro/list?menuId=PS03562",
+          "sha256": "271cc431f2991b3c0c049ec6e05fb59a040319e984ab71468184530de61dec50"
+        }
+      },
+      {
+        "ingredient": "된장",
+        "amountGrams": 32.0,
+        "nutrient": {
+          "code": "MFDS-LEGACY-4487",
+          "name": "된장",
+          "energyKcal": 172.0,
+          "sourceUrl": "https://www.foodsafetykorea.go.kr/portal/healthyfoodlife/foodnutrient/downloadFoodNutrientDB.do",
+          "sourceRequest": "https://www.foodsafetykorea.go.kr/portal/healthyfoodlife/foodnutrient/downloadFoodNutrientDB.do|POST|code4=1&code2=&search_name=&menu_grp=MENU_GRP02&menu_no=403",
+          "sourceSha256": "4a16ddf14c90730ebce095fc42e2a034359d2cd1eb88d920ec999e8ec30142c9",
+          "sourceName": "식약처 공개 기존 식품영양 DB",
+          "dataYear": 2017,
+          "referenceAmount": 100,
+          "referenceUnit": "g",
+          "originalServingGrams": 100.0,
+          "originalServingKcal": 172.0,
+          "originalRecord": [
+            4487.0,
+            "조미료류",
+            "된장 ",
+            100.0,
+            172.0,
+            18.5,
+            12.5,
+            5.59,
+            5.4,
+            4206.0,
+            0.0,
+            0.94,
+            0.0,
+            "2017"
+          ],
+          "checkedAt": "2026-10-05"
+        }
+      },
+      {
+        "ingredient": "된장",
+        "amountGrams": 32.0,
+        "nutrient": {
+          "code": "MFDS-LEGACY-4487",
+          "name": "된장",
+          "energyKcal": 172.0,
+          "sourceUrl": "https://www.foodsafetykorea.go.kr/portal/healthyfoodlife/foodnutrient/downloadFoodNutrientDB.do",
+          "sourceRequest": "https://www.foodsafetykorea.go.kr/portal/healthyfoodlife/foodnutrient/downloadFoodNutrientDB.do|POST|code4=1&code2=&search_name=&menu_grp=MENU_GRP02&menu_no=403",
+          "sourceSha256": "4a16ddf14c90730ebce095fc42e2a034359d2cd1eb88d920ec999e8ec30142c9",
+          "sourceName": "식약처 공개 기존 식품영양 DB",
+          "dataYear": 2017,
+          "referenceAmount": 100,
+          "referenceUnit": "g",
+          "originalServingGrams": 100.0,
+          "originalServingKcal": 172.0,
+          "originalRecord": [
+            4487.0,
+            "조미료류",
+            "된장 ",
+            100.0,
+            172.0,
+            18.5,
+            12.5,
+            5.59,
+            5.4,
+            4206.0,
+            0.0,
+            0.94,
+            0.0,
+            "2017"
+          ],
+          "checkedAt": "2026-10-05"
+        }
+      },
+      {
+        "ingredient": "다진 마늘",
+        "amountGrams": 4.0,
+        "nutrient": {
+          "code": "169230",
+          "name": "Garlic, raw",
+          "energyKcal": 149.0,
+          "sourceUrl": "https://fdc.nal.usda.gov/food-details/169230/nutrients",
+          "sha256": "b80817294b8850530aaedf2e515c02593b1824f763a0ff356e5c2081643e6fd0",
+          "archiveUrl": "https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_sr_legacy_food_csv_2018-04.zip",
+          "checkedAt": "2026-10-05",
+          "referenceAmount": 100,
+          "unit": "g"
+        }
+      }
+    ],
+    "complete": true,
+    "compositionKind": "ORIGINAL",
+    "sourceInstitution": "식품의약품안전처"
+  },
+  {
+    "recipeId": "MFDS-294",
+    "name": "오징어야채볶음",
+    "basis": "원본 공식 레시피 전체 재료량 · 원본 완전 연결",
+    "ingredientText": "재료량(4인분) - 오징어 200g, 양배추 80g, 양파 40g, 당근 20g, 고추장 32g",
+    "sourceUrl": "https://www.foodsafetykorea.go.kr/popup/sensuousmenuView.do?rcp_menu_no=294",
+    "sourceSha256": "622a1045627dc398d16e83c007f8b792ab29955887e425b8c4e2e7ff1c71dccf",
+    "inputs": [
+      {
+        "ingredient": "오징어",
+        "amountGrams": 200.0,
+        "nutrient": {
+          "code": "K6230000000a",
+          "name": "오징어, 생것",
+          "energyKcal": 94,
+          "referenceAmount": 100,
+          "unit": "g",
+          "worksheetRow": 2845,
+          "index": 2735,
+          "attribution": "농촌진흥청, 2026. 국가표준식품성분 DB 10.4.",
+          "sourceUrl": "https://www.nics.go.kr/food/kfi/fct/fctIntro/list?menuId=PS03562",
+          "sha256": "271cc431f2991b3c0c049ec6e05fb59a040319e984ab71468184530de61dec50"
+        }
+      },
+      {
+        "ingredient": "양배추",
+        "amountGrams": 80.0,
+        "nutrient": {
+          "code": "169975",
+          "name": "Cabbage, raw",
+          "energyKcal": 25.0,
+          "sourceUrl": "https://fdc.nal.usda.gov/food-details/169975/nutrients",
+          "sha256": "b80817294b8850530aaedf2e515c02593b1824f763a0ff356e5c2081643e6fd0",
+          "archiveUrl": "https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_sr_legacy_food_csv_2018-04.zip",
+          "checkedAt": "2026-10-05",
+          "referenceAmount": 100,
+          "unit": "g"
+        }
+      },
+      {
+        "ingredient": "양파",
+        "amountGrams": 40.0,
+        "nutrient": {
+          "code": "170000",
+          "name": "Onions, raw",
+          "energyKcal": 40.0,
+          "sourceUrl": "https://fdc.nal.usda.gov/food-details/170000/nutrients",
+          "sha256": "b80817294b8850530aaedf2e515c02593b1824f763a0ff356e5c2081643e6fd0",
+          "archiveUrl": "https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_sr_legacy_food_csv_2018-04.zip",
+          "checkedAt": "2026-10-05",
+          "referenceAmount": 100,
+          "unit": "g"
+        }
+      },
+      {
+        "ingredient": "당근",
+        "amountGrams": 20.0,
+        "nutrient": {
+          "code": "170393",
+          "name": "Carrots, raw",
+          "energyKcal": 41.0,
+          "sourceUrl": "https://fdc.nal.usda.gov/food-details/170393/nutrients",
+          "sha256": "b80817294b8850530aaedf2e515c02593b1824f763a0ff356e5c2081643e6fd0",
+          "archiveUrl": "https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_sr_legacy_food_csv_2018-04.zip",
+          "checkedAt": "2026-10-05",
+          "referenceAmount": 100,
+          "unit": "g"
+        }
+      },
+      {
+        "ingredient": "고추장",
+        "amountGrams": 32.0,
+        "nutrient": {
+          "code": "P112-010001000-0525",
+          "name": "고추장",
+          "energyKcal": 222.0,
+          "sourceUrl": "https://various.foodsafetykorea.go.kr/nutrient/general/down/list.do",
+          "sha256": "b074d98e75d2d087dc1b193f0056affbf9afd14524c9ccb556cb2b20978504f7",
+          "checkedAt": "2026-10-05",
+          "sourceIdentifier": "2024_RD_20046",
+          "worksheetRow": 293430,
+          "referenceAmount": 100,
+          "unit": "g",
+          "foodSubgroup": "고추장",
+          "attribution": "식품의약품안전처"
+        }
+      }
+    ],
+    "complete": true,
+    "compositionKind": "ORIGINAL",
+    "sourceInstitution": "식품의약품안전처"
+  },
+  {
+    "recipeId": "MFDS-312",
+    "name": "봄동겉절이",
+    "basis": "원본 공식 레시피 전체 재료량 · 원본 완전 연결",
+    "ingredientText": "재료량(4인분) - 고춧가루 8g, 다진마늘 8g, 봄동 120g, 깨소금 2g",
+    "sourceUrl": "https://www.foodsafetykorea.go.kr/popup/sensuousmenuView.do?rcp_menu_no=312",
+    "sourceSha256": "e15a55d0970797fdd79c2798f33e8e6d17e945390989452ffc18a6e850d8b764",
+    "inputs": [
+      {
+        "ingredient": "고춧가루",
+        "amountGrams": 8.0,
+        "nutrient": {
+          "code": "R0070000005a",
+          "name": "고춧가루",
+          "energyKcal": 319,
+          "referenceAmount": 100,
+          "unit": "g",
+          "worksheetRow": 3160,
+          "index": 3022,
+          "attribution": "농촌진흥청, 2026. 국가표준식품성분 DB 10.4.",
+          "sourceUrl": "https://www.nics.go.kr/food/kfi/fct/fctIntro/list?menuId=PS03562",
+          "sha256": "271cc431f2991b3c0c049ec6e05fb59a040319e984ab71468184530de61dec50"
+        }
+      },
+      {
+        "ingredient": "다진마늘",
+        "amountGrams": 8.0,
+        "nutrient": {
+          "code": "169230",
+          "name": "Garlic, raw",
+          "energyKcal": 149.0,
+          "sourceUrl": "https://fdc.nal.usda.gov/food-details/169230/nutrients",
+          "sha256": "b80817294b8850530aaedf2e515c02593b1824f763a0ff356e5c2081643e6fd0",
+          "archiveUrl": "https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_sr_legacy_food_csv_2018-04.zip",
+          "checkedAt": "2026-10-05",
+          "referenceAmount": 100,
+          "unit": "g"
+        }
+      },
+      {
+        "ingredient": "봄동",
+        "amountGrams": 120.0,
+        "nutrient": {
+          "code": "F0870030000a",
+          "name": "배추, 봄동, 생것",
+          "energyKcal": 23,
+          "referenceAmount": 100,
+          "unit": "g",
+          "worksheetRow": 1013,
+          "index": 960,
+          "attribution": "농촌진흥청, 2026. 국가표준식품성분 DB 10.4.",
+          "sourceUrl": "https://www.nics.go.kr/food/kfi/fct/fctIntro/list?menuId=PS03562",
+          "sha256": "271cc431f2991b3c0c049ec6e05fb59a040319e984ab71468184530de61dec50"
+        }
+      },
+      {
+        "ingredient": "깨소금",
+        "amountGrams": 2.0,
+        "nutrient": {
+          "code": "MFDS-LEGACY-4481",
+          "name": "깨소금가루, 볶은것",
+          "energyKcal": 638.0,
+          "sourceUrl": "https://www.foodsafetykorea.go.kr/portal/healthyfoodlife/foodnutrient/downloadFoodNutrientDB.do",
+          "sourceRequest": "https://www.foodsafetykorea.go.kr/portal/healthyfoodlife/foodnutrient/downloadFoodNutrientDB.do|POST|code4=1&code2=&search_name=&menu_grp=MENU_GRP02&menu_no=403",
+          "sourceSha256": "4a16ddf14c90730ebce095fc42e2a034359d2cd1eb88d920ec999e8ec30142c9",
+          "sourceName": "식약처 공개 기존 식품영양 DB",
+          "dataYear": 2017,
+          "referenceAmount": 100,
+          "referenceUnit": "g",
+          "originalServingGrams": 100.0,
+          "originalServingKcal": 638.0,
+          "originalRecord": [
+            4481.0,
+            "조미료류",
+            "깨소금가루, 볶은것 ",
+            100.0,
+            638.0,
+            13.7,
+            18.1,
+            56.7,
+            "N/A",
+            "N/A",
+            "N/A",
+            "N/A",
+            0.0,
+            "2017"
+          ],
+          "checkedAt": "2026-10-05"
+        }
+      }
+    ],
+    "complete": true,
+    "compositionKind": "ORIGINAL",
+    "sourceInstitution": "식품의약품안전처"
+  },
+  {
+    "recipeId": "MFDS-345",
+    "name": "송이버섯구이",
+    "basis": "원본 공식 레시피 전체 재료량 · 원본 완전 연결",
+    "ingredientText": "재료량(4인분) - 송이버섯 280g, 콩기름 4g",
+    "sourceUrl": "https://www.foodsafetykorea.go.kr/popup/sensuousmenuView.do?rcp_menu_no=345",
+    "sourceSha256": "fe30117e577815299470d4a894b7898e6f34fb972158afb2256bc3bd90c79ebf",
+    "inputs": [
+      {
+        "ingredient": "송이버섯",
+        "amountGrams": 280.0,
+        "nutrient": {
+          "code": "G0140000000a",
+          "name": "송이버섯, 생것",
+          "energyKcal": 21,
+          "referenceAmount": 100,
+          "unit": "g",
+          "worksheetRow": 1405,
+          "index": 1327,
+          "attribution": "농촌진흥청, 2026. 국가표준식품성분 DB 10.4.",
+          "sourceUrl": "https://www.nics.go.kr/food/kfi/fct/fctIntro/list?menuId=PS03562",
+          "sha256": "271cc431f2991b3c0c049ec6e05fb59a040319e984ab71468184530de61dec50"
+        }
+      },
+      {
+        "ingredient": "콩기름",
+        "amountGrams": 4.0,
+        "nutrient": {
+          "code": "171411",
+          "name": "Oil, soybean, salad or cooking",
+          "energyKcal": 884.0,
+          "sourceUrl": "https://fdc.nal.usda.gov/food-details/171411/nutrients",
+          "sha256": "b80817294b8850530aaedf2e515c02593b1824f763a0ff356e5c2081643e6fd0",
+          "archiveUrl": "https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_sr_legacy_food_csv_2018-04.zip",
+          "checkedAt": "2026-10-05",
+          "referenceAmount": 100,
+          "unit": "g"
+        }
+      }
+    ],
+    "complete": true,
+    "compositionKind": "ORIGINAL",
+    "sourceInstitution": "식품의약품안전처"
+  },
+  {
+    "recipeId": "RDA-89555",
+    "name": "청국장찌개",
+    "basis": "원본 공식 레시피에서 확인 가능한 재료 기준",
+    "ingredientText": "청국장 100g, 쇠고기 50g, 두부 1/2모(250g), 배추김치 200g, 풋고추 45g(3개), 쌀뜨물 600mL(3컵), 대파 10g(1/4뿌리), 마늘 10g(2쪽), 고춧가루 2작은술, 소금 적량",
+    "sourceUrl": "https://www.nics.go.kr/food/kfi/tfSrch08/view?menuId=PS03520&tfcode=89555",
+    "sourceSha256": "4acc0c29fe274b4c8a30e205e8970859866c27966e0168ce569333eae26cbd0a",
+    "inputs": [
+      {
+        "ingredient": "청국장",
+        "amountGrams": 100.0,
+        "nutrient": {
+          "code": "R0320000009a",
+          "name": "청국장",
+          "energyKcal": 217,
+          "referenceAmount": 100,
+          "unit": "g",
+          "worksheetRow": 3253,
+          "index": 3089,
+          "attribution": "농촌진흥청, 2026. 국가표준식품성분 DB 10.4.",
+          "sourceUrl": "https://www.nics.go.kr/food/kfi/fct/fctIntro/list?menuId=PS03562",
+          "sha256": "271cc431f2991b3c0c049ec6e05fb59a040319e984ab71468184530de61dec50"
+        }
+      },
+      {
+        "ingredient": "두부",
+        "amountGrams": 250.0,
+        "nutrient": {
+          "code": "D0150000009a",
+          "name": "두부",
+          "energyKcal": 97,
+          "referenceAmount": 100,
+          "unit": "g",
+          "worksheetRow": 608,
+          "index": 565,
+          "attribution": "농촌진흥청, 2026. 국가표준식품성분 DB 10.4.",
+          "sourceUrl": "https://www.nics.go.kr/food/kfi/fct/fctIntro/list?menuId=PS03562",
+          "sha256": "271cc431f2991b3c0c049ec6e05fb59a040319e984ab71468184530de61dec50"
+        }
+      },
+      {
+        "ingredient": "배추김치",
+        "amountGrams": 200.0,
+        "nutrient": {
+          "code": "F2050070009a",
+          "name": "김치, 배추 김치",
+          "energyKcal": 38,
+          "referenceAmount": 100,
+          "unit": "g",
+          "worksheetRow": 844,
+          "index": 795,
+          "attribution": "농촌진흥청, 2026. 국가표준식품성분 DB 10.4.",
+          "sourceUrl": "https://www.nics.go.kr/food/kfi/fct/fctIntro/list?menuId=PS03562",
+          "sha256": "271cc431f2991b3c0c049ec6e05fb59a040319e984ab71468184530de61dec50"
+        }
+      },
+      {
+        "ingredient": "풋고추",
+        "amountGrams": 45.0,
+        "nutrient": {
+          "code": "F0180000620a",
+          "name": "고추, 풋고추, 생것",
+          "energyKcal": 29,
+          "referenceAmount": 100,
+          "unit": "g",
+          "worksheetRow": 813,
+          "index": 763,
+          "attribution": "농촌진흥청, 2026. 국가표준식품성분 DB 10.4.",
+          "sourceUrl": "https://www.nics.go.kr/food/kfi/fct/fctIntro/list?menuId=PS03562",
+          "sha256": "271cc431f2991b3c0c049ec6e05fb59a040319e984ab71468184530de61dec50"
+        }
+      },
+      {
+        "ingredient": "대파",
+        "amountGrams": 10.0,
+        "nutrient": {
+          "code": "F1910040000a",
+          "name": "파, 대파, 생것",
+          "energyKcal": 23,
+          "referenceAmount": 100,
+          "unit": "g",
+          "worksheetRow": 1313,
+          "index": 1241,
+          "attribution": "농촌진흥청, 2026. 국가표준식품성분 DB 10.4.",
+          "sourceUrl": "https://www.nics.go.kr/food/kfi/fct/fctIntro/list?menuId=PS03562",
+          "sha256": "271cc431f2991b3c0c049ec6e05fb59a040319e984ab71468184530de61dec50"
+        }
+      },
+      {
+        "ingredient": "마늘",
+        "amountGrams": 10.0,
+        "nutrient": {
+          "code": "169230",
+          "name": "Garlic, raw",
+          "energyKcal": 149.0,
+          "sourceUrl": "https://fdc.nal.usda.gov/food-details/169230/nutrients",
+          "sha256": "b80817294b8850530aaedf2e515c02593b1824f763a0ff356e5c2081643e6fd0",
+          "archiveUrl": "https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_sr_legacy_food_csv_2018-04.zip",
+          "checkedAt": "2026-10-05",
+          "referenceAmount": 100,
+          "unit": "g"
+        }
+      },
+      {
+        "ingredient": "고춧가루",
+        "amountGrams": 4.0,
+        "nutrient": {
+          "code": "R0070000005a",
+          "name": "고춧가루",
+          "energyKcal": 319,
+          "referenceAmount": 100,
+          "unit": "g",
+          "worksheetRow": 3160,
+          "index": 3022,
+          "attribution": "농촌진흥청, 2026. 국가표준식품성분 DB 10.4.",
+          "sourceUrl": "https://www.nics.go.kr/food/kfi/fct/fctIntro/list?menuId=PS03562",
+          "sha256": "271cc431f2991b3c0c049ec6e05fb59a040319e984ab71468184530de61dec50"
+        }
+      }
+    ],
+    "complete": false,
+    "compositionKind": "ORIGINAL",
+    "sourceInstitution": "농촌진흥청"
+  },
+  {
+    "recipeId": "RDA-91102",
+    "name": "더덕구이",
+    "basis": "원본 공식 레시피에서 확인 가능한 재료 기준",
+    "ingredientText": "더덕 8뿌리(100g), 소금 약간, 물 적량, <유장> 참기름 2큰술, 간장 2/3큰술 <양념> 고추장 2큰술, 설탕 1작은술, 다진 파 1큰술, 다진 마늘 1작은술, 참기름 1작은술, 깨소금 1작은술",
+    "sourceUrl": "https://www.nics.go.kr/food/kfi/tfSrch08/view?menuId=PS03520&tfcode=91102",
+    "sourceSha256": "df9400716b855d6e595ea4bd991f81c67303a0568afa043b75902ec4c606ccfe",
+    "inputs": [
+      {
+        "ingredient": "더덕",
+        "amountGrams": 100.0,
+        "nutrient": {
+          "code": "F043000B090a",
+          "name": "더덕, 뿌리, 생것",
+          "energyKcal": 80,
+          "referenceAmount": 100,
+          "unit": "g",
+          "worksheetRow": 881,
+          "index": 829,
+          "attribution": "농촌진흥청, 2026. 국가표준식품성분 DB 10.4.",
+          "sourceUrl": "https://www.nics.go.kr/food/kfi/fct/fctIntro/list?menuId=PS03562",
+          "sha256": "271cc431f2991b3c0c049ec6e05fb59a040319e984ab71468184530de61dec50"
+        }
+      },
+      {
+        "ingredient": "참기름",
+        "amountGrams": 27.2,
+        "nutrient": {
+          "code": "N0200000009a",
+          "name": "참기름",
+          "energyKcal": 920,
+          "referenceAmount": 100,
+          "unit": "g",
+          "worksheetRow": 3009,
+          "index": 2894,
+          "attribution": "농촌진흥청, 2026. 국가표준식품성분 DB 10.4.",
+          "sourceUrl": "https://www.nics.go.kr/food/kfi/fct/fctIntro/list?menuId=PS03562",
+          "sha256": "271cc431f2991b3c0c049ec6e05fb59a040319e984ab71468184530de61dec50"
+        }
+      },
+      {
+        "ingredient": "설탕",
+        "amountGrams": 4.2,
+        "nutrient": {
+          "code": "169655",
+          "name": "Sugars, granulated",
+          "energyKcal": 387.0,
+          "sourceUrl": "https://fdc.nal.usda.gov/food-details/169655/nutrients",
+          "sha256": "b80817294b8850530aaedf2e515c02593b1824f763a0ff356e5c2081643e6fd0",
+          "archiveUrl": "https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_sr_legacy_food_csv_2018-04.zip",
+          "checkedAt": "2026-10-05",
+          "referenceAmount": 100,
+          "unit": "g"
+        }
+      },
+      {
+        "ingredient": "다진 마늘",
+        "amountGrams": 2.8,
+        "nutrient": {
+          "code": "169230",
+          "name": "Garlic, raw",
+          "energyKcal": 149.0,
+          "sourceUrl": "https://fdc.nal.usda.gov/food-details/169230/nutrients",
+          "sha256": "b80817294b8850530aaedf2e515c02593b1824f763a0ff356e5c2081643e6fd0",
+          "archiveUrl": "https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_sr_legacy_food_csv_2018-04.zip",
+          "checkedAt": "2026-10-05",
+          "referenceAmount": 100,
+          "unit": "g"
+        }
+      },
+      {
+        "ingredient": "참기름",
+        "amountGrams": 4.5,
+        "nutrient": {
+          "code": "N0200000009a",
+          "name": "참기름",
+          "energyKcal": 920,
+          "referenceAmount": 100,
+          "unit": "g",
+          "worksheetRow": 3009,
+          "index": 2894,
+          "attribution": "농촌진흥청, 2026. 국가표준식품성분 DB 10.4.",
+          "sourceUrl": "https://www.nics.go.kr/food/kfi/fct/fctIntro/list?menuId=PS03562",
+          "sha256": "271cc431f2991b3c0c049ec6e05fb59a040319e984ab71468184530de61dec50"
+        }
+      }
+    ],
+    "complete": false,
+    "compositionKind": "ORIGINAL",
+    "sourceInstitution": "농촌진흥청"
+  }
+]

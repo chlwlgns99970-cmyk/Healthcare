@@ -1,0 +1,105 @@
+{
+  "institutions": {
+    "충청남도농업기술원": {
+      "investigated": 1,
+      "captured": 1,
+      "xlsx": 0,
+      "pdf": 0,
+      "uniqueDocuments": 1,
+      "accessRequired": 0,
+      "published": 0
+    },
+    "식품의약품안전처": {
+      "investigated": 1,
+      "captured": 1,
+      "xlsx": 0,
+      "pdf": 0,
+      "uniqueDocuments": 1,
+      "accessRequired": 0,
+      "published": 0
+    },
+    "아워홈": {
+      "investigated": 1,
+      "captured": 1,
+      "xlsx": 0,
+      "pdf": 0,
+      "uniqueDocuments": 1,
+      "accessRequired": 0,
+      "published": 0
+    },
+    "한국관광공사": {
+      "investigated": 1,
+      "captured": 1,
+      "xlsx": 0,
+      "pdf": 1,
+      "uniqueDocuments": 1,
+      "accessRequired": 0,
+      "published": 0
+    },
+    "원주시 어린이사회복지급식관리지원센터": {
+      "investigated": 5,
+      "captured": 1,
+      "xlsx": 0,
+      "pdf": 0,
+      "uniqueDocuments": 1,
+      "accessRequired": 4,
+      "published": 0
+    },
+    "고양시 어린이사회복지급식관리지원센터": {
+      "investigated": 138,
+      "captured": 137,
+      "xlsx": 131,
+      "pdf": 0,
+      "uniqueDocuments": 137,
+      "accessRequired": 1,
+      "published": 0
+    },
+    "농림축산식품부 농식품정보누리": {
+      "investigated": 1,
+      "captured": 1,
+      "xlsx": 0,
+      "pdf": 0,
+      "uniqueDocuments": 1,
+      "accessRequired": 0,
+      "published": 0
+    },
+    "서울시·국회도서관": {
+      "investigated": 1,
+      "captured": 1,
+      "xlsx": 0,
+      "pdf": 1,
+      "uniqueDocuments": 1,
+      "accessRequired": 0,
+      "published": 0
+    },
+    "육아정책연구소": {
+      "investigated": 1,
+      "captured": 1,
+      "xlsx": 0,
+      "pdf": 1,
+      "uniqueDocuments": 1,
+      "accessRequired": 0,
+      "published": 0
+    },
+    "고양시 급식관리지원센터": {
+      "investigated": 1,
+      "captured": 1,
+      "xlsx": 0,
+      "pdf": 0,
+      "uniqueDocuments": 1,
+      "accessRequired": 0,
+      "published": 0
+    },
+    "고양시·풀무원": {
+      "investigated": 2,
+      "captured": 2,
+      "xlsx": 0,
+      "pdf": 1,
+      "uniqueDocuments": 2,
+      "accessRequired": 0,
+      "published": 0
+    }
+  },
+  "allPublished": 0,
+  "note": "search-only institutions in per-dish receipts; URL count differs from unique document SHA count; HTML index/ebook shells are not full recipes"
+}

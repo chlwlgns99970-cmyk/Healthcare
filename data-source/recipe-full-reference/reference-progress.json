@@ -1,0 +1,15 @@
+{
+  "recipeCount": 516,
+  "states": {
+    "REFERENCE_COMPLETE": 240,
+    "PARTIAL": 226,
+    "ORIGINAL_COMPLETE": 41,
+    "UNRESOLVED": 9
+  },
+  "acquiredReferences": 1385,
+  "publishedReferences": 330,
+  "publishedFoods": 1044,
+  "publishedRows": 12002,
+  "appCompleteCoverage": 269,
+  "assetSha256": "34444481f9474e2ec6ce2f044a4975a174f4833d994344066f7142ed026641ea"
+}

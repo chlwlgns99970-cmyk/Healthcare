@@ -66,7 +66,6 @@ data class AppUpdateUiState(
 sealed interface AppUpdateCheckResult {
     data class Available(val release: AppReleaseMetadata) : AppUpdateCheckResult
     data object UpToDate : AppUpdateCheckResult
-    data object Throttled : AppUpdateCheckResult
     data object DismissedForSession : AppUpdateCheckResult
     data object Failed : AppUpdateCheckResult
 }

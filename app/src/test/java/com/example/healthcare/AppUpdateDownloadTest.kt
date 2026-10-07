@@ -15,6 +15,7 @@ import com.example.healthcare.data.appupdate.PrivateUpdateApkDownloader
 import com.example.healthcare.data.appupdate.SystemAppInstaller
 import com.example.healthcare.data.appupdate.UpdateApkDownloader
 import com.example.healthcare.data.appupdate.UpdateDownloadException
+import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.test.advanceUntilIdle
 import kotlinx.coroutines.test.runTest
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -216,6 +217,61 @@ class AppUpdateDownloadTest {
         assertFalse(manager.state.value.message.orEmpty().contains("SIGNER_READ_FAILED"))
     }
 
+    @Test
+    fun coldStartCheckRunsOnlyOnceForManagerLifetime() = runTest {
+        val payload = "cold-start-metadata".toByteArray()
+        val repository = FixedRepository(release("https://example.com/update.apk", payload))
+        val manager = managerForColdStart(repository, this)
+
+        manager.checkOnColdStart()
+        manager.checkOnColdStart()
+        manager.checkOnColdStart()
+        advanceUntilIdle()
+
+        assertEquals(1, repository.calls)
+        assertEquals(AppUpdatePhase.AVAILABLE, manager.state.value.phase)
+    }
+
+    @Test
+    fun automaticCheckFailureReturnsToIdleWithoutBlockingApp() = runTest {
+        val manager = managerForColdStart(FailingRepository(), this)
+
+        manager.checkOnColdStart()
+        advanceUntilIdle()
+
+        assertEquals(AppUpdatePhase.IDLE, manager.state.value.phase)
+    }
+
+    private fun managerForColdStart(
+        repository: AppUpdateRepository,
+        scope: CoroutineScope
+    ) = AppUpdateManager(
+        repository = repository,
+        preferences = MemoryPreferences(lastSuccessfulCheckAt = 1_000L),
+        downloader = object : UpdateApkDownloader {
+            override suspend fun download(metadata: AppReleaseMetadata, onProgress: (Int) -> Unit): File =
+                error("Download is not part of the cold-start check")
+            override fun delete(file: File?) = Unit
+            override fun clear() = Unit
+        },
+        verifier = ApkUpdateVerifier(
+            object : ApkIdentityReader {
+                override fun readArchive(apkFile: File) = error("Not used")
+                override fun readInstalled(packageName: String) = error("Not used")
+            },
+            PRODUCT_PACKAGE,
+            RELEASE_SIGNER
+        ),
+        installer = SystemAppInstaller("unused.test.authority"),
+        scope = scope,
+        currentVersionCode = 5,
+        currentPackageName = PRODUCT_PACKAGE,
+        expectedPackageName = PRODUCT_PACKAGE,
+        installEnabled = true,
+        showTechnicalFailureReason = false,
+        logger = { _, _ -> }
+    )
+
     private fun release(url: String, payload: ByteArray): AppReleaseMetadata {
         val fixture = File(temporaryFolder.root, "hash-source-${payload.size}.apk").apply { writeBytes(payload) }
         return AppReleaseMetadata(
@@ -231,11 +287,20 @@ class AppUpdateDownloadTest {
     }
 
     private class FixedRepository(private val metadata: AppReleaseMetadata) : AppUpdateRepository {
-        override suspend fun getLatestRelease(): AppReleaseMetadata = metadata
+        var calls = 0
+        override suspend fun getLatestRelease(): AppReleaseMetadata {
+            calls++
+            return metadata
+        }
     }
 
-    private class MemoryPreferences : AppUpdatePreferenceStore {
+    private class FailingRepository : AppUpdateRepository {
+        override suspend fun getLatestRelease(): AppReleaseMetadata = error("offline")
+    }
+
+    private class MemoryPreferences(
         override var lastSuccessfulCheckAt: Long = 0L
+    ) : AppUpdatePreferenceStore {
         override var lastPromptedVersionCode: Int = 0
         override fun recordSuccessfulCheck(atMillis: Long) {
             lastSuccessfulCheckAt = atMillis

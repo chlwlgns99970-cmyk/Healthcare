@@ -24,6 +24,7 @@ import androidx.compose.material.icons.rounded.Check
 import androidx.compose.material.icons.rounded.ExpandLess
 import androidx.compose.material.icons.rounded.ExpandMore
 import androidx.compose.material3.Button
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.InputChip
@@ -72,6 +73,17 @@ import kotlinx.coroutines.launch
 @Composable
 fun MealPreferenceScreen(viewModel: MealPreferenceViewModel, onBack: () -> Unit) {
     val state by viewModel.uiState.collectAsState()
+    val pendingSave by viewModel.saveAcknowledgement.pending.collectAsState()
+    if (pendingSave != null) {
+        com.example.healthcare.ui.components.RecordSavedDialog(false, body = "저장되었습니다.") {
+            viewModel.saveAcknowledgement.confirm()
+        }
+    }
+    val registerExitGuard = com.example.healthcare.ui.LocalDraftExitGuardRegistration.current
+    androidx.compose.runtime.SideEffect {
+        registerExitGuard(com.example.healthcare.ui.DraftExitGuard(viewModel.hasUnsavedInput,
+            state.isSaving || state.isResettingLearning, viewModel::discardPreferenceDraft))
+    }
     MealPreferenceContent(
         state = state,
         onBack = onBack,
@@ -88,7 +100,10 @@ fun MealPreferenceScreen(viewModel: MealPreferenceViewModel, onBack: () -> Unit)
         onPreferredInput = viewModel::onPreferredInput,
         onRemoveExcluded = viewModel::removeExcluded,
         onSave = viewModel::save,
-        onTogglePreferredStyle = viewModel::togglePreferredStyle
+        onTogglePreferredStyle = viewModel::togglePreferredStyle,
+        onRequestLearningReset = viewModel::requestLearningReset,
+        onCancelLearningReset = viewModel::cancelLearningReset,
+        onConfirmLearningReset = viewModel::confirmLearningReset
     )
 }
 
@@ -110,13 +125,27 @@ internal fun MealPreferenceContent(
     onPreferredInput: (String) -> Unit,
     onRemoveExcluded: (UserExcludedFood) -> Unit,
     onSave: () -> Unit,
-    onTogglePreferredStyle: (String) -> Unit = {}
+    onTogglePreferredStyle: (String) -> Unit = {},
+    onRequestLearningReset: () -> Unit = {},
+    onCancelLearningReset: () -> Unit = {},
+    onConfirmLearningReset: () -> Unit = {}
 ) {
     val preference = state.preference
     val preferredFoodRequester = remember { BringIntoViewRequester() }
     val coroutineScope = rememberCoroutineScope()
     var detailedSettingsExpanded by rememberSaveable { mutableStateOf(false) }
     var allergySettingsExpanded by rememberSaveable { mutableStateOf(false) }
+    if (state.showLearningResetConfirmation) {
+        AlertDialog(
+            onDismissRequest = onCancelLearningReset,
+            title = { Text("추천 학습을 초기화할까요?") },
+            text = { Text("실제 선택을 반영한 추천 신호만 초기화해요. 식사 기록, 즐겨찾기, 좋아하는 음식, 피하고 싶은 음식과 알레르기 설정은 유지돼요.") },
+            confirmButton = { TextButton(onClick = onConfirmLearningReset,
+                modifier = Modifier.heightIn(min = 48.dp).testTag("learning-reset-confirm")) { Text("초기화") } },
+            dismissButton = { TextButton(onClick = onCancelLearningReset,
+                modifier = Modifier.heightIn(min = 48.dp)) { Text("취소") } }
+        )
+    }
     Scaffold(
         topBar = {
             WellnessTopAppBar(
@@ -194,6 +223,17 @@ internal fun MealPreferenceContent(
                     modifier = Modifier.fillMaxWidth().heightIn(min = 48.dp).testTag("preference-settings-save")) {
                     if (state.isSaving) CircularProgressIndicator(Modifier.size(20.dp), strokeWidth = 2.dp)
                     else { Icon(Icons.Rounded.RestaurantMenu, contentDescription = null); Text(" 추천 설정 저장") }
+                }
+            }
+            item {
+                Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                    Text("기록과 즐겨찾기, 직접 누른 메뉴 교체를 이 기기에서만 약하게 반영해요.",
+                        style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                    TextButton(onClick = onRequestLearningReset,
+                        enabled = !state.isSaving && !state.isResettingLearning,
+                        modifier = Modifier.fillMaxWidth().heightIn(min = 48.dp).testTag("recommendation-learning-reset")) {
+                        Text(if (state.isResettingLearning) "추천 학습 초기화 중…" else "추천 학습 초기화")
+                    }
                 }
             }
             item {

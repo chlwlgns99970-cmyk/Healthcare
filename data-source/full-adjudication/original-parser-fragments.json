@@ -1,0 +1,6112 @@
+[
+  {
+    "fragment": "다진 마늘",
+    "status": "LINKED",
+    "count": 159
+  },
+  {
+    "fragment": "소금",
+    "status": "LINKED",
+    "count": 142
+  },
+  {
+    "fragment": "양파",
+    "status": "LINKED",
+    "count": 114
+  },
+  {
+    "fragment": "설탕",
+    "status": "LINKED",
+    "count": 88
+  },
+  {
+    "fragment": "당근",
+    "status": "LINKED",
+    "count": 68
+  },
+  {
+    "fragment": "콩기름",
+    "status": "LINKED",
+    "count": 52
+  },
+  {
+    "fragment": "오이",
+    "status": "LINKED",
+    "count": 36
+  },
+  {
+    "fragment": "다진마늘",
+    "status": "LINKED",
+    "count": 34
+  },
+  {
+    "fragment": "생강",
+    "status": "LINKED",
+    "count": 23
+  },
+  {
+    "fragment": "마늘",
+    "status": "LINKED",
+    "count": 22
+  },
+  {
+    "fragment": "양배추",
+    "status": "LINKED",
+    "count": 19
+  },
+  {
+    "fragment": "올리브유",
+    "status": "LINKED",
+    "count": 7
+  },
+  {
+    "fragment": "통마늘",
+    "status": "LINKED",
+    "count": 4
+  },
+  {
+    "fragment": "딸기",
+    "status": "LINKED",
+    "count": 3
+  },
+  {
+    "fragment": "토마토",
+    "status": "LINKED",
+    "count": 2
+  },
+  {
+    "fragment": "바나나",
+    "status": "LINKED",
+    "count": 2
+  },
+  {
+    "fragment": "다진 양파",
+    "status": "LINKED",
+    "count": 1
+  },
+  {
+    "fragment": "다진다진 마늘",
+    "status": "LINKED",
+    "count": 1
+  },
+  {
+    "fragment": "감자",
+    "status": "LINKED",
+    "count": 1
+  },
+  {
+    "fragment": "참기름",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 127
+  },
+  {
+    "fragment": "파",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 83
+  },
+  {
+    "fragment": "고춧가루",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 81
+  },
+  {
+    "fragment": "대파",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 74
+  },
+  {
+    "fragment": "간장",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 73
+  },
+  {
+    "fragment": "무",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 49
+  },
+  {
+    "fragment": "달걀",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 48
+  },
+  {
+    "fragment": "통깨",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 46
+  },
+  {
+    "fragment": "쌀",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 42
+  },
+  {
+    "fragment": "밀가루",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 42
+  },
+  {
+    "fragment": "고추장",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 40
+  },
+  {
+    "fragment": "두부",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 39
+  },
+  {
+    "fragment": "후춧가루",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 39
+  },
+  {
+    "fragment": "깨소금",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 38
+  },
+  {
+    "fragment": "감자",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 36
+  },
+  {
+    "fragment": "다진 파",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 36
+  },
+  {
+    "fragment": "풋고추",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 31
+  },
+  {
+    "fragment": "국간장",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 29
+  },
+  {
+    "fragment": "홍고추",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 26
+  },
+  {
+    "fragment": "식용유",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 26
+  },
+  {
+    "fragment": "물엿",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 24
+  },
+  {
+    "fragment": "쇠고기",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 23
+  },
+  {
+    "fragment": "된장",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 22
+  },
+  {
+    "fragment": "미나리",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 21
+  },
+  {
+    "fragment": "콩나물",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 21
+  },
+  {
+    "fragment": "돼지고기",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 19
+  },
+  {
+    "fragment": "배추김치",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 19
+  },
+  {
+    "fragment": "식초",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 19
+  },
+  {
+    "fragment": "표고버섯",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 19
+  },
+  {
+    "fragment": "붉은 고추",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 19
+  },
+  {
+    "fragment": "멸치",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 18
+  },
+  {
+    "fragment": "애호박",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 18
+  },
+  {
+    "fragment": "차조",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 17
+  },
+  {
+    "fragment": "찹쌀",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 16
+  },
+  {
+    "fragment": "건다시마",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 16
+  },
+  {
+    "fragment": "국멸치",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 15
+  },
+  {
+    "fragment": "느타리버섯",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 14
+  },
+  {
+    "fragment": "팥",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 14
+  },
+  {
+    "fragment": "다진 생강",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 14
+  },
+  {
+    "fragment": "깻잎",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 13
+  },
+  {
+    "fragment": "찹쌀가루",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 13
+  },
+  {
+    "fragment": "청주",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 11
+  },
+  {
+    "fragment": "진간장",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 11
+  },
+  {
+    "fragment": "쑥갓",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 11
+  },
+  {
+    "fragment": "대추",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 11
+  },
+  {
+    "fragment": "쇠고기(양지머리)",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 11
+  },
+  {
+    "fragment": "김",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 10
+  },
+  {
+    "fragment": "쌀(백미)",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 10
+  },
+  {
+    "fragment": "<양념장> 간장",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 10
+  },
+  {
+    "fragment": "올리고당",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 9
+  },
+  {
+    "fragment": "숙주",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 9
+  },
+  {
+    "fragment": "다시마",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 8
+  },
+  {
+    "fragment": "건미역",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 8
+  },
+  {
+    "fragment": "청고추",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 8
+  },
+  {
+    "fragment": "멥쌀",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 8
+  },
+  {
+    "fragment": "물",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 8
+  },
+  {
+    "fragment": "백미",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 8
+  },
+  {
+    "fragment": "바지락",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 8
+  },
+  {
+    "fragment": "들기름",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 7
+  },
+  {
+    "fragment": "새우젓",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 7
+  },
+  {
+    "fragment": "가자미",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 7
+  },
+  {
+    "fragment": "실파",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 7
+  },
+  {
+    "fragment": "청피망",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 7
+  },
+  {
+    "fragment": "주꾸미",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 7
+  },
+  {
+    "fragment": "청양고추",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 6
+  },
+  {
+    "fragment": "보리",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 6
+  },
+  {
+    "fragment": "북어",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 6
+  },
+  {
+    "fragment": "마요네즈",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 6
+  },
+  {
+    "fragment": "부추",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 6
+  },
+  {
+    "fragment": "냉이",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 6
+  },
+  {
+    "fragment": "닭고기",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 6
+  },
+  {
+    "fragment": "고구마",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 6
+  },
+  {
+    "fragment": "국수",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 5
+  },
+  {
+    "fragment": "계란",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 5
+  },
+  {
+    "fragment": "생강즙",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 5
+  },
+  {
+    "fragment": "굴",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 5
+  },
+  {
+    "fragment": "꽃게",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 5
+  },
+  {
+    "fragment": "더덕",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 5
+  },
+  {
+    "fragment": "돼지고기(등심)",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 5
+  },
+  {
+    "fragment": "상추",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 5
+  },
+  {
+    "fragment": "맛술",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 5
+  },
+  {
+    "fragment": "소파",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 5
+  },
+  {
+    "fragment": "가지",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 5
+  },
+  {
+    "fragment": "배추",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 5
+  },
+  {
+    "fragment": "호박",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 5
+  },
+  {
+    "fragment": "닭",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 5
+  },
+  {
+    "fragment": "배",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 5
+  },
+  {
+    "fragment": "떡볶이떡",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 5
+  },
+  {
+    "fragment": "고사리",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 5
+  },
+  {
+    "fragment": "잣",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 5
+  },
+  {
+    "fragment": "밤",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 5
+  },
+  {
+    "fragment": "보리쌀",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 5
+  },
+  {
+    "fragment": "건표고버섯",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 5
+  },
+  {
+    "fragment": "청국장",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 4
+  },
+  {
+    "fragment": "모시조개",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 4
+  },
+  {
+    "fragment": "청장",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 4
+  },
+  {
+    "fragment": "잔멸치",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 4
+  },
+  {
+    "fragment": "미역줄기",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 4
+  },
+  {
+    "fragment": "전복",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 4
+  },
+  {
+    "fragment": "굴소스",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 4
+  },
+  {
+    "fragment": "가래떡",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 4
+  },
+  {
+    "fragment": "달래",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 4
+  },
+  {
+    "fragment": "다진파",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 4
+  },
+  {
+    "fragment": "들깨가루",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 4
+  },
+  {
+    "fragment": "쪽파",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 4
+  },
+  {
+    "fragment": "갑오징어",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 4
+  },
+  {
+    "fragment": "낙지",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 4
+  },
+  {
+    "fragment": "도라지",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 4
+  },
+  {
+    "fragment": "고등어",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 4
+  },
+  {
+    "fragment": "송이버섯",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 4
+  },
+  {
+    "fragment": "석이버섯",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 4
+  },
+  {
+    "fragment": "<쇠고기 양념> 간장",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 4
+  },
+  {
+    "fragment": "잣가루",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 4
+  },
+  {
+    "fragment": "다진 대파",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 3
+  },
+  {
+    "fragment": "우엉",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 3
+  },
+  {
+    "fragment": "현미",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 3
+  },
+  {
+    "fragment": "붉은고추",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 3
+  },
+  {
+    "fragment": "양상추",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 3
+  },
+  {
+    "fragment": "매실액",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 3
+  },
+  {
+    "fragment": "고추가루",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 3
+  },
+  {
+    "fragment": "겨자",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 3
+  },
+  {
+    "fragment": "사과",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 3
+  },
+  {
+    "fragment": "옥수수",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 3
+  },
+  {
+    "fragment": "단호박",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 3
+  },
+  {
+    "fragment": "수수",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 3
+  },
+  {
+    "fragment": "갈치",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 3
+  },
+  {
+    "fragment": "당면",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 3
+  },
+  {
+    "fragment": "어묵",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 3
+  },
+  {
+    "fragment": "두릅",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 3
+  },
+  {
+    "fragment": "숙주나물",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 3
+  },
+  {
+    "fragment": "전분",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 3
+  },
+  {
+    "fragment": "토마토케첩",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 3
+  },
+  {
+    "fragment": "오징어",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 3
+  },
+  {
+    "fragment": "얼갈이배추",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 3
+  },
+  {
+    "fragment": "우유",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 3
+  },
+  {
+    "fragment": "호두",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 3
+  },
+  {
+    "fragment": "식빵",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 3
+  },
+  {
+    "fragment": "연근",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 3
+  },
+  {
+    "fragment": "쌀밥",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 3
+  },
+  {
+    "fragment": "꼬막",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 3
+  },
+  {
+    "fragment": "꿀",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 3
+  },
+  {
+    "fragment": "시금치",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 3
+  },
+  {
+    "fragment": "참나물",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 3
+  },
+  {
+    "fragment": "늙은 호박",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 3
+  },
+  {
+    "fragment": "밤콩",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 3
+  },
+  {
+    "fragment": "쇠고기(등심)",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 3
+  },
+  {
+    "fragment": "동태",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 3
+  },
+  {
+    "fragment": "<양념> 간장",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 3
+  },
+  {
+    "fragment": "김치",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 2
+  },
+  {
+    "fragment": "찬물",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 2
+  },
+  {
+    "fragment": "생땅콩",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 2
+  },
+  {
+    "fragment": "(찹쌀",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 2
+  },
+  {
+    "fragment": "새우",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 2
+  },
+  {
+    "fragment": "뱅어포",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 2
+  },
+  {
+    "fragment": "무순",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 2
+  },
+  {
+    "fragment": "까나리액젓",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 2
+  },
+  {
+    "fragment": "열무",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 2
+  },
+  {
+    "fragment": "멸치액젓",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 2
+  },
+  {
+    "fragment": "메추리알",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 2
+  },
+  {
+    "fragment": "건포도",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 2
+  },
+  {
+    "fragment": "도토리묵",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 2
+  },
+  {
+    "fragment": "조갯살",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 2
+  },
+  {
+    "fragment": "조기",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 2
+  },
+  {
+    "fragment": "취나물",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 2
+  },
+  {
+    "fragment": "아욱",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 2
+  },
+  {
+    "fragment": "엿",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 2
+  },
+  {
+    "fragment": "마른 미역",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 2
+  },
+  {
+    "fragment": "닭가슴살",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 2
+  },
+  {
+    "fragment": "고추",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 2
+  },
+  {
+    "fragment": "삼치",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 2
+  },
+  {
+    "fragment": "해파리",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 2
+  },
+  {
+    "fragment": "참다래",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 2
+  },
+  {
+    "fragment": "모차렐라치즈",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 2
+  },
+  {
+    "fragment": "완두콩",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 2
+  },
+  {
+    "fragment": "양송이버섯",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 2
+  },
+  {
+    "fragment": "새우살",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 2
+  },
+  {
+    "fragment": "건새우",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 2
+  },
+  {
+    "fragment": "청포묵",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 2
+  },
+  {
+    "fragment": "목이버섯",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 2
+  },
+  {
+    "fragment": "수삼",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 2
+  },
+  {
+    "fragment": "은행",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 2
+  },
+  {
+    "fragment": "쑥",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 2
+  },
+  {
+    "fragment": "<멸치장국국물> 멸치",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 2
+  },
+  {
+    "fragment": "닭(영계)",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 2
+  },
+  {
+    "fragment": "백합",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 2
+  },
+  {
+    "fragment": "콩",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 2
+  },
+  {
+    "fragment": "들깨",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 2
+  },
+  {
+    "fragment": "실고추",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 2
+  },
+  {
+    "fragment": "<양념> 다진 파",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 2
+  },
+  {
+    "fragment": "싸리버섯",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 2
+  },
+  {
+    "fragment": "검은콩",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 2
+  },
+  {
+    "fragment": "차수수",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 2
+  },
+  {
+    "fragment": "쇠갈비",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 2
+  },
+  {
+    "fragment": "<고기 양념> 간장",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 2
+  },
+  {
+    "fragment": "땅콩",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 2
+  },
+  {
+    "fragment": "<양념장> 고추장",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 2
+  },
+  {
+    "fragment": "작은술) <돼지고기 양념> 간장",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 2
+  },
+  {
+    "fragment": "계핏가루",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 2
+  },
+  {
+    "fragment": "삶은 고사리",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 2
+  },
+  {
+    "fragment": "밤 (깐 것)",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 2
+  },
+  {
+    "fragment": "국수(소면)",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 2
+  },
+  {
+    "fragment": "김치 국물",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "슬라이스아몬드",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "흰콩",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "콩 가는 물",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "단무지",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "치즈",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "다진 돼지고기",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "두반장",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "치킨파우더",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "녹말물",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "고추기름",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "돼지갈비",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "조랭이떡",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "<양념장>간장",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "토막(",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "개(",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "깨",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "곤드레나물(말린 것)",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "슬라이스 아몬드",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "조청",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "올리고단",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "<육수>다시마",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "멸치(건)",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "냉동만두",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "쇠고기(양지)",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "분말조미료(멸치)",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "밀가루(중력분)",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "쇠고기등심",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "오리고기",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "곰피",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "오미자 액기스",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "머위대",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "(바지락살",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "민들레",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "참취",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "거피들깨가루",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "딸기쨈",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "케찹",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "밀가루풀",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "개조개살",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "모짜렐라치즈",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "영양부추",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "적양파",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "우무",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "풋마늘",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "건오징어",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "율무",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "근대",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "게맛살",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "강된장",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "절편",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "녹두",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "다진 호두",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "진달래꽃",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "후르츠샐러드",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "연두부",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "재료량 - 모시조개",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "소면",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "카스테라가루",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "무채",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "파래",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "꺠소금",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "액젓",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "액상요구르트",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "베이컨",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "노각",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "흑미",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "머위나물",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "호박잎",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "녹두묵",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "대합",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "땅콩가루",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "빵가루",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "인분)",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "붉은 양배추",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "양송이",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "칼국수면",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "딸기잼",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "홍피망",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "생크림",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "버터",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "요구르트",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "마",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "카레가루",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "총각무",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "멸채액젓",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "토마토케찹",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "감",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "호상요구르트",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "녹두가루",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "튀김가루",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "고구마줄기",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "골뱅이",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "대구포",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "홍고추장",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "기장",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "토란",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "돌나물",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "주꾸미먹물",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "칼국수",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "대구",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "머스터드소스",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "피망",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "미역",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "유부",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "봄동",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "도라지채",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "오징어채",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "북어채",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "마늘쫑",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "서리태",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "고춧잎",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "중파",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "취",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "허니머스터드",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "닭봉",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "돔",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "양미리",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "연겨자",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "후추",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "유채나물",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "삶은 죽순",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "녹차 우린 물",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "멍게살",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "레몬즙",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "키조개관자",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "팽이버섯",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "다시마 국물",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "사과식초",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "강낭콩",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "멥쌀가루",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "모(",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "민물고기 (붕어 등)",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "민물새우",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "불린 쌀",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "[양념] 실파",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "수수(쌀대죽)",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "불린 마른 미역",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "생멸치",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "쌀가루",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "민물고기",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "민물고기 (피리·동자개·메기·꺽지)",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "팥 (또는 강낭콩)",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "돼지 뼈",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "시래기",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "마른 고추",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "우렁이",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "묵은 김치",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "<고명> 대추",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "<만두피> 밀가루",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "작은술 <만두소> 쇠고기(우둔살)",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "참기름½큰술 <고명> 달걀",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "큰술 <육수> 쇠고기(양지머리)",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "사태",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "오이(中)",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "생태 (동태)",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "노각 (늙은 오이)",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "더덕(중간것)",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "병어",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "흰떡",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "다진 고기",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "<시럽> 설탕",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "토란대",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "감자 전분",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "<장국국물> 다시마(또는 멸치)",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "흑임자)",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "전복살",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "냉면",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "쇠고기(사태)",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "<무 양념> 고춧가루",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "작은술) <비빔 양념> 고춧가루",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "<만두소> 닭고기",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "숙주(삶은것)",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "당면(삶은것)",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "뿌리) <만두피> 밀가루",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "작은술) <장국국물> 멸치",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "큰술) <고명> 대파",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "우거지",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "송송썬 쪽파",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "돼지등뼈",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "들깻가루",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "잘게 썬 파",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "마른미역",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "돼지고기(삼겹살)",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "<기름장> 소금",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "[조림장] 간장",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "꽁치",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "<조림장> 간장",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "실고추 약간 <양념장> 간장",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "염장미역줄기",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "동태살",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "거피녹두",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "<숙주 양념> 참기름",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "후춧가루 약간 <김치 양념> 참기름",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "<닭고기 양념> 소금",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "북어포",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "오미자",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "<소> 거피팥",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "설탕(또는 꿀)",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "조",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "무청시래기",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "뿌리(",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "마른 가자미",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "메밀가루",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "콩가루",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "미꾸라지",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "삶은 토란대",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "삶은 배추시래기",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "더덕(소)",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "가자미(납세미)",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "찹쌀(멥쌀)",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "콩(흰콩)",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "참깨",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "곤달비(곤드레)",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "산천어)",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "물메기(곰치)",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "신 배추김치",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "후춧가루 약간 <장국국물> 멸치",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "매생이",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "오리",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "삶은 머위대(또는 고구마대)",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "소갈비",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "시금치 양념> 소금",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "후춧가루 약간 <양념 고추장> 고추장",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "쌀 (백미)",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "쇠고기 (등심)",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "작은술) <양념장> 간장",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "늙은호박",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "팥 (삶은 것)",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "<비빔국수 양념> 고추장",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "콩(대두)",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "<양념> 국간장",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "닭고기 (영계)",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "인삼(수삼)",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "<유장> 간장",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "큰술) <양념> 고추장",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "<초간장> 간장",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "돼지고기(갈비)",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "<양념> 배",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "마늘종",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "고비",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "고비 양념> 간장",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "작은술) <당근 양념> 소금",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "작은술) <도라지 양념> 간장",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "<즙청액> 설탕",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "쇠고기 (우둔)",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "후춧가루 약간 <초간장> 간장",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "<양념> 붉은 고추",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "<낙지 양념> 고춧가루",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "큰술) <쇠고기 양념> 간장",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "녹두 전분",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "후춧가루 약간 <숙주 양념> 소금",
+    "status": "NUTRITION_IDENTITY_UNREVIEWED",
+    "count": 1
+  },
+  {
+    "fragment": "(1작은술)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 101
+  },
+  {
+    "fragment": "(1큰술)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 68
+  },
+  {
+    "fragment": "소금 약간",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 54
+  },
+  {
+    "fragment": "(1개)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 47
+  },
+  {
+    "fragment": "(1/2작은술)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 43
+  },
+  {
+    "fragment": "(1컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 38
+  },
+  {
+    "fragment": "(1/2컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 38
+  },
+  {
+    "fragment": "(1/2큰술)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 38
+  },
+  {
+    "fragment": "(2컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 29
+  },
+  {
+    "fragment": "(2개)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 29
+  },
+  {
+    "fragment": "후춧가루 약간",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 28
+  },
+  {
+    "fragment": "다진 마늘 1큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 24
+  },
+  {
+    "fragment": "(1/3개)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 22
+  },
+  {
+    "fragment": "(1/4개)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 22
+  },
+  {
+    "fragment": "(1/3작은술)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 21
+  },
+  {
+    "fragment": "(2큰술)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 21
+  },
+  {
+    "fragment": "통깨 약간",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 20
+  },
+  {
+    "fragment": "(2작은술)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 19
+  },
+  {
+    "fragment": "(1/2개)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 18
+  },
+  {
+    "fragment": "(2/3큰술)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 18
+  },
+  {
+    "fragment": "(3개)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 17
+  },
+  {
+    "fragment": "다진 마늘 1작은술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 16
+  },
+  {
+    "fragment": "(2/3작은술)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 16
+  },
+  {
+    "fragment": "(1/2뿌리)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 15
+  },
+  {
+    "fragment": "설탕 1큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 14
+  },
+  {
+    "fragment": "물 적량",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 14
+  },
+  {
+    "fragment": "물 1.6L(8컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 14
+  },
+  {
+    "fragment": "참기름 약간",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 13
+  },
+  {
+    "fragment": "(1뿌리)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 13
+  },
+  {
+    "fragment": "다진 파 1큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 13
+  },
+  {
+    "fragment": "(5개)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 13
+  },
+  {
+    "fragment": "소금 적량",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 12
+  },
+  {
+    "fragment": "물 2L(10컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 12
+  },
+  {
+    "fragment": "소금 1큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 12
+  },
+  {
+    "fragment": "소금 1작은술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 12
+  },
+  {
+    "fragment": "식용유 적량",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 12
+  },
+  {
+    "fragment": "참기름 1작은술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 12
+  },
+  {
+    "fragment": "(1/4뿌리)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 11
+  },
+  {
+    "fragment": "깨소금 1작은술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 11
+  },
+  {
+    "fragment": "참기름 1큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 11
+  },
+  {
+    "fragment": "(1/4컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 11
+  },
+  {
+    "fragment": "(4개)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 10
+  },
+  {
+    "fragment": "물 1.2L(6컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 10
+  },
+  {
+    "fragment": "(2/3개)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 10
+  },
+  {
+    "fragment": "소금",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 9
+  },
+  {
+    "fragment": "쌀(백미) 91.8",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 9
+  },
+  {
+    "fragment": "보리 14.3",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 9
+  },
+  {
+    "fragment": "물 600mL(3컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 9
+  },
+  {
+    "fragment": "다진 마늘 2작은술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 9
+  },
+  {
+    "fragment": "다진 파 2큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 8
+  },
+  {
+    "fragment": "(3/4큰술)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 8
+  },
+  {
+    "fragment": "(1/4작은술)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 8
+  },
+  {
+    "fragment": "(1마리)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 7
+  },
+  {
+    "fragment": "물 2.4L(12컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 7
+  },
+  {
+    "fragment": "(1/2마리)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 7
+  },
+  {
+    "fragment": "실고추 약간",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 6
+  },
+  {
+    "fragment": "(1/3컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 6
+  },
+  {
+    "fragment": "(2/3컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 6
+  },
+  {
+    "fragment": "물 1L(5컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 6
+  },
+  {
+    "fragment": "물 400mL(2컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 6
+  },
+  {
+    "fragment": "(1/3뿌리)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 6
+  },
+  {
+    "fragment": "고춧가루 1작은술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 6
+  },
+  {
+    "fragment": "물 200mL(1컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 6
+  },
+  {
+    "fragment": "(2장)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 6
+  },
+  {
+    "fragment": "후춧가루",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 6
+  },
+  {
+    "fragment": "(1/4모)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 6
+  },
+  {
+    "fragment": "설탕 1/2큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 6
+  },
+  {
+    "fragment": "쌀(백미) 111.5",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 5
+  },
+  {
+    "fragment": "수수 19.0",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 5
+  },
+  {
+    "fragment": "소금 0.4",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 5
+  },
+  {
+    "fragment": "간장 1큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 5
+  },
+  {
+    "fragment": "(2마리)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 5
+  },
+  {
+    "fragment": "(5쪽)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 5
+  },
+  {
+    "fragment": "(3컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 5
+  },
+  {
+    "fragment": "깨소금 1큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 5
+  },
+  {
+    "fragment": "다진 생강 1작은술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 5
+  },
+  {
+    "fragment": "물 470ml(2 1/3컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 5
+  },
+  {
+    "fragment": "(3큰술)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 5
+  },
+  {
+    "fragment": "(4큰술)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 5
+  },
+  {
+    "fragment": "(2/3마리)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 5
+  },
+  {
+    "fragment": "고춧가루 1큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 5
+  },
+  {
+    "fragment": "설탕 1작은술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 5
+  },
+  {
+    "fragment": "식용유 1큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 5
+  },
+  {
+    "fragment": "소금약간",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 4
+  },
+  {
+    "fragment": "(4컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 4
+  },
+  {
+    "fragment": "(2쪽)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 4
+  },
+  {
+    "fragment": "고춧가루 2큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 4
+  },
+  {
+    "fragment": "다진 파 2작은술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 4
+  },
+  {
+    "fragment": "참기름 2작은술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 4
+  },
+  {
+    "fragment": "참기름 2큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 4
+  },
+  {
+    "fragment": "소금 2작은술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 4
+  },
+  {
+    "fragment": "물 100mL(1/2컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 4
+  },
+  {
+    "fragment": "(5컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 4
+  },
+  {
+    "fragment": "다진 생강 1큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 4
+  },
+  {
+    "fragment": "고추장 1큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 4
+  },
+  {
+    "fragment": "(1/2모)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 4
+  },
+  {
+    "fragment": "된장 2큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 4
+  },
+  {
+    "fragment": "다진 마늘 1/2큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 4
+  },
+  {
+    "fragment": "다진 파 1작은술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 4
+  },
+  {
+    "fragment": "설탕 약간",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 4
+  },
+  {
+    "fragment": "(3/4개)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 4
+  },
+  {
+    "fragment": "(1 2/3큰술)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 4
+  },
+  {
+    "fragment": "물 800mL(4컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 4
+  },
+  {
+    "fragment": "물 45mL(3큰술)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 4
+  },
+  {
+    "fragment": "(1 1/2큰술)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 4
+  },
+  {
+    "fragment": "청",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 3
+  },
+  {
+    "fragment": "통깨약간",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 3
+  },
+  {
+    "fragment": "상추",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 3
+  },
+  {
+    "fragment": "소금 0.8",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 3
+  },
+  {
+    "fragment": "소금 0.6",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 3
+  },
+  {
+    "fragment": "참기름 0.5",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 3
+  },
+  {
+    "fragment": "고춧가루 2작은술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 3
+  },
+  {
+    "fragment": "간장 2큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 3
+  },
+  {
+    "fragment": "설탕 2큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 3
+  },
+  {
+    "fragment": "고추장 2큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 3
+  },
+  {
+    "fragment": "다진 마늘",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 3
+  },
+  {
+    "fragment": "국간장 2큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 3
+  },
+  {
+    "fragment": "설탕 1/2컵",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 3
+  },
+  {
+    "fragment": "참기름 1/2큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 3
+  },
+  {
+    "fragment": "다진 마늘 2큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 3
+  },
+  {
+    "fragment": "다진 마늘 적량",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 3
+  },
+  {
+    "fragment": "국간장 약간",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 3
+  },
+  {
+    "fragment": "국간장",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 3
+  },
+  {
+    "fragment": "국간장 적량",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 3
+  },
+  {
+    "fragment": "생강즙 1큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 3
+  },
+  {
+    "fragment": "깨소금 약간",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 3
+  },
+  {
+    "fragment": "소금 1/2작은술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 3
+  },
+  {
+    "fragment": "(2 1/4큰술)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 3
+  },
+  {
+    "fragment": "(1/2",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 3
+  },
+  {
+    "fragment": "반죽물 100ml(1/2컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 3
+  },
+  {
+    "fragment": "(2/3",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 3
+  },
+  {
+    "fragment": "(1",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 3
+  },
+  {
+    "fragment": "(1 1/3큰술)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 3
+  },
+  {
+    "fragment": "닭 1kg(1마리)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 3
+  },
+  {
+    "fragment": "물 3L(15컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 3
+  },
+  {
+    "fragment": "후춧가루 적량",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 3
+  },
+  {
+    "fragment": "(4작은술)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 3
+  },
+  {
+    "fragment": "(1 1/3작은술)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 3
+  },
+  {
+    "fragment": "물 약간",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 3
+  },
+  {
+    "fragment": "청주 1큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 3
+  },
+  {
+    "fragment": "(육수) 쌀뜬 물 500ml",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "파 0.7",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "콩기름 1.7",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "쌀(백미) 66.4",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "찹쌀(백미) 13.6",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "붉은팥 4.2",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "수수 3.4",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "조 3.4",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "검정콩 1.6",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "소금 0.3",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "파 2.0",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "마늘 2.0",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "파 1.5",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "마늘 0.8",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "고춧가루 0.8",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "고춧가루 1.4",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "참기름 0.7",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "고춧가루 1.2",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "고추장 1.1",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "간장 3.5",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "마늘 0.6",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "후추 0.1",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "간장 1.5",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "파 3.2",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "소금 0.9",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "다진마늘 1큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "(2 1/2컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "<양념> 고추장 2큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "(대 5뿌리)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "닭 1.3kg(1마리)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "물 4L(20컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "<양념장> 간장 4큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "다진 마늘 1 1/2큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "설탕 2작은술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "간장 3큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "(10마리)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "고춧가루",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "다진 파",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "(8개)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "(1통)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "후춧가루 1/4작은술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "사골 1개",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "고춧가루 약간",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "국간장 1큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "설탕 1/2작은술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "(1모)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "(2뿌리)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "깨소금 2작은술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "식초 1큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "참기름 4큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "<양념> 간장 2큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "(15마리)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "(1쪽)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "(1/3모)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "(8마리)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "간장 약간",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "(1/5개)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "(10개)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "(3/4마리)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "(4마리)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "(1 1/4큰술)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "(3마리)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "(3/4작은술)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "(5장)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "석이버섯 약간",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "통깨 1큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "물200ml(1컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "<양념장> 간장 3큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "다진 붉은 고추 1작은술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "다진 풋고추 1작은술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "깨소금 1/2큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "(1장)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "참기름",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "인삼 2뿌리",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "소금 1/2큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "(2/3뿌리)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "(4장)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "<양념장> 간장 1/2컵",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "물 470mL(2 1/3컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "깨소금 1/2작은술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "통깨 1작은술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "식용유 약간",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "(3장)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "고추장",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "(20장)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "(1 3/4컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "물 15mL(1큰술)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 2
+  },
+  {
+    "fragment": "다진 마늘약간",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "후추1",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "삼치 2",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "레몬",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "달걀 1",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "청고추",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "홍고추",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "연겨자약간",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "깨소금약간",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "참기름약간",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "후추",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "굴 15.7",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "무 6.6",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "양파 2.8",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "참기름 1.0",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "고춧가루 0.7",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "마늘 0.4",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "삼치 45.2",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "닭고기 139.8",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "찹쌀(백미) 42.9",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "쌀(백미) 29.3",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "마늘 8.9",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "밤 8.2",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "대추(건) 7.0",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "수삼 1.1",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "미역 5.3",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "간장 3.2",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "멸치 1.6",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "마늘 0.9",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "참기름 0.9",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "두부 44.6",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "콩기름 1.4",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "동태 53.9",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "무 21.3",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "두부 17.4",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "양파 8.9",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "쑥갓 2.5",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "고추장 2.0",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "고춧가루 1.5",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "꼬막 25.7",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "간장 1.2",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "설탕 0.8",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "깨소금 0.2",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "닭고기 78.7",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "감자 37.1",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "양파 18.7",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "당근 8.5",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "고추장 3.8",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "파 3.7",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "간장 2.2",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "마늘 1.9",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "고춧가루 1.7",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "참기름 1.1",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "소금 0.7",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "생강 0.2",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "설탕 0.2",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "후추 0.2",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "마늘쫑 23.8",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "콩기름 1.5",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "파 1.0",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "간장 1.0",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "깨소금 0.6",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "설탕 0.4",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "닭고기 101.5",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "감자 60.4",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "양파 17.0",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "당근 12.8",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "간장 7.3",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "마늘 2.4",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "풋고추 2.0",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "설탕 1.0",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "골뱅이(통조림) 36.9",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "오이 17.9",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "양파 12.3",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "파 4.2",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "고추장 4.1",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "당근 4.1",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "국수 3.0",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "대구(포) 2.4",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "식초 2.0",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "설탕 1.6",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "마늘 1.2",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "두부 25.3",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "굴소스 6.1",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "돼지고기(등심) 4.6",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "고추장 2.4",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "참기름 1.3",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "고춧가루 0.9",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "마늘 0.7",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "붉은고추 0.5",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "청주 0.3",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "생강 0.1",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "후추 0.02",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "오징어 31.9",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "무 10.9",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "양파 1.5",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "마늘 1.0",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "고춧가루 0.6",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "쌀(백미) 102.5",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "달걀 42.3",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "콩나물 33.3",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "시금치 30.5",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "쇠고기(등심) 24.2",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "고사리 20.1",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "당근 15.9",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "고추장 14.4",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "참기름 3.5",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "콩기름 2.9",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "파 0.9",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "깨 0.7",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "꽃게 88.1",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "무 14.3",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "양파 8.2",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "애호박 7.4",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "된장 7.1",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "두부 6.6",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "쑥갓 5.3",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "파 4.5",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "고추 3.2",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "고추장 1.3",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "간장 0.6",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "소금 0.5",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "느타리버섯 22.7",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "양파 12.0",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "파 0.8",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "콩기름 0.6",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "깨소금 0.1",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "감자 71.3",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "양파 6.1",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "멸치(건) 1.2",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "간장 1.1",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "분말조미료(멸치) 0.1",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "낙지 48.5",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "양배추 19.1",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "양파 13.4",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "고추장 9.2",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "파 3.8",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "고추 3.3",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "설탕 2.5",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "콩기름 2.4",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "마늘 1.8",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "붉은고추 1.8",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "간장 1.3",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "당근 1.1",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "생강 0.5",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "찹쌀(백미) 57.2",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "쌀(백미) 48.2",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "고등어 50.4",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "무 29.5",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "마늘 1.7",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "고춧가루 1.1",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "깻잎 8",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "고추가루 3",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "붉은고추 1",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "실파 1",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "마늘 0.5",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "감자 55.1",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "오이 6.8",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "당근 4.3",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "마요네즈 3.3",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "두부 77.7",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "간장 6.0",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "파 2.4",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "마늘 1.4",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "콩기름 1.0",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "깨 0.9",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "설탕 0.5",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "임연수어 52.1",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "배추김치 71.8",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "두부 21.3",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "돼지고기(등심) 20.8",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "파 4.7",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "마늘 1.3",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "올리브유 4",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "롤빵 8개",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "슬라이드햄 8장",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "치즈 8장",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "호박볶음",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "쑥갓 20",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "달걀 40",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "고추 3",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "달래 240",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "밀가루 80",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "양파 40",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "콩기름 20",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "파 24",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "홍합 60",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "우유 400ml",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "딸기잼(4",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "간장 40",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "멸치 60",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "엿 12",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "콩기름 4",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "호두 12",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "고들빼기 240",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "고춧가루 1/2컵",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "찹쌀풀 1/2컵",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "멸치액젓 약간",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "간 양파 3",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "(물 300",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "소스 :",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "밥 짓는 물 900mL(4 1/2컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "늙은 호박 3kg(1개)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "소금 3큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "두부 1/2",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "쌀뜨물 600mL(3컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "(대 8개)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "식초 약간",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "참기름 1큰술 <유장> 참기름 1큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "(9마리)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "깻잎 약간",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "다진 양파 2큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "다진마늘 2큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "들깻가루 2큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "설탕 4큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "<양념> 된장 1큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "가오리 (갱개미) 1kg(1마리)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "(3 1/3컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "물 1.3L(6 1/2컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "(2 1/4컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "물 2.8L(14컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "반죽물 200mL(1컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "(25마리)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "생강즙 2작은술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "(4쪽)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "막걸리 2컵",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "물 (밥 짓는 물+팥 삶은 물) 800mL(4컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "땅콩 1큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "(12알)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "(6개)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "잣 적량",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "설탕",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "밥 짓는 물 650mL(3 1/4컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "(8장)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "미나리",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "쑥갓 약간",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "<다진 양념> 된장 2큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "고춧가루·후춧가루 약간",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "늙은 호박 1/2개",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "소금 2큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "들깨 3큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "된장 1작은술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "<시래기 양념> 된장",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "다진파",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "고추 다진 양념 1큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "된장 1큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "물 3컵",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "배추김치 적량",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "청국장 3큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "멸치장국국물(멸치 · 다시마 · 물) 200mL(1컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "무",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "멸치",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "쌀뜨물",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "고구마",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "밀가루",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "달걀",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "쑥갓",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "풋고추",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "식용유",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "(26개)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "(1 1/3뿌리)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "막걸리 1컵",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "더운 물 400mL(2컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "물 8큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "소금 1",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "<만두소 양념> 소금2작은술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "다진 마늘 1",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "국간장2작은술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "다진 마늘½큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "후춧가루·참기름 약간",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "갈비 2kg",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "물 5L(25컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "(½뿌리)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "<양념> 국간장 3큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "쇠머리 1kg",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "도가니 1개",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "우설 1개",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "유통 1/2개",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "우족 1개",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "생강 적량",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "대파 적량",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "마늘 적량",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "건삼 2뿌리",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "(약 3개)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "오리 1kg(1마리)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "들깨 (간것) 3큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "다진 양파 적량",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "<양념장> 고추장 3큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "고춧가루1큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "청주 2큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "적량 <오리고기 밑간용> 청주",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "다진마늘 적량",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "식초 4큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "<양념장> 국간장 1큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "<고기양념> 국간장 2작은술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "다진 파 4작은술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "후춧가루 적량 <육수양념> 고추장 2큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "실파 5뿌리",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "육수 2컵(400mL)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "잣 1작은술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "전분 적량",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "<고기 양념> 간장 2큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "다진 파 4큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "육수 (양지머리) 600mL(3컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "<양념> 간장 3큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "(½개)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "<초고추장 양념> 고추장 1큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "잣가루 1작은술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "(5뿌리)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "<양념장> 간장 1/2큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "고추장 1 1/2큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "고운 고춧가루 1작은술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "(2토막)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "<쇠고기 양념장> 간장 1/2 큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "후춧가루 약간 <조림 양념장> 간장 3큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "밀가루 2큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "물 2큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "생강즙 1작은술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "식용유 3컵",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "잣가루 2큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "물 3~4큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "녹말 가루 약간",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "꿀 2큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "계피가루 1/2작은술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "(4공기)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "밥 짓는 물 (팥 삶은 물+물)500ml(2 1/2컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "물 600mL(3컵) <양념장> 간장 3큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "다진 파 1/2큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "설탕(또는 꿀) 약간",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "참깨 (또는 검은깨",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "(영계1마리)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "(1 작은술)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "(2 3/4컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "(1 2/3작은술)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "(5마리)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "물 50ml(1/4컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "된장 3큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "<다진 양념> 다진 고추 1큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "(2 1/2큰술)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "사골 1.1kg",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "(1 2/3개)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "(12장)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "수삼 1뿌리",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "소머리 1/4개",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "우족 1kg(1개)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "양지머리 1.2kg",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "(8쪽)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "(2통)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "고춧가루 적량",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "(마리)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "(1 3/4큰술)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "(6마리)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "물(또는 육수) 400mL(2컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "(6큰술)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "물 150mL(3/4컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "(1 1/4 큰술)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "물 45ml(3큰술)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "(1 1/3개)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "(2/3 큰술)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "소금 (데침용)약간",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "<양념> 간장 1 1/2큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "고추장 1 ½큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "감자 전분 3큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "(1 1/2컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "소금(데침용) 약간",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "<앙념장> 간장 2큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "다진 생강 1/2큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "참기름 적량",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "수수 5큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "율무 5큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "차조 5큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "<쇠고기 양념> 간장 1작은술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "다진 파 약간",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "다진 마늘 약간 <고사리 양념> 간장 1작은술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "물 1큰술 <청포묵 양념> 참기름 1작은술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "소금 약간 <양념장> 간장 1큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "멸치장국국물(멸치 · 다시마 · 물) 1.4L(4컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "내장(양",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "곱창",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "곤자소니) 적량",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "(1/2 개)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "<고기 양념> 간장",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "찹쌀 1 1/2컵",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "(7쪽)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "고등어 1마리",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "물 4컵(800mL)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "<양념> 다진 마늘 1큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "멸치장국국물(멸치 · 다시마 · 물) 800mL(4컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "고춧가루 1/2큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "청국장 1컵",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "더덕 8",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "<유장> 참기름 2큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "간장 2/3큰술 <양념> 고추장 2큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "[양념장] 마른 고추 2개",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "간장 4큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "물엿 1/2컵",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "<초간장> 간장 1큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "물 1/2컵(100mL)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "가오리 2kg(1마리)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "[양념장] 간장 5~6컵",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "식용유 1/2컵",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "전분 2큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "멸치장국국물(멸치 · 다시마 · 물) 600mL(3컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "설탕 3큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "물엿 5큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "밀가루 1큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "물 1큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "멥쌀가루 1.5kg(10컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "막걸리 200ml(1컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "<고명> 대추 10(5개)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "물 6큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "생강즙 2큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "<갑오징어 양념> 고춧가루 2큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "후춧가루 약간 <무 양념> 젓갈 1큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "고춧가루 2 1/2 큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "다진 마늘 1/2작은술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "백합 2kg",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "수삼 2뿌리",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "다진 마늘 약간",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "생아귀 2마리",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "<양념> 고춧가루 1큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "호박잎",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "방아잎",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "초피가루(제피가루) 약간",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "<양념> 다진 풋고추 1큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "다진 붉은 고추 1큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "(4뿌리)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "<유장> 참기름 1큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "간장 1/2큰술 <양념장> 고추장 1큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "[조림장] 간장 2큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "물엿 1/2큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "<조림장> 멸치장국국물(멸치·다시마·물) 2큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "물엿 2작은술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "다진 생강 약간",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "낙지 1kg(5마리)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "(1 1/2뿌리)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "<양념> 고춧가루 2큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "식용유 1/2큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "<치자물> 치자 3개",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "가오리 1마리",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "[초고추장] 고추장 3큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "식초3큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "율무 1컵",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "들기름2큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "민물고기(붕어",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "(1 1/3컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "명란 8개",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "<양념장> 고추장 1큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "간장 1/2큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "고춧가루 1 1/2큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "쪽파 3뿌리",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "육수 100mL(1/2컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "<쇠고기 양념> 간장 1큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "배춧잎 2장",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "가래떡",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "<양념 고추장> 고추장 2큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "(6쪽)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "정종 1큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "감자 1kg(7개)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "멥쌀 8kg",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "막걸리 400mL(2컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "반죽물 100mL(1/2컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "생미역",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "고사리",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "도라지",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "숙주",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "식초",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "전분",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "된장 1 1/2큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "들깨 2큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "<다진 양념> 마른 고추 1개",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "다진 양파 1큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "오리 1.3kg(1마리)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "청주 적량",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "<양념장> 청주",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "들깨",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "물 적당",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "<양념장> 국간장 3큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "깨소금",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "실고추 적량",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "쪽파 1뿌리",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "<양념> 고춧가루 1 1/2큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "멥쌀가루 5kg",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "막걸리 1 1/2컵",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "설탕 4컵",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "대추 적량",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "석이버섯 적량",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "물 600ml(3컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "<콩나물",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "물 1.4L(7컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "반죽물 15ml(1큰술)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "물 1.1L(5 1/2컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "(2",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "(소2마리)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "물 100ml(1/2컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "(1 1/4작은술)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "(작은것 1/2개)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "(1/2 작은술)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "<막걸리물> 막걸리 400mL(2컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "찹쌀 1.7kg(10컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "소금 1/3작은술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "소금 4작은술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "민물고기 1kg",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "각종 산채 적량",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "밀가루 약간",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "다진 생강 1/2작은술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "배즙 1컵",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "후춧가루 1작은술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "(소 4뿌리)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "<유장> 간장 1작은술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "참기름 1큰술 <양념> 고추장 1큰술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "간장 1/4작은술",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "물 480mL(2 1/3컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "(1/2장)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "후춧가루 약간 <콩나물",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "시금치",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "표고버섯",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "(3 1/3작은술)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "(3 1/2",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "물 90mL(6큰술)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "소금 (해감용)약간",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "(1큰술) 후춧가루 약간",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  },
+  {
+    "fragment": "장국국물(또는 육수) 400mL(2컵)",
+    "status": "UNIT_UNCONFIRMED",
+    "count": 1
+  }
+]

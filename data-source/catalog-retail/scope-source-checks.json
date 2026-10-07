@@ -1,0 +1,101 @@
+[
+  {
+    "url": "https://brand.nongshim.com/all_product/index",
+    "method": "GET",
+    "params": {},
+    "checkedAt": "2026-10-04",
+    "parserVersion": "catalog-retail-public-v1",
+    "status": "UNRESOLVED",
+    "reason": "URLError: <urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] ssl/tls alert handshake failure (_ssl.c:1010)>"
+  },
+  {
+    "url": "https://www.ottogi.co.kr/",
+    "method": "GET",
+    "params": {},
+    "checkedAt": "2026-10-04",
+    "parserVersion": "catalog-retail-public-v1",
+    "sourceHash": "f4c2614297ab95aec81ae34e4dc98aa0ce0ce6f8232cc35863ebadae39740d92",
+    "path": "data-source/catalog-retail/raw/e097732ff39d25f4ea3e.raw",
+    "status": "OK"
+  },
+  {
+    "url": "https://www.bing.co.kr/product/list?type=1",
+    "method": "GET",
+    "params": {},
+    "checkedAt": "2026-10-04",
+    "parserVersion": "catalog-retail-public-v1",
+    "sourceHash": "e7692f6c4efd70e4399e93005c2d4666569e89faeab8b4d2b97bd6044ca96dbe",
+    "path": "data-source/catalog-retail/raw/f3bfdcf258c30ac0a294.raw",
+    "status": "OK"
+  },
+  {
+    "url": "https://m.lottesweetmall.com/index.html",
+    "method": "GET",
+    "params": {},
+    "checkedAt": "2026-10-04",
+    "parserVersion": "catalog-retail-public-v1",
+    "sourceHash": "2bac7c756f76854d12b98ad2f827937be55b59dde0a493156497dbcb03275706",
+    "path": "data-source/catalog-retail/raw/73bab268f1883033fb95.raw",
+    "status": "OK"
+  },
+  {
+    "url": "https://www.bgfretail.com/",
+    "method": "GET",
+    "params": {},
+    "checkedAt": "2026-10-04",
+    "parserVersion": "catalog-retail-public-v1",
+    "sourceHash": "29e2fd61ecfab6710ae85d27c48fa5829b7a3f017f04e3b742192518357d760c",
+    "path": "data-source/catalog-retail/raw/68568176347d27712c8f.raw",
+    "status": "OK"
+  },
+  {
+    "url": "https://www.spc.co.kr/",
+    "method": "GET",
+    "params": {},
+    "checkedAt": "2026-10-04",
+    "parserVersion": "catalog-retail-public-v1",
+    "sourceHash": "2eda8bf2666bce5ef33bcba0af2b892646b33bb51a4295d06c998df5df85f126",
+    "path": "data-source/catalog-retail/raw/21ffec8ed966f3e911f2.raw",
+    "status": "OK"
+  },
+  {
+    "url": "https://www.cjthemarket.com/",
+    "method": "GET",
+    "params": {},
+    "checkedAt": "2026-10-04",
+    "parserVersion": "catalog-retail-public-v1",
+    "sourceHash": "f8b3e3714e3bb65178554296573f7994aa1cecea005675f548e80304f5b6c52f",
+    "path": "data-source/catalog-retail/raw/dab31f2d50148fa9dfdd.raw",
+    "status": "OK"
+  },
+  {
+    "url": "https://www.dongwonmall.com/",
+    "method": "GET",
+    "params": {},
+    "checkedAt": "2026-10-04",
+    "parserVersion": "catalog-retail-public-v1",
+    "sourceHash": "87d424ed251e0be83cfcff71313205a99e90ba386642b94c527440666978e7c6",
+    "path": "data-source/catalog-retail/raw/caae7bec52ff3bcff0e9.raw",
+    "status": "OK"
+  },
+  {
+    "url": "https://shop.pulmuone.co.kr/",
+    "method": "GET",
+    "params": {},
+    "checkedAt": "2026-10-04",
+    "parserVersion": "catalog-retail-public-v1",
+    "sourceHash": "1a8fae89512ba03cad26cad3351acbcd7714d7c6fca7a99d67774a39b9891b16",
+    "path": "data-source/catalog-retail/raw/377a39d9fe4fca11d872.raw",
+    "status": "OK"
+  },
+  {
+    "url": "https://www.chungjungone.com/",
+    "method": "GET",
+    "params": {},
+    "checkedAt": "2026-10-04",
+    "parserVersion": "catalog-retail-public-v1",
+    "sourceHash": "6e4c4ab03bd6edcb26d5be9513c8918e4ab8615a31fc27ffa90687f4e5acdb95",
+    "path": "data-source/catalog-retail/raw/383957b3fbeb4bd81b14.raw",
+    "status": "OK"
+  }
+]

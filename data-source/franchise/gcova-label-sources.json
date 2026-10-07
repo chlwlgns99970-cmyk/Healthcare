@@ -1,0 +1,44 @@
+[
+  {
+    "sourceUrl": "http://www.gcova.co.kr/images/pop_info/info_1.jpg",
+    "path": "data-source\\franchise\\raw\\gcova\\info_1.jpg",
+    "sha256": "5A5E0AED60FEF8DCDBFE8B81FC19785F85C9C9B48B41EDB6695A70C21F4F15AC",
+    "checkedAt": "2026-10-04",
+    "sourceDate": ""
+  },
+  {
+    "sourceUrl": "http://www.gcova.co.kr/images/pop_info/info_2.jpg",
+    "path": "data-source\\franchise\\raw\\gcova\\info_2.jpg",
+    "sha256": "F0463C0A436F8CAA6727BBD18C36E3833CFE4BD06779D06A4865393F2F209649",
+    "checkedAt": "2026-10-04",
+    "sourceDate": ""
+  },
+  {
+    "sourceUrl": "http://www.gcova.co.kr/images/pop_info/info_3.jpg",
+    "path": "data-source\\franchise\\raw\\gcova\\info_3.jpg",
+    "sha256": "EA4AA30C9B2212345F40341045BA0A677E66C2CAD59B60DFF5B5B35EA35A5750",
+    "checkedAt": "2026-10-04",
+    "sourceDate": ""
+  },
+  {
+    "sourceUrl": "http://www.gcova.co.kr/images/pop_info/info_4.jpg",
+    "path": "data-source\\franchise\\raw\\gcova\\info_4.jpg",
+    "sha256": "5E5D811D7B9B8433CA5108A6C597DFDBFCC1130BC0ECE2639B7A91EBB90F28D9",
+    "checkedAt": "2026-10-04",
+    "sourceDate": ""
+  },
+  {
+    "sourceUrl": "http://www.gcova.co.kr/images/pop_info/info_5.jpg",
+    "path": "data-source\\franchise\\raw\\gcova\\info_5.jpg",
+    "sha256": "D47B46910FE1B231852C5288302D9F4FF4DFC63DEB0F73DFC6B11C2ECC09835B",
+    "checkedAt": "2026-10-04",
+    "sourceDate": ""
+  },
+  {
+    "sourceUrl": "http://www.gcova.co.kr/images/pop_info/txt.jpg",
+    "path": "data-source\\franchise\\raw\\gcova\\txt.jpg",
+    "sha256": "6D6D69BA4F3ED5EC93CE219D2F099815D555C1252E0FDA0DD6C5EC4ADD104025",
+    "checkedAt": "2026-10-04",
+    "sourceDate": ""
+  }
+]

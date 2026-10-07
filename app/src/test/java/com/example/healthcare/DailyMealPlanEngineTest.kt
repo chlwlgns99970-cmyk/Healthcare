@@ -82,7 +82,7 @@ class DailyMealPlanEngineTest {
     @Test fun healthyRejectsUnknownNutrition() { assertNull(plan(t=DailyRecommendationTheme.HEALTHY,seeds=fixtures().map { it.copy(template=it.template.copy(fatGrams=null)) })) }
     @Test fun healthyUsesExplicitNearBalancedRule() { assertNotNull(plan(t=DailyRecommendationTheme.HEALTHY)) }
     @Test fun cheatDoesNotChangeOrBypassTarget() { val p=requireNotNull(plan()); assertEquals(2000,p.targetKcal); assertTrue(kotlin.math.abs(p.totalKcal-2000)<=100) }
-    @Test fun slowStyleHasExplicitUnsupportedState() { assertNull(plan(t=DailyRecommendationTheme.SLOW_AGING_STYLE)); assertTrue(DailyMealThemePolicy.SLOW_STYLE_LIMITATION.contains("부족")) }
+    @Test fun slowStyleHasExplicitUnsupportedState() { assertNull(plan(t=DailyRecommendationTheme.SLOW_AGING_STYLE)); assertTrue(DailyMealThemePolicy.SLOW_STYLE_LIMITATION.contains("조건")) }
     @Test fun dislikeAppliesToEveryThemeAndOutranksPreference() {
         val preference=pref.copy(preferredFoods="|싫은재료|")
         DailyRecommendationTheme.entries.forEach { t ->

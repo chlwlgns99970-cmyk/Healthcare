@@ -1,0 +1,42 @@
+[
+  {
+    "institution": "농촌진흥청 국립식량과학원 메뉴젠",
+    "acquiredReferences": 769,
+    "newAppCompleteRecipeEntries": 140,
+    "resolvedOriginalIngredients": 0,
+    "ingredientCountInSelectedCompleteCompositions": 1282,
+    "note": "음식 수는 원본 recipe entry 기준. 선택 구성 재료 수는 원본 새 해결 수가 아님"
+  },
+  {
+    "institution": "식품의약품안전처",
+    "acquiredReferences": 2,
+    "newAppCompleteRecipeEntries": 8,
+    "resolvedOriginalIngredients": 0,
+    "ingredientCountInSelectedCompleteCompositions": 34,
+    "note": "음식 수는 원본 recipe entry 기준. 선택 구성 재료 수는 원본 새 해결 수가 아님"
+  },
+  {
+    "institution": "원광대학교·서울대학교 식품공학 학술논문",
+    "acquiredReferences": 1,
+    "newAppCompleteRecipeEntries": 0,
+    "resolvedOriginalIngredients": 0,
+    "ingredientCountInSelectedCompleteCompositions": 0,
+    "note": "음식 수는 원본 recipe entry 기준. 선택 구성 재료 수는 원본 새 해결 수가 아님"
+  },
+  {
+    "institution": "질병관리청 국민건강영양조사",
+    "acquiredReferences": 613,
+    "newAppCompleteRecipeEntries": 9,
+    "resolvedOriginalIngredients": 0,
+    "ingredientCountInSelectedCompleteCompositions": 169,
+    "note": "음식 수는 원본 recipe entry 기준. 선택 구성 재료 수는 원본 새 해결 수가 아님"
+  },
+  {
+    "institution": "농촌진흥청 농사로 원본",
+    "acquiredReferences": 305,
+    "newAppCompleteRecipeEntries": 0,
+    "resolvedOriginalIngredients": 2,
+    "ingredientCountInSelectedCompleteCompositions": 0,
+    "note": "전체 원본은 MFDS211·RDA305 합계516. 새 직접 g 2행의 근거 기관은 농사로; 원본 complete 3개 foodId 연결은 위 MFDS에 집계"
+  }
+]

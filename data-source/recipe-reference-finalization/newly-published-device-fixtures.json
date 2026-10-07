@@ -1,0 +1,656 @@
+[
+  {
+    "originalRecipeId": "MFDS-104",
+    "originalName": "달래불고기",
+    "selectedId": "MENUZEN-D102015",
+    "selectedName": "불고기(소고기)",
+    "foodIds": [
+      "kfind-d108-386000000-0001",
+      "kfind-d308-386000000-0001",
+      "kfind-d508-386000000-0001",
+      "kfind-d608-386000000-0001",
+      "kfind-d708-386000000-0001"
+    ],
+    "method": "WHOLE_NAMED_SAME_DISH_REFERENCE",
+    "reason": "소고기 불고기 전체 참고. 원본 달래 추가량과 섞지 않음",
+    "sourceUrl": "https://www.nics.go.kr/food/kfi/mgnNewmenumkFoodSelectNew/selectFoodDetail.json?fdCode=D102015",
+    "sourceSha256": "f749362221234a71b0dc28cacaa3437c96ff8fa949a5e7c74d830c1584a595fa",
+    "compositionKind": "REFERENCE_RECIPE",
+    "testMethod": "publishedMapping01"
+  },
+  {
+    "originalRecipeId": "MFDS-135",
+    "originalName": "가지쇠고기볶음",
+    "selectedId": "MENUZEN-D102019",
+    "selectedName": "소고기볶음(가지)",
+    "foodIds": [
+      "kfind-d110-481320000-0001",
+      "kfind-d510-481320000-0001"
+    ],
+    "method": "WHOLE_NAMED_SAME_DISH_REFERENCE",
+    "reason": "가지·소고기 볶음 같은 전체 독립 구성; 원본 생량과 공개 익힌량 합성 금지",
+    "sourceUrl": "https://www.nics.go.kr/food/kfi/mgnNewmenumkFoodSelectNew/selectFoodDetail.json?fdCode=D102019",
+    "sourceSha256": "4f971445a896b097b87418393ba9daea6996ce0ea99d602fda66bba91eca7cab",
+    "compositionKind": "REFERENCE_RECIPE",
+    "testMethod": "publishedMapping02"
+  },
+  {
+    "originalRecipeId": "MFDS-146",
+    "originalName": "딸기바나나연두부쉐이크",
+    "selectedId": "MFDS-146",
+    "selectedName": "딸기바나나연두부쉐이크",
+    "foodIds": [
+      "kfind-d420-756000000-0001",
+      "kfind-d520-756000000-0001",
+      "kfind-d720-756000000-0001"
+    ],
+    "method": "REVIEWED_SAME_DISH_COOKING_CONTEXT",
+    "reason": "MFDS-146 딸기100g·바나나50g·연두부50g·올리고당10g를 믹서로 갈아 혼합하는 과일 음료. K-FIND 무브랜드 딸기바나나 스무디의 같은 딸기·바나나 블렌딩 음식 계열; 주스·가공 제조사 제품 제외. 연두부 포함 원본 참고명과 영양 그대로 보존",
+    "sourceUrl": "https://www.foodsafetykorea.go.kr/popup/sensuousmenuView.do?rcp_menu_no=146",
+    "compositionKind": "ORIGINAL",
+    "testMethod": "publishedMapping03"
+  },
+  {
+    "originalRecipeId": "MFDS-147",
+    "originalName": "모시조개된장국",
+    "selectedId": "MENUZEN-D052158",
+    "selectedName": "모시조개시금치된장국",
+    "foodIds": [
+      "kfind-d105-216390000-0001"
+    ],
+    "method": "WHOLE_NAMED_SAME_DISH_REFERENCE",
+    "reason": "모시조개·된장 국의 시금치 포함 전체 독립 구성; 종 동의어는 공식 수산자료 확인",
+    "sourceUrl": "https://www.nics.go.kr/food/kfi/mgnNewmenumkFoodSelectNew/selectFoodDetail.json?fdCode=D052158",
+    "sourceSha256": "8dbea86dca3ef61207c0b0ccd69559576f8c7784f3e418925e73dc810b92e3bf",
+    "compositionKind": "REFERENCE_RECIPE",
+    "testMethod": "publishedMapping04"
+  },
+  {
+    "originalRecipeId": "MFDS-160",
+    "originalName": "미역조갯국",
+    "selectedId": "MENUZEN-D051287",
+    "selectedName": "모시조개미역국",
+    "foodIds": [
+      "kfind-d405-318000000-0001",
+      "kfind-d505-318000000-0001",
+      "kfind-d605-318000000-0001",
+      "kfind-d705-318000000-0001"
+    ],
+    "method": "WHOLE_NAMED_SAME_DISH_REFERENCE",
+    "reason": "모시조개·미역 국의 독립 전체 구성. 원본 조갯살 종 추정 없이 참고의 실제 동의종 가무락 유지",
+    "sourceUrl": "https://www.nics.go.kr/food/kfi/mgnNewmenumkFoodSelectNew/selectFoodDetail.json?fdCode=D051287",
+    "sourceSha256": "e62bec7d5128c92f6d1fd9b32fc2185dc56ff5ed9b3a1c9d34b7bf35120fcc9e",
+    "compositionKind": "REFERENCE_RECIPE",
+    "testMethod": "publishedMapping05"
+  },
+  {
+    "originalRecipeId": "MFDS-176",
+    "originalName": "풋고추튀김",
+    "selectedId": "MENUZEN-D123002",
+    "selectedName": "고추튀김",
+    "foodIds": [
+      "kfind-d312-540000000-0001",
+      "kfind-d412-540000000-0001",
+      "kfind-d612-540000000-0001",
+      "kfind-d712-540000000-0001"
+    ],
+    "method": "WHOLE_NAMED_SAME_DISH_REFERENCE",
+    "reason": "풋고추·밀가루 옷·콩기름의 튀김 전체 배합, 고기소 없는 같은 음식",
+    "sourceUrl": "https://www.nics.go.kr/food/kfi/mgnNewmenumkFoodSelectNew/selectFoodDetail.json?fdCode=D123002",
+    "sourceSha256": "c8bedb16e797f24b1549f1f457d9d5bdb40542d6e89a1e602e8512a1e27855a8",
+    "compositionKind": "REFERENCE_RECIPE",
+    "testMethod": "publishedMapping06"
+  },
+  {
+    "originalRecipeId": "MFDS-187",
+    "originalName": "냉이바지락국",
+    "selectedId": "MENUZEN-D052010",
+    "selectedName": "냉이된장국(고추장, 바지락)",
+    "foodIds": [
+      "kfind-d105-216070000-0001",
+      "kfind-d405-273000000-0001",
+      "kfind-d505-273000000-0001",
+      "kfind-d605-273000000-0001",
+      "kfind-d705-273000000-0001"
+    ],
+    "method": "WHOLE_NAMED_SAME_DISH_REFERENCE",
+    "reason": "같은 냉이·바지락·된장·고추장 국의 두부 포함 독립 전체 참고",
+    "sourceUrl": "https://www.nics.go.kr/food/kfi/mgnNewmenumkFoodSelectNew/selectFoodDetail.json?fdCode=D052010",
+    "sourceSha256": "ddd538767515426c68796a82e57668432b82d88a27f147d6f248f485e7b8d249",
+    "compositionKind": "REFERENCE_RECIPE",
+    "testMethod": "publishedMapping07"
+  },
+  {
+    "originalRecipeId": "MFDS-191",
+    "originalName": "닭가슴살채소조림",
+    "selectedId": "MENUZEN-D112031",
+    "selectedName": "닭가슴살 채소조림",
+    "foodIds": [
+      "kfind-d111-515000000-0001",
+      "kfind-d411-515000000-0001",
+      "kfind-d511-515000000-0001",
+      "kfind-d611-515000000-0001",
+      "kfind-d711-515000000-0001"
+    ],
+    "method": "WHOLE_NAMED_SAME_DISH_REFERENCE",
+    "reason": "닭 가슴 부위·채소·양념 조림의 같은 전체 배합",
+    "sourceUrl": "https://www.nics.go.kr/food/kfi/mgnNewmenumkFoodSelectNew/selectFoodDetail.json?fdCode=D112031",
+    "sourceSha256": "e498183bc16e20f5ddfc89d22faef56136de019d45688439be7162abbb3a320c",
+    "compositionKind": "REFERENCE_RECIPE",
+    "testMethod": "publishedMapping08"
+  },
+  {
+    "originalRecipeId": "MFDS-197",
+    "originalName": "피망두부완자전",
+    "selectedId": "MENUZEN-D092006",
+    "selectedName": "완자전(돼지고기)",
+    "foodIds": [
+      "kfind-d109-437050000-0001"
+    ],
+    "method": "WHOLE_NAMED_SAME_DISH_REFERENCE",
+    "reason": "돼지고기·두부를 빚어 지지는 완자전 독립 전체 배합. 피망·달걀 원본 구성으로 주장하지 않음",
+    "sourceUrl": "https://www.nics.go.kr/food/kfi/mgnNewmenumkFoodSelectNew/selectFoodDetail.json?fdCode=D092006",
+    "sourceSha256": "5bdbd1930f034fba252ae0138e11dfb5d5f8dac228a13e4218a7ecc1ce68ae32",
+    "compositionKind": "REFERENCE_RECIPE",
+    "testMethod": "publishedMapping09"
+  },
+  {
+    "originalRecipeId": "MFDS-207",
+    "originalName": "두릅쇠고기완자전",
+    "selectedId": "MENUZEN-D092007",
+    "selectedName": "완자전(소고기)",
+    "foodIds": [
+      "kfind-d109-437060000-0001"
+    ],
+    "method": "WHOLE_NAMED_SAME_DISH_REFERENCE",
+    "reason": "소고기·두부 완자전 독립 전체 배합. 원본 두릅 추가량과 합성하지 않음",
+    "sourceUrl": "https://www.nics.go.kr/food/kfi/mgnNewmenumkFoodSelectNew/selectFoodDetail.json?fdCode=D092007",
+    "sourceSha256": "a6b5314043d89cac491ee153fd0e6144787837885f92bcf0d6a2f7300a5f2ef7",
+    "compositionKind": "REFERENCE_RECIPE",
+    "testMethod": "publishedMapping10"
+  },
+  {
+    "originalRecipeId": "MFDS-217",
+    "originalName": "배오이무침",
+    "selectedId": "MFDS-217",
+    "selectedName": "배오이무침",
+    "foodIds": [
+      "kfind-d414-644000000-0001",
+      "kfind-d514-644000000-0001",
+      "kfind-d714-644000000-0001"
+    ],
+    "method": "REVIEWED_SAME_DISH_COOKING_CONTEXT",
+    "reason": "MFDS-217 생 오이·배를 채 썰어 소금·고춧가루·파·마늘로 무치는 생채. K-FIND 오이무침 생채·무침류의 배 포함 변형; 절임 오이지 제외. 원본 배오이무침 명칭·배 재료량 보존",
+    "sourceUrl": "https://www.foodsafetykorea.go.kr/popup/sensuousmenuView.do?rcp_menu_no=217",
+    "compositionKind": "ORIGINAL",
+    "testMethod": "publishedMapping11"
+  },
+  {
+    "originalRecipeId": "MFDS-219",
+    "originalName": "감자채튀김",
+    "selectedId": "MFDS-219",
+    "selectedName": "감자채튀김",
+    "foodIds": [
+      "kfind-d112-537000000-0001",
+      "kfind-d412-537000000-0001",
+      "kfind-d512-537000000-0001",
+      "kfind-d612-537000000-0001",
+      "kfind-d712-537000000-0001"
+    ],
+    "method": "REVIEWED_SAME_DISH_COOKING_CONTEXT",
+    "reason": "MFDS-219 원문 감자280g·콩기름40g 및 채 썬 감자를 바삭하게 튀기는 조리법. 무브랜드 K-FIND 감자튀김 튀김류의 절단 형태 변형; 원본 구성명 감자채튀김 보존",
+    "sourceUrl": "https://www.foodsafetykorea.go.kr/popup/sensuousmenuView.do?rcp_menu_no=219",
+    "compositionKind": "ORIGINAL",
+    "testMethod": "publishedMapping12"
+  },
+  {
+    "originalRecipeId": "MFDS-227",
+    "originalName": "버섯육개장",
+    "selectedId": "MENUZEN-D053103",
+    "selectedName": "버섯육개장",
+    "foodIds": [
+      "kfind-d105-245000000-0001",
+      "kfind-d505-245000000-0001"
+    ],
+    "method": "WHOLE_NAMED_SAME_DISH_REFERENCE",
+    "reason": "동일 소고기·버섯 육개장 전체 참고",
+    "sourceUrl": "https://www.nics.go.kr/food/kfi/mgnNewmenumkFoodSelectNew/selectFoodDetail.json?fdCode=D053103",
+    "sourceSha256": "1abd34245985d18c2f6c14a4d3d68ae11d9decd3f842429cd7a113681eb33c5c",
+    "compositionKind": "REFERENCE_RECIPE",
+    "testMethod": "publishedMapping13"
+  },
+  {
+    "originalRecipeId": "MFDS-232",
+    "originalName": "버섯칼국수",
+    "selectedId": "MENUZEN-D031095",
+    "selectedName": "들깨버섯칼국수",
+    "foodIds": [
+      "kfind-d103-174000000-0001",
+      "kfind-d403-174000000-0001",
+      "kfind-d503-174000000-0001",
+      "kfind-d603-174000000-0001",
+      "kfind-d703-174000000-0001"
+    ],
+    "method": "WHOLE_NAMED_SAME_DISH_REFERENCE",
+    "reason": "칼국수·표고·느타리 등 버섯 중심 같은 면 국. 들깨 포함 고유 참고명 유지",
+    "sourceUrl": "https://www.nics.go.kr/food/kfi/mgnNewmenumkFoodSelectNew/selectFoodDetail.json?fdCode=D031095",
+    "sourceSha256": "dbf16c748f48eb58a6c0ceb6b2d5333d80c685789de08faff4e4346925dcea2e",
+    "compositionKind": "REFERENCE_RECIPE",
+    "testMethod": "publishedMapping14"
+  },
+  {
+    "originalRecipeId": "MFDS-234",
+    "originalName": "낙지채소볶음",
+    "selectedId": "MENUZEN-D101006",
+    "selectedName": "낙지볶음(고추장)",
+    "foodIds": [
+      "kfind-d110-457000000-0001",
+      "kfind-d410-457000000-0001",
+      "kfind-d510-457000000-0001",
+      "kfind-d610-457000000-0001",
+      "kfind-d710-457000000-0001"
+    ],
+    "method": "WHOLE_NAMED_SAME_DISH_REFERENCE",
+    "reason": "낙지·채소·고추장 볶음의 전체 참고 배합. 같은 낙지·볶음이고 전골 제외",
+    "sourceUrl": "https://www.nics.go.kr/food/kfi/mgnNewmenumkFoodSelectNew/selectFoodDetail.json?fdCode=D101006",
+    "sourceSha256": "9cc4fa77c2249ba78840002e01e7309dda2376b27cb4ebd1eaae701e3ec37eab",
+    "compositionKind": "REFERENCE_RECIPE",
+    "testMethod": "publishedMapping15"
+  },
+  {
+    "originalRecipeId": "MFDS-248",
+    "originalName": "바지락무국",
+    "selectedId": "MENUZEN-D051192",
+    "selectedName": "바지락무국",
+    "foodIds": [
+      "kfind-d505-290000000-0001",
+      "kfind-d605-290000000-0001",
+      "kfind-d705-290000000-0001"
+    ],
+    "method": "WHOLE_NAMED_SAME_DISH_REFERENCE",
+    "reason": "동일 바지락·무 국 전체 참고; 원본 국량과 합성하지 않음",
+    "sourceUrl": "https://www.nics.go.kr/food/kfi/mgnNewmenumkFoodSelectNew/selectFoodDetail.json?fdCode=D051192",
+    "sourceSha256": "89a308ed0f8c78647c9143c5c18206829260cf6dc54142fdb971d3c9ff889c29",
+    "compositionKind": "REFERENCE_RECIPE",
+    "testMethod": "publishedMapping16"
+  },
+  {
+    "originalRecipeId": "MFDS-257",
+    "originalName": "두부김치국",
+    "selectedId": "KDCA-281-11299",
+    "selectedName": "김치국, 두부",
+    "foodIds": [
+      "kfind-d505-205120000-0001",
+      "kfind-d605-205120000-0001"
+    ],
+    "method": "WHOLE_NAMED_SAME_DISH_REFERENCE",
+    "reason": "김치·두부 국의 공공 조사 평균 구성. 원본 누락 양념의 해결로 주장하지 않음",
+    "sourceUrl": "https://knhanes.kdca.go.kr/knhanes/archive/wsiEtcPblcnDtl.do",
+    "sourceSha256": "294b5f4138cb460d475726ecf660e4fbbe80592ba0edf5cfb10b99f3e57ad071",
+    "compositionKind": "SURVEY_AVERAGE",
+    "testMethod": "publishedMapping17"
+  },
+  {
+    "originalRecipeId": "MFDS-259",
+    "originalName": "냉이무침",
+    "selectedId": "MENUZEN-D132109",
+    "selectedName": "냉이나물",
+    "foodIds": [
+      "kfind-d113-573000000-0001",
+      "kfind-d413-573000000-0001"
+    ],
+    "method": "WHOLE_NAMED_SAME_DISH_REFERENCE",
+    "reason": "냉이·고추장 나물 무침 전체 참고. 쌈장·식초를 원본 조리법에 역대입하지 않음",
+    "sourceUrl": "https://www.nics.go.kr/food/kfi/mgnNewmenumkFoodSelectNew/selectFoodDetail.json?fdCode=D132109",
+    "sourceSha256": "a77f059693c466d704aeb743242d8f2eb4ade0c67b42212ba9bfa0694c76dae4",
+    "compositionKind": "REFERENCE_RECIPE",
+    "testMethod": "publishedMapping18"
+  },
+  {
+    "originalRecipeId": "MFDS-262",
+    "originalName": "모시조개콩나물국",
+    "selectedId": "MENUZEN-D051309",
+    "selectedName": "모시조개콩나물국",
+    "foodIds": [
+      "kfind-d105-253000000-0001",
+      "kfind-d405-253000000-0001",
+      "kfind-d505-253000000-0001"
+    ],
+    "method": "WHOLE_NAMED_SAME_DISH_REFERENCE",
+    "reason": "같은 모시조개·콩나물 국 전체 구성; 공식 동의종 검증으로 가무락 유지",
+    "sourceUrl": "https://www.nics.go.kr/food/kfi/mgnNewmenumkFoodSelectNew/selectFoodDetail.json?fdCode=D051309",
+    "sourceSha256": "f27e31035ff570ee0be1a83fe9973895ab4ae6cf472dbc4ff558d0bdc226fe83",
+    "compositionKind": "REFERENCE_RECIPE",
+    "testMethod": "publishedMapping19"
+  },
+  {
+    "originalRecipeId": "MFDS-285",
+    "originalName": "쇠고기토란탕",
+    "selectedId": "MENUZEN-D053062",
+    "selectedName": "토란탕",
+    "foodIds": [
+      "kfind-d105-255000000-0001",
+      "kfind-d405-255000000-0001",
+      "kfind-d505-255000000-0001",
+      "kfind-d705-255000000-0001"
+    ],
+    "method": "WHOLE_NAMED_SAME_DISH_REFERENCE",
+    "reason": "소고기·토란 중심 탕의 들깨 포함 전체 참고. 원본 무·국간장량에 역대입하지 않음",
+    "sourceUrl": "https://www.nics.go.kr/food/kfi/mgnNewmenumkFoodSelectNew/selectFoodDetail.json?fdCode=D053062",
+    "sourceSha256": "f8276ed9eadcdc94b785e89656e730d4ca64a1eaece2ae4a35a7a1203d5ecd2a",
+    "compositionKind": "REFERENCE_RECIPE",
+    "testMethod": "publishedMapping20"
+  },
+  {
+    "originalRecipeId": "MFDS-286",
+    "originalName": "주꾸미불고기",
+    "selectedId": "KDCA-281-3710",
+    "selectedName": "주꾸미볶음, 채소",
+    "foodIds": [
+      "kfind-d410-493320000-0001"
+    ],
+    "method": "WHOLE_NAMED_SAME_DISH_REFERENCE",
+    "reason": "주꾸미 채소 팬 볶음의 독립 전체 조사평균; 조리용 레시피 표시 금지",
+    "sourceUrl": "https://knhanes.kdca.go.kr/knhanes/archive/wsiEtcPblcnDtl.do",
+    "sourceSha256": "294b5f4138cb460d475726ecf660e4fbbe80592ba0edf5cfb10b99f3e57ad071",
+    "compositionKind": "SURVEY_AVERAGE",
+    "testMethod": "publishedMapping21"
+  },
+  {
+    "originalRecipeId": "MFDS-293",
+    "originalName": "감자미역국",
+    "selectedId": "MENUZEN-D051043",
+    "selectedName": "미역국(감자)",
+    "foodIds": [
+      "kfind-d105-223000000-0001",
+      "kfind-d405-223000000-0001",
+      "kfind-d505-223000000-0001",
+      "kfind-d605-223000000-0001",
+      "kfind-d705-223000000-0001"
+    ],
+    "method": "WHOLE_NAMED_SAME_DISH_REFERENCE",
+    "reason": "같은 감자 미역국 전체 배합; 원본 생중량을 공개 삶은 중량으로 바꾸지 않음",
+    "sourceUrl": "https://www.nics.go.kr/food/kfi/mgnNewmenumkFoodSelectNew/selectFoodDetail.json?fdCode=D051043",
+    "sourceSha256": "b03a90d8a24543cac257e8a259b71c4a0a2b3e323cf36836bfd36f85018c1b37",
+    "compositionKind": "REFERENCE_RECIPE",
+    "testMethod": "publishedMapping22"
+  },
+  {
+    "originalRecipeId": "MFDS-299",
+    "originalName": "고사리육개장",
+    "selectedId": "MENUZEN-D053027",
+    "selectedName": "육개장",
+    "foodIds": [
+      "kfind-d105-245000000-0001",
+      "kfind-d505-245000000-0001"
+    ],
+    "method": "WHOLE_NAMED_SAME_DISH_REFERENCE",
+    "reason": "동일 소고기·고사리 육개장 전체 참고",
+    "sourceUrl": "https://www.nics.go.kr/food/kfi/mgnNewmenumkFoodSelectNew/selectFoodDetail.json?fdCode=D053027",
+    "sourceSha256": "fd84c05aec56125077163d898849f2e521e1e510317cbaa73949e5e79aff2748",
+    "compositionKind": "REFERENCE_RECIPE",
+    "testMethod": "publishedMapping23"
+  },
+  {
+    "originalRecipeId": "MFDS-303",
+    "originalName": "피망야채전",
+    "selectedId": "MENUZEN-D093014",
+    "selectedName": "야채전",
+    "foodIds": [
+      "kfind-d109-439000000-0001",
+      "kfind-d309-439000000-0001",
+      "kfind-d409-439000000-0001",
+      "kfind-d509-439000000-0001",
+      "kfind-d609-439000000-0001",
+      "kfind-d709-439000000-0001"
+    ],
+    "method": "WHOLE_NAMED_SAME_DISH_REFERENCE",
+    "reason": "피망·깻잎·밀가루 채소전 전체 참고, 참고에 명시된 익힌 재료 nutrition을 그대로 유지",
+    "sourceUrl": "https://www.nics.go.kr/food/kfi/mgnNewmenumkFoodSelectNew/selectFoodDetail.json?fdCode=D093014",
+    "sourceSha256": "5a3200fb8f08a059439e380f57dc790361fb1d62338c5328ad66201706848025",
+    "compositionKind": "REFERENCE_RECIPE",
+    "testMethod": "publishedMapping24"
+  },
+  {
+    "originalRecipeId": "MFDS-309",
+    "originalName": "우엉불고기",
+    "selectedId": "MENUZEN-D102012",
+    "selectedName": "불고기(돼지고기)",
+    "foodIds": [
+      "kfind-d508-375010000-0001",
+      "kfind-d608-375010000-0001",
+      "kfind-d708-375010000-0001"
+    ],
+    "method": "WHOLE_NAMED_SAME_DISH_REFERENCE",
+    "reason": "돼지고기·간장의 불고기 전체 참고. 우엉 소고기 조림을 잘못 연결하지 않음",
+    "sourceUrl": "https://www.nics.go.kr/food/kfi/mgnNewmenumkFoodSelectNew/selectFoodDetail.json?fdCode=D102012",
+    "sourceSha256": "5236426fd9e03529fec0c5b33b120ca21031fa8e178848276cbfd33e2fdaee32",
+    "compositionKind": "REFERENCE_RECIPE",
+    "testMethod": "publishedMapping25"
+  },
+  {
+    "originalRecipeId": "MFDS-310",
+    "originalName": "미나리유부초밥",
+    "selectedId": "MENUZEN-D016010",
+    "selectedName": "초밥(유부)",
+    "foodIds": [
+      "kfind-d101-042410000-0001",
+      "kfind-d301-042410000-0001"
+    ],
+    "method": "WHOLE_NAMED_SAME_DISH_REFERENCE",
+    "reason": "같은 유부 초밥의 시금치 포함 전체 독립 배합. 원본 미나리 배합으로 주장하지 않음",
+    "sourceUrl": "https://www.nics.go.kr/food/kfi/mgnNewmenumkFoodSelectNew/selectFoodDetail.json?fdCode=D016010",
+    "sourceSha256": "23da5116d71e8bba7c1baa1208dca96bcd7594fd847e853a92482df3ece6a5aa",
+    "compositionKind": "REFERENCE_RECIPE",
+    "testMethod": "publishedMapping26"
+  },
+  {
+    "originalRecipeId": "MFDS-312",
+    "originalName": "봄동겉절이",
+    "selectedId": "MFDS-312",
+    "selectedName": "봄동겉절이",
+    "foodIds": [
+      "kfind-d114-605130000-0001",
+      "kfind-d314-634000000-0001",
+      "kfind-d414-634000000-0001",
+      "kfind-d414-634000000-0002",
+      "kfind-d514-634000000-0001",
+      "kfind-d614-634000000-0001",
+      "kfind-d614-634000000-0002",
+      "kfind-d714-634000000-0001"
+    ],
+    "method": "REVIEWED_SAME_DISH_COOKING_CONTEXT",
+    "reason": "MFDS-312 조리법이 배추 겉잎·절인 배추를 명시. 농사로 cntntsNo205161은 봄동을 결구하지 않은 배추로 설명하고 겉절이 활용 명시. 원본 봄동 nutrition과 명칭 보존",
+    "sourceUrl": "https://www.foodsafetykorea.go.kr/popup/sensuousmenuView.do?rcp_menu_no=312",
+    "compositionKind": "ORIGINAL",
+    "testMethod": "publishedMapping27"
+  },
+  {
+    "originalRecipeId": "MFDS-316",
+    "originalName": "새우살미역국",
+    "selectedId": "MENUZEN-D051256",
+    "selectedName": "새우살미역국",
+    "foodIds": [
+      "kfind-d105-223220000-0001"
+    ],
+    "method": "WHOLE_NAMED_SAME_DISH_REFERENCE",
+    "reason": "생 새우살·미역 국 전체 참고; 건새우 변형 제외",
+    "sourceUrl": "https://www.nics.go.kr/food/kfi/mgnNewmenumkFoodSelectNew/selectFoodDetail.json?fdCode=D051256",
+    "sourceSha256": "8d78e52059563cd30a6d7cbc53b5502291f13a21ad15908c9c1a715b90236b6b",
+    "compositionKind": "REFERENCE_RECIPE",
+    "testMethod": "publishedMapping28"
+  },
+  {
+    "originalRecipeId": "MFDS-326",
+    "originalName": "서리태밥",
+    "selectedId": "MENUZEN-D012101",
+    "selectedName": "서리태흑미밥",
+    "foodIds": [
+      "kfind-d401-032620000-0001",
+      "kfind-d501-032620000-0001",
+      "kfind-d701-032620000-0001"
+    ],
+    "method": "WHOLE_NAMED_SAME_DISH_REFERENCE",
+    "reason": "서리태·쌀밥의 흑미 포함 명명 변형 전체 배합. 원본은 그대로 미해결 유지",
+    "sourceUrl": "https://www.nics.go.kr/food/kfi/mgnNewmenumkFoodSelectNew/selectFoodDetail.json?fdCode=D012101",
+    "sourceSha256": "d42fc0fd0e495640b06d0feacaab6267aa5b1f2cc7d9674c9f1719392b53a306",
+    "compositionKind": "REFERENCE_RECIPE",
+    "testMethod": "publishedMapping29"
+  },
+  {
+    "originalRecipeId": "MFDS-329",
+    "originalName": "취나물볶음",
+    "selectedId": "MENUZEN-D103051",
+    "selectedName": "취나물볶음",
+    "foodIds": [
+      "kfind-d513-595013200-0001",
+      "kfind-d713-595013200-0001"
+    ],
+    "method": "WHOLE_NAMED_SAME_DISH_REFERENCE",
+    "reason": "같은 취나물 볶음의 공개 데친 참취·간장 배합 그대로 유지; 원본 생 취량의 조리환산 금지",
+    "sourceUrl": "https://www.nics.go.kr/food/kfi/mgnNewmenumkFoodSelectNew/selectFoodDetail.json?fdCode=D103051",
+    "sourceSha256": "5af9e7d42f9fc0dc4ed161963062770bf5740d16d0019833ea7d9834d368ee88",
+    "compositionKind": "REFERENCE_RECIPE",
+    "testMethod": "publishedMapping30"
+  },
+  {
+    "originalRecipeId": "MFDS-330",
+    "originalName": "다시마무국",
+    "selectedId": "MENUZEN-D051175",
+    "selectedName": "다시마무국",
+    "foodIds": [
+      "kfind-d405-219000000-0001",
+      "kfind-d705-219000000-0001"
+    ],
+    "method": "WHOLE_NAMED_SAME_DISH_REFERENCE",
+    "reason": "같은 다시마·무 국 전체 배합",
+    "sourceUrl": "https://www.nics.go.kr/food/kfi/mgnNewmenumkFoodSelectNew/selectFoodDetail.json?fdCode=D051175",
+    "sourceSha256": "32b0768df565f8bb8528ab598adfcacd41e65cc46ce3010f4632bf9b937cee7a",
+    "compositionKind": "REFERENCE_RECIPE",
+    "testMethod": "publishedMapping31"
+  },
+  {
+    "originalRecipeId": "MFDS-336",
+    "originalName": "참나물무침",
+    "selectedId": "MENUZEN-D132116",
+    "selectedName": "참나물깨즙무침",
+    "foodIds": [
+      "kfind-d113-593000000-0001",
+      "kfind-d413-593000000-0001",
+      "kfind-d513-593000000-0001",
+      "kfind-d613-593000000-0001",
+      "kfind-d713-593000000-0001"
+    ],
+    "method": "WHOLE_NAMED_SAME_DISH_REFERENCE",
+    "reason": "참나물 나물의 두부·깨즙 포함 명명 변형 전체 참고; 원본 양념량과 혼합하지 않음",
+    "sourceUrl": "https://www.nics.go.kr/food/kfi/mgnNewmenumkFoodSelectNew/selectFoodDetail.json?fdCode=D132116",
+    "sourceSha256": "eb0ef0a7f65d9bda5ab79402030b91e83c3fd044454b52a8f9c44c2537ef7b9f",
+    "compositionKind": "REFERENCE_RECIPE",
+    "testMethod": "publishedMapping32"
+  },
+  {
+    "originalRecipeId": "MFDS-337",
+    "originalName": "참나물두부무침",
+    "selectedId": "MENUZEN-D132116",
+    "selectedName": "참나물깨즙무침",
+    "foodIds": [
+      "kfind-d113-593000000-0001",
+      "kfind-d413-593000000-0001",
+      "kfind-d513-593000000-0001",
+      "kfind-d613-593000000-0001",
+      "kfind-d713-593000000-0001"
+    ],
+    "method": "WHOLE_NAMED_SAME_DISH_REFERENCE",
+    "reason": "참나물·두부 중심 무침 전체 배합. 깨즙 변형명과 별도 참고임을 유지",
+    "sourceUrl": "https://www.nics.go.kr/food/kfi/mgnNewmenumkFoodSelectNew/selectFoodDetail.json?fdCode=D132116",
+    "sourceSha256": "eb0ef0a7f65d9bda5ab79402030b91e83c3fd044454b52a8f9c44c2537ef7b9f",
+    "compositionKind": "REFERENCE_RECIPE",
+    "testMethod": "publishedMapping33"
+  },
+  {
+    "originalRecipeId": "MFDS-345",
+    "originalName": "송이버섯구이",
+    "selectedId": "MFDS-345",
+    "selectedName": "송이버섯구이",
+    "foodIds": [
+      "kfind-d108-380000000-0001"
+    ],
+    "method": "REVIEWED_SAME_DISH_COOKING_CONTEXT",
+    "reason": "MFDS-345 송이버섯280g을 썰어 콩기름4g으로 팬에 굽는 조리법. K-FIND 종을 한정하지 않는 버섯구이 구이류에 원본 송이버섯 참고명 보존; 새송이·표고로 대체하지 않음",
+    "sourceUrl": "https://www.foodsafetykorea.go.kr/popup/sensuousmenuView.do?rcp_menu_no=345",
+    "compositionKind": "ORIGINAL",
+    "testMethod": "publishedMapping34"
+  },
+  {
+    "originalRecipeId": "MFDS-349",
+    "originalName": "돌솥밥",
+    "selectedId": "MENUZEN-D014009",
+    "selectedName": "영양돌솥밥",
+    "foodIds": [
+      "kfind-d101-026000000-0001",
+      "kfind-d401-026000000-0001",
+      "kfind-d501-026000000-0001",
+      "kfind-d601-026000000-0001",
+      "kfind-d701-026000000-0001"
+    ],
+    "method": "WHOLE_NAMED_SAME_DISH_REFERENCE",
+    "reason": "쌀·찹쌀·대추·밤·은행·표고버섯 영양돌솥밥 전체 참고",
+    "sourceUrl": "https://www.nics.go.kr/food/kfi/mgnNewmenumkFoodSelectNew/selectFoodDetail.json?fdCode=D014009",
+    "sourceSha256": "4a1676cca9f3099e2b4f0cb245c408d4acd16e436ff315bf6bedb36b87cb9814",
+    "compositionKind": "REFERENCE_RECIPE",
+    "testMethod": "publishedMapping35"
+  },
+  {
+    "originalRecipeId": "RDA-90747",
+    "originalName": "김칫국(김치콩나물국)",
+    "selectedId": "MENUZEN-D051019",
+    "selectedName": "김칫국(콩나물)",
+    "foodIds": [
+      "kfind-d105-205370000-0001",
+      "kfind-d405-205370000-0001",
+      "kfind-d505-205370000-0001",
+      "kfind-d605-205370000-0001",
+      "kfind-d705-205370000-0001"
+    ],
+    "method": "WHOLE_NAMED_SAME_DISH_REFERENCE",
+    "reason": "원본 괄호명과 동일 김치·콩나물 국의 어순 명칭 변형",
+    "sourceUrl": "https://www.nics.go.kr/food/kfi/mgnNewmenumkFoodSelectNew/selectFoodDetail.json?fdCode=D051019",
+    "sourceSha256": "de0df1daffcbbb8e5c11fb95e5d1e21fcf6844c660177f653d7066294b69db3e",
+    "compositionKind": "REFERENCE_RECIPE",
+    "testMethod": "publishedMapping36"
+  },
+  {
+    "originalRecipeId": "RDA-90835",
+    "originalName": "쇠고기불고기(너비아니) <방법1>",
+    "selectedId": "MENUZEN-D102016",
+    "selectedName": "불고기(소고기, 배)",
+    "foodIds": [
+      "kfind-d108-386000000-0001",
+      "kfind-d308-386000000-0001",
+      "kfind-d508-386000000-0001",
+      "kfind-d608-386000000-0001",
+      "kfind-d708-386000000-0001"
+    ],
+    "method": "WHOLE_NAMED_SAME_DISH_REFERENCE",
+    "reason": "등심·배·간장의 팬 불고기 전체 참고; 원본 후춧가루 약간은 별도 미해결 유지",
+    "sourceUrl": "https://www.nics.go.kr/food/kfi/mgnNewmenumkFoodSelectNew/selectFoodDetail.json?fdCode=D102016",
+    "sourceSha256": "f18b9cdb3d6fe7e241c0bface9bcbb86e00e1d152f9f187ffedf844b989068e9",
+    "compositionKind": "REFERENCE_RECIPE",
+    "testMethod": "publishedMapping37"
+  },
+  {
+    "originalRecipeId": "RDA-91426",
+    "originalName": "아귀탕(아구탕, 물꽁탕)",
+    "selectedId": "MENUZEN-D061040",
+    "selectedName": "아구매운탕(고추장)",
+    "foodIds": [
+      "kfind-d305-235000000-0001"
+    ],
+    "method": "WHOLE_NAMED_SAME_DISH_REFERENCE",
+    "reason": "원문 아귀·콩나물·무·고춧가루 국과 같은 아구매운탕 전체 배합. 고추장 포함 고유 참고명 유지; 찜 제외",
+    "sourceUrl": "https://www.nics.go.kr/food/kfi/mgnNewmenumkFoodSelectNew/selectFoodDetail.json?fdCode=D061040",
+    "sourceSha256": "1656bdcc5d5b6c616321de8f53abc107c46f08bfc01a6e2a6d9e63f26fe5b63a",
+    "compositionKind": "REFERENCE_RECIPE",
+    "testMethod": "publishedMapping38"
+  }
+]

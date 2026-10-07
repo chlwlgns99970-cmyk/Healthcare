@@ -1,0 +1,46 @@
+{
+  "checkedAt": "2026-10-04",
+  "sourceType": "OFFICIAL_PUBLIC_DATA_FIELD_DEFINITION",
+  "documentTitle": "공공데이터 제공 표준(전문)_업로드.hwpx",
+  "publicationDate": "2024-10-30",
+  "revision": "19차 개정",
+  "publisher": "행정안전부 / 공공데이터활용지원센터",
+  "officialReferralUrl": "https://www.mois.go.kr/frt/sub/a06/b02/openData_3/screen.do",
+  "officialPublicationUrl": "https://www.data.go.kr/bbs/rcr/selectRecsroom.do?atchFileId=FILE_000000003049184&originId=PDS_0000000001227",
+  "officialDocumentUrl": "https://www.data.go.kr/cmm/cmm/fileDownload.do?atchFileId=FILE_000000003049184&fileDetailSn=2",
+  "bytes": 2256495,
+  "sha256": "d3d464f6a9dd9f6dfd3ff61fec966c95ccce8aec085c234ba3af9e665d3c67cd",
+  "verificationMethod": "Official portal download-limit check passed; downloaded original HWPX size matches publication; read original Contents/section0.xml tables directly.",
+  "localCache": "app/build/food-quality-followup/household-source-cache/public-data-provision-standard-2024-10.hwpx",
+  "definitions": [
+    {
+      "tableScope": "음식",
+      "fieldNumber": 44,
+      "fieldName": "식품중량",
+      "rawDefinition": "음식의 1회 분량",
+      "rawConditions": [
+        "소관기관에서 제공하는 경우에 기입",
+        "해당 정보가 없는 경우 ‘해당없음’으로 입력"
+      ],
+      "example": "700g",
+      "section": "Contents/section0.xml",
+      "textIndex": 34527
+    },
+    {
+      "tableScope": "가공식품",
+      "fieldNumber": 45,
+      "fieldName": "식품중량",
+      "rawDefinition": "제품의 총 내용량",
+      "example": "200g",
+      "section": "Contents/section0.xml",
+      "textIndex": 33902
+    }
+  ],
+  "interpretation": {
+    "food": "같은 음식 identity의 식품중량은 원본의 1회 참고 분량이다. 100g/ml 영양함량 기준이나 분석시료 질량으로 해석하지 않는다.",
+    "processedProduct": "같은 제품 identity의 식품중량은 총 내용량이다. 섭취참고량과 구분한다.",
+    "maximumIntake": "개인별 건강상한이나 반드시 지켜야 하는 최대 섭취량을 정의한 자료가 아니다.",
+    "actualAudit": "52개 실제 선택행 중 원본 1회 참고 분량보다 큰 16행/고유 음식 10개의 차이를 기록했다. 모두 비현실적인 섭취량이라고 단정하지 않는다.",
+    "policyChanges": "이 추가 정의 확인으로 코드나 음식 asset, 290행의 일괄 상한을 변경하지 않았다."
+  }
+}

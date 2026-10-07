@@ -1,0 +1,5570 @@
+[
+  {
+    "name": "가리탕(갈비탕)",
+    "candidates": [
+      {
+        "eumsikName": "오리탕",
+        "sikpumVolume": "155.20",
+        "allrgyNm": null,
+        "eumsikCode": "D053090",
+        "largeName": "국(탕)류",
+        "middleName": "곰국 및 탕류"
+      },
+      {
+        "eumsikName": "꼬리곰탕",
+        "sikpumVolume": "112.00",
+        "allrgyNm": null,
+        "eumsikCode": "D053005",
+        "largeName": "국(탕)류",
+        "middleName": "곰국 및 탕류"
+      },
+      {
+        "eumsikName": "도가니탕",
+        "sikpumVolume": "110.00",
+        "allrgyNm": null,
+        "eumsikCode": "D053012",
+        "largeName": "국(탕)류",
+        "middleName": "곰국 및 탕류"
+      }
+    ]
+  },
+  {
+    "name": "가자미생선까스",
+    "candidates": [
+      {
+        "eumsikName": "가자미찜",
+        "sikpumVolume": "146.00",
+        "allrgyNm": null,
+        "eumsikCode": "D071002",
+        "largeName": "찜류",
+        "middleName": "어패류찜"
+      },
+      {
+        "eumsikName": "생선가스",
+        "sikpumVolume": "85.00",
+        "allrgyNm": null,
+        "eumsikCode": "D121028",
+        "largeName": "튀김류",
+        "middleName": "어패류튀김"
+      },
+      {
+        "eumsikName": "가자미구이",
+        "sikpumVolume": "76.00",
+        "allrgyNm": null,
+        "eumsikCode": "D081002",
+        "largeName": "구이류",
+        "middleName": "어패류구이"
+      }
+    ]
+  },
+  {
+    "name": "가자미쑥국",
+    "candidates": [
+      {
+        "eumsikName": "가자미미역국",
+        "sikpumVolume": "52.01",
+        "allrgyNm": null,
+        "eumsikCode": "D051229",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      },
+      {
+        "eumsikName": "가자미찜",
+        "sikpumVolume": "146.00",
+        "allrgyNm": null,
+        "eumsikCode": "D071002",
+        "largeName": "찜류",
+        "middleName": "어패류찜"
+      },
+      {
+        "eumsikName": "콩가루쑥국",
+        "sikpumVolume": "104.10",
+        "allrgyNm": null,
+        "eumsikCode": "D052106",
+        "largeName": "국(탕)류",
+        "middleName": "된장국류"
+      }
+    ]
+  },
+  {
+    "name": "가자미전",
+    "candidates": [
+      {
+        "eumsikName": "가자미찜",
+        "sikpumVolume": "146.00",
+        "allrgyNm": null,
+        "eumsikCode": "D071002",
+        "largeName": "찜류",
+        "middleName": "어패류찜"
+      },
+      {
+        "eumsikName": "가자미구이",
+        "sikpumVolume": "76.00",
+        "allrgyNm": null,
+        "eumsikCode": "D081002",
+        "largeName": "구이류",
+        "middleName": "어패류구이"
+      },
+      {
+        "eumsikName": "가자미조림",
+        "sikpumVolume": "143.00",
+        "allrgyNm": null,
+        "eumsikCode": "D111001",
+        "largeName": "조림류",
+        "middleName": "어패류조림"
+      }
+    ]
+  },
+  {
+    "name": "가지쇠고기볶음",
+    "candidates": [
+      {
+        "eumsikName": "소고기볶음",
+        "sikpumVolume": "119.00",
+        "allrgyNm": null,
+        "eumsikCode": "D102018",
+        "largeName": "볶음류",
+        "middleName": "육류 및 난류볶음"
+      },
+      {
+        "eumsikName": "소고기볶음밥",
+        "sikpumVolume": "341.00",
+        "allrgyNm": null,
+        "eumsikCode": "D014007",
+        "largeName": "밥류",
+        "middleName": "비빔밥 및 볶음밥류"
+      },
+      {
+        "eumsikName": "돼지고기볶음",
+        "sikpumVolume": "173.00",
+        "allrgyNm": null,
+        "eumsikCode": "D102005",
+        "largeName": "볶음류",
+        "middleName": "육류 및 난류볶음"
+      }
+    ]
+  },
+  {
+    "name": "갈치조림",
+    "candidates": [
+      {
+        "eumsikName": "갈치조림",
+        "sikpumVolume": "141.00",
+        "allrgyNm": null,
+        "eumsikCode": "D111002",
+        "largeName": "조림류",
+        "middleName": "어패류조림"
+      },
+      {
+        "eumsikName": "꽁치조림",
+        "sikpumVolume": "67.00",
+        "allrgyNm": null,
+        "eumsikCode": "D111008",
+        "largeName": "조림류",
+        "middleName": "어패류조림"
+      },
+      {
+        "eumsikName": "삼치조림",
+        "sikpumVolume": "128.00",
+        "allrgyNm": null,
+        "eumsikCode": "D111022",
+        "largeName": "조림류",
+        "middleName": "어패류조림"
+      }
+    ]
+  },
+  {
+    "name": "갈치찌개(갈치호박찌개)",
+    "candidates": [
+      {
+        "eumsikName": "참치찌개",
+        "sikpumVolume": "41.00",
+        "allrgyNm": null,
+        "eumsikCode": "D061055",
+        "largeName": "찌개류",
+        "middleName": "어패류찌개"
+      },
+      {
+        "eumsikName": "햄김치찌개",
+        "sikpumVolume": "134.00",
+        "allrgyNm": null,
+        "eumsikCode": "D065034",
+        "largeName": "찌개류",
+        "middleName": "기타찌개류"
+      },
+      {
+        "eumsikName": "갈치찌개(고추장)",
+        "sikpumVolume": "151.00",
+        "allrgyNm": null,
+        "eumsikCode": "D061002",
+        "largeName": "찌개류",
+        "middleName": "어패류찌개"
+      }
+    ]
+  },
+  {
+    "name": "감샐러드",
+    "candidates": [
+      {
+        "eumsikName": "삼채 샐러드",
+        "sikpumVolume": "160.00",
+        "allrgyNm": null,
+        "eumsikCode": "D135020",
+        "largeName": "무침류",
+        "middleName": "생채(샐러드)"
+      },
+      {
+        "eumsikName": "로메인 감자샐러드",
+        "sikpumVolume": "62.70",
+        "allrgyNm": null,
+        "eumsikCode": "D135028",
+        "largeName": "무침류",
+        "middleName": "생채(샐러드)"
+      },
+      {
+        "eumsikName": "삼채 샐러드",
+        "sikpumVolume": "80.00",
+        "allrgyNm": null,
+        "eumsikCode": "D135032",
+        "largeName": "무침류",
+        "middleName": "생채(샐러드)"
+      }
+    ]
+  },
+  {
+    "name": "감자국",
+    "candidates": [
+      {
+        "eumsikName": "감자칼국수",
+        "sikpumVolume": "185.30",
+        "allrgyNm": null,
+        "eumsikCode": "D031087",
+        "largeName": "면 및 만두류",
+        "middleName": "면류"
+      },
+      {
+        "eumsikName": "감자맑은국",
+        "sikpumVolume": "31.20",
+        "allrgyNm": null,
+        "eumsikCode": "D051168",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      },
+      {
+        "eumsikName": "감자무챗국",
+        "sikpumVolume": "54.90",
+        "allrgyNm": null,
+        "eumsikCode": "D051169",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      }
+    ]
+  },
+  {
+    "name": "감자미역국",
+    "candidates": [
+      {
+        "eumsikName": "감자들깨미역국",
+        "sikpumVolume": "39.90",
+        "allrgyNm": null,
+        "eumsikCode": "D051277",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      },
+      {
+        "eumsikName": "들깨감자미역국",
+        "sikpumVolume": "41.10",
+        "allrgyNm": null,
+        "eumsikCode": "D051283",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      },
+      {
+        "eumsikName": "북어채감자미역국",
+        "sikpumVolume": "43.30",
+        "allrgyNm": null,
+        "eumsikCode": "D051312",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      }
+    ]
+  },
+  {
+    "name": "감자베이컨볶음",
+    "candidates": [
+      {
+        "eumsikName": "베이컨볶음",
+        "sikpumVolume": "108.00",
+        "allrgyNm": null,
+        "eumsikCode": "D102010",
+        "largeName": "볶음류",
+        "middleName": "육류 및 난류볶음"
+      },
+      {
+        "eumsikName": "감자볶음",
+        "sikpumVolume": "96.00",
+        "allrgyNm": null,
+        "eumsikCode": "D103003",
+        "largeName": "볶음류",
+        "middleName": "채소 및 해조류볶음"
+      },
+      {
+        "eumsikName": "감자채볶음",
+        "sikpumVolume": "119.00",
+        "allrgyNm": null,
+        "eumsikCode": "D103007",
+        "largeName": "볶음류",
+        "middleName": "채소 및 해조류볶음"
+      }
+    ]
+  },
+  {
+    "name": "감자부침(감자전)",
+    "candidates": [
+      {
+        "eumsikName": "감자밥",
+        "sikpumVolume": "220.50",
+        "allrgyNm": null,
+        "eumsikCode": "D013001",
+        "largeName": "밥류",
+        "middleName": "채소밥류"
+      },
+      {
+        "eumsikName": "감자밥",
+        "sikpumVolume": "106.70",
+        "allrgyNm": null,
+        "eumsikCode": "D013019",
+        "largeName": "밥류",
+        "middleName": "채소밥류"
+      },
+      {
+        "eumsikName": "감자밥",
+        "sikpumVolume": "169.60",
+        "allrgyNm": null,
+        "eumsikCode": "D013020",
+        "largeName": "밥류",
+        "middleName": "채소밥류"
+      }
+    ]
+  },
+  {
+    "name": "감자샐러드",
+    "candidates": [
+      {
+        "eumsikName": "로메인 감자샐러드",
+        "sikpumVolume": "62.70",
+        "allrgyNm": null,
+        "eumsikCode": "D135028",
+        "largeName": "무침류",
+        "middleName": "생채(샐러드)"
+      },
+      {
+        "eumsikName": "마늘칩 감자샐러드",
+        "sikpumVolume": "79.00",
+        "allrgyNm": null,
+        "eumsikCode": "D135066",
+        "largeName": "무침류",
+        "middleName": "생채(샐러드)"
+      },
+      {
+        "eumsikName": "유자샐러드라면",
+        "sikpumVolume": "148.00",
+        "allrgyNm": null,
+        "eumsikCode": "D031080",
+        "largeName": "면 및 만두류",
+        "middleName": "면류"
+      }
+    ]
+  },
+  {
+    "name": "감자채튀김",
+    "candidates": [
+      {
+        "eumsikName": "감자튀김",
+        "sikpumVolume": "137.00",
+        "allrgyNm": null,
+        "eumsikCode": "D124001",
+        "largeName": "튀김류",
+        "middleName": "기타 튀김류"
+      },
+      {
+        "eumsikName": "감자채볶음",
+        "sikpumVolume": "119.00",
+        "allrgyNm": null,
+        "eumsikCode": "D103007",
+        "largeName": "볶음류",
+        "middleName": "채소 및 해조류볶음"
+      },
+      {
+        "eumsikName": "가자미튀김",
+        "sikpumVolume": "85.00",
+        "allrgyNm": null,
+        "eumsikCode": "D121001",
+        "largeName": "튀김류",
+        "middleName": "어패류튀김"
+      }
+    ]
+  },
+  {
+    "name": "갑오징어국",
+    "candidates": [
+      {
+        "eumsikName": "오징어국",
+        "sikpumVolume": "395.00",
+        "allrgyNm": null,
+        "eumsikCode": "D051131",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      },
+      {
+        "eumsikName": "오징엇국",
+        "sikpumVolume": "84.00",
+        "allrgyNm": null,
+        "eumsikCode": "D051069",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      },
+      {
+        "eumsikName": "매콤오징어무국",
+        "sikpumVolume": "89.70",
+        "allrgyNm": null,
+        "eumsikCode": "D051285",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      }
+    ]
+  },
+  {
+    "name": "갑오징어어묵볶음",
+    "candidates": [
+      {
+        "eumsikName": "어묵볶음",
+        "sikpumVolume": "128.00",
+        "allrgyNm": null,
+        "eumsikCode": "D101016",
+        "largeName": "볶음류",
+        "middleName": "어패류볶음"
+      },
+      {
+        "eumsikName": "오징어볶음(고추장)",
+        "sikpumVolume": "118.00",
+        "allrgyNm": null,
+        "eumsikCode": "D101022",
+        "largeName": "볶음류",
+        "middleName": "어패류볶음"
+      },
+      {
+        "eumsikName": "오징어볶음(고추장)",
+        "sikpumVolume": "90.20",
+        "allrgyNm": null,
+        "eumsikCode": "D101031",
+        "largeName": "볶음류",
+        "middleName": "어패류볶음"
+      }
+    ]
+  },
+  {
+    "name": "갑오징어핫바",
+    "candidates": [
+      {
+        "eumsikName": "오징어국",
+        "sikpumVolume": "395.00",
+        "allrgyNm": null,
+        "eumsikCode": "D051131",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      },
+      {
+        "eumsikName": "오징어찜",
+        "sikpumVolume": "135.00",
+        "allrgyNm": null,
+        "eumsikCode": "D071022",
+        "largeName": "찜류",
+        "middleName": "어패류찜"
+      },
+      {
+        "eumsikName": "오징어전",
+        "sikpumVolume": "183.00",
+        "allrgyNm": null,
+        "eumsikCode": "D091010",
+        "largeName": "전류",
+        "middleName": "어패류전"
+      }
+    ]
+  },
+  {
+    "name": "개조개오븐구이",
+    "candidates": [
+      {
+        "eumsikName": "배추롤오븐구이",
+        "sikpumVolume": "130.60",
+        "allrgyNm": null,
+        "eumsikCode": "D083022",
+        "largeName": "구이류",
+        "middleName": "기타 구이류"
+      },
+      {
+        "eumsikName": "통감자오븐구이",
+        "sikpumVolume": "203.20",
+        "allrgyNm": null,
+        "eumsikCode": "D083024",
+        "largeName": "구이류",
+        "middleName": "기타 구이류"
+      },
+      {
+        "eumsikName": "조기구이",
+        "sikpumVolume": "87.00",
+        "allrgyNm": null,
+        "eumsikCode": "D081035",
+        "largeName": "구이류",
+        "middleName": "어패류구이"
+      }
+    ]
+  },
+  {
+    "name": "건새우아욱국",
+    "candidates": [
+      {
+        "eumsikName": "마른새우아욱국",
+        "sikpumVolume": "77.00",
+        "allrgyNm": null,
+        "eumsikCode": "D052124",
+        "largeName": "국(탕)류",
+        "middleName": "된장국류"
+      },
+      {
+        "eumsikName": "새우아욱죽",
+        "sikpumVolume": "210.00",
+        "allrgyNm": null,
+        "eumsikCode": "D040077",
+        "largeName": "죽류",
+        "middleName": "죽류"
+      },
+      {
+        "eumsikName": "건새우무국",
+        "sikpumVolume": "55.20",
+        "allrgyNm": null,
+        "eumsikCode": "D051171",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      }
+    ]
+  },
+  {
+    "name": "게맛살오이냉채",
+    "candidates": [
+      {
+        "eumsikName": "게맛살",
+        "sikpumVolume": "30.00",
+        "allrgyNm": null,
+        "eumsikCode": "D288001",
+        "largeName": "원재료",
+        "middleName": "어패류 및 수산물가공품"
+      },
+      {
+        "eumsikName": "오이냉국",
+        "sikpumVolume": "104.00",
+        "allrgyNm": null,
+        "eumsikCode": "D054003",
+        "largeName": "국(탕)류",
+        "middleName": "냉국류"
+      },
+      {
+        "eumsikName": "게맛살전",
+        "sikpumVolume": "113.00",
+        "allrgyNm": null,
+        "eumsikCode": "D091001",
+        "largeName": "전류",
+        "middleName": "어패류전"
+      }
+    ]
+  },
+  {
+    "name": "고구마김치피자",
+    "candidates": [
+      {
+        "eumsikName": "고구마 김치",
+        "sikpumVolume": "114.20",
+        "allrgyNm": null,
+        "eumsikCode": "D140078",
+        "largeName": "김치류",
+        "middleName": "김치류"
+      },
+      {
+        "eumsikName": "고구마 김치",
+        "sikpumVolume": "44.30",
+        "allrgyNm": null,
+        "eumsikCode": "D140099",
+        "largeName": "김치류",
+        "middleName": "김치류"
+      },
+      {
+        "eumsikName": "고구마튀김",
+        "sikpumVolume": "120.00",
+        "allrgyNm": null,
+        "eumsikCode": "D124003",
+        "largeName": "튀김류",
+        "middleName": "기타 튀김류"
+      }
+    ]
+  },
+  {
+    "name": "고구마돈육강정",
+    "candidates": [
+      {
+        "eumsikName": "고구마밥",
+        "sikpumVolume": "210.00",
+        "allrgyNm": null,
+        "eumsikCode": "D013002",
+        "largeName": "밥류",
+        "middleName": "채소밥류"
+      },
+      {
+        "eumsikName": "고구마전",
+        "sikpumVolume": "106.00",
+        "allrgyNm": null,
+        "eumsikCode": "D093003",
+        "largeName": "전류",
+        "middleName": "채소류전"
+      },
+      {
+        "eumsikName": "고구마수프",
+        "sikpumVolume": "108.00",
+        "allrgyNm": null,
+        "eumsikCode": "D055007",
+        "largeName": "국(탕)류",
+        "middleName": "기타"
+      }
+    ]
+  },
+  {
+    "name": "고구마떡볶이",
+    "candidates": [
+      {
+        "eumsikName": "떡볶이",
+        "sikpumVolume": "250.00",
+        "allrgyNm": null,
+        "eumsikCode": "D104016",
+        "largeName": "볶음류",
+        "middleName": "곡류 및 두류볶음"
+      },
+      {
+        "eumsikName": "고구마줄기볶음",
+        "sikpumVolume": "87.00",
+        "allrgyNm": null,
+        "eumsikCode": "D103009",
+        "largeName": "볶음류",
+        "middleName": "채소 및 해조류볶음"
+      },
+      {
+        "eumsikName": "고구마줄기볶음",
+        "sikpumVolume": "74.70",
+        "allrgyNm": null,
+        "eumsikCode": "D103071",
+        "largeName": "볶음류",
+        "middleName": "채소 및 해조류볶음"
+      }
+    ]
+  },
+  {
+    "name": "고구마줄기볶음",
+    "candidates": [
+      {
+        "eumsikName": "고구마줄기볶음",
+        "sikpumVolume": "87.00",
+        "allrgyNm": null,
+        "eumsikCode": "D103009",
+        "largeName": "볶음류",
+        "middleName": "채소 및 해조류볶음"
+      },
+      {
+        "eumsikName": "고구마줄기볶음",
+        "sikpumVolume": "74.70",
+        "allrgyNm": null,
+        "eumsikCode": "D103071",
+        "largeName": "볶음류",
+        "middleName": "채소 및 해조류볶음"
+      },
+      {
+        "eumsikName": "고구마줄기볶음(말린것)",
+        "sikpumVolume": "30.00",
+        "allrgyNm": null,
+        "eumsikCode": "D103010",
+        "largeName": "볶음류",
+        "middleName": "채소 및 해조류볶음"
+      }
+    ]
+  },
+  {
+    "name": "고등어김치찜",
+    "candidates": [
+      {
+        "eumsikName": "고등어찜",
+        "sikpumVolume": "146.00",
+        "allrgyNm": null,
+        "eumsikCode": "D071004",
+        "largeName": "찜류",
+        "middleName": "어패류찜"
+      },
+      {
+        "eumsikName": "고등어튀김",
+        "sikpumVolume": "93.00",
+        "allrgyNm": null,
+        "eumsikCode": "D121004",
+        "largeName": "튀김류",
+        "middleName": "어패류튀김"
+      },
+      {
+        "eumsikName": "고등어국",
+        "sikpumVolume": "123.00",
+        "allrgyNm": null,
+        "eumsikCode": "D051009",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      }
+    ]
+  },
+  {
+    "name": "고사리녹두전",
+    "candidates": [
+      {
+        "eumsikName": "고사리전",
+        "sikpumVolume": "126.10",
+        "allrgyNm": null,
+        "eumsikCode": "D093041",
+        "largeName": "전류",
+        "middleName": "채소류전"
+      },
+      {
+        "eumsikName": "고사리국",
+        "sikpumVolume": "84.00",
+        "allrgyNm": null,
+        "eumsikCode": "D051010",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      },
+      {
+        "eumsikName": "고사리나물",
+        "sikpumVolume": "75.00",
+        "allrgyNm": null,
+        "eumsikCode": "D103012",
+        "largeName": "볶음류",
+        "middleName": "채소 및 해조류볶음"
+      }
+    ]
+  },
+  {
+    "name": "고사리육개장",
+    "candidates": [
+      {
+        "eumsikName": "오리육개장",
+        "sikpumVolume": "365.00",
+        "allrgyNm": null,
+        "eumsikCode": "D053076",
+        "largeName": "국(탕)류",
+        "middleName": "곰국 및 탕류"
+      },
+      {
+        "eumsikName": "육개장",
+        "sikpumVolume": "194.00",
+        "allrgyNm": null,
+        "eumsikCode": "D053027",
+        "largeName": "국(탕)류",
+        "middleName": "곰국 및 탕류"
+      },
+      {
+        "eumsikName": "고사리국",
+        "sikpumVolume": "84.00",
+        "allrgyNm": null,
+        "eumsikCode": "D051010",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      }
+    ]
+  },
+  {
+    "name": "고추잎김치",
+    "candidates": [
+      {
+        "eumsikName": "고추김치",
+        "sikpumVolume": "291.00",
+        "allrgyNm": null,
+        "eumsikCode": "D140088",
+        "largeName": "김치류",
+        "middleName": "김치류"
+      },
+      {
+        "eumsikName": "풋고추 물김치",
+        "sikpumVolume": "106.90",
+        "allrgyNm": null,
+        "eumsikCode": "D140087",
+        "largeName": "김치류",
+        "middleName": "김치류"
+      },
+      {
+        "eumsikName": "고추튀김",
+        "sikpumVolume": "61.00",
+        "allrgyNm": null,
+        "eumsikCode": "D123002",
+        "largeName": "튀김류",
+        "middleName": "채소류튀김"
+      }
+    ]
+  },
+  {
+    "name": "곤달비밥(곤드레밥, 곤드레나물밥)",
+    "candidates": [
+      {
+        "eumsikName": "비빔밥",
+        "sikpumVolume": "500.00",
+        "allrgyNm": null,
+        "eumsikCode": "D014019",
+        "largeName": "밥류",
+        "middleName": "비빔밥 및 볶음밥류"
+      },
+      {
+        "eumsikName": "비빔밥",
+        "sikpumVolume": "321.50",
+        "allrgyNm": null,
+        "eumsikCode": "D014045",
+        "largeName": "밥류",
+        "middleName": "비빔밥 및 볶음밥류"
+      },
+      {
+        "eumsikName": "달걀버터비빔밥",
+        "sikpumVolume": "147.80",
+        "allrgyNm": null,
+        "eumsikCode": "D014079",
+        "largeName": "밥류",
+        "middleName": "비빔밥 및 볶음밥류"
+      }
+    ]
+  },
+  {
+    "name": "골뱅이대구포무침",
+    "candidates": [
+      {
+        "eumsikName": "대구포무침(고추장)",
+        "sikpumVolume": "30.00",
+        "allrgyNm": null,
+        "eumsikCode": "D133009",
+        "largeName": "무침류",
+        "middleName": "어패류무침"
+      },
+      {
+        "eumsikName": "골뱅이무침(초고추장)",
+        "sikpumVolume": "77.00",
+        "allrgyNm": null,
+        "eumsikCode": "D133002",
+        "largeName": "무침류",
+        "middleName": "어패류무침"
+      },
+      {
+        "eumsikName": "오이무침",
+        "sikpumVolume": "50.00",
+        "allrgyNm": null,
+        "eumsikCode": "D132073",
+        "largeName": "무침류",
+        "middleName": "숙채"
+      }
+    ]
+  },
+  {
+    "name": "곰국(곰탕)",
+    "candidates": [
+      {
+        "eumsikName": "곰국",
+        "sikpumVolume": "64.00",
+        "allrgyNm": null,
+        "eumsikCode": "D053003",
+        "largeName": "국(탕)류",
+        "middleName": "곰국 및 탕류"
+      },
+      {
+        "eumsikName": "굴국",
+        "sikpumVolume": "120.00",
+        "allrgyNm": null,
+        "eumsikCode": "D051011",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      },
+      {
+        "eumsikName": "김국",
+        "sikpumVolume": "75.00",
+        "allrgyNm": null,
+        "eumsikCode": "D051012",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      }
+    ]
+  },
+  {
+    "name": "곰탕",
+    "candidates": [
+      {
+        "eumsikName": "꼬리곰탕",
+        "sikpumVolume": "112.00",
+        "allrgyNm": null,
+        "eumsikCode": "D053005",
+        "largeName": "국(탕)류",
+        "middleName": "곰국 및 탕류"
+      },
+      {
+        "eumsikName": "나주곰탕",
+        "sikpumVolume": "811.00",
+        "allrgyNm": null,
+        "eumsikCode": "D053036",
+        "largeName": "국(탕)류",
+        "middleName": "곰국 및 탕류"
+      },
+      {
+        "eumsikName": "꼬리곰탕",
+        "sikpumVolume": "103.10",
+        "allrgyNm": null,
+        "eumsikCode": "D053068",
+        "largeName": "국(탕)류",
+        "middleName": "곰국 및 탕류"
+      }
+    ]
+  },
+  {
+    "name": "과일야채샐러드",
+    "candidates": [
+      {
+        "eumsikName": "건과일조샐러드",
+        "sikpumVolume": "107.65",
+        "allrgyNm": null,
+        "eumsikCode": "D135035",
+        "largeName": "무침류",
+        "middleName": "생채(샐러드)"
+      },
+      {
+        "eumsikName": "두부채소샐러드",
+        "sikpumVolume": "289.00",
+        "allrgyNm": null,
+        "eumsikCode": "D135058",
+        "largeName": "무침류",
+        "middleName": "생채(샐러드)"
+      },
+      {
+        "eumsikName": "삼채 샐러드",
+        "sikpumVolume": "160.00",
+        "allrgyNm": null,
+        "eumsikCode": "D135020",
+        "largeName": "무침류",
+        "middleName": "생채(샐러드)"
+      }
+    ]
+  },
+  {
+    "name": "국밥",
+    "candidates": [
+      {
+        "eumsikName": "굴국밥",
+        "sikpumVolume": "91.70",
+        "allrgyNm": null,
+        "eumsikCode": "D015036",
+        "largeName": "밥류",
+        "middleName": "덮밥 및 국밥류"
+      },
+      {
+        "eumsikName": "순대국밥",
+        "sikpumVolume": "353.50",
+        "allrgyNm": null,
+        "eumsikCode": "D015007",
+        "largeName": "밥류",
+        "middleName": "덮밥 및 국밥류"
+      },
+      {
+        "eumsikName": "장터국밥",
+        "sikpumVolume": "168.00",
+        "allrgyNm": null,
+        "eumsikCode": "D055005",
+        "largeName": "국(탕)류",
+        "middleName": "기타"
+      }
+    ]
+  },
+  {
+    "name": "김치콩나물밥",
+    "candidates": [
+      {
+        "eumsikName": "콩나물밥",
+        "sikpumVolume": "254.00",
+        "allrgyNm": null,
+        "eumsikCode": "D013005",
+        "largeName": "밥류",
+        "middleName": "채소밥류"
+      },
+      {
+        "eumsikName": "콩나물밥",
+        "sikpumVolume": "232.60",
+        "allrgyNm": null,
+        "eumsikCode": "D013022",
+        "largeName": "밥류",
+        "middleName": "채소밥류"
+      },
+      {
+        "eumsikName": "콩나물국밥",
+        "sikpumVolume": "209.30",
+        "allrgyNm": null,
+        "eumsikCode": "D013034",
+        "largeName": "밥류",
+        "middleName": "채소밥류"
+      }
+    ]
+  },
+  {
+    "name": "김칫국(김치콩나물국)",
+    "candidates": [
+      {
+        "eumsikName": "김국",
+        "sikpumVolume": "75.00",
+        "allrgyNm": null,
+        "eumsikCode": "D051012",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      },
+      {
+        "eumsikName": "김칫국(무)",
+        "sikpumVolume": "92.00",
+        "allrgyNm": null,
+        "eumsikCode": "D051015",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      },
+      {
+        "eumsikName": "김칫국(무)",
+        "sikpumVolume": "87.00",
+        "allrgyNm": null,
+        "eumsikCode": "D051125",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      }
+    ]
+  },
+  {
+    "name": "꼬치어묵국",
+    "candidates": [
+      {
+        "eumsikName": "꼬치어묵국",
+        "sikpumVolume": "98.50",
+        "allrgyNm": null,
+        "eumsikCode": "D051173",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      },
+      {
+        "eumsikName": "어묵국",
+        "sikpumVolume": "108.00",
+        "allrgyNm": null,
+        "eumsikCode": "D051064",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      },
+      {
+        "eumsikName": "꼬치어묵우동",
+        "sikpumVolume": "193.50",
+        "allrgyNm": null,
+        "eumsikCode": "D031091",
+        "largeName": "면 및 만두류",
+        "middleName": "면류"
+      }
+    ]
+  },
+  {
+    "name": "꽃게해물탕",
+    "candidates": [
+      {
+        "eumsikName": "꽃게탕",
+        "sikpumVolume": "147.00",
+        "allrgyNm": null,
+        "eumsikCode": "D053006",
+        "largeName": "국(탕)류",
+        "middleName": "곰국 및 탕류"
+      },
+      {
+        "eumsikName": "해물들깨탕",
+        "sikpumVolume": "1036.00",
+        "allrgyNm": null,
+        "eumsikCode": "D053082",
+        "largeName": "국(탕)류",
+        "middleName": "곰국 및 탕류"
+      },
+      {
+        "eumsikName": "꽃게지리탕",
+        "sikpumVolume": "150.50",
+        "allrgyNm": null,
+        "eumsikCode": "D053095",
+        "largeName": "국(탕)류",
+        "middleName": "곰국 및 탕류"
+      }
+    ]
+  },
+  {
+    "name": "낙지볶음(낙지전골)",
+    "candidates": [
+      {
+        "eumsikName": "가지볶음",
+        "sikpumVolume": "86.00",
+        "allrgyNm": null,
+        "eumsikCode": "D103001",
+        "largeName": "볶음류",
+        "middleName": "채소 및 해조류볶음"
+      },
+      {
+        "eumsikName": "가지볶음밥",
+        "sikpumVolume": "556.30",
+        "allrgyNm": null,
+        "eumsikCode": "D014126",
+        "largeName": "밥류",
+        "middleName": "비빔밥 및 볶음밥류"
+      },
+      {
+        "eumsikName": "소시지볶음",
+        "sikpumVolume": "44.00",
+        "allrgyNm": null,
+        "eumsikCode": "D102023",
+        "largeName": "볶음류",
+        "middleName": "육류 및 난류볶음"
+      }
+    ]
+  },
+  {
+    "name": "낙지채소볶음",
+    "candidates": [
+      {
+        "eumsikName": "야채볶음",
+        "sikpumVolume": "60.00",
+        "allrgyNm": null,
+        "eumsikCode": "D103040",
+        "largeName": "볶음류",
+        "middleName": "채소 및 해조류볶음"
+      },
+      {
+        "eumsikName": "야채볶음밥",
+        "sikpumVolume": "149.00",
+        "allrgyNm": null,
+        "eumsikCode": "D014056",
+        "largeName": "밥류",
+        "middleName": "비빔밥 및 볶음밥류"
+      },
+      {
+        "eumsikName": "채소볶음밥",
+        "sikpumVolume": "82.30",
+        "allrgyNm": null,
+        "eumsikCode": "D014059",
+        "largeName": "밥류",
+        "middleName": "비빔밥 및 볶음밥류"
+      }
+    ]
+  },
+  {
+    "name": "냉이무침",
+    "candidates": [
+      {
+        "eumsikName": "오이무침",
+        "sikpumVolume": "50.00",
+        "allrgyNm": null,
+        "eumsikCode": "D132073",
+        "largeName": "무침류",
+        "middleName": "숙채"
+      },
+      {
+        "eumsikName": "오이무침",
+        "sikpumVolume": "60.60",
+        "allrgyNm": null,
+        "eumsikCode": "D132075",
+        "largeName": "무침류",
+        "middleName": "숙채"
+      },
+      {
+        "eumsikName": "오이지무침",
+        "sikpumVolume": "101.00",
+        "allrgyNm": null,
+        "eumsikCode": "D132105",
+        "largeName": "무침류",
+        "middleName": "숙채"
+      }
+    ]
+  },
+  {
+    "name": "냉이바지락국",
+    "candidates": [
+      {
+        "eumsikName": "바지락국",
+        "sikpumVolume": "67.00",
+        "allrgyNm": null,
+        "eumsikCode": "D051051",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      },
+      {
+        "eumsikName": "바지락무국",
+        "sikpumVolume": "112.90",
+        "allrgyNm": null,
+        "eumsikCode": "D051192",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      },
+      {
+        "eumsikName": "쑥바지락국",
+        "sikpumVolume": "276.00",
+        "allrgyNm": null,
+        "eumsikCode": "D052074",
+        "largeName": "국(탕)류",
+        "middleName": "된장국류"
+      }
+    ]
+  },
+  {
+    "name": "냉이찹쌀전",
+    "candidates": [
+      {
+        "eumsikName": "찹쌀전병",
+        "sikpumVolume": "56.00",
+        "allrgyNm": null,
+        "eumsikCode": "D095015",
+        "largeName": "전류",
+        "middleName": "기타 전류"
+      },
+      {
+        "eumsikName": "찹쌀떡",
+        "sikpumVolume": "130.00",
+        "allrgyNm": null,
+        "eumsikCode": "D230013",
+        "largeName": "떡류",
+        "middleName": "떡류"
+      },
+      {
+        "eumsikName": "냉이나물",
+        "sikpumVolume": "93.00",
+        "allrgyNm": null,
+        "eumsikCode": "D132109",
+        "largeName": "무침류",
+        "middleName": "숙채"
+      }
+    ]
+  },
+  {
+    "name": "냉이콩나물된장국",
+    "candidates": [
+      {
+        "eumsikName": "콩나물된장국",
+        "sikpumVolume": "78.00",
+        "allrgyNm": null,
+        "eumsikCode": "D052049",
+        "largeName": "국(탕)류",
+        "middleName": "된장국류"
+      },
+      {
+        "eumsikName": "얼갈이콩나물된장국",
+        "sikpumVolume": "53.50",
+        "allrgyNm": null,
+        "eumsikCode": "D052157",
+        "largeName": "국(탕)류",
+        "middleName": "된장국류"
+      },
+      {
+        "eumsikName": "냉이된장국",
+        "sikpumVolume": "137.00",
+        "allrgyNm": null,
+        "eumsikCode": "D052008",
+        "largeName": "국(탕)류",
+        "middleName": "된장국류"
+      }
+    ]
+  },
+  {
+    "name": "느타리버섯전",
+    "candidates": [
+      {
+        "eumsikName": "느타리버섯개장",
+        "sikpumVolume": "120.00",
+        "allrgyNm": null,
+        "eumsikCode": "D053125",
+        "largeName": "국(탕)류",
+        "middleName": "곰국 및 탕류"
+      },
+      {
+        "eumsikName": "소고기느타리버섯국",
+        "sikpumVolume": "105.00",
+        "allrgyNm": null,
+        "eumsikCode": "D051325",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      },
+      {
+        "eumsikName": "어린이느타리버섯국",
+        "sikpumVolume": "40.00",
+        "allrgyNm": null,
+        "eumsikCode": "D051327",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      }
+    ]
+  },
+  {
+    "name": "다시마무국",
+    "candidates": [
+      {
+        "eumsikName": "다시마무국",
+        "sikpumVolume": "56.50",
+        "allrgyNm": null,
+        "eumsikCode": "D051175",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      },
+      {
+        "eumsikName": "다시마튀각",
+        "sikpumVolume": "68.00",
+        "allrgyNm": null,
+        "eumsikCode": "D121043",
+        "largeName": "튀김류",
+        "middleName": "어패류튀김"
+      },
+      {
+        "eumsikName": "다시마부각",
+        "sikpumVolume": "22.00",
+        "allrgyNm": null,
+        "eumsikCode": "D125003",
+        "largeName": "튀김류",
+        "middleName": "해조류튀김"
+      }
+    ]
+  },
+  {
+    "name": "단호박경단",
+    "candidates": [
+      {
+        "eumsikName": "단호박약식",
+        "sikpumVolume": "99.30",
+        "allrgyNm": null,
+        "eumsikCode": "D013024",
+        "largeName": "밥류",
+        "middleName": "채소밥류"
+      },
+      {
+        "eumsikName": "단호박약식",
+        "sikpumVolume": "439.00",
+        "allrgyNm": null,
+        "eumsikCode": "D013044",
+        "largeName": "밥류",
+        "middleName": "채소밥류"
+      },
+      {
+        "eumsikName": "단호박닭찜 ",
+        "sikpumVolume": "211.05",
+        "allrgyNm": null,
+        "eumsikCode": "D073016",
+        "largeName": "찜류",
+        "middleName": "채소류찜"
+      }
+    ]
+  },
+  {
+    "name": "단호박샌드위치",
+    "candidates": [
+      {
+        "eumsikName": "단호박갈치조림",
+        "sikpumVolume": "162.10",
+        "allrgyNm": null,
+        "eumsikCode": "D111054",
+        "largeName": "조림류",
+        "middleName": "어패류조림"
+      },
+      {
+        "eumsikName": "샌드위치(생선)",
+        "sikpumVolume": "100.00",
+        "allrgyNm": null,
+        "eumsikCode": "D311033",
+        "largeName": "조리가공식품류",
+        "middleName": "조리가공식품류"
+      },
+      {
+        "eumsikName": "단호박약식",
+        "sikpumVolume": "99.30",
+        "allrgyNm": null,
+        "eumsikCode": "D013024",
+        "largeName": "밥류",
+        "middleName": "채소밥류"
+      }
+    ]
+  },
+  {
+    "name": "단호박카레라이스",
+    "candidates": [
+      {
+        "eumsikName": "단호박병아리콩카레라이스",
+        "sikpumVolume": "228.00",
+        "allrgyNm": null,
+        "eumsikCode": "D015074",
+        "largeName": "밥류",
+        "middleName": "덮밥 및 국밥류"
+      },
+      {
+        "eumsikName": "카레라이스",
+        "sikpumVolume": "389.00",
+        "allrgyNm": null,
+        "eumsikCode": "D015013",
+        "largeName": "밥류",
+        "middleName": "덮밥 및 국밥류"
+      },
+      {
+        "eumsikName": "카레라이스",
+        "sikpumVolume": "161.40",
+        "allrgyNm": null,
+        "eumsikCode": "D015031",
+        "largeName": "밥류",
+        "middleName": "덮밥 및 국밥류"
+      }
+    ]
+  },
+  {
+    "name": "달걀야채오믈렛",
+    "candidates": [
+      {
+        "eumsikName": "오믈렛",
+        "sikpumVolume": "90.00",
+        "allrgyNm": null,
+        "eumsikCode": "D095013",
+        "largeName": "전류",
+        "middleName": "기타 전류"
+      },
+      {
+        "eumsikName": "오믈렛(두부)",
+        "sikpumVolume": "100.00",
+        "allrgyNm": null,
+        "eumsikCode": "D095014",
+        "largeName": "전류",
+        "middleName": "기타 전류"
+      },
+      {
+        "eumsikName": "야채밥",
+        "sikpumVolume": "225.00",
+        "allrgyNm": null,
+        "eumsikCode": "D013003",
+        "largeName": "밥류",
+        "middleName": "채소밥류"
+      }
+    ]
+  },
+  {
+    "name": "달래불고기",
+    "candidates": [
+      {
+        "eumsikName": "불고기덮밥",
+        "sikpumVolume": "620.00",
+        "allrgyNm": null,
+        "eumsikCode": "D015080",
+        "largeName": "밥류",
+        "middleName": "덮밥 및 국밥류"
+      },
+      {
+        "eumsikName": "언양불고기",
+        "sikpumVolume": "693.00",
+        "allrgyNm": null,
+        "eumsikCode": "D102035",
+        "largeName": "볶음류",
+        "middleName": "육류 및 난류볶음"
+      },
+      {
+        "eumsikName": "도라지불고기",
+        "sikpumVolume": "150.60",
+        "allrgyNm": null,
+        "eumsikCode": "D102046",
+        "largeName": "볶음류",
+        "middleName": "육류 및 난류볶음"
+      }
+    ]
+  },
+  {
+    "name": "달래오이무침",
+    "candidates": [
+      {
+        "eumsikName": "오이무침",
+        "sikpumVolume": "50.00",
+        "allrgyNm": null,
+        "eumsikCode": "D132073",
+        "largeName": "무침류",
+        "middleName": "숙채"
+      },
+      {
+        "eumsikName": "오이무침",
+        "sikpumVolume": "60.60",
+        "allrgyNm": null,
+        "eumsikCode": "D132075",
+        "largeName": "무침류",
+        "middleName": "숙채"
+      },
+      {
+        "eumsikName": "오이지무침",
+        "sikpumVolume": "101.00",
+        "allrgyNm": null,
+        "eumsikCode": "D132105",
+        "largeName": "무침류",
+        "middleName": "숙채"
+      }
+    ]
+  },
+  {
+    "name": "닭가슴살채소조림",
+    "candidates": [
+      {
+        "eumsikName": "닭가슴살 채소조림",
+        "sikpumVolume": "135.75",
+        "allrgyNm": null,
+        "eumsikCode": "D112031",
+        "largeName": "조림류",
+        "middleName": "육류 및 난류조림"
+      },
+      {
+        "eumsikName": "닭가슴살리조또",
+        "sikpumVolume": "537.00",
+        "allrgyNm": null,
+        "eumsikCode": "D015086",
+        "largeName": "밥류",
+        "middleName": "덮밥 및 국밥류"
+      },
+      {
+        "eumsikName": "닭가슴살 수삼냉채",
+        "sikpumVolume": "277.40",
+        "allrgyNm": null,
+        "eumsikCode": "D135037",
+        "largeName": "무침류",
+        "middleName": "생채(샐러드)"
+      }
+    ]
+  },
+  {
+    "name": "닭가슴살해파리냉채",
+    "candidates": [
+      {
+        "eumsikName": "해파리냉채",
+        "sikpumVolume": "117.00",
+        "allrgyNm": null,
+        "eumsikCode": "D133024",
+        "largeName": "무침류",
+        "middleName": "어패류무침"
+      },
+      {
+        "eumsikName": "닭가슴살 수삼냉채",
+        "sikpumVolume": "277.40",
+        "allrgyNm": null,
+        "eumsikCode": "D135037",
+        "largeName": "무침류",
+        "middleName": "생채(샐러드)"
+      },
+      {
+        "eumsikName": "닭가슴살냉국",
+        "sikpumVolume": "271.25",
+        "allrgyNm": null,
+        "eumsikCode": "D054011",
+        "largeName": "국(탕)류",
+        "middleName": "냉국류"
+      }
+    ]
+  },
+  {
+    "name": "닭볶음",
+    "candidates": [
+      {
+        "eumsikName": "닭고기볶음",
+        "sikpumVolume": "152.00",
+        "allrgyNm": null,
+        "eumsikCode": "D102004",
+        "largeName": "볶음류",
+        "middleName": "육류 및 난류볶음"
+      },
+      {
+        "eumsikName": "닭고기볶음밥",
+        "sikpumVolume": "268.00",
+        "allrgyNm": null,
+        "eumsikCode": "D014131",
+        "largeName": "밥류",
+        "middleName": "비빔밥 및 볶음밥류"
+      },
+      {
+        "eumsikName": "닭갈비볶음면",
+        "sikpumVolume": "338.00",
+        "allrgyNm": null,
+        "eumsikCode": "D031075",
+        "largeName": "면 및 만두류",
+        "middleName": "면류"
+      }
+    ]
+  },
+  {
+    "name": "닭봉구이",
+    "candidates": [
+      {
+        "eumsikName": "통닭구이",
+        "sikpumVolume": "67.00",
+        "allrgyNm": null,
+        "eumsikCode": "D082018",
+        "largeName": "구이류",
+        "middleName": "육류구이"
+      },
+      {
+        "eumsikName": "닭내장구이",
+        "sikpumVolume": "93.00",
+        "allrgyNm": null,
+        "eumsikCode": "D082002",
+        "largeName": "구이류",
+        "middleName": "육류구이"
+      },
+      {
+        "eumsikName": "참다래닭구이",
+        "sikpumVolume": "156.60",
+        "allrgyNm": null,
+        "eumsikCode": "D082045",
+        "largeName": "구이류",
+        "middleName": "육류구이"
+      }
+    ]
+  },
+  {
+    "name": "닭쟁반국수",
+    "candidates": [
+      {
+        "eumsikName": "콩국수",
+        "sikpumVolume": "205.00",
+        "allrgyNm": null,
+        "eumsikCode": "D031021",
+        "largeName": "면 및 만두류",
+        "middleName": "면류"
+      },
+      {
+        "eumsikName": "쌀국수",
+        "sikpumVolume": "141.10",
+        "allrgyNm": null,
+        "eumsikCode": "D031128",
+        "largeName": "면 및 만두류",
+        "middleName": "면류"
+      },
+      {
+        "eumsikName": "애호박닭칼국수",
+        "sikpumVolume": "150.21",
+        "allrgyNm": null,
+        "eumsikCode": "D031129",
+        "largeName": "면 및 만두류",
+        "middleName": "면류"
+      }
+    ]
+  },
+  {
+    "name": "닭조림",
+    "candidates": [
+      {
+        "eumsikName": "닭고기조림",
+        "sikpumVolume": "144.00",
+        "allrgyNm": null,
+        "eumsikCode": "D112003",
+        "largeName": "조림류",
+        "middleName": "육류 및 난류조림"
+      },
+      {
+        "eumsikName": "닭다리조림",
+        "sikpumVolume": "92.00",
+        "allrgyNm": null,
+        "eumsikCode": "D112005",
+        "largeName": "조림류",
+        "middleName": "육류 및 난류조림"
+      },
+      {
+        "eumsikName": "닭 버섯 조림",
+        "sikpumVolume": "146.30",
+        "allrgyNm": null,
+        "eumsikCode": "D112030",
+        "largeName": "조림류",
+        "middleName": "육류 및 난류조림"
+      }
+    ]
+  },
+  {
+    "name": "닭조림(궁중닭조림)",
+    "candidates": [
+      {
+        "eumsikName": "닭고기조림",
+        "sikpumVolume": "144.00",
+        "allrgyNm": null,
+        "eumsikCode": "D112003",
+        "largeName": "조림류",
+        "middleName": "육류 및 난류조림"
+      },
+      {
+        "eumsikName": "닭다리조림",
+        "sikpumVolume": "92.00",
+        "allrgyNm": null,
+        "eumsikCode": "D112005",
+        "largeName": "조림류",
+        "middleName": "육류 및 난류조림"
+      },
+      {
+        "eumsikName": "닭 버섯 조림",
+        "sikpumVolume": "146.30",
+        "allrgyNm": null,
+        "eumsikCode": "D112030",
+        "largeName": "조림류",
+        "middleName": "육류 및 난류조림"
+      }
+    ]
+  },
+  {
+    "name": "닭찜",
+    "candidates": [
+      {
+        "eumsikName": "닭고기찜",
+        "sikpumVolume": "147.00",
+        "allrgyNm": null,
+        "eumsikCode": "D072001",
+        "largeName": "찜류",
+        "middleName": "육류찜"
+      },
+      {
+        "eumsikName": "닭고기찜",
+        "sikpumVolume": "120.00",
+        "allrgyNm": null,
+        "eumsikCode": "D072018",
+        "largeName": "찜류",
+        "middleName": "육류찜"
+      },
+      {
+        "eumsikName": "단호박닭찜 ",
+        "sikpumVolume": "211.05",
+        "allrgyNm": null,
+        "eumsikCode": "D073016",
+        "largeName": "찜류",
+        "middleName": "채소류찜"
+      }
+    ]
+  },
+  {
+    "name": "닭찜(닭산적)",
+    "candidates": [
+      {
+        "eumsikName": "닭고기찜",
+        "sikpumVolume": "147.00",
+        "allrgyNm": null,
+        "eumsikCode": "D072001",
+        "largeName": "찜류",
+        "middleName": "육류찜"
+      },
+      {
+        "eumsikName": "닭고기찜",
+        "sikpumVolume": "120.00",
+        "allrgyNm": null,
+        "eumsikCode": "D072018",
+        "largeName": "찜류",
+        "middleName": "육류찜"
+      },
+      {
+        "eumsikName": "단호박닭찜 ",
+        "sikpumVolume": "211.05",
+        "allrgyNm": null,
+        "eumsikCode": "D073016",
+        "largeName": "찜류",
+        "middleName": "채소류찜"
+      }
+    ]
+  },
+  {
+    "name": "대합미역국",
+    "candidates": [
+      {
+        "eumsikName": "홍합미역국",
+        "sikpumVolume": "28.00",
+        "allrgyNm": null,
+        "eumsikCode": "D051224",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      },
+      {
+        "eumsikName": "대합국",
+        "sikpumVolume": "80.00",
+        "allrgyNm": null,
+        "eumsikCode": "D051023",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      },
+      {
+        "eumsikName": "미역장국",
+        "sikpumVolume": "13.50",
+        "allrgyNm": null,
+        "eumsikCode": "D052087",
+        "largeName": "국(탕)류",
+        "middleName": "된장국류"
+      }
+    ]
+  },
+  {
+    "name": "도라지양념구이",
+    "candidates": [
+      {
+        "eumsikName": "도라지구이(고추장)",
+        "sikpumVolume": "112.00",
+        "allrgyNm": null,
+        "eumsikCode": "D083004",
+        "largeName": "구이류",
+        "middleName": "기타 구이류"
+      },
+      {
+        "eumsikName": "도라지오이무침",
+        "sikpumVolume": "174.00",
+        "allrgyNm": null,
+        "eumsikCode": "D132096",
+        "largeName": "무침류",
+        "middleName": "숙채"
+      },
+      {
+        "eumsikName": "도라지전복영양밥",
+        "sikpumVolume": "156.00",
+        "allrgyNm": null,
+        "eumsikCode": "D012107",
+        "largeName": "밥류",
+        "middleName": "잡곡밥류"
+      }
+    ]
+  },
+  {
+    "name": "도라지오이무침",
+    "candidates": [
+      {
+        "eumsikName": "도라지오이무침",
+        "sikpumVolume": "174.00",
+        "allrgyNm": null,
+        "eumsikCode": "D132096",
+        "largeName": "무침류",
+        "middleName": "숙채"
+      },
+      {
+        "eumsikName": "오이무침",
+        "sikpumVolume": "50.00",
+        "allrgyNm": null,
+        "eumsikCode": "D132073",
+        "largeName": "무침류",
+        "middleName": "숙채"
+      },
+      {
+        "eumsikName": "오이무침",
+        "sikpumVolume": "60.60",
+        "allrgyNm": null,
+        "eumsikCode": "D132075",
+        "largeName": "무침류",
+        "middleName": "숙채"
+      }
+    ]
+  },
+  {
+    "name": "도라지진미채무침",
+    "candidates": [
+      {
+        "eumsikName": "도라지오이무침",
+        "sikpumVolume": "174.00",
+        "allrgyNm": null,
+        "eumsikCode": "D132096",
+        "largeName": "무침류",
+        "middleName": "숙채"
+      },
+      {
+        "eumsikName": "도라지생채",
+        "sikpumVolume": "154.00",
+        "allrgyNm": null,
+        "eumsikCode": "D132095",
+        "largeName": "무침류",
+        "middleName": "숙채"
+      },
+      {
+        "eumsikName": "도라지냉채 ",
+        "sikpumVolume": "156.20",
+        "allrgyNm": null,
+        "eumsikCode": "D133043",
+        "largeName": "무침류",
+        "middleName": "어패류무침"
+      }
+    ]
+  },
+  {
+    "name": "도토리묵밥",
+    "candidates": [
+      {
+        "eumsikName": "도토리묵",
+        "sikpumVolume": "100.00",
+        "allrgyNm": null,
+        "eumsikCode": "D281034",
+        "largeName": "원재료",
+        "middleName": "감자 및 전분류"
+      },
+      {
+        "eumsikName": "도토리묵비빔밥",
+        "sikpumVolume": "217.20",
+        "allrgyNm": null,
+        "eumsikCode": "D014081",
+        "largeName": "밥류",
+        "middleName": "비빔밥 및 볶음밥류"
+      },
+      {
+        "eumsikName": "냉도토리묵국",
+        "sikpumVolume": "68.90",
+        "allrgyNm": null,
+        "eumsikCode": "D054016",
+        "largeName": "국(탕)류",
+        "middleName": "냉국류"
+      }
+    ]
+  },
+  {
+    "name": "도토리묵소면무침",
+    "candidates": [
+      {
+        "eumsikName": "도토리묵무침",
+        "sikpumVolume": "456.00",
+        "allrgyNm": null,
+        "eumsikCode": "D132097",
+        "largeName": "무침류",
+        "middleName": "숙채"
+      },
+      {
+        "eumsikName": "도토리묵",
+        "sikpumVolume": "100.00",
+        "allrgyNm": null,
+        "eumsikCode": "D281034",
+        "largeName": "원재료",
+        "middleName": "감자 및 전분류"
+      },
+      {
+        "eumsikName": "냉도토리묵국",
+        "sikpumVolume": "68.90",
+        "allrgyNm": null,
+        "eumsikCode": "D054016",
+        "largeName": "국(탕)류",
+        "middleName": "냉국류"
+      }
+    ]
+  },
+  {
+    "name": "돌나물묵무침",
+    "candidates": [
+      {
+        "eumsikName": "콩나물무침",
+        "sikpumVolume": "77.00",
+        "allrgyNm": null,
+        "eumsikCode": "D132036",
+        "largeName": "무침류",
+        "middleName": "숙채"
+      },
+      {
+        "eumsikName": "녹두 취나물 무침",
+        "sikpumVolume": "78.20",
+        "allrgyNm": null,
+        "eumsikCode": "D132111",
+        "largeName": "무침류",
+        "middleName": "숙채"
+      },
+      {
+        "eumsikName": "참나물깨즙무침",
+        "sikpumVolume": "103.30",
+        "allrgyNm": null,
+        "eumsikCode": "D132116",
+        "largeName": "무침류",
+        "middleName": "숙채"
+      }
+    ]
+  },
+  {
+    "name": "돌솥밥",
+    "candidates": [
+      {
+        "eumsikName": "영양돌솥밥",
+        "sikpumVolume": "240.00",
+        "allrgyNm": null,
+        "eumsikCode": "D014009",
+        "largeName": "밥류",
+        "middleName": "비빔밥 및 볶음밥류"
+      },
+      {
+        "eumsikName": "닭고기솥밥",
+        "sikpumVolume": "92.50",
+        "allrgyNm": null,
+        "eumsikCode": "D017007",
+        "largeName": "밥류",
+        "middleName": "기타"
+      },
+      {
+        "eumsikName": "쌀밥",
+        "sikpumVolume": "210.00",
+        "allrgyNm": null,
+        "eumsikCode": "D011002",
+        "largeName": "밥류",
+        "middleName": "쌀밥"
+      }
+    ]
+  },
+  {
+    "name": "돼지고기김치찌개",
+    "candidates": [
+      {
+        "eumsikName": "돼지고기두부김치찌개",
+        "sikpumVolume": "91.00",
+        "allrgyNm": null,
+        "eumsikCode": "D062025",
+        "largeName": "찌개류",
+        "middleName": "육류찌개"
+      },
+      {
+        "eumsikName": "닭고기김치찌개",
+        "sikpumVolume": "766.00",
+        "allrgyNm": null,
+        "eumsikCode": "D062014",
+        "largeName": "찌개류",
+        "middleName": "육류찌개"
+      },
+      {
+        "eumsikName": "흑돼지김치찌개",
+        "sikpumVolume": "73.50",
+        "allrgyNm": null,
+        "eumsikCode": "D062020",
+        "largeName": "찌개류",
+        "middleName": "육류찌개"
+      }
+    ]
+  },
+  {
+    "name": "돼지고기두부조림",
+    "candidates": [
+      {
+        "eumsikName": "돼지고기두부찌개",
+        "sikpumVolume": "118.10",
+        "allrgyNm": null,
+        "eumsikCode": "D062021",
+        "largeName": "찌개류",
+        "middleName": "육류찌개"
+      },
+      {
+        "eumsikName": "돼지고기 채소조림",
+        "sikpumVolume": "172.50",
+        "allrgyNm": null,
+        "eumsikCode": "D112032",
+        "largeName": "조림류",
+        "middleName": "육류 및 난류조림"
+      },
+      {
+        "eumsikName": "돼지고기마파두부덮밥",
+        "sikpumVolume": "117.50",
+        "allrgyNm": null,
+        "eumsikCode": "D015072",
+        "largeName": "밥류",
+        "middleName": "덮밥 및 국밥류"
+      }
+    ]
+  },
+  {
+    "name": "돼지두루치기",
+    "candidates": [
+      {
+        "eumsikName": "돼지고기찜",
+        "sikpumVolume": "129.00",
+        "allrgyNm": null,
+        "eumsikCode": "D072004",
+        "largeName": "찜류",
+        "middleName": "육류찜"
+      },
+      {
+        "eumsikName": "돼지고기 찜",
+        "sikpumVolume": "210.60",
+        "allrgyNm": null,
+        "eumsikCode": "D072024",
+        "largeName": "찜류",
+        "middleName": "육류찜"
+      },
+      {
+        "eumsikName": "돼지고기전",
+        "sikpumVolume": "92.00",
+        "allrgyNm": null,
+        "eumsikCode": "D092001",
+        "largeName": "전류",
+        "middleName": "육류전"
+      }
+    ]
+  },
+  {
+    "name": "된장찌개",
+    "candidates": [
+      {
+        "eumsikName": "강된장찌개",
+        "sikpumVolume": "113.00",
+        "allrgyNm": null,
+        "eumsikCode": "D063030",
+        "largeName": "찌개류",
+        "middleName": "된장찌개류"
+      },
+      {
+        "eumsikName": "된장찌개장",
+        "sikpumVolume": "200.00",
+        "allrgyNm": null,
+        "eumsikCode": "D180086",
+        "largeName": "장류",
+        "middleName": "양념류"
+      },
+      {
+        "eumsikName": "돈육된장찌개",
+        "sikpumVolume": "357.60",
+        "allrgyNm": null,
+        "eumsikCode": "D062012",
+        "largeName": "찌개류",
+        "middleName": "육류찌개"
+      }
+    ]
+  },
+  {
+    "name": "두릅산적",
+    "candidates": [
+      {
+        "eumsikName": "두릅적",
+        "sikpumVolume": "102.00",
+        "allrgyNm": null,
+        "eumsikCode": "D093009",
+        "largeName": "전류",
+        "middleName": "채소류전"
+      },
+      {
+        "eumsikName": "두릅적",
+        "sikpumVolume": "144.80",
+        "allrgyNm": null,
+        "eumsikCode": "D093044",
+        "largeName": "전류",
+        "middleName": "채소류전"
+      },
+      {
+        "eumsikName": "떡산적",
+        "sikpumVolume": "142.00",
+        "allrgyNm": null,
+        "eumsikCode": "D095009",
+        "largeName": "전류",
+        "middleName": "기타 전류"
+      }
+    ]
+  },
+  {
+    "name": "두릅쇠고기완자전",
+    "candidates": [
+      {
+        "eumsikName": "소고기전",
+        "sikpumVolume": "92.00",
+        "allrgyNm": null,
+        "eumsikCode": "D092004",
+        "largeName": "전류",
+        "middleName": "육류전"
+      },
+      {
+        "eumsikName": "돼지고기완자전",
+        "sikpumVolume": "295.00",
+        "allrgyNm": null,
+        "eumsikCode": "D092011",
+        "largeName": "전류",
+        "middleName": "육류전"
+      },
+      {
+        "eumsikName": "참두릅소고기말이",
+        "sikpumVolume": "106.50",
+        "allrgyNm": null,
+        "eumsikCode": "D082046",
+        "largeName": "구이류",
+        "middleName": "육류구이"
+      }
+    ]
+  },
+  {
+    "name": "두릅숙회/초고추장",
+    "candidates": [
+      {
+        "eumsikName": "초고추장",
+        "sikpumVolume": "200.00",
+        "allrgyNm": null,
+        "eumsikCode": "D180318",
+        "largeName": "장류",
+        "middleName": "양념류"
+      },
+      {
+        "eumsikName": "두릅나물(고추장)",
+        "sikpumVolume": "73.00",
+        "allrgyNm": null,
+        "eumsikCode": "D132007",
+        "largeName": "무침류",
+        "middleName": "숙채"
+      },
+      {
+        "eumsikName": "홍어회무침(초고추장)",
+        "sikpumVolume": "140.00",
+        "allrgyNm": null,
+        "eumsikCode": "D133025",
+        "largeName": "무침류",
+        "middleName": "어패류무침"
+      }
+    ]
+  },
+  {
+    "name": "두부과일샐러드",
+    "candidates": [
+      {
+        "eumsikName": "건과일조샐러드",
+        "sikpumVolume": "107.65",
+        "allrgyNm": null,
+        "eumsikCode": "D135035",
+        "largeName": "무침류",
+        "middleName": "생채(샐러드)"
+      },
+      {
+        "eumsikName": "두부채소샐러드",
+        "sikpumVolume": "289.00",
+        "allrgyNm": null,
+        "eumsikCode": "D135058",
+        "largeName": "무침류",
+        "middleName": "생채(샐러드)"
+      },
+      {
+        "eumsikName": "치즈 두부 샐러드",
+        "sikpumVolume": "53.00",
+        "allrgyNm": null,
+        "eumsikCode": "D135068",
+        "largeName": "무침류",
+        "middleName": "생채(샐러드)"
+      }
+    ]
+  },
+  {
+    "name": "두부구이/달래장",
+    "candidates": [
+      {
+        "eumsikName": "두부구이(고추장)",
+        "sikpumVolume": "112.00",
+        "allrgyNm": null,
+        "eumsikCode": "D083005",
+        "largeName": "구이류",
+        "middleName": "기타 구이류"
+      },
+      {
+        "eumsikName": "두부장국",
+        "sikpumVolume": "71.00",
+        "allrgyNm": null,
+        "eumsikCode": "D052086",
+        "largeName": "국(탕)류",
+        "middleName": "된장국류"
+      },
+      {
+        "eumsikName": "차돌박이달래된장국",
+        "sikpumVolume": "102.50",
+        "allrgyNm": null,
+        "eumsikCode": "D063043",
+        "largeName": "찌개류",
+        "middleName": "된장찌개류"
+      }
+    ]
+  },
+  {
+    "name": "두부김치",
+    "candidates": [
+      {
+        "eumsikName": "두부김치찌개",
+        "sikpumVolume": "85.00",
+        "allrgyNm": null,
+        "eumsikCode": "D065035",
+        "largeName": "찌개류",
+        "middleName": "기타찌개류"
+      },
+      {
+        "eumsikName": "부추김치",
+        "sikpumVolume": "61.00",
+        "allrgyNm": null,
+        "eumsikCode": "D140010",
+        "largeName": "김치류",
+        "middleName": "김치류"
+      },
+      {
+        "eumsikName": "부추김치",
+        "sikpumVolume": "50.00",
+        "allrgyNm": null,
+        "eumsikCode": "D140069",
+        "largeName": "김치류",
+        "middleName": "김치류"
+      }
+    ]
+  },
+  {
+    "name": "두부김치국",
+    "candidates": [
+      {
+        "eumsikName": "순두부김칫국",
+        "sikpumVolume": "94.00",
+        "allrgyNm": null,
+        "eumsikCode": "D051264",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      },
+      {
+        "eumsikName": "두부김치찌개",
+        "sikpumVolume": "85.00",
+        "allrgyNm": null,
+        "eumsikCode": "D065035",
+        "largeName": "찌개류",
+        "middleName": "기타찌개류"
+      },
+      {
+        "eumsikName": "바지락순두부김치국",
+        "sikpumVolume": "53.50",
+        "allrgyNm": null,
+        "eumsikCode": "D051324",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      }
+    ]
+  },
+  {
+    "name": "두부양념조림",
+    "candidates": [
+      {
+        "eumsikName": "두부조림",
+        "sikpumVolume": "176.00",
+        "allrgyNm": null,
+        "eumsikCode": "D114013",
+        "largeName": "조림류",
+        "middleName": "기타 조림류"
+      },
+      {
+        "eumsikName": "고춧잎두부조림",
+        "sikpumVolume": "118.50",
+        "allrgyNm": null,
+        "eumsikCode": "D113022",
+        "largeName": "조림류",
+        "middleName": "채소류조림"
+      },
+      {
+        "eumsikName": "껍질콩두부조림",
+        "sikpumVolume": "100.05",
+        "allrgyNm": null,
+        "eumsikCode": "D114022",
+        "largeName": "조림류",
+        "middleName": "기타 조림류"
+      }
+    ]
+  },
+  {
+    "name": "딸기롤샌드위치",
+    "candidates": [
+      {
+        "eumsikName": "샌드위치(생선)",
+        "sikpumVolume": "100.00",
+        "allrgyNm": null,
+        "eumsikCode": "D311033",
+        "largeName": "조리가공식품류",
+        "middleName": "조리가공식품류"
+      },
+      {
+        "eumsikName": "딸기샐러드",
+        "sikpumVolume": "155.85",
+        "allrgyNm": null,
+        "eumsikCode": "D135041",
+        "largeName": "무침류",
+        "middleName": "생채(샐러드)"
+      },
+      {
+        "eumsikName": "샌드위치(닭고기)",
+        "sikpumVolume": "100.00",
+        "allrgyNm": null,
+        "eumsikCode": "D311032",
+        "largeName": "조리가공식품류",
+        "middleName": "조리가공식품류"
+      }
+    ]
+  },
+  {
+    "name": "딸기바나나연두부쉐이크",
+    "candidates": [
+      {
+        "eumsikName": "바나나",
+        "sikpumVolume": "100.00",
+        "allrgyNm": null,
+        "eumsikCode": "D211016",
+        "largeName": "과일 및 과일가공품",
+        "middleName": "과일류"
+      },
+      {
+        "eumsikName": "바나나",
+        "sikpumVolume": "120.00",
+        "allrgyNm": null,
+        "eumsikCode": "D211051",
+        "largeName": "과일 및 과일가공품",
+        "middleName": "과일류"
+      },
+      {
+        "eumsikName": "바나나크림파스타",
+        "sikpumVolume": "819.00",
+        "allrgyNm": null,
+        "eumsikCode": "D031083",
+        "largeName": "면 및 만두류",
+        "middleName": "면류"
+      }
+    ]
+  },
+  {
+    "name": "딸기잼",
+    "candidates": [
+      {
+        "eumsikName": "딸기잼",
+        "sikpumVolume": "100.00",
+        "allrgyNm": null,
+        "eumsikCode": "D212044",
+        "largeName": "과일 및 과일가공품",
+        "middleName": "가공품류"
+      },
+      {
+        "eumsikName": "딸기",
+        "sikpumVolume": "200.00",
+        "allrgyNm": null,
+        "eumsikCode": "D211008",
+        "largeName": "과일 및 과일가공품",
+        "middleName": "과일류"
+      },
+      {
+        "eumsikName": "산딸기",
+        "sikpumVolume": "100.00",
+        "allrgyNm": null,
+        "eumsikCode": "D211020",
+        "largeName": "과일 및 과일가공품",
+        "middleName": "과일류"
+      }
+    ]
+  },
+  {
+    "name": "딸기주스",
+    "candidates": [
+      {
+        "eumsikName": "딸기",
+        "sikpumVolume": "200.00",
+        "allrgyNm": null,
+        "eumsikCode": "D211008",
+        "largeName": "과일 및 과일가공품",
+        "middleName": "과일류"
+      },
+      {
+        "eumsikName": "감주스",
+        "sikpumVolume": "100.00",
+        "allrgyNm": null,
+        "eumsikCode": "D200009",
+        "largeName": "음료류",
+        "middleName": "과채류"
+      },
+      {
+        "eumsikName": "산딸기",
+        "sikpumVolume": "100.00",
+        "allrgyNm": null,
+        "eumsikCode": "D211020",
+        "largeName": "과일 및 과일가공품",
+        "middleName": "과일류"
+      }
+    ]
+  },
+  {
+    "name": "떡갈비",
+    "candidates": [
+      {
+        "eumsikName": "버섯떡갈비",
+        "sikpumVolume": "67.50",
+        "allrgyNm": null,
+        "eumsikCode": "D082037",
+        "largeName": "구이류",
+        "middleName": "육류구이"
+      },
+      {
+        "eumsikName": "오리떡갈비",
+        "sikpumVolume": "77.60",
+        "allrgyNm": null,
+        "eumsikCode": "D082043",
+        "largeName": "구이류",
+        "middleName": "육류구이"
+      },
+      {
+        "eumsikName": "퓨전떡갈비",
+        "sikpumVolume": "91.00",
+        "allrgyNm": null,
+        "eumsikCode": "D082051",
+        "largeName": "구이류",
+        "middleName": "육류구이"
+      }
+    ]
+  },
+  {
+    "name": "떡꼬치구이",
+    "candidates": [
+      {
+        "eumsikName": "삼색꼬치구이",
+        "sikpumVolume": "300.00",
+        "allrgyNm": null,
+        "eumsikCode": "D082054",
+        "largeName": "구이류",
+        "middleName": "육류구이"
+      },
+      {
+        "eumsikName": "한입꼬치구이",
+        "sikpumVolume": "671.00",
+        "allrgyNm": null,
+        "eumsikCode": "D083031",
+        "largeName": "구이류",
+        "middleName": "기타 구이류"
+      },
+      {
+        "eumsikName": "갈치구이",
+        "sikpumVolume": "87.00",
+        "allrgyNm": null,
+        "eumsikCode": "D081003",
+        "largeName": "구이류",
+        "middleName": "어패류구이"
+      }
+    ]
+  },
+  {
+    "name": "롤빵샌드위치",
+    "candidates": [
+      {
+        "eumsikName": "샌드위치(생선)",
+        "sikpumVolume": "100.00",
+        "allrgyNm": null,
+        "eumsikCode": "D311033",
+        "largeName": "조리가공식품류",
+        "middleName": "조리가공식품류"
+      },
+      {
+        "eumsikName": "샌드위치(닭고기)",
+        "sikpumVolume": "100.00",
+        "allrgyNm": null,
+        "eumsikCode": "D311032",
+        "largeName": "조리가공식품류",
+        "middleName": "조리가공식품류"
+      },
+      {
+        "eumsikName": "샌드위치(소고기)",
+        "sikpumVolume": "100.00",
+        "allrgyNm": null,
+        "eumsikCode": "D311034",
+        "largeName": "조리가공식품류",
+        "middleName": "조리가공식품류"
+      }
+    ]
+  },
+  {
+    "name": "마늘쫑새우볶음",
+    "candidates": [
+      {
+        "eumsikName": "마늘종볶음",
+        "sikpumVolume": "87.00",
+        "allrgyNm": null,
+        "eumsikCode": "D103025",
+        "largeName": "볶음류",
+        "middleName": "채소 및 해조류볶음"
+      },
+      {
+        "eumsikName": "새우볶음",
+        "sikpumVolume": "98.00",
+        "allrgyNm": null,
+        "eumsikCode": "D101015",
+        "largeName": "볶음류",
+        "middleName": "어패류볶음"
+      },
+      {
+        "eumsikName": "새우볶음밥",
+        "sikpumVolume": "80.30",
+        "allrgyNm": null,
+        "eumsikCode": "D014055",
+        "largeName": "밥류",
+        "middleName": "비빔밥 및 볶음밥류"
+      }
+    ]
+  },
+  {
+    "name": "마사과쥬스",
+    "candidates": [
+      {
+        "eumsikName": "사과주스",
+        "sikpumVolume": "200.00",
+        "allrgyNm": null,
+        "eumsikCode": "D200002",
+        "largeName": "음료류",
+        "middleName": "과채류"
+      },
+      {
+        "eumsikName": "사과",
+        "sikpumVolume": "120.00",
+        "allrgyNm": null,
+        "eumsikCode": "D211042",
+        "largeName": "과일 및 과일가공품",
+        "middleName": "과일류"
+      },
+      {
+        "eumsikName": "사과",
+        "sikpumVolume": "50.00",
+        "allrgyNm": null,
+        "eumsikCode": "D211053",
+        "largeName": "과일 및 과일가공품",
+        "middleName": "과일류"
+      }
+    ]
+  },
+  {
+    "name": "만둣국(병시)",
+    "candidates": [
+      {
+        "eumsikName": "만둣국",
+        "sikpumVolume": "201.00",
+        "allrgyNm": null,
+        "eumsikCode": "D032007",
+        "largeName": "면 및 만두류",
+        "middleName": "만두류"
+      },
+      {
+        "eumsikName": "만두국",
+        "sikpumVolume": "139.70",
+        "allrgyNm": null,
+        "eumsikCode": "D051147",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      },
+      {
+        "eumsikName": "어린이만둣국",
+        "sikpumVolume": "28.30",
+        "allrgyNm": null,
+        "eumsikCode": "D051269",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      }
+    ]
+  },
+  {
+    "name": "매생이국(매생이탕)",
+    "candidates": [
+      {
+        "eumsikName": "매생이국",
+        "sikpumVolume": "145.00",
+        "allrgyNm": null,
+        "eumsikCode": "D051096",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      },
+      {
+        "eumsikName": "매생이굴국",
+        "sikpumVolume": "48.70",
+        "allrgyNm": null,
+        "eumsikCode": "D051188",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      },
+      {
+        "eumsikName": "매생이떡국",
+        "sikpumVolume": "89.00",
+        "allrgyNm": null,
+        "eumsikCode": "D051189",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      }
+    ]
+  },
+  {
+    "name": "머위나물무침",
+    "candidates": [
+      {
+        "eumsikName": "콩나물무침",
+        "sikpumVolume": "77.00",
+        "allrgyNm": null,
+        "eumsikCode": "D132036",
+        "largeName": "무침류",
+        "middleName": "숙채"
+      },
+      {
+        "eumsikName": "머위순나물",
+        "sikpumVolume": "82.50",
+        "allrgyNm": null,
+        "eumsikCode": "D132113",
+        "largeName": "무침류",
+        "middleName": "숙채"
+      },
+      {
+        "eumsikName": "녹두 취나물 무침",
+        "sikpumVolume": "78.20",
+        "allrgyNm": null,
+        "eumsikCode": "D132111",
+        "largeName": "무침류",
+        "middleName": "숙채"
+      }
+    ]
+  },
+  {
+    "name": "머위대볶음",
+    "candidates": [
+      {
+        "eumsikName": "순대볶음",
+        "sikpumVolume": "54.00",
+        "allrgyNm": null,
+        "eumsikCode": "D102026",
+        "largeName": "볶음류",
+        "middleName": "육류 및 난류볶음"
+      },
+      {
+        "eumsikName": "근대볶음",
+        "sikpumVolume": "103.00",
+        "allrgyNm": null,
+        "eumsikCode": "D103015",
+        "largeName": "볶음류",
+        "middleName": "채소 및 해조류볶음"
+      },
+      {
+        "eumsikName": "들깨머위대국",
+        "sikpumVolume": "91.00",
+        "allrgyNm": null,
+        "eumsikCode": "D051243",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      }
+    ]
+  },
+  {
+    "name": "멍게비빔밥",
+    "candidates": [
+      {
+        "eumsikName": "비빔밥",
+        "sikpumVolume": "500.00",
+        "allrgyNm": null,
+        "eumsikCode": "D014019",
+        "largeName": "밥류",
+        "middleName": "비빔밥 및 볶음밥류"
+      },
+      {
+        "eumsikName": "비빔밥",
+        "sikpumVolume": "321.50",
+        "allrgyNm": null,
+        "eumsikCode": "D014045",
+        "largeName": "밥류",
+        "middleName": "비빔밥 및 볶음밥류"
+      },
+      {
+        "eumsikName": "육회비빔밥",
+        "sikpumVolume": "549.00",
+        "allrgyNm": null,
+        "eumsikCode": "D014026",
+        "largeName": "밥류",
+        "middleName": "비빔밥 및 볶음밥류"
+      }
+    ]
+  },
+  {
+    "name": "메밀전병(총떡, 메밀전)",
+    "candidates": [
+      {
+        "eumsikName": "메밀배추전",
+        "sikpumVolume": "182.70",
+        "allrgyNm": null,
+        "eumsikCode": "D093046",
+        "largeName": "전류",
+        "middleName": "채소류전"
+      },
+      {
+        "eumsikName": "메밀묵",
+        "sikpumVolume": "100.00",
+        "allrgyNm": null,
+        "eumsikCode": "D281009",
+        "largeName": "원재료",
+        "middleName": "감자 및 전분류"
+      },
+      {
+        "eumsikName": "메밀국수",
+        "sikpumVolume": "181.00",
+        "allrgyNm": null,
+        "eumsikCode": "D031004",
+        "largeName": "면 및 만두류",
+        "middleName": "면류"
+      }
+    ]
+  },
+  {
+    "name": "메추리알조림",
+    "candidates": [
+      {
+        "eumsikName": "메추리알장조림",
+        "sikpumVolume": "73.00",
+        "allrgyNm": null,
+        "eumsikCode": "D112009",
+        "largeName": "조림류",
+        "middleName": "육류 및 난류조림"
+      },
+      {
+        "eumsikName": "메추리알장조림",
+        "sikpumVolume": "46.00",
+        "allrgyNm": null,
+        "eumsikCode": "D112029",
+        "largeName": "조림류",
+        "middleName": "육류 및 난류조림"
+      },
+      {
+        "eumsikName": "메추리알튀김",
+        "sikpumVolume": "83.00",
+        "allrgyNm": null,
+        "eumsikCode": "D124009",
+        "largeName": "튀김류",
+        "middleName": "기타 튀김류"
+      }
+    ]
+  },
+  {
+    "name": "멸치조림(멜조림)",
+    "candidates": [
+      {
+        "eumsikName": "갈치조림",
+        "sikpumVolume": "141.00",
+        "allrgyNm": null,
+        "eumsikCode": "D111002",
+        "largeName": "조림류",
+        "middleName": "어패류조림"
+      },
+      {
+        "eumsikName": "꽁치조림",
+        "sikpumVolume": "67.00",
+        "allrgyNm": null,
+        "eumsikCode": "D111008",
+        "largeName": "조림류",
+        "middleName": "어패류조림"
+      },
+      {
+        "eumsikName": "삼치조림",
+        "sikpumVolume": "128.00",
+        "allrgyNm": null,
+        "eumsikCode": "D111022",
+        "largeName": "조림류",
+        "middleName": "어패류조림"
+      }
+    ]
+  },
+  {
+    "name": "멸치호두조림",
+    "candidates": [
+      {
+        "eumsikName": "갈치조림",
+        "sikpumVolume": "141.00",
+        "allrgyNm": null,
+        "eumsikCode": "D111002",
+        "largeName": "조림류",
+        "middleName": "어패류조림"
+      },
+      {
+        "eumsikName": "꽁치조림",
+        "sikpumVolume": "67.00",
+        "allrgyNm": null,
+        "eumsikCode": "D111008",
+        "largeName": "조림류",
+        "middleName": "어패류조림"
+      },
+      {
+        "eumsikName": "삼치조림",
+        "sikpumVolume": "128.00",
+        "allrgyNm": null,
+        "eumsikCode": "D111022",
+        "largeName": "조림류",
+        "middleName": "어패류조림"
+      }
+    ]
+  },
+  {
+    "name": "모시조개된장국",
+    "candidates": [
+      {
+        "eumsikName": "모시조개시금치된장국",
+        "sikpumVolume": "82.20",
+        "allrgyNm": null,
+        "eumsikCode": "D052158",
+        "largeName": "국(탕)류",
+        "middleName": "된장국류"
+      },
+      {
+        "eumsikName": "모시조개미역국",
+        "sikpumVolume": "18.50",
+        "allrgyNm": null,
+        "eumsikCode": "D051287",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      },
+      {
+        "eumsikName": "모시조개탕",
+        "sikpumVolume": "13.10",
+        "allrgyNm": null,
+        "eumsikCode": "D051190",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      }
+    ]
+  },
+  {
+    "name": "모시조개콩나물국",
+    "candidates": [
+      {
+        "eumsikName": "모시조개콩나물국",
+        "sikpumVolume": "92.00",
+        "allrgyNm": null,
+        "eumsikCode": "D051309",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      },
+      {
+        "eumsikName": "콩나물국",
+        "sikpumVolume": "84.00",
+        "allrgyNm": null,
+        "eumsikCode": "D051072",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      },
+      {
+        "eumsikName": "모시조개미역국",
+        "sikpumVolume": "18.50",
+        "allrgyNm": null,
+        "eumsikCode": "D051287",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      }
+    ]
+  },
+  {
+    "name": "목이버섯꼬막볶음",
+    "candidates": [
+      {
+        "eumsikName": "목이버섯전",
+        "sikpumVolume": "128.00",
+        "allrgyNm": null,
+        "eumsikCode": "D095037",
+        "largeName": "전류",
+        "middleName": "기타 전류"
+      },
+      {
+        "eumsikName": "열무버섯볶음",
+        "sikpumVolume": "98.25",
+        "allrgyNm": null,
+        "eumsikCode": "D103080",
+        "largeName": "볶음류",
+        "middleName": "채소 및 해조류볶음"
+      },
+      {
+        "eumsikName": "오이볶음",
+        "sikpumVolume": "87.00",
+        "allrgyNm": null,
+        "eumsikCode": "D103047",
+        "largeName": "볶음류",
+        "middleName": "채소 및 해조류볶음"
+      }
+    ]
+  },
+  {
+    "name": "묵밥",
+    "candidates": [
+      {
+        "eumsikName": "묵계밥",
+        "sikpumVolume": "424.00",
+        "allrgyNm": null,
+        "eumsikCode": "D015078",
+        "largeName": "밥류",
+        "middleName": "덮밥 및 국밥류"
+      },
+      {
+        "eumsikName": "쌀밥",
+        "sikpumVolume": "210.00",
+        "allrgyNm": null,
+        "eumsikCode": "D011002",
+        "largeName": "밥류",
+        "middleName": "쌀밥"
+      },
+      {
+        "eumsikName": "찰밥",
+        "sikpumVolume": "210.00",
+        "allrgyNm": null,
+        "eumsikCode": "D011003",
+        "largeName": "밥류",
+        "middleName": "쌀밥"
+      }
+    ]
+  },
+  {
+    "name": "물메기국(곰치국)",
+    "candidates": [
+      {
+        "eumsikName": "메밀국수",
+        "sikpumVolume": "181.00",
+        "allrgyNm": null,
+        "eumsikCode": "D031004",
+        "largeName": "면 및 만두류",
+        "middleName": "면류"
+      },
+      {
+        "eumsikName": "다슬기국",
+        "sikpumVolume": "44.00",
+        "allrgyNm": null,
+        "eumsikCode": "D051021",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      },
+      {
+        "eumsikName": "콩나물국",
+        "sikpumVolume": "84.00",
+        "allrgyNm": null,
+        "eumsikCode": "D051072",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      }
+    ]
+  },
+  {
+    "name": "미나리무침",
+    "candidates": [
+      {
+        "eumsikName": "미나리황태무침",
+        "sikpumVolume": "81.00",
+        "allrgyNm": null,
+        "eumsikCode": "D133045",
+        "largeName": "무침류",
+        "middleName": "어패류무침"
+      },
+      {
+        "eumsikName": "미나리전",
+        "sikpumVolume": "553.00",
+        "allrgyNm": null,
+        "eumsikCode": "D093025",
+        "largeName": "전류",
+        "middleName": "채소류전"
+      },
+      {
+        "eumsikName": "콩나물무침",
+        "sikpumVolume": "77.00",
+        "allrgyNm": null,
+        "eumsikCode": "D132036",
+        "largeName": "무침류",
+        "middleName": "숙채"
+      }
+    ]
+  },
+  {
+    "name": "미나리유부초밥",
+    "candidates": [
+      {
+        "eumsikName": "두부초밥",
+        "sikpumVolume": "271.40",
+        "allrgyNm": null,
+        "eumsikCode": "D016020",
+        "largeName": "밥류",
+        "middleName": "김(초)밥"
+      },
+      {
+        "eumsikName": "미나리전",
+        "sikpumVolume": "553.00",
+        "allrgyNm": null,
+        "eumsikCode": "D093025",
+        "largeName": "전류",
+        "middleName": "채소류전"
+      },
+      {
+        "eumsikName": "차돌박이미나리덮밥",
+        "sikpumVolume": "306.05",
+        "allrgyNm": null,
+        "eumsikCode": "D015035",
+        "largeName": "밥류",
+        "middleName": "덮밥 및 국밥류"
+      }
+    ]
+  },
+  {
+    "name": "미역/초고추장",
+    "candidates": [
+      {
+        "eumsikName": "초고추장",
+        "sikpumVolume": "200.00",
+        "allrgyNm": null,
+        "eumsikCode": "D180318",
+        "largeName": "장류",
+        "middleName": "양념류"
+      },
+      {
+        "eumsikName": "고추장",
+        "sikpumVolume": "4.00",
+        "allrgyNm": null,
+        "eumsikCode": "D180003",
+        "largeName": "장류",
+        "middleName": "양념류"
+      },
+      {
+        "eumsikName": "미나리나물(초고추장)",
+        "sikpumVolume": "92.00",
+        "allrgyNm": null,
+        "eumsikCode": "D132015",
+        "largeName": "무침류",
+        "middleName": "숙채"
+      }
+    ]
+  },
+  {
+    "name": "미역조갯국",
+    "candidates": [
+      {
+        "eumsikName": "미역장국",
+        "sikpumVolume": "13.50",
+        "allrgyNm": null,
+        "eumsikCode": "D052087",
+        "largeName": "국(탕)류",
+        "middleName": "된장국류"
+      },
+      {
+        "eumsikName": "동죽미역국",
+        "sikpumVolume": "30.20",
+        "allrgyNm": null,
+        "eumsikCode": "D051179",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      },
+      {
+        "eumsikName": "두부미역국",
+        "sikpumVolume": "27.10",
+        "allrgyNm": null,
+        "eumsikCode": "D051182",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      }
+    ]
+  },
+  {
+    "name": "민들레 생채",
+    "candidates": [
+      {
+        "eumsikName": "민들레차",
+        "sikpumVolume": "100.00",
+        "allrgyNm": null,
+        "eumsikCode": "D203031",
+        "largeName": "음료류",
+        "middleName": "차류"
+      },
+      {
+        "eumsikName": "무생채",
+        "sikpumVolume": "261.00",
+        "allrgyNm": null,
+        "eumsikCode": "D140076",
+        "largeName": "김치류",
+        "middleName": "김치류"
+      },
+      {
+        "eumsikName": "들깨냉채",
+        "sikpumVolume": "97.00",
+        "allrgyNm": null,
+        "eumsikCode": "D054012",
+        "largeName": "국(탕)류",
+        "middleName": "냉국류"
+      }
+    ]
+  },
+  {
+    "name": "밀가루수제비(수제비, 밀가루자베기)",
+    "candidates": [
+      {
+        "eumsikName": "메밀수제비",
+        "sikpumVolume": "522.90",
+        "allrgyNm": null,
+        "eumsikCode": "D031066",
+        "largeName": "면 및 만두류",
+        "middleName": "면류"
+      },
+      {
+        "eumsikName": "수제비",
+        "sikpumVolume": "89.00",
+        "allrgyNm": null,
+        "eumsikCode": "D031009",
+        "largeName": "면 및 만두류",
+        "middleName": "면류"
+      },
+      {
+        "eumsikName": "들깨수제비 ",
+        "sikpumVolume": "527.00",
+        "allrgyNm": null,
+        "eumsikCode": "D031063",
+        "largeName": "면 및 만두류",
+        "middleName": "면류"
+      }
+    ]
+  },
+  {
+    "name": "바나나스무디",
+    "candidates": [
+      {
+        "eumsikName": "바나나",
+        "sikpumVolume": "100.00",
+        "allrgyNm": null,
+        "eumsikCode": "D211016",
+        "largeName": "과일 및 과일가공품",
+        "middleName": "과일류"
+      },
+      {
+        "eumsikName": "바나나",
+        "sikpumVolume": "120.00",
+        "allrgyNm": null,
+        "eumsikCode": "D211051",
+        "largeName": "과일 및 과일가공품",
+        "middleName": "과일류"
+      },
+      {
+        "eumsikName": "바나나칩",
+        "sikpumVolume": "100.00",
+        "allrgyNm": null,
+        "eumsikCode": "D212050",
+        "largeName": "과일 및 과일가공품",
+        "middleName": "가공품류"
+      }
+    ]
+  },
+  {
+    "name": "바람떡(개피떡)",
+    "candidates": [
+      {
+        "eumsikName": "떡국",
+        "sikpumVolume": "197.00",
+        "allrgyNm": null,
+        "eumsikCode": "D051035",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      },
+      {
+        "eumsikName": "꿀떡",
+        "sikpumVolume": "150.00",
+        "allrgyNm": null,
+        "eumsikCode": "D230005",
+        "largeName": "떡류",
+        "middleName": "떡류"
+      },
+      {
+        "eumsikName": "빙떡",
+        "sikpumVolume": "104.60",
+        "allrgyNm": null,
+        "eumsikCode": "D230035",
+        "largeName": "떡류",
+        "middleName": "떡류"
+      }
+    ]
+  },
+  {
+    "name": "바지락 수제비볶음",
+    "candidates": [
+      {
+        "eumsikName": "바지락비빔밥",
+        "sikpumVolume": "338.00",
+        "allrgyNm": null,
+        "eumsikCode": "D014040",
+        "largeName": "밥류",
+        "middleName": "비빔밥 및 볶음밥류"
+      },
+      {
+        "eumsikName": "바지락비빔밥",
+        "sikpumVolume": "163.80",
+        "allrgyNm": null,
+        "eumsikCode": "D014064",
+        "largeName": "밥류",
+        "middleName": "비빔밥 및 볶음밥류"
+      },
+      {
+        "eumsikName": "바지락칼국수",
+        "sikpumVolume": "86.50",
+        "allrgyNm": null,
+        "eumsikCode": "D031113",
+        "largeName": "면 및 만두류",
+        "middleName": "면류"
+      }
+    ]
+  },
+  {
+    "name": "바지락무국",
+    "candidates": [
+      {
+        "eumsikName": "바지락무국",
+        "sikpumVolume": "112.90",
+        "allrgyNm": null,
+        "eumsikCode": "D051192",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      },
+      {
+        "eumsikName": "바지락국",
+        "sikpumVolume": "67.00",
+        "allrgyNm": null,
+        "eumsikCode": "D051051",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      },
+      {
+        "eumsikName": "쑥바지락국",
+        "sikpumVolume": "276.00",
+        "allrgyNm": null,
+        "eumsikCode": "D052074",
+        "largeName": "국(탕)류",
+        "middleName": "된장국류"
+      }
+    ]
+  },
+  {
+    "name": "배오이무침",
+    "candidates": [
+      {
+        "eumsikName": "오이무침",
+        "sikpumVolume": "50.00",
+        "allrgyNm": null,
+        "eumsikCode": "D132073",
+        "largeName": "무침류",
+        "middleName": "숙채"
+      },
+      {
+        "eumsikName": "오이무침",
+        "sikpumVolume": "60.60",
+        "allrgyNm": null,
+        "eumsikCode": "D132075",
+        "largeName": "무침류",
+        "middleName": "숙채"
+      },
+      {
+        "eumsikName": "오이지무침",
+        "sikpumVolume": "101.00",
+        "allrgyNm": null,
+        "eumsikCode": "D132105",
+        "largeName": "무침류",
+        "middleName": "숙채"
+      }
+    ]
+  },
+  {
+    "name": "배추들깨국",
+    "candidates": [
+      {
+        "eumsikName": "배추들깨국",
+        "sikpumVolume": "33.50",
+        "allrgyNm": null,
+        "eumsikCode": "D051194",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      },
+      {
+        "eumsikName": "닭가슴살배추들깨국",
+        "sikpumVolume": "164.50",
+        "allrgyNm": null,
+        "eumsikCode": "D051323",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      },
+      {
+        "eumsikName": "무들깨국",
+        "sikpumVolume": "29.00",
+        "allrgyNm": null,
+        "eumsikCode": "D051154",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      }
+    ]
+  },
+  {
+    "name": "배추말이찜",
+    "candidates": [
+      {
+        "eumsikName": "양배추찜",
+        "sikpumVolume": "84.00",
+        "allrgyNm": null,
+        "eumsikCode": "D073005",
+        "largeName": "찜류",
+        "middleName": "채소류찜"
+      },
+      {
+        "eumsikName": "양배추찜",
+        "sikpumVolume": "70.80",
+        "allrgyNm": null,
+        "eumsikCode": "D073012",
+        "largeName": "찜류",
+        "middleName": "채소류찜"
+      },
+      {
+        "eumsikName": "층층배추찜",
+        "sikpumVolume": "173.60",
+        "allrgyNm": null,
+        "eumsikCode": "D073026",
+        "largeName": "찜류",
+        "middleName": "채소류찜"
+      }
+    ]
+  },
+  {
+    "name": "백합죽",
+    "candidates": [
+      {
+        "eumsikName": "깨죽",
+        "sikpumVolume": "61.00",
+        "allrgyNm": null,
+        "eumsikCode": "D040002",
+        "largeName": "죽류",
+        "middleName": "죽류"
+      },
+      {
+        "eumsikName": "닭죽",
+        "sikpumVolume": "286.00",
+        "allrgyNm": null,
+        "eumsikCode": "D040003",
+        "largeName": "죽류",
+        "middleName": "죽류"
+      },
+      {
+        "eumsikName": "잣죽",
+        "sikpumVolume": "63.00",
+        "allrgyNm": null,
+        "eumsikCode": "D040010",
+        "largeName": "죽류",
+        "middleName": "죽류"
+      }
+    ]
+  },
+  {
+    "name": "버섯육개장",
+    "candidates": [
+      {
+        "eumsikName": "버섯육개장",
+        "sikpumVolume": "220.50",
+        "allrgyNm": null,
+        "eumsikCode": "D053103",
+        "largeName": "국(탕)류",
+        "middleName": "곰국 및 탕류"
+      },
+      {
+        "eumsikName": "육개장",
+        "sikpumVolume": "194.00",
+        "allrgyNm": null,
+        "eumsikCode": "D053027",
+        "largeName": "국(탕)류",
+        "middleName": "곰국 및 탕류"
+      },
+      {
+        "eumsikName": "버섯장국",
+        "sikpumVolume": "40.50",
+        "allrgyNm": null,
+        "eumsikCode": "D052088",
+        "largeName": "국(탕)류",
+        "middleName": "된장국류"
+      }
+    ]
+  },
+  {
+    "name": "버섯잡채",
+    "candidates": [
+      {
+        "eumsikName": "버섯밥",
+        "sikpumVolume": "250.50",
+        "allrgyNm": null,
+        "eumsikCode": "D013014",
+        "largeName": "밥류",
+        "middleName": "채소밥류"
+      },
+      {
+        "eumsikName": "잡채밥",
+        "sikpumVolume": "319.50",
+        "allrgyNm": null,
+        "eumsikCode": "D015009",
+        "largeName": "밥류",
+        "middleName": "덮밥 및 국밥류"
+      },
+      {
+        "eumsikName": "버섯죽",
+        "sikpumVolume": "104.00",
+        "allrgyNm": null,
+        "eumsikCode": "D040004",
+        "largeName": "죽류",
+        "middleName": "죽류"
+      }
+    ]
+  },
+  {
+    "name": "버섯칼국수",
+    "candidates": [
+      {
+        "eumsikName": "버섯칼국수",
+        "sikpumVolume": "165.30",
+        "allrgyNm": null,
+        "eumsikCode": "D031115",
+        "largeName": "면 및 만두류",
+        "middleName": "면류"
+      },
+      {
+        "eumsikName": "들깨버섯칼국수",
+        "sikpumVolume": "158.50",
+        "allrgyNm": null,
+        "eumsikCode": "D031095",
+        "largeName": "면 및 만두류",
+        "middleName": "면류"
+      },
+      {
+        "eumsikName": "장칼국수",
+        "sikpumVolume": "177.10",
+        "allrgyNm": null,
+        "eumsikCode": "D031136",
+        "largeName": "면 및 만두류",
+        "middleName": "면류"
+      }
+    ]
+  },
+  {
+    "name": "봄동겉절이",
+    "candidates": [
+      {
+        "eumsikName": "상추겉절이",
+        "sikpumVolume": "195.00",
+        "allrgyNm": null,
+        "eumsikCode": "D132103",
+        "largeName": "무침류",
+        "middleName": "숙채"
+      },
+      {
+        "eumsikName": "무염 겉절이",
+        "sikpumVolume": "103.00",
+        "allrgyNm": null,
+        "eumsikCode": "D132125",
+        "largeName": "무침류",
+        "middleName": "숙채"
+      },
+      {
+        "eumsikName": "저염 겉절이",
+        "sikpumVolume": "103.00",
+        "allrgyNm": null,
+        "eumsikCode": "D132126",
+        "largeName": "무침류",
+        "middleName": "숙채"
+      }
+    ]
+  },
+  {
+    "name": "부추보리밥",
+    "candidates": [
+      {
+        "eumsikName": "보리밥",
+        "sikpumVolume": "200.00",
+        "allrgyNm": null,
+        "eumsikCode": "D012006",
+        "largeName": "밥류",
+        "middleName": "잡곡밥류"
+      },
+      {
+        "eumsikName": "상추쌈보리밥",
+        "sikpumVolume": "270.00",
+        "allrgyNm": null,
+        "eumsikCode": "D012061",
+        "largeName": "밥류",
+        "middleName": "잡곡밥류"
+      },
+      {
+        "eumsikName": "꽁보리밥",
+        "sikpumVolume": "80.00",
+        "allrgyNm": null,
+        "eumsikCode": "D012067",
+        "largeName": "밥류",
+        "middleName": "잡곡밥류"
+      }
+    ]
+  },
+  {
+    "name": "북어맑은국",
+    "candidates": [
+      {
+        "eumsikName": "북어국",
+        "sikpumVolume": "29.80",
+        "allrgyNm": null,
+        "eumsikCode": "D051148",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      },
+      {
+        "eumsikName": "북어 무국",
+        "sikpumVolume": "362.10",
+        "allrgyNm": null,
+        "eumsikCode": "D051145",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      },
+      {
+        "eumsikName": "북어무국",
+        "sikpumVolume": "88.50",
+        "allrgyNm": null,
+        "eumsikCode": "D051156",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      }
+    ]
+  },
+  {
+    "name": "빈대떡",
+    "candidates": [
+      {
+        "eumsikName": "보리빈대떡",
+        "sikpumVolume": "219.00",
+        "allrgyNm": null,
+        "eumsikCode": "D230079",
+        "largeName": "떡류",
+        "middleName": "떡류"
+      },
+      {
+        "eumsikName": "빈대떡(돼지고기)",
+        "sikpumVolume": "88.00",
+        "allrgyNm": null,
+        "eumsikCode": "D095010",
+        "largeName": "전류",
+        "middleName": "기타 전류"
+      },
+      {
+        "eumsikName": "떡국",
+        "sikpumVolume": "197.00",
+        "allrgyNm": null,
+        "eumsikCode": "D051035",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      }
+    ]
+  },
+  {
+    "name": "뼈다귀감자탕(감자탕)",
+    "candidates": [
+      {
+        "eumsikName": "감자탕",
+        "sikpumVolume": "159.00",
+        "allrgyNm": null,
+        "eumsikCode": "D053002",
+        "largeName": "국(탕)류",
+        "middleName": "곰국 및 탕류"
+      },
+      {
+        "eumsikName": "돼지갈비감자탕",
+        "sikpumVolume": "248.75",
+        "allrgyNm": null,
+        "eumsikCode": "D053126",
+        "largeName": "국(탕)류",
+        "middleName": "곰국 및 탕류"
+      },
+      {
+        "eumsikName": "감자밥",
+        "sikpumVolume": "220.50",
+        "allrgyNm": null,
+        "eumsikCode": "D013001",
+        "largeName": "밥류",
+        "middleName": "채소밥류"
+      }
+    ]
+  },
+  {
+    "name": "상추, 오이, 당근쌈",
+    "candidates": [
+      {
+        "eumsikName": "상추오이냉국",
+        "sikpumVolume": "24.20",
+        "allrgyNm": null,
+        "eumsikCode": "D054019",
+        "largeName": "국(탕)류",
+        "middleName": "냉국류"
+      },
+      {
+        "eumsikName": "상추쌈",
+        "sikpumVolume": "269.00",
+        "allrgyNm": null,
+        "eumsikCode": "D292111",
+        "largeName": "원재료",
+        "middleName": "채소류"
+      },
+      {
+        "eumsikName": "상추겉절이",
+        "sikpumVolume": "195.00",
+        "allrgyNm": null,
+        "eumsikCode": "D132103",
+        "largeName": "무침류",
+        "middleName": "숙채"
+      }
+    ]
+  },
+  {
+    "name": "새싹비빔국수",
+    "candidates": [
+      {
+        "eumsikName": "비빔국수",
+        "sikpumVolume": "386.50",
+        "allrgyNm": null,
+        "eumsikCode": "D031045",
+        "largeName": "면 및 만두류",
+        "middleName": "면류"
+      },
+      {
+        "eumsikName": "메밀비빔국수",
+        "sikpumVolume": "84.00",
+        "allrgyNm": null,
+        "eumsikCode": "D031102",
+        "largeName": "면 및 만두류",
+        "middleName": "면류"
+      },
+      {
+        "eumsikName": "비빔밥",
+        "sikpumVolume": "500.00",
+        "allrgyNm": null,
+        "eumsikCode": "D014019",
+        "largeName": "밥류",
+        "middleName": "비빔밥 및 볶음밥류"
+      }
+    ]
+  },
+  {
+    "name": "새우살달걀찜",
+    "candidates": [
+      {
+        "eumsikName": "새우달걀국",
+        "sikpumVolume": "67.00",
+        "allrgyNm": null,
+        "eumsikCode": "D051206",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      },
+      {
+        "eumsikName": "새우찜",
+        "sikpumVolume": "171.00",
+        "allrgyNm": null,
+        "eumsikCode": "D071016",
+        "largeName": "찜류",
+        "middleName": "어패류찜"
+      },
+      {
+        "eumsikName": "계란찜",
+        "sikpumVolume": "64.00",
+        "allrgyNm": null,
+        "eumsikCode": "D074001",
+        "largeName": "찜류",
+        "middleName": "기타 찜류"
+      }
+    ]
+  },
+  {
+    "name": "새우살미역국",
+    "candidates": [
+      {
+        "eumsikName": "새우살미역국",
+        "sikpumVolume": "61.50",
+        "allrgyNm": null,
+        "eumsikCode": "D051256",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      },
+      {
+        "eumsikName": "건새우미역국",
+        "sikpumVolume": "8.00",
+        "allrgyNm": null,
+        "eumsikCode": "D051233",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      },
+      {
+        "eumsikName": "새우살무국",
+        "sikpumVolume": "68.00",
+        "allrgyNm": null,
+        "eumsikCode": "D051207",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      }
+    ]
+  },
+  {
+    "name": "서리태밥",
+    "candidates": [
+      {
+        "eumsikName": "서리태밥",
+        "sikpumVolume": "102.00",
+        "allrgyNm": null,
+        "eumsikCode": "D012072",
+        "largeName": "밥류",
+        "middleName": "잡곡밥류"
+      },
+      {
+        "eumsikName": "서리태보리밥",
+        "sikpumVolume": "97.00",
+        "allrgyNm": null,
+        "eumsikCode": "D012100",
+        "largeName": "밥류",
+        "middleName": "잡곡밥류"
+      },
+      {
+        "eumsikName": "서리태흑미밥",
+        "sikpumVolume": "104.00",
+        "allrgyNm": null,
+        "eumsikCode": "D012101",
+        "largeName": "밥류",
+        "middleName": "잡곡밥류"
+      }
+    ]
+  },
+  {
+    "name": "송이버섯구이",
+    "candidates": [
+      {
+        "eumsikName": "양송이구이",
+        "sikpumVolume": "348.00",
+        "allrgyNm": null,
+        "eumsikCode": "D083027",
+        "largeName": "구이류",
+        "middleName": "기타 구이류"
+      },
+      {
+        "eumsikName": "새송이버섯치즈오븐구이",
+        "sikpumVolume": "247.20",
+        "allrgyNm": null,
+        "eumsikCode": "D082039",
+        "largeName": "구이류",
+        "middleName": "육류구이"
+      },
+      {
+        "eumsikName": "송이버섯미역국",
+        "sikpumVolume": "24.70",
+        "allrgyNm": null,
+        "eumsikCode": "D051297",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      }
+    ]
+  },
+  {
+    "name": "쇠고기미역국",
+    "candidates": [
+      {
+        "eumsikName": "소고기미역국밥",
+        "sikpumVolume": "51.30",
+        "allrgyNm": null,
+        "eumsikCode": "D015055",
+        "largeName": "밥류",
+        "middleName": "덮밥 및 국밥류"
+      },
+      {
+        "eumsikName": "어린이소고기미역국",
+        "sikpumVolume": "12.50",
+        "allrgyNm": null,
+        "eumsikCode": "D051328",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      },
+      {
+        "eumsikName": "소고기국밥",
+        "sikpumVolume": "307.00",
+        "allrgyNm": null,
+        "eumsikCode": "D015004",
+        "largeName": "밥류",
+        "middleName": "덮밥 및 국밥류"
+      }
+    ]
+  },
+  {
+    "name": "쇠고기미역국(미역국)",
+    "candidates": [
+      {
+        "eumsikName": "소고기미역국밥",
+        "sikpumVolume": "51.30",
+        "allrgyNm": null,
+        "eumsikCode": "D015055",
+        "largeName": "밥류",
+        "middleName": "덮밥 및 국밥류"
+      },
+      {
+        "eumsikName": "어린이소고기미역국",
+        "sikpumVolume": "12.50",
+        "allrgyNm": null,
+        "eumsikCode": "D051328",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      },
+      {
+        "eumsikName": "소고기국밥",
+        "sikpumVolume": "307.00",
+        "allrgyNm": null,
+        "eumsikCode": "D015004",
+        "largeName": "밥류",
+        "middleName": "덮밥 및 국밥류"
+      }
+    ]
+  },
+  {
+    "name": "쇠고기불고기(너비아니) <방법1>",
+    "candidates": [
+      {
+        "eumsikName": "소고기표고찜",
+        "sikpumVolume": "161.00",
+        "allrgyNm": null,
+        "eumsikCode": "D072038",
+        "largeName": "찜류",
+        "middleName": "육류찜"
+      },
+      {
+        "eumsikName": "소불고기브리또",
+        "sikpumVolume": "175.60",
+        "allrgyNm": null,
+        "eumsikCode": "D017009",
+        "largeName": "밥류",
+        "middleName": "기타"
+      },
+      {
+        "eumsikName": "소고기죽",
+        "sikpumVolume": "81.00",
+        "allrgyNm": null,
+        "eumsikCode": "D040006",
+        "largeName": "죽류",
+        "middleName": "죽류"
+      }
+    ]
+  },
+  {
+    "name": "쇠고기전골",
+    "candidates": [
+      {
+        "eumsikName": "소고기전골",
+        "sikpumVolume": "129.00",
+        "allrgyNm": null,
+        "eumsikCode": "D064009",
+        "largeName": "찌개류",
+        "middleName": "전골류"
+      },
+      {
+        "eumsikName": "소고기전",
+        "sikpumVolume": "92.00",
+        "allrgyNm": null,
+        "eumsikCode": "D092004",
+        "largeName": "전류",
+        "middleName": "육류전"
+      },
+      {
+        "eumsikName": "소고기버섯전골",
+        "sikpumVolume": "127.00",
+        "allrgyNm": null,
+        "eumsikCode": "D064031",
+        "largeName": "찌개류",
+        "middleName": "전골류"
+      }
+    ]
+  },
+  {
+    "name": "쇠고기토란탕",
+    "candidates": [
+      {
+        "eumsikName": "소고기토란탕",
+        "sikpumVolume": "110.00",
+        "allrgyNm": null,
+        "eumsikCode": "D053118",
+        "largeName": "국(탕)류",
+        "middleName": "곰국 및 탕류"
+      },
+      {
+        "eumsikName": "쇠고기 양념(토란탕)",
+        "sikpumVolume": "6.10",
+        "allrgyNm": null,
+        "eumsikCode": "D180124",
+        "largeName": "장류",
+        "middleName": "양념류"
+      },
+      {
+        "eumsikName": "토란탕",
+        "sikpumVolume": "147.00",
+        "allrgyNm": null,
+        "eumsikCode": "D053062",
+        "largeName": "국(탕)류",
+        "middleName": "곰국 및 탕류"
+      }
+    ]
+  },
+  {
+    "name": "수삼튀김",
+    "candidates": [
+      {
+        "eumsikName": "삼치튀김",
+        "sikpumVolume": "83.00",
+        "allrgyNm": null,
+        "eumsikCode": "D121025",
+        "largeName": "튀김류",
+        "middleName": "어패류튀김"
+      },
+      {
+        "eumsikName": "옥수수튀김",
+        "sikpumVolume": "105.00",
+        "allrgyNm": null,
+        "eumsikCode": "D124014",
+        "largeName": "튀김류",
+        "middleName": "기타 튀김류"
+      },
+      {
+        "eumsikName": "임연수어튀김",
+        "sikpumVolume": "103.00",
+        "allrgyNm": null,
+        "eumsikCode": "D121035",
+        "largeName": "튀김류",
+        "middleName": "어패류튀김"
+      }
+    ]
+  },
+  {
+    "name": "숙주나물무침",
+    "candidates": [
+      {
+        "eumsikName": "숙주나물",
+        "sikpumVolume": "38.00",
+        "allrgyNm": null,
+        "eumsikCode": "D132020",
+        "largeName": "무침류",
+        "middleName": "숙채"
+      },
+      {
+        "eumsikName": "숙주나물",
+        "sikpumVolume": "62.50",
+        "allrgyNm": null,
+        "eumsikCode": "D132083",
+        "largeName": "무침류",
+        "middleName": "숙채"
+      },
+      {
+        "eumsikName": "콩나물무침",
+        "sikpumVolume": "77.00",
+        "allrgyNm": null,
+        "eumsikCode": "D132036",
+        "largeName": "무침류",
+        "middleName": "숙채"
+      }
+    ]
+  },
+  {
+    "name": "순두부찌개",
+    "candidates": [
+      {
+        "eumsikName": "순두부찌개",
+        "sikpumVolume": "363.10",
+        "allrgyNm": null,
+        "eumsikCode": "D065021",
+        "largeName": "찌개류",
+        "middleName": "기타찌개류"
+      },
+      {
+        "eumsikName": "순두부찌개",
+        "sikpumVolume": "160.20",
+        "allrgyNm": null,
+        "eumsikCode": "D065024",
+        "largeName": "찌개류",
+        "middleName": "기타찌개류"
+      },
+      {
+        "eumsikName": "두부찌개",
+        "sikpumVolume": "123.00",
+        "allrgyNm": null,
+        "eumsikCode": "D065007",
+        "largeName": "찌개류",
+        "middleName": "기타찌개류"
+      }
+    ]
+  },
+  {
+    "name": "쑥절편꽃말이떡",
+    "candidates": [
+      {
+        "eumsikName": "절편",
+        "sikpumVolume": "140.00",
+        "allrgyNm": null,
+        "eumsikCode": "D230011",
+        "largeName": "떡류",
+        "middleName": "떡류"
+      },
+      {
+        "eumsikName": "계란말이",
+        "sikpumVolume": "78.00",
+        "allrgyNm": null,
+        "eumsikCode": "D095001",
+        "largeName": "전류",
+        "middleName": "기타 전류"
+      },
+      {
+        "eumsikName": "매생이떡국",
+        "sikpumVolume": "89.00",
+        "allrgyNm": null,
+        "eumsikCode": "D051189",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      }
+    ]
+  },
+  {
+    "name": "아귀탕(아구탕, 물꽁탕)",
+    "candidates": [
+      {
+        "eumsikName": "귀리밥",
+        "sikpumVolume": "190.00",
+        "allrgyNm": null,
+        "eumsikCode": "D012029",
+        "largeName": "밥류",
+        "middleName": "잡곡밥류"
+      },
+      {
+        "eumsikName": "귀리밥",
+        "sikpumVolume": "45.00",
+        "allrgyNm": null,
+        "eumsikCode": "D012051",
+        "largeName": "밥류",
+        "middleName": "잡곡밥류"
+      },
+      {
+        "eumsikName": "귀리밥",
+        "sikpumVolume": "58.00",
+        "allrgyNm": null,
+        "eumsikCode": "D012057",
+        "largeName": "밥류",
+        "middleName": "잡곡밥류"
+      }
+    ]
+  },
+  {
+    "name": "애호박볶음",
+    "candidates": [
+      {
+        "eumsikName": "호박볶음",
+        "sikpumVolume": "114.00",
+        "allrgyNm": null,
+        "eumsikCode": "D103055",
+        "largeName": "볶음류",
+        "middleName": "채소 및 해조류볶음"
+      },
+      {
+        "eumsikName": "애호박국",
+        "sikpumVolume": "304.00",
+        "allrgyNm": null,
+        "eumsikCode": "D052072",
+        "largeName": "국(탕)류",
+        "middleName": "된장국류"
+      },
+      {
+        "eumsikName": "애호박찜",
+        "sikpumVolume": "96.00",
+        "allrgyNm": null,
+        "eumsikCode": "D073004",
+        "largeName": "찜류",
+        "middleName": "채소류찜"
+      }
+    ]
+  },
+  {
+    "name": "애호박젓국",
+    "candidates": [
+      {
+        "eumsikName": "애호박젓국",
+        "sikpumVolume": "32.50",
+        "allrgyNm": null,
+        "eumsikCode": "D051212",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      },
+      {
+        "eumsikName": "애호박국",
+        "sikpumVolume": "304.00",
+        "allrgyNm": null,
+        "eumsikCode": "D052072",
+        "largeName": "국(탕)류",
+        "middleName": "된장국류"
+      },
+      {
+        "eumsikName": "애호박새우젓국",
+        "sikpumVolume": "64.50",
+        "allrgyNm": null,
+        "eumsikCode": "D051300",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      }
+    ]
+  },
+  {
+    "name": "양상추샐러드",
+    "candidates": [
+      {
+        "eumsikName": "상추토마토샐러드",
+        "sikpumVolume": "142.00",
+        "allrgyNm": null,
+        "eumsikCode": "D135045",
+        "largeName": "무침류",
+        "middleName": "생채(샐러드)"
+      },
+      {
+        "eumsikName": "주꾸미보양샐러드",
+        "sikpumVolume": "327.00",
+        "allrgyNm": null,
+        "eumsikCode": "D135060",
+        "largeName": "무침류",
+        "middleName": "생채(샐러드)"
+      },
+      {
+        "eumsikName": "양배추샐러드(코울슬로)",
+        "sikpumVolume": "100.00",
+        "allrgyNm": null,
+        "eumsikCode": "D311016",
+        "largeName": "조리가공식품류",
+        "middleName": "조리가공식품류"
+      }
+    ]
+  },
+  {
+    "name": "어죽",
+    "candidates": [
+      {
+        "eumsikName": "인삼어죽",
+        "sikpumVolume": "1075.00",
+        "allrgyNm": null,
+        "eumsikCode": "D040043",
+        "largeName": "죽류",
+        "middleName": "죽류"
+      },
+      {
+        "eumsikName": "깨죽",
+        "sikpumVolume": "61.00",
+        "allrgyNm": null,
+        "eumsikCode": "D040002",
+        "largeName": "죽류",
+        "middleName": "죽류"
+      },
+      {
+        "eumsikName": "닭죽",
+        "sikpumVolume": "286.00",
+        "allrgyNm": null,
+        "eumsikCode": "D040003",
+        "largeName": "죽류",
+        "middleName": "죽류"
+      }
+    ]
+  },
+  {
+    "name": "어죽<방법1>",
+    "candidates": [
+      {
+        "eumsikName": "인삼어죽",
+        "sikpumVolume": "1075.00",
+        "allrgyNm": null,
+        "eumsikCode": "D040043",
+        "largeName": "죽류",
+        "middleName": "죽류"
+      },
+      {
+        "eumsikName": "깨죽",
+        "sikpumVolume": "61.00",
+        "allrgyNm": null,
+        "eumsikCode": "D040002",
+        "largeName": "죽류",
+        "middleName": "죽류"
+      },
+      {
+        "eumsikName": "닭죽",
+        "sikpumVolume": "286.00",
+        "allrgyNm": null,
+        "eumsikCode": "D040003",
+        "largeName": "죽류",
+        "middleName": "죽류"
+      }
+    ]
+  },
+  {
+    "name": "어죽<방법2>",
+    "candidates": [
+      {
+        "eumsikName": "인삼어죽",
+        "sikpumVolume": "1075.00",
+        "allrgyNm": null,
+        "eumsikCode": "D040043",
+        "largeName": "죽류",
+        "middleName": "죽류"
+      },
+      {
+        "eumsikName": "깨죽",
+        "sikpumVolume": "61.00",
+        "allrgyNm": null,
+        "eumsikCode": "D040002",
+        "largeName": "죽류",
+        "middleName": "죽류"
+      },
+      {
+        "eumsikName": "닭죽",
+        "sikpumVolume": "286.00",
+        "allrgyNm": null,
+        "eumsikCode": "D040003",
+        "largeName": "죽류",
+        "middleName": "죽류"
+      }
+    ]
+  },
+  {
+    "name": "연근두부채소전",
+    "candidates": [
+      {
+        "eumsikName": "야채전",
+        "sikpumVolume": "92.00",
+        "allrgyNm": null,
+        "eumsikCode": "D093014",
+        "largeName": "전류",
+        "middleName": "채소류전"
+      },
+      {
+        "eumsikName": "연근전",
+        "sikpumVolume": "72.00",
+        "allrgyNm": null,
+        "eumsikCode": "D093015",
+        "largeName": "전류",
+        "middleName": "채소류전"
+      },
+      {
+        "eumsikName": "두부전",
+        "sikpumVolume": "96.00",
+        "allrgyNm": null,
+        "eumsikCode": "D095007",
+        "largeName": "전류",
+        "middleName": "기타 전류"
+      }
+    ]
+  },
+  {
+    "name": "연근치즈구이",
+    "candidates": [
+      {
+        "eumsikName": "갈치구이",
+        "sikpumVolume": "87.00",
+        "allrgyNm": null,
+        "eumsikCode": "D081003",
+        "largeName": "구이류",
+        "middleName": "어패류구이"
+      },
+      {
+        "eumsikName": "꽁치구이",
+        "sikpumVolume": "87.00",
+        "allrgyNm": null,
+        "eumsikCode": "D081007",
+        "largeName": "구이류",
+        "middleName": "어패류구이"
+      },
+      {
+        "eumsikName": "넙치구이",
+        "sikpumVolume": "87.00",
+        "allrgyNm": null,
+        "eumsikCode": "D081009",
+        "largeName": "구이류",
+        "middleName": "어패류구이"
+      }
+    ]
+  },
+  {
+    "name": "오리구이곰피쌈",
+    "candidates": [
+      {
+        "eumsikName": "가오리구이",
+        "sikpumVolume": "87.00",
+        "allrgyNm": null,
+        "eumsikCode": "D081001",
+        "largeName": "구이류",
+        "middleName": "어패류구이"
+      },
+      {
+        "eumsikName": "오리고기구이",
+        "sikpumVolume": "67.00",
+        "allrgyNm": null,
+        "eumsikCode": "D082015",
+        "largeName": "구이류",
+        "middleName": "육류구이"
+      },
+      {
+        "eumsikName": "오이피클",
+        "sikpumVolume": "100.00",
+        "allrgyNm": null,
+        "eumsikCode": "D292089",
+        "largeName": "원재료",
+        "middleName": "채소류"
+      }
+    ]
+  },
+  {
+    "name": "오이우무냉국",
+    "candidates": [
+      {
+        "eumsikName": "오이냉국",
+        "sikpumVolume": "104.00",
+        "allrgyNm": null,
+        "eumsikCode": "D054003",
+        "largeName": "국(탕)류",
+        "middleName": "냉국류"
+      },
+      {
+        "eumsikName": "상추오이냉국",
+        "sikpumVolume": "24.20",
+        "allrgyNm": null,
+        "eumsikCode": "D054019",
+        "largeName": "국(탕)류",
+        "middleName": "냉국류"
+      },
+      {
+        "eumsikName": "참외오이냉국",
+        "sikpumVolume": "38.50",
+        "allrgyNm": null,
+        "eumsikCode": "D054021",
+        "largeName": "국(탕)류",
+        "middleName": "냉국류"
+      }
+    ]
+  },
+  {
+    "name": "오징어무국",
+    "candidates": [
+      {
+        "eumsikName": "오징어국",
+        "sikpumVolume": "395.00",
+        "allrgyNm": null,
+        "eumsikCode": "D051131",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      },
+      {
+        "eumsikName": "매콤오징어무국",
+        "sikpumVolume": "89.70",
+        "allrgyNm": null,
+        "eumsikCode": "D051285",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      },
+      {
+        "eumsikName": "오징어두부무국",
+        "sikpumVolume": "104.00",
+        "allrgyNm": null,
+        "eumsikCode": "D051302",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      }
+    ]
+  },
+  {
+    "name": "완두콩스프",
+    "candidates": [
+      {
+        "eumsikName": "완두콩밥",
+        "sikpumVolume": "200.00",
+        "allrgyNm": null,
+        "eumsikCode": "D012015",
+        "largeName": "밥류",
+        "middleName": "잡곡밥류"
+      },
+      {
+        "eumsikName": "팥스프",
+        "sikpumVolume": "188.80",
+        "allrgyNm": null,
+        "eumsikCode": "D040073",
+        "largeName": "죽류",
+        "middleName": "죽류"
+      },
+      {
+        "eumsikName": "잡곡밥(완두콩)",
+        "sikpumVolume": "105.00",
+        "allrgyNm": null,
+        "eumsikCode": "D012114",
+        "largeName": "밥류",
+        "middleName": "잡곡밥류"
+      }
+    ]
+  },
+  {
+    "name": "우엉떡조림",
+    "candidates": [
+      {
+        "eumsikName": "우엉조림",
+        "sikpumVolume": "74.00",
+        "allrgyNm": null,
+        "eumsikCode": "D113012",
+        "largeName": "조림류",
+        "middleName": "채소류조림"
+      },
+      {
+        "eumsikName": "새우조림",
+        "sikpumVolume": "34.00",
+        "allrgyNm": null,
+        "eumsikCode": "D111023",
+        "largeName": "조림류",
+        "middleName": "어패류조림"
+      },
+      {
+        "eumsikName": "우엉조림(어묵)",
+        "sikpumVolume": "100.00",
+        "allrgyNm": null,
+        "eumsikCode": "D113014",
+        "largeName": "조림류",
+        "middleName": "채소류조림"
+      }
+    ]
+  },
+  {
+    "name": "우엉불고기",
+    "candidates": [
+      {
+        "eumsikName": "불고기덮밥",
+        "sikpumVolume": "620.00",
+        "allrgyNm": null,
+        "eumsikCode": "D015080",
+        "largeName": "밥류",
+        "middleName": "덮밥 및 국밥류"
+      },
+      {
+        "eumsikName": "언양불고기",
+        "sikpumVolume": "693.00",
+        "allrgyNm": null,
+        "eumsikCode": "D102035",
+        "largeName": "볶음류",
+        "middleName": "육류 및 난류볶음"
+      },
+      {
+        "eumsikName": "우엉조림(소고기)",
+        "sikpumVolume": "88.00",
+        "allrgyNm": null,
+        "eumsikCode": "D113013",
+        "largeName": "조림류",
+        "middleName": "채소류조림"
+      }
+    ]
+  },
+  {
+    "name": "잣스프",
+    "candidates": [
+      {
+        "eumsikName": "팥스프",
+        "sikpumVolume": "188.80",
+        "allrgyNm": null,
+        "eumsikCode": "D040073",
+        "largeName": "죽류",
+        "middleName": "죽류"
+      },
+      {
+        "eumsikName": "감자스프",
+        "sikpumVolume": "79.02",
+        "allrgyNm": null,
+        "eumsikCode": "D055001",
+        "largeName": "국(탕)류",
+        "middleName": "기타"
+      },
+      {
+        "eumsikName": "당근스프",
+        "sikpumVolume": "81.02",
+        "allrgyNm": null,
+        "eumsikCode": "D055002",
+        "largeName": "국(탕)류",
+        "middleName": "기타"
+      }
+    ]
+  },
+  {
+    "name": "주꾸미떡볶이",
+    "candidates": [
+      {
+        "eumsikName": "떡볶이",
+        "sikpumVolume": "250.00",
+        "allrgyNm": null,
+        "eumsikCode": "D104016",
+        "largeName": "볶음류",
+        "middleName": "곡류 및 두류볶음"
+      },
+      {
+        "eumsikName": "주꾸미볶음덮밥",
+        "sikpumVolume": "196.00",
+        "allrgyNm": null,
+        "eumsikCode": "D015056",
+        "largeName": "밥류",
+        "middleName": "덮밥 및 국밥류"
+      },
+      {
+        "eumsikName": "궁중떡볶이",
+        "sikpumVolume": "409.00",
+        "allrgyNm": null,
+        "eumsikCode": "D104013",
+        "largeName": "볶음류",
+        "middleName": "곡류 및 두류볶음"
+      }
+    ]
+  },
+  {
+    "name": "주꾸미먹물달걀찜",
+    "candidates": [
+      {
+        "eumsikName": "계란찜",
+        "sikpumVolume": "64.00",
+        "allrgyNm": null,
+        "eumsikCode": "D074001",
+        "largeName": "찜류",
+        "middleName": "기타 찜류"
+      },
+      {
+        "eumsikName": "계란찜",
+        "sikpumVolume": "60.10",
+        "allrgyNm": null,
+        "eumsikCode": "D074009",
+        "largeName": "찜류",
+        "middleName": "기타 찜류"
+      },
+      {
+        "eumsikName": "물만두달걀국",
+        "sikpumVolume": "198.00",
+        "allrgyNm": null,
+        "eumsikCode": "D051249",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      }
+    ]
+  },
+  {
+    "name": "주꾸미볶음",
+    "candidates": [
+      {
+        "eumsikName": "주꾸미볶음덮밥",
+        "sikpumVolume": "196.00",
+        "allrgyNm": null,
+        "eumsikCode": "D015056",
+        "largeName": "밥류",
+        "middleName": "덮밥 및 국밥류"
+      },
+      {
+        "eumsikName": "쭈꾸미볶음덮밥",
+        "sikpumVolume": "190.00",
+        "allrgyNm": null,
+        "eumsikCode": "D015057",
+        "largeName": "밥류",
+        "middleName": "덮밥 및 국밥류"
+      },
+      {
+        "eumsikName": "미역볶음",
+        "sikpumVolume": "94.00",
+        "allrgyNm": null,
+        "eumsikCode": "D103029",
+        "largeName": "볶음류",
+        "middleName": "채소 및 해조류볶음"
+      }
+    ]
+  },
+  {
+    "name": "주꾸미불고기",
+    "candidates": [
+      {
+        "eumsikName": "불고기덮밥",
+        "sikpumVolume": "620.00",
+        "allrgyNm": null,
+        "eumsikCode": "D015080",
+        "largeName": "밥류",
+        "middleName": "덮밥 및 국밥류"
+      },
+      {
+        "eumsikName": "언양불고기",
+        "sikpumVolume": "693.00",
+        "allrgyNm": null,
+        "eumsikCode": "D102035",
+        "largeName": "볶음류",
+        "middleName": "육류 및 난류볶음"
+      },
+      {
+        "eumsikName": "주꾸미연포탕",
+        "sikpumVolume": "801.00",
+        "allrgyNm": null,
+        "eumsikCode": "D053083",
+        "largeName": "국(탕)류",
+        "middleName": "곰국 및 탕류"
+      }
+    ]
+  },
+  {
+    "name": "주꾸미수제비",
+    "candidates": [
+      {
+        "eumsikName": "수제비",
+        "sikpumVolume": "89.00",
+        "allrgyNm": null,
+        "eumsikCode": "D031009",
+        "largeName": "면 및 만두류",
+        "middleName": "면류"
+      },
+      {
+        "eumsikName": "들깨수제비 ",
+        "sikpumVolume": "527.00",
+        "allrgyNm": null,
+        "eumsikCode": "D031063",
+        "largeName": "면 및 만두류",
+        "middleName": "면류"
+      },
+      {
+        "eumsikName": "메밀수제비",
+        "sikpumVolume": "522.90",
+        "allrgyNm": null,
+        "eumsikCode": "D031066",
+        "largeName": "면 및 만두류",
+        "middleName": "면류"
+      }
+    ]
+  },
+  {
+    "name": "주꾸미잡채",
+    "candidates": [
+      {
+        "eumsikName": "주꾸미연포탕",
+        "sikpumVolume": "801.00",
+        "allrgyNm": null,
+        "eumsikCode": "D053083",
+        "largeName": "국(탕)류",
+        "middleName": "곰국 및 탕류"
+      },
+      {
+        "eumsikName": "잡채밥",
+        "sikpumVolume": "319.50",
+        "allrgyNm": null,
+        "eumsikCode": "D015009",
+        "largeName": "밥류",
+        "middleName": "덮밥 및 국밥류"
+      },
+      {
+        "eumsikName": "주꾸미볶음덮밥",
+        "sikpumVolume": "196.00",
+        "allrgyNm": null,
+        "eumsikCode": "D015056",
+        "largeName": "밥류",
+        "middleName": "덮밥 및 국밥류"
+      }
+    ]
+  },
+  {
+    "name": "주꾸미콩나물찜",
+    "candidates": [
+      {
+        "eumsikName": "콩나물찜",
+        "sikpumVolume": "131.00",
+        "allrgyNm": null,
+        "eumsikCode": "D073006",
+        "largeName": "찜류",
+        "middleName": "채소류찜"
+      },
+      {
+        "eumsikName": "전주콩나물국밥",
+        "sikpumVolume": "875.00",
+        "allrgyNm": null,
+        "eumsikCode": "D015029",
+        "largeName": "밥류",
+        "middleName": "덮밥 및 국밥류"
+      },
+      {
+        "eumsikName": "콩나물소고기찜",
+        "sikpumVolume": "258.10",
+        "allrgyNm": null,
+        "eumsikCode": "D073027",
+        "largeName": "찜류",
+        "middleName": "채소류찜"
+      }
+    ]
+  },
+  {
+    "name": "죽순콩나물밥",
+    "candidates": [
+      {
+        "eumsikName": "콩나물밥",
+        "sikpumVolume": "254.00",
+        "allrgyNm": null,
+        "eumsikCode": "D013005",
+        "largeName": "밥류",
+        "middleName": "채소밥류"
+      },
+      {
+        "eumsikName": "콩나물밥",
+        "sikpumVolume": "232.60",
+        "allrgyNm": null,
+        "eumsikCode": "D013022",
+        "largeName": "밥류",
+        "middleName": "채소밥류"
+      },
+      {
+        "eumsikName": "콩나물국밥",
+        "sikpumVolume": "209.30",
+        "allrgyNm": null,
+        "eumsikCode": "D013034",
+        "largeName": "밥류",
+        "middleName": "채소밥류"
+      }
+    ]
+  },
+  {
+    "name": "찐만두",
+    "candidates": [
+      {
+        "eumsikName": "만두",
+        "sikpumVolume": "709.00",
+        "allrgyNm": null,
+        "eumsikCode": "D032017",
+        "largeName": "면 및 만두류",
+        "middleName": "만두류"
+      },
+      {
+        "eumsikName": "채만두",
+        "sikpumVolume": "724.00",
+        "allrgyNm": null,
+        "eumsikCode": "D032011",
+        "largeName": "면 및 만두류",
+        "middleName": "만두류"
+      },
+      {
+        "eumsikName": "만두국",
+        "sikpumVolume": "139.70",
+        "allrgyNm": null,
+        "eumsikCode": "D051147",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      }
+    ]
+  },
+  {
+    "name": "참나물두부무침",
+    "candidates": [
+      {
+        "eumsikName": "톳나물 두부무침",
+        "sikpumVolume": "55.40",
+        "allrgyNm": null,
+        "eumsikCode": "D132124",
+        "largeName": "무침류",
+        "middleName": "숙채"
+      },
+      {
+        "eumsikName": "참나물깨즙무침",
+        "sikpumVolume": "103.30",
+        "allrgyNm": null,
+        "eumsikCode": "D132116",
+        "largeName": "무침류",
+        "middleName": "숙채"
+      },
+      {
+        "eumsikName": "콩나물무침",
+        "sikpumVolume": "77.00",
+        "allrgyNm": null,
+        "eumsikCode": "D132036",
+        "largeName": "무침류",
+        "middleName": "숙채"
+      }
+    ]
+  },
+  {
+    "name": "참나물무침",
+    "candidates": [
+      {
+        "eumsikName": "참나물깨즙무침",
+        "sikpumVolume": "103.30",
+        "allrgyNm": null,
+        "eumsikCode": "D132116",
+        "largeName": "무침류",
+        "middleName": "숙채"
+      },
+      {
+        "eumsikName": "콩나물무침",
+        "sikpumVolume": "77.00",
+        "allrgyNm": null,
+        "eumsikCode": "D132036",
+        "largeName": "무침류",
+        "middleName": "숙채"
+      },
+      {
+        "eumsikName": "참나물무침(된장)",
+        "sikpumVolume": "65.11",
+        "allrgyNm": null,
+        "eumsikCode": "D132078",
+        "largeName": "무침류",
+        "middleName": "숙채"
+      }
+    ]
+  },
+  {
+    "name": "참다래샐러드",
+    "candidates": [
+      {
+        "eumsikName": "참다랑어샐러드",
+        "sikpumVolume": "100.00",
+        "allrgyNm": null,
+        "eumsikCode": "D288006",
+        "largeName": "원재료",
+        "middleName": "어패류 및 수산물가공품"
+      },
+      {
+        "eumsikName": "동부소스를 곁들인 참다래샐러드",
+        "sikpumVolume": "143.10",
+        "allrgyNm": null,
+        "eumsikCode": "D135038",
+        "largeName": "무침류",
+        "middleName": "생채(샐러드)"
+      },
+      {
+        "eumsikName": "삼채 샐러드",
+        "sikpumVolume": "160.00",
+        "allrgyNm": null,
+        "eumsikCode": "D135020",
+        "largeName": "무침류",
+        "middleName": "생채(샐러드)"
+      }
+    ]
+  },
+  {
+    "name": "참다래주스",
+    "candidates": [
+      {
+        "eumsikName": "다래",
+        "sikpumVolume": "100.00",
+        "allrgyNm": null,
+        "eumsikCode": "D211006",
+        "largeName": "과일 및 과일가공품",
+        "middleName": "과일류"
+      },
+      {
+        "eumsikName": "참다래닭구이",
+        "sikpumVolume": "156.60",
+        "allrgyNm": null,
+        "eumsikCode": "D082045",
+        "largeName": "구이류",
+        "middleName": "육류구이"
+      },
+      {
+        "eumsikName": "감주스",
+        "sikpumVolume": "100.00",
+        "allrgyNm": null,
+        "eumsikCode": "D200009",
+        "largeName": "음료류",
+        "middleName": "과채류"
+      }
+    ]
+  },
+  {
+    "name": "추어탕(어탕)",
+    "candidates": [
+      {
+        "eumsikName": "추어탕",
+        "sikpumVolume": "519.60",
+        "allrgyNm": null,
+        "eumsikCode": "D053057",
+        "largeName": "국(탕)류",
+        "middleName": "곰국 및 탕류"
+      },
+      {
+        "eumsikName": "어묵탕",
+        "sikpumVolume": "82.50",
+        "allrgyNm": null,
+        "eumsikCode": "D053089",
+        "largeName": "국(탕)류",
+        "middleName": "곰국 및 탕류"
+      },
+      {
+        "eumsikName": "추어탕(고추장)",
+        "sikpumVolume": "163.00",
+        "allrgyNm": null,
+        "eumsikCode": "D053030",
+        "largeName": "국(탕)류",
+        "middleName": "곰국 및 탕류"
+      }
+    ]
+  },
+  {
+    "name": "취나물 들깨무침",
+    "candidates": [
+      {
+        "eumsikName": "녹두 취나물 무침",
+        "sikpumVolume": "78.20",
+        "allrgyNm": null,
+        "eumsikCode": "D132111",
+        "largeName": "무침류",
+        "middleName": "숙채"
+      },
+      {
+        "eumsikName": "참나물깨즙무침",
+        "sikpumVolume": "103.30",
+        "allrgyNm": null,
+        "eumsikCode": "D132116",
+        "largeName": "무침류",
+        "middleName": "숙채"
+      },
+      {
+        "eumsikName": "콩나물무침",
+        "sikpumVolume": "77.00",
+        "allrgyNm": null,
+        "eumsikCode": "D132036",
+        "largeName": "무침류",
+        "middleName": "숙채"
+      }
+    ]
+  },
+  {
+    "name": "취나물된장무침",
+    "candidates": [
+      {
+        "eumsikName": "비름나물 된장무침",
+        "sikpumVolume": "120.00",
+        "allrgyNm": null,
+        "eumsikCode": "D132123",
+        "largeName": "무침류",
+        "middleName": "숙채"
+      },
+      {
+        "eumsikName": "녹두 취나물 무침",
+        "sikpumVolume": "78.20",
+        "allrgyNm": null,
+        "eumsikCode": "D132111",
+        "largeName": "무침류",
+        "middleName": "숙채"
+      },
+      {
+        "eumsikName": "콩나물무침",
+        "sikpumVolume": "77.00",
+        "allrgyNm": null,
+        "eumsikCode": "D132036",
+        "largeName": "무침류",
+        "middleName": "숙채"
+      }
+    ]
+  },
+  {
+    "name": "취나물볶음",
+    "candidates": [
+      {
+        "eumsikName": "취나물볶음",
+        "sikpumVolume": "47.00",
+        "allrgyNm": null,
+        "eumsikCode": "D103051",
+        "largeName": "볶음류",
+        "middleName": "채소 및 해조류볶음"
+      },
+      {
+        "eumsikName": "콩나물볶음",
+        "sikpumVolume": "216.00",
+        "allrgyNm": null,
+        "eumsikCode": "D103053",
+        "largeName": "볶음류",
+        "middleName": "채소 및 해조류볶음"
+      },
+      {
+        "eumsikName": "배추나물볶음",
+        "sikpumVolume": "58.00",
+        "allrgyNm": null,
+        "eumsikCode": "D103031",
+        "largeName": "볶음류",
+        "middleName": "채소 및 해조류볶음"
+      }
+    ]
+  },
+  {
+    "name": "취나물비빔밥",
+    "candidates": [
+      {
+        "eumsikName": "나물비빔밥",
+        "sikpumVolume": "82.10",
+        "allrgyNm": null,
+        "eumsikCode": "D014050",
+        "largeName": "밥류",
+        "middleName": "비빔밥 및 볶음밥류"
+      },
+      {
+        "eumsikName": "봄나물비빔밥",
+        "sikpumVolume": "169.00",
+        "allrgyNm": null,
+        "eumsikCode": "D014065",
+        "largeName": "밥류",
+        "middleName": "비빔밥 및 볶음밥류"
+      },
+      {
+        "eumsikName": "산나물비빔밥",
+        "sikpumVolume": "177.00",
+        "allrgyNm": null,
+        "eumsikCode": "D014066",
+        "largeName": "밥류",
+        "middleName": "비빔밥 및 볶음밥류"
+      }
+    ]
+  },
+  {
+    "name": "콩나물겨자냉채",
+    "candidates": [
+      {
+        "eumsikName": "콩나물냉국",
+        "sikpumVolume": "72.00",
+        "allrgyNm": null,
+        "eumsikCode": "D054015",
+        "largeName": "국(탕)류",
+        "middleName": "냉국류"
+      },
+      {
+        "eumsikName": "콩나물잡채",
+        "sikpumVolume": "502.00",
+        "allrgyNm": null,
+        "eumsikCode": "D105019",
+        "largeName": "볶음류",
+        "middleName": "기타 볶음류"
+      },
+      {
+        "eumsikName": "콩나물밥",
+        "sikpumVolume": "254.00",
+        "allrgyNm": null,
+        "eumsikCode": "D013005",
+        "largeName": "밥류",
+        "middleName": "채소밥류"
+      }
+    ]
+  },
+  {
+    "name": "콩나물겨자채",
+    "candidates": [
+      {
+        "eumsikName": "콩나물잡채",
+        "sikpumVolume": "502.00",
+        "allrgyNm": null,
+        "eumsikCode": "D105019",
+        "largeName": "볶음류",
+        "middleName": "기타 볶음류"
+      },
+      {
+        "eumsikName": "콩나물밥",
+        "sikpumVolume": "254.00",
+        "allrgyNm": null,
+        "eumsikCode": "D013005",
+        "largeName": "밥류",
+        "middleName": "채소밥류"
+      },
+      {
+        "eumsikName": "콩나물밥",
+        "sikpumVolume": "232.60",
+        "allrgyNm": null,
+        "eumsikCode": "D013022",
+        "largeName": "밥류",
+        "middleName": "채소밥류"
+      }
+    ]
+  },
+  {
+    "name": "콩나물김치국",
+    "candidates": [
+      {
+        "eumsikName": "콩나물물김치",
+        "sikpumVolume": "122.80",
+        "allrgyNm": null,
+        "eumsikCode": "D140086",
+        "largeName": "김치류",
+        "middleName": "김치류"
+      },
+      {
+        "eumsikName": "콩나물국",
+        "sikpumVolume": "84.00",
+        "allrgyNm": null,
+        "eumsikCode": "D051072",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      },
+      {
+        "eumsikName": "콩나물국밥",
+        "sikpumVolume": "209.30",
+        "allrgyNm": null,
+        "eumsikCode": "D013034",
+        "largeName": "밥류",
+        "middleName": "채소밥류"
+      }
+    ]
+  },
+  {
+    "name": "키조개샤브샤브",
+    "candidates": [
+      {
+        "eumsikName": "샤브샤브전골",
+        "sikpumVolume": "172.20",
+        "allrgyNm": null,
+        "eumsikCode": "D064029",
+        "largeName": "찌개류",
+        "middleName": "전골류"
+      },
+      {
+        "eumsikName": "조개탕",
+        "sikpumVolume": "51.00",
+        "allrgyNm": null,
+        "eumsikCode": "D053091",
+        "largeName": "국(탕)류",
+        "middleName": "곰국 및 탕류"
+      },
+      {
+        "eumsikName": "샤부샤부",
+        "sikpumVolume": "136.00",
+        "allrgyNm": null,
+        "eumsikCode": "D064008",
+        "largeName": "찌개류",
+        "middleName": "전골류"
+      }
+    ]
+  },
+  {
+    "name": "토마토소박이",
+    "candidates": [
+      {
+        "eumsikName": "토마토",
+        "sikpumVolume": "200.00",
+        "allrgyNm": null,
+        "eumsikCode": "D292014",
+        "largeName": "원재료",
+        "middleName": "채소류"
+      },
+      {
+        "eumsikName": "토마토채소수프",
+        "sikpumVolume": "96.96",
+        "allrgyNm": null,
+        "eumsikCode": "D055026",
+        "largeName": "국(탕)류",
+        "middleName": "기타"
+      },
+      {
+        "eumsikName": "토마토소고기찜",
+        "sikpumVolume": "494.00",
+        "allrgyNm": null,
+        "eumsikCode": "D082058",
+        "largeName": "구이류",
+        "middleName": "육류구이"
+      }
+    ]
+  },
+  {
+    "name": "파래무침",
+    "candidates": [
+      {
+        "eumsikName": "건파래무침",
+        "sikpumVolume": "119.00",
+        "allrgyNm": null,
+        "eumsikCode": "D132091",
+        "largeName": "무침류",
+        "middleName": "숙채"
+      },
+      {
+        "eumsikName": "굴무침",
+        "sikpumVolume": "88.00",
+        "allrgyNm": null,
+        "eumsikCode": "D133003",
+        "largeName": "무침류",
+        "middleName": "어패류무침"
+      },
+      {
+        "eumsikName": "닭무침",
+        "sikpumVolume": "103.00",
+        "allrgyNm": null,
+        "eumsikCode": "D134001",
+        "largeName": "무침류",
+        "middleName": "육류무침"
+      }
+    ]
+  },
+  {
+    "name": "표고버섯볶음",
+    "candidates": [
+      {
+        "eumsikName": "표고버섯 차돌박이 볶음",
+        "sikpumVolume": "142.45",
+        "allrgyNm": null,
+        "eumsikCode": "D102053",
+        "largeName": "볶음류",
+        "middleName": "육류 및 난류볶음"
+      },
+      {
+        "eumsikName": "열무버섯볶음",
+        "sikpumVolume": "98.25",
+        "allrgyNm": null,
+        "eumsikCode": "D103080",
+        "largeName": "볶음류",
+        "middleName": "채소 및 해조류볶음"
+      },
+      {
+        "eumsikName": "표고버섯들깨탕",
+        "sikpumVolume": "136.00",
+        "allrgyNm": null,
+        "eumsikCode": "D053132",
+        "largeName": "국(탕)류",
+        "middleName": "곰국 및 탕류"
+      }
+    ]
+  },
+  {
+    "name": "풋고추튀김",
+    "candidates": [
+      {
+        "eumsikName": "고추튀김",
+        "sikpumVolume": "61.00",
+        "allrgyNm": null,
+        "eumsikCode": "D123002",
+        "largeName": "튀김류",
+        "middleName": "채소류튀김"
+      },
+      {
+        "eumsikName": "풋고추 새우살 튀김",
+        "sikpumVolume": "154.15",
+        "allrgyNm": null,
+        "eumsikCode": "D123019",
+        "largeName": "튀김류",
+        "middleName": "채소류튀김"
+      },
+      {
+        "eumsikName": "풋고추",
+        "sikpumVolume": "70.00",
+        "allrgyNm": null,
+        "eumsikCode": "D292016",
+        "largeName": "원재료",
+        "middleName": "채소류"
+      }
+    ]
+  },
+  {
+    "name": "풋마늘반건오징어김치",
+    "candidates": [
+      {
+        "eumsikName": "오징어김치찌개",
+        "sikpumVolume": "784.00",
+        "allrgyNm": null,
+        "eumsikCode": "D061073",
+        "largeName": "찌개류",
+        "middleName": "어패류찌개"
+      },
+      {
+        "eumsikName": "오징어튀김",
+        "sikpumVolume": "93.00",
+        "allrgyNm": null,
+        "eumsikCode": "D121033",
+        "largeName": "튀김류",
+        "middleName": "어패류튀김"
+      },
+      {
+        "eumsikName": "풋마늘김무침",
+        "sikpumVolume": "61.50",
+        "allrgyNm": null,
+        "eumsikCode": "D132118",
+        "largeName": "무침류",
+        "middleName": "숙채"
+      }
+    ]
+  },
+  {
+    "name": "피망두부완자전",
+    "candidates": [
+      {
+        "eumsikName": "두부해물완자",
+        "sikpumVolume": "152.00",
+        "allrgyNm": null,
+        "eumsikCode": "D121044",
+        "largeName": "튀김류",
+        "middleName": "어패류튀김"
+      },
+      {
+        "eumsikName": "피망전",
+        "sikpumVolume": "62.00",
+        "allrgyNm": null,
+        "eumsikCode": "D093018",
+        "largeName": "전류",
+        "middleName": "채소류전"
+      },
+      {
+        "eumsikName": "두부전",
+        "sikpumVolume": "96.00",
+        "allrgyNm": null,
+        "eumsikCode": "D095007",
+        "largeName": "전류",
+        "middleName": "기타 전류"
+      }
+    ]
+  },
+  {
+    "name": "피망야채전",
+    "candidates": [
+      {
+        "eumsikName": "야채전",
+        "sikpumVolume": "92.00",
+        "allrgyNm": null,
+        "eumsikCode": "D093014",
+        "largeName": "전류",
+        "middleName": "채소류전"
+      },
+      {
+        "eumsikName": "피망전",
+        "sikpumVolume": "62.00",
+        "allrgyNm": null,
+        "eumsikCode": "D093018",
+        "largeName": "전류",
+        "middleName": "채소류전"
+      },
+      {
+        "eumsikName": "야채전골",
+        "sikpumVolume": "62.00",
+        "allrgyNm": null,
+        "eumsikCode": "D064011",
+        "largeName": "찌개류",
+        "middleName": "전골류"
+      }
+    ]
+  },
+  {
+    "name": "호두멸치조림",
+    "candidates": [
+      {
+        "eumsikName": "단호박갈치조림",
+        "sikpumVolume": "162.10",
+        "allrgyNm": null,
+        "eumsikCode": "D111054",
+        "largeName": "조림류",
+        "middleName": "어패류조림"
+      },
+      {
+        "eumsikName": "갈치조림",
+        "sikpumVolume": "141.00",
+        "allrgyNm": null,
+        "eumsikCode": "D111002",
+        "largeName": "조림류",
+        "middleName": "어패류조림"
+      },
+      {
+        "eumsikName": "꽁치조림",
+        "sikpumVolume": "67.00",
+        "allrgyNm": null,
+        "eumsikCode": "D111008",
+        "largeName": "조림류",
+        "middleName": "어패류조림"
+      }
+    ]
+  },
+  {
+    "name": "호두버섯무침",
+    "candidates": [
+      {
+        "eumsikName": "호두고추장무침",
+        "sikpumVolume": "458.00",
+        "allrgyNm": null,
+        "eumsikCode": "D135027",
+        "largeName": "무침류",
+        "middleName": "생채(샐러드)"
+      },
+      {
+        "eumsikName": "버섯무침(팽이버섯)",
+        "sikpumVolume": "58.00",
+        "allrgyNm": null,
+        "eumsikCode": "D132018",
+        "largeName": "무침류",
+        "middleName": "숙채"
+      },
+      {
+        "eumsikName": "버섯무침(팽이버섯)",
+        "sikpumVolume": "40.10",
+        "allrgyNm": null,
+        "eumsikCode": "D132080",
+        "largeName": "무침류",
+        "middleName": "숙채"
+      }
+    ]
+  },
+  {
+    "name": "호두잔멸치조림",
+    "candidates": [
+      {
+        "eumsikName": "단호박갈치조림",
+        "sikpumVolume": "162.10",
+        "allrgyNm": null,
+        "eumsikCode": "D111054",
+        "largeName": "조림류",
+        "middleName": "어패류조림"
+      },
+      {
+        "eumsikName": "갈치조림",
+        "sikpumVolume": "141.00",
+        "allrgyNm": null,
+        "eumsikCode": "D111002",
+        "largeName": "조림류",
+        "middleName": "어패류조림"
+      },
+      {
+        "eumsikName": "꽁치조림",
+        "sikpumVolume": "67.00",
+        "allrgyNm": null,
+        "eumsikCode": "D111008",
+        "largeName": "조림류",
+        "middleName": "어패류조림"
+      }
+    ]
+  },
+  {
+    "name": "호박가지전",
+    "candidates": [
+      {
+        "eumsikName": "가지전",
+        "sikpumVolume": "97.00",
+        "allrgyNm": null,
+        "eumsikCode": "D093001",
+        "largeName": "전류",
+        "middleName": "채소류전"
+      },
+      {
+        "eumsikName": "단호박 마전",
+        "sikpumVolume": "103.30",
+        "allrgyNm": null,
+        "eumsikCode": "D093052",
+        "largeName": "전류",
+        "middleName": "채소류전"
+      },
+      {
+        "eumsikName": "애호박새우전 ",
+        "sikpumVolume": "143.55",
+        "allrgyNm": null,
+        "eumsikCode": "D093049",
+        "largeName": "전류",
+        "middleName": "채소류전"
+      }
+    ]
+  },
+  {
+    "name": "호박볶음",
+    "candidates": [
+      {
+        "eumsikName": "호박볶음",
+        "sikpumVolume": "114.00",
+        "allrgyNm": null,
+        "eumsikCode": "D103055",
+        "largeName": "볶음류",
+        "middleName": "채소 및 해조류볶음"
+      },
+      {
+        "eumsikName": "호박볶음(새우젓)",
+        "sikpumVolume": "124.00",
+        "allrgyNm": null,
+        "eumsikCode": "D103056",
+        "largeName": "볶음류",
+        "middleName": "채소 및 해조류볶음"
+      },
+      {
+        "eumsikName": "호박죽",
+        "sikpumVolume": "118.00",
+        "allrgyNm": null,
+        "eumsikCode": "D040014",
+        "largeName": "죽류",
+        "middleName": "죽류"
+      }
+    ]
+  },
+  {
+    "name": "홍합달래전",
+    "candidates": [
+      {
+        "eumsikName": "홍합전",
+        "sikpumVolume": "131.00",
+        "allrgyNm": null,
+        "eumsikCode": "D091013",
+        "largeName": "전류",
+        "middleName": "어패류전"
+      },
+      {
+        "eumsikName": "홍합밥",
+        "sikpumVolume": "112.00",
+        "allrgyNm": null,
+        "eumsikCode": "D017006",
+        "largeName": "밥류",
+        "middleName": "기타"
+      },
+      {
+        "eumsikName": "홍합국",
+        "sikpumVolume": "54.00",
+        "allrgyNm": null,
+        "eumsikCode": "D051085",
+        "largeName": "국(탕)류",
+        "middleName": "맑은국류"
+      }
+    ]
+  }
+]

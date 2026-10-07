@@ -1,0 +1,15 @@
+{
+  "beforeUnknown": 274,
+  "automaticResolved": 36,
+  "officialDescriptionResolved": 13,
+  "previousUnknownRemaining": 225,
+  "newUnknown": 4,
+  "afterUnknown": 229,
+  "remainingReasons": {
+    "NO_EXISTING_SOUP_MENU_CATEGORY": 16,
+    "AMBIGUOUS_NAME_OR_UNSUPPORTED_DISH_KIND": 150,
+    "INGREDIENT_TOPPING_OR_PORTION_IDENTITY": 32,
+    "MIXED_SET_NOT_SINGLE_DISH": 27
+  },
+  "allExistingFoodAssetBytesUnchanged": true
+}

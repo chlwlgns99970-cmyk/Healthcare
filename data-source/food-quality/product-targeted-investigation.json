@@ -1,0 +1,2274 @@
+{
+  "allergenPolicy": "Whole product/component declaration captured only for exact identity. Canonical supported tags plus other declared positive allergens are retained. Missing labels remain UNKNOWN; cross-contact is separate.",
+  "apiKeysUsed": 0,
+  "checkedAt": "2026-10-04",
+  "counts": {
+    "brands": 13,
+    "completeIngredientDeclarations": 0,
+    "confirmedAllergenDeclarations": 2,
+    "partialIngredientEvidence": 2,
+    "recommendationRows": 27,
+    "uniqueFoodItems": 26,
+    "unknownAllergenRows": 24,
+    "unknownIngredientRows": 24
+  },
+  "csvSha256": "490609555740d2b5dc7f02b227075a3665876122300d4ab6874eb730d4aed5db",
+  "focusedParserTests": 2,
+  "identityPolicy": "Exact bundled foodItemId and sourceFoodCode. Remove only explicit original classification prefixes. Never join historical generic food titles, changed product variants, promotional versions or fuzzy names.",
+  "ingredientPolicy": "Only literal source toppings or product-associated country-of-origin ingredient nouns. Product titles, marketing tags, flavors and allergy labels are not ingredient inputs.",
+  "investigations": [
+    {
+      "allergenOutcome": "UNKNOWN",
+      "brand": "피자알볼로",
+      "candidates": [
+        {
+          "officialCode": 348,
+          "officialName": "맘맘 치즈오븐김치볶음밥"
+        },
+        {
+          "officialCode": 78,
+          "officialName": "목동햄김치볶음밥"
+        },
+        {
+          "officialCode": 282,
+          "officialName": "김치볶음밥+계란후라이"
+        }
+      ],
+      "canonicalMenuName": "치즈오븐김치볶음밥",
+      "checkedAt": "2026-10-04",
+      "exactOfficialName": "",
+      "foodItemId": "kfind-d201-059200000-0002",
+      "ingredientOutcome": "UNKNOWN",
+      "name": "김치 볶음밥_치즈오븐김치볶음밥",
+      "note": "맘맘 promotional menu and 김치볶음밥+계란후라이 differ from source identity; no identity/product-code mapping is published. Do not transfer their labels.",
+      "officialCode": "",
+      "rawDataCreatedAt": "2025-09-30",
+      "rawFoodName": "김치 볶음밥_치즈오븐김치볶음밥",
+      "rawReferenceWeight": "356g",
+      "reason": "OFFICIAL_CURRENT_VARIANTS_DIFFER_NO_EXACT_PRODUCT_IDENTITY",
+      "removedExplicitClassification": [
+        "김치 볶음밥"
+      ],
+      "reviewedSources": [
+        {
+          "byteCount": 670087,
+          "checkedAt": "2026-10-04",
+          "contentType": "application/json",
+          "file": "ca2245e5576f1328.raw",
+          "finalUrl": "https://api2.pizzaalvolo.co.kr/api/v1/customer/common/product/list?regDate=&isEcoupon=n",
+          "parserVersion": "targeted-product-2026-10-04-v1",
+          "sourceHash": "615190d4866e3e800c9ea07ccd4aae98a39186f1949b694fdc05258f2d878e7e",
+          "status": 200,
+          "url": "https://api2.pizzaalvolo.co.kr/api/v1/customer/common/product/list?regDate=&isEcoupon=n"
+        },
+        {
+          "byteCount": 25710,
+          "checkedAt": "2026-10-04",
+          "contentType": "application/json",
+          "file": "d1e820d5b0b4035d.raw",
+          "finalUrl": "https://api2.pizzaalvolo.co.kr/api/v1/customer/common/product/noticeinfo",
+          "parserVersion": "targeted-product-2026-10-04-v1",
+          "sourceHash": "5081fc2a9d68e3fc098c3268671ba26e82a2d995c333aa3f9f8fdefd1d4cfb33",
+          "status": 200,
+          "url": "https://api2.pizzaalvolo.co.kr/api/v1/customer/common/product/noticeinfo"
+        }
+      ],
+      "scannedOfficialMenus": 127,
+      "sourceFoodCode": "D201-059200000-0002"
+    },
+    {
+      "allergenOutcome": "UNKNOWN",
+      "brand": "뚜레쥬르",
+      "canonicalMenuName": "매콤치킨랩",
+      "checkedAt": "2026-10-04",
+      "exactOfficialName": "",
+      "foodItemId": "kfind-d202-083000000-0020",
+      "ingredientOutcome": "UNKNOWN",
+      "name": "또띠아_매콤치킨랩",
+      "note": "442 official current menu detail pages were previously cached; no exact menu title. No fresh catalogue collection.",
+      "officialCode": "",
+      "rawDataCreatedAt": "2025-09-30",
+      "rawFoodName": "또띠아_매콤치킨랩",
+      "rawReferenceWeight": "250g",
+      "reason": "NO_EXACT_CURRENT_OFFICIAL_MENU_AFTER_442_DETAIL_CACHE_REVIEW",
+      "removedExplicitClassification": [
+        "또띠아"
+      ],
+      "reusedCache": "data-source/franchise/raw/coffee-bakery-request-manifest.json",
+      "reviewedSources": [
+        {
+          "byteCount": 458344,
+          "checkedAt": "2026-10-04",
+          "contentType": "text/html;charset=euc-kr; Charset=euc-kr",
+          "file": "coffee-bakery-tlj-product-result-7a4ccd19c648.raw",
+          "finalUrl": "https://www.tlj.co.kr/product/result.asp",
+          "form": {},
+          "method": "GET",
+          "parserVersion": "coffee-bakery-2026-10-04-v1",
+          "sourceDate": "",
+          "sourceHash": "d9d03c4c19ed9d34d5237599ef1b464f0c247a696c39c3f75acc24fc536d678d",
+          "status": 200,
+          "url": "https://www.tlj.co.kr/product/result.asp"
+        }
+      ],
+      "scannedOfficialMenus": 442,
+      "sourceFoodCode": "D202-083000000-0020"
+    },
+    {
+      "allergenOutcome": "UNKNOWN",
+      "brand": "뚜레쥬르",
+      "canonicalMenuName": "베지텐더밸런스랩",
+      "checkedAt": "2026-10-04",
+      "exactOfficialName": "",
+      "foodItemId": "kfind-d202-083000000-0021",
+      "ingredientOutcome": "UNKNOWN",
+      "name": "또띠아_베지텐더밸런스랩",
+      "note": "442 official current menu detail pages were previously cached; no exact menu title. No fresh catalogue collection.",
+      "officialCode": "",
+      "rawDataCreatedAt": "2025-09-30",
+      "rawFoodName": "또띠아_베지텐더밸런스랩",
+      "rawReferenceWeight": "212g",
+      "reason": "NO_EXACT_CURRENT_OFFICIAL_MENU_AFTER_442_DETAIL_CACHE_REVIEW",
+      "removedExplicitClassification": [
+        "또띠아"
+      ],
+      "reusedCache": "data-source/franchise/raw/coffee-bakery-request-manifest.json",
+      "reviewedSources": [
+        {
+          "byteCount": 458344,
+          "checkedAt": "2026-10-04",
+          "contentType": "text/html;charset=euc-kr; Charset=euc-kr",
+          "file": "coffee-bakery-tlj-product-result-7a4ccd19c648.raw",
+          "finalUrl": "https://www.tlj.co.kr/product/result.asp",
+          "form": {},
+          "method": "GET",
+          "parserVersion": "coffee-bakery-2026-10-04-v1",
+          "sourceDate": "",
+          "sourceHash": "d9d03c4c19ed9d34d5237599ef1b464f0c247a696c39c3f75acc24fc536d678d",
+          "status": 200,
+          "url": "https://www.tlj.co.kr/product/result.asp"
+        }
+      ],
+      "scannedOfficialMenus": 442,
+      "sourceFoodCode": "D202-083000000-0021"
+    },
+    {
+      "allergenOutcome": "UNKNOWN",
+      "brand": "뚜레쥬르",
+      "canonicalMenuName": "싱그러운치킨텐더그린랩",
+      "checkedAt": "2026-10-04",
+      "exactOfficialName": "",
+      "foodItemId": "kfind-d202-083000000-0022",
+      "ingredientOutcome": "UNKNOWN",
+      "name": "또띠아_싱그러운치킨텐더그린랩",
+      "note": "442 official current menu detail pages were previously cached; no exact menu title. No fresh catalogue collection.",
+      "officialCode": "",
+      "rawDataCreatedAt": "2025-09-30",
+      "rawFoodName": "또띠아_싱그러운치킨텐더그린랩",
+      "rawReferenceWeight": "270g",
+      "reason": "NO_EXACT_CURRENT_OFFICIAL_MENU_AFTER_442_DETAIL_CACHE_REVIEW",
+      "removedExplicitClassification": [
+        "또띠아"
+      ],
+      "reusedCache": "data-source/franchise/raw/coffee-bakery-request-manifest.json",
+      "reviewedSources": [
+        {
+          "byteCount": 458344,
+          "checkedAt": "2026-10-04",
+          "contentType": "text/html;charset=euc-kr; Charset=euc-kr",
+          "file": "coffee-bakery-tlj-product-result-7a4ccd19c648.raw",
+          "finalUrl": "https://www.tlj.co.kr/product/result.asp",
+          "form": {},
+          "method": "GET",
+          "parserVersion": "coffee-bakery-2026-10-04-v1",
+          "sourceDate": "",
+          "sourceHash": "d9d03c4c19ed9d34d5237599ef1b464f0c247a696c39c3f75acc24fc536d678d",
+          "status": 200,
+          "url": "https://www.tlj.co.kr/product/result.asp"
+        }
+      ],
+      "scannedOfficialMenus": 442,
+      "sourceFoodCode": "D202-083000000-0022"
+    },
+    {
+      "allergenOutcome": "CONFIRMED_LABEL",
+      "brand": "버거킹",
+      "canonicalMenuName": "크리스퍼랩",
+      "checkedAt": "2026-10-04",
+      "exactOfficialName": "크리스퍼 랩",
+      "foodItemId": "kfind-d202-083000000-0023",
+      "ingredientOutcome": "PARTIAL_DESCRIPTION",
+      "name": "또띠아_크리스퍼랩",
+      "note": "Anonymous official menu detail code and exact name were checked. Allergy table is exact menu name. Explicit country-of-origin association alone supplies 닭고기; item_ingredient_list marketing tags are excluded.",
+      "officialCode": "2200284",
+      "rawDataCreatedAt": "2025-09-30",
+      "rawFoodName": "또띠아_크리스퍼랩",
+      "rawReferenceWeight": "133g",
+      "reason": "EXACT_CURRENT_MENU_CODE_ORIGIN_AND_ALLERGEN_DECLARATION",
+      "removedExplicitClassification": [
+        "또띠아"
+      ],
+      "reviewedSources": [
+        {
+          "byteCount": 17344,
+          "checkedAt": "2026-10-04",
+          "contentType": "application/json;charset=UTF-8",
+          "file": "db571bee120c2665.raw",
+          "finalUrl": "https://web-prd.burgerking.co.kr/burgerking/BKR0634.json",
+          "method": "POST",
+          "parserVersion": "targeted-product-2026-10-04-v1",
+          "publicForm": {
+            "message": "{\"header\": {\"trcode\": \"BKR0634\", \"login_session_id\": \"\"}, \"body\": {\"menuCd\": \"2200284\"}}"
+          },
+          "requestKey": "POST https://web-prd.burgerking.co.kr/burgerking/BKR0634.json 85e209808c92",
+          "sourceHash": "5c04cca6eb3f51ae78840f9d5f8bfb12ad63fa2a475d7c5bf53ac193d6c5ea75",
+          "status": 200,
+          "url": "https://web-prd.burgerking.co.kr/burgerking/BKR0634.json"
+        },
+        {
+          "byteCount": 59606,
+          "checkedAt": "2026-10-04",
+          "contentType": "application/json;charset=UTF-8",
+          "file": "1a237acf101daeae.raw",
+          "finalUrl": "https://web-prd.burgerking.co.kr/burgerking/BKR0347.json",
+          "method": "POST",
+          "parserVersion": "targeted-product-2026-10-04-v1",
+          "publicForm": {
+            "message": "{\"header\": {\"trcode\": \"BKR0347\", \"login_session_id\": \"\"}, \"body\": {}}"
+          },
+          "requestKey": "POST https://web-prd.burgerking.co.kr/burgerking/BKR0347.json b54803e29118",
+          "sourceHash": "d1e25f013a852549552ab25de3828d079ad31c8d9cbaf176c3e70df38c01a0c8",
+          "status": 200,
+          "url": "https://web-prd.burgerking.co.kr/burgerking/BKR0347.json"
+        }
+      ],
+      "sourceFoodCode": "D202-083000000-0023",
+      "userProductUrl": "https://www.burgerking.co.kr/menu/detail/2200284"
+    },
+    {
+      "allergenOutcome": "UNKNOWN",
+      "brand": "뚜레쥬르",
+      "canonicalMenuName": "그릴치킨 당근라페 샌드위치",
+      "checkedAt": "2026-10-04",
+      "exactOfficialName": "",
+      "foodItemId": "kfind-d202-096000000-0117",
+      "ingredientOutcome": "UNKNOWN",
+      "name": "샌드위치_그릴치킨 당근라페 샌드위치",
+      "note": "442 official current menu detail pages were previously cached; no exact menu title. No fresh catalogue collection.",
+      "officialCode": "",
+      "rawDataCreatedAt": "2023-10-31",
+      "rawFoodName": "샌드위치_그릴치킨 당근라페 샌드위치",
+      "rawReferenceWeight": "204g",
+      "reason": "NO_EXACT_CURRENT_OFFICIAL_MENU_AFTER_442_DETAIL_CACHE_REVIEW",
+      "removedExplicitClassification": [
+        "샌드위치"
+      ],
+      "reusedCache": "data-source/franchise/raw/coffee-bakery-request-manifest.json",
+      "reviewedSources": [
+        {
+          "byteCount": 458344,
+          "checkedAt": "2026-10-04",
+          "contentType": "text/html;charset=euc-kr; Charset=euc-kr",
+          "file": "coffee-bakery-tlj-product-result-7a4ccd19c648.raw",
+          "finalUrl": "https://www.tlj.co.kr/product/result.asp",
+          "form": {},
+          "method": "GET",
+          "parserVersion": "coffee-bakery-2026-10-04-v1",
+          "sourceDate": "",
+          "sourceHash": "d9d03c4c19ed9d34d5237599ef1b464f0c247a696c39c3f75acc24fc536d678d",
+          "status": 200,
+          "url": "https://www.tlj.co.kr/product/result.asp"
+        }
+      ],
+      "scannedOfficialMenus": 442,
+      "sourceFoodCode": "D202-096000000-0117"
+    },
+    {
+      "allergenOutcome": "UNKNOWN",
+      "brand": "뚜레쥬르",
+      "canonicalMenuName": "고소한햄에그샌드위치",
+      "checkedAt": "2026-10-04",
+      "exactOfficialName": "",
+      "foodItemId": "kfind-d202-096000000-0158",
+      "ingredientOutcome": "UNKNOWN",
+      "name": "샌드위치_고소한햄에그샌드위치",
+      "note": "442 official current menu detail pages were previously cached; no exact menu title. No fresh catalogue collection.",
+      "officialCode": "",
+      "rawDataCreatedAt": "2025-09-30",
+      "rawFoodName": "샌드위치_고소한햄에그샌드위치",
+      "rawReferenceWeight": "273g",
+      "reason": "NO_EXACT_CURRENT_OFFICIAL_MENU_AFTER_442_DETAIL_CACHE_REVIEW",
+      "removedExplicitClassification": [
+        "샌드위치"
+      ],
+      "reusedCache": "data-source/franchise/raw/coffee-bakery-request-manifest.json",
+      "reviewedSources": [
+        {
+          "byteCount": 458344,
+          "checkedAt": "2026-10-04",
+          "contentType": "text/html;charset=euc-kr; Charset=euc-kr",
+          "file": "coffee-bakery-tlj-product-result-7a4ccd19c648.raw",
+          "finalUrl": "https://www.tlj.co.kr/product/result.asp",
+          "form": {},
+          "method": "GET",
+          "parserVersion": "coffee-bakery-2026-10-04-v1",
+          "sourceDate": "",
+          "sourceHash": "d9d03c4c19ed9d34d5237599ef1b464f0c247a696c39c3f75acc24fc536d678d",
+          "status": 200,
+          "url": "https://www.tlj.co.kr/product/result.asp"
+        }
+      ],
+      "scannedOfficialMenus": 442,
+      "sourceFoodCode": "D202-096000000-0158"
+    },
+    {
+      "allergenOutcome": "UNKNOWN",
+      "brand": "파리바게뜨",
+      "candidates": [
+        "저당 그릭요거트 케이크(조각)",
+        "[파란라벨]저당 그릭요거트 케이크"
+      ],
+      "canonicalMenuName": "플레인 저당 그릭요거트 컵케이크",
+      "checkedAt": "2026-10-04",
+      "exactOfficialName": "",
+      "foodItemId": "kfind-d202-110000000-0545",
+      "ingredientOutcome": "UNKNOWN",
+      "name": "케이크_플레인 저당 그릭요거트 컵케이크",
+      "note": "Official exact-title search returned 0 products. Broader literal keyword search was also reviewed; other product titles do not match.",
+      "officialCode": "",
+      "rawDataCreatedAt": "2025-09-30",
+      "rawFoodName": "케이크_플레인 저당 그릭요거트 컵케이크",
+      "rawReferenceWeight": "75g",
+      "reason": "OFFICIAL_EXACT_NAME_SEARCH_ZERO_RESULTS",
+      "removedExplicitClassification": [
+        "케이크"
+      ],
+      "reviewedSources": [
+        {
+          "byteCount": 43128,
+          "checkedAt": "2026-10-04",
+          "contentType": "text/html; charset=UTF-8",
+          "file": "1090e08e3894197a.raw",
+          "finalUrl": "https://www.paris.co.kr/?s=%ED%94%8C%EB%A0%88%EC%9D%B8+%EC%A0%80%EB%8B%B9+%EA%B7%B8%EB%A6%AD%EC%9A%94%EA%B1%B0%ED%8A%B8+%EC%BB%B5%EC%BC%80%EC%9D%B4%ED%81%AC",
+          "parserVersion": "targeted-product-2026-10-04-v1",
+          "sourceHash": "c6a8213739bed17f7575d00f0800c055e4c423c275c8b0d4eebefe79b570803c",
+          "status": 200,
+          "url": "https://www.paris.co.kr/?s=플레인+저당+그릭요거트+컵케이크"
+        },
+        {
+          "byteCount": 48832,
+          "checkedAt": "2026-10-04",
+          "contentType": "text/html; charset=UTF-8",
+          "file": "06c6cb2ab720e6a8.raw",
+          "finalUrl": "https://www.paris.co.kr/?s=%EA%B7%B8%EB%A6%AD%EC%9A%94%EA%B1%B0%ED%8A%B8",
+          "parserVersion": "targeted-product-2026-10-04-v1",
+          "sourceHash": "9518642f8b74d30a9cc74210a214f300f876ca9b8629572c2ef8e1dc174d8f42",
+          "status": 200,
+          "url": "https://www.paris.co.kr/?s=그릭요거트"
+        }
+      ],
+      "sourceFoodCode": "D202-110000000-0545"
+    },
+    {
+      "allergenOutcome": "UNKNOWN",
+      "brand": "파리바게뜨",
+      "canonicalMenuName": "갈릭스틱토스트",
+      "checkedAt": "2026-10-04",
+      "exactOfficialName": "",
+      "foodItemId": "kfind-d202-115000000-0001",
+      "ingredientOutcome": "UNKNOWN",
+      "name": "토스트_갈릭스틱토스트",
+      "note": "Official exact-title search returned 0 products. Broader literal keyword search was also reviewed; other product titles do not match.",
+      "officialCode": "",
+      "rawDataCreatedAt": "2022-10-30",
+      "rawFoodName": "토스트_갈릭스틱토스트",
+      "rawReferenceWeight": "41g",
+      "reason": "OFFICIAL_EXACT_NAME_SEARCH_ZERO_RESULTS",
+      "removedExplicitClassification": [
+        "토스트"
+      ],
+      "reviewedSources": [
+        {
+          "byteCount": 42696,
+          "checkedAt": "2026-10-04",
+          "contentType": "text/html; charset=UTF-8",
+          "file": "9ad52ca9b4864ae0.raw",
+          "finalUrl": "https://www.paris.co.kr/?s=%EA%B0%88%EB%A6%AD%EC%8A%A4%ED%8B%B1%ED%86%A0%EC%8A%A4%ED%8A%B8",
+          "parserVersion": "targeted-product-2026-10-04-v1",
+          "sourceHash": "975df0fddba293ea06de66644aaecfc2fab4f0a0dcaee509c45b565f5ef6af12",
+          "status": 200,
+          "url": "https://www.paris.co.kr/?s=갈릭스틱토스트"
+        },
+        {
+          "byteCount": 45627,
+          "checkedAt": "2026-10-04",
+          "contentType": "text/html; charset=UTF-8",
+          "file": "61debb1b7247e969.raw",
+          "finalUrl": "https://www.paris.co.kr/?s=%EA%B0%88%EB%A6%AD",
+          "parserVersion": "targeted-product-2026-10-04-v1",
+          "sourceHash": "3b5c611281395a8575b68dfafe74fdcde904ae7f85595aaf48aaffa5d21c9c28",
+          "status": 200,
+          "url": "https://www.paris.co.kr/?s=갈릭"
+        }
+      ],
+      "sourceFoodCode": "D202-115000000-0001"
+    },
+    {
+      "allergenOutcome": "UNKNOWN",
+      "brand": "뚜레쥬르",
+      "canonicalMenuName": "갈릭치즈토스트",
+      "checkedAt": "2026-10-04",
+      "exactOfficialName": "",
+      "foodItemId": "kfind-d202-115000000-0002",
+      "ingredientOutcome": "UNKNOWN",
+      "name": "토스트_갈릭치즈토스트",
+      "note": "442 official current menu detail pages were previously cached; no exact menu title. No fresh catalogue collection.",
+      "officialCode": "",
+      "rawDataCreatedAt": "2023-10-31",
+      "rawFoodName": "토스트_갈릭치즈토스트",
+      "rawReferenceWeight": "70g",
+      "reason": "NO_EXACT_CURRENT_OFFICIAL_MENU_AFTER_442_DETAIL_CACHE_REVIEW",
+      "removedExplicitClassification": [
+        "토스트"
+      ],
+      "reusedCache": "data-source/franchise/raw/coffee-bakery-request-manifest.json",
+      "reviewedSources": [
+        {
+          "byteCount": 458344,
+          "checkedAt": "2026-10-04",
+          "contentType": "text/html;charset=euc-kr; Charset=euc-kr",
+          "file": "coffee-bakery-tlj-product-result-7a4ccd19c648.raw",
+          "finalUrl": "https://www.tlj.co.kr/product/result.asp",
+          "form": {},
+          "method": "GET",
+          "parserVersion": "coffee-bakery-2026-10-04-v1",
+          "sourceDate": "",
+          "sourceHash": "d9d03c4c19ed9d34d5237599ef1b464f0c247a696c39c3f75acc24fc536d678d",
+          "status": 200,
+          "url": "https://www.tlj.co.kr/product/result.asp"
+        }
+      ],
+      "scannedOfficialMenus": 442,
+      "sourceFoodCode": "D202-115000000-0002"
+    },
+    {
+      "allergenOutcome": "UNKNOWN",
+      "brand": "따삐오",
+      "canonicalMenuName": "구운햄치즈 토스트",
+      "checkedAt": "2026-10-04",
+      "exactOfficialName": "",
+      "foodItemId": "kfind-d202-115000000-0003",
+      "ingredientOutcome": "UNKNOWN",
+      "name": "토스트_구운햄치즈 토스트",
+      "note": "Candidate brand domain DNS fails. Official SPC Samlip store-brand catalogue was reviewed; no 따삐오 product menu or 구운햄치즈 토스트 label. Legacy brand path returns 404.",
+      "officialCode": "",
+      "rawDataCreatedAt": "2022-10-30",
+      "rawFoodName": "토스트_구운햄치즈 토스트",
+      "rawReferenceWeight": "157g",
+      "reason": "LEGACY_BRAND_PRODUCT_PAGE_UNAVAILABLE_NO_EXACT_LABEL",
+      "removedExplicitClassification": [
+        "토스트"
+      ],
+      "reviewedSources": [
+        {
+          "checkedAt": "2026-10-04",
+          "error": "URLError: <urlopen error [Errno 11002] getaddrinfo failed>",
+          "method": "GET",
+          "parserVersion": "targeted-product-2026-10-04-v1",
+          "requestKey": "https://www.tapiau.co.kr/",
+          "status": null,
+          "url": "https://www.tapiau.co.kr/"
+        },
+        {
+          "checkedAt": "2026-10-04",
+          "error": "URLError: <urlopen error [Errno 11002] getaddrinfo failed>",
+          "method": "GET",
+          "parserVersion": "targeted-product-2026-10-04-v1",
+          "requestKey": "http://www.tapiau.co.kr/",
+          "status": null,
+          "url": "http://www.tapiau.co.kr/"
+        },
+        {
+          "byteCount": 40902,
+          "checkedAt": "2026-10-04",
+          "contentType": "text/html; charset=utf-8",
+          "file": "8ced82e6f58b1b41.raw",
+          "finalUrl": "https://spcsamlip.co.kr/brand/store",
+          "parserVersion": "targeted-product-2026-10-04-v1",
+          "sourceHash": "4dc44ee6757134dd4b1b2e04ae847b7eb34faaa3b2e880776e21ec3ba2f7ca6a",
+          "status": 200,
+          "url": "https://spcsamlip.co.kr/brand/store"
+        },
+        {
+          "checkedAt": "2026-10-04",
+          "error": "HTTPError: HTTP Error 404: Not Found",
+          "parserVersion": "targeted-product-2026-10-04-v1",
+          "status": 404,
+          "url": "https://spcsamlip.co.kr/brand/tapiau/"
+        }
+      ],
+      "sourceFoodCode": "D202-115000000-0003"
+    },
+    {
+      "allergenOutcome": "UNKNOWN",
+      "brand": "크로플덕오리아가씨",
+      "canonicalMenuName": "누텔라 바나나 토스트",
+      "checkedAt": "2026-10-04",
+      "exactOfficialName": "",
+      "foodItemId": "kfind-d202-115000000-0024",
+      "ingredientOutcome": "UNKNOWN",
+      "name": "토스트_누텔라 바나나 토스트",
+      "note": "Identified brand-domain HTTPS request fails expired-certificate verification; HTTP returns 403. Product label could not be read. Third-party menus are excluded.",
+      "officialCode": "",
+      "rawDataCreatedAt": "2023-10-31",
+      "rawFoodName": "토스트_누텔라 바나나 토스트",
+      "rawReferenceWeight": "146g",
+      "reason": "OFFICIAL_DOMAIN_CERTIFICATE_EXPIRED_AND_HTTP_FORBIDDEN",
+      "removedExplicitClassification": [
+        "토스트"
+      ],
+      "reviewedSources": [
+        {
+          "checkedAt": "2026-10-04",
+          "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1010)>",
+          "parserVersion": "targeted-product-2026-10-04-v1",
+          "status": null,
+          "url": "https://croffleduck.co.kr/"
+        },
+        {
+          "checkedAt": "2026-10-04",
+          "error": "HTTPError: HTTP Error 403: Forbidden",
+          "parserVersion": "targeted-product-2026-10-04-v1",
+          "status": 403,
+          "url": "http://croffleduck.co.kr/"
+        }
+      ],
+      "sourceFoodCode": "D202-115000000-0024"
+    },
+    {
+      "allergenOutcome": "CONFIRMED_LABEL",
+      "brand": "피자스쿨",
+      "canonicalMenuName": "치즈오븐스파게티",
+      "checkedAt": "2026-10-04",
+      "exactOfficialName": "치즈오븐스파게티",
+      "foodItemId": "kfind-d203-194000000-0004",
+      "ingredientOutcome": "PARTIAL_DESCRIPTION",
+      "name": "오븐스파게티_치즈오븐스파게티",
+      "note": "All declared component allergen rows are captured. Ingredients are partial toppings/country-of-origin evidence; no full recipe is claimed. Current 400g menu does not verify older K-FIND 420g analysis.",
+      "officialCode": "WORDPRESS-725",
+      "rawDataCreatedAt": "2025-09-30",
+      "rawFoodName": "오븐스파게티_치즈오븐스파게티",
+      "rawReferenceWeight": "420g",
+      "reason": "EXACT_CURRENT_MENU_PARTIAL_INGREDIENTS_AND_FULL_DECLARED_ALLERGEN_TABLE",
+      "removedExplicitClassification": [
+        "오븐스파게티"
+      ],
+      "reviewedSources": [
+        {
+          "byteCount": 285246,
+          "checkedAt": "2026-10-04",
+          "contentType": "text/html; charset=UTF-8",
+          "file": "b8480f65e0a1dcd3.raw",
+          "finalUrl": "http://pizzaschool.net/menu/",
+          "parserVersion": "targeted-product-2026-10-04-v1",
+          "sourceHash": "482c0938e5b987fd1d1295c8ee86f305641cd145e3093536ea859e1db9d74a24",
+          "status": 200,
+          "url": "http://pizzaschool.net/menu/"
+        },
+        {
+          "byteCount": 143342,
+          "checkedAt": "2026-10-04",
+          "contentType": "text/html; charset=UTF-8",
+          "file": "acdef29b6fea1fbb.raw",
+          "finalUrl": "http://pizzaschool.net/menu/%EC%B9%98%EC%A6%88%EC%98%A4%EB%B8%90%EC%8A%A4%ED%8C%8C%EA%B2%8C%ED%8B%B0/",
+          "parserVersion": "targeted-product-2026-10-04-v1",
+          "sourceHash": "4e2317a40815b0db3027b1e53e29242aa80e1ef1857774ce9d054c4360f67101",
+          "status": 200,
+          "url": "http://pizzaschool.net/menu/치즈오븐스파게티/"
+        }
+      ],
+      "sourceFoodCode": "D203-194000000-0004"
+    },
+    {
+      "allergenOutcome": "UNKNOWN",
+      "brand": "봉수아피자",
+      "canonicalMenuName": "국물떡볶이",
+      "checkedAt": "2026-10-04",
+      "exactOfficialName": "국물떡볶이",
+      "foodItemId": "kfind-d210-467000000-0008",
+      "ingredientOutcome": "UNKNOWN",
+      "name": "떡볶이_국물떡볶이",
+      "note": "Exact current side card contains only title/photo. Official origin image was visually reviewed and does not list 국물떡볶이. No ingredient or allergen label is published on these sources.",
+      "officialCode": "",
+      "rawDataCreatedAt": "2025-09-30",
+      "rawFoodName": "떡볶이_국물떡볶이",
+      "rawReferenceWeight": "415g",
+      "reason": "EXACT_OFFICIAL_MENU_CARD_NO_PRODUCT_COMPOSITION_OR_ALLERGEN_LABEL",
+      "removedExplicitClassification": [
+        "떡볶이"
+      ],
+      "reviewedSources": [
+        {
+          "byteCount": 216407,
+          "checkedAt": "2026-10-04",
+          "contentType": "text/html; charset=UTF-8",
+          "file": "0451bb9040525409.raw",
+          "finalUrl": "https://bongsuapizza.com/%EC%82%AC%EC%9D%B4%EB%93%9C",
+          "parserVersion": "targeted-product-2026-10-04-v1",
+          "sourceHash": "2894e33ab56a04095da0d7b7d84ca71f0bb06676913fdeeeb6c5585f049ba661",
+          "status": 200,
+          "url": "https://bongsuapizza.com/사이드"
+        },
+        {
+          "byteCount": 117840,
+          "checkedAt": "2026-10-04",
+          "contentType": "text/html; charset=UTF-8",
+          "file": "9b1ee91bd184e78f.raw",
+          "finalUrl": "https://bongsuapizza.com/%EC%9B%90%EC%82%B0%EC%A7%80%ED%91%9C%EC%8B%9C%ED%8C%90",
+          "method": "GET",
+          "parserVersion": "targeted-product-2026-10-04-v1",
+          "requestKey": "https://bongsuapizza.com/원산지표시판",
+          "sourceHash": "92ccc3ef37c4cd6a6aa10e3a46ba38d36c6e5fc26b3aa1241e3075f7650e9c0e",
+          "status": 200,
+          "url": "https://bongsuapizza.com/원산지표시판"
+        },
+        {
+          "byteCount": 228636,
+          "checkedAt": "2026-10-04",
+          "contentType": "image/jpeg",
+          "file": "b327faec436065bc.raw",
+          "finalUrl": "https://lh3.googleusercontent.com/Aj6Il2yJyr_XHD2QwS7cSUE9LPTTM8bkebBB9HUKdx-DhoOChpZ2XYaouIwVCLVAJXR--lKyag68J8NPh3HBiR1LtmW5I8YR9O0gO5aFNgCcPE2Jf0Cy24U=w800",
+          "method": "GET",
+          "parserVersion": "targeted-product-2026-10-04-v1",
+          "requestKey": "https://lh3.googleusercontent.com/Aj6Il2yJyr_XHD2QwS7cSUE9LPTTM8bkebBB9HUKdx-DhoOChpZ2XYaouIwVCLVAJXR--lKyag68J8NPh3HBiR1LtmW5I8YR9O0gO5aFNgCcPE2Jf0Cy24U=w800",
+          "sourceHash": "11b680a083896eddc6b04f23bd56f4d7d8bd4aae085cc61e002e4f1207f390f6",
+          "status": 200,
+          "url": "https://lh3.googleusercontent.com/Aj6Il2yJyr_XHD2QwS7cSUE9LPTTM8bkebBB9HUKdx-DhoOChpZ2XYaouIwVCLVAJXR--lKyag68J8NPh3HBiR1LtmW5I8YR9O0gO5aFNgCcPE2Jf0Cy24U=w800"
+        }
+      ],
+      "sourceFoodCode": "D210-467000000-0008"
+    },
+    {
+      "allergenOutcome": "UNKNOWN",
+      "brand": "롤링핀",
+      "canonicalMenuName": "과일리코타 샐러드",
+      "checkedAt": "2026-10-04",
+      "exactOfficialName": "",
+      "foodItemId": "kfind-d214-640000000-0019",
+      "ingredientOutcome": "UNKNOWN",
+      "name": "샐러드_과일리코타 샐러드",
+      "note": "Official brunch menu lists 11 named cards including 그린 샐러드, but no 과일리코타 샐러드. The different salad description is not reused.",
+      "officialCode": "",
+      "rawDataCreatedAt": "2023-10-31",
+      "rawFoodName": "샐러드_과일리코타 샐러드",
+      "rawReferenceWeight": "260g",
+      "reason": "NO_EXACT_CURRENT_OFFICIAL_PRODUCT",
+      "removedExplicitClassification": [
+        "샐러드"
+      ],
+      "reviewedSources": [
+        {
+          "byteCount": 33913,
+          "checkedAt": "2026-10-04",
+          "contentType": "text/html",
+          "file": "51e61ff2fd3873f4.raw",
+          "finalUrl": "https://rollingpin.co.kr/default/sub/menu/page03.php",
+          "parserVersion": "targeted-product-2026-10-04-v1",
+          "sourceHash": "3950cbd41d01748f9a8f26ccb479d2ff895241081bbdabc978a73dc4239872cd",
+          "status": 200,
+          "url": "https://rollingpin.co.kr/default/sub/menu/page03.php"
+        }
+      ],
+      "scannedOfficialMenus": 11,
+      "sourceFoodCode": "D214-640000000-0019"
+    },
+    {
+      "allergenOutcome": "UNKNOWN",
+      "brand": "뚜레쥬르",
+      "canonicalMenuName": "그릴치킨오렌지샐러드",
+      "checkedAt": "2026-10-04",
+      "exactOfficialName": "",
+      "foodItemId": "kfind-d214-640000000-0028",
+      "ingredientOutcome": "UNKNOWN",
+      "name": "샐러드_그릴치킨오렌지샐러드",
+      "note": "442 official current menu detail pages were previously cached; no exact menu title. No fresh catalogue collection.",
+      "officialCode": "",
+      "rawDataCreatedAt": "2025-09-30",
+      "rawFoodName": "샐러드_그릴치킨오렌지샐러드",
+      "rawReferenceWeight": "340g",
+      "reason": "NO_EXACT_CURRENT_OFFICIAL_MENU_AFTER_442_DETAIL_CACHE_REVIEW",
+      "removedExplicitClassification": [
+        "샐러드"
+      ],
+      "reusedCache": "data-source/franchise/raw/coffee-bakery-request-manifest.json",
+      "reviewedSources": [
+        {
+          "byteCount": 458344,
+          "checkedAt": "2026-10-04",
+          "contentType": "text/html;charset=euc-kr; Charset=euc-kr",
+          "file": "coffee-bakery-tlj-product-result-7a4ccd19c648.raw",
+          "finalUrl": "https://www.tlj.co.kr/product/result.asp",
+          "form": {},
+          "method": "GET",
+          "parserVersion": "coffee-bakery-2026-10-04-v1",
+          "sourceDate": "",
+          "sourceHash": "d9d03c4c19ed9d34d5237599ef1b464f0c247a696c39c3f75acc24fc536d678d",
+          "status": 200,
+          "url": "https://www.tlj.co.kr/product/result.asp"
+        }
+      ],
+      "scannedOfficialMenus": 442,
+      "sourceFoodCode": "D214-640000000-0028"
+    },
+    {
+      "allergenOutcome": "UNKNOWN",
+      "brand": "맥도날드",
+      "candidates": [
+        "상하이 치킨 스낵랩",
+        "게살 크림 크로켓 스낵랩"
+      ],
+      "canonicalMenuName": "닭고기또띠아샌드위치",
+      "checkedAt": "2026-10-04",
+      "exactOfficialName": "",
+      "foodItemId": "kfind-d302-096070000-0002",
+      "ingredientOutcome": "UNKNOWN",
+      "name": "샌드위치_간편조리세트_닭고기또띠아샌드위치",
+      "note": "The K-FIND analysis uses a generic 닭고기또띠아샌드위치 title. No official source maps that code to either current named snack wrap; no fuzzy ingredient/allergen join.",
+      "officialCode": "",
+      "rawDataCreatedAt": "2024-12-31",
+      "rawFoodName": "샌드위치_간편조리세트_닭고기또띠아샌드위치",
+      "rawReferenceWeight": "112g",
+      "reason": "GENERIC_ANALYZED_FOOD_NAME_NO_EXACT_BRAND_MENU_IDENTITY_MAP",
+      "removedExplicitClassification": [
+        "샌드위치",
+        "간편조리세트"
+      ],
+      "reviewedSources": [
+        {
+          "byteCount": 83195,
+          "checkedAt": "2026-10-04",
+          "contentType": "application/json",
+          "file": "9cc6d566ed9be4d7.raw",
+          "finalUrl": "https://www.mcdonalds.co.kr/api/v1/kor/product/allergy",
+          "method": "GET",
+          "parserVersion": "targeted-product-2026-10-04-v1",
+          "requestKey": "https://www.mcdonalds.co.kr/api/v1/kor/product/allergy",
+          "sourceHash": "c65fa1a321ab98b56fb6c99095e61c21aae91c777094ea01e16a4c520b69c452",
+          "status": 200,
+          "url": "https://www.mcdonalds.co.kr/api/v1/kor/product/allergy"
+        },
+        {
+          "byteCount": 64922,
+          "checkedAt": "2026-10-04",
+          "contentType": "text/html;charset=utf-8",
+          "file": "4fdb3ff3ecf7a0f8.raw",
+          "finalUrl": "https://www.mcdonalds.co.kr/kor/menu/sides",
+          "parserVersion": "targeted-product-2026-10-04-v1",
+          "sourceHash": "3d911e40083353cef3e055cafae4bf35734d59fe0bfbcdd6493fe9000adc955a",
+          "status": 200,
+          "url": "https://www.mcdonalds.co.kr/kor/menu/sides"
+        }
+      ],
+      "scannedOfficialAllergenMenus": 190,
+      "sourceFoodCode": "D302-096070000-0002"
+    },
+    {
+      "allergenOutcome": "UNKNOWN",
+      "brand": "프레시지",
+      "candidate": {
+        "currentPackageWeight": "500g",
+        "officialName": "프레시지 바질크림 빠네 파스타 냉동 밀키트 500g, 1개",
+        "officialProductCode": "8670535121"
+      },
+      "canonicalMenuName": "바질크림 빠네 파스타",
+      "checkedAt": "2026-10-04",
+      "exactOfficialName": "",
+      "foodItemId": "kfind-d303-161000000-0002",
+      "ingredientOutcome": "UNKNOWN",
+      "name": "스파게티_간편조리세트_바질크림 빠네 파스타",
+      "note": "Corporate site links this official brand store. Current frozen 500g variant cannot verify original 2022 analysis recipe of 776g; the candidate is not joined.",
+      "officialCode": "",
+      "rawDataCreatedAt": "2022-06-30",
+      "rawFoodName": "스파게티_간편조리세트_바질크림 빠네 파스타",
+      "rawReferenceWeight": "776g",
+      "reason": "OFFICIAL_BASE_NAME_DIFFERENT_PRODUCT_VARIANT_RECIPE_UNVERIFIED",
+      "removedExplicitClassification": [
+        "스파게티",
+        "간편조리세트"
+      ],
+      "reviewedSources": [
+        {
+          "byteCount": 27446,
+          "checkedAt": "2026-10-04",
+          "contentType": "text/html; charset=utf-8",
+          "file": "0c995673e16a066e.raw",
+          "finalUrl": "https://corp.fresheasy.co.kr/",
+          "parserVersion": "targeted-product-2026-10-04-v1",
+          "sourceHash": "e021897764cac35a3b4ad99ad23a611ad8f0658330db1a95a0ccd8c9f801fa4b",
+          "status": 200,
+          "url": "https://corp.fresheasy.co.kr/"
+        },
+        {
+          "byteCount": 495915,
+          "checkedAt": "2026-10-04",
+          "contentType": "text/html; charset=utf-8",
+          "file": "b5ecaab32b0deb3b.raw",
+          "finalUrl": "https://brand.naver.com/fresheasy",
+          "parserVersion": "targeted-product-2026-10-04-v1",
+          "sourceHash": "c585abc780db89125511881e323e2f4573196d6a317a93a3e3c70a71e0359996",
+          "status": 200,
+          "url": "https://brand.naver.com/fresheasy"
+        },
+        {
+          "byteCount": 210855,
+          "checkedAt": "2026-10-04",
+          "contentType": "text/html; charset=utf-8",
+          "file": "a7c6fd8572daac62.raw",
+          "finalUrl": "https://brand.naver.com/fresheasy/products/8670535121",
+          "parserVersion": "targeted-product-2026-10-04-v1",
+          "sourceHash": "7756acf07f27fda1d590a811650990dc91ccfee9ac82e17e989c7c52fc18251b",
+          "status": 200,
+          "url": "https://brand.naver.com/fresheasy/products/8670535121"
+        }
+      ],
+      "sourceFoodCode": "D303-161000000-0002"
+    },
+    {
+      "allergenOutcome": "UNKNOWN",
+      "brand": "프레시지",
+      "canonicalMenuName": "볼로네제라구파스타",
+      "checkedAt": "2026-10-04",
+      "exactOfficialName": "",
+      "foodItemId": "kfind-d303-161000000-0004",
+      "ingredientOutcome": "UNKNOWN",
+      "name": "스파게티_간편조리세트_볼로네제라구파스타",
+      "note": "Official store exact normalized-title search and spaced-title search both explicitly report no search result.",
+      "officialCode": "",
+      "rawDataCreatedAt": "2022-06-30",
+      "rawFoodName": "스파게티_간편조리세트_볼로네제라구파스타",
+      "rawReferenceWeight": "757g",
+      "reason": "OFFICIAL_EXACT_NAME_SEARCH_ZERO_RESULTS",
+      "removedExplicitClassification": [
+        "스파게티",
+        "간편조리세트"
+      ],
+      "reviewedSources": [
+        {
+          "byteCount": 27446,
+          "checkedAt": "2026-10-04",
+          "contentType": "text/html; charset=utf-8",
+          "file": "0c995673e16a066e.raw",
+          "finalUrl": "https://corp.fresheasy.co.kr/",
+          "parserVersion": "targeted-product-2026-10-04-v1",
+          "sourceHash": "e021897764cac35a3b4ad99ad23a611ad8f0658330db1a95a0ccd8c9f801fa4b",
+          "status": 200,
+          "url": "https://corp.fresheasy.co.kr/"
+        },
+        {
+          "byteCount": 495915,
+          "checkedAt": "2026-10-04",
+          "contentType": "text/html; charset=utf-8",
+          "file": "b5ecaab32b0deb3b.raw",
+          "finalUrl": "https://brand.naver.com/fresheasy",
+          "parserVersion": "targeted-product-2026-10-04-v1",
+          "sourceHash": "c585abc780db89125511881e323e2f4573196d6a317a93a3e3c70a71e0359996",
+          "status": 200,
+          "url": "https://brand.naver.com/fresheasy"
+        },
+        {
+          "byteCount": 460524,
+          "checkedAt": "2026-10-04",
+          "contentType": "text/html; charset=utf-8",
+          "file": "20ba77f3b835c815.raw",
+          "finalUrl": "https://brand.naver.com/fresheasy/search?q=%EB%B3%BC%EB%A1%9C%EB%84%A4%EC%A0%9C%EB%9D%BC%EA%B5%AC%ED%8C%8C%EC%8A%A4%ED%83%80",
+          "parserVersion": "targeted-product-2026-10-04-v1",
+          "sourceHash": "61b39b57330af3f371db39239ae2dd2488f39292b218579a19d7d1b0d7ca910b",
+          "status": 200,
+          "url": "https://brand.naver.com/fresheasy/search?q=볼로네제라구파스타"
+        },
+        {
+          "byteCount": 460538,
+          "checkedAt": "2026-10-04",
+          "contentType": "text/html; charset=utf-8",
+          "file": "b2ffbbf5eaa50c17.raw",
+          "finalUrl": "https://brand.naver.com/fresheasy/search?q=%EB%B3%BC%EB%A1%9C%EB%84%A4%EC%A0%9C%20%EB%9D%BC%EA%B5%AC%20%ED%8C%8C%EC%8A%A4%ED%83%80",
+          "method": "GET",
+          "parserVersion": "targeted-product-2026-10-04-v1",
+          "requestKey": "https://brand.naver.com/fresheasy/search?q=볼로네제%20라구%20파스타",
+          "sourceHash": "827f6fd2753af83ef024f752f5abf418c9bd5337c3c2aec1863ab5466a007059",
+          "status": 200,
+          "url": "https://brand.naver.com/fresheasy/search?q=볼로네제%20라구%20파스타"
+        }
+      ],
+      "sourceFoodCode": "D303-161000000-0004"
+    },
+    {
+      "allergenOutcome": "UNKNOWN",
+      "brand": "HY 잇츠온",
+      "canonicalMenuName": "쉬림프 로제파스타",
+      "checkedAt": "2026-10-04",
+      "exactOfficialName": "",
+      "foodItemId": "kfind-d303-161000000-0005",
+      "ingredientOutcome": "UNKNOWN",
+      "name": "스파게티_간편조리세트_쉬림프 로제파스타",
+      "note": "Verified anonymous official search API resultCode=0000, hasError=false, shoppingCount=0, no timeout. Client-rendered initial zero counts alone were not used.",
+      "officialCode": "",
+      "officialSearchCount": 0,
+      "officialSearchQuery": "쉬림프 로제파스타",
+      "rawDataCreatedAt": "2022-06-30",
+      "rawFoodName": "스파게티_간편조리세트_쉬림프 로제파스타",
+      "rawReferenceWeight": "901g",
+      "reason": "OFFICIAL_EXACT_NAME_SEARCH_ZERO_RESULTS",
+      "removedExplicitClassification": [
+        "스파게티",
+        "간편조리세트"
+      ],
+      "reviewedSources": [
+        {
+          "byteCount": 454,
+          "checkedAt": "2026-10-04",
+          "contentType": "application/json",
+          "file": "b0342f5a4e77da8e.raw",
+          "finalUrl": "https://m.fredit.co.kr/api/search/v1/aws-search-result",
+          "method": "POST",
+          "parserVersion": "targeted-product-2026-10-04-v1",
+          "publicJsonBody": {
+            "guardrailVersion": "14",
+            "header": {
+              "currentPage": 1,
+              "pSort": "",
+              "pageSize": 20
+            },
+            "isSearchMisprint": "Y",
+            "keyword": "쉬림프 로제파스타",
+            "pSite_cd": "",
+            "promptSize": 6,
+            "thresholdScore": 10
+          },
+          "requestKey": "POST https://m.fredit.co.kr/api/search/v1/aws-search-result ee394f0b921c",
+          "sourceHash": "0a31747532a4249ae9a2e77909b684e3ada99b5d835f774500204a1030e03811",
+          "status": 200,
+          "url": "https://m.fredit.co.kr/api/search/v1/aws-search-result"
+        }
+      ],
+      "sourceFoodCode": "D303-161000000-0005"
+    },
+    {
+      "allergenOutcome": "UNKNOWN",
+      "brand": "HY 잇츠온",
+      "canonicalMenuName": "쉬림프 크림파스타",
+      "checkedAt": "2026-10-04",
+      "exactOfficialName": "",
+      "foodItemId": "kfind-d303-161000000-0007",
+      "ingredientOutcome": "UNKNOWN",
+      "name": "스파게티_간편조리세트_쉬림프 크림파스타",
+      "note": "Verified anonymous official search API resultCode=0000, hasError=false, shoppingCount=0, no timeout. Client-rendered initial zero counts alone were not used.",
+      "officialCode": "",
+      "officialSearchCount": 0,
+      "officialSearchQuery": "쉬림프 크림파스타",
+      "rawDataCreatedAt": "2022-06-30",
+      "rawFoodName": "스파게티_간편조리세트_쉬림프 크림파스타",
+      "rawReferenceWeight": "790g",
+      "reason": "OFFICIAL_EXACT_NAME_SEARCH_ZERO_RESULTS",
+      "removedExplicitClassification": [
+        "스파게티",
+        "간편조리세트"
+      ],
+      "reviewedSources": [
+        {
+          "byteCount": 454,
+          "checkedAt": "2026-10-04",
+          "contentType": "application/json",
+          "file": "eb48180846ab1efb.raw",
+          "finalUrl": "https://m.fredit.co.kr/api/search/v1/aws-search-result",
+          "method": "POST",
+          "parserVersion": "targeted-product-2026-10-04-v1",
+          "publicJsonBody": {
+            "guardrailVersion": "14",
+            "header": {
+              "currentPage": 1,
+              "pSort": "",
+              "pageSize": 20
+            },
+            "isSearchMisprint": "Y",
+            "keyword": "쉬림프 크림파스타",
+            "pSite_cd": "",
+            "promptSize": 6,
+            "thresholdScore": 10
+          },
+          "requestKey": "POST https://m.fredit.co.kr/api/search/v1/aws-search-result d37f5c48925b",
+          "sourceHash": "efaa949d4188151c2a2865cbf90b100cdba82d6fd994704344e1e028c547edc6",
+          "status": 200,
+          "url": "https://m.fredit.co.kr/api/search/v1/aws-search-result"
+        }
+      ],
+      "sourceFoodCode": "D303-161000000-0007"
+    },
+    {
+      "allergenOutcome": "UNKNOWN",
+      "brand": "HY 잇츠온",
+      "canonicalMenuName": "알리오올리오파스타",
+      "checkedAt": "2026-10-04",
+      "exactOfficialName": "",
+      "foodItemId": "kfind-d303-161000000-0008",
+      "ingredientOutcome": "UNKNOWN",
+      "name": "스파게티_간편조리세트_알리오올리오파스타",
+      "note": "Verified anonymous official search API resultCode=0000, hasError=false, shoppingCount=0, no timeout. Client-rendered initial zero counts alone were not used.",
+      "officialCode": "",
+      "officialSearchCount": 0,
+      "officialSearchQuery": "알리오올리오파스타",
+      "rawDataCreatedAt": "2022-06-30",
+      "rawFoodName": "스파게티_간편조리세트_알리오올리오파스타",
+      "rawReferenceWeight": "406g",
+      "reason": "OFFICIAL_EXACT_NAME_SEARCH_ZERO_RESULTS",
+      "removedExplicitClassification": [
+        "스파게티",
+        "간편조리세트"
+      ],
+      "reviewedSources": [
+        {
+          "byteCount": 456,
+          "checkedAt": "2026-10-04",
+          "contentType": "application/json",
+          "file": "5055907cda9e2e7e.raw",
+          "finalUrl": "https://m.fredit.co.kr/api/search/v1/aws-search-result",
+          "method": "POST",
+          "parserVersion": "targeted-product-2026-10-04-v1",
+          "publicJsonBody": {
+            "guardrailVersion": "14",
+            "header": {
+              "currentPage": 1,
+              "pSort": "",
+              "pageSize": 20
+            },
+            "isSearchMisprint": "Y",
+            "keyword": "알리오올리오파스타",
+            "pSite_cd": "",
+            "promptSize": 6,
+            "thresholdScore": 10
+          },
+          "requestKey": "POST https://m.fredit.co.kr/api/search/v1/aws-search-result 142d1f6f804e",
+          "sourceHash": "de09d1dcdff0f67e9625e32ed3d1a0c1e18c98cfee5e65febda423b73819918a",
+          "status": 200,
+          "url": "https://m.fredit.co.kr/api/search/v1/aws-search-result"
+        }
+      ],
+      "sourceFoodCode": "D303-161000000-0008"
+    },
+    {
+      "allergenOutcome": "UNKNOWN",
+      "brand": "GS 리테일 심플리쿡",
+      "canonicalMenuName": "에그인헬파스타",
+      "checkedAt": "2026-10-04",
+      "exactOfficialName": "",
+      "foodItemId": "kfind-d303-161000000-0009",
+      "ingredientOutcome": "UNKNOWN",
+      "name": "스파게티_간편조리세트_에그인헬파스타",
+      "note": "Official GSfresh mall explicitly shows service-termination page. Current GS Retail website contains no exact named product menu/label for these older analyzed products.",
+      "officialCode": "",
+      "rawDataCreatedAt": "2022-06-30",
+      "rawFoodName": "스파게티_간편조리세트_에그인헬파스타",
+      "rawReferenceWeight": "964g",
+      "reason": "OFFICIAL_PRODUCT_SHOP_SERVICE_ENDED_NO_ACCESSIBLE_EXACT_LABEL",
+      "removedExplicitClassification": [
+        "스파게티",
+        "간편조리세트"
+      ],
+      "reviewedSources": [
+        {
+          "byteCount": 1015,
+          "checkedAt": "2026-10-04",
+          "contentType": "text/html",
+          "file": "87ca1d39f4e22665.raw",
+          "finalUrl": "https://www.gsfresh.com/",
+          "parserVersion": "targeted-product-2026-10-04-v1",
+          "sourceHash": "fed336e17661b4164effcb675a65743ac0afb0acb12cf94ad2c1daafec26cbd7",
+          "status": 200,
+          "url": "https://www.gsfresh.com/"
+        },
+        {
+          "byteCount": 906,
+          "checkedAt": "2026-10-04",
+          "contentType": "text/html; charset=UTF-8",
+          "file": "acdf6e3c79af757a.raw",
+          "finalUrl": "https://www.gsretail.com/gsretail/ko/brand/gs-supermarket/fresh-product/simply-cook",
+          "parserVersion": "targeted-product-2026-10-04-v1",
+          "sourceHash": "80924df2e07e3c375dc4ffef2753d17069cbd2d134938bc6219fbc509e044671",
+          "status": 200,
+          "url": "https://www.gsretail.com/gsretail/ko/brand/gs-supermarket/fresh-product/simply-cook"
+        },
+        {
+          "byteCount": 1345819,
+          "checkedAt": "2026-10-04",
+          "contentType": "application/javascript",
+          "file": "e777968c8fcafe6d.raw",
+          "finalUrl": "https://hpsimg.gsretail.com/public/js/index.03857aa4.js",
+          "parserVersion": "targeted-product-2026-10-04-v1",
+          "sourceHash": "2f9b526232f961eeee248a4504f2e03978491068149f6efb02e6b1902b0eb5c2",
+          "status": 200,
+          "url": "https://hpsimg.gsretail.com/public/js/index.03857aa4.js"
+        }
+      ],
+      "sourceFoodCode": "D303-161000000-0009"
+    },
+    {
+      "allergenOutcome": "UNKNOWN",
+      "brand": "프레시지",
+      "canonicalMenuName": "매콤 밀푀유나베",
+      "checkedAt": "2026-10-04",
+      "exactOfficialName": "",
+      "foodItemId": "kfind-d306-281000000-0001",
+      "ingredientOutcome": "UNKNOWN",
+      "name": "밀푀유나베_간편조리세트_매콤 밀푀유나베",
+      "note": "Official store exact normalized-title search and spaced-title search both explicitly report no search result.",
+      "officialCode": "",
+      "rawDataCreatedAt": "2022-06-30",
+      "rawFoodName": "밀푀유나베_간편조리세트_매콤 밀푀유나베",
+      "rawReferenceWeight": "1269g",
+      "reason": "OFFICIAL_EXACT_NAME_SEARCH_ZERO_RESULTS",
+      "removedExplicitClassification": [
+        "밀푀유나베",
+        "간편조리세트"
+      ],
+      "reviewedSources": [
+        {
+          "byteCount": 27446,
+          "checkedAt": "2026-10-04",
+          "contentType": "text/html; charset=utf-8",
+          "file": "0c995673e16a066e.raw",
+          "finalUrl": "https://corp.fresheasy.co.kr/",
+          "parserVersion": "targeted-product-2026-10-04-v1",
+          "sourceHash": "e021897764cac35a3b4ad99ad23a611ad8f0658330db1a95a0ccd8c9f801fa4b",
+          "status": 200,
+          "url": "https://corp.fresheasy.co.kr/"
+        },
+        {
+          "byteCount": 495915,
+          "checkedAt": "2026-10-04",
+          "contentType": "text/html; charset=utf-8",
+          "file": "b5ecaab32b0deb3b.raw",
+          "finalUrl": "https://brand.naver.com/fresheasy",
+          "parserVersion": "targeted-product-2026-10-04-v1",
+          "sourceHash": "c585abc780db89125511881e323e2f4573196d6a317a93a3e3c70a71e0359996",
+          "status": 200,
+          "url": "https://brand.naver.com/fresheasy"
+        },
+        {
+          "byteCount": 460477,
+          "checkedAt": "2026-10-04",
+          "contentType": "text/html; charset=utf-8",
+          "file": "0e2bd6ddc7e86442.raw",
+          "finalUrl": "https://brand.naver.com/fresheasy/search?q=%EB%A7%A4%EC%BD%A4%EB%B0%80%ED%91%80%EC%9C%A0%EB%82%98%EB%B2%A0",
+          "parserVersion": "targeted-product-2026-10-04-v1",
+          "sourceHash": "d8db51a4817c1d9e7f8086e7d83d30068bb8bfb5603cf8fce82a20a16ab07505",
+          "status": 200,
+          "url": "https://brand.naver.com/fresheasy/search?q=매콤밀푀유나베"
+        },
+        {
+          "byteCount": 460499,
+          "checkedAt": "2026-10-04",
+          "contentType": "text/html; charset=utf-8",
+          "file": "62a16797d391f47d.raw",
+          "finalUrl": "https://brand.naver.com/fresheasy/search?q=%EB%A7%A4%EC%BD%A4%20%EB%B0%80%ED%91%80%EC%9C%A0%EB%82%98%EB%B2%A0",
+          "method": "GET",
+          "parserVersion": "targeted-product-2026-10-04-v1",
+          "requestKey": "https://brand.naver.com/fresheasy/search?q=매콤%20밀푀유나베",
+          "sourceHash": "c03b497233be2ff638f3c236c5f22e2128608bce86a666fa203e57e006461795",
+          "status": 200,
+          "url": "https://brand.naver.com/fresheasy/search?q=매콤%20밀푀유나베"
+        }
+      ],
+      "sourceFoodCode": "D306-281000000-0001"
+    },
+    {
+      "allergenOutcome": "UNKNOWN",
+      "brand": "GS 리테일 심플리쿡",
+      "canonicalMenuName": "이게불낙이야",
+      "checkedAt": "2026-10-04",
+      "exactOfficialName": "",
+      "foodItemId": "kfind-d306-286000000-0001",
+      "ingredientOutcome": "UNKNOWN",
+      "name": "불낙전골_간편조리세트_이게불낙이야",
+      "note": "Official GSfresh mall explicitly shows service-termination page. Current GS Retail website contains no exact named product menu/label for these older analyzed products.",
+      "officialCode": "",
+      "rawDataCreatedAt": "2022-06-30",
+      "rawFoodName": "불낙전골_간편조리세트_이게불낙이야",
+      "rawReferenceWeight": "1114g",
+      "reason": "OFFICIAL_PRODUCT_SHOP_SERVICE_ENDED_NO_ACCESSIBLE_EXACT_LABEL",
+      "removedExplicitClassification": [
+        "불낙전골",
+        "간편조리세트"
+      ],
+      "reviewedSources": [
+        {
+          "byteCount": 1015,
+          "checkedAt": "2026-10-04",
+          "contentType": "text/html",
+          "file": "87ca1d39f4e22665.raw",
+          "finalUrl": "https://www.gsfresh.com/",
+          "parserVersion": "targeted-product-2026-10-04-v1",
+          "sourceHash": "fed336e17661b4164effcb675a65743ac0afb0acb12cf94ad2c1daafec26cbd7",
+          "status": 200,
+          "url": "https://www.gsfresh.com/"
+        },
+        {
+          "byteCount": 906,
+          "checkedAt": "2026-10-04",
+          "contentType": "text/html; charset=UTF-8",
+          "file": "acdf6e3c79af757a.raw",
+          "finalUrl": "https://www.gsretail.com/gsretail/ko/brand/gs-supermarket/fresh-product/simply-cook",
+          "parserVersion": "targeted-product-2026-10-04-v1",
+          "sourceHash": "80924df2e07e3c375dc4ffef2753d17069cbd2d134938bc6219fbc509e044671",
+          "status": 200,
+          "url": "https://www.gsretail.com/gsretail/ko/brand/gs-supermarket/fresh-product/simply-cook"
+        },
+        {
+          "byteCount": 1345819,
+          "checkedAt": "2026-10-04",
+          "contentType": "application/javascript",
+          "file": "e777968c8fcafe6d.raw",
+          "finalUrl": "https://hpsimg.gsretail.com/public/js/index.03857aa4.js",
+          "parserVersion": "targeted-product-2026-10-04-v1",
+          "sourceHash": "2f9b526232f961eeee248a4504f2e03978491068149f6efb02e6b1902b0eb5c2",
+          "status": 200,
+          "url": "https://hpsimg.gsretail.com/public/js/index.03857aa4.js"
+        }
+      ],
+      "sourceFoodCode": "D306-286000000-0001"
+    },
+    {
+      "allergenOutcome": "UNKNOWN",
+      "brand": "GS 리테일 심플리쿡",
+      "canonicalMenuName": "콥샐러드&시저드레싱",
+      "checkedAt": "2026-10-04",
+      "exactOfficialName": "",
+      "foodItemId": "kfind-d314-640000000-0001",
+      "ingredientOutcome": "UNKNOWN",
+      "name": "샐러드_간편조리세트_콥샐러드&시저드레싱",
+      "note": "Official GSfresh mall explicitly shows service-termination page. Current GS Retail website contains no exact named product menu/label for these older analyzed products.",
+      "officialCode": "",
+      "rawDataCreatedAt": "2022-06-30",
+      "rawFoodName": "샐러드_간편조리세트_콥샐러드&시저드레싱",
+      "rawReferenceWeight": "486g",
+      "reason": "OFFICIAL_PRODUCT_SHOP_SERVICE_ENDED_NO_ACCESSIBLE_EXACT_LABEL",
+      "removedExplicitClassification": [
+        "샐러드",
+        "간편조리세트"
+      ],
+      "reviewedSources": [
+        {
+          "byteCount": 1015,
+          "checkedAt": "2026-10-04",
+          "contentType": "text/html",
+          "file": "87ca1d39f4e22665.raw",
+          "finalUrl": "https://www.gsfresh.com/",
+          "parserVersion": "targeted-product-2026-10-04-v1",
+          "sourceHash": "fed336e17661b4164effcb675a65743ac0afb0acb12cf94ad2c1daafec26cbd7",
+          "status": 200,
+          "url": "https://www.gsfresh.com/"
+        },
+        {
+          "byteCount": 906,
+          "checkedAt": "2026-10-04",
+          "contentType": "text/html; charset=UTF-8",
+          "file": "acdf6e3c79af757a.raw",
+          "finalUrl": "https://www.gsretail.com/gsretail/ko/brand/gs-supermarket/fresh-product/simply-cook",
+          "parserVersion": "targeted-product-2026-10-04-v1",
+          "sourceHash": "80924df2e07e3c375dc4ffef2753d17069cbd2d134938bc6219fbc509e044671",
+          "status": 200,
+          "url": "https://www.gsretail.com/gsretail/ko/brand/gs-supermarket/fresh-product/simply-cook"
+        },
+        {
+          "byteCount": 1345819,
+          "checkedAt": "2026-10-04",
+          "contentType": "application/javascript",
+          "file": "e777968c8fcafe6d.raw",
+          "finalUrl": "https://hpsimg.gsretail.com/public/js/index.03857aa4.js",
+          "parserVersion": "targeted-product-2026-10-04-v1",
+          "sourceHash": "2f9b526232f961eeee248a4504f2e03978491068149f6efb02e6b1902b0eb5c2",
+          "status": 200,
+          "url": "https://hpsimg.gsretail.com/public/js/index.03857aa4.js"
+        }
+      ],
+      "sourceFoodCode": "D314-640000000-0001"
+    }
+  ],
+  "nutritionChanges": 0,
+  "parserVersion": "targeted-product-2026-10-04-v1",
+  "privateOrAuthenticatedRequests": 0,
+  "publicRequestManifest": "app/build/product-targeted/manifest.json",
+  "requestCount": 83,
+  "requests": [
+    {
+      "byteCount": 456,
+      "checkedAt": "2026-10-04",
+      "contentType": "application/json",
+      "file": "5055907cda9e2e7e.raw",
+      "finalUrl": "https://m.fredit.co.kr/api/search/v1/aws-search-result",
+      "method": "POST",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "publicJsonBody": {
+        "guardrailVersion": "14",
+        "header": {
+          "currentPage": 1,
+          "pSort": "",
+          "pageSize": 20
+        },
+        "isSearchMisprint": "Y",
+        "keyword": "알리오올리오파스타",
+        "pSite_cd": "",
+        "promptSize": 6,
+        "thresholdScore": 10
+      },
+      "requestKey": "POST https://m.fredit.co.kr/api/search/v1/aws-search-result 142d1f6f804e",
+      "sourceHash": "de09d1dcdff0f67e9625e32ed3d1a0c1e18c98cfee5e65febda423b73819918a",
+      "status": 200,
+      "url": "https://m.fredit.co.kr/api/search/v1/aws-search-result"
+    },
+    {
+      "byteCount": 454,
+      "checkedAt": "2026-10-04",
+      "contentType": "application/json",
+      "file": "eb48180846ab1efb.raw",
+      "finalUrl": "https://m.fredit.co.kr/api/search/v1/aws-search-result",
+      "method": "POST",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "publicJsonBody": {
+        "guardrailVersion": "14",
+        "header": {
+          "currentPage": 1,
+          "pSort": "",
+          "pageSize": 20
+        },
+        "isSearchMisprint": "Y",
+        "keyword": "쉬림프 크림파스타",
+        "pSite_cd": "",
+        "promptSize": 6,
+        "thresholdScore": 10
+      },
+      "requestKey": "POST https://m.fredit.co.kr/api/search/v1/aws-search-result d37f5c48925b",
+      "sourceHash": "efaa949d4188151c2a2865cbf90b100cdba82d6fd994704344e1e028c547edc6",
+      "status": 200,
+      "url": "https://m.fredit.co.kr/api/search/v1/aws-search-result"
+    },
+    {
+      "byteCount": 454,
+      "checkedAt": "2026-10-04",
+      "contentType": "application/json",
+      "file": "b0342f5a4e77da8e.raw",
+      "finalUrl": "https://m.fredit.co.kr/api/search/v1/aws-search-result",
+      "method": "POST",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "publicJsonBody": {
+        "guardrailVersion": "14",
+        "header": {
+          "currentPage": 1,
+          "pSort": "",
+          "pageSize": 20
+        },
+        "isSearchMisprint": "Y",
+        "keyword": "쉬림프 로제파스타",
+        "pSite_cd": "",
+        "promptSize": 6,
+        "thresholdScore": 10
+      },
+      "requestKey": "POST https://m.fredit.co.kr/api/search/v1/aws-search-result ee394f0b921c",
+      "sourceHash": "0a31747532a4249ae9a2e77909b684e3ada99b5d835f774500204a1030e03811",
+      "status": 200,
+      "url": "https://m.fredit.co.kr/api/search/v1/aws-search-result"
+    },
+    {
+      "byteCount": 59606,
+      "checkedAt": "2026-10-04",
+      "contentType": "application/json;charset=UTF-8",
+      "file": "1a237acf101daeae.raw",
+      "finalUrl": "https://web-prd.burgerking.co.kr/burgerking/BKR0347.json",
+      "method": "POST",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "publicForm": {
+        "message": "{\"header\": {\"trcode\": \"BKR0347\", \"login_session_id\": \"\"}, \"body\": {}}"
+      },
+      "requestKey": "POST https://web-prd.burgerking.co.kr/burgerking/BKR0347.json b54803e29118",
+      "sourceHash": "d1e25f013a852549552ab25de3828d079ad31c8d9cbaf176c3e70df38c01a0c8",
+      "status": 200,
+      "url": "https://web-prd.burgerking.co.kr/burgerking/BKR0347.json"
+    },
+    {
+      "byteCount": 154700,
+      "checkedAt": "2026-10-04",
+      "contentType": "application/json;charset=UTF-8",
+      "file": "71e6b207e4574cd6.raw",
+      "finalUrl": "https://web-prd.burgerking.co.kr/burgerking/BKR0632.json",
+      "method": "POST",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "publicForm": {
+        "message": "{\"header\": {\"trcode\": \"BKR0632\", \"login_session_id\": \"\"}, \"body\": {\"menuKeywordList\": []}}"
+      },
+      "requestKey": "POST https://web-prd.burgerking.co.kr/burgerking/BKR0632.json 834ae141eb0d",
+      "sourceHash": "9131636ab50028084fb9187fceb39cdeeb007f5ee966831d806226151c56bb21",
+      "status": 200,
+      "url": "https://web-prd.burgerking.co.kr/burgerking/BKR0632.json"
+    },
+    {
+      "byteCount": 17344,
+      "checkedAt": "2026-10-04",
+      "contentType": "application/json;charset=UTF-8",
+      "file": "db571bee120c2665.raw",
+      "finalUrl": "https://web-prd.burgerking.co.kr/burgerking/BKR0634.json",
+      "method": "POST",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "publicForm": {
+        "message": "{\"header\": {\"trcode\": \"BKR0634\", \"login_session_id\": \"\"}, \"body\": {\"menuCd\": \"2200284\"}}"
+      },
+      "requestKey": "POST https://web-prd.burgerking.co.kr/burgerking/BKR0634.json 85e209808c92",
+      "sourceHash": "5c04cca6eb3f51ae78840f9d5f8bfb12ad63fa2a475d7c5bf53ac193d6c5ea75",
+      "status": 200,
+      "url": "https://web-prd.burgerking.co.kr/burgerking/BKR0634.json"
+    },
+    {
+      "checkedAt": "2026-10-04",
+      "error": "HTTPError: HTTP Error 403: Forbidden",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "status": 403,
+      "url": "http://croffleduck.co.kr/"
+    },
+    {
+      "byteCount": 208996,
+      "checkedAt": "2026-10-04",
+      "contentType": "text/html; charset=UTF-8",
+      "file": "0376d2ea52b176c7.raw",
+      "finalUrl": "http://pizzaschool.net/",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "sourceHash": "28fac6d9292de7935452a094d39e353597eb85719a400af8f5e010a074bb03ee",
+      "status": 200,
+      "url": "http://pizzaschool.net/"
+    },
+    {
+      "byteCount": 285246,
+      "checkedAt": "2026-10-04",
+      "contentType": "text/html; charset=UTF-8",
+      "file": "b8480f65e0a1dcd3.raw",
+      "finalUrl": "http://pizzaschool.net/menu/",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "sourceHash": "482c0938e5b987fd1d1295c8ee86f305641cd145e3093536ea859e1db9d74a24",
+      "status": 200,
+      "url": "http://pizzaschool.net/menu/"
+    },
+    {
+      "byteCount": 143342,
+      "checkedAt": "2026-10-04",
+      "contentType": "text/html; charset=UTF-8",
+      "file": "acdef29b6fea1fbb.raw",
+      "finalUrl": "http://pizzaschool.net/menu/%EC%B9%98%EC%A6%88%EC%98%A4%EB%B8%90%EC%8A%A4%ED%8C%8C%EA%B2%8C%ED%8B%B0/",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "sourceHash": "4e2317a40815b0db3027b1e53e29242aa80e1ef1857774ce9d054c4360f67101",
+      "status": 200,
+      "url": "http://pizzaschool.net/menu/치즈오븐스파게티/"
+    },
+    {
+      "checkedAt": "2026-10-04",
+      "error": "URLError: <urlopen error [Errno 11002] getaddrinfo failed>",
+      "method": "GET",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "requestKey": "http://www.tapiau.co.kr/",
+      "status": null,
+      "url": "http://www.tapiau.co.kr/"
+    },
+    {
+      "byteCount": 670087,
+      "checkedAt": "2026-10-04",
+      "contentType": "application/json",
+      "file": "ca2245e5576f1328.raw",
+      "finalUrl": "https://api2.pizzaalvolo.co.kr/api/v1/customer/common/product/list?regDate=&isEcoupon=n",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "sourceHash": "615190d4866e3e800c9ea07ccd4aae98a39186f1949b694fdc05258f2d878e7e",
+      "status": 200,
+      "url": "https://api2.pizzaalvolo.co.kr/api/v1/customer/common/product/list?regDate=&isEcoupon=n"
+    },
+    {
+      "byteCount": 25710,
+      "checkedAt": "2026-10-04",
+      "contentType": "application/json",
+      "file": "d1e820d5b0b4035d.raw",
+      "finalUrl": "https://api2.pizzaalvolo.co.kr/api/v1/customer/common/product/noticeinfo",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "sourceHash": "5081fc2a9d68e3fc098c3268671ba26e82a2d995c333aa3f9f8fdefd1d4cfb33",
+      "status": 200,
+      "url": "https://api2.pizzaalvolo.co.kr/api/v1/customer/common/product/noticeinfo"
+    },
+    {
+      "byteCount": 5074,
+      "checkedAt": "2026-10-04",
+      "contentType": "text/html",
+      "file": "76fb4d671ce15bb9.raw",
+      "finalUrl": "https://app.pizzaalvolo.co.kr/",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "sourceHash": "5a073c2f2512f36d1a9a3c5ccd5ec8f16375395cb2ed97f157b80834aa5404af",
+      "status": 200,
+      "url": "https://app.pizzaalvolo.co.kr/"
+    },
+    {
+      "byteCount": 9778855,
+      "checkedAt": "2026-10-04",
+      "contentType": "application/javascript",
+      "file": "6674f01535a75eb4.raw",
+      "finalUrl": "https://app.pizzaalvolo.co.kr/bundle.js?187bbaa759c97ac4f0b9",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "sourceHash": "ed9f097f6f40c786aa62e996dc01c56b575942957f6b56ce446eee02750ab3d3",
+      "status": 200,
+      "url": "https://app.pizzaalvolo.co.kr/bundle.js?187bbaa759c97ac4f0b9"
+    },
+    {
+      "byteCount": 374650,
+      "checkedAt": "2026-10-04",
+      "contentType": "text/html; charset=UTF-8",
+      "file": "f8d41e7bf7ffcfa2.raw",
+      "finalUrl": "https://bongsuapizza.com/",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "sourceHash": "b92022d1e9deb1413112024bcc0060358a175748a4ab3c17014e3a5c3519beb4",
+      "status": 200,
+      "url": "https://bongsuapizza.com/"
+    },
+    {
+      "byteCount": 216407,
+      "checkedAt": "2026-10-04",
+      "contentType": "text/html; charset=UTF-8",
+      "file": "0451bb9040525409.raw",
+      "finalUrl": "https://bongsuapizza.com/%EC%82%AC%EC%9D%B4%EB%93%9C",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "sourceHash": "2894e33ab56a04095da0d7b7d84ca71f0bb06676913fdeeeb6c5585f049ba661",
+      "status": 200,
+      "url": "https://bongsuapizza.com/사이드"
+    },
+    {
+      "byteCount": 117840,
+      "checkedAt": "2026-10-04",
+      "contentType": "text/html; charset=UTF-8",
+      "file": "9b1ee91bd184e78f.raw",
+      "finalUrl": "https://bongsuapizza.com/%EC%9B%90%EC%82%B0%EC%A7%80%ED%91%9C%EC%8B%9C%ED%8C%90",
+      "method": "GET",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "requestKey": "https://bongsuapizza.com/원산지표시판",
+      "sourceHash": "92ccc3ef37c4cd6a6aa10e3a46ba38d36c6e5fc26b3aa1241e3075f7650e9c0e",
+      "status": 200,
+      "url": "https://bongsuapizza.com/원산지표시판"
+    },
+    {
+      "byteCount": 495915,
+      "checkedAt": "2026-10-04",
+      "contentType": "text/html; charset=utf-8",
+      "file": "b5ecaab32b0deb3b.raw",
+      "finalUrl": "https://brand.naver.com/fresheasy",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "sourceHash": "c585abc780db89125511881e323e2f4573196d6a317a93a3e3c70a71e0359996",
+      "status": 200,
+      "url": "https://brand.naver.com/fresheasy"
+    },
+    {
+      "byteCount": 210855,
+      "checkedAt": "2026-10-04",
+      "contentType": "text/html; charset=utf-8",
+      "file": "a7c6fd8572daac62.raw",
+      "finalUrl": "https://brand.naver.com/fresheasy/products/8670535121",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "sourceHash": "7756acf07f27fda1d590a811650990dc91ccfee9ac82e17e989c7c52fc18251b",
+      "status": 200,
+      "url": "https://brand.naver.com/fresheasy/products/8670535121"
+    },
+    {
+      "byteCount": 460499,
+      "checkedAt": "2026-10-04",
+      "contentType": "text/html; charset=utf-8",
+      "file": "62a16797d391f47d.raw",
+      "finalUrl": "https://brand.naver.com/fresheasy/search?q=%EB%A7%A4%EC%BD%A4%20%EB%B0%80%ED%91%80%EC%9C%A0%EB%82%98%EB%B2%A0",
+      "method": "GET",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "requestKey": "https://brand.naver.com/fresheasy/search?q=매콤%20밀푀유나베",
+      "sourceHash": "c03b497233be2ff638f3c236c5f22e2128608bce86a666fa203e57e006461795",
+      "status": 200,
+      "url": "https://brand.naver.com/fresheasy/search?q=매콤%20밀푀유나베"
+    },
+    {
+      "byteCount": 460477,
+      "checkedAt": "2026-10-04",
+      "contentType": "text/html; charset=utf-8",
+      "file": "0e2bd6ddc7e86442.raw",
+      "finalUrl": "https://brand.naver.com/fresheasy/search?q=%EB%A7%A4%EC%BD%A4%EB%B0%80%ED%91%80%EC%9C%A0%EB%82%98%EB%B2%A0",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "sourceHash": "d8db51a4817c1d9e7f8086e7d83d30068bb8bfb5603cf8fce82a20a16ab07505",
+      "status": 200,
+      "url": "https://brand.naver.com/fresheasy/search?q=매콤밀푀유나베"
+    },
+    {
+      "byteCount": 460538,
+      "checkedAt": "2026-10-04",
+      "contentType": "text/html; charset=utf-8",
+      "file": "b2ffbbf5eaa50c17.raw",
+      "finalUrl": "https://brand.naver.com/fresheasy/search?q=%EB%B3%BC%EB%A1%9C%EB%84%A4%EC%A0%9C%20%EB%9D%BC%EA%B5%AC%20%ED%8C%8C%EC%8A%A4%ED%83%80",
+      "method": "GET",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "requestKey": "https://brand.naver.com/fresheasy/search?q=볼로네제%20라구%20파스타",
+      "sourceHash": "827f6fd2753af83ef024f752f5abf418c9bd5337c3c2aec1863ab5466a007059",
+      "status": 200,
+      "url": "https://brand.naver.com/fresheasy/search?q=볼로네제%20라구%20파스타"
+    },
+    {
+      "byteCount": 460524,
+      "checkedAt": "2026-10-04",
+      "contentType": "text/html; charset=utf-8",
+      "file": "20ba77f3b835c815.raw",
+      "finalUrl": "https://brand.naver.com/fresheasy/search?q=%EB%B3%BC%EB%A1%9C%EB%84%A4%EC%A0%9C%EB%9D%BC%EA%B5%AC%ED%8C%8C%EC%8A%A4%ED%83%80",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "sourceHash": "61b39b57330af3f371db39239ae2dd2488f39292b218579a19d7d1b0d7ca910b",
+      "status": 200,
+      "url": "https://brand.naver.com/fresheasy/search?q=볼로네제라구파스타"
+    },
+    {
+      "byteCount": 27446,
+      "checkedAt": "2026-10-04",
+      "contentType": "text/html; charset=utf-8",
+      "file": "0c995673e16a066e.raw",
+      "finalUrl": "https://corp.fresheasy.co.kr/",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "sourceHash": "e021897764cac35a3b4ad99ad23a611ad8f0658330db1a95a0ccd8c9f801fa4b",
+      "status": 200,
+      "url": "https://corp.fresheasy.co.kr/"
+    },
+    {
+      "checkedAt": "2026-10-04",
+      "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1010)>",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "status": null,
+      "url": "https://croffleduck.co.kr/"
+    },
+    {
+      "checkedAt": "2026-10-04",
+      "error": "URLError: <urlopen error [Errno 11001] getaddrinfo failed>",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "status": null,
+      "url": "https://croffleduck.com/"
+    },
+    {
+      "byteCount": 1345819,
+      "checkedAt": "2026-10-04",
+      "contentType": "application/javascript",
+      "file": "e777968c8fcafe6d.raw",
+      "finalUrl": "https://hpsimg.gsretail.com/public/js/index.03857aa4.js",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "sourceHash": "2f9b526232f961eeee248a4504f2e03978491068149f6efb02e6b1902b0eb5c2",
+      "status": 200,
+      "url": "https://hpsimg.gsretail.com/public/js/index.03857aa4.js"
+    },
+    {
+      "byteCount": 228636,
+      "checkedAt": "2026-10-04",
+      "contentType": "image/jpeg",
+      "file": "b327faec436065bc.raw",
+      "finalUrl": "https://lh3.googleusercontent.com/Aj6Il2yJyr_XHD2QwS7cSUE9LPTTM8bkebBB9HUKdx-DhoOChpZ2XYaouIwVCLVAJXR--lKyag68J8NPh3HBiR1LtmW5I8YR9O0gO5aFNgCcPE2Jf0Cy24U=w800",
+      "method": "GET",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "requestKey": "https://lh3.googleusercontent.com/Aj6Il2yJyr_XHD2QwS7cSUE9LPTTM8bkebBB9HUKdx-DhoOChpZ2XYaouIwVCLVAJXR--lKyag68J8NPh3HBiR1LtmW5I8YR9O0gO5aFNgCcPE2Jf0Cy24U=w800",
+      "sourceHash": "11b680a083896eddc6b04f23bd56f4d7d8bd4aae085cc61e002e4f1207f390f6",
+      "status": 200,
+      "url": "https://lh3.googleusercontent.com/Aj6Il2yJyr_XHD2QwS7cSUE9LPTTM8bkebBB9HUKdx-DhoOChpZ2XYaouIwVCLVAJXR--lKyag68J8NPh3HBiR1LtmW5I8YR9O0gO5aFNgCcPE2Jf0Cy24U=w800"
+    },
+    {
+      "byteCount": 46507,
+      "checkedAt": "2026-10-04",
+      "contentType": "application/javascript",
+      "file": "67507ca91fb9209e.raw",
+      "finalUrl": "https://m.fredit.co.kr/_ustra/14794b7.js",
+      "method": "GET",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "requestKey": "https://m.fredit.co.kr/_ustra/14794b7.js",
+      "sourceHash": "56404def5485d8d13b7d6fdc9165bc93dbebe8d893634a9475fd0f61f917b89b",
+      "status": 200,
+      "url": "https://m.fredit.co.kr/_ustra/14794b7.js"
+    },
+    {
+      "byteCount": 60777,
+      "checkedAt": "2026-10-04",
+      "contentType": "application/javascript",
+      "file": "e6519fd13144ef7a.raw",
+      "finalUrl": "https://m.fredit.co.kr/_ustra/1c58112.js",
+      "method": "GET",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "requestKey": "https://m.fredit.co.kr/_ustra/1c58112.js",
+      "sourceHash": "60ebe3590426bf0d8b918086aef8f724916e4f0e049cb48f97768f4bcf7b195b",
+      "status": 200,
+      "url": "https://m.fredit.co.kr/_ustra/1c58112.js"
+    },
+    {
+      "byteCount": 49313,
+      "checkedAt": "2026-10-04",
+      "contentType": "application/javascript",
+      "file": "f4362cbfcb07eee2.raw",
+      "finalUrl": "https://m.fredit.co.kr/_ustra/1c86ffd.js",
+      "method": "GET",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "requestKey": "https://m.fredit.co.kr/_ustra/1c86ffd.js",
+      "sourceHash": "88e3e6a300f2c57f4e1384892c23bcafd54c1324d5cd7a74094102a57d286fa3",
+      "status": 200,
+      "url": "https://m.fredit.co.kr/_ustra/1c86ffd.js"
+    },
+    {
+      "byteCount": 50097,
+      "checkedAt": "2026-10-04",
+      "contentType": "application/javascript",
+      "file": "4cc440cbb5bbf533.raw",
+      "finalUrl": "https://m.fredit.co.kr/_ustra/1cdc3cf.js",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "sourceHash": "2a65ed23cab67ecdff1b618d1c1b12f9effb62636ad744af8d15d17e4549f9b8",
+      "status": 200,
+      "url": "https://m.fredit.co.kr/_ustra/1cdc3cf.js"
+    },
+    {
+      "byteCount": 63923,
+      "checkedAt": "2026-10-04",
+      "contentType": "application/javascript",
+      "file": "6a21300eedd45319.raw",
+      "finalUrl": "https://m.fredit.co.kr/_ustra/44d1fae.js",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "sourceHash": "868c9f3319f281185c09898fa9a68c132480068458c6a75e4ff0ef4152fcf19f",
+      "status": 200,
+      "url": "https://m.fredit.co.kr/_ustra/44d1fae.js"
+    },
+    {
+      "byteCount": 47738,
+      "checkedAt": "2026-10-04",
+      "contentType": "application/javascript",
+      "file": "24f08e19b54d824b.raw",
+      "finalUrl": "https://m.fredit.co.kr/_ustra/68962ea.js",
+      "method": "GET",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "requestKey": "https://m.fredit.co.kr/_ustra/68962ea.js",
+      "sourceHash": "166aa4fead0322ed876cc0d76e5f8e7224b74aad7fe8dd61fee5d130a73368e0",
+      "status": 200,
+      "url": "https://m.fredit.co.kr/_ustra/68962ea.js"
+    },
+    {
+      "byteCount": 49411,
+      "checkedAt": "2026-10-04",
+      "contentType": "application/javascript",
+      "file": "8e697823a5b184d8.raw",
+      "finalUrl": "https://m.fredit.co.kr/_ustra/7739f46.js",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "sourceHash": "b08922b8050302160222b70238a6360812490d311821f2aa3b8a5972138c89d9",
+      "status": 200,
+      "url": "https://m.fredit.co.kr/_ustra/7739f46.js"
+    },
+    {
+      "byteCount": 95947,
+      "checkedAt": "2026-10-04",
+      "contentType": "application/javascript",
+      "file": "cbdd897d90640ffa.raw",
+      "finalUrl": "https://m.fredit.co.kr/_ustra/7b4c19b.js",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "sourceHash": "f39d077fc3a02ba8baa88952c621abddb4e5c24f98f825cbae159e34fcb22d5b",
+      "status": 200,
+      "url": "https://m.fredit.co.kr/_ustra/7b4c19b.js"
+    },
+    {
+      "byteCount": 114434,
+      "checkedAt": "2026-10-04",
+      "contentType": "application/javascript",
+      "file": "1352838dfa014704.raw",
+      "finalUrl": "https://m.fredit.co.kr/_ustra/91ba267.js",
+      "method": "GET",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "requestKey": "https://m.fredit.co.kr/_ustra/91ba267.js",
+      "sourceHash": "bc30639a5be67c58f18de1fd7eac4c5870104cb40a21ab9d483f69e497536770",
+      "status": 200,
+      "url": "https://m.fredit.co.kr/_ustra/91ba267.js"
+    },
+    {
+      "byteCount": 9242,
+      "checkedAt": "2026-10-04",
+      "contentType": "application/javascript",
+      "file": "28224624fce10336.raw",
+      "finalUrl": "https://m.fredit.co.kr/_ustra/9345021.js",
+      "method": "GET",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "requestKey": "https://m.fredit.co.kr/_ustra/9345021.js",
+      "sourceHash": "ca429e4b8afb7889867633fffdaa823cda39135289c417ce161231a035d2b389",
+      "status": 200,
+      "url": "https://m.fredit.co.kr/_ustra/9345021.js"
+    },
+    {
+      "byteCount": 41005,
+      "checkedAt": "2026-10-04",
+      "contentType": "application/javascript",
+      "file": "9904bba47eaf1e1e.raw",
+      "finalUrl": "https://m.fredit.co.kr/_ustra/b11b3f2.js",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "sourceHash": "9b1898aca7acc7276426873adb0d9548e1dfc97f100c7c444087143e7fdb37c4",
+      "status": 200,
+      "url": "https://m.fredit.co.kr/_ustra/b11b3f2.js"
+    },
+    {
+      "byteCount": 51413,
+      "checkedAt": "2026-10-04",
+      "contentType": "application/javascript",
+      "file": "2a779b4575155694.raw",
+      "finalUrl": "https://m.fredit.co.kr/_ustra/d8714aa.js",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "sourceHash": "7f605da4fc74819002f23bdae83fcd4207e7e9105419eaeb8f14028b36832801",
+      "status": 200,
+      "url": "https://m.fredit.co.kr/_ustra/d8714aa.js"
+    },
+    {
+      "byteCount": 53325,
+      "checkedAt": "2026-10-04",
+      "contentType": "application/javascript",
+      "file": "57e5944c064edd18.raw",
+      "finalUrl": "https://m.fredit.co.kr/_ustra/f08f75b.js",
+      "method": "GET",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "requestKey": "https://m.fredit.co.kr/_ustra/f08f75b.js",
+      "sourceHash": "a7f8b5099361ac249beccf1274febc3ff0cdd030a92e041a660ff8bfdc223801",
+      "status": 200,
+      "url": "https://m.fredit.co.kr/_ustra/f08f75b.js"
+    },
+    {
+      "byteCount": 1619129,
+      "checkedAt": "2026-10-04",
+      "contentType": "text/html; charset=utf-8",
+      "file": "0b6e3b051e0d3643.raw",
+      "finalUrl": "https://m.fredit.co.kr/exhibition/fredit/search",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "sourceHash": "f188a363ee55163a757eb6d256cf190763ce0a7bfbe1ea849757834da62ced32",
+      "status": 200,
+      "url": "https://m.fredit.co.kr/exhibition/fredit/search"
+    },
+    {
+      "byteCount": 1619214,
+      "checkedAt": "2026-10-04",
+      "contentType": "text/html; charset=utf-8",
+      "file": "b066d4b93df5a88e.raw",
+      "finalUrl": "https://m.fredit.co.kr/exhibition/fredit/search-fredit?searchKeyword=%EC%89%AC%EB%A6%BC%ED%94%84",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "sourceHash": "909762118ffac3e126f1c610c5a501d50a32ac0ab7366588d45c84c79c2b4fd5",
+      "status": 200,
+      "url": "https://m.fredit.co.kr/exhibition/fredit/search-fredit?searchKeyword=쉬림프"
+    },
+    {
+      "byteCount": 1615071,
+      "checkedAt": "2026-10-04",
+      "contentType": "text/html; charset=utf-8",
+      "file": "8aa0013ad6be544c.raw",
+      "finalUrl": "https://m.fredit.co.kr/exhibition/fredit/search-result?siteCd=&keyword=%EC%89%AC%EB%A6%BC%ED%94%84%20%EB%A1%9C%EC%A0%9C%ED%8C%8C%EC%8A%A4%ED%83%80",
+      "method": "GET",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "requestKey": "https://m.fredit.co.kr/exhibition/fredit/search-result?siteCd=&keyword=쉬림프%20로제파스타",
+      "sourceHash": "a234a028a331b0dea785f0385aa3b01ea605b6be5efdcfa1a98af18d3095612d",
+      "status": 200,
+      "url": "https://m.fredit.co.kr/exhibition/fredit/search-result?siteCd=&keyword=쉬림프%20로제파스타"
+    },
+    {
+      "byteCount": 1615073,
+      "checkedAt": "2026-10-04",
+      "contentType": "text/html; charset=utf-8",
+      "file": "a21e799eaea93a2c.raw",
+      "finalUrl": "https://m.fredit.co.kr/exhibition/fredit/search-result?siteCd=&keyword=%EC%89%AC%EB%A6%BC%ED%94%84%20%ED%81%AC%EB%A6%BC%ED%8C%8C%EC%8A%A4%ED%83%80",
+      "method": "GET",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "requestKey": "https://m.fredit.co.kr/exhibition/fredit/search-result?siteCd=&keyword=쉬림프%20크림파스타",
+      "sourceHash": "6c7f5963b5fc700bb2c3e168b53e8f2d702e693e4eebb570ece70aae6a571ac2",
+      "status": 200,
+      "url": "https://m.fredit.co.kr/exhibition/fredit/search-result?siteCd=&keyword=쉬림프%20크림파스타"
+    },
+    {
+      "byteCount": 1615102,
+      "checkedAt": "2026-10-04",
+      "contentType": "text/html; charset=utf-8",
+      "file": "70fce5a8c0b0f9a8.raw",
+      "finalUrl": "https://m.fredit.co.kr/exhibition/fredit/search-result?siteCd=&keyword=%EC%95%8C%EB%A6%AC%EC%98%A4%EC%98%AC%EB%A6%AC%EC%98%A4%ED%8C%8C%EC%8A%A4%ED%83%80",
+      "method": "GET",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "requestKey": "https://m.fredit.co.kr/exhibition/fredit/search-result?siteCd=&keyword=알리오올리오파스타",
+      "sourceHash": "57756a85522575cd53351b9c1ddb501079159dbcf5850bf90214f685aee0c8f9",
+      "status": 200,
+      "url": "https://m.fredit.co.kr/exhibition/fredit/search-result?siteCd=&keyword=알리오올리오파스타"
+    },
+    {
+      "checkedAt": "2026-10-04",
+      "error": "HTTPError: HTTP Error 404: Not Found",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "status": 404,
+      "url": "https://m.fredit.co.kr/search"
+    },
+    {
+      "checkedAt": "2026-10-04",
+      "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1010)>",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "status": null,
+      "url": "https://pizzaschool.net/"
+    },
+    {
+      "checkedAt": "2026-10-04",
+      "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1010)>",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "status": null,
+      "url": "https://pizzaschool.net/menu/?category=side"
+    },
+    {
+      "byteCount": 947,
+      "checkedAt": "2026-10-04",
+      "contentType": "text/html",
+      "file": "dd8598d337746617.raw",
+      "finalUrl": "https://rollingpin.co.kr/",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "sourceHash": "dae9a15fc3f5341f0f0480a51a6b62645ab5342b0f3aa053cd75cc08a05407d6",
+      "status": 200,
+      "url": "https://rollingpin.co.kr/"
+    },
+    {
+      "byteCount": 64095,
+      "checkedAt": "2026-10-04",
+      "contentType": "text/html",
+      "file": "563ff58bdf2ffd5c.raw",
+      "finalUrl": "https://rollingpin.co.kr/default/index.php",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "sourceHash": "87a3fab4b8d0651501432489358380ead6dd2ee17dcbd718dfff770c6509e578",
+      "status": 200,
+      "url": "https://rollingpin.co.kr/default/index.php"
+    },
+    {
+      "byteCount": 33913,
+      "checkedAt": "2026-10-04",
+      "contentType": "text/html",
+      "file": "51e61ff2fd3873f4.raw",
+      "finalUrl": "https://rollingpin.co.kr/default/sub/menu/page03.php",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "sourceHash": "3950cbd41d01748f9a8f26ccb479d2ff895241081bbdabc978a73dc4239872cd",
+      "status": 200,
+      "url": "https://rollingpin.co.kr/default/sub/menu/page03.php"
+    },
+    {
+      "byteCount": 29091,
+      "checkedAt": "2026-10-04",
+      "contentType": "text/html; charset=utf-8",
+      "file": "6c3e05458c72077b.raw",
+      "finalUrl": "https://spcsamlip.co.kr/",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "sourceHash": "a1e7b073037505d0602a7db908e88699f46c522e2dcdfdf2391d34d01d5d522b",
+      "status": 200,
+      "url": "https://spcsamlip.co.kr/"
+    },
+    {
+      "checkedAt": "2026-10-04",
+      "error": "HTTPError: HTTP Error 404: Not Found",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "status": 404,
+      "url": "https://spcsamlip.co.kr/brand"
+    },
+    {
+      "byteCount": 40902,
+      "checkedAt": "2026-10-04",
+      "contentType": "text/html; charset=utf-8",
+      "file": "8ced82e6f58b1b41.raw",
+      "finalUrl": "https://spcsamlip.co.kr/brand/store",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "sourceHash": "4dc44ee6757134dd4b1b2e04ae847b7eb34faaa3b2e880776e21ec3ba2f7ca6a",
+      "status": 200,
+      "url": "https://spcsamlip.co.kr/brand/store"
+    },
+    {
+      "checkedAt": "2026-10-04",
+      "error": "HTTPError: HTTP Error 404: Not Found",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "status": 404,
+      "url": "https://spcsamlip.co.kr/brand/tapiau/"
+    },
+    {
+      "byteCount": 5689,
+      "checkedAt": "2026-10-04",
+      "contentType": "text/html",
+      "file": "688f70ba78988d55.raw",
+      "finalUrl": "https://www.burgerking.co.kr/",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "sourceHash": "681577892a7c2c28fdea85197edf74bdad97b79b804976606386acfa870acec8",
+      "status": 200,
+      "url": "https://www.burgerking.co.kr/"
+    },
+    {
+      "byteCount": 94366,
+      "checkedAt": "2026-10-04",
+      "contentType": "application/javascript",
+      "file": "79d2bd61cb86e35a.raw",
+      "finalUrl": "https://www.burgerking.co.kr/bizMOB/bizMOB-core.js",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "sourceHash": "a4359ad81183ffc2e114462dcac49fcf9bf444ce22c8803d42183999e41c61e7",
+      "status": 200,
+      "url": "https://www.burgerking.co.kr/bizMOB/bizMOB-core.js"
+    },
+    {
+      "byteCount": 13550,
+      "checkedAt": "2026-10-04",
+      "contentType": "application/javascript",
+      "file": "765cedb2d9b99fa8.raw",
+      "finalUrl": "https://www.burgerking.co.kr/bizMOB/bizMOB-webExtend.js",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "sourceHash": "cfe435aaa304fd7368f331cda2a22dc5bcb7058f183241d69cfea8e837227a55",
+      "status": 200,
+      "url": "https://www.burgerking.co.kr/bizMOB/bizMOB-webExtend.js"
+    },
+    {
+      "byteCount": 85603,
+      "checkedAt": "2026-10-04",
+      "contentType": "application/javascript",
+      "file": "8bc973b17e878066.raw",
+      "finalUrl": "https://www.burgerking.co.kr/js/KR_INT.js",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "sourceHash": "21e409f01423fc159e002295a4408cefa73ea92d74f2140e790f5ec199369008",
+      "status": 200,
+      "url": "https://www.burgerking.co.kr/js/KR_INT.js"
+    },
+    {
+      "byteCount": 33667,
+      "checkedAt": "2026-10-04",
+      "contentType": "application/javascript",
+      "file": "36d4b40cbef827a7.raw",
+      "finalUrl": "https://www.burgerking.co.kr/js/app.js",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "sourceHash": "22fff83c922e77653d2a23e456e0e678648be6abaff9bf3aa272d37e22bdb476",
+      "status": 200,
+      "url": "https://www.burgerking.co.kr/js/app.js"
+    },
+    {
+      "byteCount": 1645006,
+      "checkedAt": "2026-10-04",
+      "contentType": "text/html; charset=utf-8",
+      "file": "c4f53939ad4e0ed0.raw",
+      "finalUrl": "https://m.fredit.co.kr:443/",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "sourceHash": "a931050936d2652bda93fbe76cb913fbe646eefabc00e7f062fe1efa6c9a655d",
+      "status": 200,
+      "url": "https://www.fredit.co.kr/"
+    },
+    {
+      "checkedAt": "2026-10-04",
+      "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.fresheasy.co.kr'. (_ssl.c:1010)>",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "status": null,
+      "url": "https://www.fresheasy.co.kr/"
+    },
+    {
+      "byteCount": 1015,
+      "checkedAt": "2026-10-04",
+      "contentType": "text/html",
+      "file": "87ca1d39f4e22665.raw",
+      "finalUrl": "https://www.gsfresh.com/",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "sourceHash": "fed336e17661b4164effcb675a65743ac0afb0acb12cf94ad2c1daafec26cbd7",
+      "status": 200,
+      "url": "https://www.gsfresh.com/"
+    },
+    {
+      "byteCount": 906,
+      "checkedAt": "2026-10-04",
+      "contentType": "text/html; charset=UTF-8",
+      "file": "7635d62c706ba939.raw",
+      "finalUrl": "https://www.gsretail.com/",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "sourceHash": "80924df2e07e3c375dc4ffef2753d17069cbd2d134938bc6219fbc509e044671",
+      "status": 200,
+      "url": "https://www.gsretail.com/"
+    },
+    {
+      "byteCount": 906,
+      "checkedAt": "2026-10-04",
+      "contentType": "text/html; charset=UTF-8",
+      "file": "acdf6e3c79af757a.raw",
+      "finalUrl": "https://www.gsretail.com/gsretail/ko/brand/gs-supermarket/fresh-product/simply-cook",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "sourceHash": "80924df2e07e3c375dc4ffef2753d17069cbd2d134938bc6219fbc509e044671",
+      "status": 200,
+      "url": "https://www.gsretail.com/gsretail/ko/brand/gs-supermarket/fresh-product/simply-cook"
+    },
+    {
+      "byteCount": 250498,
+      "checkedAt": "2026-10-04",
+      "contentType": "text/javascript; charset=utf-8",
+      "file": "9c2bbdedd87f4b7d.raw",
+      "finalUrl": "https://www.mcdonalds.co.kr/_nuxt/BNH_uf3h.js",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "sourceHash": "7b8ca35e35cfe57e3e7f1bc483a260e9ef2a473fa9b3417f79fd5b39b4f83b2a",
+      "status": 200,
+      "url": "https://www.mcdonalds.co.kr/_nuxt/BNH_uf3h.js"
+    },
+    {
+      "byteCount": 698,
+      "checkedAt": "2026-10-04",
+      "contentType": "text/javascript; charset=utf-8",
+      "file": "2e9b9cd92ee9c863.raw",
+      "finalUrl": "https://www.mcdonalds.co.kr/_nuxt/CQKxACDQ.js",
+      "method": "GET",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "requestKey": "https://www.mcdonalds.co.kr/_nuxt/CQKxACDQ.js",
+      "sourceHash": "a3fd481e499aaeedcb0d2ee76da3b36a55972458c16cd5b77eb15e20e6e10657",
+      "status": 200,
+      "url": "https://www.mcdonalds.co.kr/_nuxt/CQKxACDQ.js"
+    },
+    {
+      "byteCount": 2923,
+      "checkedAt": "2026-10-04",
+      "contentType": "text/javascript; charset=utf-8",
+      "file": "94e03376a6f50b82.raw",
+      "finalUrl": "https://www.mcdonalds.co.kr/_nuxt/D7UxYJuh.js",
+      "method": "GET",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "requestKey": "https://www.mcdonalds.co.kr/_nuxt/D7UxYJuh.js",
+      "sourceHash": "0401e1d87c79478641df6ff41df7df43ba753f8ef0cf76efbf41058355517549",
+      "status": 200,
+      "url": "https://www.mcdonalds.co.kr/_nuxt/D7UxYJuh.js"
+    },
+    {
+      "byteCount": 83195,
+      "checkedAt": "2026-10-04",
+      "contentType": "application/json",
+      "file": "9cc6d566ed9be4d7.raw",
+      "finalUrl": "https://www.mcdonalds.co.kr/api/v1/kor/product/allergy",
+      "method": "GET",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "requestKey": "https://www.mcdonalds.co.kr/api/v1/kor/product/allergy",
+      "sourceHash": "c65fa1a321ab98b56fb6c99095e61c21aae91c777094ea01e16a4c520b69c452",
+      "status": 200,
+      "url": "https://www.mcdonalds.co.kr/api/v1/kor/product/allergy"
+    },
+    {
+      "byteCount": 8464,
+      "checkedAt": "2026-10-04",
+      "contentType": "text/html;charset=utf-8",
+      "file": "275a5c22adffc6a2.raw",
+      "finalUrl": "https://www.mcdonalds.co.kr/gmal/kor/menu/information/allergens",
+      "method": "GET",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "requestKey": "https://www.mcdonalds.co.kr/gmal/kor/menu/information/allergens",
+      "sourceHash": "315c42aee029e1db81344aa03faad09a4637dfd75ecfcdd779dc8f22ca5f98c0",
+      "status": 200,
+      "url": "https://www.mcdonalds.co.kr/gmal/kor/menu/information/allergens"
+    },
+    {
+      "byteCount": 64915,
+      "checkedAt": "2026-10-04",
+      "contentType": "text/html;charset=utf-8",
+      "file": "3421d2ca937692d9.raw",
+      "finalUrl": "https://www.mcdonalds.co.kr/kor/menu/burger",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "sourceHash": "8a6ce27eeb011e7331b5e76fe784d0cfc3b86ac88e9385a7332df6e2a8b0cbe1",
+      "status": 200,
+      "url": "https://www.mcdonalds.co.kr/kor/menu/burger"
+    },
+    {
+      "byteCount": 12244,
+      "checkedAt": "2026-10-04",
+      "contentType": "text/html;charset=utf-8",
+      "file": "c4b16d2af1a3daed.raw",
+      "finalUrl": "https://www.mcdonalds.co.kr/kor/menu/list.do",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "sourceHash": "da8363ccb8deefb9658bcf16ea78fbdbdd901b5e52e00249ec043e3442db4283",
+      "status": 200,
+      "url": "https://www.mcdonalds.co.kr/kor/menu/list.do"
+    },
+    {
+      "byteCount": 64922,
+      "checkedAt": "2026-10-04",
+      "contentType": "text/html;charset=utf-8",
+      "file": "4fdb3ff3ecf7a0f8.raw",
+      "finalUrl": "https://www.mcdonalds.co.kr/kor/menu/sides",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "sourceHash": "3d911e40083353cef3e055cafae4bf35734d59fe0bfbcdd6493fe9000adc955a",
+      "status": 200,
+      "url": "https://www.mcdonalds.co.kr/kor/menu/sides"
+    },
+    {
+      "byteCount": 12242,
+      "checkedAt": "2026-10-04",
+      "contentType": "text/html;charset=utf-8",
+      "file": "8f1dcc2d482a059c.raw",
+      "finalUrl": "https://www.mcdonalds.co.kr/kor/menu/snack",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "sourceHash": "8b113be4008e971e1f4377c0ed0d340a5ade867dd2f09726c194582d832c81d3",
+      "status": 200,
+      "url": "https://www.mcdonalds.co.kr/kor/menu/snack"
+    },
+    {
+      "byteCount": 45627,
+      "checkedAt": "2026-10-04",
+      "contentType": "text/html; charset=UTF-8",
+      "file": "61debb1b7247e969.raw",
+      "finalUrl": "https://www.paris.co.kr/?s=%EA%B0%88%EB%A6%AD",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "sourceHash": "3b5c611281395a8575b68dfafe74fdcde904ae7f85595aaf48aaffa5d21c9c28",
+      "status": 200,
+      "url": "https://www.paris.co.kr/?s=갈릭"
+    },
+    {
+      "byteCount": 42696,
+      "checkedAt": "2026-10-04",
+      "contentType": "text/html; charset=UTF-8",
+      "file": "9ad52ca9b4864ae0.raw",
+      "finalUrl": "https://www.paris.co.kr/?s=%EA%B0%88%EB%A6%AD%EC%8A%A4%ED%8B%B1%ED%86%A0%EC%8A%A4%ED%8A%B8",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "sourceHash": "975df0fddba293ea06de66644aaecfc2fab4f0a0dcaee509c45b565f5ef6af12",
+      "status": 200,
+      "url": "https://www.paris.co.kr/?s=갈릭스틱토스트"
+    },
+    {
+      "byteCount": 48832,
+      "checkedAt": "2026-10-04",
+      "contentType": "text/html; charset=UTF-8",
+      "file": "06c6cb2ab720e6a8.raw",
+      "finalUrl": "https://www.paris.co.kr/?s=%EA%B7%B8%EB%A6%AD%EC%9A%94%EA%B1%B0%ED%8A%B8",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "sourceHash": "9518642f8b74d30a9cc74210a214f300f876ca9b8629572c2ef8e1dc174d8f42",
+      "status": 200,
+      "url": "https://www.paris.co.kr/?s=그릭요거트"
+    },
+    {
+      "byteCount": 43128,
+      "checkedAt": "2026-10-04",
+      "contentType": "text/html; charset=UTF-8",
+      "file": "1090e08e3894197a.raw",
+      "finalUrl": "https://www.paris.co.kr/?s=%ED%94%8C%EB%A0%88%EC%9D%B8+%EC%A0%80%EB%8B%B9+%EA%B7%B8%EB%A6%AD%EC%9A%94%EA%B1%B0%ED%8A%B8+%EC%BB%B5%EC%BC%80%EC%9D%B4%ED%81%AC",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "sourceHash": "c6a8213739bed17f7575d00f0800c055e4c423c275c8b0d4eebefe79b570803c",
+      "status": 200,
+      "url": "https://www.paris.co.kr/?s=플레인+저당+그릭요거트+컵케이크"
+    },
+    {
+      "byteCount": 5075,
+      "checkedAt": "2026-10-04",
+      "contentType": "text/html;charset=UTF-8",
+      "file": "63772d1f025149ee.raw",
+      "finalUrl": "https://spc.co.kr/relocation",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "sourceHash": "2eda8bf2666bce5ef33bcba0af2b892646b33bb51a4295d06c998df5df85f126",
+      "status": 200,
+      "url": "https://www.spc.co.kr/"
+    },
+    {
+      "byteCount": 5075,
+      "checkedAt": "2026-10-04",
+      "contentType": "text/html;charset=UTF-8",
+      "file": "9c7ec803fcda5d64.raw",
+      "finalUrl": "https://spc.co.kr/relocation",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "sourceHash": "2eda8bf2666bce5ef33bcba0af2b892646b33bb51a4295d06c998df5df85f126",
+      "status": 200,
+      "url": "https://www.spc.co.kr/brand/samlip/"
+    },
+    {
+      "checkedAt": "2026-10-04",
+      "error": "URLError: <urlopen error [Errno 11002] getaddrinfo failed>",
+      "method": "GET",
+      "parserVersion": "targeted-product-2026-10-04-v1",
+      "requestKey": "https://www.tapiau.co.kr/",
+      "status": null,
+      "url": "https://www.tapiau.co.kr/"
+    }
+  ],
+  "scope": "27 recommendation rows, 26 unique non-cafe official-product targets from the original 44 unresolved product-composition recommendation rows.",
+  "sourceDatePolicy": "No source recipe/publication date is invented. checkedAt is acquisition date; URLs, photo dates and script build dates do not establish product recipe date."
+}

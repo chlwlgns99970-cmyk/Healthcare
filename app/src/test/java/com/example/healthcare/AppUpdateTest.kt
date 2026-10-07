@@ -1,6 +1,5 @@
 package com.example.healthcare
 
-import com.example.healthcare.data.appupdate.APP_UPDATE_CHECK_INTERVAL_MILLIS
 import com.example.healthcare.data.appupdate.ApkIdentity
 import com.example.healthcare.data.appupdate.ApkIdentityReadFailure
 import com.example.healthcare.data.appupdate.ApkIdentityReadResult
@@ -13,7 +12,6 @@ import com.example.healthcare.data.appupdate.AppReleaseMetadata
 import com.example.healthcare.data.appupdate.AppReleaseMetadataValidator
 import com.example.healthcare.data.appupdate.AppUpdateCheckResult
 import com.example.healthcare.data.appupdate.AppUpdateChecker
-import com.example.healthcare.data.appupdate.AppUpdatePolicy
 import com.example.healthcare.data.appupdate.AppUpdatePreferenceStore
 import com.example.healthcare.data.appupdate.AppUpdateRepository
 import com.example.healthcare.data.appupdate.SigningQueryMode
@@ -32,23 +30,23 @@ class AppUpdateTest {
 
     @Test
     fun serverVersionAboveCurrentIsAvailable() = runBlocking {
-        assertTrue(checker(serverVersion = 5, currentVersion = 4).check(manual = true) is AppUpdateCheckResult.Available)
+        assertTrue(checker(serverVersion = 5, currentVersion = 4).check(manual = false) is AppUpdateCheckResult.Available)
     }
 
     @Test
     fun serverVersionEqualCurrentIsLatest() = runBlocking {
-        assertEquals(AppUpdateCheckResult.UpToDate, checker(4, 4).check(manual = true))
+        assertEquals(AppUpdateCheckResult.UpToDate, checker(4, 4).check(manual = false))
     }
 
     @Test
     fun serverVersionBelowCurrentIsLatest() = runBlocking {
-        assertEquals(AppUpdateCheckResult.UpToDate, checker(3, 4).check(manual = true))
+        assertEquals(AppUpdateCheckResult.UpToDate, checker(3, 4).check(manual = false))
     }
 
     @Test
     fun malformedMetadataIsRejected() = runBlocking {
         val invalid = release(versionCode = 5).copy(apkUrl = "http://example.com/update.apk")
-        val result = checker(repository = FakeRepository(invalid), currentVersion = 4).check(manual = true)
+        val result = checker(repository = FakeRepository(invalid), currentVersion = 4).check(manual = false)
         assertEquals(AppUpdateCheckResult.Failed, result)
     }
 
@@ -221,18 +219,18 @@ class AppUpdateTest {
     }
 
     @Test
-    fun automaticCheckIsThrottledForTwentyFourHours() = runBlocking {
+    fun automaticCheckIgnoresRecentSuccessfulCheckAndFetches() = runBlocking {
         val repository = FakeRepository(release(5))
         val preferences = FakePreferences(lastSuccessfulCheckAt = 1_000L)
         val checker = AppUpdateChecker(repository, preferences, 4) {
-            1_000L + APP_UPDATE_CHECK_INTERVAL_MILLIS - 1L
+            1_001L
         }
-        assertEquals(AppUpdateCheckResult.Throttled, checker.check(manual = false))
-        assertEquals(0, repository.calls)
+        assertTrue(checker.check(manual = false) is AppUpdateCheckResult.Available)
+        assertEquals(1, repository.calls)
     }
 
     @Test
-    fun manualCheckIgnoresThrottle() = runBlocking {
+    fun manualCheckStillFetchesLatestRelease() = runBlocking {
         val repository = FakeRepository(release(5))
         val preferences = FakePreferences(lastSuccessfulCheckAt = 1_000L)
         val checker = AppUpdateChecker(repository, preferences, 4) { 1_001L }
@@ -243,17 +241,28 @@ class AppUpdateTest {
     @Test
     fun networkFailureDoesNotEscapeChecker() = runBlocking {
         val checker = AppUpdateChecker(FailingRepository(), FakePreferences(), 4)
-        assertEquals(AppUpdateCheckResult.Failed, checker.check(manual = true))
+        assertEquals(AppUpdateCheckResult.Failed, checker.check(manual = false))
     }
 
     @Test
     fun laterPreventsImmediateRepromptInSameSession() = runBlocking {
-        var now = 1_000L
-        val checker = AppUpdateChecker(FakeRepository(release(5)), FakePreferences(), 4) { now }
-        val first = checker.check(manual = true) as AppUpdateCheckResult.Available
+        val checker = AppUpdateChecker(FakeRepository(release(5)), FakePreferences(), 4) { 1_000L }
+        val first = checker.check(manual = false) as AppUpdateCheckResult.Available
         checker.dismissForSession(first.release.versionCode)
-        now += APP_UPDATE_CHECK_INTERVAL_MILLIS
         assertEquals(AppUpdateCheckResult.DismissedForSession, checker.check(manual = false))
+    }
+
+    @Test
+    fun newColdStartChecksAgainAndCanPromptAfterLaterWasSelected() = runBlocking {
+        val repository = FakeRepository(release(5))
+        val preferences = FakePreferences()
+        val firstProcess = AppUpdateChecker(repository, preferences, 4) { 1_000L }
+        val first = firstProcess.check(manual = false) as AppUpdateCheckResult.Available
+        firstProcess.dismissForSession(first.release.versionCode)
+
+        val nextProcess = AppUpdateChecker(repository, preferences, 4) { 1_001L }
+        assertTrue(nextProcess.check(manual = false) is AppUpdateCheckResult.Available)
+        assertEquals(2, repository.calls)
     }
 
     @Test
@@ -262,8 +271,18 @@ class AppUpdateTest {
     }
 
     @Test
-    fun exactlyTwentyFourHoursAllowsAutomaticCheck() {
-        assertTrue(AppUpdatePolicy.shouldCheckAutomatically(1_000L, 1_000L + APP_UPDATE_CHECK_INTERVAL_MILLIS))
+    fun twoColdStartCheckersBothFetchWithinTwentyFourHours() = runBlocking {
+        val repository = FakeRepository(release(4))
+        val preferences = FakePreferences(lastSuccessfulCheckAt = 1_000L)
+        assertEquals(
+            AppUpdateCheckResult.UpToDate,
+            AppUpdateChecker(repository, preferences, 4) { 1_001L }.check(manual = false)
+        )
+        assertEquals(
+            AppUpdateCheckResult.UpToDate,
+            AppUpdateChecker(repository, preferences, 4) { 1_002L }.check(manual = false)
+        )
+        assertEquals(2, repository.calls)
     }
 
     private fun checker(

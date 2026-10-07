@@ -1,0 +1,87 @@
+{
+  "foods": [
+    {
+      "recipeId": "MFDS-214",
+      "name": "상추, 오이, 당근쌈",
+      "variants": [
+        "상추, 오이, 당근쌈",
+        "상추오이당근쌈"
+      ],
+      "classification": "PARTIAL"
+    },
+    {
+      "recipeId": "MFDS-220",
+      "name": "우엉떡조림",
+      "variants": [
+        "우엉떡조림",
+        "우엉 떡조림"
+      ],
+      "classification": "PARTIAL"
+    },
+    {
+      "recipeId": "MFDS-221",
+      "name": "가자미생선까스",
+      "variants": [
+        "가자미생선까스",
+        "가자미 생선까스"
+      ],
+      "classification": "PARTIAL"
+    },
+    {
+      "recipeId": "MFDS-223",
+      "name": "딸기잼",
+      "variants": [
+        "딸기잼",
+        "딸기 잼"
+      ],
+      "classification": "PARTIAL"
+    }
+  ],
+  "queries": [
+    {
+      "q": "\"상추,오이,당근쌈\" 레시피 중량",
+      "domains": [
+        "go.kr",
+        "ac.kr",
+        "or.kr",
+        "semie.cooking",
+        "ottogi.co.kr",
+        "sempio.com"
+      ]
+    },
+    {
+      "q": "\"우엉떡조림\" 레시피 중량",
+      "domains": [
+        "go.kr",
+        "ac.kr",
+        "or.kr",
+        "semie.cooking",
+        "ottogi.co.kr",
+        "sempio.com"
+      ]
+    },
+    {
+      "q": "\"가자미생선까스\" 레시피 중량",
+      "domains": [
+        "go.kr",
+        "ac.kr",
+        "or.kr",
+        "semie.cooking",
+        "ottogi.co.kr",
+        "sempio.com"
+      ]
+    },
+    {
+      "q": "\"딸기잼\" 레시피 중량",
+      "domains": [
+        "go.kr",
+        "ac.kr",
+        "or.kr",
+        "semie.cooking",
+        "ottogi.co.kr",
+        "sempio.com"
+      ]
+    }
+  ],
+  "result": "식품안전나라 (https://www.foodsafetykorea.go.kr/popup/sensuousmenuView.do?rcp_menu_no=221)\nciteturn506search0 [wordlim: 200] Crawled: 6 days ago; # 가자미생선까스 ... 재료량(4인분) 가자미 200g, 달걀 100g, 빵가루 50g, 밀가루 20g, 콩기름 18g, 소금 3g, 후춧가루 0.4g\n--------------------------------------------------------------------------------\n대한민국 국회도서관 | 정보검색 > 소장정보 검색 > (영양교사가 직접 개발한)학교급식레시피 (https://dl.nanet.go.kr/detail/MONO1201023581)\nciteturn506search1 [wordlim: 200] Crawled: 3 months ago;   * ## 일반도서 (영양교사가 직접 개발한)학교급식레시피 ... 조랭이떡만두국 86 ... 우엉떡조림 129우엉조림 130 ... 부록2부 학교급식 레시피 실천을 위한 시설개선(안) 378\n--------------------------------------------------------------------------------\nPage 185 - 식품 수출안내서 - 일본편 (https://www.mfds.go.kr/files/upload/etc/e-Book/guideLine_2/files/basic-html/page185.html)\nciteturn506search2 [wordlim: 200] Crawled: 5.7 years ago;                               및 조미  우메보시로  채  썬  차즈기, 가쓰오  게즈리부시 등을  이용한  경우 이것을  포함한                              중량)을, 농산물 된장  절임류(얇게 저미기 또는  채썰기  혹은  작게  썬  것 또는 마늘 ...                                1)  잼  중  1종류의 과일 등을 사용한  경우 해당 과일 등의  명칭을  붙이고  ‘딸기잼’, ...                                   '와인',  '레몬과즙' 등으로 가장 일반적인  명칭을 원재료에서  차지하는 중량 비율이\n--------------------------------------------------------------------------------\nIII. 지역 대표특산물을 활용한 건강한 레시피 이야기 (https://mhc.cbe.go.kr/upload/dept-11/na/bbs_1407/2025/02/ABDAAF1F-A12F-34CD-91C9-91A1C282D627.pdf)\nciteturn506search12 [wordlim: 200] Published: 1.9 years ago; 지역 대표특산물을 활용한 건강한 레시피 이야기 ... <td>딸기</td><td>딸기잼</td> ... <td>잡곡인절미, 오곡주먹밥</td> ... <td>묵은지 김밥<br>치즈옥수수구이</td> ... 충북식생활교육연구회 9\n--------------------------------------------------------------------------------\n국립국어원 (https://korean.go.kr/front/mcfaq/mcfaqView.do?mcfaq_seq=8696&mn_id=217&pageIndex=25)\nciteturn506search3 [wordlim: 200] Published: 6.7 years ago; Crawled: last week; 이 자료는 국어생활종합상담실 온라인가나다에서 묻고 답한 내용 중에서 뽑아 정리한 것입니다. ... [질문] '딸기잼', '딸기 잼'의 바른 띄어쓰기는 무엇인가요?\n--------------------------------------------------------------------------------\n치유와 힐링의 자연드림 (https://www.icoop.or.kr/coopmall/mall_goodsnews/view.php?chgtype=16&key=&keyfield=&no=4241&number=54152&page=28&sort=16&sort_chk=16&tabmenu=16&type=good)\nciteturn506search4 [wordlim: 200] Published: 2.4 years ago; Crawled: 5 months ago; [일시중단] 딸기잼 380g, 580g 일시중단 안내드립니다. ... 중량/규격 : 580g ... 과채가공센터에서 공급중인 딸기잼 380g, 580g 일시중단 안내드립니다.\n--------------------------------------------------------------------------------\n환경부가 소개하는 자투리 레시피 (https://m.me.go.kr/home/file/readDownloadFile2.do%3Bjsessionid%3DDr0i_sb69FIooR6e2-NMHd_0TDUMxnpaLIYXpU7n.mehome2?fileId=122074&fileName=aa0214d7580e0eddccccaa1b60b96fe61cc73c94918cc03fe97b6f2bf574a37f4448bae47da626e532a51b6b6d4d0e41626173c07064220e670df3d724c2b53a&fileSeq=1&openYn=Y)\nciteturn506search13 [wordlim: 200] Published: 5 months ago; 식빵, 생크림 1/2컵, 우유 1컵, 딸기잼 2큰술, 달걀 3개,계피가루 조금, 버터, 설탕 ... 딸기잼 2큰술에 물 ... 음식물쓰레기를 줄이고 음식맛 향상을 위해 국, 반찬의 염도를 고려하여 조리해주세요!\n--------------------------------------------------------------------------------\n일반주해\n미합중국관세양허표\n1.\n미합중국통일상품명및부호체계(HTSUS)와의관계:\n이양허표상 (https://www.fta.go.kr/webmodule/_PSD_FTA/us/doc/kor/07-2MarketAccess_USnotes.pdf)\nciteturn506search14 [wordlim: 200] Published: 11 months ago; 20059055  | 고추류(피망제외, 조제저장처리, 식초, 초산 처리 제외, 냉동하지 않은것)  | 14.9%  | F ... 20059085  | 이집트콩(가반조스, 조제저장처리, 식초, 초산 처리 제외, 냉동하지 않은것)  | 0.8 센트/kg (총중량 기 ... 20060060  | 감귤류 또는 감귤류 및 기타 과실의 껍질(혼합물 제외, 설탕으로 저장처리한 것, 드레인한것, 설탕을 ... 20079910  | 딸기잼  | 2.2%  | A\n"
+}

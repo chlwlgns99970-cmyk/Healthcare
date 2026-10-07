@@ -1,0 +1,25 @@
+{
+  "checkedAt": "2026-10-05",
+  "foods": [
+    {
+      "id": "MFDS-140",
+      "name": "쑥절편꽃말이떡"
+    },
+    {
+      "id": "MFDS-143",
+      "name": "두부과일샐러드"
+    },
+    {
+      "id": "MFDS-146",
+      "name": "딸기바나나연두부쉐이크"
+    },
+    {
+      "id": "MFDS-147",
+      "name": "모시조개된장국"
+    }
+  ],
+  "result": {
+    "status": "fulfilled",
+    "value": "Empty search results\nNo results were found for the provided queries"
+  }
+}

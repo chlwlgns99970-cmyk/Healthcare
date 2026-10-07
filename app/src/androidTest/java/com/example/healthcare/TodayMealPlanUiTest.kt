@@ -46,11 +46,13 @@ class TodayMealPlanUiTest {
     private lateinit var store: TodayMealPlanStore
     private lateinit var context: Context
     private val models = ViewModelStore()
+    private var originalMetadata: Collection<FoodMetadata> = emptyList()
     private var density = 1f
     private val day get() = LocalDate.now().toString()
 
     @Before fun fixture() {
         context = InstrumentationRegistry.getInstrumentation().targetContext
+        originalMetadata = FoodMetadataPolicy.snapshot()
         assertEquals("com.example.healthcare.qa",context.packageName)
         context.getSharedPreferences("daily-plan-test-recommendation_cycle_v2",0).edit().clear().commit()
         val isolated = object : ContextWrapper(context) {
@@ -68,18 +70,22 @@ class TodayMealPlanUiTest {
                 val id="${meal.name}-$n"; val kcal=(if(meal==MealType.SNACK)150 else 500)+n*20
                 val name=if(n==0) "오이 ${meal.displayName}" else "${meal.displayName} 검증 메뉴 $n"
                 db.foodItemDao().upsertAll(listOf(FoodItem(id="food-$id",sourceType="QA",sourceFoodCode=id,
-                    name=name,normalizedName=MealRecommendationEngine.normalizeFoodName(name),category="밥류",referenceAmount=100.0,unit="g",
+                    name=name,normalizedName=MealRecommendationEngine.normalizeFoodName(name),category="QA 검증 메뉴",referenceAmount=100.0,unit="g",
                     energyKcal=kcal.toDouble(),carbohydrateGrams=60.0,proteinGrams=20.0,fatGrams=12.0,servingDescription="100g",dataVersion="QA",createdAt=0,updatedAt=0)))
                 templates+=MealTemplate(id,name,"|${meal.name}|",kcal,20.0,60.0,12.0,10,"LOW","|COOK|INGREDIENTS_COMPLETE|","|대두|","","KOREAN","QA verified",0,0)
                 ingredients+=MealTemplateIngredient(mealTemplateId=id,foodItemId="food-$id",amount=100.0,unit="g",adjustable=true,minimumAmount=50.0,maximumAmount=150.0,adjustmentStep=10.0)
             }
             db.mealCoachDao().upsertTemplates(templates); db.mealCoachDao().upsertIngredients(ingredients)
+            FoodMetadataPolicy.install(originalMetadata + ingredients.map { FoodMetadata(foodId=it.foodItemId,
+                allergens=setOf("대두"), allergenInfoComplete=true, allergenStatus="CONFIRMED_LABEL",
+                sourceReference="https://qa.invalid/isolated-label/${it.foodItemId}", checkedAt=day) })
         }
         InstrumentationRegistry.getInstrumentation().runOnMainSync { vm=TodayMealPlanViewModel(repo); models.put("daily",vm) }
     }
     @After fun close() {
         InstrumentationRegistry.getInstrumentation().runOnMainSync { models.clear() }
         db.close()
+        FoodMetadataPolicy.install(originalMetadata)
         context.getSharedPreferences("daily-plan-test-recommendation_cycle_v2",0).edit().clear().commit()
     }
     private fun show() = compose.setContent {
@@ -304,7 +310,9 @@ class TodayMealPlanUiTest {
                 assertEquals(p.meals.sumOf { it.kcal },p.totalKcal)
                 android.util.Log.i("DailyPlanQA","${theme.name} ${p.generationMillis}ms ${p.totalKcal}/${p.targetKcal}kcal (isolated goal; real 292 catalog)")
             }
-            assertNull(live.create(DailyRecommendationTheme.SLOW_AGING_STYLE))
+            val slow = requireNotNull(live.create(DailyRecommendationTheme.SLOW_AGING_STYLE))
+            assertEquals(1850, slow.targetKcal); assertEquals(4, slow.meals.size)
+            assertTrue(slow.meals.all { meal -> SlowAgingStylePolicy.eligible(seeds.single { it.template.id == meal.templateId }) })
             assertTrue(isolated.mealRecordDao().getAllMeals().first().isEmpty())
         } finally {
             isolated.close()

@@ -1,0 +1,10 @@
+{
+  "food_data_manifest.properties": true,
+  "food_items.csv": true,
+  "food_metadata.csv": true,
+  "franchise_official_items.csv": true,
+  "meal_templates.csv": true,
+  "meal_template_ingredients.csv": true,
+  "product_items.csv": true,
+  "recipe_ingredient_estimates.csv": true
+}

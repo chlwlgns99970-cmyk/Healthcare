@@ -1,0 +1,29 @@
+[
+  {
+    "recipeId": "DAEGU-LOW-SODIUM-P40",
+    "name": "양상추샐러드(마요네즈 소스)",
+    "complete": true,
+    "sourceUrl": "https://www.daegufood.go.kr/kor/data/down01.pdf",
+    "sourceSha256": "26a36d7e2ab514e73ed46bfaf08001263e9986849a3103fc9b303610e8480f91",
+    "publication": "PUBLISHED",
+    "reason": "같은 양상추 샐러드 전체 구성. 마요네즈 소스 변형명을 보존."
+  },
+  {
+    "recipeId": "MENUZEN-D093012",
+    "name": "버섯전(모둠)",
+    "complete": true,
+    "sourceUrl": "https://www.nics.go.kr/food/kfi/mgnNewmenumkFoodSelectNew/selectFoodDetail.json?fdCode=D093012",
+    "sourceSha256": "4796765f456b52fcbb1610284eb1ae11b237338e47f5fc515bca790100e49ec4",
+    "publication": "NOT_PUBLISHED",
+    "reason": "느타리 외 양송이·표고 포함 혼합 버섯전은 느타리버섯전과 같은 주재료 전체 구성이 아님."
+  },
+  {
+    "recipeId": "MENUZEN-D132016",
+    "name": "미역나물(식초)",
+    "complete": true,
+    "sourceUrl": "https://www.nics.go.kr/food/kfi/mgnNewmenumkFoodSelectNew/selectFoodDetail.json?fdCode=D132016",
+    "sourceSha256": "393abea7a080426244bf2e38642d818f983aa89212e48d5f218b4b95e68cf6a0",
+    "publication": "NOT_PUBLISHED",
+    "reason": "식초 미역나물이며 초고추장이 없어 미역/초고추장 전체 구성에 대응하지 않음."
+  }
+]

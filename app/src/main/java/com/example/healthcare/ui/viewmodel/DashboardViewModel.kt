@@ -17,6 +17,9 @@ import com.example.healthcare.domain.DailyIntakeTimeline
 import com.example.healthcare.domain.MealCoachCalculator
 import com.example.healthcare.domain.Macronutrients
 import com.example.healthcare.domain.DashboardSummaryPolicy
+import com.example.healthcare.domain.DailyCalorieTarget
+import com.example.healthcare.domain.NextMealGuidance
+import com.example.healthcare.domain.RecordInsights
 import java.time.LocalDate
 import java.time.LocalTime
 import java.time.format.DateTimeFormatter
@@ -128,12 +131,22 @@ class DashboardViewModel(
         .map { rows -> Macronutrients.knownSum(rows.map { it.asMacronutrients() }) }
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), Macronutrients.Unknown)
 
-    private val manualTargetCalories = _selectedDate
+    private val configuredGoal = _selectedDate
         .flatMapLatest { date -> goalRepository.getGoalForDate(date.format(dateFormatter)) }
+    private val manualTargetCalories = configuredGoal
         .map { it?.targetCalories ?: 2000 }
 
     private val energyProfile = _selectedDate
         .flatMapLatest { date -> energyProfileRepository.getProfileForDate(date.format(dateFormatter)) }
+
+    /** Recommendation/report guidance requires a saved goal or a resolvable configured target mode. */
+    val configuredTargetCalories: StateFlow<Int?> = combine(configuredGoal, energyProfile) { goal, profile ->
+        DailyCalorieTarget.resolve(goal, profile)
+    }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), null)
+
+    val nextMealGuidance: StateFlow<NextMealGuidance> = combine(meals, configuredTargetCalories) { records, target ->
+        RecordInsights.nextMeal(records, target)
+    }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), RecordInsights.nextMeal(emptyList(), null))
 
     val energyUiState: StateFlow<DashboardEnergyUiState> = combine(
         totalCalories,

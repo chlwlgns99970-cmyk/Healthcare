@@ -1,13 +1,22 @@
 """Offline evidence only. Runtime uses the same existing Room template metadata."""
 from pathlib import Path
 import csv, math, json
+import sys
 
 root = Path(__file__).resolve().parents[2]
+sys.path.insert(0,str(root/'tools'))
+from build_recommendation_ingredient_evidence import verdict
 assets = root / 'app/src/main/assets/fooddata'
 def read(name):
     with (assets / name).open(encoding='utf-8-sig', newline='') as f:
         return list(csv.DictReader(f))
-foods = {r['id']: r for r in read('food_items.csv')}
+foods = {r['id']: r for filename in ('food_items.csv', 'product_items.csv', 'franchise_official_items.csv') for r in read(filename)}
+with (root/'data-source/recommendation/verified-food-groups.csv').open(encoding='utf-8-sig', newline='') as f:
+    group_rows = list(csv.DictReader(f))
+groups = {r['stableTemplateId']: r for r in group_rows}
+assert len(groups) == len(group_rows)
+with (root/'data-source/recommendation/recommendation-292-audit.csv').open(encoding='utf-8-sig', newline='') as f:
+    prior_ingredients = {r['stableTemplateId']: r['ingredientCompleteness'] for r in csv.DictReader(f)}
 ingredients = read('meal_template_ingredients.csv')
 rows = []
 for t in read('meal_templates.csv'):
@@ -32,8 +41,19 @@ for t in read('meal_templates.csv'):
     r['balancedEligible'] = complete and total > 0 and c > 0 and p > 0 and f > 0 and .45 <= c/total <= .65 and .10 <= p/total <= .35 and .20 <= f/total <= .35
     r['healthyEligible'] = complete and total > 0 and .40 <= c/total <= .70 and .08 <= p/total <= .40 and .15 <= f/total <= .40
     for theme in ('diet','bulk','cheat'): r[theme+'Eligible'] = r['kcal'] > 0
-    r['slowAgingStyleEligible'] = False
-    r['exclusionReason'] = 'SLOW_STYLE_UNSUPPORTED: dish categories do not verify grain/bean/vegetable ingredients'
+    verified = groups.get(t['id'])
+    r['confirmedMajorIngredients'] = verified['ingredients'] if verified else ''
+    r['verifiedFoodGroups'] = verified['foodGroups'] if verified else ''
+    r['grainType'] = verified['grainType'] if verified else 'UNKNOWN'
+    r['proteinSources'] = verified['proteinSources'] if verified else 'UNKNOWN'
+    r['cookingStyle'] = verified['cookingStyle'] if verified else 'UNKNOWN'
+    r['groupSource'] = verified['sourceUrl'] if verified else ''
+    r['groupEvidenceScope'] = verified['evidenceScope'] if verified else 'UNKNOWN'
+    r['majorIngredientInformationKnown'] = bool(verified) or prior_ingredients.get(t['id']) in ('COMPLETE','PARTIAL')
+    eligible, reason = verdict(set(verified['foodGroups'].split('|')), verified['cookingStyle'],
+                               set(verified.get('negativeSignals','').split('|'))) if verified else (False,'MISSING_VERIFIED_COMPOSITION')
+    r['slowAgingStyleEligible'] = eligible
+    r['exclusionReason'] = '' if eligible else reason
     rows.append(r)
 for theme in ('light','hearty'):
     for r in rows: r[theme+'Eligible'] = False
@@ -46,7 +66,8 @@ for theme in ('light','hearty'):
             if (r['kcal']<=bound and r['kcal']<kcal[-1]) if theme=='light' else (r['kcal']>=bound and r['kcal']>kcal[0]):
                 r[theme+'Eligible'] = True
 assert len(rows)==len({r['stableId'] for r in rows})==292
-columns = ['stableId','menuName','breakfastEligible','lunchEligible','dinnerEligible','snackEligible','kcal','carbs','protein','fat','macroCompleteness','foodGroup','lightEligible','balancedEligible','heartyEligible','dietEligible','bulkEligible','healthyEligible','cheatEligible','slowAgingStyleEligible','exclusionReason','ingredientCompleteness','allergenCompleteness','portion']
+assert set(groups) <= {r['stableId'] for r in rows}
+columns = ['stableId','menuName','breakfastEligible','lunchEligible','dinnerEligible','snackEligible','kcal','carbs','protein','fat','macroCompleteness','foodGroup','lightEligible','balancedEligible','heartyEligible','dietEligible','bulkEligible','healthyEligible','cheatEligible','slowAgingStyleEligible','exclusionReason','ingredientCompleteness','allergenCompleteness','portion','confirmedMajorIngredients','verifiedFoodGroups','grainType','proteinSources','cookingStyle','groupSource','groupEvidenceScope','majorIngredientInformationKnown']
 out = root/'data-source/recommendation/theme-eligibility-audit.csv'
 with out.open('w',encoding='utf-8',newline='') as f:
     writer = csv.DictWriter(f,fieldnames=columns)
@@ -56,6 +77,12 @@ counts = {'rows':len(rows),'kcalComplete':sum(r['kcal']>0 for r in rows),'macroC
           'eligible':{t:sum(r[t+'Eligible'] for r in rows) for t in ('light','balanced','hearty','diet','bulk','healthy','cheat','slowAgingStyle')},
           'meals':{m:sum(r[m+'Eligible'] for r in rows) for m in ('breakfast','lunch','dinner','snack')},
           'ingredientComplete':sum(r['ingredientCompleteness']=='COMPLETE' for r in rows),
-          'allergenUnknown':sum(r['allergenCompleteness']=='UNKNOWN' for r in rows)}
-(root/'app/build/daily-plan-qa/audit-counts.json').write_text(json.dumps(counts,ensure_ascii=False,indent=2),encoding='utf-8')
+          'allergenUnknown':sum(r['allergenCompleteness']=='UNKNOWN' for r in rows),
+          'majorIngredientInformationKnown':sum(r['majorIngredientInformationKnown'] for r in rows),
+          'verifiedFoodGroupKnown':sum(bool(r['verifiedFoodGroups']) for r in rows),
+          'slowStyleMeals':{m:sum(r[m+'Eligible'] and r['slowAgingStyleEligible'] for r in rows) for m in ('breakfast','lunch','dinner','snack')},
+          'baseline':{'templates':292,'styleCandidates':0,'ingredientComplete':36,'ingredientPartial':1,'verifiedFoodGroups':0}}
+output_dir = root/'app/build/style-qa'
+output_dir.mkdir(parents=True,exist_ok=True)
+(output_dir/'audit-counts.json').write_text(json.dumps(counts,ensure_ascii=False,indent=2),encoding='utf-8')
 print(json.dumps(counts,ensure_ascii=False))

@@ -7,6 +7,8 @@ import com.example.healthcare.data.entity.UserMealPreference
 import com.example.healthcare.data.model.MealType
 import com.example.healthcare.data.model.TargetMode
 import kotlin.math.abs
+import kotlin.math.ceil
+import kotlin.math.floor
 
 enum class DailyRecommendationTheme(val label: String, val description: String) {
     LIGHT("가볍게", "같은 끼니에서 상대적으로 가벼운 메뉴 중심"),
@@ -33,7 +35,8 @@ data class DailyPlanMeal(
     val allergenInfoComplete: Boolean = true,
     val foodGroups: Set<String> = emptySet(),
     val preferenceMatched: Boolean = false,
-    val nutritionComplete: Boolean = true
+    val nutritionComplete: Boolean = true,
+    val amountLabels: List<String> = emptyList()
 )
 
 data class TodayMealPlan(
@@ -75,53 +78,6 @@ object DailyCalorieTarget {
     }.getOrNull()
 }
 
-object DailyMealThemePolicy {
-    // Bundled categories describe complete dishes, not their raw grain/bean/vegetable contents.
-    // There is no verified ingredient-group taxonomy for this style in the current 292 templates.
-    const val SLOW_STYLE_LIMITATION = "현재 메뉴 데이터로 정확히 분류할 수 있는 식단이 부족해요."
-    fun complete(nutrition: Macronutrients): Boolean = listOf(
-        nutrition.carbohydrateGrams, nutrition.proteinGrams, nutrition.fatGrams
-    ).all { it != null && it.isFinite() && it >= 0.0 }
-
-    fun nutrition(seed: RecommendationSeed) = Macronutrients(seed.template.carbohydrateGrams,
-        seed.template.proteinGrams, seed.template.fatGrams)
-
-    fun nearBalanced(seed: RecommendationSeed): Boolean {
-        val n = nutrition(seed)
-        if (!complete(n)) return false
-        val c = requireNotNull(n.carbohydrateGrams) * 4
-        val p = requireNotNull(n.proteinGrams) * 4
-        val f = requireNotNull(n.fatGrams) * 9
-        val sum = c + p + f
-        return sum > 0 && c / sum in 0.40..0.70 && p / sum in 0.08..0.40 && f / sum in 0.15..0.40
-    }
-
-    fun eligible(pool: List<RecommendationSeed>, theme: DailyRecommendationTheme, meal: MealType): List<RecommendationSeed> {
-        val valid = pool.filter { MealRecommendationEngine.supportsMeal(it.template, meal) && it.template.totalKcal > 0 }
-        return when (theme) {
-            DailyRecommendationTheme.LIGHT -> MealRecommendationThemePolicy.select(valid, MealRecommendationTheme.LIGHT, meal)
-            DailyRecommendationTheme.HEARTY -> MealRecommendationThemePolicy.select(valid, MealRecommendationTheme.FILLING, meal)
-            DailyRecommendationTheme.BALANCED -> valid.filter { MealRecommendationThemePolicy.matchesBalanced(it.template) }
-            DailyRecommendationTheme.HEALTHY -> valid.filter(::nearBalanced)
-            DailyRecommendationTheme.SLOW_AGING_STYLE -> emptyList()
-            // Diet/bulk are preferences within the actual target; neither imposes a deficit/surplus.
-            DailyRecommendationTheme.DIET, DailyRecommendationTheme.BULK, DailyRecommendationTheme.CHEAT -> valid
-        }
-    }
-
-    fun styleScore(seed: RecommendationSeed, theme: DailyRecommendationTheme, mealPool: List<RecommendationSeed>): Double {
-        val low = mealPool.minOfOrNull { it.template.totalKcal } ?: seed.template.totalKcal
-        val high = mealPool.maxOfOrNull { it.template.totalKcal } ?: low
-        val relative = if (high == low) 0.5 else (seed.template.totalKcal - low).toDouble() / (high - low)
-        val protein = seed.template.proteinGrams?.takeIf { it.isFinite() && it >= 0.0 }
-        return when (theme) {
-            DailyRecommendationTheme.DIET -> (1 - relative) * 12 + (if (complete(nutrition(seed))) 6 else 0) + (if (protein != null) 2 else 0)
-            DailyRecommendationTheme.BULK -> relative * 12 + (protein ?: 0.0).coerceAtMost(50.0) * 0.2
-            else -> 0.0
-        }
-    }
-}
-
 /** Bounded deterministic search. All calories/macros use the existing standard ingredient portion. */
 object DailyMealPlanEngine {
     val slots = listOf(MealType.BREAKFAST, MealType.LUNCH, MealType.DINNER, MealType.SNACK)
@@ -130,6 +86,16 @@ object DailyMealPlanEngine {
         MealType.DINNER to (0.25..0.35), MealType.SNACK to (0.05..0.15))
     private const val TOP_K = 40
     private const val BEAM = 256
+
+    /** Shares exactly the same remaining-meal allocation as plan generation. */
+    fun nextMealRange(remainingKcal: Int, unrecorded: Set<MealType>, meal: MealType): IntRange? {
+        if (remainingKcal <= 0 || meal !in unrecorded || meal !in shares) return null
+        val totalShare = unrecorded.sumOf { shares[it] ?: 0.0 }
+        if (totalShare <= 0) return null
+        val range = ranges.getValue(meal)
+        return floor(remainingKcal * range.start / totalShare).toInt().coerceAtLeast(0)..
+            ceil(remainingKcal * range.endInclusive / totalShare).toInt().coerceAtLeast(0)
+    }
 
     fun recordedMeals(records: List<MealRecord>): Map<MealType, DailyPlanMeal> = records.groupBy { it.mealType }
         .filterKeys { it in slots }.mapValues { (meal, rows) ->
@@ -159,9 +125,10 @@ object DailyMealPlanEngine {
         preference: UserMealPreference, dislikes: Set<String> = emptySet(), allergies: Set<String> = emptySet(),
         records: List<MealRecord> = emptyList(), fixed: Map<MealType, DailyPlanMeal> = emptyMap(),
         seen: Map<MealType, Set<String>> = emptyMap(), excludedSignatures: Set<String> = emptySet(),
-        excludedIds: Set<String> = emptySet(), favorites: Set<String> = emptySet()
+        excludedIds: Set<String> = emptySet(), favorites: Set<String> = emptySet(),
+        learnedScores: Map<String, Double> = emptyMap()
     ): TodayMealPlan? {
-        if (target == null || target <= 0 || theme == DailyRecommendationTheme.SLOW_AGING_STYLE) return null
+        if (target == null || target <= 0) return null
         val recorded = recordedMeals(records)
         val locked = fixed + recorded
         val pool = candidates(seeds, theme, preference, dislikes, allergies)
@@ -181,31 +148,42 @@ object DailyMealPlanEngine {
                     MealRecommendationEngine.normalizeFoodName(fixedMeal.name) == MealRecommendationEngine.normalizeFoodName(it.template.name) } }
             val unseen = allowed.filterNot { it.template.id in seen[meal].orEmpty() }
             val cyclePool = unseen
-            val all = cyclePool.map { seed ->
+            val all = cyclePool.flatMap { seed ->
+                RecommendationServingPolicy.available(seed, meal).filter { serving ->
+                    meal != MealType.SNACK || serving.kcal <= minOf(RecommendationServingPolicy.MAX_SNACK_KCAL, maximumBudget.toInt())
+                }.map { serving ->
                 val matched = FoodPreferencePolicy.matches(seed, preferred)
+                val learned = RecommendationLearningPolicy.bounded(learnedScores[seed.template.id]
+                    ?: if (FoodPreferencePolicy.matches(seed, favorites)) 3.0 else 0.0)
                 val score = (if (matched) if (theme == DailyRecommendationTheme.CHEAT) 45.0 else 20.0 else 0.0) +
-                    (if (theme == DailyRecommendationTheme.CHEAT && FoodPreferencePolicy.matches(seed, favorites)) 35.0 else 0.0) +
+                    learned +
                     DailyMealThemePolicy.styleScore(seed, theme, pool.getValue(meal)) -
-                    abs(seed.template.totalKcal - budget) / target * 15.0 -
+                    abs(serving.kcal - budget) / target * 15.0 -
                     (if (seed.template.id in seen[meal].orEmpty()) 100.0 else 0.0)
-                Option(DailyPlanMeal(meal, seed.template.id, seed.template.name, seed.template.totalKcal,
-                    DailyMealThemePolicy.nutrition(seed), matchedAllergens = MealRecommendationEngine.matchedAllergens(seed, allergies),
+                Option(DailyPlanMeal(meal, seed.template.id, seed.template.name, serving.kcal,
+                    serving.nutrition, portion = serving.portion, matchedAllergens = MealRecommendationEngine.matchedAllergens(seed, allergies),
                     ingredientInfoComplete = seed.ingredientInfoComplete,
                     allergenInfoComplete = "UNKNOWN" !in seed.allergenTags,
-                    foodGroups = seed.ingredientCategories, preferenceMatched = matched), score,
+                    foodGroups = if (theme == DailyRecommendationTheme.SLOW_AGING_STYLE) SlowAgingStylePolicy.groups(seed) else seed.ingredientCategories,
+                    preferenceMatched = matched, amountLabels = serving.labels), score,
                     when {
-                        seed.template.totalKcal < minimumBudget -> minimumBudget - seed.template.totalKcal
-                        seed.template.totalKcal > maximumBudget -> seed.template.totalKcal - maximumBudget
+                        serving.kcal < minimumBudget -> minimumBudget - serving.kcal
+                        serving.kcal > maximumBudget -> serving.kcal - maximumBudget
                         else -> 0.0
                     })
+                }
             }
             // Keep calorically diverse options as well as the best-fit options.
-            val best = all.sortedWith(compareBy<Option> { abs(it.meal.kcal - budget) }.thenByDescending { it.score }.thenBy { it.meal.templateId }).take(TOP_K - 8)
+            val best = all.sortedWith(compareByDescending<Option> { it.meal.preferenceMatched }
+                .thenByDescending { it.score }.thenBy { abs(it.meal.kcal - budget) }.thenBy { it.meal.templateId }).take(TOP_K - 8)
             (best + all.sortedBy { it.meal.kcal }.take(4) + all.sortedByDescending { it.meal.kcal }.take(4))
-                .distinctBy { it.meal.templateId }
+                .distinctBy { it.meal.templateId to it.meal.portion }
         }
         if (options.values.any { it.isEmpty() }) return null
-        data class Partial(val meals: List<DailyPlanMeal>, val score: Double, val allocationPenalty: Double) { val kcal get() = meals.sumOf { it.kcal } }
+        data class Partial(val meals: List<DailyPlanMeal>, val score: Double, val allocationPenalty: Double) {
+            val kcal get() = meals.sumOf { it.kcal }
+            val explicitMatches get() = meals.count { it.preferenceMatched }
+        }
         fun tier(kcal: Int): Int = when {
             abs(kcal - target).toDouble() / target <= 0.05 -> 0
             abs(kcal - target).toDouble() / target <= 0.10 -> 1
@@ -226,11 +204,13 @@ object DailyMealPlanEngine {
                 target > partial.kcal + maximum -> target - partial.kcal - maximum
                 else -> 0
             }
-            val comparison = if (future.isEmpty()) compareBy<Partial> { tier(it.kcal) }
-                .thenBy { if (tier(it.kcal) == 2) abs(it.kcal - target) else 0 }
-            else compareBy<Partial> { projectedError(it) }
+            val comparison = if (future.isEmpty()) compareByDescending<Partial> { it.explicitMatches }
+                .thenByDescending { if (theme == DailyRecommendationTheme.SLOW_AGING_STYLE) SlowAgingStylePolicy.dailyScore(it.meals) else 0.0 }
+                .thenBy { tier(it.kcal) }
+                .thenBy { abs(it.kcal - target) }
+            else compareByDescending<Partial> { it.explicitMatches }.thenBy { projectedError(it) }
             beam = expanded.sortedWith(comparison.thenBy { it.allocationPenalty }
-                .thenByDescending { it.score }.thenBy { abs(it.kcal + future.sumOf { next -> remaining * shares.getValue(next) / shareTotal } - target) }
+                .thenByDescending { it.explicitMatches }.thenByDescending { it.score }.thenBy { abs(it.kcal + future.sumOf { next -> remaining * shares.getValue(next) / shareTotal } - target) }
                 .thenBy { it.meals.joinToString { m -> m.templateId.orEmpty() } }).take(BEAM)
             if (beam.isEmpty()) return null
         }
@@ -240,13 +220,21 @@ object DailyMealPlanEngine {
                 add("${theme.label} 테마")
                 if (dislikes.isNotEmpty()) add("피하고 싶은 음식·재료 ${dislikes.size}개 제외")
                 if (partial.meals.any { it.preferenceMatched }) add("좋아하는 음식 취향을 우선했어요.")
+                if (partial.meals.any { (learnedScores[it.templateId] ?: 0.0) > 0 }) add("실제 기록과 즐겨찾기를 약하게 반영했어요.")
                 if (recorded.isNotEmpty()) add("이미 기록한 ${recorded.size}끼의 실제 칼로리를 반영했어요.")
+                if (theme == DailyRecommendationTheme.SLOW_AGING_STYLE) {
+                    add(SlowAgingStylePolicy.DESCRIPTION)
+                    add(SlowAgingStylePolicy.VARIATION_NOTE)
+                }
+                add("음식별 정해진 양 후보에서 골랐어요. 목표 차이는 다른 메뉴 조합으로 줄여요.")
                 if (theme == DailyRecommendationTheme.HEALTHY) add("식품군 정보는 요리 분류이므로 원재료 다양성을 판단하지 않았어요.")
             }) to partial
         }.filterNot { it.first.signature in excludedSignatures }
-            .sortedWith(compareBy<Pair<TodayMealPlan, Partial>> { tier(it.first.totalKcal) }
-                .thenBy { if (tier(it.first.totalKcal) == 2) abs(it.first.totalKcal - target) else 0 }
-                .thenBy { it.second.allocationPenalty }.thenByDescending { it.second.score }
+            .sortedWith(compareByDescending<Pair<TodayMealPlan, Partial>> { it.second.explicitMatches }
+                .thenByDescending { if (theme == DailyRecommendationTheme.SLOW_AGING_STYLE) SlowAgingStylePolicy.dailyScore(it.first.meals) else 0.0 }
+                .thenBy { tier(it.first.totalKcal) }
+                .thenBy { abs(it.first.totalKcal - target) }
+                .thenBy { it.second.allocationPenalty }.thenByDescending { it.second.explicitMatches }.thenByDescending { it.second.score }
                 .thenBy { abs(it.first.totalKcal - target) }.thenBy { it.first.signature })
             .firstOrNull()?.first
     }

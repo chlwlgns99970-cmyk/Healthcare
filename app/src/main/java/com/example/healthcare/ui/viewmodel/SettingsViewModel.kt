@@ -89,6 +89,8 @@ class SettingsViewModel(
     private val foodDataUpdateCoordinator: FoodDataUpdateCoordinator? = null
 ) : ViewModel() {
 
+    val saveAcknowledgement = SaveAcknowledgement<String>()
+
     private val dateFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd")
     private var hasUserEditedEnergyForm = false
 
@@ -106,6 +108,20 @@ class SettingsViewModel(
 
     private val _weightGoalState = MutableStateFlow(initialWeightGoalState())
     val weightGoalState: StateFlow<WeightGoalUiState> = _weightGoalState.asStateFlow()
+    private var savedEnergyDraft = _energyState.value
+    private var savedBodyDraft = _bodyProfileState.value
+    private var savedWeightDraft = _weightGoalState.value
+    val hasUnsavedInput: Boolean get() = _energyState.value.draftValues() != savedEnergyDraft.draftValues() ||
+        _bodyProfileState.value.draftValues() != savedBodyDraft.draftValues() ||
+        _weightGoalState.value.draftValues() != savedWeightDraft.draftValues()
+
+    fun discardSettingsDraft() {
+        if (_energyState.value.isSaving || _bodyProfileState.value.isSaving || _isSaving.value) return
+        hasUserEditedEnergyForm = false
+        _energyState.value = savedEnergyDraft
+        _bodyProfileState.value = savedBodyDraft
+        _weightGoalState.value = savedWeightDraft
+    }
 
     val foodDataUpdateState: StateFlow<FoodDataUpdateState> =
         foodDataUpdateCoordinator?.state ?: MutableStateFlow(FoodDataUpdateState())
@@ -134,6 +150,7 @@ class SettingsViewModel(
                             saveMessage = current.saveMessage,
                             saveError = current.saveError
                         )
+                        savedEnergyDraft = _energyState.value
                         refreshWeightGoalCalculation(showErrors = false)
                         refreshIntakePaceCalculation(showErrors = false)
                     }
@@ -276,12 +293,14 @@ class SettingsViewModel(
                 store.save(saved)
                 hasUserEditedEnergyForm = false
                 _energyState.value = energy.copy(targetMode = TargetMode.MANUAL)
+                savedEnergyDraft = _energyState.value
                 _weightGoalState.value = _weightGoalState.value.copy(
                     storedGoal = saved,
                     isApplying = false,
                     applyMessage = "감량 목표를 일일 섭취 목표에 적용했습니다.",
                     applyError = null
                 )
+                savedWeightDraft = _weightGoalState.value
             } catch (_: Exception) {
                 _weightGoalState.value = _weightGoalState.value.copy(
                     isApplying = false,
@@ -310,6 +329,7 @@ class SettingsViewModel(
                     intakeApplyMessage = "하루 섭취 목표에 적용했습니다.",
                     intakeApplyError = null
                 )
+                savedWeightDraft = _weightGoalState.value
             } catch (_: Exception) {
                 _weightGoalState.value = _weightGoalState.value.copy(
                     isApplyingIntakeTarget = false,
@@ -322,7 +342,7 @@ class SettingsViewModel(
 
     fun saveBodyProfile(onSuccess: (Double) -> Unit = {}) {
         val current = _bodyProfileState.value
-        if (current.isSaving) return
+        if (current.isSaving || saveAcknowledgement.isPending) return
         val validation = BodyProfileCalculator.validate(
             current.sex, current.ageInput, current.heightInput, current.weightInput
         )
@@ -368,6 +388,8 @@ class SettingsViewModel(
                     bmrReviewMessage = "신체정보로 계산한 예상 기초대사량을 반영했습니다."
                 ).withUpdatedPreview()
                 _bodyProfileState.value = profile.toUiState(saveMessage = "내 정보를 저장했습니다.")
+                savedBodyDraft = _bodyProfileState.value
+                savedEnergyDraft = _energyState.value
                 onSuccess(profile.weightKg)
             } catch (_: Exception) {
                 _bodyProfileState.value = current.copy(
@@ -388,7 +410,7 @@ class SettingsViewModel(
     }
 
     fun saveEnergyProfile(onSuccess: () -> Unit = {}) {
-        if (_energyState.value.isSaving) return
+        if (_energyState.value.isSaving || saveAcknowledgement.isPending) return
         val validated = validateEnergyState(_energyState.value) ?: return
         _energyState.value = validated.copy(isSaving = true, saveMessage = null, saveError = null)
 
@@ -411,6 +433,7 @@ class SettingsViewModel(
                     saveMessage = "저장되었어요",
                     saveError = null
                 )
+                savedEnergyDraft = _energyState.value
                 onSuccess()
             } catch (_: Exception) {
                 _energyState.value = validated.copy(
@@ -423,7 +446,7 @@ class SettingsViewModel(
     }
 
     fun updateGoal(calories: Int, onSuccess: () -> Unit) {
-        if (_isSaving.value || calories <= 0) return
+        if (_isSaving.value || saveAcknowledgement.isPending || calories <= 0) return
         _isSaving.value = true
         viewModelScope.launch {
             try {
@@ -466,6 +489,7 @@ class SettingsViewModel(
             )
             hasUserEditedEnergyForm = false
             _energyState.value = energy.copy(targetMode = TargetMode.MANUAL)
+            savedEnergyDraft = _energyState.value
         }
     }
 
@@ -632,3 +656,7 @@ class SettingsViewModel(
     private fun formatBodyValue(value: Double): String =
         if (value == value.toLong().toDouble()) value.toLong().toString() else String.format(java.util.Locale.US, "%.1f", value)
 }
+
+internal fun EnergySettingsUiState.draftValues(): List<Any?> = listOf(bmrInput, activityLevel, customPalInput, targetMode)
+internal fun BodyProfileUiState.draftValues(): List<Any?> = listOf(sex, ageInput, heightInput, weightInput)
+internal fun WeightGoalUiState.draftValues(): List<Any?> = listOf(targetWeightInput, durationWeeksInput, intakeTargetInput)

@@ -1,0 +1,48 @@
+[
+  {
+    "originalRecipeId": "MFDS-317",
+    "originalName": "돼지두루치기",
+    "selectedId": "MENUZEN-D102007",
+    "selectedName": "돼지고기볶음(고추장, 야채)",
+    "foodIds": [
+      "kfind-d110-464320000-0001"
+    ],
+    "method": "WHOLE_NAMED_SAME_DISH_REFERENCE",
+    "reason": "MFDS-317 팬 돼지고기·채소·고추장 볶음과 같은 독립 전체 배합. 참고의 등심·데친 채소 상태와 고추장 변형명을 보존하며 원본 생재료량을 변경하지 않음",
+    "sourceUrl": "https://www.nics.go.kr/food/kfi/mgnNewmenumkFoodSelectNew/selectFoodDetail.json?fdCode=D102007",
+    "sourceSha256": "b6db0103ae3a0b6708903fb6cdbb2e1e83a335d1adc1c5d5fb319e3077a5fc77",
+    "originalSourceUrl": "https://www.foodsafetykorea.go.kr/popup/sensuousmenuView.do?rcp_menu_no=317",
+    "originalSourceSha256": "581a24dd7039f2251376558c7c2c1c2168537bd78094f2cd5a37f6568ed1ac30",
+    "contextSupportedTitleKeys": [],
+    "matchingConfidence": "REVIEWED_SAME_DISH",
+    "checkedAt": "2026-10-05",
+    "compositionKind": "REFERENCE_RECIPE",
+    "testMethod": "newMapping01"
+  },
+  {
+    "originalRecipeId": "RDA-91542",
+    "originalName": "낙지볶음(낙지전골)",
+    "selectedId": "MENUZEN-D101006",
+    "selectedName": "낙지볶음(고추장)",
+    "foodIds": [
+      "kfind-d110-457000000-0001",
+      "kfind-d410-457000000-0001",
+      "kfind-d510-457000000-0001",
+      "kfind-d610-457000000-0001",
+      "kfind-d710-457000000-0001"
+    ],
+    "method": "WHOLE_NAMED_SAME_DISH_REFERENCE",
+    "reason": "동일 명칭·명시 qualifier·조리형태의 독립 전체 구성. 변형명 보존; 원본 누락량에 역대입하지 않음",
+    "sourceUrl": "https://www.nics.go.kr/food/kfi/mgnNewmenumkFoodSelectNew/selectFoodDetail.json?fdCode=D101006",
+    "sourceSha256": "9cc4fa77c2249ba78840002e01e7309dda2376b27cb4ebd1eaae701e3ec37eab",
+    "originalSourceUrl": "https://www.nics.go.kr/food/kfi/tfSrch08/view?menuId=PS03520&tfcode=91542",
+    "originalSourceSha256": "a69ff68d2bccdfffaf4c68ce6eda801d3dc4fb99e604f8cb36162f92f02e77ba",
+    "contextSupportedTitleKeys": [
+      "낙지볶음"
+    ],
+    "matchingConfidence": "REVIEWED_SAME_DISH",
+    "checkedAt": "2026-10-05",
+    "compositionKind": "REFERENCE_RECIPE",
+    "testMethod": "newMapping02"
+  }
+]

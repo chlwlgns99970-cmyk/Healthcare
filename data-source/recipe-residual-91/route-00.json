@@ -1,0 +1,54 @@
+{
+  "foods": [
+    {
+      "recipeId": "RDA-DIET-89406-0",
+      "name": "묵밥",
+      "variants": [
+        "묵밥"
+      ],
+      "classification": "PARTIAL"
+    },
+    {
+      "recipeId": "MFDS-107",
+      "name": "오리구이곰피쌈",
+      "variants": [
+        "오리구이곰피쌈",
+        "오리 구이 곰피쌈"
+      ],
+      "classification": "PARTIAL"
+    },
+    {
+      "recipeId": "MFDS-109",
+      "name": "머위대볶음",
+      "variants": [
+        "머위대볶음",
+        "머위대 볶음"
+      ],
+      "classification": "PARTIAL"
+    },
+    {
+      "recipeId": "MFDS-110",
+      "name": "새싹비빔국수",
+      "variants": [
+        "새싹비빔국수",
+        "새싹 비빔국수"
+      ],
+      "classification": "PARTIAL"
+    }
+  ],
+  "queries": [
+    {
+      "q": "묵밥 레시피 재료 중량 (site:go.kr OR site:ac.kr OR site:or.kr OR site:ottogi.co.kr OR site:sempio.com OR site:semie.cooking)"
+    },
+    {
+      "q": "오리 구이 곰피쌈 레시피 재료 중량 (site:go.kr OR site:ac.kr OR site:or.kr OR site:ottogi.co.kr OR site:sempio.com OR site:semie.cooking)"
+    },
+    {
+      "q": "머위대 볶음 레시피 재료 중량 (site:go.kr OR site:ac.kr OR site:or.kr OR site:ottogi.co.kr OR site:sempio.com OR site:semie.cooking)"
+    },
+    {
+      "q": "새싹 비빔국수 레시피 재료 중량 (site:go.kr OR site:ac.kr OR site:or.kr OR site:ottogi.co.kr OR site:sempio.com OR site:semie.cooking)"
+    }
+  ],
+  "result": "kda2019recipe2 (https://www.dietitian.or.kr/assets/ver2/food_online/html/main_popup/kda2019recipe2/index_20.html)\nciteturn499search0 [wordlim: 200] Crawled: 7.0 years ago; 비빔밥은 고기 대신 두부, 참치, 낙지, 노각, 명란젓 등 다양한 재료를 활용하여 먹을 수 있는 식사로, 지역마다 다양한 특색을 가지고 있다.두부새싹비빔밥과 식문화11 우리 농산물을 활용한 단체급식 레시피 버섯맑은국, 소고기강된장&두부새싹비빔밥, 열무김치, 바나나 추천 식단 재료(1인분) 두부 120g, 쌀 90g, 달걀 60g, 상추 15g, 모듬새싹 3g, 베이비채소 3g, 조선부추 5g * 양념장 : 고추장 15g, 다진 마늘 3g, 설탕 3g, 참기름 2g, 참깨 2g, 매실액 1g 만드는 방법 1.\n--------------------------------------------------------------------------------\n한국환경공단>핵심사업>자원순환>자원순환제도 운영·관리>플라스틱 재생원료 사용의무제도 (https://www.keco.or.kr/web/lay1/S1T183C1544/contents.do)\nciteturn499search1 [wordlim: 200] Crawled: today;   * ※「먹는물관리법」 제3조제2호 및 제3호에 따른 먹는샘물 또는 식품의약품안전처 고시 「식품의 기준 및 규격」에 따른 음료류 제품 제조업자 ...   * ※ ‘재생원료 사용량’은 최종 소비자가 사용하지 않고 발생한 폐플라스틱을 재활용하거나 원재료로부터 발생한 자투리 등 공정부산물에는 적용되지 않음(플라스틱 재생원료 사용의무에 관한 고시[별표2]) ...   * ※ 사업자단체의 장 : (사)한국포장재재활용사업공제조합(먹는샘물 및 비알코올 음료류 제품 포장재 중 페트(PET, polyethylene terephthalate)병을 연간 5천톤 이상 생산하는 자)\n--------------------------------------------------------------------------------\n영양플러스 온라인 영양교육센터 > 통합검색 (https://www.nutriplus.or.kr/portal/support/unifiedSearchList.do)\nciteturn499search2 [wordlim: 200] Crawled: 6 days ago; 영양플러스 레시피_밥그라탕 ... 영양플러스 보충식품을 활용한 건강 레시피를 소개합니다. ... ※ 영양플러스사업 참여자 중 이사를 하게된 경우 등 영양플러스사업 참여 보건소가 변경된 경우, 해당 보건소 담당자의 교육확인을 위해 '소속보건소' 정보를 위와 같은 방법으로 변경할 수 있습니다. ... 초기부터 완료기까지 월령별 이유식 구성, 조리 방법 및 섭취량 안내 등 단계별 맞춤 정보가 포함된 자료입니다. ... 이유식의 필요성과 시작 시기, 재료 선택, 조리법 등 기초 정보를 중심으로 구성된 자료입니다. ... 가정에서 건강을 위해 실천해야할 습관을 정하여,매일 실천하고 기록해보세요.https://www.khepi.or.kr/kps/publish/view?\n--------------------------------------------------------------------------------\n하동차생산자협의회 (https://www.hadongtea.or.kr/default/sub03/sub03_2.php)\nciteturn499search3 [wordlim: 200] Crawled: 3 weeks ago; 이러한 시기에 녹차 잎과 여러 가지 새싹을 웰빙 음식으로 권하고 싶다. ... 메밀가루에 녹차, 치자, 오미자 우린 물로 걸쭉하게 섞은 후 번철이 따끈해지면 한 수저씩 얇고 둥글게 부쳐 낸다.( ... 1,2의 재료를 색에 맞춰 담고 소스를 곁들인다. ... 레시피 닫기 ... 덖음차는 냄비나 프라이팬 등에 종이를 깔고 고급차를 넣어 약불로 볶고, 도중에 휘젓지 않는다.출처  │한국차생산자연합회 - 차를 알면 건강이 보인다\n--------------------------------------------------------------------------------\n프로그램안내 : 마산여성인력개발센터 (https://masan-woman.or.kr/woman/programUView.do?ck=&no=78248)\nciteturn499search4 [wordlim: 200] Crawled: 3 days ago; 고용24어플 또는 홈페이지(www.work24.go.kr) 접속 후 로그인 ...     뿌리채소영양솥밥/ 고등어추어탕 ...     <정서치료를 위한 전통음식> ...     - 국민취업지원제도Ⅰ유형 및 Ⅱ유형 중 저소득층(특정계층 포함)  40,000원 ...     ■ 강사 : 이경화(레시피트리 대표) ...     - 재료 준비가 필요한 일부 강좌(요리, 공예, 플라워 등)의 경우, 강의 시작 3일 전까지 취소ㆍ환불이 가능합니다.\n--------------------------------------------------------------------------------\n당뇨 식사 추천 조리법 | 건강TV | 건강정보 | 서울아산병원 (https://ggh.asanfoundation.or.kr/asan/healthtv/video/videoDetail.do?videoId=1256)\nciteturn499search5 [wordlim: 200] Crawled: 6 days ago; 신선한 재료를 이용하고, 음식을 조리할 때 음식 간은 싱겁게 하고, 소금에 절인 음식은 피하는 것이 좋습니다.쇠고기, 돼지고기 등의 육류는 기름이 많은 부위를 제거하고, 닭, 오리 등의 가금류는 껍질을 벗긴 후 조리합니다.튀김이나 전보다는 구이, 찜, 무침 등의 조리법을 이용하는 것이 좋습니다.설탕, 물엿, 꿀, 시럽의 사용은 최대한 줄이시고 신맛, 매운맛이 나는 식초, 레몬, 고춧가루, 겨자, 후추, 생강 등의 양념을 이용하는 것이 바람직합니다.\n--------------------------------------------------------------------------------\n연근 첨가가 우육 햄버거 패티의 품질에 미치는 영향 (https://www.kjcls.or.kr/_PR/view/?aidx=9020&bidx=677)\nciteturn499search6 [wordlim: 200] Crawled: last month; Research and Development Center, DBIO Inc, Daejeon, Korea ... The quality characteristics of the hamburger patties prepared after the addition of 5, 10, 15, 20 or 25% (w/w) lotus root were investigated. ... 2002), 연근분말을 첨가한 두부(Park et al. 2010a), 연근발효 음료(Bae et al. 2008a), 연근즙을 첨가한 백김치(Park et al. 2010b), 연근분말을 첨가한 국수(Bae 2008b), 연근가루 첨가 청포묵(Park & Kim 2010), 연근가루 첨가 다식(Yoon et al. ... 서양의 대표 패스트푸드인 햄버거는 빵 사이에 고기로 만든 패티를 넣어 함께 먹는 음식으로 서양 레시피를 살펴보면 지방이 적은 쇠고기를 사용할 경우 지방을 20~30% 정도 추가로 사용하여(Choi 2013) 육즙을 보전하고 풍미를 향상시킨다. ... 2008】), 육류를 다시마 분말과 밥으로 대체하여 제조한 햄버거 패티(Oh & Lim 2011), 참치분말을 첨가하여 불포화지방산 함량을 증가시켜 기능성을 강화한 햄버거 패티( Hong 2011)와 두부분말을 첨가한 햄버거 패티(Choi & Kim 2014), 지방을 대체하기 위해 생마를 이용한 햄버거 패티( Lee 2015) 등의 연구가 진행되었다.바쁜 현대사회에 햄버거와 같은 패스트푸드는 일상적으로 섭취하기 쉬운 식품이 되어 가고 있는데 반해 우리나라는 고령자가 증가되며 만성질환자 수가 급격히 증가하는 추세로 건강 기능성식품에 대한 기대와 필요도가 매우 높은 상황이다. ... 또한, 쇠고기중 비선호 부위를 햄버거 패티 재료로 활용하므로 써 한우소비를 촉진하고 아울러 국내산 연근의 소비를 활성화할 수 있는 방안을 개발하는 것을 부차적 목적으로 하였다. ... 패티의 제조방법은 쇠고기 분쇄육 분량 대비 0, 5, 10, 15, 20, 25%의 마쇄한 연근을 첨가하여 중량 40 g, 직경 6.5 cm, 두께 1 cm의 크기로 성형하였다.\n--------------------------------------------------------------------------------\n의약품 안전사용 서비스 (DUR) 국민 체험관 < 의약품정보 < 의료정보 < 건강보험심사평가원 (https://www.hira.or.kr/ra/medi/form.do?pgmid=HIRAA030029000000)\nciteturn499search7 [wordlim: 200] Crawled: last week;     * 카카오스토리 ... 의약품안전사용서비스(Drug Utillization Review)는 의사 또는 약사가 의약품 처방·조제 시 환자가 현재 복용하고 있는 약과 중복되는 약 등 의약품 안전정보를 요양기관에 실시간 제공하여 안전한 의약품 사용을 지원하는 서비스 입니다. ... ※ 금기·주의, 중복 정보가 제공 되더라도 의·약학적 적정사유가 있는 경우 처방·조제 될 수 있습니다. ... 내가먹는 약 검색의 제품명, 제품코드, 주성분코드, 업체명 선택이 있는 리스트 ...   * 용량주의(0)\n--------------------------------------------------------------------------------\n (https://www.dietitian.or.kr/paper_board_view_contents.do?bbs_idx=1205)\nciteturn499search8 [wordlim: 200] Crawled: 6 days ago; 노출을 꺼리는 통통족들을 위한 다이어트 레시피를 공개한다. ... 저칼로리에 영양이 풍부해 다이어트 재료로는 제격인 두부는 각종 미네랄과 칼슘을 함유하고 있을 뿐만 아니라 단백질과 지방 흡수율이 높아 다이어트로 부족해지기 쉬운 각종 영양소의 흡수를 도와준다. ... 비빔국수 519 / 비빔냉면 500 / 떡국 568 / 튀김우동 620 / 수제비 410 ... 간의 콜레스테롤 합성을 막고 혈중 콜레스테롤 수치를 낮춰주는 기능도 겸하고 있는 다이어트 재료다. ... 곤약 80g, 물 2컵, 국멸치 5마리, 양송이버섯 1개, 다시마 5cm, 국간장 1큰술, 다진 마늘 1/2작은술, 소금 적당량, 실파·홍고추·쑥갓 약간씩\n--------------------------------------------------------------------------------\nkda2019recipe2 (https://www.dietitian.or.kr/assets/ver2/food_online/html/main_popup/kda2019recipe2/index_100.html)\nciteturn499search9 [wordlim: 200] Crawled: 7.0 years ago; 오리고기사과 파프리카쌈과 식문화 『91 우리 농산물을 활용한 단체급식 레시피 재료(1인분) 훈제오리 120g, 사과 50g, 깻잎 40g, 칠리소스 10g, 파프리카(빨간색, 노란색) 각 50g, 데리야끼소스 10g, 슬라이스 치즈 10g 만드는 방법 1. ... 조리 TIP 사용기기 및 기구 칼, 도마 조리 온도5℃이하조리 시간30분 급식 대상 | 성인 조리법 | 생채(쌈류) 1인 배식량 | 200g 에너지(kcal) 283.2 단백질(g) 32.1 지질(g) 6.2 당질(g) 30.5 칼슘(mg) 217.8 나트륨(mg) 696.1 철분(mg) 5.1 VitA(R.E.)18.9 VitC(mg) 103.4 VitB₁(mg) 0.4 VitB₂(mg) 0.5 영양소 분석 보리밥, 아욱국, 두부양념조림, 오리고기사과 파프리카쌈&소스, 숙주나물무침, 열무김치 추천 식단92 사과바나나셰이크 밀크 셰이크는 원래는 우유에 설탕, 향료, 얼음을 가하여 강하게 진탕(shake)하여 가는 얼음의 결정과 기포를 혼입시킨 입에 맞는 음료이다.\n--------------------------------------------------------------------------------\n한국환경공단>핵심사업>자원순환>폐자원사업 관리>고형연료제품(SRF) 신고 및 검사제도 (https://www.keco.or.kr/web/lay1/S1T185C1068/contents.do)\nciteturn499search10 [wordlim: 200] Crawled: today; - 폐합성수지류, 폐합성섬유류, 폐고무류, 폐타이어 ... - 그 외 기후에너지환경부장관이 고시하는 바이오매스 폐기물 ... 고형연료제품 검사제도 - 구분, 대상(제조, 수입, 사용), 검사개요, 주기, 검사기관, 수수료 내용이 포함된 표 ... 확인  | ○  | ○  | ○  | 보관 중 제품의 품질기준 적합여부 검사  | 분기 1회  | 한국환경공단  | 없음\n--------------------------------------------------------------------------------\n한국고용정보원-영문 | Publication | LMIS (https://statistics.keis.or.kr/keis/en/bbs/300/detail.do?pageIndex=1&pageItm=10&pstSn=3&searchGbn=0&searchOrderSort=0)\nciteturn499search11 [wordlim: 200] Published: 2.3 years ago; Crawled: 6 days ago;   * ∗︎Detailed training information can be directly searched and verified on the Work24 website (www.work24.go.kr). ... Unemployed individuals enrolled in training programs lasting 140 hours or more will receive up to 116,000 KRW per month, provided they maintain an attendance rate of 80% or higher per month.\n--------------------------------------------------------------------------------\n2024_0423_중곡문화체육센터_24년 여름학기 프로그램 6차 (https://booking.gwangjin.or.kr/File/18ff3b0467a39475654336972aad734f)\nciteturn499search12 [wordlim: 200] Published: 2.5 years ago; 문화강좌(3개월) - 어린이 ...   <th>장소</th> ...   <th>재료/교재비</th> ... 레고교실<br>(기초기계)</td>\n--------------------------------------------------------------------------------\n고성군 마을 지명유래 (https://goseongcul.or.kr/wp-content/uploads/2025/05/%EA%B3%A0%EC%84%B1%EA%B5%B0%EB%A7%88%EC%9D%84%EC%A7%80%EB%AA%85%EC%9C%A0%EB%9E%98.pdf)\nciteturn499search13 [wordlim: 200] Published: 1.4 years ago; 1916년 8월 1일 리동 통폐합시 오리진(五里津)을 오호리(五湖里)만 지명으로 개칭하여 오늘에 이르고 있다. ... 앞쪽에는 건물과 주차장, 가운데에는 마을과 도로, 멀리에는 해안선과 바다가 보이며, 맑은 하늘 아래 해안 마을이 내려다보이는 구도이다.\n"
+}

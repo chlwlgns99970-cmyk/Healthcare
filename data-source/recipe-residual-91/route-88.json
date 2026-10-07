@@ -1,0 +1,72 @@
+{
+  "foods": [
+    {
+      "recipeId": "RDA-91764",
+      "name": "곤달비밥(곤드레밥, 곤드레나물밥)",
+      "variants": [
+        "곤달비밥(곤드레밥, 곤드레나물밥)",
+        "곤달비밥곤드레밥곤드레나물밥",
+        "곤달비밥",
+        "곤드레밥",
+        "곤드레나물밥"
+      ],
+      "classification": "UNRESOLVED"
+    },
+    {
+      "recipeId": "RDA-91829",
+      "name": "물메기국(곰치국)",
+      "variants": [
+        "물메기국(곰치국)",
+        "물메기국곰치국",
+        "물메기국",
+        "곰치국"
+      ],
+      "classification": "PARTIAL"
+    },
+    {
+      "recipeId": "RDA-92425",
+      "name": "백합죽",
+      "variants": [
+        "백합죽",
+        "백합 죽"
+      ],
+      "classification": "PARTIAL"
+    }
+  ],
+  "queries": [
+    {
+      "q": "\"곤달비밥(곤드레밥,곤드레나물밥)\" 정량 조리",
+      "domains": [
+        "go.kr",
+        "ac.kr",
+        "or.kr",
+        "semie.cooking",
+        "ottogi.co.kr",
+        "sempio.com"
+      ]
+    },
+    {
+      "q": "\"물메기국(곰치국)\" 정량 조리",
+      "domains": [
+        "go.kr",
+        "ac.kr",
+        "or.kr",
+        "semie.cooking",
+        "ottogi.co.kr",
+        "sempio.com"
+      ]
+    },
+    {
+      "q": "\"백합죽\" 정량 조리",
+      "domains": [
+        "go.kr",
+        "ac.kr",
+        "or.kr",
+        "semie.cooking",
+        "ottogi.co.kr",
+        "sempio.com"
+      ]
+    }
+  ],
+  "result": " (https://www.fsis.go.kr/front/contents/cmsView.do?cate_id=0301&cnts_id=23797)\nciteturn521search0 [wordlim: 200] Crawled: 2 weeks ago;   백합은 껍데기의 위아래가 딱 맞아서 한번 입을 다물면 좀처럼 열기가 힘들어 순결, 정절, 백년해로 등을 상징하는 조개로, 매끈한 모양새 뿐 아니라 은은한 향이 나는 속살 맛이 일품이라 ‘조개의 여왕’으로 불린다. ... 수심 10m 전후까지의 진흙모래 또는 모래진흙 바닥에서 중형의 부유물을 여과섭식하는 중형의 식용조개류이다. ... 아미노산과 타우린, 베타딘, 글리코겐이 많아 피로회복을 돕고 기력보충에 좋을 뿐 아니라 알코올 성분이 잘 분해되도록 도와 숙취 해소에도 좋다. ... 백합은 회, 죽, 탕, 구이, 찜 등으로 조리하는데 싱싱한 백합을 너무 오래 끓이면 질겨져서 맛이 없어지므로 살짝 익혀서 먹어야 한다.봄철 입맛과 건강을 동시에 되살리는 영양만점의 백합죽 조리법을 소개해 본다.\n아미노산과 타우린, 베타딘, 글리코겐이 많아 피로회복을 돕고 기력보충에 좋을 뿐 아니라 알코올 성분이 잘 분해되도록 도와 숙취 해소에도 좋다. 이뇨작용을 촉진해 소변을 원활히 배설해 부종 치료에도 효과가 있다. 그리고 혈액 속의 콜레스테롤이나 중성지방을 줄여주는 효능이 있어 동맥경화, 고혈압, 뇌졸중, 고지혈증과 같은 각종 성인병 예방에 좋다.   봄부터 가을까지 잡히는 백합은 산란기를 앞둔 4월 중순~5월 중순에 그 맛과 영양이 절정을 이룬다. 백합을 구입할 때에는 손가락으로 가볍게 두드려봐서 껍질이 닫힌 것을 고르면 된다. 구입시 껍질이 열려 있는 것은 죽은 것이며, 속살이 움츠려들면 싱싱한 것이다.   구입한 백합은 반드시 냉장 보관하되, 오래 보관하지 않는다. 요리에 사용하기 전 연한 소금물에 담가 해감한다.   백합은 회, 죽, 탕, 구이, 찜 등으로 조리하는데 싱싱한 백합을 너무 오래 끓이면 질겨져서 맛이 없어지므로 살짝 익혀서 먹어야 한다.   봄철 입맛과 건강을 동시에 되살리는 영양만점의 백합죽 조리법을 소개해 본다. Image: 백합죽백합죽\n식재료 Image백합 150g, 쌀 90g(1/2컵), 물 1L(5컵), 참기름 1/2큰술, 소금 1작은술\n조리방법\n\n  * 쌀은 씻어서 2시간 이상 물에 충분히 불려서 분쇄기에 간다.\n  * 백합은 소금물에 담가 해감을 뺀 후 깨끗이 씻어 살을 떼어 낸다.\n  * 백합살은 얇게 저며 다진다.\n  * 두꺼운 냄비에 참기름을 두르고 백합을 볶다가 쌀을 넣고 잠시 더 볶은 다음 물을 부어 센불에서 끓인다.\n  * 한번 끓어오르면 불을 약하게 줄이고 나무 주걱으로 가끔 저으면서 쌀이 푹 퍼지도록 충분히 끓여 소금으로 간을 한다.\n< 출처 : 농촌진흥청 국립농업과학원 농식품종합정보시스템> Image--------------------------------------------------------------------------------\n발\n간\n등\n록\n번\n호\n11-1390802-000102-01 (https://www.rda.go.kr/download_file/act/bookcafe065.PDF)\nciteturn521search12 [wordlim: 200] Published: 2.0 years ago; 곰치국▶▶▶물메기국ӷ 강원도 ... 무, 콩나물, 시금치, 숙주, 고사리등의멸치장국국물에삶은곰피를넣어끓이 ... 한국전쟁이전부터경기도파주의\nㄱ\n공릉장국밥\n찜이라고도한다.  ӷ 경상도\n곰피콩나물무침\n삶은곰피∙콩나물을\n양념(된장, 다진마늘, 참기름, 깨소금)\n으로무친것이다.  ӷ 경남\n곱장떡\n좁쌀가루를익반죽하여갸름하\n게빚어떡갈나무잎에싸서시루에찐\n떡이다. 곱장떡은일명‘꼬장떡’이라고\n도하며함경도지방에서즐겨먹다가\n곰취절임\n강원북부지방인고성, 속초, 강릉등지\n로전파된것으로보인다. 좁쌀가루를\n곰치국▶▶▶물메기국ӷ 강원도\n익반죽하여찐떡으로쉽게굳어지지않\n곰탕▶▶▶곰국ӷ 전남\n아먼길을갈때, 특히과거시험을보러\n곰피무침\n마른곰피를불려서삶아양\n갈때먹었다고전해진다.  ӷ 강원도\n념(멸치액젓, 고춧가루, 다진매운고\n추∙마늘, 깨소금)으로무친것을말하\n며곤포무침, 곤피무침이라고도한다.\n곰피는미역의일종으로무기질을풍부\n히함유하고있으며적당히부드러우면\n서도씹는질감과쌉싸름한맛이좋아\n--------------------------------------------------------------------------------\nHard Clam Porridge (백합죽 / Baekhapjuk)- VISITKOREA (https://english.visitkorea.or.kr/svc/contents/contentsView.do?vcontsId=178051)\nciteturn521search1 [wordlim: 200] Published: 3.0 years ago; Crawled: last week;   *     *       * ## Hard Clam Porridge (백합죽 / Baekhapjuk)\n--------------------------------------------------------------------------------\n[백년가게]계화회관> 여행지 :대한민국 구석구석 (https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=3650e8c5-2d87-49b3-b165-ef1a5e786fd9)\nciteturn521search2 [wordlim: 200] Crawled: last week; [중소벤처기업부 2018년도 ‘백년가게’로 선정] 계화회관은 부안군 향토 음식 1호점으로 직접 개발한 ‘부안 이화자 백합죽’으로 상표등록과 ‘백합찜 제조 방법’에 대한 특허권을 보유하고 있는 백합요리 전문점이다.순수한 백합과 참기름, 소금, 뽕잎가루만을 사용하여 자극적이지 않고 재료 본연의 맛을 살리는 조리법으로 백합죽, 백합파전, 백합구이 등 단일 메뉴부터 백합풀코스까지 다양한 백합요리를 골고루 맛볼 수 있다.\n--------------------------------------------------------------------------------\nHard Clam Porridge (백합죽 / Baekhapjuk)- VISITKOREA (https://english.visitkorea.or.kr/svc/sp/food/ext/special_view.do?menuSn=913&vcontsId=178051)\nciteturn521search3 [wordlim: 200] Published: 3.0 years ago; Crawled: 2 months ago;   *     *       * ## Hard Clam Porridge (백합죽 / Baekhapjuk) ... Mussel Porridge (홍합죽(담채죽) / Honghapjuk (Damchaejuk))\n--------------------------------------------------------------------------------\n한식 읽기 좋은 날 (https://www.hansik.or.kr/magazines/list/magazineDetail/98/2318?menuSn=429)\nciteturn521search4 [wordlim: 200] Published: 2.9 years ago; Crawled: last month; 특히 자연산 백합을 채취해 만드는 사천식 백합죽은 신선하고 고소한 맛으로 정평이 났다. ... 대대로 고기나 조개를 잡으면서 살아온 용현면 선진마을 사람들. ... 선진마을에 그 많았던 백합 요리 식당도 하나둘 문을 닫고 현재 남은 건 35년 전통의 <해원장 횟집>뿐. ... 백합회는 1월에서 5월 초 사이에만 맛볼 수 있는데 봄에 회로 먹으면 사각사각 씹히는 부드러운 육질에, 살짝 달콤하면서도 짭조름한 맛이 꽤 별미다.\n--------------------------------------------------------------------------------\n백합, 품 속에 담아둔 서해를 맛보다> 여행기사 :대한민국 구석구석 (https://korean.visitkorea.or.kr/detail/rem_detail.do?cotid=d7d18b7e-4503-4796-8d27-76c7539af82e)\nciteturn521search5 [wordlim: 200] Crawled: 2 weeks ago; 육지에서 생긴 오염물질을 군말 없이 받아주는 것이 고맙고, 갯벌의 미스터리한 정화기능이 신비하다. ... 근대까지 경남의 하동포구, 김제의 심포일대에서 대량으로 수확됐지만 점차 그 양이 줄어, 하동포구에서는 보기조차 어렵다고 한다. ... 당시 국내 수산물 중 단일품목으로 외화벌이에 1등을 차지하는 효자였으나 정작 현지 어민은 귀한 백합을 먹기 어려웠다고… 그래서 백합을 밥과 함께 쑤어 먹기 시작한 것이 백합죽의 시초라고 전해진다.구구절절한 우리네 할아버지, 할머니들의 고된 삶이 담긴 서민의 향토음식 중 하나를 만난 셈이다. ... 평소에 맛본 조개죽과 비교하면, 투툼한 조갯살이 씹히는 게 쫄깃하고, 죽에 배인 백합 고유의 맛이 부드럽게 입안에서 퍼져 진하게 남으니 음미를 멈출 수 없다.\n--------------------------------------------------------------------------------\nDBPIA-NURIMEDIA (https://www.kjhe.or.kr/xml/42533/42533.pdf)\nciteturn521search13 [wordlim: 200] Published: 1.9 years ago; Crawled: 1.9 years ago; 우리나라 죽(粥)의 지역별 향토성 비교 연구 : 향토음식문헌을 중심으로 13 ...     <td>민물고기, 산채</td> ...     <td>백합죽</td> ...     <td>은어, 채소류(미나리, 쑥갓, 깻잎, 풋고추)</td>    <td>소금, 된장, 고추장, 식초, 파, 마늘, 생강, 고춧가루, 후춧가루</td> ...     <td>대합조개죽</td>\n--------------------------------------------------------------------------------\nペクハプチュク(ハマグリ粥)(백합죽)- 韓国観光公社公式サイト「VISITKOREA」 (https://japanese.visitkorea.or.kr/svc/contents/contentsView.do?vcontsId=178050)\nciteturn521search6 [wordlim: 200] Published: 3.0 years ago; Crawled: 2 months ago;   *     *       * ## ペクハプチュク(ハマグリ粥)(백합죽)\n--------------------------------------------------------------------------------\nparenthesis is recommended by KNTO). (https://journal.kci.go.kr/kats/archive/articlePdf?artiId=ART001691354)\nciteturn521search14 [wordlim: 200] Published: 6.2 years ago; &nbsp;&nbsp;&nbsp;&nbsp;clam porridge 백합죽\n--------------------------------------------------------------------------------\n부안군 계화면 일반현황 (https://www.buan.go.kr/town/index.buan?menuCd=DOM_000000405001002000)\nciteturn521search7 [wordlim: 200] Crawled: 4 days ago; 양산리- 조포123(동진면). ... 궁안리- 대벌, 용정(행안면)〕 ... 경제개발 5개년 계획사업으로 1963∼1968년까지 5개년에 걸쳐 12.8㎞ 계화 제 1,2호 방조제 완공으로 전국 최초로 3,968㏊의 대단위 간척지가 조성되어 대한민국 지도의 형태을 바꾼 역사의 지역이다.계화간척지를 중심으로 \"계화미\"라는 전국 최고의 특미를 년간 17,000톤을 생산하고 있으며, 해변 가장자리에 위치하고 있어 \"백합\" 생산량이 년간 2,609톤을 육박하고 \"백합죽\"으로 널리 알려져 있는 곳이다 또한 신석기시대 유물부터 출토되고 있으며 현재 전주국립박물관에 소장되고 있다.\n--------------------------------------------------------------------------------\nGrilled Dried Pollack (먹태구이 / Meoktaegui)- VISITKOREA (https://stg-japanese.visitkorea.or.kr/svc/contents/contentsView.do?vcontsId=180105)\nciteturn521search8 [wordlim: 200] Published: 3.0 years ago; Crawled: last month;   *     *       * ## Grilled Dried Pollack (먹태구이 / Meoktaegui) ...     * Hard Clam Porridge (백합죽 / Baekhapjuk)    * Deodeok and Bulgogi (더덕불고기 / Deodeokbulgogi)\n--------------------------------------------------------------------------------\n白蛤粥 (백합죽)- VISITKOREA (https://chinese.visitkorea.or.kr/svc/thingsToDo/foodTrip/special_view.do?vcontsId=178048)\nciteturn521search9 [wordlim: 200] Published: 3.0 years ago; Crawled: 4 weeks ago;   *     *       * ## 白蛤粥 (백합죽) ...     * 牛角蛤刀切面 (키조개칼국수)    * 烤猪皮 (껍데기 구이) ...     * 文蛤汤 (백합탕)\n--------------------------------------------------------------------------------\nペクハプチュク(ハマグリ粥)(백합죽)- 韓国観光公社公式サイト「VISITKOREA」 (https://japanese.visitkorea.or.kr/svc/thingsToDo/foodTrip/special_view.do?vcontsId=178050)\nciteturn521search10 [wordlim: 200] Published: 3.0 years ago; Crawled: 2 months ago;   *     *       * ## ペクハプチュク(ハマグリ粥)(백합죽)\n--------------------------------------------------------------------------------\n여행지 정보 - [백년가게]계화회관 상세내용 | 테마여행 | 바다온 바다여행 일정만들기 (https://badaon.or.kr/seantour_map/travel/destination/detail.do?destId=FCID110013)\nciteturn521search11 [wordlim: 200] Crawled: 6 days ago; 계화회관은 부안군 향토 음식 1호점으로 직접 개발한 ‘부안 이화자 백합죽’으로 상표등록과 ‘백합찜 제조 방법’에 대한 특허권을 ... 순수한 백합과 참기름, 소금, 뽕잎가루만을 사용하여 자극적이지 않고 재료 본연의 맛을살리는 조리법으로 백합죽, 백합파전, 백합구이 등 단일 메뉴부터 백합풀코스까지 다양한 백합요리를 골고루 맛볼 수 있다. ... 전라북도 부안군 부안읍 석정로 63(부안읍)\n"
+}

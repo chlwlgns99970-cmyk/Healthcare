@@ -1,0 +1,30 @@
+[
+  {
+    "institution": "농촌진흥청 국립식량과학원 메뉴젠",
+    "acquiredCompositions": 295,
+    "publishedCompositions": 125,
+    "publishedCompleteCompositions": 125,
+    "linkedIngredientsBeforeFoodIdExpansion": 891
+  },
+  {
+    "institution": "식품의약품안전처",
+    "acquiredCompositions": 2,
+    "publishedCompositions": 2,
+    "publishedCompleteCompositions": 0,
+    "linkedIngredientsBeforeFoodIdExpansion": 9
+  },
+  {
+    "institution": "원광대학교·서울대학교 식품공학 학술논문",
+    "acquiredCompositions": 1,
+    "publishedCompositions": 0,
+    "publishedCompleteCompositions": 0,
+    "linkedIngredientsBeforeFoodIdExpansion": 0
+  },
+  {
+    "institution": "질병관리청 국민건강영양조사",
+    "acquiredCompositions": 84,
+    "publishedCompositions": 9,
+    "publishedCompleteCompositions": 2,
+    "linkedIngredientsBeforeFoodIdExpansion": 169
+  }
+]

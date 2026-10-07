@@ -21,7 +21,8 @@ data class TodayMealPlanUiState(
     val target: Int? = null,
     val loading: Boolean = false,
     val message: String? = null,
-    val error: Boolean = false
+    val error: Boolean = false,
+    val configuredAllergies: Set<String> = emptySet()
 )
 
 class TodayMealPlanViewModel(private val repository: TodayMealPlanRepository) : ViewModel() {
@@ -29,6 +30,13 @@ class TodayMealPlanViewModel(private val repository: TodayMealPlanRepository) : 
     val uiState: StateFlow<TodayMealPlanUiState> = state.asStateFlow()
     private var pendingRefresh = false
     init {
+        viewModelScope.launch {
+            repository.exclusions.collect { exclusions ->
+                state.update { it.copy(configuredAllergies = exclusions
+                    .filter { food -> food.exclusionType == "ALLERGY" }
+                    .map { food -> food.normalizedFoodName }.toSet()) }
+            }
+        }
         viewModelScope.launch {
             var previous: List<Any?>? = null
             combine(repository.changes, repository.exclusions, repository.goalChanges, repository.energyChanges,
@@ -75,7 +83,7 @@ class TodayMealPlanViewModel(private val repository: TodayMealPlanRepository) : 
                 message = when {
                     result.isFailure -> "추천 식단을 만들지 못했어요. 다시 시도해주세요."
                     target == null -> "하루 목표 칼로리를 먼저 설정해주세요."
-                    theme == DailyRecommendationTheme.SLOW_AGING_STYLE -> DailyMealThemePolicy.SLOW_STYLE_LIMITATION
+                    theme == DailyRecommendationTheme.SLOW_AGING_STYLE && result.getOrNull() == null -> DailyMealThemePolicy.SLOW_STYLE_LIMITATION
                     result.getOrNull() == null && replace != null -> "조건에 맞는 다른 메뉴가 없어요."
                     result.getOrNull() == null && alternate -> "조건에 맞는 다른 조합이 없어요."
                     result.getOrNull() == null -> "현재 조건으로 하루 식단을 구성하기 어려워요."

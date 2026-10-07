@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "tests": 10,
+  "failures": 0,
+  "errors": 0,
+  "newLinked": 214,
+  "completeRecipes": 41,
+  "assetSha256": "995810d5b8693598472c35c8320348f640496872eaf233f5a8f56fda6276e3ca",
+  "log": "app/build/recipe-linkage-strategy/final-data-tests.log"
+}

@@ -1,0 +1,55 @@
+{
+  "status": "PARTIAL",
+  "total": 516,
+  "beforeAppComplete": 423,
+  "appComplete": 425,
+  "beforeRemaining": 93,
+  "remaining": 91,
+  "states": {
+    "REFERENCE_COMPLETE": 388,
+    "ORIGINAL_COMPLETE": 41,
+    "PARTIAL": 81,
+    "UNRESOLVED": 6
+  },
+  "scope87": {
+    "PARTIAL_WITH_EXHAUSTED_EVIDENCE": 81,
+    "UNRESOLVED_WITH_EXHAUSTED_EVIDENCE": 6
+  },
+  "newFoodCount": 2,
+  "foodCount": 67356,
+  "referenceRows": 6786,
+  "newReferenceRows": 20,
+  "originalIngredient": {
+    "total": 4258,
+    "states": {
+      "AMBIGUOUS_IDENTITY": 850,
+      "LINKED": 2384,
+      "UNIT_CONVERSION_UNVERIFIED": 868,
+      "EXCLUDED_NON_CALORIC_OR_PROCESS_ITEM": 154,
+      "RECIPE_SOURCE_INCOMPLETE": 1,
+      "NO_OFFICIAL_NUTRITION_MATCH": 1
+    },
+    "unresolvedByCause": {
+      "identity": 850,
+      "amount": 563,
+      "unit": 305,
+      "source": 1,
+      "nutrition": 1
+    },
+    "newOriginalLinks": 2,
+    "conflicts": {
+      "UNRESOLVED": 212,
+      "RESOLVED_THIS_RECIPE_DIRECT_GRAMS": 1
+    }
+  },
+  "formalProduction": {
+    "versionCode": 7,
+    "versionName": "1.0.6",
+    "install": 0,
+    "clear": 0,
+    "overwrite": 0,
+    "deploy": 0
+  },
+  "dbVersion": 8,
+  "migrationsAdded": 0
+}

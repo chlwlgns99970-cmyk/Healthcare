@@ -126,6 +126,21 @@ class FrequentFoodRepositoryTest {
         assertTrue(dao.values.value.single().isFrequent)
     }
 
+    @Test
+    fun `favorite readdition after learning reset becomes a new choice without deleting frequent data`() = runTest {
+        val dao = FakeFrequentFoodDao()
+        val learning = com.example.healthcare.data.RecommendationLearningStore(now = { 1000 })
+        val repository = FoodRepository(dao, learning)
+        repository.setFavorite(favoriteSnapshot("food-1", "김밥", null), true)
+        val saved = dao.values.value.single()
+        learning.reset(emptyList(), listOf(saved))
+        assertFalse(learning.snapshot().suppressedFavorites.isEmpty())
+        repository.setFavorite(saved, false)
+        repository.setFavorite(saved, true)
+        assertTrue(learning.snapshot().suppressedFavorites.isEmpty())
+        assertEquals(1, repository.favoriteFoods.first().size)
+    }
+
     private fun favoriteSnapshot(foodItemId: String, name: String, brand: String?) = FrequentFood(
         foodName = name,
         defaultServing = "100g",

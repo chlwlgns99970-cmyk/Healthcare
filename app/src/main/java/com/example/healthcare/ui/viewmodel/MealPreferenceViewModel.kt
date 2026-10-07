@@ -25,6 +25,8 @@ data class MealPreferenceUiState(
     val preferredInput: String = "",
     val preferredStyles: Set<FoodPreferenceStyle> = emptySet(),
     val isSaving: Boolean = false,
+    val isResettingLearning: Boolean = false,
+    val showLearningResetConfirmation: Boolean = false,
     val message: String? = null,
     val error: String? = null
 ) {
@@ -37,11 +39,27 @@ class MealPreferenceViewModel(private val repository: MealPreferenceRepository) 
     val uiState: StateFlow<MealPreferenceUiState> = _uiState.asStateFlow()
     private var preferredInputEdited = false
     private var preferredStylesEdited = false
+    private var storedPreference = _uiState.value.preference
+    val hasUnsavedInput: Boolean get() {
+        val state = _uiState.value
+        return state.preference != storedPreference ||
+            state.preferredInput != FoodPreferencePolicy.keywordsFromStored(storedPreference.preferredFoods).joinToString(", ") ||
+            state.preferredStyles != FoodPreferencePolicy.stylesFromStored(storedPreference.preferredFoods) ||
+            state.allergyInput.isNotBlank() || state.dislikeInput.isNotBlank()
+    }
+    fun discardPreferenceDraft() {
+        if (_uiState.value.isSaving) return
+        preferredInputEdited = false; preferredStylesEdited = false
+        _uiState.update { it.copy(preference = storedPreference, allergyInput = "", dislikeInput = "",
+            preferredInput = FoodPreferencePolicy.keywordsFromStored(storedPreference.preferredFoods).joinToString(", "),
+            preferredStyles = FoodPreferencePolicy.stylesFromStored(storedPreference.preferredFoods), error = null, message = null) }
+    }
 
     init {
         viewModelScope.launch { repository.ensureDefaultPreference() }
         viewModelScope.launch {
             repository.preference.collect { preference ->
+                storedPreference = preference
                 _uiState.update {
                     it.copy(
                         preference = preference,
@@ -142,6 +160,7 @@ class MealPreferenceViewModel(private val repository: MealPreferenceRepository) 
                 ))
                 repository.ensureDefaultPreference()
             }.onSuccess { saved ->
+                storedPreference = saved
                 preferredInputEdited = false
                 preferredStylesEdited = false
                 _uiState.update {
@@ -177,9 +196,31 @@ class MealPreferenceViewModel(private val repository: MealPreferenceRepository) 
         viewModelScope.launch { repository.deleteExcludedFood(food) }
     }
 
+    fun requestLearningReset() {
+        if (_uiState.value.isSaving || _uiState.value.isResettingLearning) return
+        _uiState.update { it.copy(showLearningResetConfirmation = true, error = null, message = null) }
+    }
+
+    fun cancelLearningReset() = _uiState.update { it.copy(showLearningResetConfirmation = false) }
+
+    fun confirmLearningReset() {
+        val state = _uiState.value
+        if (!state.showLearningResetConfirmation || state.isResettingLearning) return
+        _uiState.update { it.copy(isResettingLearning = true, showLearningResetConfirmation = false) }
+        viewModelScope.launch {
+            runCatching { repository.resetRecommendationLearning() }
+                .onSuccess { _uiState.update { it.copy(isResettingLearning = false,
+                    message = "추천 학습을 초기화했어요. 기록·즐겨찾기·직접 설정한 취향은 유지돼요.") } }
+                .onFailure { _uiState.update { it.copy(isResettingLearning = false,
+                    error = "추천 학습을 초기화하지 못했어요. 다시 시도해 주세요.") } }
+        }
+    }
+
+    val saveAcknowledgement = SaveAcknowledgement<Unit>()
+
     fun save() {
         val state = _uiState.value
-        if (state.isSaving) return
+        if (state.isSaving || saveAcknowledgement.isPending) return
         val preferred = state.preferredInput.split(',', '，').map(String::trim).filter(String::isNotBlank)
         val preference = state.preference.copy(
             preferredFoods = FoodPreferencePolicy.serialize(state.preferredStyles, preferred)
@@ -194,6 +235,8 @@ class MealPreferenceViewModel(private val repository: MealPreferenceRepository) 
                 repository.savePreference(preference)
                 repository.ensureDefaultPreference()
             }.onSuccess { saved ->
+                saveAcknowledgement.saved(Unit)
+                storedPreference = saved
                 preferredInputEdited = false
                 preferredStylesEdited = false
                 _uiState.update {

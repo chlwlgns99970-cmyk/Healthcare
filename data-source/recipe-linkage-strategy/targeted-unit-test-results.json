@@ -1,0 +1,14 @@
+[
+  {
+    "name": "com.example.healthcare.RecipeMenuCompletionTest",
+    "tests": 4,
+    "failures": 0,
+    "errors": 0
+  },
+  {
+    "name": "com.example.healthcare.SearchRecipeFollowupTest",
+    "tests": 2,
+    "failures": 0,
+    "errors": 0
+  }
+]

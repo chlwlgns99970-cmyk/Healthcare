@@ -1,0 +1,95 @@
+[
+  {
+    "url": "https://www.nolboo.co.kr/",
+    "checkedAt": "2026-10-04",
+    "error": "URLError: <urlopen error timed out>"
+  },
+  {
+    "url": "http://www.nolboo.co.kr/",
+    "checkedAt": "2026-10-04",
+    "error": "HTTPError: HTTP Error 404: Not Found"
+  },
+  {
+    "url": "https://www.nolboo.co.kr/pages/brand/boodae.asp",
+    "checkedAt": "2026-10-04",
+    "error": "URLError: <urlopen error timed out>"
+  },
+  {
+    "url": "https://www.nolboo.co.kr/brand/budae/menu.aspx",
+    "checkedAt": "2026-10-04",
+    "error": "URLError: <urlopen error timed out>"
+  },
+  {
+    "url": "https://www.nolboo.co.kr/brand/boodae/menu.aspx",
+    "checkedAt": "2026-10-04",
+    "error": "URLError: <urlopen error timed out>"
+  },
+  {
+    "url": "https://www.nolboo.co.kr/robots.txt",
+    "checkedAt": "2026-10-04",
+    "error": "URLError: <urlopen error timed out>"
+  },
+  {
+    "url": "https://pf.kakao.com/_Nxaxmxad",
+    "checkedAt": "2026-10-04",
+    "status": 200,
+    "finalUrl": "https://pf.kakao.com/_Nxaxmxad",
+    "sha256": "5B097E4D401CAA7DE5419C8A8D80D73B36FAF6FD48477F819A180977D4F106EB",
+    "rawFile": "data-source\\recipe-menu-completion\\60c87750d8bbd02a.html",
+    "links": [],
+    "scripts": [
+      "//t1.kakaocdn.net/tiara/js/v1/tiara-1.2.0.min.js",
+      "https://dapi.kakao.com/maps-internal/v2/sdk.js?appkey=80ac273890c06b6727121e2390b200cb&autoload=false",
+      "https://t1.kakaocdn.net/kakao_js_sdk/2.3.0/kakao.min.js",
+      "/cdn/rocket/channel-home-web/production/a27c5a1/assets/index-BkKc0nGa.js",
+      "/cdn/rocket/channel-home-web/production/a27c5a1/assets/polyfills-legacy-B_QR1HSK.js"
+    ],
+    "text": "\n     \n     !function(){var e=document,t=e.createElement(\"script\");if(!(\"noModule\"in t)&&\"onbeforeload\"in t){var n=!1;e.addEventListener(\"beforeload\",(function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute(\"nomodule\")||!n)return;e.preventDefault()}),!0),t.type=\"module\",t.src=\".\",e.head.appendChild(t),t.remove()}}(); \n     \n     System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src')) \n  "
+  },
+  {
+    "url": "https://ydp.redtable.global/ko/store/28646",
+    "checkedAt": "2026-10-04",
+    "status": 200,
+    "finalUrl": "https://ydp.redtable.global/ko/store/28646",
+    "sha256": "B5FD96E68B67C10BB45DC4B0BE877ED06A80F8268655781F3699E456894744BF",
+    "rawFile": "data-source\\recipe-menu-completion\\cafd32cf6beb68f4.html",
+    "links": [
+      "javascript:history.back();",
+      "javascript:void(0);",
+      "javascript:location.href='/';",
+      "/en-us/store/28646",
+      "/ko/store/28646",
+      "/ja/store/28646",
+      "/zh-cn/store/28646",
+      "/zh-tw/store/28646",
+      "#",
+      "https://ydp.redtable.global/store/28646/product",
+      "http://www.nolboo.co.kr/",
+      "https://ydp.redtable.global/product/4153987",
+      "https://ydp.redtable.global/product/3677436",
+      "https://ydp.redtable.global/product/3677433",
+      "https://ydp.redtable.global/product/3677432",
+      "https://ydp.redtable.global/product/315257",
+      "https://ydp.redtable.global/product/315218",
+      "https://ydp.redtable.global/product/315216",
+      "https://ydp.redtable.global/product/315209",
+      "https://www.google.com/search?q=놀부부대찌개&철판구이+영등포구",
+      "https://ydp.redtable.global/promotion/132",
+      "https://www.google.com/maps/search/?api=1&query=37.49646240000000,126.90807530000000",
+      "https://ydp.redtable.global/store",
+      "/",
+      "https://ydp.redtable.global/usage",
+      "https://ydp.redtable.global/faq",
+      "/cs",
+      "https://ydp.redtable.global/privacy",
+      "https://ydp.redtable.global/term",
+      "https://ydp.redtable.global/refund",
+      "http://pf.kakao.com/_eIdIxj"
+    ],
+    "scripts": [
+      "/js/redtable.js",
+      "https://www.googletagmanager.com/gtag/js?id=UA-214701060-1"
+    ],
+    "text": "\n  \n  .menu_tit{display:block;color:#1F1F1F;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}\n  .img_area{position:relative;width:100%;height:350px; font-size:0;overflow:hidden;}    \n  .menu_thumb{max-width:100px;max-height:80px;overflow:hidden;border-radius:5px;float:left;margin-right:10px;}\n  .menu_thumb img{max-height:70px;min-width:110px;object-fit:cover;object-position:50% 50%;}\n  .menu_tags{display:block;font-size:0.9em;color:#BBBBBB;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}\n  .menu_price{font-weight:600;line-height:2.0;color:#FF4A52}\n  h3{font-weight:600;font-size:28px;color:#121212;letter-spacing: -1px;}\n  h4{font-weight:600}\n  h5{font-weight:300;font-size:0.9em;color:#888888;}\n  .nav-item{min-width:110px;padding-top:1.1em;text-align:center;height:60px;padding-left:10px;padding-right:10px;}\n  .nav-item.active{border-bottom:1px solid #FF4A52}\n  .nav-item a{color:#666666;}\n  .nav-item a.active{color:#555555;font-weight:600;}\n  .form-check-input:checked{background:#FF4A52;border-color:#FF4A52;}\n  .review_cnt{color:#FF4A52;font-weight:700;}\n  .reviewer_name{color:#7A838B;margin-left:1.0em;font-size:0.9em;}\n  .review_body{border-bottom:1px solid #EEEEEE;}\n  .review_body p{font-size:0.95em;}\n  .menu_no_image {width:110px;height:70px;border-radius:5px;background:#F3F3F3;color:#DDDDDD;padding-top:10px;padding-left:27px;}\n  .menu_no_image span {font-size:48px;}\n  .menu_promotion_icon {position:absolute;margin-top:-75px;margin-left:-10px;background:#FF4A52;color:#FFFFFF;width:30px;height:30px;text-align:center;border-radius:50%;padding-top:3px;}\n  .menu_promotion_icon_txt {display:inline-block;background:#FF4A52;color:#FFFFFF;width:25px;height:25px;text-align:center;border-radius:50%;padding-top:4px;}\n  .material-icons-outlined.small{font-size:16px;}\n  .store-menu-box{width:100%;border:1px solid #E8E8E8;border-radius:5px;padding-left:10px;padding-top:10px;padding-right:10px;padding-bottom:10px;}\n\n  #language-nav .dropdown-menu {\n    padding: 1.0rem;\n    margin-top: 0.5rem !important;\n\n  }\n\n  #language-select {\n    float: left;\n    width: 100%;\n    padding-top: 3px;\n    padding-bottom: 3px;\n    margin-right: 0 !important;\n    margin-left: 60px;\n  \n  }\n\n  #language-select a {\n    padding-left: 15px !important;\n    padding-right: 15px !important;\n    padding-top: 5px !important;\n    padding-bottom: 5px !important;\n    border-radius: 3px;\n\n  }\n\n  #language-nav .dropdown-menu,\n  #language-select {\n    min-height: 40px; /* 예시: 최소 높이를 40px로 설정 */\n  }\n    \n \n\n \n   \n   \n     \n             \n           \n      \n       \n         \n        arrow_back\n         \n       \n     \n\n\n      \n         \n             \n            translate\n             \n           \n     \n\n      \n       \n         \n        home\n         \n       \n     \n\n\n\n       \n         \n           \n             \n                           \n              한국어\n               \n               \n                                                 English \n                                                 한국어 \n                                                 日本語 \n                                                 简体中文 \n                                                 繁體中文 \n                               \n            \n             \n           \n         \n       \n\n    \n\n\n    \n \n\n \n   \n     \n       \n         \n           매장정보 \n         \n         \n           \n                                        주문하기\n                                     \n         \n         \n       \n     \n   \n \n\n \n   \n     \n      놀부부대찌개&철판구이\n                         \n     \n            Nolboo Budaejjigae&Cheolpan Gui\n           \n\n     \n      한식\n     \n\n     \n      서울특별시 영등포구 신길로 39  지번주소 \n     \n     \n      서울특별시 영등포구 대림동 909-2\n     \n\n     02-836-8855 \n\n     \n     매일 10:30~23:00 \n\n         \n       http://www.nolboo.co.kr/ \n      \n    \n     \n      서울특별시 영등포구에서 맛집을 찾으신다면 \"놀부부대찌개&철판구이\"를 추천합니다.\n     \n\n         \n       대표메뉴 \n       \n                   \n             \n               \n               \n                                 \n                               \n               \n                 외식이용권 4만원 \n                 \n                                    Oesingniyonggwon 4manwon\n                                   \n                 40,000               \n               \n               \n             \n           \n                   \n             \n               \n               \n                                 \n                               \n               \n                 고기듬뿍김치찌개 \n                 \n                                    Gogideumppuk Kimchi Jjigae\n                                   \n                 9,500               \n               \n               \n             \n           \n                   \n             \n               \n               \n                                 \n                               \n               \n                 돼지고기 묵은지김치찜 \n                 \n                                    Dwaejigogi Mungneunji Kimchi Jjim\n                                   \n                 9,500               \n               \n               \n             \n           \n                   \n             \n               \n               \n                                 \n                               \n               \n                 놀부햄김치찜 \n                 \n                                    Nolbuhaem Kimchi Jjim\n                                   \n                 9,500               \n               \n               \n             \n           \n                   \n             \n               \n               \n                                 \n                               \n               \n                 우곱새 \n                 \n                                    ugopsae(1in)\n                                   \n                 15,000               \n               \n               \n             \n           \n                   \n             \n               \n               \n                                 \n                               \n               \n                 놀부부대세트(2인) \n                 \n                                    nolbubudae set(2in)\n                                   \n                 23,500               \n               \n               \n             \n           \n                   \n             \n               \n               \n                                 \n                               \n               \n                 우삼겹부대세트(4인) \n                 \n                                    usamgyeop budae set(4in)\n                                   \n                 47,500               \n               \n               \n             \n           \n                   \n             \n               \n               \n                                 \n                               \n               \n                 통핑세트(4인) \n                 \n                                    tongping set(4in)\n                                   \n                 47,000               \n               \n               \n             \n           \n               \n     \n    \n    \n    \n         \n       주변 랜드마크 \n        \n         \n          우리시장, 서울우리시장, 신풍역\n         \n       \n     \n    \n     \n       관련 링크 \n        \n         \n                     Google \n                   \n       \n     \n     \n       시설정보 \n       \n         \n                               노키즈존\n                         circle \n                         \n                                         셀프서비스\n                         circle \n                         \n                                         베이비체어\n                         circle \n                         \n                                         배달\n                         expand_circle_down \n                         \n                                         키오스크\n                         circle \n                         \n                                         와이파이\n                         circle \n                         \n                                         남녀화장실분리\n                         circle \n                         \n                                         Pets\n                         circle \n                         \n                                         스마트오더\n                         expand_circle_down \n                         \n                                         무료주차\n                         circle \n                         \n                                         테이크아웃 가능\n                         circle \n                         \n                                         예약 가능\n                         circle \n                         \n                                         베리어프리\n                         circle \n                         \n                                         놀이방\n                         circle \n                         \n                                         다국어 메뉴판\n                         expand_circle_down \n                         \n                                         택배판매\n                         circle \n                         \n                                         모바일페이\n                         circle \n                         \n                           \n       \n     \n\n    \n\n         \n       현재 진행중인 이벤트 \n       \n                 \n           \n           \n                         \n                       \n           \n             2026 문래x선유세일 페스타 \n             \n               30% 할인 \n               (최대 20,000원 할인) \n             \n           \n           \n         \n               \n     \n    \n     \n       위치정보 \n                             \n             \n           \n                       \n\n     \n       음식점 전체 목록보기 \n         \n\n     \n     \n   \n \n\n\n \n   \n     \n       \n         \n           \n             \n               \n                 \n               \n             \n             \n              (주)레드테이블 대표 도해용 사업자등록번호 : 206-86-50534 통신판매신고번호 : 2019-서울중구-0501 부가통신사업 신고번호 : 제2-01-22-0098호 관광사업자(일반여행업) 등록번호 : 제2019-000024호 서울시 중구 명동3길 6 개양빌딩 7층\n             \n             \n           \n         \n         \n           \n             \n             \n               주문 및 사용방법 \n               FAQ \n               1:1문의하기 \n               개인정보보호정책 \n               이용약관 \n               환불정책 \n             \n           \n         \n\n         \n           \n             \n             \n            이메일 marketing@redtable.kr 상담시간 평일 09:00~18:00(주말,공휴일 휴무) 휴식시간 오후 12:30~13:30\n             \n           \n         \n       \n     \n   \n   \n     \n       \n       \n         \n           \n            Copyright ©2021 REDTABLE All rights reserved\n           \n         \n       \n     \n   \n \n \n   \n     \n       \n     \n   \n \n\n\n\n\n"
+  }
+]

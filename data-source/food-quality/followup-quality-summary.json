@@ -1,0 +1,192 @@
+{
+  "checkedAt": "2026-10-04",
+  "baselineFile": "followup-baseline.json",
+  "before": {
+    "checkedAt": "2026-10-04",
+    "foods": {
+      "totalFoods": 31844,
+      "kcal": 31844,
+      "macroComplete": 18327,
+      "officialServing": 11979,
+      "householdUnitEvidence": 465,
+      "ingredientsKnownPartialOrComplete": 485,
+      "ingredientsCompleteDeclaration": 0,
+      "allergenEvidenceKnown": 279,
+      "allergenCompleteDeclaration": 277,
+      "foodGroupsVerified": 159,
+      "provenanceLinked": 31844
+    },
+    "foodAndMenuEvidence": {
+      "ingredientKnown": 1023,
+      "allergenKnown": 489,
+      "allergenCompleteLabel": 451,
+      "foodGroupKnown": 159
+    },
+    "franchise": {
+      "identities": 3979,
+      "linkedMetadata": 3979,
+      "ingredientKnown": 723,
+      "ingredientComplete": 0,
+      "allergenEvidence": 292,
+      "allergenCompleteLabel": 256,
+      "foodGroups": 0,
+      "staleCandidates": 158
+    },
+    "recommendation": {
+      "templates": 292,
+      "researched": 292,
+      "someVerifiedIngredients": 151,
+      "foodGroups": 145,
+      "allergenEvidence": 8,
+      "allergenCompleteLabel": 8
+    },
+    "style": {
+      "total": 106,
+      "meals": [
+        40,
+        95,
+        96,
+        5
+      ]
+    },
+    "runtimeServing": {
+      "foods": 31844,
+      "household": 14688,
+      "qualities": {
+        "OFFICIAL_SERVING": 11979,
+        "UNRESOLVED": 2382,
+        "VERIFIED_CONVERSION": 2709,
+        "VOLUME_ONLY": 811,
+        "WEIGHT_ONLY": 13963
+      }
+    },
+    "franchiseMenu": {
+      "brandCount": 63,
+      "zeroMenuBrandCount": 1,
+      "totalMenuCount": 3979,
+      "uniqueCombinedMenuIdentityCount": 3913,
+      "knownNutritionMenuReferenceOverlapCount": 0,
+      "recordableMenuCount": 2702,
+      "kcalMenuCount": 2702,
+      "macroCompleteMenuCount": 716,
+      "verifiedServingMenuCount": 111,
+      "nutritionBasisMenuCount": 2702,
+      "nutritionMissingMenuCount": 1277,
+      "currentMenuListedCount": 1262,
+      "currentDatedNutritionSnapshotCount": 260,
+      "legacyOfficialNutritionCount": 2,
+      "sourceDateUnknownNutritionCount": 2440
+    },
+    "sourceHashes": {
+      "before-theme-eligibility-audit.csv": "04BD7BB6A3326119C95BACFD2E5A5BA320BEE4379624CA54CE6C6A758FBA12A7",
+      "food_items.csv": "CCF6A9B2322AD5E75FE29F13FFB7C4BF719C2CCA5CD3B459F104D659231261B4",
+      "food_metadata.csv": "1AE86D976839D9AB585B5BFD807683364C4B62B7D754D9961883FA7A32DE2586",
+      "franchise_official_items.csv": "3F4A9C4B874040ABAF0E3355CCEAA2BF3CF61B9AC1F9CCC9A81358A8899FB0A4",
+      "meal_templates.csv": "F6D2855BA77372DDE311E2065CBAEAD3D4348A25CBE52EBF390789707456F5A9",
+      "meal_template_ingredients.csv": "0A3B795901831AB7634227168E74E6E8C08950C1B4C3D8668944FF84620780DD",
+      "product_items.csv": "27B878B35A0CF5D5FB2218EDF25B06ED24E0D6E09DEF937893E25A9F570950DC"
+    }
+  },
+  "after": {
+    "foods": {
+      "totalFoods": 31849,
+      "kcal": 31849,
+      "macroComplete": 18332,
+      "officialServing": 11979,
+      "householdUnitEvidence": 465,
+      "ingredientsKnownPartialOrComplete": 579,
+      "ingredientsCompleteDeclaration": 2,
+      "allergenEvidenceKnown": 378,
+      "allergenCompleteDeclaration": 279,
+      "foodGroupsVerified": 179,
+      "provenanceLinked": 31849,
+      "householdServing": 14699,
+      "verifiedConversion": 2720,
+      "ingredientPartial": 577,
+      "ingredientUnknown": 31270,
+      "allergenUnknown": 31471,
+      "basisUnresolved": 2382
+    },
+    "foodAndMenuEvidence": {
+      "ingredientKnown": 1117,
+      "allergenKnown": 696,
+      "allergenCompleteLabel": 453,
+      "foodGroupKnown": 179
+    },
+    "franchise": {
+      "identities": 3979,
+      "linkedMetadata": 3979,
+      "ingredientKnown": 803,
+      "ingredientComplete": 0,
+      "allergenEvidence": 497,
+      "allergenCompleteLabel": 256,
+      "foodGroups": 1,
+      "staleCandidates": 364
+    },
+    "recommendation": {
+      "templates": 292,
+      "researched": 292,
+      "someVerifiedIngredients": 163,
+      "foodGroups": 163,
+      "allergenEvidence": 8,
+      "allergenCompleteLabel": 8
+    },
+    "runtimeServing": {
+      "foods": 31849,
+      "household": 14699,
+      "qualities": {
+        "OFFICIAL_SERVING": 11979,
+        "UNRESOLVED": 2382,
+        "VERIFIED_CONVERSION": 2720,
+        "VOLUME_ONLY": 811,
+        "WEIGHT_ONLY": 13957
+      }
+    },
+    "franchiseMenu": {
+      "brandCount": 63,
+      "zeroMenuBrandCount": 1,
+      "totalMenuCount": 3979,
+      "uniqueCombinedMenuIdentityCount": 3913,
+      "knownNutritionMenuReferenceOverlapCount": 0,
+      "recordableMenuCount": 2707,
+      "kcalMenuCount": 2707,
+      "macroCompleteMenuCount": 721,
+      "verifiedServingMenuCount": 111,
+      "nutritionBasisMenuCount": 2707,
+      "nutritionMissingMenuCount": 1272,
+      "currentMenuListedCount": 1257,
+      "currentDatedNutritionSnapshotCount": 265,
+      "legacyOfficialNutritionCount": 2,
+      "sourceDateUnknownNutritionCount": 2440
+    },
+    "style": {
+      "total": 115,
+      "meals": [
+        44,
+        101,
+        102,
+        7
+      ]
+    }
+  },
+  "sourceHashes": {
+    "food_items.csv": "CCF6A9B2322AD5E75FE29F13FFB7C4BF719C2CCA5CD3B459F104D659231261B4",
+    "food_metadata.csv": "9B63EF02BE6B014931F87EAFAE322F161EEC27068A39999D191CDEC99C661653",
+    "franchise_official_items.csv": "FB6F674AD311DABF9C4D19EA719D276C2FAFD37B56D98C4BBE34014C6A053E9C",
+    "meal_templates.csv": "F6D2855BA77372DDE311E2065CBAEAD3D4348A25CBE52EBF390789707456F5A9",
+    "meal_template_ingredients.csv": "0A3B795901831AB7634227168E74E6E8C08950C1B4C3D8668944FF84620780DD",
+    "product_items.csv": "27B878B35A0CF5D5FB2218EDF25B06ED24E0D6E09DEF937893E25A9F570950DC"
+  },
+  "completeIngredientFoodIds": [
+    "kfind-product-p109-500050200-0515",
+    "kfind-product-p109-500050200-0516"
+  ],
+  "policy": "Exact identities only. Full original labels, partial descriptions, reference recipes and cross-contact are separate. Unknown is never safe.",
+  "auditOutputs": [
+    "final-food-identity-audit.csv",
+    "final-serving-audit.csv",
+    "final-recommendation-serving-audit.csv",
+    "final-actual-plans.csv"
+  ],
+  "scopeNote": "Earlier generators retain the preceding task baseline. This report uses the 31,844-food start of this follow-up. Legacy template COMPLETE tags and category/name hints do not count as source-verified coverage."
+}

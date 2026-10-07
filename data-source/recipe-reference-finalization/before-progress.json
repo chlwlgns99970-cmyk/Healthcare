@@ -1,0 +1,20 @@
+{
+  "beforeAppComplete": 262,
+  "appComplete": 381,
+  "states": {
+    "REFERENCE_COMPLETE": 349,
+    "ORIGINAL_COMPLETE": 41,
+    "PARTIAL": 120,
+    "UNRESOLVED": 6
+  },
+  "originalCompleteNoApp": 9,
+  "newCompleteFoods": 119,
+  "unpublishedDispositions": {
+    "A_DUPLICATE_UNNECESSARY": 151,
+    "C_COMPLETE_NO_VERIFIED_FOOD_ID": 27,
+    "D_INCOMPLETE_REFERENCE": 47,
+    "B_PUBLISHED": 21
+  },
+  "assetRows": 5797,
+  "assetSha256": "794f5cec989dbdae5578f793629c79f68804a92a5e024ea86619886641879882"
+}

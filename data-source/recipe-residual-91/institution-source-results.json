@@ -1,0 +1,115 @@
+{
+  "institutions": {
+    "mhc.cbe.go.kr": {
+      "urls": [
+        "https://mhc.cbe.go.kr/upload/dept-11/na/bbs_1407/2025/02/ABDAAF1F-A12F-34CD-91C9-91A1C282D627.pdf",
+        "https://mhc.cbe.go.kr/upload/na_old/dc520bb5-50ad-48b0-94dc-cf1475f299ba/2017/15129900741.pdf",
+        "https://mhc.cbe.go.kr/upload/na_old/dc520bb5-50ad-48b0-94dc-cf1475f299ba/2018/15440146732.pdf",
+        "https://mhc.cbe.go.kr/upload/na_old/dc520bb5-50ad-48b0-94dc-cf1475f299ba/2019/15731092491.pdf"
+      ],
+      "captured": 4,
+      "cacheReused": 4,
+      "publishedReferences": 0
+    },
+    "semie.cooking": {
+      "urls": [
+        "https://semie.cooking/recipe-lab/archive/vegetable-buchu-mandu"
+      ],
+      "captured": 1,
+      "cacheReused": 1,
+      "publishedReferences": 0
+    },
+    "tfs.ourhome.co.kr": {
+      "urls": [
+        "https://tfs.ourhome.co.kr/menu/recommend/detail/317"
+      ],
+      "captured": 1,
+      "cacheReused": 0,
+      "publishedReferences": 0
+    },
+    "www.diabetes.or.kr": {
+      "urls": [
+        "https://www.diabetes.or.kr/general/dietary/dietary_07.php"
+      ],
+      "captured": 1,
+      "cacheReused": 1,
+      "publishedReferences": 0
+    },
+    "www.dietitian.or.kr": {
+      "urls": [
+        "https://www.dietitian.or.kr/assets/ver2/food_online/html/main_popup/kda2019recipe2/index_10.html",
+        "https://www.dietitian.or.kr/assets/ver2/food_online/html/main_popup/kda2019recipe2/index_100.html",
+        "https://www.dietitian.or.kr/assets/ver2/food_online/html/main_popup/kda2019recipe2/index_20.html",
+        "https://www.dietitian.or.kr/assets/ver2/food_online/html/main_popup/kda2019recipe2/index_30.html",
+        "https://www.dietitian.or.kr/assets/ver2/food_online/html/main_popup/kda2019recipe2/index_40.html",
+        "https://www.dietitian.or.kr/assets/ver2/food_online/html/main_popup/kda2019recipe2/index_50.html",
+        "https://www.dietitian.or.kr/assets/ver2/food_online/html/main_popup/kda2019recipe2/index_60.html",
+        "https://www.dietitian.or.kr/assets/ver2/food_online/html/main_popup/kda2019recipe2/index_70.html",
+        "https://www.dietitian.or.kr/assets/ver2/food_online/html/main_popup/kda2019recipe2/index_80.html",
+        "https://www.dietitian.or.kr/assets/ver2/food_online/html/main_popup/kda2019recipe2/index_90.html",
+        "https://www.dietitian.or.kr/board/old_down/%EC%B2%AD%EC%86%8C%EB%85%84%ED%8A%B9%EC%84%A0%EC%8B%9D%EB%8B%A8.pdf",
+        "https://www.dietitian.or.kr/paper_board_view_contents.do?bbs_idx=1205",
+        "https://www.dietitian.or.kr/paper_board_view_contents.do?bbs_idx=3033",
+        "https://www.dietitian.or.kr/paper_board_view_contents.do?bbs_idx=78475"
+      ],
+      "captured": 13,
+      "cacheReused": 2,
+      "publishedReferences": 0
+    },
+    "www.foodnuri.go.kr": {
+      "urls": [
+        "https://www.foodnuri.go.kr/portal/bbs/B0000279/view.do?deleteCd=0&menuNo=300042&nttId=215110&pageIndex=96",
+        "https://www.foodnuri.go.kr/portal/bbs/B0000279/view.do?deleteCd=0&menuNo=300056&nttId=215110&pageIndex=93&searchCnd=3",
+        "https://www.foodnuri.go.kr/portal/bbs/B0000279/view.do?deleteCd=0&menuNo=300056&nttId=215110&pageIndex=96&searchCnd=3",
+        "https://www.foodnuri.go.kr/portal/bbs/B0000279/view.do?deleteCd=0&menuNo=300056&nttId=215224&pageIndex=20&searchCnd=3",
+        "https://www.foodnuri.go.kr/portal/bbs/B0000279/view.do?menuNo=300056&nttId=215224&pageIndex=1"
+      ],
+      "captured": 5,
+      "cacheReused": 3,
+      "publishedReferences": 0
+    },
+    "www.fsis.go.kr": {
+      "urls": [
+        "https://www.fsis.go.kr/front/contents/cmsView.do?cate_id=0301&cnts_id=23797"
+      ],
+      "captured": 1,
+      "cacheReused": 1,
+      "publishedReferences": 0
+    },
+    "www.goe.go.kr": {
+      "urls": [
+        "https://www.goe.go.kr/resource/goe/na/bbs_2675/2025/11/schoolfoodservice_20251126.pdf",
+        "https://www.goe.go.kr/resource/old/BBSMSTR_000000030174/BBS_202309010502127700.pdf",
+        "https://www.goe.go.kr/resource/old/BBSMSTR_000000030174/BBS_202503040153062180.pdf"
+      ],
+      "captured": 3,
+      "cacheReused": 3,
+      "publishedReferences": 0
+    },
+    "www.kca.go.kr": {
+      "urls": [
+        "https://www.kca.go.kr/webzine/board/view?div=kca_2304&linkId=536&menuId=MENU00324"
+      ],
+      "captured": 0,
+      "cacheReused": 0,
+      "publishedReferences": 0
+    },
+    "www.rda.go.kr": {
+      "urls": [
+        "https://www.rda.go.kr/download_file/act/bookcafe065.PDF"
+      ],
+      "captured": 1,
+      "cacheReused": 1,
+      "publishedReferences": 0
+    },
+    "www.nics.go.kr": {
+      "urls": [
+        "https://www.nics.go.kr/food/kfi/mgnNewmenumkFoodSelectNew/selectFoodDetail.json?fdCode=D051300"
+      ],
+      "captured": 0,
+      "cacheReused": 1,
+      "publishedReferences": 1
+    }
+  },
+  "note": "URL captures include duplicate URL variants. Cached PDFs are not new references. Menuzen publication reuses a SHA-verified prior source; no newly captured external recipe was published. Search-only institutions and queries remain in route/search receipts."
+}

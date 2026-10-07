@@ -1,0 +1,41 @@
+{
+  "checkedDate": "2026-10-05",
+  "queries": [
+    "\"주꾸미 수제비\" (레시피 OR 조리 OR 재료) (site:go.kr OR site:re.kr OR site:edu OR site:school.kr)",
+    "\"고구마돈육강정\" (레시피 OR 조리 OR 재료) (site:go.kr OR site:re.kr OR site:edu OR site:school.kr)",
+    "\"배추 말이찜\" (레시피 OR 조리 OR 재료) (site:go.kr OR site:re.kr OR site:edu OR site:school.kr)",
+    "\"상추오이당근쌈\" (레시피 OR 조리 OR 재료) (site:go.kr OR site:re.kr OR site:edu OR site:school.kr)"
+  ],
+  "foods": [
+    {
+      "recipeId": "MFDS-206",
+      "name": "주꾸미수제비",
+      "query": "\"주꾸미 수제비\" (레시피 OR 조리 OR 재료) (site:go.kr OR site:re.kr OR site:edu OR site:school.kr)",
+      "strategy": "NAME_VARIANT_PUBLIC_CATERING_EDUCATION",
+      "snippetsAreNotNumericEvidence": true
+    },
+    {
+      "recipeId": "MFDS-210",
+      "name": "고구마돈육강정",
+      "query": "\"고구마돈육강정\" (레시피 OR 조리 OR 재료) (site:go.kr OR site:re.kr OR site:edu OR site:school.kr)",
+      "strategy": "NAME_VARIANT_PUBLIC_CATERING_EDUCATION",
+      "snippetsAreNotNumericEvidence": true
+    },
+    {
+      "recipeId": "MFDS-212",
+      "name": "배추말이찜",
+      "query": "\"배추 말이찜\" (레시피 OR 조리 OR 재료) (site:go.kr OR site:re.kr OR site:edu OR site:school.kr)",
+      "strategy": "NAME_VARIANT_PUBLIC_CATERING_EDUCATION",
+      "snippetsAreNotNumericEvidence": true
+    },
+    {
+      "recipeId": "MFDS-214",
+      "name": "상추, 오이, 당근쌈",
+      "query": "\"상추오이당근쌈\" (레시피 OR 조리 OR 재료) (site:go.kr OR site:re.kr OR site:edu OR site:school.kr)",
+      "strategy": "NAME_VARIANT_PUBLIC_CATERING_EDUCATION",
+      "snippetsAreNotNumericEvidence": true
+    }
+  ],
+  "result": "Empty search results\nNo results were found for the provided queries",
+  "quantitiesAcceptedFromSnippets": false
+}

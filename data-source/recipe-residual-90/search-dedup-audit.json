@@ -1,0 +1,12 @@
+{
+  "plannedDishes": 90,
+  "uniqueDishQueries": 88,
+  "duplicateQueries": [
+    {
+      "query": "\"백합죽\" 조리 filetype:pdf site:go.kr",
+      "count": 3,
+      "reason": "3 original 백합죽 recipes share one dish query; this turn accidentally repeated the query2 extra times. Future queries must use cached shared receipt."
+    }
+  ],
+  "scope": "Does not claim zero duplicate executions; old raw evidence/recipes were reused without new network fetch."
+}

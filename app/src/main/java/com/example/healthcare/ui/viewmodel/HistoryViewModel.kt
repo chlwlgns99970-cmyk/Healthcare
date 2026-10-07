@@ -16,6 +16,11 @@ import com.example.healthcare.domain.PortionPreset
 import com.example.healthcare.domain.EnergyBalanceCalculator
 import com.example.healthcare.domain.DailyIntakeTimeline
 import com.example.healthcare.domain.Macronutrients
+import com.example.healthcare.domain.FoodAmountPolicy
+import com.example.healthcare.domain.FoodAmountUnit
+import com.example.healthcare.domain.FoodAmountNutrition
+import com.example.healthcare.domain.PortionQuality
+import com.example.healthcare.domain.RecordedAmountSnapshot
 import com.example.healthcare.data.model.MealNutritionRow
 import com.example.healthcare.util.CalorieUtils
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -35,6 +40,9 @@ data class MealEditUiState(
     val time: LocalTime = LocalTime.now().withSecond(0).withNano(0),
     val servingAmount: String = "",
     val servingUnit: String = "",
+    val quantity: String = "",
+    val quantityUnit: String = "",
+    val caloriesManuallyEdited: Boolean = false,
     val portionPresetId: String? = null,
     val portionDisplayLabel: String? = null,
     val portionEstimationType: String? = null,
@@ -49,6 +57,31 @@ data class MealEditUiState(
     val saveError: String? = null
 ) {
     val isEditing: Boolean get() = original != null
+    val nutritionPreview: Macronutrients get() {
+        val record = original ?: return Macronutrients.Unknown
+        val nutrition = Macronutrients(record.carbohydrateGrams, record.proteinGrams, record.fatGrams)
+        if (caloriesManuallyEdited) {
+            val energy = CalorieUtils.parseAndRoundCalories(calories) ?: return Macronutrients.Unknown
+            return if (record.calories > 0) nutrition.scaled(energy.toDouble() / record.calories) else Macronutrients.Unknown
+        }
+        val amount = FoodAmountPolicy.parseAmount(servingAmount) ?: return nutrition
+        val originalAmount = record.servingAmount ?: return nutrition
+        return FoodAmountPolicy.calculateSnapshot(originalAmount, record.servingUnit.orEmpty(), record.calories,
+            nutrition, amount)?.let { Macronutrients(it.carbohydrateGrams, it.proteinGrams, it.fatGrams) } ?: nutrition
+    }
+    val amountChoices: List<FoodAmountUnit> get() {
+        val record = original ?: return emptyList()
+        val basisUnit = record.servingUnit?.takeIf(String::isNotBlank) ?: return emptyList()
+        val amount = record.servingAmount?.takeIf { it.isFinite() && it > 0 } ?: return emptyList()
+        val snapshot = RecordedAmountSnapshot.from(record)
+        return buildList {
+            snapshot?.let { add(FoodAmountUnit(it.unit, it.basisPerUnit, it.basisUnit,
+                record.portionSourceReference ?: "저장 당시의 섭취 단위 기준", PortionQuality.OFFICIAL_SERVING)) }
+            add(FoodAmountUnit(basisUnit, 1.0, basisUnit,
+                "저장 당시 ${RecordedAmountSnapshot.format(amount)}${basisUnit}의 영양정보를 기준으로 계산해요.",
+                when (basisUnit) { "g" -> PortionQuality.WEIGHT_ONLY; "ml" -> PortionQuality.VOLUME_ONLY; else -> PortionQuality.OFFICIAL_SERVING }))
+        }.distinctBy(FoodAmountUnit::unit)
+    }
 }
 
 /**
@@ -69,6 +102,8 @@ class HistoryViewModel(
 
     private val _selectedDate = MutableStateFlow(todayProvider())
     val selectedDate: StateFlow<LocalDate> = _selectedDate.asStateFlow()
+    val allMeals: StateFlow<List<MealRecord>> = mealRepository.allMeals
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
 
     val intakeTimeline: StateFlow<DailyIntakeTimeline> = combine(
         mealRepository.allMeals,
@@ -140,6 +175,7 @@ class HistoryViewModel(
     }
 
     fun startEditing(meal: MealRecord) {
+        val snapshot = RecordedAmountSnapshot.from(meal)
         _editState.value = MealEditUiState(
             original = meal,
             foodName = meal.foodName,
@@ -149,6 +185,8 @@ class HistoryViewModel(
             time = LocalTime.parse(meal.time, timeFormatter),
             servingAmount = meal.servingAmount?.let(::formatServing).orEmpty(),
             servingUnit = meal.servingUnit.orEmpty(),
+            quantity = snapshot?.quantity?.let(::formatServing) ?: meal.servingAmount?.let(::formatServing).orEmpty(),
+            quantityUnit = snapshot?.unit ?: meal.servingUnit.orEmpty(),
             portionPresetId = meal.portionPresetId,
             portionDisplayLabel = meal.portionDisplayLabel,
             portionEstimationType = meal.portionEstimationType,
@@ -174,7 +212,7 @@ class HistoryViewModel(
     }
 
     fun onEditCaloriesChange(value: String) {
-        _editState.update { it.copy(calories = value, caloriesError = null, saveError = null) }
+        _editState.update { it.copy(calories = value, caloriesManuallyEdited = true, caloriesError = null, saveError = null) }
     }
 
     fun onEditMealTypeChange(value: MealType) {
@@ -190,26 +228,70 @@ class HistoryViewModel(
     }
 
     fun onEditServingAmountChange(value: String) {
-        _editState.update { it.copy(servingAmount = value,
-            calories = calculateEditCalories(it.selectedFood, value, it.servingUnit)?.toString() ?: it.calories,
-            servingAmountError = null, saveError = null,
-            portionPresetId = null, portionDisplayLabel = null,
-            portionEstimationType = PortionEstimationType.MANUAL_AMOUNT.name, portionSourceReference = null) }
+        _editState.update { state ->
+            val amount = FoodAmountPolicy.parseAmount(value)
+            val choice = state.amountChoices.firstOrNull { it.unit == state.quantityUnit }
+            val quantity = amount?.let { it / (choice?.basisAmountPerUnit ?: 1.0) }
+            val changed = state.copy(servingAmount = value,
+                quantity = quantity?.let(::formatServing) ?: value,
+                servingAmountError = null, saveError = null)
+            updateAmountSnapshot(changed, amount, quantity)
+        }
     }
 
     fun onEditServingUnitChange(value: String) {
-        _editState.update { it.copy(servingUnit = value,
-            calories = calculateEditCalories(it.selectedFood, it.servingAmount, value)?.toString() ?: it.calories,
-            saveError = null,
+        val state = _editState.value
+        if (state.amountChoices.any { it.unit == value }) { onEditQuantityUnitChange(value); return }
+        // A manual label can be edited, but a stored mass/volume basis cannot be silently converted.
+        val originalUnit = state.original?.servingUnit
+        if (RecordedAmountSnapshot.from(state.original ?: return) != null ||
+            originalUnit in setOf("g", "ml") || value.trim() in setOf("g", "ml") && !originalUnit.isNullOrBlank()) return
+        _editState.update { it.copy(servingUnit = value, quantityUnit = value, saveError = null,
             portionPresetId = null, portionDisplayLabel = null,
             portionEstimationType = PortionEstimationType.MANUAL_AMOUNT.name, portionSourceReference = null) }
     }
 
-    private fun calculateEditCalories(food: FoodItem?, amountText: String, unit: String): Int? {
-        if (food == null || !food.unit.equals(unit.trim(), ignoreCase = true)) return null
-        val amount = amountText.toDoubleOrNull()?.takeIf { it.isFinite() && it > 0.0 } ?: return null
-        return PortionGuide.estimate(food, PortionPreset("edit-manual", "직접 입력", amount, food.unit,
-            PortionEstimationType.MANUAL_AMOUNT, food.servingDescription, "직접 입력한 양"))?.calories
+    fun onEditQuantityChange(value: String) {
+        _editState.update { state ->
+            val quantity = FoodAmountPolicy.parseAmount(value)
+            val choice = state.amountChoices.firstOrNull { it.unit == state.quantityUnit }
+            val amount = quantity?.let { it * (choice?.basisAmountPerUnit ?: 1.0) }
+            val changed = state.copy(quantity = value, servingAmount = amount?.let(::formatServing) ?: value,
+                servingAmountError = null, saveError = null)
+            updateAmountSnapshot(changed, amount, quantity)
+        }
+    }
+
+    fun onEditQuantityUnitChange(unit: String) {
+        _editState.update { state ->
+            val choice = state.amountChoices.firstOrNull { it.unit == unit } ?: return@update state
+            val amount = FoodAmountPolicy.parseAmount(state.servingAmount)
+            val quantity = amount?.let { it / choice.basisAmountPerUnit }
+            updateAmountSnapshot(state.copy(quantityUnit = unit, quantity = quantity?.let(::formatServing).orEmpty(),
+                servingAmountError = null, saveError = null), amount, quantity)
+        }
+    }
+
+    private fun snapshotNutrition(state: MealEditUiState, amount: Double?): FoodAmountNutrition? {
+        val original = state.original ?: return null
+        val referenceAmount = original.servingAmount ?: return null
+        if (amount == null || original.servingUnit != state.servingUnit) return null
+        return FoodAmountPolicy.calculateSnapshot(referenceAmount, original.servingUnit.orEmpty(), original.calories,
+            Macronutrients(original.carbohydrateGrams, original.proteinGrams, original.fatGrams), amount)
+    }
+
+    private fun updateAmountSnapshot(state: MealEditUiState, amount: Double?, quantity: Double?): MealEditUiState {
+        val nutrition = snapshotNutrition(state, amount)
+        val original = state.original
+        val portable = RecordedAmountSnapshot.from(original ?: return state)
+        val choice = state.amountChoices.firstOrNull { it.unit == state.quantityUnit }
+        val snapshot = if (portable != null && quantity != null && choice != null && nutrition != null)
+            RecordedAmountSnapshot(quantity, choice.unit, choice.basisAmountPerUnit, choice.basisUnit) else null
+        return state.copy(calories = if (!state.caloriesManuallyEdited) nutrition?.calories?.toString() ?: state.calories else state.calories,
+            portionPresetId = snapshot?.presetId,
+            portionDisplayLabel = snapshot?.label,
+            portionEstimationType = if (snapshot != null) original.portionEstimationType else PortionEstimationType.MANUAL_AMOUNT.name,
+            portionSourceReference = if (snapshot != null) original.portionSourceReference else null)
     }
 
     fun showPreciseEdit() {
@@ -219,10 +301,12 @@ class HistoryViewModel(
     fun selectEditPortion(preset: PortionPreset) {
         val food = _editState.value.selectedFood ?: return
         if (PortionGuide.presets(food).none { it.id == preset.id }) return
-        val estimate = PortionGuide.estimate(food, preset) ?: return
+        if (preset.unit != _editState.value.original?.servingUnit) return
+        val estimate = snapshotNutrition(_editState.value, preset.amount) ?: return
         _editState.update {
-            it.copy(servingAmount = formatServing(estimate.amount), servingUnit = estimate.unit,
-                calories = estimate.calories.toString(), portionPresetId = preset.id,
+            it.copy(servingAmount = formatServing(estimate.basisAmount), servingUnit = estimate.basisUnit,
+                quantity = formatServing(estimate.basisAmount), quantityUnit = estimate.basisUnit,
+                calories = estimate.calories.toString(), caloriesManuallyEdited = false, portionPresetId = preset.id,
                 portionDisplayLabel = preset.label, portionEstimationType = preset.estimationType.name,
                 portionSourceReference = preset.sourceReference, servingAmountError = null, caloriesError = null)
         }
@@ -232,10 +316,19 @@ class HistoryViewModel(
         val original = _editState.value.original ?: return
         if (ratio !in 0.1..2.0) return
         val originalAmount = original.servingAmount?.takeIf { it > 0.0 } ?: return
+        val snapshot = RecordedAmountSnapshot.from(original)
+        if (snapshot != null) {
+            _editState.update { it.copy(caloriesManuallyEdited = false) }
+            onEditQuantityUnitChange(snapshot.unit)
+            onEditQuantityChange(formatServing(snapshot.quantity * ratio))
+            return
+        }
+        val nutrition = snapshotNutrition(_editState.value, originalAmount * ratio) ?: return
         _editState.update {
             it.copy(
                 servingAmount = formatServing(originalAmount * ratio),
-                calories = (original.calories * ratio).roundToInt().coerceAtLeast(1).toString(),
+                quantity = formatServing(originalAmount * ratio), quantityUnit = original.servingUnit.orEmpty(),
+                calories = nutrition.calories.toString(), caloriesManuallyEdited = false,
                 portionPresetId = "edit-ratio-$ratio",
                 portionDisplayLabel = "${original.portionDisplayLabel ?: "저장한 양"} · $label",
                 portionEstimationType = PortionEstimationType.VISUAL_ESTIMATE.name,
@@ -254,7 +347,7 @@ class HistoryViewModel(
         if (!state.isEditing || state.isSaving) return
 
         val calories = CalorieUtils.parseAndRoundCalories(state.calories)
-        val servingAmount = state.servingAmount.toDoubleOrNull()
+        val servingAmount = FoodAmountPolicy.parseAmount(state.servingAmount)
         val foodNameError = if (state.foodName.isBlank()) "음식 이름을 입력해주세요." else null
         val caloriesError = if (calories == null || calories <= 0) "올바른 칼로리를 입력해주세요." else null
         val servingAmountError = if (
@@ -281,15 +374,16 @@ class HistoryViewModel(
                 original.servingAmount != servingAmount ||
                 original.servingUnit != trimmedUnit
             )
+        val nutrition = updatedNutrition(original, validated, requireNotNull(calories), servingAmount)
         val updatedMeal = original.copy(
             date = validated.date.format(dateFormatter),
             time = validated.time.format(timeFormatter),
             mealType = validated.mealType,
             foodName = trimmedName,
             calories = requireNotNull(calories),
-            carbohydrateGrams = updatedNutrition(original, validated.selectedFood, requireNotNull(calories)).carbohydrateGrams,
-            proteinGrams = updatedNutrition(original, validated.selectedFood, requireNotNull(calories)).proteinGrams,
-            fatGrams = updatedNutrition(original, validated.selectedFood, requireNotNull(calories)).fatGrams,
+            carbohydrateGrams = nutrition.carbohydrateGrams,
+            proteinGrams = nutrition.proteinGrams,
+            fatGrams = nutrition.fatGrams,
             memo = trimmedMemo,
             servingAmount = servingAmount,
             servingUnit = trimmedUnit,
@@ -317,14 +411,12 @@ class HistoryViewModel(
         }
     }
 
-    private fun updatedNutrition(original: MealRecord, selectedFood: FoodItem?, calories: Int): Macronutrients {
-        if (selectedFood != null && selectedFood.energyKcal > 0.0) {
-            return Macronutrients(
-                selectedFood.carbohydrateGrams,
-                selectedFood.proteinGrams,
-                selectedFood.fatGrams
-            ).scaled(calories.toDouble() / selectedFood.energyKcal)
+    private fun updatedNutrition(original: MealRecord, state: MealEditUiState, calories: Int, amount: Double?): Macronutrients {
+        if (!state.caloriesManuallyEdited) snapshotNutrition(state, amount)?.let {
+            return Macronutrients(it.carbohydrateGrams, it.proteinGrams, it.fatGrams)
         }
+        if (calories == original.calories && amount == original.servingAmount) return Macronutrients(
+            original.carbohydrateGrams, original.proteinGrams, original.fatGrams)
         if (original.calories <= 0) return Macronutrients.Unknown
         return Macronutrients(
             original.carbohydrateGrams,
@@ -336,3 +428,5 @@ class HistoryViewModel(
     private fun formatServing(value: Double): String =
         if (value % 1.0 == 0.0) value.toInt().toString() else value.toString()
 }
+
+internal fun MealEditUiState.draftValues(): List<Any?> = listOf(foodName, calories, mealType, date, time, servingAmount, servingUnit, quantity, quantityUnit, memo)

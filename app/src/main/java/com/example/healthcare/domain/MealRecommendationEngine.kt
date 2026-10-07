@@ -14,7 +14,8 @@ data class RecommendationSeed(
     val ingredientInfoComplete: Boolean = true,
     val recentUseCount: Int = 0,
     val dataCompleteness: Double = 1.0,
-    val ingredientCategories: Set<String> = emptySet()
+    val ingredientCategories: Set<String> = emptySet(),
+    val servingsByMeal: Map<MealType, List<RecommendationServing>> = emptyMap()
 )
 
 data class ScoredMealRecommendation(
@@ -23,7 +24,11 @@ data class ScoredMealRecommendation(
     val calorieDifference: Int,
     val toleranceKcal: Int,
     val reason: String,
-    val appliedReasons: List<String> = emptyList()
+    val appliedReasons: List<String> = emptyList(),
+    val preferenceMatched: Boolean = false,
+    val learnedScore: Double = 0.0,
+    val portion: Double = 1.0,
+    val amountLabels: List<String> = emptyList()
 )
 
 enum class RecommendationStage { EXACT, WIDER_CALORIES, EXPANDED_MODE, CLOSEST_VERIFIED }
@@ -38,7 +43,7 @@ object MealRecommendationEngine {
         if (seed.template.totalKcal <= 0 || !seed.dataCompleteness.isFinite() || seed.dataCompleteness < 1.0 ||
             seed.ingredientNames.isEmpty() || seed.template.source.isBlank()) return false
         val dislikes = excludedNames.map(::normalizeFoodName).filter(String::isNotBlank).toSet()
-        val searchable = (seed.ingredientNames + seed.template.name)
+        val searchable = (seed.ingredientNames + SlowAgingStylePolicy.evidence(seed.template.id)?.ingredients.orEmpty() + seed.template.name)
             .map(::normalizeFoodName).filter(String::isNotBlank)
         if (searchable.any { candidate -> dislikes.any(candidate::contains) }) return false
 
@@ -71,7 +76,8 @@ object MealRecommendationEngine {
         allowedCookingModes: Set<String> = setOf(cookingMode),
         excludedTemplateIds: Set<String> = emptySet(),
         mealType: MealType? = null,
-        theme: MealRecommendationTheme? = null
+        theme: MealRecommendationTheme? = null,
+        learnedScores: Map<String, Double> = emptyMap()
     ): List<ScoredMealRecommendation> {
         if (budgetKcal <= 0 || limit <= 0) return emptyList()
         val preferred = preferredNames.filter { normalizeFoodName(it).isNotBlank() }.toSet()
@@ -93,11 +99,18 @@ object MealRecommendationEngine {
             RecommendationStage.CLOSEST_VERIFIED -> Int.MAX_VALUE
             else -> max((budgetKcal * 0.20).toInt(), 150)
         }
-        val inRange = themed.filter {
-            it.template.id !in excludedTemplateIds && abs(it.template.totalKcal - budgetKcal) <= tolerance
+        val inRange = themed.flatMap { seed ->
+            val servings = mealType?.let { RecommendationServingPolicy.available(seed, it) }
+                ?: listOf(RecommendationServing(1.0, seed.template.totalKcal, DailyMealThemePolicy.nutrition(seed)))
+            servings.filter { seed.template.id !in excludedTemplateIds && abs(it.kcal - budgetKcal) <= tolerance &&
+                (mealType != MealType.SNACK || it.kcal <= RecommendationServingPolicy.MAX_SNACK_KCAL) }
+                .map { seed to it }
         }
 
-        return inRange.map { seed ->
+        return inRange.map { (originalSeed, serving) ->
+            val seed = originalSeed.copy(template = originalSeed.template.copy(totalKcal = serving.kcal,
+                carbohydrateGrams = serving.nutrition.carbohydrateGrams, proteinGrams = serving.nutrition.proteinGrams,
+                fatGrams = serving.nutrition.fatGrams))
             val calorieFit = (1.0 - abs(seed.template.totalKcal - budgetKcal).toDouble() / max(budgetKcal, 1)).coerceIn(0.0, 1.0)
             val preferenceMatched = FoodPreferencePolicy.matches(seed, preferred)
             val preferenceFit = if (preferred.isEmpty()) 0.5 else if (preferenceMatched) 1.0 else 0.0
@@ -108,8 +121,10 @@ object MealRecommendationEngine {
             }
             val score = calorieFit * 55.0 + preferenceFit * 20.0 + variety * 15.0 +
                 seed.dataCompleteness.coerceIn(0.0, 1.0) * 10.0
+            val learned = RecommendationLearningPolicy.bounded(learnedScores[seed.template.id] ?: 0.0)
             val appliedReasons = buildList {
                 if (preferenceMatched) add("좋아하는 음식 취향을 반영했어요.")
+                if (learned > 0) add("실제 기록과 즐겨찾기를 약하게 반영했어요.")
                 if (theme != null) add(when (theme) {
                     MealRecommendationTheme.LIGHT -> "같은 식사 후보 중 칼로리가 낮은 쪽에서 골랐어요."
                     MealRecommendationTheme.BALANCED -> "표시된 탄단지 열량비 기준에 맞는 메뉴예요."
@@ -136,17 +151,25 @@ object MealRecommendationEngine {
             }
             ScoredMealRecommendation(
                 template = seed.template,
-                score = score,
+                score = score + learned,
                 calorieDifference = seed.template.totalKcal - budgetKcal,
                 toleranceKcal = tolerance,
                 reason = reason,
-                appliedReasons = (listOf(reason) + appliedReasons).distinct()
+                appliedReasons = (listOf(reason) + appliedReasons).distinct(),
+                preferenceMatched = preferenceMatched,
+                learnedScore = learned,
+                portion = serving.portion,
+                amountLabels = serving.labels
             )
         }.sortedWith((if (stage == RecommendationStage.CLOSEST_VERIFIED) {
-            compareBy<ScoredMealRecommendation> { abs(it.calorieDifference) }.thenByDescending { it.score }
+            compareByDescending<ScoredMealRecommendation> { it.preferenceMatched }
+                .thenBy { abs(it.calorieDifference) }.thenByDescending { it.score }
         } else {
-            compareByDescending<ScoredMealRecommendation> { it.score }.thenBy { abs(it.calorieDifference) }
+            // Eligible calorie range and hard theme have already been checked above.
+            compareByDescending<ScoredMealRecommendation> { it.preferenceMatched }
+                .thenByDescending { it.score }.thenBy { abs(it.calorieDifference) }
         }).thenBy { it.template.id })
+            .distinctBy { it.template.id }
             .distinctBy { normalizeFoodName(it.template.name) }
             .take(limit)
     }

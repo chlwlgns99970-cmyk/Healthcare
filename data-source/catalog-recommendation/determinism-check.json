@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "checkedAt": "2026-10-04",
+  "offlineRebuild": true,
+  "sha256": {
+    "data-source\\catalog-recommendation\\reviewed-group-evidence.csv": "f9004a431e35ed065e462083b420207141151dca6fc9445467445ab4e7485009",
+    "data-source\\catalog-recommendation\\metadata-evidence.csv": "555d2d27d108d8dce0f311d943a9496a8f640082cf67b0a5d7b78ab3717ede1f",
+    "data-source\\recommendation\\verified-food-groups.csv": "cb649cf93dd038d1ba2b7bca4aa3d802090fc5e49d79e97ca3321ce3d23b737d",
+    "data-source\\recommendation\\recommendation-ingredient-research.csv": "66eb176a0d6ad685816d5a09b3dd3cbe3f3b8f25a486405e9246e8e5f0aee10b",
+    "app\\src\\main\\java\\com\\example\\healthcare\\domain\\GeneratedIngredientGroups.kt": "d3ef055e8c443be39b67f75b72a8d5b15d0386e5fbee30b58770ab750e07c337",
+    "data-source\\catalog-recommendation\\portion-evidence.csv": "21b64c9befa9d3888f00c83e1da6bb724625867fb7f7a6e5994fd2b3b54e8704",
+    "data-source\\catalog-recommendation\\portion-rejudgement.csv": "731705a63eacd7e16c523603acb59194bc9dfaf4d53bea4995ac39805cf27726"
+  }
+}

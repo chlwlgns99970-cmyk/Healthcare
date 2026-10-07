@@ -17,6 +17,7 @@ import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
@@ -29,6 +30,7 @@ import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.sizeIn
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.statusBarsPadding
@@ -103,6 +105,7 @@ import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.imageResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -363,24 +366,17 @@ internal fun DashboardContent(
             Surface(color = MaterialTheme.colorScheme.background) {
                 val largeText = LocalDensity.current.fontScale >= 1.2f
                 val extraLargeText = LocalDensity.current.fontScale >= 1.5f
-                Box(
+                Row(
                     modifier = Modifier
                         .fillMaxWidth()
                         .statusBarsPadding()
-                        .height(
-                            when {
-                                extraLargeText -> 116.dp
-                                largeText -> 96.dp
-                                else -> 92.dp
-                            }
-                        )
-                        .padding(horizontal = 18.dp, vertical = if (extraLargeText) 4.dp else 7.dp)
+                        .padding(horizontal = 18.dp, vertical = if (extraLargeText) 4.dp else 7.dp),
+                    verticalAlignment = Alignment.Bottom,
+                    horizontalArrangement = Arrangement.spacedBy(6.dp)
                 ) {
                     Column(
-                        modifier = Modifier
-                            .align(Alignment.CenterStart)
-                            .padding(top = if (extraLargeText) 0.dp else 7.dp),
-                        verticalArrangement = Arrangement.spacedBy(1.dp)
+                        modifier = Modifier.weight(1f),
+                        verticalArrangement = Arrangement.spacedBy(4.dp)
                     ) {
                         Text(
                             situationMessage,
@@ -390,7 +386,6 @@ internal fun DashboardContent(
                             overflow = TextOverflow.Ellipsis,
                             modifier = Modifier.semantics { heading() }
                         )
-                        Spacer(Modifier.height(3.dp))
                         Row(
                             verticalAlignment = Alignment.CenterVertically,
                             horizontalArrangement = Arrangement.spacedBy(5.dp)
@@ -412,7 +407,6 @@ internal fun DashboardContent(
                     IconButton(
                         onClick = { showDatePicker = true },
                         modifier = Modifier
-                            .align(Alignment.BottomEnd)
                             .size(34.dp)
                             .testTag("dashboard-date-picker")
                     ) {
@@ -464,7 +458,9 @@ internal fun DashboardContent(
                     nutrition = nutrition,
                     dense = dense,
                     onOpenReport = onOpenHistory,
-                    modifier = Modifier.fillMaxWidth().height(if (dense) 152.dp else 178.dp)
+                    // Reserve the other cards first; the chart can use the space left for intake.
+                    modifier = Modifier.fillMaxWidth().weight(1f, fill = false)
+                        .heightIn(max = if (dense) 152.dp else 178.dp)
                 )
                 CompactRecommendationCard(
                     state = coachState,
@@ -478,11 +474,10 @@ internal fun DashboardContent(
                             if (mealType != null && budget != null) onOpenMealPlan(mealType, budget)
                         }
                     },
-                    modifier = Modifier.fillMaxWidth().height(
-                        if (LocalDensity.current.fontScale >= 1.5f) 148.dp else if (dense) 102.dp else 104.dp
-                    )
+                    // The recommendation's text measures its required height first.
+                    // The flexible intake card takes the remaining vertical space.
+                    modifier = Modifier.fillMaxWidth()
                 )
-                Spacer(Modifier.weight(1f))
             }
         }
     }
@@ -569,7 +564,14 @@ private fun CompactIntakeCard(
             verticalArrangement = Arrangement.Center
         ) {
             Box(
-                modifier = Modifier.size(if (dense) 112.dp else 132.dp),
+                // Column measures the unweighted remaining label before this flexible chart.
+                modifier = Modifier.weight(1f, fill = false)
+                    .sizeIn(
+                        maxWidth = if (dense) 112.dp else 132.dp,
+                        maxHeight = if (dense) 112.dp else 132.dp
+                    )
+                    .aspectRatio(1f)
+                    .testTag("dashboard-calorie-chart"),
                 contentAlignment = Alignment.Center
             ) {
                 val track = MaterialTheme.colorScheme.surfaceVariant
@@ -606,11 +608,13 @@ private fun CompactIntakeCard(
                 if (target <= 0) "목표 설정 필요" else if (difference >= 0) "남은 ${formatNumber(difference)} kcal" else "${formatNumber(-difference)} kcal 초과",
                 style = MaterialTheme.typography.labelSmall.copy(fontSize = 12.sp, lineHeight = 15.sp),
                 color = MaterialTheme.colorScheme.onSurface,
-                maxLines = 1
+                textAlign = TextAlign.Center,
+                maxLines = 2,
+                modifier = Modifier.fillMaxWidth().testTag("dashboard-calorie-remaining")
             )
         }
         Column(
-            modifier = Modifier.weight(.52f).fillMaxHeight().padding(vertical = if (dense) 5.dp else 8.dp),
+            modifier = Modifier.weight(.52f).fillMaxHeight().testTag("dashboard-macros"),
             verticalArrangement = Arrangement.SpaceEvenly
         ) {
                 Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.End,
@@ -633,6 +637,7 @@ private fun CompactMacro(label: String, grams: Double?, color: Color) {
         Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
             Text(
                 label,
+                modifier = Modifier.weight(1f),
                 style = MaterialTheme.typography.labelSmall.copy(fontSize = 12.sp, lineHeight = 15.sp),
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 maxLines = 1
@@ -836,7 +841,7 @@ private fun CompactRecommendationCard(
 ) {
     Card(modifier = modifier.testTag("dashboard-recommendation-card"),
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface)) {
-        Row(Modifier.fillMaxSize().testTag("dashboard-open-daily-plan").clickable { onOpenRecommendation(null) }
+        Row(Modifier.fillMaxWidth().testTag("dashboard-open-daily-plan").clickable { onOpenRecommendation(null) }
             .semantics { role = Role.Button }.padding(if (dense) 10.dp else 12.dp),
             verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(12.dp)) {
             Icon(Icons.Rounded.RestaurantMenu, contentDescription = null)

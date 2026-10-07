@@ -1,0 +1,37 @@
+{
+  "dishes": [
+    {
+      "recipeId": "MFDS-126",
+      "name": "개조개오븐구이",
+      "state": "PARTIAL",
+      "ingredient": "청고추",
+      "route": "공공급식·교육청 대량 정량 조리",
+      "q": "\"개조개오븐구이\" \"청고추\" 레시피 site:go.kr OR site:ac.kr OR site:or.kr"
+    },
+    {
+      "recipeId": "MFDS-127",
+      "name": "토마토소박이",
+      "state": "PARTIAL",
+      "ingredient": "영양부추",
+      "route": "공공급식·교육청 대량 정량 조리",
+      "q": "\"토마토소박이\" \"영양부추\" 레시피 site:go.kr OR site:ac.kr OR site:or.kr"
+    },
+    {
+      "recipeId": "MFDS-128",
+      "name": "오이우무냉국",
+      "state": "PARTIAL",
+      "ingredient": "진간장",
+      "route": "공공급식·교육청 대량 정량 조리",
+      "q": "\"오이우무냉국\" \"진간장\" 레시피 site:go.kr OR site:ac.kr OR site:or.kr"
+    },
+    {
+      "recipeId": "MFDS-131",
+      "name": "풋마늘반건오징어김치",
+      "state": "PARTIAL",
+      "ingredient": "밀가루",
+      "route": "공공급식·교육청 대량 정량 조리",
+      "q": "\"풋마늘반건오징어김치\" \"밀가루\" 레시피 site:go.kr OR site:ac.kr OR site:or.kr"
+    }
+  ],
+  "result": "Empty search results\nNo results were found for the provided queries"
+}

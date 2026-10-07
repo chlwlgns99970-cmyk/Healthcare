@@ -11,6 +11,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import java.io.File
+import java.util.concurrent.atomic.AtomicBoolean
 
 class AppUpdateManager(
     repository: AppUpdateRepository,
@@ -33,9 +34,15 @@ class AppUpdateManager(
     private val operationMutex = Mutex()
     private val _state = MutableStateFlow(AppUpdateUiState())
     val state: StateFlow<AppUpdateUiState> = _state.asStateFlow()
+    private val coldStartCheckStarted = AtomicBoolean(false)
     private var verifiedApk: File? = null
 
-    fun checkAutomatically() = check(manual = false)
+    /** Runs once for the lifetime of this app process, regardless of activity recreation. */
+    fun checkOnColdStart() {
+        if (coldStartCheckStarted.compareAndSet(false, true)) {
+            check(manual = false)
+        }
+    }
 
     fun checkManually() = check(manual = true)
 
@@ -67,7 +74,6 @@ class AppUpdateManager(
                     } else {
                         AppUpdateUiState()
                     }
-                    AppUpdateCheckResult.Throttled,
                     AppUpdateCheckResult.DismissedForSession -> _state.value = AppUpdateUiState()
                 }
             }

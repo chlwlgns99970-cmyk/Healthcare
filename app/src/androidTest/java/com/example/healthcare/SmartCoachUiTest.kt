@@ -24,6 +24,7 @@ import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onRoot
 import androidx.compose.ui.test.performScrollToNode
 import androidx.compose.ui.test.performClick
+import androidx.compose.ui.test.performSemanticsAction
 import androidx.compose.ui.graphics.asAndroidBitmap
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.Density
@@ -117,9 +118,9 @@ class SmartCoachUiTest {
             .performScrollToNode(hasTestTag("food-search-alternatives-g"))
         composeRule.onNodeWithTag("food-search-alternatives-g").performClick()
         composeRule.onAllNodes(hasScrollAction()).onFirst()
-            .performScrollToNode(hasText("영양정보 단위 확인 필요"))
-        composeRule.onNodeWithText("영양정보 단위 확인 필요").assertIsDisplayed()
-        composeRule.onNodeWithText("100ml 기준", substring = true).assertDoesNotExist()
+            .performScrollToNode(hasText("먹은 양과 칼로리를 직접 확인해요"))
+        composeRule.onNodeWithText("먹은 양과 칼로리를 직접 확인해요").assertIsDisplayed()
+        composeRule.onNodeWithText("원본 기준 100ml · 128 kcal").assertIsDisplayed()
     }
 
     @Test
@@ -195,7 +196,7 @@ class SmartCoachUiTest {
         composeRule.onAllNodes(hasTestTag("food-search-result-gs")).assertCountEquals(0)
         composeRule.onAllNodes(hasScrollAction()).onFirst()
             .performScrollToNode(hasTestTag("food-search-alternatives-general"))
-        composeRule.onNodeWithText("다른 제품 2개").performClick()
+        composeRule.onNodeWithText("같은 이름의 다른 음식 2건 보기").performClick()
         composeRule.onAllNodes(hasScrollAction()).onFirst()
             .performScrollToNode(hasTestTag("food-search-result-gs"))
         composeRule.onNodeWithTag("food-search-result-gs").assertIsDisplayed()
@@ -251,7 +252,7 @@ class SmartCoachUiTest {
                 )
             }
         }
-        composeRule.onNodeWithTag("favorite-food-favorite-1").assertIsDisplayed().performClick()
+        composeRule.onNodeWithTag("favorite-food-favorite-1").assertIsDisplayed().performSemanticsAction(androidx.compose.ui.semantics.SemanticsActions.OnClick) { it() }
         composeRule.runOnIdle { assertEquals("favorite-1", selectedFavoriteId) }
     }
 
@@ -324,8 +325,8 @@ class SmartCoachUiTest {
 
         composeRule.onNodeWithText("공식 데이터에 등록된 제품 1개").assertIsDisplayed()
         composeRule.onAllNodes(hasScrollAction()).onFirst()
-            .performScrollToNode(hasText("제품 전체 180g · 450 kcal"))
-        composeRule.onNodeWithText("제품 전체 180g · 450 kcal").assertIsDisplayed()
+            .performScrollToNode(hasText("제품 전체 · 450 kcal"))
+        composeRule.onNodeWithText("제품 전체 · 450 kcal").assertIsDisplayed()
         composeRule.onNodeWithText("아주 긴 제품명을 가진 불고기 햄버거").performClick()
         composeRule.runOnIdle { assertEquals("burger-product", selectedFoodId) }
     }

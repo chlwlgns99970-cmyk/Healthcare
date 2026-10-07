@@ -26,6 +26,11 @@ data class FoodSearchResultGroup(
 
 /** Search-only aliases. Source names and nutrition units remain untouched. */
 object FoodSearchPolicy {
+    fun alternativesLabel(food: FoodItem, count: Int, expanded: Boolean = false): String = when {
+        expanded -> "다른 결과 접기"
+        !food.brand.isNullOrBlank() -> "다른 제품 ${count.coerceAtLeast(0)}건 보기"
+        else -> "같은 이름의 다른 음식 ${count.coerceAtLeast(0)}건 보기"
+    }
     private val nonNameCharacters = Regex("[^0-9a-z가-힣]")
     private val alternateNames = mapOf(
         "참치김밥" to "김밥참치",
@@ -75,7 +80,7 @@ object FoodSearchPolicy {
     fun queries(query: String): List<String> {
         val normalized = normalize(query)
         if (normalized.isBlank()) return emptyList()
-        return listOfNotNull(normalized, alternateNames[normalized]).distinct()
+        return listOfNotNull(normalized, alternateNames[normalized] ?: FranchiseCatalog.canonicalSearchQuery(query)).distinct()
     }
 
     fun broaderSuggestion(query: String): String? = broaderSearchTerms[normalize(query)]
@@ -125,24 +130,11 @@ object FoodSearchPolicy {
 
     fun isOfficialKfind(food: FoodItem): Boolean = food.sourceType.startsWith("K-FIND", ignoreCase = true)
 
-    fun isProduct(food: FoodItem): Boolean = food.sourceType.equals("K-FIND-PRODUCT", ignoreCase = true)
+    fun isProduct(food: FoodItem): Boolean = food.sourceType.uppercase(Locale.ROOT) in
+        setOf("K-FIND-PRODUCT", "OFFICIAL-RETAIL-PRODUCT")
 
     fun matchesCategory(food: FoodItem, category: FoodBrowseCategory): Boolean {
-        if (category == FoodBrowseCategory.ALL) return true
-        val searchable = normalize(
-            listOf(food.name, food.category.orEmpty(), food.aliases).joinToString("|")
-        )
-        val terms = when (category) {
-            FoodBrowseCategory.ALL -> emptyList()
-            FoodBrowseCategory.RICE_NOODLE -> listOf("밥", "면", "국수", "파스타", "만두")
-            FoodBrowseCategory.SOUP_STEW -> listOf("국", "탕", "찌개", "전골", "죽", "스프", "수프")
-            FoodBrowseCategory.MEAT -> listOf("고기", "육류", "소고기", "쇠고기", "돼지고기", "닭", "오리")
-            FoodBrowseCategory.FRUIT -> listOf("과일", "사과", "바나나", "딸기", "포도", "오렌지", "수박", "복숭아", "배")
-            FoodBrowseCategory.VEGETABLE -> listOf("채소", "야채", "양배추", "상추", "토마토", "오이")
-            FoodBrowseCategory.SNACK -> listOf("간식", "과자", "스낵", "쿠키", "초콜릿", "빙과")
-            FoodBrowseCategory.BEVERAGE -> listOf("음료", "차류", "커피", "주스", "우유", "탄산")
-        }
-        return terms.any { searchable.contains(normalize(it)) }
+        return FoodMenuCategoryPolicy.matchesBrowse(food, category)
     }
 
     /**
@@ -153,6 +145,8 @@ object FoodSearchPolicy {
         normalize(displayName(food)),
         normalize(food.brand.orEmpty()),
         food.sourceType.uppercase(Locale.ROOT),
+        // Product reports may describe different packages with equal nutrition.
+        if (isProduct(food)) food.sourceFoodCode else "",
         decimalKey(food.referenceAmount),
         food.unit.lowercase(Locale.ROOT),
         decimalKey(food.energyKcal),
@@ -169,34 +163,27 @@ object FoodSearchPolicy {
 
     /**
      * 화면에서만 같은 표시 이름을 한 묶음으로 접습니다. 원본 FoodItem은 모두 그대로 보존됩니다.
-     * 대표 항목은 검색어·브랜드 일치, 일반 음식 여부, 영양 완전도, 기준량, 안정 ID 순으로 결정합니다.
+     * 같은 이름의 대표는 일치도, 검증된 제공량, 영양·원재료·알레르기 정보, 출처 순으로 고릅니다.
      */
     fun groupSearchResults(foods: List<FoodItem>, query: String): List<FoodSearchResultGroup> {
-        val normalizedQuery = normalize(query)
+        val representativeOrder = representativeComparator(query)
         return foods
             .groupBy(::canonicalFoodKind)
             .map { (key, members) ->
-                val ordered = members.sortedWith(
-                    compareBy<FoodItem>(
-                        { representativeBrandRank(it, normalizedQuery) },
-                        { if (canonicalFoodKind(it) == normalizedQuery) 0 else 1 },
-                        { foodKindRank(it) },
-                        { -nutritionCompleteness(it) },
-                        { if (needsBasisReview(it)) 1 else 0 },
-                        { it.sourceType.uppercase(Locale.ROOT) },
-                        { it.sourceFoodCode },
-                        { it.id }
-                    )
-                )
+                val ordered = members.sortedWith(representativeOrder)
                 FoodSearchResultGroup(key, ordered.first(), ordered.drop(1))
             }
-            .sortedWith(compareBy(
-                { searchRank(it.representative, query) },
-                { if (it.key == normalizedQuery) 0 else 1 },
-                { it.key },
-                { it.representative.id }
-            ))
+            .sortedWith { a, b ->
+                representativeOrder.compare(a.representative,b.representative)
+                    .takeIf { it != 0 } ?: a.key.compareTo(b.key)
+            }
     }
+
+    /** The lazy result list renders visible cards; matching products stay reachable by scrolling. */
+    fun rankedSearchResults(foods: List<FoodItem>, query: String): List<FoodItem> = foods
+        .distinctBy(FoodItem::id)
+        .sortedWith(representativeComparator(query))
+        .distinctBy(::deduplicationKey)
 
     fun searchRank(food: FoodItem, query: String): Int {
         val normalized = normalize(query)
@@ -211,6 +198,8 @@ object FoodSearchPolicy {
                 .takeIf { it.size > 1 }
                 .orEmpty()
         return when {
+            normalized.isNotBlank() && brand.isNotBlank() &&
+                (queryVariants.any { it == brand } || FranchiseCatalog.canonicalBrand(query) == food.brand) -> -10
             normalized.isNotBlank() && canonicalFoodKind(food) == normalized -> 0
             normalized.isNotBlank() && brand.isNotBlank() && brand + name == normalized -> 0
             queryVariants.any { name == it } -> 0
@@ -227,6 +216,53 @@ object FoodSearchPolicy {
 
     /** Relevance is primary; source/brand is only a tie-breaker. */
     fun sourceTieBreakRank(food: FoodItem): Int = foodKindRank(food)
+
+    fun representativeComparator(query: String): Comparator<FoodItem> {
+        val normalizedQuery = normalize(query)
+        val ranks = mutableMapOf<FoodItem, Int>()
+        val servings = mutableMapOf<FoodItem, Int>()
+        fun rank(food: FoodItem) = ranks.getOrPut(food) { searchRank(food, query) }
+        fun serving(food: FoodItem) = servings.getOrPut(food) { servingCompleteness(food) }
+        return compareBy<FoodItem>(
+            { representativeBrandRank(it, normalizedQuery) },
+            { if (basicFruitName(it)?.let { name -> normalize(name) == normalizedQuery ||
+                    normalizedQuery in setOf("과일", "과일류") } == true ||
+                    (normalizedQuery in setOf("두부", "달걀", "계란", "삶은달걀", "삶은계란") &&
+                        !isProduct(it) && !FranchiseCatalog.isFranchise(it))) 0 else 1 },
+            // Keep basic food intent ahead of same-name products; other queries
+            // retain exact identity before serving and nutrition evidence quality.
+            { rank(it).let { value -> if (value <= 0) value else 1 } },
+            { -serving(it) },
+            { -nutritionCompleteness(it) },
+            { -ingredientCompleteness(it) },
+            { -allergenCompleteness(it) },
+            { rank(it) },
+            { foodKindRank(it) },
+            { it.sourceType.uppercase(Locale.ROOT) },
+            { it.sourceFoodCode },
+            { it.id }
+        )
+    }
+
+    fun visibleBrands(brands: List<com.example.healthcare.data.entity.FoodBrandSummary>): List<com.example.healthcare.data.entity.FoodBrandSummary> =
+        brands.filter { it.productCount > 0 }
+
+    private fun servingCompleteness(food: FoodItem): Int {
+        val choice = FoodAmountPolicy.defaultChoice(food)
+        return when (choice?.quality) {
+            PortionQuality.OFFICIAL_SERVING -> if (choice.unit == "제품 전체") 3 else 4
+            PortionQuality.VERIFIED_CONVERSION -> 2
+            PortionQuality.WEIGHT_ONLY, PortionQuality.VOLUME_ONLY -> 1
+            PortionQuality.UNRESOLVED, null -> 0
+        }
+    }
+
+    private fun ingredientCompleteness(food: FoodItem): Int = FoodMetadataPolicy.lookup(food.id)?.let {
+        if (it.ingredientInfoComplete) 2 else if (it.ingredients.isNotEmpty()) 1 else 0
+    } ?: 0
+    private fun allergenCompleteness(food: FoodItem): Int = FoodMetadataPolicy.lookup(food.id)?.let {
+        if (it.allergenInfoComplete) 2 else if (it.allergens.isNotEmpty()) 1 else 0
+    } ?: 0
 
     fun quickCompanionQueries(food: FoodItem?): List<Pair<String, String>> = when {
         food == null -> emptyList()
@@ -255,16 +291,19 @@ object FoodSearchPolicy {
             !base.contains(detail)
 
     private fun nutritionCompleteness(food: FoodItem): Int = listOf(
-        food.energyKcal.takeIf { it.isFinite() && it > 0.0 },
+        food.energyKcal,
         food.carbohydrateGrams,
         food.proteinGrams,
         food.fatGrams
-    ).count { it != null }
+    ).count { it != null && it.isFinite() && it >= 0.0 }
 
     private fun representativeBrandRank(food: FoodItem, normalizedQuery: String): Int {
         if (normalizedQuery.isBlank()) return 1
         val brand = normalize(food.brand.orEmpty())
-        return if (brand.isNotBlank() && normalizedQuery.contains(brand)) 0 else 1
+        val name = canonicalFoodKind(food)
+        return if (brand.isNotBlank() && (normalizedQuery == brand || normalizedQuery == brand + name ||
+            normalizedQuery == name + brand || queries(normalizedQuery).any { it == brand } ||
+            FranchiseCatalog.canonicalBrand(normalizedQuery) == food.brand)) 0 else 1
     }
 
     private fun hasAlias(food: FoodItem, normalized: String): Boolean =

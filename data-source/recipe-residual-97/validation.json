@@ -1,0 +1,76 @@
+{
+  "status": "PASS",
+  "dataTests": 40,
+  "unitTests": 12,
+  "qaBuild": "PASS",
+  "samsungTests": 24,
+  "samsungDevice": "SM-S948N / Android16 API36",
+  "newMappingTests": 2,
+  "unitSuites": [
+    {
+      "name": "com.example.healthcare.FullRecipeReferenceTest",
+      "tests": 6,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "name": "com.example.healthcare.RecipeMenuCompletionTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "name": "com.example.healthcare.SearchRecipeFollowupTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0
+    }
+  ],
+  "requiredCategories": {
+    "남은97분류": "Residual97Test.test_01",
+    "foodId matcher": "Residual97Test.test_03",
+    "exact/alias/context": "Residual97Test.test_04",
+    "candidate ranking": "FinalResidualEvidenceTest.test_28",
+    "reference publish": "Residual97Test.test_03",
+    "duplicate reference": "FinalResidualEvidenceTest.test_07 + finisher unique key assertion",
+    "canonical ingredient": "FinalResidualEvidenceTest.test_08",
+    "amount parsing": "FinalResidualEvidenceTest.test_18",
+    "unit conversion": "FinalResidualEvidenceTest.test_12",
+    "unit conflict": "Residual97Test.test_07",
+    "nutrition matching": "FinalResidualEvidenceTest.test_08,test_16",
+    "reference kcal": "FinalResidualEvidenceTest.test_16",
+    "provenance": "FinalResidualEvidenceTest.test_09 + Residual97Test.test_08",
+    "ORIGINAL_COMPLETE": "Samsung.originalCompleteRemainsSeparate",
+    "REFERENCE_COMPLETE": "Samsung.newMapping01,newMapping02",
+    "조사평균표시": "FinalResidualEvidenceTest.test_30 + Samsung.surveyReferenceIsNotPresentedAsCookingRecipe",
+    "PARTIAL": "Samsung.partialOriginalDoesNotBecomeComplete",
+    "UNRESOLVED": "Residual97Test.test_01 + focused-unresolved-and-source-review.json",
+    "fake foodId방지": "Residual97Test.test_06",
+    "fake amount방지": "FinalResidualEvidenceTest.test_05,test_06",
+    "fake kcal방지": "FinalResidualEvidenceTest.test_16",
+    "공식kcal보존": "Residual97Test.test_02 + Samsung.officialCaloriesInActualRecordScreenStay140",
+    "MealRecord kcal보존": "Samsung.savedMealCaloriesNeverUseReferenceSum + preservation-verify.json"
+  },
+  "packagedAssets": {
+    "food_items.csv": "ccf6a9b2322ad5e75fe29f13ffb7c4bf719c2cca5cd3b459f104d659231261b4",
+    "product_items.csv": "3f659d78f279b65115e17d8194bd686560bca018dea701aaa1a9585261bbe18e",
+    "franchise_official_items.csv": "4a44591f8d8c6ce8276bee5449e90ced1ca513555c2920718ba9722e5ada06e3",
+    "recipe_ingredient_estimates.csv": "3dcb21e2339a2e3fd7defdbd814b946ac6c85eb8d9c9d5a3224cb22c86d72522",
+    "official_recipe_reference_estimates.csv": "adc972ed0fd023eabcf29c8fdba3f7419e02a3e5037f5616b9a60332dc93ce8a"
+  },
+  "packagedSharedSource": "app/src/main/assets/fooddata",
+  "qaApkSha256": "8a44ee5f21fd3af9868089c2e8e7506a3a393672ee5a2d14d23870b3ce050c52",
+  "preservationEvidence": "app/build/recipe-residual-97/preservation-verify.json",
+  "privateFilesByteIdentical": true,
+  "changedTables": [],
+  "DBVersion": 8,
+  "migrations": 0,
+  "productIdentityUnchanged": true,
+  "productionInstall": 0,
+  "productionClear": 0,
+  "productionDeploy": 0,
+  "visualScreenshotsReviewed": [
+    "residual-97-MENUZEN-D102007.png",
+    "residual-97-MENUZEN-D101006.png"
+  ]
+}

@@ -3,14 +3,20 @@ package com.example.healthcare
 import com.example.healthcare.data.dao.CalorieGoalDao
 import com.example.healthcare.data.dao.EnergyProfileDao
 import com.example.healthcare.data.dao.MealRecordDao
+import com.example.healthcare.data.dao.FoodItemDao
 import com.example.healthcare.data.entity.CalorieGoal
 import com.example.healthcare.data.entity.EnergyProfileHistory
 import com.example.healthcare.data.entity.MealRecord
+import com.example.healthcare.data.entity.FoodItem
+import com.example.healthcare.data.entity.FoodBrandSummary
 import com.example.healthcare.data.model.MealType
 import com.example.healthcare.data.model.RecordSource
 import com.example.healthcare.data.repository.EnergyProfileRepository
 import com.example.healthcare.data.repository.GoalRepository
 import com.example.healthcare.data.repository.MealRepository
+import com.example.healthcare.data.repository.NutritionRepository
+import com.example.healthcare.domain.RecordedAmountSnapshot
+import com.example.healthcare.domain.RecordInsights
 import com.example.healthcare.ui.viewmodel.HistoryViewModel
 import java.time.LocalDate
 import java.time.LocalTime
@@ -207,12 +213,160 @@ class HistoryEditViewModelTest {
             nutritionCollection.cancel()
         }
 
-    private fun historyViewModel(dao: FakeMealDao) = HistoryViewModel(
+    @Test
+    fun `줄 snapshot을 복원하고 절반 입력은 당시 영양값과 null을 비례 보존한다`() = runTest(dispatcher.scheduler) {
+        val original = rollMeal()
+        val dao = FakeMealDao(listOf(original))
+        val viewModel = historyViewModel(dao)
+        viewModel.startEditing(original)
+        assertEquals("1", viewModel.editState.value.quantity)
+        assertEquals("줄", viewModel.editState.value.quantityUnit)
+        assertEquals("216", viewModel.editState.value.servingAmount)
+        viewModel.onEditQuantityChange("0.5")
+        assertEquals("148", viewModel.editState.value.calories)
+        assertEquals("108", viewModel.editState.value.servingAmount)
+        assertEquals("0.5줄", viewModel.editState.value.portionDisplayLabel)
+        assertEquals(25.0, viewModel.editState.value.nutritionPreview.carbohydrateGrams!!, 0.0)
+        assertNull(viewModel.editState.value.nutritionPreview.proteinGrams)
+        viewModel.saveMealEdit()
+        advanceUntilIdle()
+        val saved = dao.meals.value.single()
+        assertEquals(148, saved.calories)
+        assertEquals(25.0, saved.carbohydrateGrams!!, 0.0)
+        assertNull(saved.proteinGrams)
+        assertEquals(4.0, saved.fatGrams!!, 0.0)
+        assertEquals(0.5, RecordedAmountSnapshot.from(saved)!!.quantity, 0.0)
+        assertEquals(original.createdAtEpochMillis, saved.createdAtEpochMillis)
+        assertEquals(original.foodItemId, saved.foodItemId)
+    }
+
+    @Test
+    fun `원본 food metadata가 바뀌어도 기록 수정은 당시 환산값과 영양 snapshot을 사용한다`() = runTest(dispatcher.scheduler) {
+        val original = rollMeal()
+        val changedFood = FoodItem(id = original.foodItemId!!, sourceType = "K-FIND-PRODUCT", sourceFoodCode = "updated",
+            name = original.foodName, normalizedName = "김밥", referenceAmount = 100.0, unit = "g", energyKcal = 500.0,
+            carbohydrateGrams = 99.0, proteinGrams = 99.0, fatGrams = 99.0,
+            servingDescription = "100g 기준 · 공식 총내용량 260g · 포장단위 줄", dataVersion = "updated", createdAt = 0, updatedAt = 0)
+        val dao = FakeMealDao(listOf(original))
+        val viewModel = historyViewModel(dao, NutritionRepository(FakeFoodDao(changedFood)))
+        viewModel.startEditing(original)
+        advanceUntilIdle()
+        assertEquals(changedFood, viewModel.editState.value.selectedFood)
+        assertEquals(216.0, viewModel.editState.value.amountChoices.first().basisAmountPerUnit, 0.0)
+        viewModel.onEditQuantityChange("2")
+        viewModel.saveMealEdit()
+        advanceUntilIdle()
+        val saved = dao.meals.value.single()
+        assertEquals(592, saved.calories)
+        assertEquals(432.0, saved.servingAmount!!, 0.0)
+        assertEquals(100.0, saved.carbohydrateGrams!!, 0.0)
+        assertNull(saved.proteinGrams)
+        assertEquals(16.0, saved.fatGrams!!, 0.0)
+        assertEquals("2줄", saved.portionDisplayLabel)
+    }
+
+    @Test
+    fun `food 원본이 삭제되어도 snapshot 편집과 변경 없는 영양 보존이 가능하다`() = runTest(dispatcher.scheduler) {
+        val original = rollMeal()
+        val dao = FakeMealDao(listOf(original))
+        val viewModel = historyViewModel(dao, NutritionRepository(FakeFoodDao(null)))
+        viewModel.startEditing(original)
+        advanceUntilIdle()
+        assertNull(viewModel.editState.value.selectedFood)
+        viewModel.onEditMemoChange("메모만 변경")
+        viewModel.saveMealEdit()
+        advanceUntilIdle()
+        val saved = dao.meals.value.single()
+        assertEquals(original.calories, saved.calories)
+        assertEquals(original.carbohydrateGrams, saved.carbohydrateGrams)
+        assertEquals(original.proteinGrams, saved.proteinGrams)
+        assertEquals(original.fatGrams, saved.fatGrams)
+        assertEquals(original.portionPresetId, saved.portionPresetId)
+        assertEquals(original.servingAmount, saved.servingAmount)
+    }
+
+    @Test
+    fun `snapshot 단위를 g로 바꿀 때 무게와 영양을 유지하며 임의 ml 변환은 막는다`() = runTest(dispatcher.scheduler) {
+        val original = rollMeal()
+        val viewModel = historyViewModel(FakeMealDao(listOf(original)))
+        viewModel.startEditing(original)
+        viewModel.onEditQuantityUnitChange("g")
+        assertEquals("216", viewModel.editState.value.quantity)
+        assertEquals("296", viewModel.editState.value.calories)
+        viewModel.onEditQuantityUnitChange("ml")
+        viewModel.onEditServingUnitChange("ml")
+        assertEquals("g", viewModel.editState.value.quantityUnit)
+        assertEquals("g", viewModel.editState.value.servingUnit)
+        viewModel.onEditQuantityUnitChange("줄")
+        assertEquals("1", viewModel.editState.value.quantity)
+        assertEquals("1줄", viewModel.editState.value.portionDisplayLabel)
+    }
+
+    @Test
+    fun `기존 basis 섭취량 API도 snapshot과 콤마 소수를 함께 보존한다`() = runTest(dispatcher.scheduler) {
+        val original = rollMeal()
+        val dao = FakeMealDao(listOf(original))
+        val viewModel = historyViewModel(dao)
+        viewModel.startEditing(original)
+        viewModel.onEditServingAmountChange("108")
+        assertEquals("0.5", viewModel.editState.value.quantity)
+        assertEquals("148", viewModel.editState.value.calories)
+        viewModel.onEditQuantityChange("1,5")
+        viewModel.saveMealEdit()
+        viewModel.saveMealEdit()
+        advanceUntilIdle()
+        assertEquals(1, dao.updateCount)
+        assertEquals(444, dao.meals.value.single().calories)
+        assertEquals("1.5줄", dao.meals.value.single().portionDisplayLabel)
+    }
+
+    @Test
+    fun `snapshot 저장 실패와 잘못된 수량은 편집 context를 유지한다`() = runTest(dispatcher.scheduler) {
+        val original = rollMeal()
+        val dao = FakeMealDao(listOf(original), failUpdates = true)
+        val viewModel = historyViewModel(dao)
+        viewModel.startEditing(original)
+        viewModel.onEditQuantityChange("100")
+        viewModel.saveMealEdit()
+        assertNotNull(viewModel.editState.value.servingAmountError)
+        viewModel.onEditQuantityChange("0.5")
+        viewModel.saveMealEdit()
+        advanceUntilIdle()
+        assertEquals("0.5", viewModel.editState.value.quantity)
+        assertEquals("줄", viewModel.editState.value.quantityUnit)
+        assertEquals("148", viewModel.editState.value.calories)
+        assertNotNull(viewModel.editState.value.saveError)
+        assertEquals(original, dao.meals.value.single())
+    }
+
+    @Test
+    fun `통계 요약 source는 선택한 날짜 밖의 실제 기록까지 유지한다`() = runTest(dispatcher.scheduler) {
+        val originals = listOf(photoMeal(), photoMeal().copy(id = 8, date = originalDate.minusDays(3).toString()),
+            photoMeal().copy(id = 9, date = originalDate.minusDays(20).toString()))
+        val dao = FakeMealDao(originals)
+        val viewModel = historyViewModel(dao)
+        val collection = backgroundScope.launch { viewModel.allMeals.collect {} }
+        advanceUntilIdle()
+        assertEquals(2, RecordInsights.period(viewModel.allMeals.value, originalDate, 7).recordedDays)
+        assertEquals(3, RecordInsights.period(viewModel.allMeals.value, originalDate, 30).recordedDays)
+        viewModel.deleteMeal(originals[1])
+        advanceUntilIdle()
+        assertEquals(1, RecordInsights.period(viewModel.allMeals.value, originalDate, 7).recordedDays)
+        assertEquals(2, RecordInsights.period(viewModel.allMeals.value, originalDate, 30).recordedDays)
+        collection.cancel()
+    }
+
+    private fun rollMeal() = photoMeal().copy(foodName = "백종원한줄김밥", calories = 296,
+        carbohydrateGrams = 50.0, proteinGrams = null, fatGrams = 8.0, servingAmount = 216.0, servingUnit = "g",
+        portionPresetId = "amount/줄/216.0/1.0", portionDisplayLabel = "1줄", portionEstimationType = "OFFICIAL_SERVING",
+        portionSourceReference = "공식 원본 한줄김밥 216g", foodItemId = "roll-id")
+
+    private fun historyViewModel(dao: FakeMealDao, nutrition: NutritionRepository? = null) = HistoryViewModel(
         mealRepository = MealRepository(dao),
         goalRepository = GoalRepository(FakeGoalDao()),
         energyProfileRepository = EnergyProfileRepository(FakeEnergyProfileDao()),
         todayProvider = { originalDate },
-        nowProvider = { 999L }
+        nowProvider = { 999L }, nutritionRepository = nutrition
     )
 
     private fun photoMeal() = MealRecord(
@@ -275,6 +429,23 @@ class HistoryEditViewModelTest {
         override fun getLatestGoal(): Flow<CalorieGoal?> = flowOf(null)
         override fun getGoalForDate(date: String): Flow<CalorieGoal?> = flowOf(null)
         override fun getAllGoals(): Flow<List<CalorieGoal>> = flowOf(emptyList())
+    }
+
+    private class FakeFoodDao(private val food: FoodItem?) : FoodItemDao {
+        override suspend fun upsertAll(items: List<FoodItem>) = Unit
+        override fun observeSearch(normalizedQuery: String, limit: Int): Flow<List<FoodItem>> = flowOf(emptyList())
+        override fun observeProductSearch(normalizedQuery: String, limit: Int): Flow<List<FoodItem>> = flowOf(emptyList())
+        override fun observeProductBrands(limit: Int): Flow<List<FoodBrandSummary>> = flowOf(emptyList())
+        override fun observeProductsByBrand(brand: String, normalizedQuery: String, limit: Int): Flow<List<FoodItem>> = flowOf(emptyList())
+        override fun observeFranchiseBrands(brands: List<String>): Flow<List<FoodBrandSummary>> = flowOf(emptyList())
+        override fun observeAllFranchiseFoods(brands: List<String>): Flow<List<FoodItem>> = flowOf(emptyList())
+        override fun observeFranchiseFoods(brand: String, normalizedQuery: String, limit: Int): Flow<List<FoodItem>> = flowOf(emptyList())
+        override suspend fun findExactMatches(normalizedName: String, limit: Int): List<FoodItem> = emptyList()
+        override suspend fun findByBarcode(barcode: String): FoodItem? = null
+        override suspend fun findById(id: String): FoodItem? = food?.takeIf { it.id == id }
+        override suspend fun findReplacements(category: String, excludedId: String, minimumKcal: Double, maximumKcal: Double,
+            targetKcal: Double, limit: Int): List<FoodItem> = emptyList()
+        override suspend fun count(): Int = if (food == null) 0 else 1
     }
 
     private class FakeEnergyProfileDao : EnergyProfileDao {
