@@ -1356,9 +1356,10 @@
       {
         "url": "https://www.baeksojeong.com/",
         "key": "",
-        "adapter": "jsonld"
+        "adapter": "baeksojeong-native"
       }
-    ]
+    ],
+    "expectedMenuCount": 9
   },
   {
     "brandId": "brand-8420421dae1f2ef3",

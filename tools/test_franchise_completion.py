@@ -120,5 +120,15 @@ class CompletionTest(unittest.TestCase):
         markup='<form name="menuListForm" method="get"></form>'+''.join('<a onclick="menu_list(\'%s\',\'\')">tab</a>'%i for i in (1,3,12,16,18))
         pages=additional_pages(brand,brand['sources'][0],markup)
         self.assertEqual(5,len(pages));self.assertTrue(all('classId=' in p['url'] for p in pages))
+    def test_static_object_data_rejects_javascript_execution(self):
+        from franchise_literal_data import parse_object_literal
+        self.assertEqual({'new':{'items':[{'name':'공식메뉴'}]}},parse_object_literal("{new:{items:[{name:'공식메뉴'}]}}"))
+        for source in ("{name:fetch('https://example.com')}","{name:(function(){return 'x'})()}","{name:'x',name:'y'}"):
+            with self.assertRaises(AssertionError):parse_object_literal(source)
+    def test_baeksojeong_missing_menu_tab_fails_closed(self):
+        brand=next(b for b in self.brands if b['name']=='백소정')
+        brand=dict(brand,adapter='baeksojeong-native')
+        markup='<html><script id="recorded-baeksojeong-data" type="application/json">{"new":{"items":[{"name":"메뉴"}]}}</script></html>'
+        with self.assertRaises(AssertionError):candidates(brand,markup,'2026-10-08T00:00:00Z')
 
 if __name__=='__main__':unittest.main(verbosity=2)

@@ -391,6 +391,17 @@ def reviewed_rows(brand, markup):
             code=re.search(r"viewDetail\('([0-9]+)'\)",html.tostring(block,encoding='unicode'))
             if names and code: rows.append((clean(names[0].text_content()),'',urljoin(url,'detail.asp?gubun=result&prod_num='+code[1]),code[1]))
         return rows
+    if adapter=='baeksojeong-native':
+        assert brand['name']=='백소정'
+        data=baeksojeong_data(markup)
+        assert set(data)=={'new','signature','best'},'Official menu category schema changed'
+        rows=[]
+        for group in data.values():
+            assert isinstance(group.get('items'),list) and group['items']
+            for item in group['items']:
+                name=item.get('name');assert isinstance(name,str) and name.strip()
+                rows.append((clean(name),'',url,''))
+        return rows
     if adapter=='norang-list':
         assert brand['name']=='노랑통닭'
         root=html.fromstring(markup);rows=[]
@@ -428,6 +439,18 @@ def reviewed_rows(brand, markup):
     return []
 def clean(value):
     return re.sub(r"\s+", " ", value or "").strip()
+
+def baeksojeong_data(markup):
+    root=html.fromstring(markup)
+    recorded=root.xpath('//script[@id="recorded-baeksojeong-data"][@type="application/json"]/text()')
+    if recorded:return json.loads(recorded[0])
+    scripts=root.xpath('//script[not(@src)]/text()');matches=[]
+    for script in scripts:
+        match=re.search(r'\bvar\s+menuData\s*=\s*(\{.*?\})\s*;',script,re.S)
+        if match:matches.append(match[1])
+    assert len(matches)==1,'Official static menu data disappeared'
+    from franchise_literal_data import parse_object_literal
+    return parse_object_literal(matches[0])
 
 def text(node, xpath="."):
     found = node.xpath(xpath)
