@@ -130,5 +130,23 @@ class CompletionTest(unittest.TestCase):
         brand=dict(brand,adapter='baeksojeong-native')
         markup='<html><script id="recorded-baeksojeong-data" type="application/json">{"new":{"items":[{"name":"메뉴"}]}}</script></html>'
         with self.assertRaises(AssertionError):candidates(brand,markup,'2026-10-08T00:00:00Z')
+    def test_youngman_real_size_and_product_ids_stay_distinct(self):
+        brand=dict(next(b for b in self.brands if b['name']=='청년피자'),adapter='youngman-native',sourceUrl='https://youngmanpizza.co.kr/sub01/menu2.php')
+        markup='<html><ul class="menu_list"><li><a href="menu_detail_pizza2.php?seq=20"><div class="menu_name">공식 피자</div><ul class="menu_price"><li><div class="size">R</div><div class="price">24000</div></li><li><div class="size">L</div><div class="price">29000</div></li></ul></a></li></ul></html>'
+        menus=candidates(brand,markup,'2026-10-08T00:00:00Z')
+        self.assertEqual(['공식 피자 (R)','공식 피자 (L)'],[m['name'] for m in menus]);self.assertEqual(2,len({m['id'] for m in menus}))
+        self.assertTrue(all(m['energyKcal'] is None for m in menus))
+        with self.assertRaises(AssertionError):candidates(dict(brand,sourceUrl='https://youngmanpizza.co.kr/sub01/menu5.php'),markup,'2026-10-08T00:00:00Z')
+    def test_youngman_pagination_bounds_and_host(self):
+        brand=next(b for b in self.brands if b['name']=='청년피자');source=brand['sources'][1]
+        pages=additional_pages(brand,source,'<a href="menu2.php?page_num=3">3</a><a href="menu5.php">토핑</a>')
+        self.assertEqual(1,len(pages));self.assertIn('page_num=3',pages[0]['url'])
+        with self.assertRaises(AssertionError):additional_pages(brand,source,'<a href="menu2.php?page_num=999">999</a>')
+    def test_diagnostics_never_retains_scripts_cookie_or_form_values(self):
+        from franchise_source_diagnostics import public_response_diagnostics
+        markup='<html><body><script>document.cookie="private-cookie";location.href="/?token=private-token";</script><input value="private-value"></body></html>'
+        result=public_response_diagnostics(markup,100)
+        self.assertTrue(result['inlineSignals']['cookieWrite']);self.assertTrue(result['inlineSignals']['locationNavigation'])
+        self.assertNotIn('private',json.dumps(result));self.assertEqual(0,result['visibleTextLength'])
 
 if __name__=='__main__':unittest.main(verbosity=2)

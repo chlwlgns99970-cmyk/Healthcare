@@ -156,8 +156,10 @@ def fetch_source(brand, source, capture_dir=None):
                 encoding=response.headers.get_content_charset() or (declared.group(1).decode('ascii') if declared else 'utf-8')
         html=data.decode(encoding,errors='strict')
         if not html.strip(): raise ValueError('Empty official response')
-        title=re.search(r'<title\b[^>]*>(.*?)</title>',html,re.S|re.I)
-        diagnostics=dict(responseBytes=len(data),documentTitle=re.sub(r'\s+',' ',re.sub(r'<[^>]+>','',title[1])).strip()[:120] if title else '')
+        diagnostics=dict(responseBytes=len(data))
+        if re.search(r'<html\b|<!doctype\b',html,re.I):
+            from franchise_source_diagnostics import public_response_diagnostics
+            diagnostics=public_response_diagnostics(html,len(data))
         if source['adapter'] not in ('bon-api','starbucks-json','hansot-json','mega-fragment','bhc-json','bhc-categories','mc-categories','mc-index','mc-json','ediya-fragment','kfc-json','paris-fragment','bbq-json','bbq-categories','burgerking-json','pizzahut-json') and not re.search(r'<html\b|<!doctype\b',html,re.I):
             raise ValueError('Malformed official HTML response')
         if capture_dir:

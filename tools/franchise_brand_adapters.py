@@ -391,6 +391,27 @@ def reviewed_rows(brand, markup):
             code=re.search(r"viewDetail\('([0-9]+)'\)",html.tostring(block,encoding='unicode'))
             if names and code: rows.append((clean(names[0].text_content()),'',urljoin(url,'detail.asp?gubun=result&prod_num='+code[1]),code[1]))
         return rows
+    if adapter=='youngman-native':
+        assert brand['name']=='청년피자'
+        assert urlparse(url).path in {'/sub01/menu.php','/sub01/menu2.php','/sub01/menu3.php','/sub01/menu4.php','/sub01/menu6.php','/sub01/menu7.php'},'Topping/option page is not an independent menu source'
+        root=html.fromstring(re.sub(r'<!--.*?-->','',markup,flags=re.S));rows=[]
+        group={'menu3.php':'세트','menu7.php':'두 판 세트','menu4.php':'사이드','menu6.php':'음료·기타'}.get(urlparse(url).path.rsplit('/',1)[-1],'피자')
+        for node in root.xpath('//ul[contains(concat(" ",normalize-space(@class)," ")," menu_list ")]/li'):
+            names=node.xpath('.//div[contains(concat(" ",normalize-space(@class)," ")," menu_name ")]')
+            if not names:continue
+            assert len(names)==1;name=clean(names[0].text_content());assert name
+            links=node.xpath('.//a[contains(@href,"menu_detail_")]/@href');link=urljoin(url,links[0]) if links else url
+            assert urlparse(link).netloc==urlparse(url).netloc
+            code=parse_qs(urlparse(link).query).get('seq',[''])[0]
+            identity=(urlparse(link).path.rsplit('/',1)[-1]+':'+code) if code else ''
+            if links:assert code.isdigit(),'Official pizza product ID changed'
+            sizes=[clean(n.text_content()) for n in node.xpath('.//ul[@class="menu_price"]/li/div[@class="size"]')]
+            assert node.xpath('.//ul[@class="menu_price"]/li/div[@class="price"]'),'Official sale price structure disappeared'
+            actual=[s for s in sizes if s in ('R','L')]
+            if actual:
+                for size in actual:rows.append((name if re.search(r'(?:[RL]|\([RL]\))$',name) else name+' ('+size+')',group,link,identity+':'+size if identity else ''))
+            else:rows.append((name,group,link,identity))
+        return rows
     if adapter=='baeksojeong-native':
         assert brand['name']=='백소정'
         data=baeksojeong_data(markup)

@@ -25,6 +25,18 @@ def confirmed_empty_source(brand,source,markup):
 def additional_pages(brand,source,markup):
     mode=source.get('pagination')
     if not mode:return []
+    if mode=='youngman':
+        assert brand['name']=='청년피자'
+        root=html.fromstring(markup);parsed=urlparse(source['url']);paths={'/sub01/menu.php','/sub01/menu2.php','/sub01/menu3.php','/sub01/menu4.php','/sub01/menu6.php','/sub01/menu7.php'}
+        result=[]
+        for href in root.xpath('//a/@href'):
+            p=urlparse(urljoin(source['url'],href));q=parse_qs(p.query)
+            if p.path not in paths:continue
+            assert p.netloc==parsed.netloc
+            if p.query and not q.get('page_num'):continue
+            page=q.get('page_num',['1'])[0];assert page.isdigit() and 1<=int(page)<=64
+            result.append(dict(url=p.geturl(),key='youngman-current',adapter='youngman-native',pagination='youngman'))
+        return result
     if mode=='goobne':
         assert brand['name']=='굽네치킨' and urlparse(source['url']).path=='/menu/menu_list_p'
         root=html.fromstring(markup);codes=set()

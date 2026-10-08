@@ -33,7 +33,7 @@ class AutoAuditTest(unittest.TestCase):
         for brand in self.brands:
             for source in brand['sources']:
                 self.assertTrue(official_url(source['url'],brand))
-                self.assertIn(source['adapter'],('jsonld','isungdang','sulbing','reviewed-html','reviewed-delivery','bon-api','starbucks-json','tlj','hansot-json','mega-fragment','seventh-list','hjh-list','venti-list','pascucci-list','eatz-list','nene-list','cheogajip-list','bhc-json','bhc-categories','mc-categories','mc-index','mc-json','subway-list','hongik-text','ediya-list','ediya-fragment','kfc-json','paris-fragment','salady-side','hollys-list','jaws-set','banolim-native','dunkin-native','bbq-json','bbq-categories','burgerking-json','pizzahut-json','starbucks-navigation','emergency-list','dominos-list','poke-fixed','norang-list','baeksojeong-native'))
+                self.assertIn(source['adapter'],('jsonld','isungdang','sulbing','reviewed-html','reviewed-delivery','bon-api','starbucks-json','tlj','hansot-json','mega-fragment','seventh-list','hjh-list','venti-list','pascucci-list','eatz-list','nene-list','cheogajip-list','bhc-json','bhc-categories','mc-categories','mc-index','mc-json','subway-list','hongik-text','ediya-list','ediya-fragment','kfc-json','paris-fragment','salady-side','hollys-list','jaws-set','banolim-native','dunkin-native','bbq-json','bbq-categories','burgerking-json','pizzahut-json','starbucks-navigation','emergency-list','dominos-list','poke-fixed','norang-list','baeksojeong-native','youngman-native'))
         path=ROOT/'data-source/franchise-auto-audit/brand-status.json'
         if path.exists():
             inventory=json.loads(path.read_text(encoding='utf-8'));self.assertEqual(0,inventory['unknown'])

@@ -2073,28 +2073,49 @@
     "registryUrl": "https://youngmanpizza.co.kr/sub01/menu2.php",
     "sources": [
       {
+        "url": "https://youngmanpizza.co.kr/sub01/menu.php",
+        "key": "youngman-current",
+        "adapter": "youngman-native",
+        "pagination": "youngman"
+      },
+      {
         "url": "https://youngmanpizza.co.kr/sub01/menu2.php",
-        "key": "youngman-menu",
-        "adapter": "reviewed-delivery"
+        "key": "youngman-current",
+        "adapter": "youngman-native",
+        "pagination": "youngman"
       },
       {
         "url": "https://youngmanpizza.co.kr/sub01/menu3.php",
-        "key": "youngman-original",
-        "adapter": "reviewed-delivery"
+        "key": "youngman-current",
+        "adapter": "youngman-native",
+        "pagination": "youngman"
       },
       {
         "url": "https://youngmanpizza.co.kr/sub01/menu4.php",
-        "key": "youngman-side",
-        "adapter": "reviewed-delivery"
+        "key": "youngman-current",
+        "adapter": "youngman-native",
+        "pagination": "youngman"
+      },
+      {
+        "url": "https://youngmanpizza.co.kr/sub01/menu6.php",
+        "key": "youngman-current",
+        "adapter": "youngman-native",
+        "pagination": "youngman"
       },
       {
         "url": "https://youngmanpizza.co.kr/sub01/menu7.php",
-        "key": "youngman-two",
-        "adapter": "reviewed-delivery"
+        "key": "youngman-current",
+        "adapter": "youngman-native",
+        "pagination": "youngman"
       }
     ],
-    "publishPolicy": "REVIEW_ONLY",
-    "reviewReason": "Additional official pizza menu.php and drinks/other menu6.php are not extractable named lists; previously collected four HTML pages remain recorded, but full current tabs cannot be proven."
+    "reviewReason": "Required official general-pizza page currently returns incomplete HTML",
+    "excludedOptionSources": [
+      {
+        "url": "https://youngmanpizza.co.kr/sub01/menu5.php",
+        "reason": "Topping additions, not independently sold finished meals"
+      }
+    ]
   },
   {
     "brandId": "brand-e7bc4d2ab88a800c",
