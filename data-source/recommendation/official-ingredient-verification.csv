@@ -1,3 +1,0 @@
-"stableTemplateId","ingredients","ingredientCompleteness","allergenTags","allergenCompleteness","sourceType","sourceName","sourceUrlOrIdentifier","verifiedAt","notes"
-"kfind-dinner-convenience-1","통밀빵 | 크랜베리 치킨 | 오이","COMPLETE","|달걀|우유|대두|밀|아황산류|닭고기|쇠고기|","COMPLETE","BRAND_OFFICIAL_PAGE","뚜레쥬르 공식 제품 페이지","https://www.tlj.co.kr/product/detail.asp?prod_num=3861","2026-09-27","공식 제품 설명에서 주요 구성, 공식 알레르기 정보에서 함유 항목 확인"
-"kfind-catalog-d214-640000000-0002","그릴드 치킨 | 오리엔탈소스","PARTIAL","|밀|우유|대두|달걀|토마토|닭고기|","COMPLETE","BRAND_OFFICIAL_PAGE","할리스 공식 메뉴 페이지","https://m.hollys.co.kr/menu/menuView.do?idx=665&menuDiv=BAKERY","2026-09-27","공식 설명에 풍성한 재료가 구체적으로 열거되지 않아 원재료는 PARTIAL 유지; 공식 알레르기 표시는 COMPLETE"

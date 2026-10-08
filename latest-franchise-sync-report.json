@@ -1,0 +1,638 @@
+{
+  "runId": "2026-10-08",
+  "startedAt": "2026-10-08T08:18:17.232945+00:00",
+  "endedAt": "2026-10-08T08:18:17.251455+00:00",
+  "targetBrands": 102,
+  "successBrands": 2,
+  "failedBrands": 9,
+  "sourceMissing": 0,
+  "reviewRequired": 91,
+  "candidateCount": 49,
+  "publishedNewCount": 11,
+  "duplicateCount": 38,
+  "invalidCount": 0,
+  "newWithNutrition": 0,
+  "newWithoutNutrition": 11,
+  "brands": [
+    {
+      "brandId": "brand-ffd3bb1b019cf849",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:34.581664+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-24df7e63c9c2314e",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:34.581664+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-d857c6bf9eb6a6c0",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:34.581664+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-2c14410b57ba9fc4",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:34.581664+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-b0f892d2c591ca13",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:34.673688+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-f91351461391155a",
+      "status": "FETCH_FAILED",
+      "checkedAt": "2026-10-08T08:12:34.702687+00:00",
+      "error": "AssertionError",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-dfd7712a868b7cd2",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:34.726693+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-792c9f221e49eb7e",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:34.735687+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-45ddca38a87b3dcd",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:34.771758+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-5b391ae396ab6901",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:34.773758+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-dfbc0be6a9fb565a",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:34.779759+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-913a908f005583f0",
+      "status": "FETCH_FAILED",
+      "checkedAt": "2026-10-08T08:12:34.799758+00:00",
+      "error": "AssertionError",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-1c90aeff2ad68611",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:34.805759+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-6f80c60267f6bc73",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:34.856760+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-044f74822bd63a2c",
+      "status": "FETCH_FAILED",
+      "checkedAt": "2026-10-08T08:12:34.881100+00:00",
+      "error": "HTTPError",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-9bd2fd2f30a9da68",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:34.892100+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-0dc8558d4e8f58fd",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:34.923131+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-db8f86831d5f2b94",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:34.987653+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-149ee0d555be8e34",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:35.031660+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-2366ea85553dc984",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:35.038661+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-9bbe44a999e4d158",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:35.072192+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-9fe52457ea35b575",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:35.105191+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-6b4062eb7d56bbc2",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:35.105191+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-e237cdd96675b8e9",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:35.110184+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-a6a2f91c0a858eab",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:35.127193+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-e391193d95fb4b22",
+      "status": "FETCH_FAILED",
+      "checkedAt": "2026-10-08T08:12:35.144184+00:00",
+      "error": "AssertionError",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-d12ac5629277dd74",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:35.162188+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-d3742bdc75b7cfff",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:35.167189+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-b06d5a467c2e2917",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:35.194699+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-517e6e3a0f2a227b",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:35.196706+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-3af4368565dc9463",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:35.213716+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-09811efd43af8395",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:35.270160+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-62da25d9478406f9",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:35.323609+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-52b7eab533bf064f",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:35.381122+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-98d0269278f56dd7",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:35.460138+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-eb1ea6f3cfeef4a1",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:35.501647+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-4971bd13f52f50ae",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:35.502649+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-bd40e3bf63110e3a",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:35.556669+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-2d083c367c257949",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:35.586787+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-d788dc4427d306fe",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:35.597788+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-440ae94a942a4921",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:35.624787+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-71bb2f53e15c0897",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:35.699118+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-2a13283561756adc",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:35.762831+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-8420421dae1f2ef3",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:35.859515+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-dfe7aafc7b485943",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:36.172028+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-3ab715e02b724b84",
+      "status": "FETCH_FAILED",
+      "checkedAt": "2026-10-08T08:12:36.232295+00:00",
+      "error": "URLError",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-3869f6f268d4afd6",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:36.286462+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-39adcc9276d724e2",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:36.342501+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-e37848e7ad911d2a",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:36.374793+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-e1baf7db5ac285a7",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:36.397804+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-0e65f6b77b14e324",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:36.426070+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-5cf4a5c95ff85d3a",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:36.441070+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-9e7aeb464781f115",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:36.463432+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-97c4b3edd331ff83",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:36.507492+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-a9a4ba8b5ad2ca3d",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:36.532792+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-1da93338e8beedb8",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:37.079280+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-3c12a830fd8e20dd",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:37.135280+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-b028605b3b64ee47",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:37.224753+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-1bc146a27ab0e421",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:37.400408+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-29327af78758b6f5",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:37.466438+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-70ce8c35375d9fae",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:37.476959+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-8032e5a2633bc1e3",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:37.553958+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-adb1fa3e7378cd49",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:37.560961+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-d715f712d950d0e8",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:37.601002+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-2891bc50e9e622e6",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:37.629009+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-f2c4cd89053b4ff8",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:37.735905+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-e7bc4d2ab88a800c",
+      "status": "FETCH_FAILED",
+      "checkedAt": "2026-10-08T08:12:37.769603+00:00",
+      "error": "URLError",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-c253f58a17fc9b81",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:37.795987+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-c242a10bbca4c411",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:37.808988+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-1e99fd5b57a9f5cb",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:37.895347+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-f4abfad35563de25",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:38.074994+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-b0d0c4de8cdf23bc",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:38.371115+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-57244fb148c377c6",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:38.440115+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-41b772c57bada9f9",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:38.451129+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-69ad361cd26106b1",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:38.567910+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-2cf7eb0ea975163d",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:38.646753+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-537263c2bc830a08",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:38.691468+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-1742b64ed29107ac",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:38.704481+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-7dfea7361415a819",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:38.718476+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-61b7f46d49620328",
+      "status": "FETCH_FAILED",
+      "checkedAt": "2026-10-08T08:12:38.745468+00:00",
+      "error": "AssertionError",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-3d3d7aa34cc1f578",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:38.783719+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-53314eb3760b340b",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:38.891810+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-07de1aee884692c4",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:39.000888+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-35225ece8d72c5b9",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:39.146479+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-977382baa9a9159b",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:39.308325+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-fdb71b87248a93b9",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:39.398151+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-9d8b8d6c615c6ee7",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:39.415151+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-5203807bf8b4bc7a",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:39.460367+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-7b853dd449517e57",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:39.507883+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-a0302f70b937755f",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:39.529872+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-9f125dd967fd168e",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:39.753902+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-e32a9313e634ead7",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:39.778413+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-a7444ee050c62abd",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:39.828433+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-cf57c271fe920362",
+      "status": "SUCCESS",
+      "checkedAt": "2026-10-08T08:18:17.195192+00:00"
+    },
+    {
+      "brandId": "brand-db7ae070c1a211f3",
+      "status": "FETCH_FAILED",
+      "checkedAt": "2026-10-08T08:12:39.974450+00:00",
+      "error": "URLError",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-87f52291726f6891",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:39.991450+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-c250fc357adcb9df",
+      "status": "FETCH_FAILED",
+      "checkedAt": "2026-10-08T08:12:40.090963+00:00",
+      "error": "URLError",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-1b6e60f7965bce11",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:40.106962+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-5f1ac0e21ddf73b1",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:40.287667+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-9fa9c3eca7bcf563",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:40.462430+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-2e050b39b22a7280",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T08:12:40.522699+00:00",
+      "reusedFetchStatus": true
+    },
+    {
+      "brandId": "brand-01c5e2f727401b55",
+      "status": "SUCCESS",
+      "checkedAt": "2026-10-08T08:18:17.092463+00:00"
+    }
+  ],
+  "status": "PUBLISHED"
+}
