@@ -1,1370 +1,28 @@
 {
-  "runId": "operator-completion-2026-10-08-v2",
-  "startedAt": "2026-10-08T12:58:12.472722+00:00",
-  "endedAt": "2026-10-08T12:59:18.989853+00:00",
+  "runId": "operator-completion-2026-10-08-v3",
+  "startedAt": "2026-10-08T13:38:13.343511+00:00",
+  "endedAt": "2026-10-08T13:38:20.889589+00:00",
   "timezone": "Asia/Seoul",
   "scope": "TARGETED_VERIFICATION",
   "registryBrands": 102,
-  "targetBrands": 9,
-  "successBrands": 2,
+  "targetBrands": 7,
+  "successBrands": 0,
   "failedBrands": 7,
   "sourceMissing": 0,
   "reviewRequired": 0,
-  "candidateCount": 187,
-  "publishedNewCount": 186,
-  "duplicateCount": 1,
+  "candidateCount": 0,
+  "publishedNewCount": 0,
+  "duplicateCount": 0,
   "invalidCount": 0,
   "identityReviewCount": 0,
   "newWithNutrition": 0,
-  "newWithoutNutrition": 186,
-  "decisions": [
-    {
-      "id": "remote-franchise-e973060e7c58842584e7c816",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "뿌링클(반)+맛초킹라이스 +콜라500ml",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-42ed8a9f49362e20927d584e",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "맛초킹 (한마리)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-9e62cda4f9ee2fb15a3484f1",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "맛초킹 (콤보)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-b464e5a84fa0ac1d486cb32c",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "맛초킹 (3&7 콤보)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-b51c4b7aa5f631b763bde321",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "맛초킹 (윙)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-800b618e74fdef211473198c",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "맛초킹 (스틱)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-893084519c1a2bd0d8cfa697",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "맛초킹 (순살)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-d8d4c499edf3ca8e1aafc18c",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "골드킹(반)+맛초킹라이스 +콜라500ml",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-bd29d093697675328dcf1128",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "뿌링클(반)+뿌링클라이스 +콜라500ml",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-a30c81273746148921f01070",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "뿌링클 (한마리)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-f2664b044d36d62c6fddf49f",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "뿌링클 (콤보)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-1771fc696603f06494355b20",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "뿌링클 (3&7 콤보)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-5d2cd6709de493fe2a3dc074",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "뿌링클 (윙)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-6798d4649856c4e241f1c57f",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "뿌링클 (스틱)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-e697a5b7fa0699cd7b340074",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "뿌링클 (순살)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-30df1799db2a191f83cfaca1",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "더블팝 순살 양념 (순살)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-ab8d85be62bbff113ff2f867",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "콰삭킹 (한마리)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-f7fafec36ae25a7df8d76da4",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "콰삭킹 (콤보)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-9aa64936e94b6901c36558a8",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "콰삭킹 (3&7 콤보)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-d16a0acb48ab90f88f1728de",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "콰삭킹 (윙)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-c028cdbbabdba608fd7c7022",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "콰삭킹 (스틱)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-f29f2873ee9b68e8e4d67c6c",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "콰삭킹 (순살)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-4561c772171faa7dfca9ce64",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "핫후라이드 (한마리)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-4a50a3f6fc30bd4d45204b21",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "핫후라이드 (콤보)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-e085f1d419321de473212da4",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "핫후라이드 (윙)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-edb33cc568f1d7703a5b7d71",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "핫후라이드 (스틱)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-e3d0e0364ca09a4c5019da79",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "해바라기 후라이드 (한마리)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-9eafe9e6a59061602c867184",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "해바라기 후라이드 (콤보)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-c94eb76cd9ead4f496177069",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "해바라기 후라이드 (3&7 콤보)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-9fc0025838036fabb9fd1921",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "해바라기 후라이드 (윙)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-03144ed00907256cb3b9a9be",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "해바라기 후라이드 (스틱)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-63ce49857f2a34107e27950d",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "스윗칠리킹 반반",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-93cc06ab45c364af961596cb",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "골드킹(반)+뿌링클라이스 +콜라500ml",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-04d1947e2298b7071866287b",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "바삭클 (한마리)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-3095fc457f2d6010cc46f15a",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "바삭클 (순살)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-685b97488627751b1b2dda8a",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "맛초킹(반)+치즈볼 +콜라245ml",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-7e45a21626eadaa69affdb3a",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "후라이드(반)+뿌링치즈볼 +콜라245ml",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-fa5405b35f880f896600439f",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "골드킹 (한마리)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-68673faaf988242646ed3293",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "골드킹 (콤보)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-b944e409fa676c2b0f3765d8",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "골드킹 (3&7 콤보)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-31cc92c9e5428091a144176f",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "골드킹 (윙)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-2fc74293ea4b1cc9b32e575a",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "골드킹 (스틱)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-6c47d3c771a08fa34746e8c4",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "골드킹 (순살)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-5da4934b48d43d411b0e3919",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "더블팝 순살 후라이드 (순살)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-786df6daeec5615d2b7bda46",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "쏘이갈릭킹(오리지널) (한마리)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-0356a27e48e4169e8e258b49",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "쏘이갈릭킹(오리지널) (콤보)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-65e4411c2b4549e791b71406",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "쏘이갈릭킹(오리지널) (3&7 콤보)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-20904546b1603e8065f94f60",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "쏘이갈릭킹(오리지널) (윙)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-069f1359b62cdccc8e51abff",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "쏘이갈릭킹(오리지널) (스틱)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-f2f409ab783e92cb2465f247",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "쏘이갈릭킹(오리지널) (순살)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-091a370c25bf2470378b177a",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "핫골드킹 (한마리)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-18d4f3cf69b1b4497be5b242",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "핫골드킹 (콤보)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-a680debe7c5be4ae007d3386",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "핫골드킹 (윙)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-66b0d397654f30a5d36f9ccb",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "핫골드킹 (스틱)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-edda87dd03fdbc94c08fd017",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "커링클 (한마리)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-b7447f0e1aeacc3b56ab8633",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "커링클 (콤보)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-d03f7b2519aa66f316d2c266",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "커링클 (3&7 콤보)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-d9f5971021274c1dd0d0c542",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "커링클 (윙)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-667d994eb0b063aaa979b985",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "커링클 (스틱)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-cb2d25c69196c32d4f241bcf",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "커링클 (순살)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-7e674c6d655e7f4ba2d062b3",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "[제주한정]동글락 바삭치킨",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-b036cfe1c096f8c8945e73cb",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "스윗칠리킹 (한마리)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-2895976c5a9faf1a5d79d678",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "스윗칠리킹 (콤보)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-cd774fdab721f7ae1f4b6df8",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "스윗칠리킹 (3&7 콤보)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-4dd63b03900b93b10eb27b2b",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "스윗칠리킹 (윙)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-7f48c4b48d6f48c050e49524",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "스윗칠리킹 (스틱)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-207065b8d7c4de3a0666e925",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "스윗칠리킹 (순살)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-92a8da5f20dde670d3840027",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "맛초킹(반)+맛초킹라이스 +콜라500ml",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-d4e88c4b470a8d7836fb9bf7",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "후라이드(반)+맛초킹라이스 +콜라500ml",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-b0df88802b4e29ea3169027f",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "양념치킨 (한마리)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-fb0f5f61d771ed3172f54dea",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "양념치킨 (콤보)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-2a41f6e6c84289d05a365e26",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "양념치킨 (3&7 콤보)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-c4d04043399ca4244d4b48e1",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "양념치킨 (윙)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-3f8395fb5ee44ab306772f48",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "양념치킨 (스틱)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-a348e6059f7fb4d4ef208ee6",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "골드킹(반)+치즈볼 +콜라245ml",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-4c8e8b7fc740a8024e8ee5bd",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "핫뿌링클 (한마리)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-7f1a314f3d1f5ec9cbd176ea",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "핫뿌링클 (순살)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-e8101f154109c58e1d896058",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "레드킹 (한마리)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-aed423d2e85ea76ececa12d6",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "레드킹 (콤보)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-ec38cab9a6a1f5b34f268bc1",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "레드킹 (3&7 콤보)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-300ef1cccc99fb915b958430",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "레드킹 (윙)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-d72e9e4dea3ebbcd94acdfb0",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "레드킹 (스틱)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-f3954add2b0df638361f6c44",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "레드킹 (순살)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-b1eb279a615f31e6a7d860f6",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "콰삭톡 (한마리)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-582d33a11d9b66ece821454c",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "콰삭톡 (콤보)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-2ce7b035881e5fb4491cde61",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "콰삭톡 (3&7 콤보)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-170336eddcf95d1cd41f9da4",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "콰삭톡 (윙)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-e97fa5fe4cc257c432ea9e40",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "콰삭톡 (스틱)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-7e93779e4eed75007edc9233",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "콰삭톡 (순살)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-811bbcb5668e8f514c310da6",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "뿌링클(반)+치즈볼 +콜라245ml",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-7c4d8df3c160a1b6a94b2db1",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "맛초킹(반)+뿌링클라이스 +콜라500ml",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-cb0aadf870cbe657fb4cc2e2",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "후라이드(반)+뿌링클라이스 +콜라500ml",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-90cb87fd1b44f8c141f0a510",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "반반치킨 (한마리)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-74804eb3857622f7d22b8a01",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "쏘이갈릭킹(허니) (한마리)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-3a227109c8d8423c14266c3a",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "쏘이갈릭킹(허니) (콤보)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-fce60b61ebd2c0a58aec9aa1",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "쏘이갈릭킹(허니) (3&7 콤보)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-a7c5aacfda03593d10dc4c52",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "쏘이갈릭킹(허니) (윙)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-4157edef92286b23f49c766b",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "쏘이갈릭킹(허니) (스틱)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-87fcb9b77c0791cf144ab706",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "쏘이갈릭킹(허니) (순살)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-2dd5123b5be620ac844d573a",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "콰삭모짜킹 (순살)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-b9329d080a6332a7bd4fb3bf",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "커링클/뿌링클 반반",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-0a814cd93908d9e7fddfaa80",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "미니콜팝",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-54a9fb5bbfebba0e9f0f70a1",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "왕콜팝",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-1aeccc4159c27374a7b29df1",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "동글락 바삭 콜팝(Mini)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-417d708a10d3aa192951afef",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "콜팝치킨",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-81def747c856108d0ad82cb9",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "빅콜팝",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-f4905c4ad37b9f4705cebc45",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "동글락 바삭 콜팝(Regular)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-2d7280b60c06406e45c96a7d",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "뿌링미니콜팝",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-1cd062fce81c687b0be187fb",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "뿌링왕콜팝",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-7c3fcd6903b84b8f0b5aca28",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "뿌링콜팝",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-a13e915be8bdbb6a614dc187",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "동글락 바삭 콜팝(Large)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-dd588d0dfd65773e9ca3ad19",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "뿌링빅콜팝",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-1a325ade9c3c6465a414aced",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "허니버터요거트 소스",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-5d50118adf9beba8dbffd00c",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "콰삭 슈림프",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-55ec164ff8744126567d0388",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "불고기피자 (R)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-a7dff4cbbb44f1f89cfe93d1",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "불고기피자 (L)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-725f227d3951d900b0110fc3",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "달콤바삭치즈볼",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-3b571d3457a7c67bbc40f0f1",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "빨간소떡",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-55d5088296055893b278257c",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "콤비네이션 피자 (R)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-325802084d306d23a362b413",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "콤비네이션 피자 (L)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-cfe654f4098810b5f89a934a",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "크리스피번(바나나)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-f9952db1589c493172bc0bdc",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "코울슬로 치킨 버거",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-bfba18d5f1bb0b65b6eacd3a",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "뿌링뿌링소스",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-3b61a37a7fc89936c85c5824",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "케이준프라이",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-dfce6d6380ceb895d793ebfa",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "얼큰어묵탕",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-fc4b544b76aa3aedb7977eba",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "유린기",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-624f186729d4e65a182647c9",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "그린올리브딥",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-407a60226c3696a1d7209c4c",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "파인샤베트",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-fc47a4afb1dc1223d2722df4",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "뿌링감자",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-d815ec4d9359d71d6fbbace3",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "뿌링 카이막 치즈볼",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-f4c6fc483d78d12d3db45082",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "콰삭 치킨 버거 해시 브라운스틱 세트",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-c524a5ed9eb534a25dc6cbe0",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "고구마피자 (R)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-e6d52272315721bb870c696c",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "고구마피자 (L)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-b6e1520df19f1c1f4c3de272",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "뿌링치즈볼",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-7e02f08eff2a78c3eeac43c7",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "뿌링진미채튀김",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-4609d6badd6caaf64e006262",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "맛초킹 닭똥집 튀김",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-bf765dbd0b31621b97e63b07",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "가래떡 떡볶이",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-2b687be4eb01a6eda5be755a",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "콰삭감자",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-f5435010438b16c6735ded72",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "클래식 치킨 버거 해시브라운스틱 세트",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-6983fe26780afacc13adc76e",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "맵소사소스",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-a7484821534e130d3c633d4c",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "국물떡볶이",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-ff8d3ab561c1cd93542c9ed7",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "골뱅이무침",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-fba378b07abbcfa42e14ad8e",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "나가사키 짬뽕 전골",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-ed2e7ee4da8d606b131cc925",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "스윗하바네로 소스(40g)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-90f9454e37d3e55ee775ccdc",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "코울슬로 치킨 버거 해시브라운스틱 세트",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-28f2aebf88d3ff23d2663a36",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "뿌링핫도그",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-000a63b1884cf6e0bf66ae9f",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "감자피자 (R)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-ee217a5ca9b5b1aaf17f1b48",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "감자피자 (L)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-841a08bae14c6d7abe15e5de",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "레드킹 닭똥집 튀김",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-696214966dd0092ba92286db",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "뿌링치즈스틱",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-323eb9601de9901cda106e36",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "치로스",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-b9efc58565b5d9e533a823ae",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "클래식 치킨 버거 케이준프라이 세트",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-63d8c3f7690426e951dbd2b7",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "콰삭 치킨 버거",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-5890c65024416ea383795c5e",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "크리스피번(뿌링클)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-0f43f7b84825507ccb1cc80d",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "뿌링클라이스",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-1567d0ff42533694ee1c2c5f",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "스윗 갈릭 소스",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-b1716860c84510acbe22f06b",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "오징어 모듬 튀김",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-674b01384ce0a144472ff5a7",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "뿌링클나쵸 더블",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-b8b52f12dcf95766ba51e194",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "빠삭 먹태구이",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-e8e1f1c439ae6abea7ee7614",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "[제주한정]봉봉마요소스",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-8cf66712f854f16209dfb6e6",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "코울슬로 치킨 버거 케이준 프라이 세트",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-1ad12571854ca1f8500590e2",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "뿌링클나쵸",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-f0b50367743cde2d526dbd0b",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "콰삭 치킨 버거 케이준 프라이세트",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-a96256e8cf7eb5ff880df24d",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "카이막 치즈볼",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-488dd9e4740e20a87a4bb60e",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "뿌링소떡",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-12d3fceb64f858d5996f3c52",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "웨지감자",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-f561886210ec013dcc36ad2a",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "분모자 로제 떡볶이",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-ea6a2c555467d332a9aea4a9",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "클래식 치킨 버거",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-753f43a95fc65590993a8804",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "크리스피번(밀크)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-20ac32c0511951eb31f5c943",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "양념소스",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-676509f092efee43f12b1afd",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "후라이드 닭똥집 튀김",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-538c9b1e93df06c992db7e98",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "치킨스넥",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-c48e1fd253768858da5c55d8",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "오징어&땅콩",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-cf8626aaceda69ba2a462acc",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "맛초킹라이스",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-9880d24d2a768befa2cc851e",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "퐁듀피자 (R)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-89c187e2e1e927f4dd771934",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "퐁듀피자 (L)",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-dc5f922a7e1b807bc5c48316",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "머스타드소스",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-fbd1e28988b14d6dd7b3df48",
-      "brandId": "brand-45ddca38a87b3dcd",
-      "name": "아라비아따딥",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-b6ee1a7909f2514f9099b220",
-      "brandId": "brand-2a13283561756adc",
-      "name": "마제동",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-7df082ce4e19cbb07cf35b19",
-      "brandId": "brand-2a13283561756adc",
-      "name": "연어 냉소바",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-31516b775132c07bdd66fc97",
-      "brandId": "brand-2a13283561756adc",
-      "name": "연어 자루소바",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-9b6373df21b3d0e36badb0d7",
-      "brandId": "brand-2a13283561756adc",
-      "name": "마제소바",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-18a1c25e049b4c278861827f",
-      "brandId": "brand-2a13283561756adc",
-      "name": "키마카레",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-50f5594aee7702503011657b",
-      "brandId": "brand-2a13283561756adc",
-      "name": "돈카츠",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-41a5cccc0cb861a74442dfe6",
-      "brandId": "brand-2a13283561756adc",
-      "name": "치즈카츠",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-27c66f64c21150768487d89f",
-      "brandId": "brand-2a13283561756adc",
-      "name": "냉소바",
-      "state": "NEW"
-    },
-    {
-      "id": "remote-franchise-061eedc3ed7c7f16536fa866",
-      "brandId": "brand-2a13283561756adc",
-      "name": "가츠동",
-      "state": "NEW"
-    }
-  ],
+  "newWithoutNutrition": 0,
+  "decisions": [],
   "brands": [
-    {
-      "brandId": "brand-b0f892d2c591ca13",
-      "status": "FETCH_FAILED",
-      "checkedAt": "2026-10-08T12:59:10.442896+00:00",
-      "menuCount": 0,
-      "observedMenuCount": 0,
-      "warnings": [
-        "INCOMPLETE_SOURCE_COVERAGE_WITHHELD",
-        "MENU_COUNT_DROP_EXISTING_RETAINED"
-      ],
-      "sources": [
-        {
-          "brandId": "brand-b0f892d2c591ca13",
-          "sourceUrl": "https://www.momstouch.co.kr/menu/new.php?s_sect1=new",
-          "adapter": "reviewed-html",
-          "sourceKey": "New!",
-          "status": "FETCH_FAILED",
-          "checkedAt": "2026-10-08T12:58:12.476864+00:00",
-          "error": "URLError",
-          "errorReason": "<urlopen error timed out>",
-          "httpStatus": null
-        },
-        {
-          "brandId": "brand-b0f892d2c591ca13",
-          "sourceUrl": "https://www.momstouch.co.kr/menu/ttoeat.php?s_sect1=CG0045",
-          "adapter": "reviewed-html",
-          "sourceKey": "또잇 치킨",
-          "status": "FETCH_FAILED",
-          "checkedAt": "2026-10-08T12:58:20.965664+00:00",
-          "error": "URLError",
-          "errorReason": "<urlopen error timed out>",
-          "httpStatus": null
-        },
-        {
-          "brandId": "brand-b0f892d2c591ca13",
-          "sourceUrl": "https://www.momstouch.co.kr/menu/new.php?s_sect1=CG0005",
-          "adapter": "reviewed-html",
-          "sourceKey": "버거",
-          "status": "FETCH_FAILED",
-          "checkedAt": "2026-10-08T12:58:29.523592+00:00",
-          "error": "URLError",
-          "errorReason": "<urlopen error timed out>",
-          "httpStatus": null
-        },
-        {
-          "brandId": "brand-b0f892d2c591ca13",
-          "sourceUrl": "https://www.momstouch.co.kr/menu/new.php?s_sect1=CG0004",
-          "adapter": "reviewed-html",
-          "sourceKey": "치킨",
-          "status": "FETCH_FAILED",
-          "checkedAt": "2026-10-08T12:58:37.828661+00:00",
-          "error": "URLError",
-          "errorReason": "<urlopen error timed out>",
-          "httpStatus": null
-        },
-        {
-          "brandId": "brand-b0f892d2c591ca13",
-          "sourceUrl": "https://www.momstouch.co.kr/menu/new.php?s_sect1=CG0003",
-          "adapter": "reviewed-html",
-          "sourceKey": "맘스세트",
-          "status": "FETCH_FAILED",
-          "checkedAt": "2026-10-08T12:58:45.840085+00:00",
-          "error": "URLError",
-          "errorReason": "<urlopen error timed out>",
-          "httpStatus": null
-        },
-        {
-          "brandId": "brand-b0f892d2c591ca13",
-          "sourceUrl": "https://www.momstouch.co.kr/menu/new.php?s_sect1=CG0002",
-          "adapter": "reviewed-html",
-          "sourceKey": "사이드",
-          "status": "FETCH_FAILED",
-          "checkedAt": "2026-10-08T12:58:53.995073+00:00",
-          "error": "URLError",
-          "errorReason": "<urlopen error timed out>",
-          "httpStatus": null
-        },
-        {
-          "brandId": "brand-b0f892d2c591ca13",
-          "sourceUrl": "https://www.momstouch.co.kr/menu/new.php?s_sect1=CG0001",
-          "adapter": "reviewed-html",
-          "sourceKey": "음료",
-          "status": "FETCH_FAILED",
-          "checkedAt": "2026-10-08T12:59:02.006350+00:00",
-          "error": "URLError",
-          "errorReason": "<urlopen error timed out>",
-          "httpStatus": null
-        },
-        {
-          "brandId": "brand-b0f892d2c591ca13",
-          "sourceUrl": "https://www.momstouch.co.kr/menu/new.php?s_sect1=CG0046",
-          "adapter": "reviewed-html",
-          "sourceKey": "피자",
-          "status": "FETCH_FAILED",
-          "checkedAt": "2026-10-08T12:59:10.442896+00:00",
-          "error": "URLError",
-          "errorReason": "<urlopen error timed out>",
-          "httpStatus": null
-        }
-      ]
-    },
-    {
-      "brandId": "brand-45ddca38a87b3dcd",
-      "status": "SUCCESS",
-      "checkedAt": "2026-10-08T12:58:15.620409+00:00",
-      "menuCount": 178,
-      "observedMenuCount": 178,
-      "warnings": [],
-      "sources": [
-        {
-          "brandId": "brand-45ddca38a87b3dcd",
-          "sourceUrl": "https://www.bhc.co.kr/api/v1/web/categories/list",
-          "adapter": "bhc-categories",
-          "sourceKey": "",
-          "status": "SUCCESS",
-          "checkedAt": "2026-10-08T12:58:12.477103+00:00",
-          "htmlSha256": "1c857bc1101a06432df8c9cdcc32c0b932986b74ab4947393dcfa0faae0b3477",
-          "httpStatus": 200,
-          "coverageReferenceIds": [],
-          "sourceDiagnostics": {
-            "responseBytes": 1005,
-            "documentTitle": ""
-          },
-          "confirmedEmpty": false,
-          "tlsEvidence": null,
-          "captureKey": "3e35e0e455dad92e8c4bbb005adb77fc841432fa56488ece7ddd714f09ec18ee"
-        },
-        {
-          "brandId": "brand-45ddca38a87b3dcd",
-          "sourceUrl": "https://www.bhc.co.kr/api/v1/web/categories/1/products",
-          "adapter": "bhc-json",
-          "sourceKey": "치킨",
-          "status": "SUCCESS",
-          "checkedAt": "2026-10-08T12:58:13.479570+00:00",
-          "htmlSha256": "23694733881f452f2da8e1ea2e775bf4a7834b87257adfbc81466fc23a3e56a0",
-          "httpStatus": 200,
-          "coverageReferenceIds": [],
-          "sourceDiagnostics": {
-            "responseBytes": 25568,
-            "documentTitle": ""
-          },
-          "confirmedEmpty": false,
-          "tlsEvidence": null,
-          "captureKey": "d4c2540fd3b5c360273bbc89a5661576141c4ce90d170ac0f9dc8aec6dfed1d6"
-        },
-        {
-          "brandId": "brand-45ddca38a87b3dcd",
-          "sourceUrl": "https://www.bhc.co.kr/api/v1/web/categories/22/products",
-          "adapter": "bhc-json",
-          "sourceKey": "신메뉴",
-          "status": "SUCCESS",
-          "checkedAt": "2026-10-08T12:58:14.122169+00:00",
-          "htmlSha256": "569f81c5d9436fdea5d9d1e534c3d52aef85590415a31c59c9b04d3245cf5d6b",
-          "httpStatus": 200,
-          "coverageReferenceIds": [],
-          "sourceDiagnostics": {
-            "responseBytes": 3409,
-            "documentTitle": ""
-          },
-          "confirmedEmpty": false,
-          "tlsEvidence": null,
-          "captureKey": "1df8f0e1758f47de1b1939474e7f68847f7dbaece7a6ee2722b4a7190f2689bc"
-        },
-        {
-          "brandId": "brand-45ddca38a87b3dcd",
-          "sourceUrl": "https://www.bhc.co.kr/api/v1/web/categories/23/products",
-          "adapter": "bhc-json",
-          "sourceKey": "BHC시그니처",
-          "status": "SUCCESS",
-          "checkedAt": "2026-10-08T12:58:14.321406+00:00",
-          "htmlSha256": "0f9d996bee1f1fdf7bf1c40d298f4dd1cd984188af1b1afaea7ce81b9a2322e6",
-          "httpStatus": 200,
-          "coverageReferenceIds": [],
-          "sourceDiagnostics": {
-            "responseBytes": 20918,
-            "documentTitle": ""
-          },
-          "confirmedEmpty": false,
-          "tlsEvidence": null,
-          "captureKey": "17438f59797cb683107420315d1010e080a75035a74fafd325e9bcfc3a8a1c8f"
-        },
-        {
-          "brandId": "brand-45ddca38a87b3dcd",
-          "sourceUrl": "https://www.bhc.co.kr/api/v1/web/categories/47/products",
-          "adapter": "bhc-json",
-          "sourceKey": "콜팝",
-          "status": "SUCCESS",
-          "checkedAt": "2026-10-08T12:58:14.963966+00:00",
-          "htmlSha256": "74836e9c749b15562ba9954024e4219fd013c89000c34d91ef0b00b775754de6",
-          "httpStatus": 200,
-          "coverageReferenceIds": [],
-          "sourceDiagnostics": {
-            "responseBytes": 7176,
-            "documentTitle": ""
-          },
-          "confirmedEmpty": false,
-          "tlsEvidence": null,
-          "captureKey": "897cecf0e2c6497e80ab60dc511c3fd31810c6c1ffa3a9a58f0942c6484ac1f4"
-        },
-        {
-          "brandId": "brand-45ddca38a87b3dcd",
-          "sourceUrl": "https://www.bhc.co.kr/api/v1/web/categories/50/products",
-          "adapter": "bhc-json",
-          "sourceKey": "사이드",
-          "status": "SUCCESS",
-          "checkedAt": "2026-10-08T12:58:15.620409+00:00",
-          "htmlSha256": "ff510f2973adca2d79fad8f1bc66b6a17f1a78654358353d50a0037e56f60309",
-          "httpStatus": 200,
-          "coverageReferenceIds": [],
-          "sourceDiagnostics": {
-            "responseBytes": 40710,
-            "documentTitle": ""
-          },
-          "confirmedEmpty": false,
-          "tlsEvidence": null,
-          "captureKey": "b7d0a3a55fa9093c0dfaf508d49314ffb5af48b7902fadb2dca4c9b596dc0cbc"
-        }
-      ]
-    },
     {
       "brandId": "brand-2366ea85553dc984",
       "status": "FETCH_FAILED",
-      "checkedAt": "2026-10-08T12:58:12.477318+00:00",
+      "checkedAt": "2026-10-08T13:38:13.354318+00:00",
       "menuCount": 0,
       "observedMenuCount": 0,
       "warnings": [
@@ -1378,13 +36,25 @@
           "adapter": "reviewed-html",
           "sourceKey": "",
           "status": "FAIL",
-          "checkedAt": "2026-10-08T12:58:12.477318+00:00",
-          "htmlSha256": "8894c5275e08d99d05d379f63895a0991a1e59cd95c7bb062e8454b43af39ff9",
+          "checkedAt": "2026-10-08T13:38:13.354318+00:00",
+          "htmlSha256": "912ccc0f97d6579cc427665d63da377a855e485b3a7253a4fa0eb8c5335febf7",
           "httpStatus": 200,
           "coverageReferenceIds": [],
           "sourceDiagnostics": {
             "responseBytes": 789,
-            "documentTitle": ""
+            "documentTitle": "",
+            "visibleTextLength": 0,
+            "inlineScriptCount": 1,
+            "inlineSignals": {
+              "cookieWrite": true,
+              "locationNavigation": true,
+              "captcha": false,
+              "challenge": false,
+              "eval": false
+            },
+            "accessDeniedIndicator": false,
+            "hasBody": true,
+            "hasMenuNames": false
           },
           "confirmedEmpty": false,
           "tlsEvidence": null,
@@ -1395,7 +65,7 @@
     {
       "brandId": "brand-e237cdd96675b8e9",
       "status": "FETCH_FAILED",
-      "checkedAt": "2026-10-08T12:58:12.477587+00:00",
+      "checkedAt": "2026-10-08T13:38:13.354713+00:00",
       "menuCount": 0,
       "observedMenuCount": 0,
       "warnings": [
@@ -1409,13 +79,25 @@
           "adapter": "reviewed-html",
           "sourceKey": "",
           "status": "FAIL",
-          "checkedAt": "2026-10-08T12:58:12.477587+00:00",
-          "htmlSha256": "6850bb1168ccb59e00a2469f682ffd4451861d26196d98e4ac2b437555c2eb8e",
+          "checkedAt": "2026-10-08T13:38:13.354713+00:00",
+          "htmlSha256": "f57f74a1313936eb9469582a100cbae723c593065a1b7fd75c4d910b93e4bf8a",
           "httpStatus": 200,
           "coverageReferenceIds": [],
           "sourceDiagnostics": {
             "responseBytes": 1585,
-            "documentTitle": ""
+            "documentTitle": "",
+            "visibleTextLength": 58,
+            "inlineScriptCount": 1,
+            "inlineSignals": {
+              "cookieWrite": true,
+              "locationNavigation": true,
+              "captcha": false,
+              "challenge": false,
+              "eval": false
+            },
+            "accessDeniedIndicator": false,
+            "hasBody": true,
+            "hasMenuNames": false
           },
           "confirmedEmpty": false,
           "tlsEvidence": null,
@@ -1426,7 +108,7 @@
     {
       "brandId": "brand-a6a2f91c0a858eab",
       "status": "FETCH_FAILED",
-      "checkedAt": "2026-10-08T12:58:14.465299+00:00",
+      "checkedAt": "2026-10-08T13:38:14.070402+00:00",
       "menuCount": 0,
       "observedMenuCount": 0,
       "warnings": [
@@ -1440,13 +122,25 @@
           "adapter": "reviewed-html",
           "sourceKey": "",
           "status": "FAIL",
-          "checkedAt": "2026-10-08T12:58:13.479822+00:00",
-          "htmlSha256": "225a827eb968ad8075c2412de8fb4d91e0086957ceac69dd07da1fb014cd2bd9",
+          "checkedAt": "2026-10-08T13:38:13.354974+00:00",
+          "htmlSha256": "5ca50cd0beee9486eaeb72f580be9b45660a74ff89c80326fe835ca0ac81452e",
           "httpStatus": 200,
           "coverageReferenceIds": [],
           "sourceDiagnostics": {
             "responseBytes": 786,
-            "documentTitle": ""
+            "documentTitle": "",
+            "visibleTextLength": 0,
+            "inlineScriptCount": 1,
+            "inlineSignals": {
+              "cookieWrite": true,
+              "locationNavigation": true,
+              "captcha": false,
+              "challenge": false,
+              "eval": false
+            },
+            "accessDeniedIndicator": false,
+            "hasBody": true,
+            "hasMenuNames": false
           },
           "confirmedEmpty": false,
           "tlsEvidence": null,
@@ -1458,13 +152,25 @@
           "adapter": "reviewed-html",
           "sourceKey": "",
           "status": "FAIL",
-          "checkedAt": "2026-10-08T12:58:14.465299+00:00",
-          "htmlSha256": "9722fe3b9cbb090b2b9b68fd2d9673cd2e84b1b2c1fb1641b1d6e71524f2bc1d",
+          "checkedAt": "2026-10-08T13:38:14.070402+00:00",
+          "htmlSha256": "20603a0cd1f49aedfd8949f5e422439436d77fbab3ffc7d30a10c40ae3e32103",
           "httpStatus": 200,
           "coverageReferenceIds": [],
           "sourceDiagnostics": {
             "responseBytes": 828,
-            "documentTitle": ""
+            "documentTitle": "",
+            "visibleTextLength": 0,
+            "inlineScriptCount": 1,
+            "inlineSignals": {
+              "cookieWrite": true,
+              "locationNavigation": true,
+              "captcha": false,
+              "challenge": false,
+              "eval": false
+            },
+            "accessDeniedIndicator": false,
+            "hasBody": true,
+            "hasMenuNames": false
           },
           "confirmedEmpty": false,
           "tlsEvidence": null,
@@ -1475,7 +181,7 @@
     {
       "brandId": "brand-517e6e3a0f2a227b",
       "status": "FETCH_FAILED",
-      "checkedAt": "2026-10-08T12:58:13.550642+00:00",
+      "checkedAt": "2026-10-08T13:38:13.355471+00:00",
       "menuCount": 0,
       "observedMenuCount": 0,
       "warnings": [
@@ -1489,13 +195,25 @@
           "adapter": "reviewed-html",
           "sourceKey": "",
           "status": "FAIL",
-          "checkedAt": "2026-10-08T12:58:13.550642+00:00",
-          "htmlSha256": "2370c215ae7c85dac197ca8a9300cc824443faeadbb68dc7af23b2d98c4612e5",
+          "checkedAt": "2026-10-08T13:38:13.355471+00:00",
+          "htmlSha256": "00cfdd41502a90db6b3aebc443505d3ba97e75faa88e8c5f417976da72ebd7f7",
           "httpStatus": 200,
           "coverageReferenceIds": [],
           "sourceDiagnostics": {
             "responseBytes": 1604,
-            "documentTitle": ""
+            "documentTitle": "",
+            "visibleTextLength": 58,
+            "inlineScriptCount": 1,
+            "inlineSignals": {
+              "cookieWrite": true,
+              "locationNavigation": true,
+              "captcha": false,
+              "challenge": false,
+              "eval": false
+            },
+            "accessDeniedIndicator": false,
+            "hasBody": true,
+            "hasMenuNames": false
           },
           "confirmedEmpty": false,
           "tlsEvidence": null,
@@ -1504,37 +222,201 @@
       ]
     },
     {
-      "brandId": "brand-2a13283561756adc",
-      "status": "SUCCESS",
-      "checkedAt": "2026-10-08T12:58:14.023419+00:00",
-      "menuCount": 9,
-      "observedMenuCount": 9,
-      "warnings": [],
+      "brandId": "brand-f2c4cd89053b4ff8",
+      "status": "FETCH_FAILED",
+      "checkedAt": "2026-10-08T13:38:17.972699+00:00",
+      "menuCount": 0,
+      "observedMenuCount": 52,
+      "warnings": [
+        "INCOMPLETE_SOURCE_COVERAGE_WITHHELD"
+      ],
       "sources": [
         {
-          "brandId": "brand-2a13283561756adc",
-          "sourceUrl": "https://www.baeksojeong.com/",
-          "adapter": "baeksojeong-native",
-          "sourceKey": "",
-          "status": "SUCCESS",
-          "checkedAt": "2026-10-08T12:58:14.023419+00:00",
-          "htmlSha256": "c4f5daf83c54b2ff4cd6a5f4e5a0be34a1a45a8b3073e94788d8dd868676809a",
+          "brandId": "brand-f2c4cd89053b4ff8",
+          "sourceUrl": "https://youngmanpizza.co.kr/sub01/menu.php",
+          "adapter": "youngman-native",
+          "sourceKey": "youngman-current",
+          "status": "FAIL",
+          "checkedAt": "2026-10-08T13:38:13.904838+00:00",
+          "htmlSha256": "81011535f14562e0d838e7d4ca2dc06d7966ecd34a134f14af1601d1d06f1a14",
           "httpStatus": 200,
           "coverageReferenceIds": [],
           "sourceDiagnostics": {
-            "responseBytes": 1939412,
-            "documentTitle": "백소정"
+            "responseBytes": 7021,
+            "documentTitle": "청년피자",
+            "visibleTextLength": 4,
+            "inlineScriptCount": 8,
+            "inlineSignals": {
+              "cookieWrite": false,
+              "locationNavigation": false,
+              "captcha": false,
+              "challenge": false,
+              "eval": false
+            },
+            "accessDeniedIndicator": false,
+            "hasBody": false,
+            "hasMenuNames": false
           },
           "confirmedEmpty": false,
           "tlsEvidence": null,
-          "captureKey": "4afdac0209cd6398385805d1e5ae61a7cb93d5c97d54486f9c54677fcc683605"
+          "captureKey": "9f617ccf309b674bb6d574a9cc606b9e5730765a07e89a36258cac96fb5db95e"
+        },
+        {
+          "brandId": "brand-f2c4cd89053b4ff8",
+          "sourceUrl": "https://youngmanpizza.co.kr/sub01/menu2.php",
+          "adapter": "youngman-native",
+          "sourceKey": "youngman-current",
+          "status": "SUCCESS",
+          "checkedAt": "2026-10-08T13:38:14.565560+00:00",
+          "htmlSha256": "601aac22885e81a00ce6ce30a1f66aac934a21dadca1545d933100f9c426319b",
+          "httpStatus": 200,
+          "coverageReferenceIds": [],
+          "sourceDiagnostics": {
+            "responseBytes": 35687,
+            "documentTitle": "청년피자",
+            "visibleTextLength": 1813,
+            "inlineScriptCount": 12,
+            "inlineSignals": {
+              "cookieWrite": false,
+              "locationNavigation": false,
+              "captcha": false,
+              "challenge": false,
+              "eval": false
+            },
+            "accessDeniedIndicator": false,
+            "hasBody": true,
+            "hasMenuNames": true
+          },
+          "confirmedEmpty": false,
+          "tlsEvidence": null,
+          "captureKey": "bf063d966823be08a0b972843f9b0765f57a022dce11d601b0ce96896328719a"
+        },
+        {
+          "brandId": "brand-f2c4cd89053b4ff8",
+          "sourceUrl": "https://youngmanpizza.co.kr/sub01/menu3.php",
+          "adapter": "youngman-native",
+          "sourceKey": "youngman-current",
+          "status": "SUCCESS",
+          "checkedAt": "2026-10-08T13:38:15.405376+00:00",
+          "htmlSha256": "0d41dae9cda82193f187e8d1425225bd909b48b96a0f3fcded6f54559e53a032",
+          "httpStatus": 200,
+          "coverageReferenceIds": [],
+          "sourceDiagnostics": {
+            "responseBytes": 28926,
+            "documentTitle": "청년피자",
+            "visibleTextLength": 1409,
+            "inlineScriptCount": 12,
+            "inlineSignals": {
+              "cookieWrite": false,
+              "locationNavigation": false,
+              "captcha": false,
+              "challenge": false,
+              "eval": false
+            },
+            "accessDeniedIndicator": false,
+            "hasBody": true,
+            "hasMenuNames": true
+          },
+          "confirmedEmpty": false,
+          "tlsEvidence": null,
+          "captureKey": "fca36abcc4cec0a55a21381c918e309e3b707546bdbd2d7ed8d3f299352d04d5"
+        },
+        {
+          "brandId": "brand-f2c4cd89053b4ff8",
+          "sourceUrl": "https://youngmanpizza.co.kr/sub01/menu4.php",
+          "adapter": "youngman-native",
+          "sourceKey": "youngman-current",
+          "status": "SUCCESS",
+          "checkedAt": "2026-10-08T13:38:16.235767+00:00",
+          "htmlSha256": "fe17d8b355628f4f99523ca5fdf565edf8bf1be3dcafc6ea67ef4b1c65468b27",
+          "httpStatus": 200,
+          "coverageReferenceIds": [],
+          "sourceDiagnostics": {
+            "responseBytes": 48018,
+            "documentTitle": "청년피자",
+            "visibleTextLength": 2243,
+            "inlineScriptCount": 12,
+            "inlineSignals": {
+              "cookieWrite": false,
+              "locationNavigation": false,
+              "captcha": false,
+              "challenge": false,
+              "eval": false
+            },
+            "accessDeniedIndicator": false,
+            "hasBody": true,
+            "hasMenuNames": true
+          },
+          "confirmedEmpty": false,
+          "tlsEvidence": null,
+          "captureKey": "0f928da115075e5050e3a35a38e6e45ad6b451eea87da36bee6bc8e1b86275bf"
+        },
+        {
+          "brandId": "brand-f2c4cd89053b4ff8",
+          "sourceUrl": "https://youngmanpizza.co.kr/sub01/menu6.php",
+          "adapter": "youngman-native",
+          "sourceKey": "youngman-current",
+          "status": "SUCCESS",
+          "checkedAt": "2026-10-08T13:38:17.176250+00:00",
+          "htmlSha256": "3c2d5d6411dc2086f846be49e231c2e9a27e76e5375ebdf35afff847c7f94d24",
+          "httpStatus": 200,
+          "coverageReferenceIds": [],
+          "sourceDiagnostics": {
+            "responseBytes": 34838,
+            "documentTitle": "청년피자",
+            "visibleTextLength": 1348,
+            "inlineScriptCount": 12,
+            "inlineSignals": {
+              "cookieWrite": false,
+              "locationNavigation": false,
+              "captcha": false,
+              "challenge": false,
+              "eval": false
+            },
+            "accessDeniedIndicator": false,
+            "hasBody": true,
+            "hasMenuNames": true
+          },
+          "confirmedEmpty": false,
+          "tlsEvidence": null,
+          "captureKey": "243630617c5ca176e4a6dc7a26e415bdf3fa02f5aea766cb3c78b84d843074ee"
+        },
+        {
+          "brandId": "brand-f2c4cd89053b4ff8",
+          "sourceUrl": "https://youngmanpizza.co.kr/sub01/menu7.php",
+          "adapter": "youngman-native",
+          "sourceKey": "youngman-current",
+          "status": "SUCCESS",
+          "checkedAt": "2026-10-08T13:38:17.972699+00:00",
+          "htmlSha256": "0f085974c4cc2210ad4fcda1c74e249196e23d4ee81507b2efd01c8308069599",
+          "httpStatus": 200,
+          "coverageReferenceIds": [],
+          "sourceDiagnostics": {
+            "responseBytes": 25197,
+            "documentTitle": "청년피자",
+            "visibleTextLength": 1224,
+            "inlineScriptCount": 12,
+            "inlineSignals": {
+              "cookieWrite": false,
+              "locationNavigation": false,
+              "captcha": false,
+              "challenge": false,
+              "eval": false
+            },
+            "accessDeniedIndicator": false,
+            "hasBody": true,
+            "hasMenuNames": true
+          },
+          "confirmedEmpty": false,
+          "tlsEvidence": null,
+          "captureKey": "b12508b48f70365100167b39c37876871e126d1d1a511e0c9c8eb34560651066"
         }
       ]
     },
     {
       "brandId": "brand-c242a10bbca4c411",
       "status": "FETCH_FAILED",
-      "checkedAt": "2026-10-08T12:58:15.185284+00:00",
+      "checkedAt": "2026-10-08T13:38:14.149656+00:00",
       "menuCount": 0,
       "observedMenuCount": 0,
       "warnings": [
@@ -1548,13 +430,25 @@
           "adapter": "cheogajip-list",
           "sourceKey": "cheogajip-all",
           "status": "FAIL",
-          "checkedAt": "2026-10-08T12:58:15.185284+00:00",
-          "htmlSha256": "f293e3f7ec727393d82c0a6ec48103ea0b0f06011a018a3d573da23f21ae5eda",
+          "checkedAt": "2026-10-08T13:38:14.149656+00:00",
+          "htmlSha256": "058c9adf103a48c881d58f7d59ec73807962f7b531a81d03f09a3ffe26c7bc2f",
           "httpStatus": 200,
           "coverageReferenceIds": [],
           "sourceDiagnostics": {
             "responseBytes": 1614,
-            "documentTitle": ""
+            "documentTitle": "",
+            "visibleTextLength": 58,
+            "inlineScriptCount": 1,
+            "inlineSignals": {
+              "cookieWrite": true,
+              "locationNavigation": true,
+              "captcha": false,
+              "challenge": false,
+              "eval": false
+            },
+            "accessDeniedIndicator": false,
+            "hasBody": true,
+            "hasMenuNames": false
           },
           "confirmedEmpty": false,
           "tlsEvidence": null,
@@ -1565,7 +459,7 @@
     {
       "brandId": "brand-9fa9c3eca7bcf563",
       "status": "FETCH_FAILED",
-      "checkedAt": "2026-10-08T12:58:21.831437+00:00",
+      "checkedAt": "2026-10-08T13:38:20.194515+00:00",
       "menuCount": 0,
       "observedMenuCount": 0,
       "warnings": [
@@ -1579,13 +473,25 @@
           "adapter": "venti-list",
           "sourceKey": "venti-1",
           "status": "FAIL",
-          "checkedAt": "2026-10-08T12:58:15.633301+00:00",
-          "htmlSha256": "1488771d59419c3affb335aa26221ffa01d59620e483b158e94d53687d4335b3",
+          "checkedAt": "2026-10-08T13:38:14.340623+00:00",
+          "htmlSha256": "e578eb34efaf2bdbf7bcc1cc7c1f74a4457f364aeaada5c8abdcd923a1ff917b",
           "httpStatus": 200,
           "coverageReferenceIds": [],
           "sourceDiagnostics": {
             "responseBytes": 1611,
-            "documentTitle": ""
+            "documentTitle": "",
+            "visibleTextLength": 58,
+            "inlineScriptCount": 1,
+            "inlineSignals": {
+              "cookieWrite": true,
+              "locationNavigation": true,
+              "captcha": false,
+              "challenge": false,
+              "eval": false
+            },
+            "accessDeniedIndicator": false,
+            "hasBody": true,
+            "hasMenuNames": false
           },
           "confirmedEmpty": false,
           "tlsEvidence": null,
@@ -1597,13 +503,25 @@
           "adapter": "venti-list",
           "sourceKey": "venti-2",
           "status": "FAIL",
-          "checkedAt": "2026-10-08T12:58:17.126677+00:00",
-          "htmlSha256": "bbbd22245eea1f53fc4b32c0975987413c98acdecc0d54176ccf9c4b0477384f",
+          "checkedAt": "2026-10-08T13:38:15.629990+00:00",
+          "htmlSha256": "894ada0a2aae44b83e0095e2def43c958f95859923507aad50f02edbfb06dc4b",
           "httpStatus": 200,
           "coverageReferenceIds": [],
           "sourceDiagnostics": {
             "responseBytes": 1611,
-            "documentTitle": ""
+            "documentTitle": "",
+            "visibleTextLength": 58,
+            "inlineScriptCount": 1,
+            "inlineSignals": {
+              "cookieWrite": true,
+              "locationNavigation": true,
+              "captcha": false,
+              "challenge": false,
+              "eval": false
+            },
+            "accessDeniedIndicator": false,
+            "hasBody": true,
+            "hasMenuNames": false
           },
           "confirmedEmpty": false,
           "tlsEvidence": null,
@@ -1615,13 +533,25 @@
           "adapter": "venti-list",
           "sourceKey": "venti-3",
           "status": "FAIL",
-          "checkedAt": "2026-10-08T12:58:17.653081+00:00",
-          "htmlSha256": "9d6f17a4ce5d29afaff5f6fb1de5af1bf0b49f5b3f5705d0752ad51417146222",
+          "checkedAt": "2026-10-08T13:38:16.147630+00:00",
+          "htmlSha256": "be44f89e3eb7001a9fec090f006d0c6706802b85990196734ddcb23a85b46f88",
           "httpStatus": 200,
           "coverageReferenceIds": [],
           "sourceDiagnostics": {
             "responseBytes": 1611,
-            "documentTitle": ""
+            "documentTitle": "",
+            "visibleTextLength": 58,
+            "inlineScriptCount": 1,
+            "inlineSignals": {
+              "cookieWrite": true,
+              "locationNavigation": true,
+              "captcha": false,
+              "challenge": false,
+              "eval": false
+            },
+            "accessDeniedIndicator": false,
+            "hasBody": true,
+            "hasMenuNames": false
           },
           "confirmedEmpty": false,
           "tlsEvidence": null,
@@ -1633,13 +563,25 @@
           "adapter": "venti-list",
           "sourceKey": "venti-4",
           "status": "FAIL",
-          "checkedAt": "2026-10-08T12:58:18.971588+00:00",
-          "htmlSha256": "9ffcfa157de08ec4583b7b7801945e926185344fa29e4c6e6dc4df10123b6de7",
+          "checkedAt": "2026-10-08T13:38:17.058389+00:00",
+          "htmlSha256": "f2823ca7eabccde92ed5e43ca77455818ba680cc9dc38796c9eac989896ee030",
           "httpStatus": 200,
           "coverageReferenceIds": [],
           "sourceDiagnostics": {
             "responseBytes": 1611,
-            "documentTitle": ""
+            "documentTitle": "",
+            "visibleTextLength": 58,
+            "inlineScriptCount": 1,
+            "inlineSignals": {
+              "cookieWrite": true,
+              "locationNavigation": true,
+              "captcha": false,
+              "challenge": false,
+              "eval": false
+            },
+            "accessDeniedIndicator": false,
+            "hasBody": true,
+            "hasMenuNames": false
           },
           "confirmedEmpty": false,
           "tlsEvidence": null,
@@ -1651,13 +593,25 @@
           "adapter": "venti-list",
           "sourceKey": "venti-5",
           "status": "FAIL",
-          "checkedAt": "2026-10-08T12:58:19.791491+00:00",
-          "htmlSha256": "32a4634989cf4144966835c9a19e4bd076733bbfc380cdd16438f5b510113519",
+          "checkedAt": "2026-10-08T13:38:17.837883+00:00",
+          "htmlSha256": "93b98e34a0e5ad9aff92e49d803b81ee4ad472906a5346f8e298ec13f37dbb92",
           "httpStatus": 200,
           "coverageReferenceIds": [],
           "sourceDiagnostics": {
             "responseBytes": 1611,
-            "documentTitle": ""
+            "documentTitle": "",
+            "visibleTextLength": 58,
+            "inlineScriptCount": 1,
+            "inlineSignals": {
+              "cookieWrite": true,
+              "locationNavigation": true,
+              "captcha": false,
+              "challenge": false,
+              "eval": false
+            },
+            "accessDeniedIndicator": false,
+            "hasBody": true,
+            "hasMenuNames": false
           },
           "confirmedEmpty": false,
           "tlsEvidence": null,
@@ -1669,13 +623,25 @@
           "adapter": "venti-list",
           "sourceKey": "venti-6",
           "status": "FAIL",
-          "checkedAt": "2026-10-08T12:58:20.320703+00:00",
-          "htmlSha256": "c70f242ff3fb980910991be7d5365b5f16f03f48d902ebb185deb8a98b35a7fe",
+          "checkedAt": "2026-10-08T13:38:18.738623+00:00",
+          "htmlSha256": "031d6f2ca524b1269e9a1e9c4707ae1f4127ce5cbc911daa183ac7357ba69966",
           "httpStatus": 200,
           "coverageReferenceIds": [],
           "sourceDiagnostics": {
             "responseBytes": 1611,
-            "documentTitle": ""
+            "documentTitle": "",
+            "visibleTextLength": 58,
+            "inlineScriptCount": 1,
+            "inlineSignals": {
+              "cookieWrite": true,
+              "locationNavigation": true,
+              "captcha": false,
+              "challenge": false,
+              "eval": false
+            },
+            "accessDeniedIndicator": false,
+            "hasBody": true,
+            "hasMenuNames": false
           },
           "confirmedEmpty": false,
           "tlsEvidence": null,
@@ -1687,13 +653,25 @@
           "adapter": "venti-list",
           "sourceKey": "venti-7",
           "status": "FAIL",
-          "checkedAt": "2026-10-08T12:58:21.299147+00:00",
-          "htmlSha256": "aad24e69beff9f641da718f4b49162c190f79547718ca2fbd5bbb0a21cac2ddf",
+          "checkedAt": "2026-10-08T13:38:19.376850+00:00",
+          "htmlSha256": "e59f748f51b9e067bd16d718df2e8b0ef07c567e6a660a130509e1a81245e509",
           "httpStatus": 200,
           "coverageReferenceIds": [],
           "sourceDiagnostics": {
             "responseBytes": 1611,
-            "documentTitle": ""
+            "documentTitle": "",
+            "visibleTextLength": 58,
+            "inlineScriptCount": 1,
+            "inlineSignals": {
+              "cookieWrite": true,
+              "locationNavigation": true,
+              "captcha": false,
+              "challenge": false,
+              "eval": false
+            },
+            "accessDeniedIndicator": false,
+            "hasBody": true,
+            "hasMenuNames": false
           },
           "confirmedEmpty": false,
           "tlsEvidence": null,
@@ -1705,13 +683,25 @@
           "adapter": "venti-list",
           "sourceKey": "venti-8",
           "status": "FAIL",
-          "checkedAt": "2026-10-08T12:58:21.831437+00:00",
-          "htmlSha256": "5d41a8d45799313e956079aec1ea43f77c40187cd9a4e7217ec1c1c2304a430f",
+          "checkedAt": "2026-10-08T13:38:20.194515+00:00",
+          "htmlSha256": "d59a4be3f042c89521021ab20748e0158d6d372a3bd443e722238b1e142f7a16",
           "httpStatus": 200,
           "coverageReferenceIds": [],
           "sourceDiagnostics": {
             "responseBytes": 1611,
-            "documentTitle": ""
+            "documentTitle": "",
+            "visibleTextLength": 58,
+            "inlineScriptCount": 1,
+            "inlineSignals": {
+              "cookieWrite": true,
+              "locationNavigation": true,
+              "captcha": false,
+              "challenge": false,
+              "eval": false
+            },
+            "accessDeniedIndicator": false,
+            "hasBody": true,
+            "hasMenuNames": false
           },
           "confirmedEmpty": false,
           "tlsEvidence": null,
@@ -1720,14 +710,14 @@
       ]
     }
   ],
-  "autoReadyBrands": 2,
+  "autoReadyBrands": 0,
   "sourceBlockedBrands": 0,
   "adapterRequiredBrands": 0,
-  "brokenBrands": 1,
-  "reviewRequiredBrands": 6,
+  "brokenBrands": 0,
+  "reviewRequiredBrands": 7,
   "totalBrands": 102,
-  "finishedAt": "2026-10-08T12:59:18.989853+00:00",
+  "finishedAt": "2026-10-08T13:38:20.889589+00:00",
   "catalogVersion": "ca52f36beedd1510e5427d0300bc4fb00df46e725a16521ca32b8d7dfd2c8a66",
   "checksum": "ca52f36beedd1510e5427d0300bc4fb00df46e725a16521ca32b8d7dfd2c8a66",
-  "status": "PUBLISHED"
+  "status": "EXISTING_CATALOG_RETAINED"
 }
