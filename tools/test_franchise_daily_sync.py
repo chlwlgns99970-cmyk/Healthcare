@@ -56,6 +56,7 @@ class DailySyncTest(unittest.TestCase):
             before=(Path(tmp)/'latest.json').read_bytes()
             report=run(tmp,'two',self.brands,[dict(status='FETCH_FAILED',menus=[])])
             self.assertEqual(before,(Path(tmp)/'latest.json').read_bytes());self.assertEqual('EXISTING_CATALOG_RETAINED',report['status'])
+            self.assertEqual('ALREADY_COMPLETED',run(tmp,'two',self.brands,[])['status'])
     def test_lock(self):
         with tempfile.TemporaryDirectory() as tmp:
             (Path(tmp)/'.sync-lock').touch();self.assertEqual('RUN_LOCKED',run(tmp,'one',self.brands,[])['status'])

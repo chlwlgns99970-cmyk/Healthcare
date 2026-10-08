@@ -154,7 +154,10 @@ def run(out, run_key, brands=None, batches=None):
             data=(out/manifest['file']).read_bytes()
             assert hashlib.sha256(data).hexdigest()==manifest['sha256']
             existing=json.loads(data)
-        if manifest.get('runKey')==run_key: return {'status':'ALREADY_COMPLETED','runKey':run_key}
+        report_path=out/'latest-franchise-sync-report.json'
+        previous_report=json.loads(report_path.read_text(encoding='utf-8')) if report_path.exists() else {}
+        if manifest.get('runKey')==run_key or previous_report.get('runId')==run_key:
+            return {'status':'ALREADY_COMPLETED','runKey':run_key}
         started=datetime.now(timezone.utc).isoformat()
         if batches is None:
             with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool: batches=list(pool.map(fetch,brands))
