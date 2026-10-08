@@ -12,11 +12,12 @@
     "registryUrl": "https://www.mcdonalds.co.kr/",
     "sources": [
       {
-        "url": "https://www.mcdonalds.co.kr/kor/menu/burger",
-        "adapter": "jsonld",
-        "key": ""
+        "url": "https://www.mcdonalds.co.kr/api/v1/kor/category/list",
+        "adapter": "mc-categories",
+        "pagination": "mc-categories"
       }
-    ]
+    ],
+    "expectedMenuCount": 133
   },
   {
     "brandId": "brand-24df7e63c9c2314e",
@@ -31,11 +32,11 @@
     "registryUrl": "https://www.lotteeatz.com/",
     "sources": [
       {
-        "url": "https://www.lotteeatz.com/",
-        "key": "",
-        "adapter": "jsonld"
+        "url": "https://www.lotteeatz.com/brand/ria",
+        "adapter": "eatz-list"
       }
-    ]
+    ],
+    "expectedMenuCount": 77
   },
   {
     "brandId": "brand-d857c6bf9eb6a6c0",
@@ -44,17 +45,20 @@
     "sourceUrl": "https://www.burgerking.co.kr/",
     "allowedHosts": [
       "burgerking.co.kr",
-      "www.burgerking.co.kr"
+      "www.burgerking.co.kr",
+      "web-prd.burgerking.co.kr"
     ],
     "adapter": "jsonld",
     "registryUrl": "https://www.burgerking.co.kr/",
     "sources": [
       {
-        "url": "https://www.burgerking.co.kr/",
-        "key": "",
-        "adapter": "jsonld"
+        "url": "https://web-prd.burgerking.co.kr/burgerking/BKR0632.json",
+        "adapter": "burgerking-json",
+        "method": "POST",
+        "key": "all-menu"
       }
-    ]
+    ],
+    "expectedMenuCount": 202
   },
   {
     "brandId": "brand-2c14410b57ba9fc4",
@@ -69,11 +73,57 @@
     "registryUrl": "https://www.kfckorea.com/",
     "sources": [
       {
-        "url": "https://www.kfckorea.com/",
-        "key": "",
-        "adapter": "jsonld"
+        "url": "https://www.kfckorea.com/kfc/interface/selectDeliveryList",
+        "adapter": "kfc-json",
+        "method": "POST",
+        "key": "RCMD",
+        "form": {
+          "product_ordertype": "D",
+          "delivery_subGroupCd": "RCMD"
+        }
+      },
+      {
+        "url": "https://www.kfckorea.com/kfc/interface/selectDeliveryList",
+        "adapter": "kfc-json",
+        "method": "POST",
+        "key": "CHKN",
+        "form": {
+          "product_ordertype": "D",
+          "delivery_subGroupCd": "CHKN"
+        }
+      },
+      {
+        "url": "https://www.kfckorea.com/kfc/interface/selectDeliveryList",
+        "adapter": "kfc-json",
+        "method": "POST",
+        "key": "BEGR",
+        "form": {
+          "product_ordertype": "D",
+          "delivery_subGroupCd": "BEGR"
+        }
+      },
+      {
+        "url": "https://www.kfckorea.com/kfc/interface/selectDeliveryList",
+        "adapter": "kfc-json",
+        "method": "POST",
+        "key": "SIDE",
+        "form": {
+          "product_ordertype": "D",
+          "delivery_subGroupCd": "SIDE"
+        }
+      },
+      {
+        "url": "https://www.kfckorea.com/kfc/interface/selectDeliveryList",
+        "adapter": "kfc-json",
+        "method": "POST",
+        "key": "DRNK",
+        "form": {
+          "product_ordertype": "D",
+          "delivery_subGroupCd": "DRNK"
+        }
       }
-    ]
+    ],
+    "expectedMenuCount": 139
   },
   {
     "brandId": "brand-b0f892d2c591ca13",
@@ -88,11 +138,47 @@
     "registryUrl": "https://www.momstouch.co.kr/",
     "sources": [
       {
-        "url": "https://www.momstouch.co.kr/",
-        "key": "",
-        "adapter": "jsonld"
+        "url": "https://www.momstouch.co.kr/menu/new.php?s_sect1=new",
+        "adapter": "reviewed-html",
+        "key": "New!"
+      },
+      {
+        "url": "https://www.momstouch.co.kr/menu/ttoeat.php?s_sect1=CG0045",
+        "adapter": "reviewed-html",
+        "key": "또잇 치킨"
+      },
+      {
+        "url": "https://www.momstouch.co.kr/menu/new.php?s_sect1=CG0005",
+        "adapter": "reviewed-html",
+        "key": "버거"
+      },
+      {
+        "url": "https://www.momstouch.co.kr/menu/new.php?s_sect1=CG0004",
+        "adapter": "reviewed-html",
+        "key": "치킨"
+      },
+      {
+        "url": "https://www.momstouch.co.kr/menu/new.php?s_sect1=CG0003",
+        "adapter": "reviewed-html",
+        "key": "맘스세트"
+      },
+      {
+        "url": "https://www.momstouch.co.kr/menu/new.php?s_sect1=CG0002",
+        "adapter": "reviewed-html",
+        "key": "사이드"
+      },
+      {
+        "url": "https://www.momstouch.co.kr/menu/new.php?s_sect1=CG0001",
+        "adapter": "reviewed-html",
+        "key": "음료"
+      },
+      {
+        "url": "https://www.momstouch.co.kr/menu/new.php?s_sect1=CG0046",
+        "adapter": "reviewed-html",
+        "key": "피자"
       }
-    ]
+    ],
+    "expectedMenuCount": 66
   },
   {
     "brandId": "brand-f91351461391155a",
@@ -101,17 +187,29 @@
     "sourceUrl": "https://www.dominos.co.kr/",
     "allowedHosts": [
       "dominos.co.kr",
-      "www.dominos.co.kr"
+      "www.dominos.co.kr",
+      "web.dominos.co.kr"
     ],
     "adapter": "jsonld",
     "registryUrl": "https://www.dominos.co.kr/",
     "sources": [
       {
-        "url": "https://www.dominos.co.kr/",
-        "key": "",
-        "adapter": "jsonld"
+        "url": "https://www.dominos.co.kr/goods/list?dsp_ctgr=C0101",
+        "adapter": "dominos-list",
+        "key": "C0101"
+      },
+      {
+        "url": "https://www.dominos.co.kr/goods/list?dsp_ctgr=C0201",
+        "adapter": "dominos-list",
+        "key": "C0201"
+      },
+      {
+        "url": "https://www.dominos.co.kr/goods/list?dsp_ctgr=C0202",
+        "adapter": "dominos-list",
+        "key": "C0202"
       }
-    ]
+    ],
+    "expectedMenuCount": 50
   },
   {
     "brandId": "brand-dfd7712a868b7cd2",
@@ -126,11 +224,18 @@
     "registryUrl": "https://www.pizzahut.co.kr/",
     "sources": [
       {
-        "url": "https://www.pizzahut.co.kr/",
-        "key": "",
-        "adapter": "jsonld"
+        "url": "https://www.pizzahut.co.kr/api/menu/pizza/all/VISIT",
+        "adapter": "pizzahut-json",
+        "key": "피자"
+      },
+      {
+        "url": "https://www.pizzahut.co.kr/api/menu/0996/list/drinkAndEtc",
+        "adapter": "pizzahut-json",
+        "key": "음료·기타"
       }
-    ]
+    ],
+    "publishPolicy": "REVIEW_ONLY",
+    "reviewReason": "Global pizzas verified; drink list is official default-store 0996 scope; global pasta/side endpoint returns HTTP 400 and full set/side coverage remains unverified."
   },
   {
     "brandId": "brand-792c9f221e49eb7e",
@@ -145,11 +250,73 @@
     "registryUrl": "https://www.mrpizza.co.kr/",
     "sources": [
       {
-        "url": "https://www.mrpizza.co.kr/",
+        "url": "https://www.mrpizza.co.kr/bbs/board.php?bo_table=menu&sca=%ED%81%B4%EB%9E%98%EC%8B%9D+%ED%94%BC%EC%9E%90",
         "key": "",
-        "adapter": "jsonld"
+        "adapter": "reviewed-html",
+        "pagination": "gnuboard"
+      },
+      {
+        "url": "https://www.mrpizza.co.kr/bbs/board.php?bo_table=menu&sca=%ED%94%84%EB%A6%AC%EB%AF%B8%EC%97%84+%ED%94%BC%EC%9E%90",
+        "key": "",
+        "adapter": "reviewed-html",
+        "pagination": "gnuboard"
+      },
+      {
+        "url": "https://www.mrpizza.co.kr/bbs/board.php?bo_table=menu&sca=%EC%94%AC%ED%81%AC%EB%9F%AC%EC%8A%A4%ED%8A%B8+%ED%94%BC%EC%9E%90",
+        "key": "",
+        "adapter": "reviewed-html",
+        "pagination": "gnuboard"
+      },
+      {
+        "url": "https://www.mrpizza.co.kr/bbs/board.php?bo_table=menu&sca=1%EC%9D%B8%EC%9A%A9+%ED%94%BC%EC%9E%90",
+        "key": "",
+        "adapter": "reviewed-html",
+        "pagination": "gnuboard"
+      },
+      {
+        "url": "https://www.mrpizza.co.kr/bbs/board.php?bo_table=menu&sca=%ED%94%BC%EC%9E%90%EC%83%8C%EB%93%9C",
+        "key": "",
+        "adapter": "reviewed-html",
+        "pagination": "gnuboard"
+      },
+      {
+        "url": "https://www.mrpizza.co.kr/bbs/board.php?bo_table=menu&sca=%ED%8C%8C%EC%8A%A4%ED%83%80%26%EB%9D%BC%EC%9D%B4%EC%8A%A4",
+        "key": "",
+        "adapter": "reviewed-html",
+        "pagination": "gnuboard"
+      },
+      {
+        "url": "https://www.mrpizza.co.kr/bbs/board.php?bo_table=menu&sca=%EC%83%90%EB%9F%AC%EB%93%9C%26%EC%82%AC%EC%9D%B4%EB%93%9C",
+        "key": "",
+        "adapter": "reviewed-html",
+        "pagination": "gnuboard"
+      },
+      {
+        "url": "https://www.mrpizza.co.kr/bbs/board.php?bo_table=menu&sca=%EC%9D%8C%EB%A3%8C",
+        "key": "",
+        "adapter": "reviewed-html",
+        "pagination": "gnuboard"
+      },
+      {
+        "url": "https://www.mrpizza.co.kr/bbs/board.php?bo_table=menu&sca=%ED%8A%B9%EA%B0%80%EC%84%B8%ED%8A%B8-%ED%80%98%EA%B0%90%ED%8F%AC%EC%84%B8%ED%8A%B8",
+        "key": "",
+        "adapter": "reviewed-html",
+        "pagination": "gnuboard"
+      },
+      {
+        "url": "https://www.mrpizza.co.kr/bbs/board.php?bo_table=menu&sca=%ED%8A%B9%EA%B0%80%EC%84%B8%ED%8A%B8-%ED%94%BC%EC%B9%98%EC%84%B8%ED%8A%B8",
+        "key": "",
+        "adapter": "reviewed-html",
+        "pagination": "gnuboard"
+      },
+      {
+        "url": "https://www.mrpizza.co.kr/bbs/board.php?bo_table=menu&sca=%ED%8A%B9%EA%B0%80%EC%84%B8%ED%8A%B8-%EB%B3%B4%EB%84%88%EC%8A%A4%ED%8C%8C%EC%9A%B0%EC%B9%98",
+        "key": "",
+        "adapter": "reviewed-html",
+        "pagination": "gnuboard"
       }
-    ]
+    ],
+    "expectedMenuCount": 83
   },
   {
     "brandId": "brand-45ddca38a87b3dcd",
@@ -164,11 +331,12 @@
     "registryUrl": "https://www.bhc.co.kr/",
     "sources": [
       {
-        "url": "https://www.bhc.co.kr/",
-        "key": "",
-        "adapter": "jsonld"
+        "url": "https://www.bhc.co.kr/api/v1/web/categories/list",
+        "adapter": "bhc-categories",
+        "pagination": "bhc-categories"
       }
-    ]
+    ],
+    "expectedMenuCount": 178
   },
   {
     "brandId": "brand-5b391ae396ab6901",
@@ -183,11 +351,27 @@
     "registryUrl": "https://www.kyochon.com/",
     "sources": [
       {
-        "url": "https://www.kyochon.com/",
+        "url": "https://www.kyochon.com/menu/chicken.asp",
         "key": "",
-        "adapter": "jsonld"
+        "adapter": "reviewed-html"
+      },
+      {
+        "url": "https://www.kyochon.com/menu/side.asp",
+        "key": "",
+        "adapter": "reviewed-html"
+      },
+      {
+        "url": "https://www.kyochon.com/menu/liquor.asp",
+        "key": "",
+        "adapter": "reviewed-html"
+      },
+      {
+        "url": "https://www.kyochon.com/menu/drink.asp",
+        "key": "",
+        "adapter": "reviewed-html"
       }
-    ]
+    ],
+    "expectedMenuCount": 113
   },
   {
     "brandId": "brand-dfbc0be6a9fb565a",
@@ -202,11 +386,13 @@
     "registryUrl": "https://www.goobne.co.kr/",
     "sources": [
       {
-        "url": "https://www.goobne.co.kr/",
+        "url": "https://www.goobne.co.kr/menu/menu_list_p",
         "key": "",
-        "adapter": "jsonld"
+        "adapter": "reviewed-html",
+        "pagination": "goobne"
       }
-    ]
+    ],
+    "expectedMenuCount": 59
   },
   {
     "brandId": "brand-913a908f005583f0",
@@ -221,11 +407,12 @@
     "registryUrl": "https://www.bbq.co.kr/",
     "sources": [
       {
-        "url": "https://www.bbq.co.kr/",
-        "key": "",
-        "adapter": "jsonld"
+        "url": "https://www.bbq.co.kr/api/delivery/menu/category",
+        "adapter": "bbq-categories",
+        "pagination": "bbq-categories"
       }
-    ]
+    ],
+    "expectedMenuCount": 102
   },
   {
     "brandId": "brand-1c90aeff2ad68611",
@@ -240,11 +427,42 @@
     "registryUrl": "https://nenechicken.com/",
     "sources": [
       {
-        "url": "https://nenechicken.com/",
-        "key": "",
-        "adapter": "jsonld"
+        "url": "https://nenechicken.com/home_menu.asp?SUBID=15",
+        "adapter": "nene-list",
+        "key": "nene-15"
+      },
+      {
+        "url": "https://nenechicken.com/home_menu.asp?SUBID=1",
+        "adapter": "nene-list",
+        "key": "nene-1"
+      },
+      {
+        "url": "https://nenechicken.com/home_menu.asp?SUBID=2",
+        "adapter": "nene-list",
+        "key": "nene-2"
+      },
+      {
+        "url": "https://nenechicken.com/home_menu.asp?SUBID=3",
+        "adapter": "nene-list",
+        "key": "nene-3"
+      },
+      {
+        "url": "https://nenechicken.com/home_menu.asp?SUBID=8",
+        "adapter": "nene-list",
+        "key": "nene-8"
+      },
+      {
+        "url": "https://nenechicken.com/home_menu.asp?SUBID=9",
+        "adapter": "nene-list",
+        "key": "nene-9"
+      },
+      {
+        "url": "https://nenechicken.com/home_menu.asp?SUBID=10",
+        "adapter": "nene-list",
+        "key": "nene-10"
       }
-    ]
+    ],
+    "expectedMenuCount": 77
   },
   {
     "brandId": "brand-6f80c60267f6bc73",
@@ -259,96 +477,19 @@
     "registryUrl": "https://www.starbucks.co.kr/",
     "sources": [
       {
-        "url": "https://www.starbucks.co.kr/upload/json/menu/W0000003.js",
-        "adapter": "starbucks-json",
+        "url": "https://www.starbucks.co.kr/menu/drink_list.do",
+        "adapter": "starbucks-navigation",
+        "pagination": "starbucks-navigation",
         "key": "drink"
       },
       {
-        "url": "https://www.starbucks.co.kr/upload/json/menu/W0000004.js",
-        "adapter": "starbucks-json",
-        "key": "drink"
-      },
-      {
-        "url": "https://www.starbucks.co.kr/upload/json/menu/W0000005.js",
-        "adapter": "starbucks-json",
-        "key": "drink"
-      },
-      {
-        "url": "https://www.starbucks.co.kr/upload/json/menu/W0000013.js",
-        "adapter": "starbucks-json",
+        "url": "https://www.starbucks.co.kr/menu/food_list.do",
+        "adapter": "starbucks-navigation",
+        "pagination": "starbucks-navigation",
         "key": "food"
-      },
-      {
-        "url": "https://www.starbucks.co.kr/upload/json/menu/W0000032.js",
-        "adapter": "starbucks-json",
-        "key": "food"
-      },
-      {
-        "url": "https://www.starbucks.co.kr/upload/json/menu/W0000033.js",
-        "adapter": "starbucks-json",
-        "key": "food"
-      },
-      {
-        "url": "https://www.starbucks.co.kr/upload/json/menu/W0000053.js",
-        "adapter": "starbucks-json",
-        "key": "drink"
-      },
-      {
-        "url": "https://www.starbucks.co.kr/upload/json/menu/W0000054.js",
-        "adapter": "starbucks-json",
-        "key": "food"
-      },
-      {
-        "url": "https://www.starbucks.co.kr/upload/json/menu/W0000055.js",
-        "adapter": "starbucks-json",
-        "key": "food"
-      },
-      {
-        "url": "https://www.starbucks.co.kr/upload/json/menu/W0000056.js",
-        "adapter": "starbucks-json",
-        "key": "food"
-      },
-      {
-        "url": "https://www.starbucks.co.kr/upload/json/menu/W0000060.js",
-        "adapter": "starbucks-json",
-        "key": "drink"
-      },
-      {
-        "url": "https://www.starbucks.co.kr/upload/json/menu/W0000061.js",
-        "adapter": "starbucks-json",
-        "key": "drink"
-      },
-      {
-        "url": "https://www.starbucks.co.kr/upload/json/menu/W0000062.js",
-        "adapter": "starbucks-json",
-        "key": "drink"
-      },
-      {
-        "url": "https://www.starbucks.co.kr/upload/json/menu/W0000064.js",
-        "adapter": "starbucks-json",
-        "key": "food"
-      },
-      {
-        "url": "https://www.starbucks.co.kr/upload/json/menu/W0000075.js",
-        "adapter": "starbucks-json",
-        "key": "drink"
-      },
-      {
-        "url": "https://www.starbucks.co.kr/upload/json/menu/W0000123.js",
-        "adapter": "starbucks-json",
-        "key": "food"
-      },
-      {
-        "url": "https://www.starbucks.co.kr/upload/json/menu/W0000171.js",
-        "adapter": "starbucks-json",
-        "key": "drink"
-      },
-      {
-        "url": "https://www.starbucks.co.kr/upload/json/menu/W0000422.js",
-        "adapter": "starbucks-json",
-        "key": "drink"
       }
-    ]
+    ],
+    "expectedMenuCount": 318
   },
   {
     "brandId": "brand-044f74822bd63a2c",
@@ -382,11 +523,67 @@
     "registryUrl": "https://composecoffee.com/",
     "sources": [
       {
-        "url": "https://composecoffee.com/",
-        "key": "",
-        "adapter": "jsonld"
+        "url": "https://composecoffee.com/index.php?mid=compose&act=dispCafemenuGalleryList",
+        "adapter": "reviewed-html",
+        "key": "MENU",
+        "pagination": "compose"
+      },
+      {
+        "url": "https://composecoffee.com/index.php?mid=compose&act=dispCafemenuGalleryList&category_srl=301298",
+        "adapter": "reviewed-html",
+        "key": "추천메뉴",
+        "pagination": "compose"
+      },
+      {
+        "url": "https://composecoffee.com/index.php?mid=compose&act=dispCafemenuGalleryList&category_srl=303364",
+        "adapter": "reviewed-html",
+        "key": "커피ㆍ콜드브루",
+        "pagination": "compose"
+      },
+      {
+        "url": "https://composecoffee.com/index.php?mid=compose&act=dispCafemenuGalleryList&category_srl=303365",
+        "adapter": "reviewed-html",
+        "key": "베버리지",
+        "pagination": "compose"
+      },
+      {
+        "url": "https://composecoffee.com/index.php?mid=compose&act=dispCafemenuGalleryList&category_srl=303366",
+        "adapter": "reviewed-html",
+        "key": "프라페ㆍ스무디",
+        "pagination": "compose"
+      },
+      {
+        "url": "https://composecoffee.com/index.php?mid=compose&act=dispCafemenuGalleryList&category_srl=303367",
+        "adapter": "reviewed-html",
+        "key": "밀크쉐이크",
+        "pagination": "compose"
+      },
+      {
+        "url": "https://composecoffee.com/index.php?mid=compose&act=dispCafemenuGalleryList&category_srl=303368",
+        "adapter": "reviewed-html",
+        "key": "에이드ㆍ주스",
+        "pagination": "compose"
+      },
+      {
+        "url": "https://composecoffee.com/index.php?mid=compose&act=dispCafemenuGalleryList&category_srl=303369",
+        "adapter": "reviewed-html",
+        "key": "티",
+        "pagination": "compose"
+      },
+      {
+        "url": "https://composecoffee.com/index.php?mid=compose&act=dispCafemenuGalleryList&category_srl=308857",
+        "adapter": "reviewed-html",
+        "key": "푸드ㆍ디저트",
+        "pagination": "compose"
+      },
+      {
+        "url": "https://composecoffee.com/index.php?mid=compose&act=dispCafemenuGalleryList&category_srl=303371",
+        "adapter": "reviewed-html",
+        "key": "아이스크림",
+        "pagination": "compose"
       }
-    ]
+    ],
+    "expectedMenuCount": 200
   },
   {
     "brandId": "brand-0dc8558d4e8f58fd",
@@ -401,11 +598,17 @@
     "registryUrl": "https://www.ediya.com/",
     "sources": [
       {
-        "url": "https://www.ediya.com/contents/menu_intro.html",
-        "adapter": "jsonld",
-        "key": ""
+        "url": "https://www.ediya.com/contents/drink.html",
+        "adapter": "ediya-list",
+        "pagination": "ediya-start"
+      },
+      {
+        "url": "https://www.ediya.com/contents/bakery.html",
+        "adapter": "ediya-list",
+        "pagination": "ediya-start"
       }
-    ]
+    ],
+    "expectedMenuCount": 478
   },
   {
     "brandId": "brand-db8f86831d5f2b94",
@@ -420,16 +623,19 @@
     "registryUrl": "https://www.mega-mgccoffee.com/",
     "sources": [
       {
-        "url": "https://www.mega-mgccoffee.com/menu/?menu_category1=1&menu_category2=1",
-        "adapter": "jsonld",
-        "key": ""
+        "url": "https://www.mega-mgccoffee.com/menu/menu.php?page=1&menu_category1=1&menu_category2=1&category=&list_checkbox_all=0",
+        "key": "",
+        "adapter": "mega-fragment",
+        "pagination": "mega"
       },
       {
-        "url": "https://www.mega-mgccoffee.com/menu/?menu_category1=2&menu_category2=2",
-        "adapter": "jsonld",
-        "key": ""
+        "url": "https://www.mega-mgccoffee.com/menu/menu.php?page=1&menu_category1=2&menu_category2=2&category=&list_checkbox_all=0",
+        "key": "",
+        "adapter": "mega-fragment",
+        "pagination": "mega"
       }
-    ]
+    ],
+    "expectedMenuCount": 190
   },
   {
     "brandId": "brand-149ee0d555be8e34",
@@ -444,6 +650,86 @@
     "registryUrl": "https://mmthcoffee.com/",
     "sources": [
       {
+        "url": "https://mmthcoffee.com/sub/menu/new_list.php",
+        "adapter": "reviewed-html",
+        "key": "신메뉴"
+      },
+      {
+        "url": "https://mmthcoffee.com/sub/menu/list.html",
+        "adapter": "reviewed-html",
+        "key": "매머드 익스프레스"
+      },
+      {
+        "url": "https://mmthcoffee.com/sub/menu/list_coffee_sub.php?menuType=O",
+        "adapter": "reviewed-html",
+        "key": "32oz"
+      },
+      {
+        "url": "https://mmthcoffee.com/sub/menu/list_coffee_sub.php?menuType=C",
+        "adapter": "reviewed-html",
+        "key": "커피"
+      },
+      {
+        "url": "https://mmthcoffee.com/sub/menu/list_coffee_sub.php?menuType=D",
+        "adapter": "reviewed-html",
+        "key": "콜드브루"
+      },
+      {
+        "url": "https://mmthcoffee.com/sub/menu/list_coffee_sub.php?menuType=N",
+        "adapter": "reviewed-html",
+        "key": "논커피"
+      },
+      {
+        "url": "https://mmthcoffee.com/sub/menu/list_coffee_sub.php?menuType=T",
+        "adapter": "reviewed-html",
+        "key": "티·에이드"
+      },
+      {
+        "url": "https://mmthcoffee.com/sub/menu/list_coffee_sub.php?menuType=B",
+        "adapter": "reviewed-html",
+        "key": "프라페·블렌디드"
+      },
+      {
+        "url": "https://mmthcoffee.com/sub/menu/list_coffee_sub.php?menuType=F",
+        "adapter": "reviewed-html",
+        "key": "푸드"
+      },
+      {
+        "url": "https://mmthcoffee.com/sub/menu/list_coffee_sub.php?menuType=R",
+        "adapter": "reviewed-html",
+        "key": "RTD"
+      },
+      {
+        "url": "https://mmthcoffee.com/sub/menu/list_sub.php?menuType=C",
+        "adapter": "reviewed-html",
+        "key": "커피"
+      },
+      {
+        "url": "https://mmthcoffee.com/sub/menu/list_sub.php?menuType=D",
+        "adapter": "reviewed-html",
+        "key": "콜드브루"
+      },
+      {
+        "url": "https://mmthcoffee.com/sub/menu/list_sub.php?menuType=N",
+        "adapter": "reviewed-html",
+        "key": "논커피"
+      },
+      {
+        "url": "https://mmthcoffee.com/sub/menu/list_sub.php?menuType=T",
+        "adapter": "reviewed-html",
+        "key": "티·에이드"
+      },
+      {
+        "url": "https://mmthcoffee.com/sub/menu/list_sub.php?menuType=B",
+        "adapter": "reviewed-html",
+        "key": "프라페·블렌디드"
+      },
+      {
+        "url": "https://mmthcoffee.com/sub/menu/list_sub.php?menuType=R",
+        "adapter": "reviewed-html",
+        "key": "RTD"
+      },
+      {
         "url": "https://mmthcoffee.com/sub/menu/list_coffee.php",
         "adapter": "reviewed-html",
         "key": ""
@@ -453,7 +739,8 @@
         "adapter": "reviewed-html",
         "key": ""
       }
-    ]
+    ],
+    "expectedMenuCount": 261
   },
   {
     "brandId": "brand-2366ea85553dc984",
@@ -468,11 +755,12 @@
     "registryUrl": "https://www.twozzim.com/",
     "sources": [
       {
-        "url": "https://www.twozzim.com/",
+        "url": "https://www.twozzim.com/bbs/content.php?co_id=menu",
         "key": "",
-        "adapter": "jsonld"
+        "adapter": "reviewed-html"
       }
-    ]
+    ],
+    "expectedMenuCount": 19
   },
   {
     "brandId": "brand-9bbe44a999e4d158",
@@ -491,7 +779,8 @@
         "key": "",
         "adapter": "reviewed-html"
       }
-    ]
+    ],
+    "expectedMenuCount": 7
   },
   {
     "brandId": "brand-9fe52457ea35b575",
@@ -510,7 +799,8 @@
         "key": "",
         "adapter": "reviewed-html"
       }
-    ]
+    ],
+    "expectedMenuCount": 15
   },
   {
     "brandId": "brand-6b4062eb7d56bbc2",
@@ -549,7 +839,8 @@
         "key": "",
         "adapter": "reviewed-html"
       }
-    ]
+    ],
+    "expectedMenuCount": 19
   },
   {
     "brandId": "brand-e237cdd96675b8e9",
@@ -566,9 +857,10 @@
       {
         "url": "http://www.hyundaiok.com/menu",
         "key": "",
-        "adapter": "jsonld"
+        "adapter": "reviewed-html"
       }
-    ]
+    ],
+    "expectedMenuCount": 10
   },
   {
     "brandId": "brand-a6a2f91c0a858eab",
@@ -585,14 +877,17 @@
       {
         "url": "https://ihwasoo.com/bbs/board.php?bo_table=menu",
         "key": "",
-        "adapter": "reviewed-html"
+        "adapter": "reviewed-html",
+        "pagination": "gnuboard"
       },
       {
         "url": "https://ihwasoo.com/bbs/board.php?bo_table=menu&sca=%EB%A9%94%EC%9D%B8+%EB%A9%94%EB%89%B4",
         "key": "",
-        "adapter": "reviewed-html"
+        "adapter": "reviewed-html",
+        "pagination": "gnuboard"
       }
-    ]
+    ],
+    "expectedMenuCount": 13
   },
   {
     "brandId": "brand-e391193d95fb4b22",
@@ -626,7 +921,8 @@
         "key": "",
         "adapter": "reviewed-html"
       }
-    ]
+    ],
+    "expectedMenuCount": 49
   },
   {
     "brandId": "brand-d12ac5629277dd74",
@@ -642,90 +938,21 @@
     "sources": [
       {
         "url": "https://jawsfood.co.kr/menu/menu.html",
-        "key": "",
-        "adapter": "reviewed-html"
-      },
-      {
-        "url": "https://jawsfood.co.kr/menu/setmenu.html",
-        "key": "",
-        "adapter": "reviewed-html"
+        "adapter": "reviewed-html",
+        "key": "menu.html"
       },
       {
         "url": "https://jawsfood.co.kr/menu/side.html",
-        "key": "",
-        "adapter": "reviewed-html"
+        "adapter": "reviewed-html",
+        "key": "side.html"
       },
       {
-        "url": "https://jawsfood.co.kr/menu/view.html?seq=1",
-        "key": "",
-        "adapter": "reviewed-html"
-      },
-      {
-        "url": "https://jawsfood.co.kr/menu/view.html?seq=15",
-        "key": "",
-        "adapter": "reviewed-html"
-      },
-      {
-        "url": "https://jawsfood.co.kr/menu/view.html?seq=16",
-        "key": "",
-        "adapter": "reviewed-html"
-      },
-      {
-        "url": "https://jawsfood.co.kr/menu/view.html?seq=17",
-        "key": "",
-        "adapter": "reviewed-html"
-      },
-      {
-        "url": "https://jawsfood.co.kr/menu/view.html?seq=18",
-        "key": "",
-        "adapter": "reviewed-html"
-      },
-      {
-        "url": "https://jawsfood.co.kr/menu/view.html?seq=19",
-        "key": "",
-        "adapter": "reviewed-html"
-      },
-      {
-        "url": "https://jawsfood.co.kr/menu/view.html?seq=2",
-        "key": "",
-        "adapter": "reviewed-html"
-      },
-      {
-        "url": "https://jawsfood.co.kr/menu/view.html?seq=20",
-        "key": "",
-        "adapter": "reviewed-html"
-      },
-      {
-        "url": "https://jawsfood.co.kr/menu/view.html?seq=21",
-        "key": "",
-        "adapter": "reviewed-html"
-      },
-      {
-        "url": "https://jawsfood.co.kr/menu/view.html?seq=3",
-        "key": "",
-        "adapter": "reviewed-html"
-      },
-      {
-        "url": "https://jawsfood.co.kr/menu/view.html?seq=4",
-        "key": "",
-        "adapter": "reviewed-html"
-      },
-      {
-        "url": "https://jawsfood.co.kr/menu/view.html?seq=5",
-        "key": "",
-        "adapter": "reviewed-html"
-      },
-      {
-        "url": "https://jawsfood.co.kr/menu/view.html?seq=6",
-        "key": "",
-        "adapter": "reviewed-html"
-      },
-      {
-        "url": "https://jawsfood.co.kr/menu/view.html?seq=8",
-        "key": "",
-        "adapter": "reviewed-html"
+        "url": "https://jawsfood.co.kr/menu/setmenu.html",
+        "adapter": "jaws-set",
+        "key": "setmenu.html"
       }
-    ]
+    ],
+    "expectedMenuCount": 19
   },
   {
     "brandId": "brand-d3742bdc75b7cfff",
@@ -782,7 +1009,8 @@
         "key": "",
         "adapter": "reviewed-html"
       }
-    ]
+    ],
+    "expectedMenuCount": 90
   },
   {
     "brandId": "brand-3af4368565dc9463",
@@ -815,8 +1043,19 @@
         "url": "https://www.gimgane.co.kr/board/index.php?board=menu_01&sca=6",
         "key": "",
         "adapter": "reviewed-html"
+      },
+      {
+        "url": "https://www.gimgane.co.kr/board/index.php?board=menu_01&sca=newmenu",
+        "adapter": "reviewed-html",
+        "key": "newmenu"
+      },
+      {
+        "url": "https://www.gimgane.co.kr/board/index.php?board=menu_01&sca=new",
+        "adapter": "reviewed-html",
+        "key": "new"
       }
-    ]
+    ],
+    "expectedMenuCount": 61
   },
   {
     "brandId": "brand-09811efd43af8395",
@@ -860,7 +1099,8 @@
         "key": "",
         "adapter": "reviewed-html"
       }
-    ]
+    ],
+    "expectedMenuCount": 64
   },
   {
     "brandId": "brand-62da25d9478406f9",
@@ -875,151 +1115,12 @@
     "registryUrl": "https://www.teacherkim.co.kr/",
     "sources": [
       {
-        "url": "https://www.teacherkim.co.kr/menu/view.html?pg=1&seq=19&bs=004001&sf=&ss=",
-        "key": "",
-        "adapter": "reviewed-html"
-      },
-      {
-        "url": "https://www.teacherkim.co.kr/menu/view.html?pg=1&seq=20&bs=004001&sf=&ss=",
-        "key": "",
-        "adapter": "reviewed-html"
-      },
-      {
-        "url": "https://www.teacherkim.co.kr/menu/view.html?pg=1&seq=32&bs=004002&sf=&ss=",
-        "key": "",
-        "adapter": "reviewed-html"
-      },
-      {
-        "url": "https://www.teacherkim.co.kr/menu/view.html?pg=1&seq=34&bs=004006&sf=&ss=",
-        "key": "",
-        "adapter": "reviewed-html"
-      },
-      {
-        "url": "https://www.teacherkim.co.kr/menu/view.html?pg=1&seq=39&bs=004006&sf=&ss=",
-        "key": "",
-        "adapter": "reviewed-html"
-      },
-      {
-        "url": "https://www.teacherkim.co.kr/menu/view.html?pg=1&seq=40&bs=004006&sf=&ss=",
-        "key": "",
-        "adapter": "reviewed-html"
-      },
-      {
-        "url": "https://www.teacherkim.co.kr/menu/view.html?pg=1&seq=46&bs=004004&sf=&ss=",
-        "key": "",
-        "adapter": "reviewed-html"
-      },
-      {
-        "url": "https://www.teacherkim.co.kr/menu/view.html?pg=1&seq=47&bs=004004&sf=&ss=",
-        "key": "",
-        "adapter": "reviewed-html"
-      },
-      {
-        "url": "https://www.teacherkim.co.kr/menu/view.html?pg=1&seq=51&bs=004005&sf=&ss=",
-        "key": "",
-        "adapter": "reviewed-html"
-      },
-      {
-        "url": "https://www.teacherkim.co.kr/menu/view.html?pg=1&seq=52&bs=004005&sf=&ss=",
-        "key": "",
-        "adapter": "reviewed-html"
-      },
-      {
-        "url": "https://www.teacherkim.co.kr/menu/view.html?pg=1&seq=54&bs=004001&sf=&ss=",
-        "key": "",
-        "adapter": "reviewed-html"
-      },
-      {
-        "url": "https://www.teacherkim.co.kr/menu/view.html?pg=1&seq=55&bs=004006&sf=&ss=",
-        "key": "",
-        "adapter": "reviewed-html"
-      },
-      {
-        "url": "https://www.teacherkim.co.kr/menu/view.html?pg=1&seq=58&bs=004006&sf=&ss=",
-        "key": "",
-        "adapter": "reviewed-html"
-      },
-      {
-        "url": "https://www.teacherkim.co.kr/menu/view.html?pg=1&seq=60&bs=004004&sf=&ss=",
-        "key": "",
-        "adapter": "reviewed-html"
-      },
-      {
-        "url": "https://www.teacherkim.co.kr/menu/view.html?pg=1&seq=62&bs=004002&sf=&ss=",
-        "key": "",
-        "adapter": "reviewed-html"
-      },
-      {
-        "url": "https://www.teacherkim.co.kr/menu/view.html?pg=1&seq=64&bs=004001&sf=&ss=",
-        "key": "",
-        "adapter": "reviewed-html"
-      },
-      {
-        "url": "https://www.teacherkim.co.kr/menu/view.html?pg=1&seq=65&bs=004002&sf=&ss=",
-        "key": "",
-        "adapter": "reviewed-html"
-      },
-      {
-        "url": "https://www.teacherkim.co.kr/menu/view.html?pg=1&seq=66&bs=004004&sf=&ss=",
-        "key": "",
-        "adapter": "reviewed-html"
-      },
-      {
-        "url": "https://www.teacherkim.co.kr/menu/view.html?pg=1&seq=67&bs=004001&sf=&ss=",
-        "key": "",
-        "adapter": "reviewed-html"
-      },
-      {
-        "url": "https://www.teacherkim.co.kr/menu/view.html?pg=1&seq=68&bs=004001&sf=&ss=",
-        "key": "",
-        "adapter": "reviewed-html"
-      },
-      {
-        "url": "https://www.teacherkim.co.kr/menu/view.html?pg=1&seq=70&bs=004007&sf=&ss=",
-        "key": "",
-        "adapter": "reviewed-html"
-      },
-      {
-        "url": "https://www.teacherkim.co.kr/menu/view.html?pg=1&seq=71&bs=004007&sf=&ss=",
-        "key": "",
-        "adapter": "reviewed-html"
-      },
-      {
-        "url": "https://www.teacherkim.co.kr/menu/view.html?pg=1&seq=72&bs=004007&sf=&ss=",
-        "key": "",
-        "adapter": "reviewed-html"
-      },
-      {
-        "url": "https://www.teacherkim.co.kr/menu/view.html?pg=1&seq=75&bs=004006&sf=&ss=",
-        "key": "",
-        "adapter": "reviewed-html"
-      },
-      {
-        "url": "https://www.teacherkim.co.kr/menu/view.html?pg=1&seq=76&bs=004004&sf=&ss=",
-        "key": "",
-        "adapter": "reviewed-html"
-      },
-      {
-        "url": "https://www.teacherkim.co.kr/menu/view.html?pg=1&seq=77&bs=004004&sf=&ss=",
-        "key": "",
-        "adapter": "reviewed-html"
-      },
-      {
-        "url": "https://www.teacherkim.co.kr/menu/view.html?pg=1&seq=78&bs=004002&sf=&ss=",
-        "key": "",
-        "adapter": "reviewed-html"
-      },
-      {
-        "url": "https://www.teacherkim.co.kr/menu/view.html?pg=1&seq=79&bs=004002&sf=&ss=",
-        "key": "",
-        "adapter": "reviewed-html"
-      },
-      {
-        "url": "https://www.teacherkim.co.kr/menu/view.html?pg=1&seq=80&bs=004002&sf=&ss=",
-        "key": "",
-        "adapter": "reviewed-html"
+        "url": "https://www.teacherkim.co.kr/menu/list.html?bs=004001",
+        "adapter": "reviewed-html",
+        "pagination": "teacherkim"
       }
-    ]
+    ],
+    "expectedMenuCount": 29
   },
   {
     "brandId": "brand-52b7eab533bf064f",
@@ -1038,7 +1139,8 @@
         "key": "",
         "adapter": "reviewed-html"
       }
-    ]
+    ],
+    "expectedMenuCount": 22
   },
   {
     "brandId": "brand-98d0269278f56dd7",
@@ -1062,7 +1164,8 @@
         "key": "",
         "adapter": "reviewed-html"
       }
-    ]
+    ],
+    "expectedMenuCount": 21
   },
   {
     "brandId": "brand-eb1ea6f3cfeef4a1",
@@ -1098,9 +1201,10 @@
       {
         "url": "https://chunlimalatang.com/menu/",
         "key": "",
-        "adapter": "jsonld"
+        "adapter": "reviewed-html"
       }
-    ]
+    ],
+    "expectedMenuCount": 4
   },
   {
     "brandId": "brand-bd40e3bf63110e3a",
@@ -1121,7 +1225,8 @@
         "adapter": "bon-api"
       }
     ],
-    "brandCode": "BF101"
+    "brandCode": "BF101",
+    "expectedMenuCount": 65
   },
   {
     "brandId": "brand-2d083c367c257949",
@@ -1142,7 +1247,8 @@
         "adapter": "bon-api"
       }
     ],
-    "brandCode": "BF102"
+    "brandCode": "BF102",
+    "expectedMenuCount": 90
   },
   {
     "brandId": "brand-d788dc4427d306fe",
@@ -1162,7 +1268,8 @@
         "adapter": "reviewed-html"
       }
     ],
-    "maxSourceBytes": 8000000
+    "maxSourceBytes": 8000000,
+    "expectedMenuCount": 57
   },
   {
     "brandId": "brand-440ae94a942a4921",
@@ -1211,7 +1318,8 @@
         "key": "",
         "adapter": "reviewed-html"
       }
-    ]
+    ],
+    "expectedMenuCount": 83
   },
   {
     "brandId": "brand-71bb2f53e15c0897",
@@ -1227,10 +1335,11 @@
     "sources": [
       {
         "url": "https://udon0410.com/menu/",
-        "key": "",
-        "adapter": "jsonld"
+        "adapter": "reviewed-html",
+        "key": "all-menu"
       }
-    ]
+    ],
+    "expectedMenuCount": 41
   },
   {
     "brandId": "brand-2a13283561756adc",
@@ -1264,11 +1373,31 @@
     "registryUrl": "https://www.hongikdonkatsu.com/",
     "sources": [
       {
-        "url": "https://www.hongikdonkatsu.com/",
-        "key": "",
-        "adapter": "jsonld"
+        "url": "https://www.hongikdonkatsu.com/menu_2021_pasta",
+        "adapter": "hongik-text"
+      },
+      {
+        "url": "https://www.hongikdonkatsu.com/menu_2021_porkcutlet",
+        "adapter": "hongik-text"
+      },
+      {
+        "url": "https://www.hongikdonkatsu.com/menu_2021_rice",
+        "adapter": "hongik-text"
+      },
+      {
+        "url": "https://www.hongikdonkatsu.com/menu_2021_side",
+        "adapter": "hongik-text"
+      },
+      {
+        "url": "https://www.hongikdonkatsu.com/menu_2021_takeout",
+        "adapter": "hongik-text"
+      },
+      {
+        "url": "https://www.hongikdonkatsu.com/menu_2021_udon",
+        "adapter": "hongik-text"
       }
-    ]
+    ],
+    "expectedMenuCount": 37
   },
   {
     "brandId": "brand-dfe7aafc7b485943",
@@ -1282,6 +1411,26 @@
     "adapter": "jsonld",
     "registryUrl": "https://wonandone.co.kr/bossam/",
     "sources": [
+      {
+        "url": "https://wonandone.co.kr/bossam/menu.asp?KeyCtgM=12",
+        "adapter": "reviewed-html",
+        "key": "족발"
+      },
+      {
+        "url": "https://wonandone.co.kr/bossam/menu.asp?KeyCtgM=4",
+        "adapter": "reviewed-html",
+        "key": "가마솥밥 반상"
+      },
+      {
+        "url": "https://wonandone.co.kr/bossam/menu.asp?KeyCtgM=8",
+        "adapter": "reviewed-html",
+        "key": "국수/보쌈"
+      },
+      {
+        "url": "https://wonandone.co.kr/bossam/menu.asp?KeyCtgM=14",
+        "adapter": "reviewed-html",
+        "key": "정식/사이드 메뉴"
+      },
       {
         "url": "https://wonandone.co.kr/bossam/menu.asp",
         "key": "",
@@ -1297,7 +1446,8 @@
         "key": "",
         "adapter": "reviewed-html"
       }
-    ]
+    ],
+    "expectedMenuCount": 59
   },
   {
     "brandId": "brand-3ab715e02b724b84",
@@ -1331,9 +1481,46 @@
     "registryUrl": "https://www.hsd.co.kr/menu/menu_list",
     "sources": [
       {
-        "url": "https://www.hsd.co.kr/menu/menu_list",
+        "url": "https://www.hsd.co.kr/api/menu/menu_list/1/0",
         "key": "",
-        "adapter": "jsonld"
+        "adapter": "hansot-json",
+        "method": "POST"
+      },
+      {
+        "url": "https://www.hsd.co.kr/api/menu/menu_list/2/0",
+        "key": "",
+        "adapter": "hansot-json",
+        "method": "POST"
+      },
+      {
+        "url": "https://www.hsd.co.kr/api/menu/menu_list/3/0",
+        "key": "",
+        "adapter": "hansot-json",
+        "method": "POST"
+      },
+      {
+        "url": "https://www.hsd.co.kr/api/menu/menu_list/4/0",
+        "key": "",
+        "adapter": "hansot-json",
+        "method": "POST"
+      },
+      {
+        "url": "https://www.hsd.co.kr/api/menu/menu_list/5/0",
+        "key": "",
+        "adapter": "hansot-json",
+        "method": "POST"
+      },
+      {
+        "url": "https://www.hsd.co.kr/api/menu/menu_list/53/0",
+        "key": "",
+        "adapter": "hansot-json",
+        "method": "POST"
+      },
+      {
+        "url": "https://www.hsd.co.kr/api/menu/menu_list/59/0",
+        "key": "",
+        "adapter": "hansot-json",
+        "method": "POST"
       }
     ]
   },
@@ -1356,7 +1543,8 @@
         "adapter": "bon-api"
       }
     ],
-    "brandCode": "BF104"
+    "brandCode": "BF104",
+    "expectedMenuCount": 80
   },
   {
     "brandId": "brand-e37848e7ad911d2a",
@@ -1377,7 +1565,8 @@
         "adapter": "bon-api"
       }
     ],
-    "brandCode": "BF105"
+    "brandCode": "BF105",
+    "expectedMenuCount": 56
   },
   {
     "brandId": "brand-e1baf7db5ac285a7",
@@ -1398,7 +1587,8 @@
         "adapter": "bon-api"
       }
     ],
-    "brandCode": "BF107"
+    "brandCode": "BF107",
+    "expectedMenuCount": 37
   },
   {
     "brandId": "brand-0e65f6b77b14e324",
@@ -1419,7 +1609,8 @@
         "adapter": "bon-api"
       }
     ],
-    "brandCode": "BF111"
+    "brandCode": "BF111",
+    "expectedMenuCount": 29
   },
   {
     "brandId": "brand-5cf4a5c95ff85d3a",
@@ -1440,7 +1631,8 @@
         "adapter": "bon-api"
       }
     ],
-    "brandCode": "BF113"
+    "brandCode": "BF113",
+    "expectedMenuCount": 14
   },
   {
     "brandId": "brand-9e7aeb464781f115",
@@ -1497,7 +1689,8 @@
         "key": "",
         "adapter": "reviewed-html"
       }
-    ]
+    ],
+    "expectedMenuCount": 9
   },
   {
     "brandId": "brand-1da93338e8beedb8",
@@ -1515,8 +1708,14 @@
         "url": "https://salady.com/menu/list_1",
         "adapter": "reviewed-html",
         "key": ""
+      },
+      {
+        "url": "https://salady.com/menu/list_3?type=side",
+        "adapter": "salady-side",
+        "key": "음료&사이드"
       }
-    ]
+    ],
+    "expectedMenuCount": 56
   },
   {
     "brandId": "brand-3c12a830fd8e20dd",
@@ -1534,8 +1733,14 @@
         "url": "https://salady.com/menu2/list_1?menu2=1",
         "adapter": "reviewed-html",
         "key": ""
+      },
+      {
+        "url": "https://salady.com/menu2/list_3?menu2=1&type=side",
+        "adapter": "salady-side",
+        "key": "음료&사이드"
       }
-    ]
+    ],
+    "expectedMenuCount": 58
   },
   {
     "brandId": "brand-b028605b3b64ee47",
@@ -1550,11 +1755,43 @@
     "registryUrl": "https://pokeallday.co.kr/",
     "sources": [
       {
-        "url": "https://pokeallday.co.kr/",
-        "key": "",
-        "adapter": "jsonld"
+        "url": "https://pokeallday.co.kr/menu_balance_box",
+        "adapter": "poke-fixed",
+        "key": "밸런스 박스"
+      },
+      {
+        "url": "https://pokeallday.co.kr/protein_poke",
+        "adapter": "poke-fixed",
+        "key": "프로틴 포케"
+      },
+      {
+        "url": "https://pokeallday.co.kr/rice_bowl",
+        "adapter": "poke-fixed",
+        "key": "덮밥"
+      },
+      {
+        "url": "https://pokeallday.co.kr/side",
+        "adapter": "poke-fixed",
+        "key": "사이드"
+      },
+      {
+        "url": "https://pokeallday.co.kr/drink",
+        "adapter": "poke-fixed",
+        "key": "음료"
+      },
+      {
+        "url": "https://pokeallday.co.kr/newmenu",
+        "adapter": "poke-fixed",
+        "key": "신메뉴"
       }
-    ]
+    ],
+    "excludedCustomCompositionSources": [
+      {
+        "url": "https://pokeallday.co.kr/poke",
+        "reason": "Choose-your-own base, toppings and sauces; ingredient combinations are not fixed official menu identities."
+      }
+    ],
+    "expectedMenuCount": 41
   },
   {
     "brandId": "brand-1bc146a27ab0e421",
@@ -1569,11 +1806,12 @@
     "registryUrl": "https://slowcali.co.kr/",
     "sources": [
       {
-        "url": "https://slowcali.co.kr/",
+        "url": "https://slowcali.co.kr/bbs/content.php?co_id=menu",
         "key": "",
-        "adapter": "jsonld"
+        "adapter": "reviewed-html"
       }
-    ]
+    ],
+    "expectedMenuCount": 46
   },
   {
     "brandId": "brand-29327af78758b6f5",
@@ -1588,11 +1826,42 @@
     "registryUrl": "https://www.subway.co.kr/",
     "sources": [
       {
-        "url": "https://www.subway.co.kr/",
-        "key": "",
-        "adapter": "jsonld"
+        "url": "https://www.subway.co.kr/menuList/sandwich",
+        "adapter": "subway-list",
+        "key": "sandwich"
+      },
+      {
+        "url": "https://www.subway.co.kr/menuList/grain_salad",
+        "adapter": "subway-list",
+        "key": "grain_salad"
+      },
+      {
+        "url": "https://www.subway.co.kr/menuList/salad",
+        "adapter": "subway-list",
+        "key": "salad"
+      },
+      {
+        "url": "https://www.subway.co.kr/menuList/unit",
+        "adapter": "subway-list",
+        "key": "unit"
+      },
+      {
+        "url": "https://www.subway.co.kr/menuList/morning",
+        "adapter": "subway-list",
+        "key": "morning"
+      },
+      {
+        "url": "https://www.subway.co.kr/menuList/sidedrink",
+        "adapter": "subway-list",
+        "key": "sidedrink"
+      },
+      {
+        "url": "https://www.subway.co.kr/menuList/catering",
+        "adapter": "subway-list",
+        "key": "catering"
       }
-    ]
+    ],
+    "expectedMenuCount": 100
   },
   {
     "brandId": "brand-70ce8c35375d9fae",
@@ -1607,11 +1876,49 @@
     "registryUrl": "https://isaac-toast.co.kr/",
     "sources": [
       {
+        "url": "https://isaac-toast.co.kr/menu/menu.php?ptype=list&catcode=10100000",
+        "adapter": "reviewed-html",
+        "key": "이삭토스트",
+        "pagination": "isaac"
+      },
+      {
+        "url": "https://isaac-toast.co.kr/menu/menu.php?ptype=list&catcode=10110000",
+        "adapter": "reviewed-html",
+        "key": "소스 & 과일잼",
+        "pagination": "isaac"
+      },
+      {
+        "url": "https://isaac-toast.co.kr/menu/menu.php?ptype=list&catcode=10101100",
+        "adapter": "reviewed-html",
+        "key": "세트메뉴",
+        "pagination": "isaac"
+      },
+      {
+        "url": "https://isaac-toast.co.kr/menu/menu.php?ptype=list&catcode=10101200",
+        "adapter": "reviewed-html",
+        "key": "사이드",
+        "pagination": "isaac"
+      },
+      {
+        "url": "https://isaac-toast.co.kr/menu/menu.php?ptype=list&catcode=10101300",
+        "adapter": "reviewed-html",
+        "key": "음료",
+        "pagination": "isaac"
+      },
+      {
+        "url": "https://isaac-toast.co.kr/menu/menu.php?page=2&catcode=10101000",
+        "adapter": "reviewed-html",
+        "key": "2",
+        "pagination": "isaac"
+      },
+      {
         "url": "https://isaac-toast.co.kr/menu/menu.php?ptype=list&catcode=10101000",
         "adapter": "reviewed-html",
-        "key": ""
+        "key": "",
+        "pagination": "isaac"
       }
-    ]
+    ],
+    "expectedMenuCount": 60
   },
   {
     "brandId": "brand-8032e5a2633bc1e3",
@@ -1626,11 +1933,52 @@
     "registryUrl": "https://eggdrop.com/menu/list.php",
     "sources": [
       {
+        "url": "https://eggdrop.com/menu/list.php?category=NEW",
+        "adapter": "reviewed-html",
+        "key": "NEW"
+      },
+      {
+        "url": "https://eggdrop.com/menu/list.php?category=SET MENU",
+        "adapter": "reviewed-html",
+        "key": "SET MENU"
+      },
+      {
+        "url": "https://eggdrop.com/menu/list.php?category=SANDWICH",
+        "adapter": "reviewed-html",
+        "key": "SANDWICH"
+      },
+      {
+        "url": "https://eggdrop.com/menu/list.php?category=TOAST",
+        "adapter": "reviewed-html",
+        "key": "TOAST"
+      },
+      {
+        "url": "https://eggdrop.com/menu/list.php?category=BAGEL",
+        "adapter": "reviewed-html",
+        "key": "BAGEL"
+      },
+      {
+        "url": "https://eggdrop.com/menu/list.php?category=BRUNCH",
+        "adapter": "reviewed-html",
+        "key": "BRUNCH"
+      },
+      {
+        "url": "https://eggdrop.com/menu/list.php?category=SIDE",
+        "adapter": "reviewed-html",
+        "key": "SIDE"
+      },
+      {
+        "url": "https://eggdrop.com/menu/list.php?category=DRINK, COFFEE",
+        "adapter": "reviewed-html",
+        "key": "DRINK, COFFEE"
+      },
+      {
         "url": "https://eggdrop.com/menu/list.php",
         "key": "",
         "adapter": "reviewed-html"
       }
-    ]
+    ],
+    "expectedMenuCount": 73
   },
   {
     "brandId": "brand-adb1fa3e7378cd49",
@@ -1645,9 +1993,19 @@
     "registryUrl": "https://camtotoast.com/",
     "sources": [
       {
-        "url": "https://camtotoast.com/",
-        "key": "",
-        "adapter": "jsonld"
+        "url": "https://camtotoast.com/44",
+        "key": "토스트",
+        "adapter": "reviewed-html"
+      },
+      {
+        "url": "https://camtotoast.com/46",
+        "key": "사이드",
+        "adapter": "reviewed-html"
+      },
+      {
+        "url": "https://camtotoast.com/45",
+        "key": "음료",
+        "adapter": "reviewed-html"
       }
     ]
   },
@@ -1668,7 +2026,8 @@
         "key": "pizzaschool-menu",
         "adapter": "reviewed-delivery"
       }
-    ]
+    ],
+    "expectedMenuCount": 38
   },
   {
     "brandId": "brand-2891bc50e9e622e6",
@@ -1691,8 +2050,14 @@
         "url": "https://m.pji.co.kr/menu/other/side",
         "key": "papajohns-other-side",
         "adapter": "reviewed-delivery"
+      },
+      {
+        "url": "https://m.pji.co.kr/menu/other/drink",
+        "adapter": "reviewed-delivery",
+        "key": "papajohns-other-side"
       }
-    ]
+    ],
+    "expectedMenuCount": 49
   },
   {
     "brandId": "brand-f2c4cd89053b4ff8",
@@ -1726,7 +2091,9 @@
         "key": "youngman-two",
         "adapter": "reviewed-delivery"
       }
-    ]
+    ],
+    "publishPolicy": "REVIEW_ONLY",
+    "reviewReason": "Additional official pizza menu.php and drinks/other menu6.php are not extractable named lists; previously collected four HTML pages remain recorded, but full current tabs cannot be proven."
   },
   {
     "brandId": "brand-e7bc4d2ab88a800c",
@@ -1743,14 +2110,23 @@
       {
         "url": "https://www.norangtongdak.co.kr/menu/chicken_list.html",
         "key": "norang-chicken-native",
-        "adapter": "reviewed-delivery"
+        "adapter": "norang-list",
+        "transport": "default-jvm"
       },
       {
         "url": "https://www.norangtongdak.co.kr/menu/side.html",
         "key": "norang-side-native",
-        "adapter": "reviewed-delivery"
+        "adapter": "norang-list",
+        "transport": "default-jvm"
+      },
+      {
+        "url": "https://www.norangtongdak.co.kr/menu/best.html",
+        "key": "norang-best-native",
+        "adapter": "norang-list",
+        "transport": "default-jvm"
       }
-    ]
+    ],
+    "expectedMenuCount": 47
   },
   {
     "brandId": "brand-c253f58a17fc9b81",
@@ -1789,7 +2165,8 @@
         "key": "gcova-chicken6",
         "adapter": "reviewed-delivery"
       }
-    ]
+    ],
+    "expectedMenuCount": 5
   },
   {
     "brandId": "brand-c242a10bbca4c411",
@@ -1804,16 +2181,13 @@
     "registryUrl": "https://www.cheogajip.co.kr/bbs/board.php?bo_table=menu",
     "sources": [
       {
-        "url": "https://www.cheogajip.co.kr/bbs/board.php?bo_table=menu",
-        "key": "cheogajip-menu",
-        "adapter": "reviewed-delivery"
-      },
-      {
         "url": "https://www.cheogajip.co.kr/bbs/board.php?bo_table=allmenu",
         "key": "cheogajip-all",
-        "adapter": "reviewed-delivery"
+        "adapter": "cheogajip-list",
+        "pagination": "gnuboard"
       }
-    ]
+    ],
+    "expectedMenuCount": 44
   },
   {
     "brandId": "brand-1e99fd5b57a9f5cb",
@@ -1832,7 +2206,8 @@
         "key": "pizzamaru-menu",
         "adapter": "reviewed-delivery"
       }
-    ]
+    ],
+    "expectedMenuCount": 31
   },
   {
     "brandId": "brand-f4abfad35563de25",
@@ -1849,19 +2224,23 @@
       {
         "url": "https://www.mexicana.co.kr/menu/product.asp",
         "key": "mexicana-menu",
-        "adapter": "reviewed-delivery"
+        "adapter": "reviewed-delivery",
+        "pagination": "mexicana"
       },
       {
         "url": "https://www.mexicana.co.kr/menu/product.asp?page=2&CateCode=&searchstr=",
         "key": "mexicana-page2",
-        "adapter": "reviewed-delivery"
+        "adapter": "reviewed-delivery",
+        "pagination": "mexicana"
       },
       {
         "url": "https://www.mexicana.co.kr/menu/product.asp?page=3&CateCode=&searchstr=",
         "key": "mexicana-page3",
-        "adapter": "reviewed-delivery"
+        "adapter": "reviewed-delivery",
+        "pagination": "mexicana"
       }
-    ]
+    ],
+    "expectedMenuCount": 33
   },
   {
     "brandId": "brand-b0d0c4de8cdf23bc",
@@ -1880,7 +2259,8 @@
         "key": "60chicken-list",
         "adapter": "reviewed-delivery"
       }
-    ]
+    ],
+    "expectedMenuCount": 60
   },
   {
     "brandId": "brand-57244fb148c377c6",
@@ -1895,11 +2275,13 @@
     "registryUrl": "https://order.banolimpizza.com/menu/list?menuId=1",
     "sources": [
       {
-        "url": "https://order.banolimpizza.com/menu/list?menuId=1",
-        "key": "banolim-menu",
-        "adapter": "reviewed-delivery"
+        "url": "https://order.banolimpizza.com/menu/list?categoryId=1",
+        "adapter": "banolim-native",
+        "pagination": "banolim",
+        "key": "신메뉴"
       }
-    ]
+    ],
+    "expectedMenuCount": 91
   },
   {
     "brandId": "brand-41b772c57bada9f9",
@@ -1918,7 +2300,8 @@
         "key": "frank-menu",
         "adapter": "reviewed-delivery"
       }
-    ]
+    ],
+    "expectedMenuCount": 34
   },
   {
     "brandId": "brand-69ad361cd26106b1",
@@ -1937,7 +2320,8 @@
         "key": "nobrand-menu-native",
         "adapter": "reviewed-delivery"
       }
-    ]
+    ],
+    "expectedMenuCount": 55
   },
   {
     "brandId": "brand-2cf7eb0ea975163d",
@@ -1954,9 +2338,10 @@
       {
         "url": "https://newmaul.com/sub/menu.php",
         "key": "",
-        "adapter": "jsonld"
+        "adapter": "reviewed-html"
       }
-    ]
+    ],
+    "expectedMenuCount": 11
   },
   {
     "brandId": "brand-537263c2bc830a08",
@@ -1989,8 +2374,14 @@
         "url": "https://paikdabang.com/menu/menu_ccino/",
         "key": "paik-ccino",
         "adapter": "reviewed-delivery"
+      },
+      {
+        "url": "https://paikdabang.com/menu/menu_new/",
+        "adapter": "reviewed-delivery",
+        "key": "paik-new"
       }
-    ]
+    ],
+    "expectedMenuCount": 367
   },
   {
     "brandId": "brand-1742b64ed29107ac",
@@ -2034,7 +2425,8 @@
         "key": "baskin-coffee-sub",
         "adapter": "reviewed-delivery"
       }
-    ]
+    ],
+    "expectedMenuCount": 132
   },
   {
     "brandId": "brand-7dfea7361415a819",
@@ -2049,11 +2441,265 @@
     "registryUrl": "https://www.paris.co.kr/products/",
     "sources": [
       {
-        "url": "https://www.paris.co.kr/products/",
-        "key": "paris-menu",
-        "adapter": "reviewed-delivery"
+        "url": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EB%B8%8C%EB%A0%88%EB%93%9C&per_page=12&paged=1",
+        "adapter": "paris-fragment",
+        "pagination": "paris",
+        "key": "브레드"
+      },
+      {
+        "url": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EC%BC%80%EC%9D%B4%ED%81%AC&per_page=12&paged=1",
+        "adapter": "paris-fragment",
+        "pagination": "paris",
+        "key": "케이크"
+      },
+      {
+        "url": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EC%83%8C%EB%93%9C%EC%9C%84%EC%B9%98-%EC%83%90%EB%9F%AC%EB%93%9C&per_page=12&paged=1",
+        "adapter": "paris-fragment",
+        "pagination": "paris",
+        "key": "샌드위치-샐러드"
+      },
+      {
+        "url": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EC%84%A0%EB%AC%BC&per_page=12&paged=1",
+        "adapter": "paris-fragment",
+        "pagination": "paris",
+        "key": "선물"
+      },
+      {
+        "url": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EB%94%94%EC%A0%80%ED%8A%B8-%EC%8A%A4%EB%82%B5&per_page=12&paged=1",
+        "adapter": "paris-fragment",
+        "pagination": "paris",
+        "key": "디저트-스낵"
+      },
+      {
+        "url": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EC%BB%A4%ED%94%BC-%EC%9D%8C%EB%A3%8C&per_page=12&paged=1",
+        "adapter": "paris-fragment",
+        "pagination": "paris",
+        "key": "커피-음료"
+      },
+      {
+        "url": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%ED%8D%BC%EC%8A%A4%ED%8A%B8%ED%81%B4%EB%9E%98%EC%8A%A4%ED%82%A4%EC%B9%9C&per_page=12&paged=1",
+        "adapter": "paris-fragment",
+        "pagination": "paris",
+        "key": "퍼스트클래스키친"
+      },
+      {
+        "url": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EB%B8%8C%EB%A0%88%EB%93%9C&per_page=12&paged=1",
+        "adapter": "paris-fragment",
+        "pagination": "paris",
+        "key": "브레드"
+      },
+      {
+        "url": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EB%B8%8C%EB%A0%88%EB%93%9C&per_page=12&paged=1",
+        "adapter": "paris-fragment",
+        "pagination": "paris",
+        "key": "브레드"
+      },
+      {
+        "url": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EB%B8%8C%EB%A0%88%EB%93%9C&per_page=12&paged=1",
+        "adapter": "paris-fragment",
+        "pagination": "paris",
+        "key": "브레드"
+      },
+      {
+        "url": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EB%B8%8C%EB%A0%88%EB%93%9C&per_page=12&paged=1",
+        "adapter": "paris-fragment",
+        "pagination": "paris",
+        "key": "브레드"
+      },
+      {
+        "url": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EB%B8%8C%EB%A0%88%EB%93%9C&per_page=12&paged=1",
+        "adapter": "paris-fragment",
+        "pagination": "paris",
+        "key": "브레드"
+      },
+      {
+        "url": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EC%BC%80%EC%9D%B4%ED%81%AC&per_page=12&paged=1",
+        "adapter": "paris-fragment",
+        "pagination": "paris",
+        "key": "케이크"
+      },
+      {
+        "url": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EC%BC%80%EC%9D%B4%ED%81%AC&per_page=12&paged=1",
+        "adapter": "paris-fragment",
+        "pagination": "paris",
+        "key": "케이크"
+      },
+      {
+        "url": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EC%BC%80%EC%9D%B4%ED%81%AC&per_page=12&paged=1",
+        "adapter": "paris-fragment",
+        "pagination": "paris",
+        "key": "케이크"
+      },
+      {
+        "url": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EC%BC%80%EC%9D%B4%ED%81%AC&per_page=12&paged=1",
+        "adapter": "paris-fragment",
+        "pagination": "paris",
+        "key": "케이크"
+      },
+      {
+        "url": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EC%BC%80%EC%9D%B4%ED%81%AC&per_page=12&paged=1",
+        "adapter": "paris-fragment",
+        "pagination": "paris",
+        "key": "케이크"
+      },
+      {
+        "url": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EC%BC%80%EC%9D%B4%ED%81%AC&per_page=12&paged=1",
+        "adapter": "paris-fragment",
+        "pagination": "paris",
+        "key": "케이크"
+      },
+      {
+        "url": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EC%BC%80%EC%9D%B4%ED%81%AC&per_page=12&paged=1",
+        "adapter": "paris-fragment",
+        "pagination": "paris",
+        "key": "케이크"
+      },
+      {
+        "url": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EC%BC%80%EC%9D%B4%ED%81%AC&per_page=12&paged=1",
+        "adapter": "paris-fragment",
+        "pagination": "paris",
+        "key": "케이크"
+      },
+      {
+        "url": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EC%83%8C%EB%93%9C%EC%9C%84%EC%B9%98-%EC%83%90%EB%9F%AC%EB%93%9C&per_page=12&paged=1",
+        "adapter": "paris-fragment",
+        "pagination": "paris",
+        "key": "샌드위치-샐러드"
+      },
+      {
+        "url": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EC%83%8C%EB%93%9C%EC%9C%84%EC%B9%98-%EC%83%90%EB%9F%AC%EB%93%9C&per_page=12&paged=1",
+        "adapter": "paris-fragment",
+        "pagination": "paris",
+        "key": "샌드위치-샐러드"
+      },
+      {
+        "url": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EC%83%8C%EB%93%9C%EC%9C%84%EC%B9%98-%EC%83%90%EB%9F%AC%EB%93%9C&per_page=12&paged=1",
+        "adapter": "paris-fragment",
+        "pagination": "paris",
+        "key": "샌드위치-샐러드"
+      },
+      {
+        "url": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EC%84%A0%EB%AC%BC&per_page=12&paged=1",
+        "adapter": "paris-fragment",
+        "pagination": "paris",
+        "key": "선물"
+      },
+      {
+        "url": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EC%84%A0%EB%AC%BC&per_page=12&paged=1",
+        "adapter": "paris-fragment",
+        "pagination": "paris",
+        "key": "선물"
+      },
+      {
+        "url": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EC%84%A0%EB%AC%BC&per_page=12&paged=1",
+        "adapter": "paris-fragment",
+        "pagination": "paris",
+        "key": "선물"
+      },
+      {
+        "url": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EC%84%A0%EB%AC%BC&per_page=12&paged=1",
+        "adapter": "paris-fragment",
+        "pagination": "paris",
+        "key": "선물"
+      },
+      {
+        "url": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EB%94%94%EC%A0%80%ED%8A%B8-%EC%8A%A4%EB%82%B5&per_page=12&paged=1",
+        "adapter": "paris-fragment",
+        "pagination": "paris",
+        "key": "디저트-스낵"
+      },
+      {
+        "url": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EB%94%94%EC%A0%80%ED%8A%B8-%EC%8A%A4%EB%82%B5&per_page=12&paged=1",
+        "adapter": "paris-fragment",
+        "pagination": "paris",
+        "key": "디저트-스낵"
+      },
+      {
+        "url": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EB%94%94%EC%A0%80%ED%8A%B8-%EC%8A%A4%EB%82%B5&per_page=12&paged=1",
+        "adapter": "paris-fragment",
+        "pagination": "paris",
+        "key": "디저트-스낵"
+      },
+      {
+        "url": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EB%94%94%EC%A0%80%ED%8A%B8-%EC%8A%A4%EB%82%B5&per_page=12&paged=1",
+        "adapter": "paris-fragment",
+        "pagination": "paris",
+        "key": "디저트-스낵"
+      },
+      {
+        "url": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EB%94%94%EC%A0%80%ED%8A%B8-%EC%8A%A4%EB%82%B5&per_page=12&paged=1",
+        "adapter": "paris-fragment",
+        "pagination": "paris",
+        "key": "디저트-스낵"
+      },
+      {
+        "url": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EB%94%94%EC%A0%80%ED%8A%B8-%EC%8A%A4%EB%82%B5&per_page=12&paged=1",
+        "adapter": "paris-fragment",
+        "pagination": "paris",
+        "key": "디저트-스낵"
+      },
+      {
+        "url": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EB%94%94%EC%A0%80%ED%8A%B8-%EC%8A%A4%EB%82%B5&per_page=12&paged=1",
+        "adapter": "paris-fragment",
+        "pagination": "paris",
+        "key": "디저트-스낵"
+      },
+      {
+        "url": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EC%BB%A4%ED%94%BC-%EC%9D%8C%EB%A3%8C&per_page=12&paged=1",
+        "adapter": "paris-fragment",
+        "pagination": "paris",
+        "key": "커피-음료"
+      },
+      {
+        "url": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EC%BB%A4%ED%94%BC-%EC%9D%8C%EB%A3%8C&per_page=12&paged=1",
+        "adapter": "paris-fragment",
+        "pagination": "paris",
+        "key": "커피-음료"
+      },
+      {
+        "url": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EC%BB%A4%ED%94%BC-%EC%9D%8C%EB%A3%8C&per_page=12&paged=1",
+        "adapter": "paris-fragment",
+        "pagination": "paris",
+        "key": "커피-음료"
+      },
+      {
+        "url": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EC%BB%A4%ED%94%BC-%EC%9D%8C%EB%A3%8C&per_page=12&paged=1",
+        "adapter": "paris-fragment",
+        "pagination": "paris",
+        "key": "커피-음료"
+      },
+      {
+        "url": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EC%BB%A4%ED%94%BC-%EC%9D%8C%EB%A3%8C&per_page=12&paged=1",
+        "adapter": "paris-fragment",
+        "pagination": "paris",
+        "key": "커피-음료"
+      },
+      {
+        "url": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EC%BB%A4%ED%94%BC-%EC%9D%8C%EB%A3%8C&per_page=12&paged=1",
+        "adapter": "paris-fragment",
+        "pagination": "paris",
+        "key": "커피-음료"
+      },
+      {
+        "url": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%ED%8D%BC%EC%8A%A4%ED%8A%B8%ED%81%B4%EB%9E%98%EC%8A%A4%ED%82%A4%EC%B9%9C&per_page=12&paged=1",
+        "adapter": "paris-fragment",
+        "pagination": "paris",
+        "key": "퍼스트클래스키친"
+      },
+      {
+        "url": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%ED%8D%BC%EC%8A%A4%ED%8A%B8%ED%81%B4%EB%9E%98%EC%8A%A4%ED%82%A4%EC%B9%9C&per_page=12&paged=1",
+        "adapter": "paris-fragment",
+        "pagination": "paris",
+        "key": "퍼스트클래스키친"
+      },
+      {
+        "url": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%ED%8D%BC%EC%8A%A4%ED%8A%B8%ED%81%B4%EB%9E%98%EC%8A%A4%ED%82%A4%EC%B9%9C&per_page=12&paged=1",
+        "adapter": "paris-fragment",
+        "pagination": "paris",
+        "key": "퍼스트클래스키친"
       }
-    ]
+    ],
+    "expectedMenuCount": 522
   },
   {
     "brandId": "brand-61b7f46d49620328",
@@ -2073,7 +2719,8 @@
         "adapter": "reviewed-delivery"
       }
     ],
-    "maxSourceBytes": 8000000
+    "maxSourceBytes": 8000000,
+    "expectedMenuCount": 95
   },
   {
     "brandId": "brand-3d3d7aa34cc1f578",
@@ -2092,7 +2739,8 @@
         "key": "misoya-menu",
         "adapter": "reviewed-delivery"
       }
-    ]
+    ],
+    "expectedMenuCount": 54
   },
   {
     "brandId": "brand-53314eb3760b340b",
@@ -2108,10 +2756,41 @@
     "sources": [
       {
         "url": "https://www.hollys.co.kr/menu/espresso.do",
-        "key": "hollys-home",
-        "adapter": "reviewed-delivery"
+        "adapter": "hollys-list",
+        "key": "커피"
+      },
+      {
+        "url": "https://www.hollys.co.kr/menu/signature.do",
+        "adapter": "hollys-list",
+        "key": "라떼 · 초콜릿 · 티"
+      },
+      {
+        "url": "https://www.hollys.co.kr/menu/hollyccino.do",
+        "adapter": "hollys-list",
+        "key": "할리치노 · 빙수"
+      },
+      {
+        "url": "https://www.hollys.co.kr/menu/juice.do",
+        "adapter": "hollys-list",
+        "key": "스무디 · 주스"
+      },
+      {
+        "url": "https://www.hollys.co.kr/menu/tea.do",
+        "adapter": "hollys-list",
+        "key": "스파클링"
+      },
+      {
+        "url": "https://www.hollys.co.kr/menu/bakery.do",
+        "adapter": "hollys-list",
+        "key": "푸드"
+      },
+      {
+        "url": "https://www.hollys.co.kr/menu/bean.do",
+        "adapter": "hollys-list",
+        "key": "MD식품"
       }
-    ]
+    ],
+    "expectedMenuCount": 166
   },
   {
     "brandId": "brand-07de1aee884692c4",
@@ -2126,11 +2805,55 @@
     "registryUrl": "https://www.7thpizza.com/sub/menu/list.php",
     "sources": [
       {
-        "url": "https://www.7thpizza.com/sub/menu/list.php",
+        "url": "https://www.7thpizza.com/sub/menu/list.php?menuCate=1",
         "key": "",
-        "adapter": "jsonld"
+        "adapter": "seventh-list",
+        "pagination": "seventh"
+      },
+      {
+        "url": "https://www.7thpizza.com/sub/menu/list.php?menuCate=2",
+        "key": "",
+        "adapter": "seventh-list",
+        "pagination": "seventh"
+      },
+      {
+        "url": "https://www.7thpizza.com/sub/menu/list.php?menuCate=3",
+        "key": "",
+        "adapter": "seventh-list",
+        "pagination": "seventh"
+      },
+      {
+        "url": "https://www.7thpizza.com/sub/menu/list.php?menuCate=4",
+        "key": "",
+        "adapter": "seventh-list",
+        "pagination": "seventh"
+      },
+      {
+        "url": "https://www.7thpizza.com/sub/menu/list.php?menuCate=5",
+        "key": "",
+        "adapter": "seventh-list",
+        "pagination": "seventh"
+      },
+      {
+        "url": "https://www.7thpizza.com/sub/menu/list.php?menuCate=6",
+        "key": "",
+        "adapter": "seventh-list",
+        "pagination": "seventh"
+      },
+      {
+        "url": "https://www.7thpizza.com/sub/menu/list.php?menuCate=7",
+        "key": "",
+        "adapter": "seventh-list",
+        "pagination": "seventh"
+      },
+      {
+        "url": "https://www.7thpizza.com/sub/menu/list.php?menuCate=8",
+        "key": "",
+        "adapter": "seventh-list",
+        "pagination": "seventh"
       }
-    ]
+    ],
+    "expectedMenuCount": 50
   },
   {
     "brandId": "brand-35225ece8d72c5b9",
@@ -2149,7 +2872,8 @@
         "key": "tomato-list",
         "adapter": "reviewed-delivery"
       }
-    ]
+    ],
+    "expectedMenuCount": 109
   },
   {
     "brandId": "brand-977382baa9a9159b",
@@ -2168,7 +2892,8 @@
         "key": "yupdduk-list",
         "adapter": "reviewed-delivery"
       }
-    ]
+    ],
+    "expectedMenuCount": 53
   },
   {
     "brandId": "brand-fdb71b87248a93b9",
@@ -2184,10 +2909,56 @@
     "sources": [
       {
         "url": "https://www.gong-cha.co.kr/brand/menu/product?category=001001&scroll=y",
-        "key": "gongcha-list",
-        "adapter": "reviewed-delivery"
+        "adapter": "reviewed-delivery",
+        "key": "gongcha-list"
+      },
+      {
+        "url": "https://www.gong-cha.co.kr/brand/menu/product?category=001002&scroll=y",
+        "adapter": "reviewed-delivery",
+        "key": "gongcha-list"
+      },
+      {
+        "url": "https://www.gong-cha.co.kr/brand/menu/product?category=001003&scroll=y",
+        "adapter": "reviewed-delivery",
+        "key": "gongcha-list"
+      },
+      {
+        "url": "https://www.gong-cha.co.kr/brand/menu/product?category=001006&scroll=y",
+        "adapter": "reviewed-delivery",
+        "key": "gongcha-list"
+      },
+      {
+        "url": "https://www.gong-cha.co.kr/brand/menu/product?category=001010&scroll=y",
+        "adapter": "reviewed-delivery",
+        "key": "gongcha-list"
+      },
+      {
+        "url": "https://www.gong-cha.co.kr/brand/menu/product?category=001011&scroll=y",
+        "adapter": "reviewed-delivery",
+        "key": "gongcha-list"
+      },
+      {
+        "url": "https://www.gong-cha.co.kr/brand/menu/product?category=001015&scroll=y",
+        "adapter": "reviewed-delivery",
+        "key": "gongcha-list"
+      },
+      {
+        "url": "https://www.gong-cha.co.kr/brand/menu/product?category=001017&scroll=y",
+        "adapter": "reviewed-delivery",
+        "key": "gongcha-list"
+      },
+      {
+        "url": "https://www.gong-cha.co.kr/brand/menu/product?category=001018&scroll=y",
+        "adapter": "reviewed-delivery",
+        "key": "gongcha-list"
+      },
+      {
+        "url": "https://www.gong-cha.co.kr/brand/menu/product?category=002001&scroll=y",
+        "adapter": "reviewed-delivery",
+        "key": "gongcha-list"
       }
-    ]
+    ],
+    "expectedMenuCount": 144
   },
   {
     "brandId": "brand-9d8b8d6c615c6ee7",
@@ -2202,36 +2973,13 @@
     "registryUrl": "https://www.dunkindonuts.co.kr/menu/all",
     "sources": [
       {
-        "url": "https://www.dunkindonuts.co.kr/menu/all",
-        "key": "dunkin-list",
-        "adapter": "reviewed-delivery"
-      },
-      {
         "url": "https://www.dunkindonuts.co.kr/menu?cat=1",
-        "key": "dunkin-donut",
-        "adapter": "reviewed-delivery"
-      },
-      {
-        "url": "https://www.dunkindonuts.co.kr/menu?cat=2",
-        "key": "dunkin-food",
-        "adapter": "reviewed-delivery"
-      },
-      {
-        "url": "https://www.dunkindonuts.co.kr/menu?cat=6",
-        "key": "dunkin-coffee",
-        "adapter": "reviewed-delivery"
-      },
-      {
-        "url": "https://www.dunkindonuts.co.kr/menu?cat=3",
-        "key": "dunkin-drink",
-        "adapter": "reviewed-delivery"
-      },
-      {
-        "url": "https://www.dunkindonuts.co.kr/menu?cat=5",
-        "key": "dunkin-snack",
-        "adapter": "reviewed-delivery"
+        "adapter": "dunkin-native",
+        "pagination": "dunkin-native",
+        "key": "DONUT"
       }
-    ]
+    ],
+    "expectedMenuCount": 223
   },
   {
     "brandId": "brand-5203807bf8b4bc7a",
@@ -2250,7 +2998,8 @@
         "key": "jokbal-menu-resolved",
         "adapter": "reviewed-delivery"
       }
-    ]
+    ],
+    "expectedMenuCount": 12
   },
   {
     "brandId": "brand-7b853dd449517e57",
@@ -2269,7 +3018,8 @@
         "key": "hosigi-list",
         "adapter": "reviewed-delivery"
       }
-    ]
+    ],
+    "expectedMenuCount": 32
   },
   {
     "brandId": "brand-a0302f70b937755f",
@@ -2288,7 +3038,8 @@
         "adapter": "tlj",
         "key": ""
       }
-    ]
+    ],
+    "expectedMenuCount": 442
   },
   {
     "brandId": "brand-9f125dd967fd168e",
@@ -2305,9 +3056,10 @@
       {
         "url": "https://www.lotteeatz.com/brand/kkd",
         "key": "",
-        "adapter": "jsonld"
+        "adapter": "eatz-list"
       }
-    ]
+    ],
+    "expectedMenuCount": 50
   },
   {
     "brandId": "brand-e32a9313e634ead7",
@@ -2324,9 +3076,125 @@
       {
         "url": "http://www.hjhbakery.com/product/product_list.asp",
         "key": "",
-        "adapter": "jsonld"
+        "adapter": "hjh-list",
+        "pagination": "hjh"
+      },
+      {
+        "url": "http://www.hjhbakery.com/product/product_list.asp?code1=3",
+        "key": "",
+        "adapter": "hjh-list",
+        "pagination": "hjh"
+      },
+      {
+        "url": "http://www.hjhbakery.com/product/product_list.asp?code1=4",
+        "key": "",
+        "adapter": "hjh-list",
+        "pagination": "hjh"
+      },
+      {
+        "url": "http://www.hjhbakery.com/product/product_list.asp?code1=8",
+        "key": "",
+        "adapter": "hjh-list",
+        "pagination": "hjh"
+      },
+      {
+        "url": "http://www.hjhbakery.com/product/product_list.asp?code1=6",
+        "key": "",
+        "adapter": "hjh-list",
+        "pagination": "hjh"
+      },
+      {
+        "url": "http://www.hjhbakery.com/product/product_list_cafe.asp",
+        "key": "",
+        "adapter": "hjh-list",
+        "pagination": "hjh"
+      },
+      {
+        "url": "http://www.hjhbakery.com/product/product_list_cafe.asp?code1=1&code2=1",
+        "key": "",
+        "adapter": "hjh-list",
+        "pagination": "hjh"
+      },
+      {
+        "url": "http://www.hjhbakery.com/product/product_list_cafe.asp?code1=1&code2=2",
+        "key": "",
+        "adapter": "hjh-list",
+        "pagination": "hjh"
+      },
+      {
+        "url": "http://www.hjhbakery.com/product/product_list_cafe.asp?code1=1&code2=3",
+        "key": "",
+        "adapter": "hjh-list",
+        "pagination": "hjh"
+      },
+      {
+        "url": "http://www.hjhbakery.com/product/product_list_cafe.asp?code1=1&code2=4",
+        "key": "",
+        "adapter": "hjh-list",
+        "pagination": "hjh"
+      },
+      {
+        "url": "http://www.hjhbakery.com/product/product_list_cafe.asp?code1=1&code2=5",
+        "key": "",
+        "adapter": "hjh-list",
+        "pagination": "hjh"
+      },
+      {
+        "url": "http://www.hjhbakery.com/product/product_list_best.asp",
+        "key": "",
+        "adapter": "hjh-list",
+        "pagination": "hjh"
+      },
+      {
+        "url": "http://www.hjhbakery.com/product/product_list.asp?code1=2",
+        "key": "",
+        "adapter": "hjh-list",
+        "pagination": "hjh"
+      },
+      {
+        "url": "http://www.hjhbakery.com/product/product_list.asp?code1=2&code2=2",
+        "key": "",
+        "adapter": "hjh-list",
+        "pagination": "hjh"
+      },
+      {
+        "url": "http://www.hjhbakery.com/product/product_list.asp?code1=2&code2=5",
+        "key": "",
+        "adapter": "hjh-list",
+        "pagination": "hjh"
+      },
+      {
+        "url": "http://www.hjhbakery.com/product/product_list.asp?code1=2&code2=6",
+        "key": "",
+        "adapter": "hjh-list",
+        "pagination": "hjh"
+      },
+      {
+        "url": "http://www.hjhbakery.com/product/product_list.asp?code1=2&code2=3",
+        "key": "",
+        "adapter": "hjh-list",
+        "pagination": "hjh"
+      },
+      {
+        "url": "http://www.hjhbakery.com/product/product_list.asp?code1=2&code2=4",
+        "key": "",
+        "adapter": "hjh-list",
+        "pagination": "hjh"
+      },
+      {
+        "url": "http://www.hjhbakery.com/product/product_list.asp?page=2&code1=2&code2=&code3=&sort=new&page_size=20",
+        "key": "",
+        "adapter": "hjh-list",
+        "pagination": "hjh"
       }
-    ]
+    ],
+    "excludedObsoleteSources": [
+      {
+        "url": "http://www.hjhbakery.com/product/product_list.asp?code1=5",
+        "reason": "Obsolete footer cookie URL emits location.href=/index.asp; current header and product category use code1=8."
+      }
+    ],
+    "expectedMenuCount": 76
   },
   {
     "brandId": "brand-a7444ee050c62abd",
@@ -2381,11 +3249,19 @@
     "registryUrl": "https://응급실국물떡볶이.kr/",
     "sources": [
       {
-        "url": "https://응급실국물떡볶이.kr/",
-        "key": "",
-        "adapter": "jsonld"
+        "url": "http://응급실국물떡볶이.kr/bbs/board.php?bo_table=tteok_menu",
+        "adapter": "emergency-list",
+        "pagination": "gnuboard",
+        "key": "tteok_menu"
+      },
+      {
+        "url": "http://응급실국물떡볶이.kr/bbs/board.php?bo_table=chicken_menu",
+        "adapter": "emergency-list",
+        "pagination": "gnuboard",
+        "key": "chicken_menu"
       }
-    ]
+    ],
+    "expectedMenuCount": 72
   },
   {
     "brandId": "brand-87f52291726f6891",
@@ -2410,20 +3286,88 @@
     "brandId": "brand-c250fc357adcb9df",
     "name": "파스쿠찌",
     "category": "카페",
-    "sourceUrl": "https://www.caffe-pascucci.co.kr/",
+    "sourceUrl": "https://www.pascucci.co.kr/",
     "allowedHosts": [
       "caffe-pascucci.co.kr",
-      "www.caffe-pascucci.co.kr"
+      "www.caffe-pascucci.co.kr",
+      "www.pascucci.co.kr",
+      "pascucci.co.kr"
     ],
     "adapter": "jsonld",
-    "registryUrl": "https://www.caffe-pascucci.co.kr/",
+    "registryUrl": "https://www.pascucci.co.kr/",
     "sources": [
       {
-        "url": "https://www.caffe-pascucci.co.kr/",
-        "key": "",
-        "adapter": "jsonld"
+        "url": "https://www.pascucci.co.kr/product/productList.asp?typeCode=00100010",
+        "adapter": "pascucci-list",
+        "key": "pascucci-00100010"
+      },
+      {
+        "url": "https://www.pascucci.co.kr/product/productList.asp?typeCode=00100020",
+        "adapter": "pascucci-list",
+        "key": "pascucci-00100020"
+      },
+      {
+        "url": "https://www.pascucci.co.kr/product/productList.asp?typeCode=00100030",
+        "adapter": "pascucci-list",
+        "key": "pascucci-00100030"
+      },
+      {
+        "url": "https://www.pascucci.co.kr/product/productList.asp?typeCode=00100040",
+        "adapter": "pascucci-list",
+        "key": "pascucci-00100040"
+      },
+      {
+        "url": "https://www.pascucci.co.kr/product/productList.asp?typeCode=00200010",
+        "adapter": "pascucci-list",
+        "key": "pascucci-00200010"
+      },
+      {
+        "url": "https://www.pascucci.co.kr/product/productList.asp?typeCode=00200020",
+        "adapter": "pascucci-list",
+        "key": "pascucci-00200020"
+      },
+      {
+        "url": "https://www.pascucci.co.kr/product/productList.asp?typeCode=00200030",
+        "adapter": "pascucci-list",
+        "key": "pascucci-00200030"
+      },
+      {
+        "url": "https://www.pascucci.co.kr/product/productList.asp?typeCode=00200050",
+        "adapter": "pascucci-list",
+        "key": "pascucci-00200050"
+      },
+      {
+        "url": "https://www.pascucci.co.kr/product/productList.asp?typeCode=00210010",
+        "adapter": "pascucci-list",
+        "key": "pascucci-00210010"
+      },
+      {
+        "url": "https://www.pascucci.co.kr/product/productList.asp?typeCode=00210020",
+        "adapter": "pascucci-list",
+        "key": "pascucci-00210020"
+      },
+      {
+        "url": "https://www.pascucci.co.kr/product/productList.asp?typeCode=00300010",
+        "adapter": "pascucci-list",
+        "key": "pascucci-00300010"
+      },
+      {
+        "url": "https://www.pascucci.co.kr/product/productList.asp?typeCode=00300020",
+        "adapter": "pascucci-list",
+        "key": "pascucci-00300020"
+      },
+      {
+        "url": "https://www.pascucci.co.kr/product/productList.asp?typeCode=00300030",
+        "adapter": "pascucci-list",
+        "key": "pascucci-00300030"
+      },
+      {
+        "url": "https://www.pascucci.co.kr/product/productList.asp?typeCode=00300040",
+        "adapter": "pascucci-list",
+        "key": "pascucci-00300040"
       }
-    ]
+    ],
+    "expectedMenuCount": 192
   },
   {
     "brandId": "brand-1b6e60f7965bce11",
@@ -2438,11 +3382,12 @@
     "registryUrl": "https://www.dalkomm.com/menu",
     "sources": [
       {
-        "url": "https://www.dalkomm.com/menu",
-        "key": "",
-        "adapter": "jsonld"
+        "url": "https://www.dalkomm.com/menu?dalMenu=1",
+        "adapter": "reviewed-html",
+        "pagination": "dalkomm"
       }
-    ]
+    ],
+    "expectedMenuCount": 133
   },
   {
     "brandId": "brand-5f1ac0e21ddf73b1",
@@ -2457,9 +3402,44 @@
     "registryUrl": "https://www.oozycoffee.com/coffee",
     "sources": [
       {
+        "url": "https://www.oozycoffee.com/Vision",
+        "key": "NEW",
+        "adapter": "reviewed-html"
+      },
+      {
         "url": "https://www.oozycoffee.com/coffee",
-        "key": "",
-        "adapter": "jsonld"
+        "key": "COFFEE",
+        "adapter": "reviewed-html"
+      },
+      {
+        "url": "https://www.oozycoffee.com/27",
+        "key": "COLD BREW",
+        "adapter": "reviewed-html"
+      },
+      {
+        "url": "https://www.oozycoffee.com/28",
+        "key": "BEVERAGE",
+        "adapter": "reviewed-html"
+      },
+      {
+        "url": "https://www.oozycoffee.com/29",
+        "key": "FRAPPE",
+        "adapter": "reviewed-html"
+      },
+      {
+        "url": "https://www.oozycoffee.com/30",
+        "key": "ADE & MOJITO",
+        "adapter": "reviewed-html"
+      },
+      {
+        "url": "https://www.oozycoffee.com/31",
+        "key": "TEA & JUICE",
+        "adapter": "reviewed-html"
+      },
+      {
+        "url": "https://www.oozycoffee.com/32",
+        "key": "DESSERT",
+        "adapter": "reviewed-html"
       }
     ]
   },
@@ -2476,11 +3456,47 @@
     "registryUrl": "https://www.theventi.co.kr/",
     "sources": [
       {
-        "url": "https://www.theventi.co.kr/",
-        "key": "",
-        "adapter": "jsonld"
+        "url": "https://www.theventi.co.kr/new2022/menu/all.html?mode=1",
+        "adapter": "venti-list",
+        "key": "venti-1"
+      },
+      {
+        "url": "https://www.theventi.co.kr/new2022/menu/all.html?mode=2",
+        "adapter": "venti-list",
+        "key": "venti-2"
+      },
+      {
+        "url": "https://www.theventi.co.kr/new2022/menu/all.html?mode=3",
+        "adapter": "venti-list",
+        "key": "venti-3"
+      },
+      {
+        "url": "https://www.theventi.co.kr/new2022/menu/all.html?mode=4",
+        "adapter": "venti-list",
+        "key": "venti-4"
+      },
+      {
+        "url": "https://www.theventi.co.kr/new2022/menu/all.html?mode=5",
+        "adapter": "venti-list",
+        "key": "venti-5"
+      },
+      {
+        "url": "https://www.theventi.co.kr/new2022/menu/all.html?mode=6",
+        "adapter": "venti-list",
+        "key": "venti-6"
+      },
+      {
+        "url": "https://www.theventi.co.kr/new2022/menu/all.html?mode=7",
+        "adapter": "venti-list",
+        "key": "venti-7"
+      },
+      {
+        "url": "https://www.theventi.co.kr/new2022/menu/all.html?mode=8",
+        "adapter": "venti-list",
+        "key": "venti-8"
       }
-    ]
+    ],
+    "expectedMenuCount": 169
   },
   {
     "brandId": "brand-2e050b39b22a7280",
@@ -2497,9 +3513,10 @@
       {
         "url": "https://www.lotteeatz.com/brand/angel",
         "key": "",
-        "adapter": "jsonld"
+        "adapter": "eatz-list"
       }
-    ]
+    ],
+    "expectedMenuCount": 106
   },
   {
     "brandId": "brand-01c5e2f727401b55",
@@ -2514,10 +3531,26 @@
     "registryUrl": "https://sulbing.com/menu/",
     "sources": [
       {
+        "url": "https://sulbing.com/menu/?type=설빙",
+        "adapter": "sulbing",
+        "key": "설빙"
+      },
+      {
+        "url": "https://sulbing.com/menu/?type=사이드",
+        "adapter": "sulbing",
+        "key": "사이드"
+      },
+      {
+        "url": "https://sulbing.com/menu/?type=음료",
+        "adapter": "sulbing",
+        "key": "음료"
+      },
+      {
         "url": "https://sulbing.com/menu/",
         "key": "",
         "adapter": "sulbing"
       }
-    ]
+    ],
+    "expectedMenuCount": 96
   }
 ]
