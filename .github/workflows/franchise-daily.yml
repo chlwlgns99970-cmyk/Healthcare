@@ -3,6 +3,11 @@ on:
   schedule:
     - cron: '17 19 * * *' # UTC 19:17 = Asia/Seoul 04:17 next day; schedules may be delayed.
   workflow_dispatch:
+    inputs:
+      verificationRunKey:
+        description: 'Optional explicit operator validation run key (daily cron keeps KST date key)'
+        required: false
+        default: ''
 permissions:
   contents: write
 concurrency:
@@ -25,9 +30,19 @@ jobs:
         run: |
           git clone --branch franchise-data --depth 1 https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git published
       - name: Test adapter and publish safety
-        run: python source/tools/test_franchise_daily_sync.py
+        run: |
+          python -m pip install lxml==6.1.1
+          python source/tools/test_franchise_daily_sync.py
+          python source/tools/test_franchise_auto_audit.py
       - name: Audit official sources and publish locally
-        run: python source/tools/franchise_daily_sync.py --output published
+        env:
+          VERIFICATION_RUN_KEY: ${{ inputs.verificationRunKey }}
+        run: |
+          if [ -n "$VERIFICATION_RUN_KEY" ]; then
+            python source/tools/franchise_daily_sync.py --output published --run-key "$VERIFICATION_RUN_KEY"
+          else
+            python source/tools/franchise_daily_sync.py --output published
+          fi
       - name: Publish one atomic Git commit
         working-directory: published
         run: |
