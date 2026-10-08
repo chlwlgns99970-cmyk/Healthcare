@@ -116,7 +116,9 @@ def fetch_source(brand, source, capture_dir=None):
         request=urllib.request.Request(encoded,headers={'User-Agent':'HealthcareMenuAudit/1.0 (once-daily official-menu check)', 'Accept':'application/json,text/html;q=0.9,*/*;q=0.5'})
         with urllib.request.urlopen(request,timeout=8) as response:
             assert official_url(response.url,brand), 'unapproved redirect'
-            data=response.read(MAX_BYTES+1);assert len(data)<=MAX_BYTES,'source too large'
+            source_limit=brand.get('maxSourceBytes',MAX_BYTES)
+            assert isinstance(source_limit,int) and MAX_BYTES<=source_limit<=8_000_000
+            data=response.read(source_limit+1);assert len(data)<=source_limit,'source too large'
             declared=re.search(br'charset\s*=\s*["\']?([a-zA-Z0-9_-]+)',data[:4096])
             encoding=response.headers.get_content_charset() or (declared.group(1).decode('ascii') if declared else 'utf-8')
         html=data.decode(encoding,errors='strict')
@@ -185,7 +187,7 @@ def merge(existing, fetched, brands, static):
 def atomic_write(path,data):
     temporary=path.with_suffix(path.suffix+'.tmp');temporary.write_bytes(data);os.replace(temporary,path)
 
-def run(out, run_key, brands=None, batches=None):
+def run(out, run_key, brands=None, batches=None, target_brand_ids=None):
     out=Path(out);out.mkdir(parents=True,exist_ok=True)
     lock=out/'.sync-lock'
     try: fd=os.open(lock,os.O_CREAT|os.O_EXCL|os.O_WRONLY)
@@ -205,10 +207,14 @@ def run(out, run_key, brands=None, batches=None):
             return {'status':'ALREADY_COMPLETED','runKey':run_key}
         started=datetime.now(timezone.utc).isoformat()
         if batches is None:
-            with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool: batches=list(pool.map(fetch,brands))
+            selected=[b for b in brands if target_brand_ids is None or b['brandId'] in target_brand_ids]
+            assert selected
+            with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool: batches=list(pool.map(fetch,selected))
         static=json.loads(SEED.read_text(encoding='utf-8'))
         menus,counts=merge(existing,batches,brands,static)
-        report=dict(runId=run_key,startedAt=started,endedAt=datetime.now(timezone.utc).isoformat(),timezone='Asia/Seoul',targetBrands=len(brands),
+        report=dict(runId=run_key,startedAt=started,endedAt=datetime.now(timezone.utc).isoformat(),timezone='Asia/Seoul',
+            scope='TARGETED_VERIFICATION' if target_brand_ids is not None else 'FULL',registryBrands=len(brands),
+            targetBrands=len(target_brand_ids) if target_brand_ids is not None else len(brands),
             successBrands=sum(b['status']=='SUCCESS' for b in batches),failedBrands=sum(b['status']=='FETCH_FAILED' for b in batches),
             sourceMissing=sum(b['status']=='SOURCE_MISSING' for b in batches),reviewRequired=sum(b['status']=='REVIEW_REQUIRED' for b in batches),
             **counts,brands=[{k:v for k,v in b.items() if k!='menus'} for b in batches])
@@ -221,6 +227,7 @@ def run(out, run_key, brands=None, batches=None):
         if successes:
             payload=json.dumps(dict(schemaVersion=1,menus=sorted(menus,key=lambda m:m['id'])),ensure_ascii=False,sort_keys=True,separators=(',',':')).encode()
             checksum=hashlib.sha256(payload).hexdigest();filename='catalog-'+checksum+'.json'
+            assert len(payload)<=MAX_BYTES,'Validated catalog exceeds Android download limit; existing published files unchanged'
             if manifest.get('sha256')!=checksum:
                 atomic_write(out/filename,payload)
                 manifest=dict(schemaVersion=1,file=filename,sha256=checksum,version=checksum,menuCount=len(menus),runKey=run_key,publishedAt=report['endedAt'])
@@ -232,8 +239,13 @@ def run(out, run_key, brands=None, batches=None):
     finally: lock.unlink(missing_ok=True)
 
 if __name__=='__main__':
-    parser=argparse.ArgumentParser();parser.add_argument('--output',required=True);parser.add_argument('--run-key')
+    parser=argparse.ArgumentParser();parser.add_argument('--output',required=True);parser.add_argument('--run-key');parser.add_argument('--brand-only')
     args=parser.parse_args()
     key=args.run_key or datetime.fromtimestamp(time.time()+9*3600,timezone.utc).strftime('%Y-%m-%d')
-    result=run(args.output,key)
+    all_brands=json.loads(CONFIG.read_text(encoding='utf-8'))
+    targets=None
+    if args.brand_only:
+        names=set(args.brand_only.split(','));targets={b['brandId'] for b in all_brands if b['name'] in names}
+        assert len(targets)==len(names), 'Unknown verification brand'
+    result=run(args.output,key,all_brands,target_brand_ids=targets)
     print(json.dumps({k:v for k,v in result.items() if k!='brands'},ensure_ascii=False))

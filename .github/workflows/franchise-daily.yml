@@ -8,6 +8,10 @@ on:
         description: 'Optional explicit operator validation run key (daily cron keeps KST date key)'
         required: false
         default: ''
+      verificationOnlyBrands:
+        description: 'Optional comma-separated operator verification brands; daily cron audits all brands'
+        required: false
+        default: ''
 permissions:
   contents: write
 concurrency:
@@ -37,9 +41,14 @@ jobs:
       - name: Audit official sources and publish locally
         env:
           VERIFICATION_RUN_KEY: ${{ inputs.verificationRunKey }}
+          VERIFICATION_ONLY_BRANDS: ${{ inputs.verificationOnlyBrands }}
         run: |
           if [ -n "$VERIFICATION_RUN_KEY" ]; then
-            python source/tools/franchise_daily_sync.py --output published --run-key "$VERIFICATION_RUN_KEY"
+            if [ -n "$VERIFICATION_ONLY_BRANDS" ]; then
+              python source/tools/franchise_daily_sync.py --output published --run-key "$VERIFICATION_RUN_KEY" --brand-only "$VERIFICATION_ONLY_BRANDS"
+            else
+              python source/tools/franchise_daily_sync.py --output published --run-key "$VERIFICATION_RUN_KEY"
+            fi
           else
             python source/tools/franchise_daily_sync.py --output published
           fi

@@ -1161,7 +1161,8 @@
         "key": "",
         "adapter": "reviewed-html"
       }
-    ]
+    ],
+    "maxSourceBytes": 8000000
   },
   {
     "brandId": "brand-440ae94a942a4921",
@@ -2071,7 +2072,8 @@
         "key": "yoajung-list",
         "adapter": "reviewed-delivery"
       }
-    ]
+    ],
+    "maxSourceBytes": 8000000
   },
   {
     "brandId": "brand-3d3d7aa34cc1f578",
