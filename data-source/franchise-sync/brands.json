@@ -2362,7 +2362,8 @@
       {
         "url": "https://www.shinsegaefood.com/nobrandburger/index.sf",
         "key": "nobrand-menu-native",
-        "adapter": "reviewed-delivery"
+        "adapter": "reviewed-delivery",
+        "transport": "browser"
       }
     ],
     "expectedMenuCount": 55
