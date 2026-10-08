@@ -1,978 +1,108 @@
 {
-  "runId": "operator-validation-2026-10-08-v3",
-  "startedAt": "2026-10-08T10:09:28.270628+00:00",
-  "endedAt": "2026-10-08T10:09:31.996868+00:00",
+  "runId": "operator-validation-2026-10-08-v4",
+  "startedAt": "2026-10-08T10:15:40.425951+00:00",
+  "endedAt": "2026-10-08T10:15:41.702585+00:00",
   "timezone": "Asia/Seoul",
   "scope": "TARGETED_VERIFICATION",
   "registryBrands": 102,
   "targetBrands": 2,
-  "successBrands": 2,
+  "successBrands": 1,
   "failedBrands": 0,
   "sourceMissing": 0,
-  "reviewRequired": 0,
-  "candidateCount": 152,
+  "reviewRequired": 1,
+  "candidateCount": 7,
   "publishedNewCount": 0,
-  "duplicateCount": 152,
+  "duplicateCount": 7,
   "invalidCount": 0,
   "newWithNutrition": 0,
   "newWithoutNutrition": 0,
   "decisions": [
     {
-      "id": "remote-franchise-3b56ff8462d2d41f103bf4e2",
-      "brandId": "brand-d788dc4427d306fe",
-      "name": "완도전복버섯솥밥",
+      "id": "remote-franchise-b4e87b428ddaa74d3ed10a49",
+      "brandId": "brand-8032e5a2633bc1e3",
+      "name": "케일 사과주스",
       "state": "EXISTING"
     },
     {
-      "id": "remote-franchise-133f0e0e7018ee063d66f271",
-      "brandId": "brand-d788dc4427d306fe",
-      "name": "곱대창솥밥",
+      "id": "remote-franchise-aaffdcffe1a8bd13ccaf0eb9",
+      "brandId": "brand-8032e5a2633bc1e3",
+      "name": "굿모닝 브런치",
       "state": "EXISTING"
     },
     {
-      "id": "remote-franchise-81e0730bd5be7a05aa0fbf82",
-      "brandId": "brand-d788dc4427d306fe",
-      "name": "굴솥밥",
+      "id": "remote-franchise-d10d366b55ea4ad6456c9b12",
+      "brandId": "brand-8032e5a2633bc1e3",
+      "name": "굿모닝 브런치 세트",
       "state": "EXISTING"
     },
     {
-      "id": "remote-franchise-2e2ca3076d91435403f8998f",
-      "brandId": "brand-d788dc4427d306fe",
-      "name": "유산슬해물솥밥",
+      "id": "remote-franchise-b3272a1e31d10d6d7d1adcd3",
+      "brandId": "brand-8032e5a2633bc1e3",
+      "name": "아메리칸 브런치",
       "state": "EXISTING"
     },
     {
-      "id": "remote-franchise-58fb0eeb8960543dd080acc3",
-      "brandId": "brand-d788dc4427d306fe",
-      "name": "소고기솥밥",
+      "id": "remote-franchise-41607f6da9bde25553e586dc",
+      "brandId": "brand-8032e5a2633bc1e3",
+      "name": "아메리칸 브런치 세트",
       "state": "EXISTING"
     },
     {
-      "id": "remote-franchise-26d5759c10d42e2911716ef4",
-      "brandId": "brand-d788dc4427d306fe",
-      "name": "치킨카레솥밥",
+      "id": "remote-franchise-28d426bb395ca868e0700097",
+      "brandId": "brand-8032e5a2633bc1e3",
+      "name": "아보가든 브런치",
       "state": "EXISTING"
     },
     {
-      "id": "remote-franchise-82472cd1ddd9dae2b8a4504d",
-      "brandId": "brand-d788dc4427d306fe",
-      "name": "치킨대파솥밥",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-f88f45d8cc2cdee7596697db",
-      "brandId": "brand-d788dc4427d306fe",
-      "name": "돈새우솥밥",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-44e06b8fc9228d1cc1b22362",
-      "brandId": "brand-d788dc4427d306fe",
-      "name": "돈채솥밥",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-016d9d464dd4bb203ab7d96f",
-      "brandId": "brand-d788dc4427d306fe",
-      "name": "시래기솥밥",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-570be7cc53e84be75c1e2c98",
-      "brandId": "brand-d788dc4427d306fe",
-      "name": "콩비지솥밥",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-a330403bc8f5c76067298316",
-      "brandId": "brand-d788dc4427d306fe",
-      "name": "육개장솥밥",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-5148bf4fdbdb63ee6a7bf3ad",
-      "brandId": "brand-d788dc4427d306fe",
-      "name": "뚝배기불고기솥밥",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-5272f1c5c163d1b98110ed2a",
-      "brandId": "brand-d788dc4427d306fe",
-      "name": "된장찌개솥밥",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-d711a7f7d89244d6e5b461a1",
-      "brandId": "brand-d788dc4427d306fe",
-      "name": "완도전복솥죽",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-b5018c9980ab10ab8ca5c303",
-      "brandId": "brand-d788dc4427d306fe",
-      "name": "특전복솥죽",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-d39a750aa4b17ed2ba797bd4",
-      "brandId": "brand-d788dc4427d306fe",
-      "name": "진품전복솥죽",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-1ee09bd32c3a365cfb0fb9af",
-      "brandId": "brand-d788dc4427d306fe",
-      "name": "자연송이전복솥죽",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-5f6ecc9ac79cf4b69579067f",
-      "brandId": "brand-d788dc4427d306fe",
-      "name": "자연송이한우솥죽",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-8b670080e2d7a1620c42ac26",
-      "brandId": "brand-d788dc4427d306fe",
-      "name": "전복인삼닭솥죽",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-54fe66663dce1711fcc9de37",
-      "brandId": "brand-d788dc4427d306fe",
-      "name": "불낙솥죽 (순한맛)",
-      "state": "ALIAS_MATCH"
-    },
-    {
-      "id": "remote-franchise-684c887382234b62a482aac9",
-      "brandId": "brand-d788dc4427d306fe",
-      "name": "불낙솥죽 (매운맛)",
-      "state": "ALIAS_MATCH"
-    },
-    {
-      "id": "remote-franchise-c8a2877715305edf126b3d58",
-      "brandId": "brand-d788dc4427d306fe",
-      "name": "게살날치알솥죽",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-f90bb2e412953ac00a323219",
-      "brandId": "brand-d788dc4427d306fe",
-      "name": "매생이굴솥죽",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-b6fcb20799cf89e8ec45797e",
-      "brandId": "brand-d788dc4427d306fe",
-      "name": "삼선짬뽕솥죽",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-52cc7d3a4d6852bd1c98ed1b",
-      "brandId": "brand-d788dc4427d306fe",
-      "name": "모듬해물솥죽",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-e62f40c4b8109a409223d99c",
-      "brandId": "brand-d788dc4427d306fe",
-      "name": "한우버섯솥죽",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-d022b7fb1cb9f30e11663913",
-      "brandId": "brand-d788dc4427d306fe",
-      "name": "한우야채솥죽",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-c1c0bc0f8735f399ec0f6166",
-      "brandId": "brand-d788dc4427d306fe",
-      "name": "인삼닭솥죽",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-0873e39ecff1fea1b5ef6de1",
-      "brandId": "brand-d788dc4427d306fe",
-      "name": "낙치김치솥죽",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-71df1acdba1a88be24bb4ea1",
-      "brandId": "brand-d788dc4427d306fe",
-      "name": "얼큰김치솥죽",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-08072e89399a87d82627f057",
-      "brandId": "brand-d788dc4427d306fe",
-      "name": "참치야채솥죽",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-a79ae1625018fe0399ef7b3c",
-      "brandId": "brand-d788dc4427d306fe",
-      "name": "버섯야채솥죽",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-cdc1d5a688d87ba44978ff95",
-      "brandId": "brand-d788dc4427d306fe",
-      "name": "야채솥죽",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-9056ba04166b783f28962f77",
-      "brandId": "brand-d788dc4427d306fe",
-      "name": "호박죽",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-466d6adc6adf72be17f2c647",
-      "brandId": "brand-d788dc4427d306fe",
-      "name": "팥죽",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-b3a61318a6a9621566f0b79d",
-      "brandId": "brand-d788dc4427d306fe",
-      "name": "흑임자죽",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-2ad98a4010eca37601e3e254",
-      "brandId": "brand-d788dc4427d306fe",
-      "name": "녹두전",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-b8442f66a33da827d04e4c9c",
-      "brandId": "brand-d788dc4427d306fe",
-      "name": "흰죽",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-9c797139076eb7502747409f",
-      "brandId": "brand-d788dc4427d306fe",
-      "name": "김치볶음밥",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-499371e04e67549b5109d005",
-      "brandId": "brand-d788dc4427d306fe",
-      "name": "매운낙지볶음밥",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-2e132f5cd1c701ac4460c16e",
-      "brandId": "brand-d788dc4427d306fe",
-      "name": "소불고기볶음밥",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-d97b83bed36177a7635d4548",
-      "brandId": "brand-d788dc4427d306fe",
-      "name": "해물볶음밥",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-808641dc3d5a26d9871d5490",
-      "brandId": "brand-d788dc4427d306fe",
-      "name": "달콩팥죽",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-5f613a40b40ccc9f06e3c3c4",
-      "brandId": "brand-d788dc4427d306fe",
-      "name": "오곡고소미죽",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-b9670fa02e1bda001461cc73",
-      "brandId": "brand-d788dc4427d306fe",
-      "name": "크리미감자죽",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-7b3d2e2a70580b1e0703aca3",
-      "brandId": "brand-d788dc4427d306fe",
-      "name": "흑임자귀리죽",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-3cb23f69f5de0a9250e78145",
-      "brandId": "brand-d788dc4427d306fe",
-      "name": "고소미8곡죽",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-1dff6267bf4692a0797ec504",
-      "brandId": "brand-d788dc4427d306fe",
-      "name": "호박귀리죽",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-4c43234ea616a65ef741fca9",
-      "brandId": "brand-d788dc4427d306fe",
-      "name": "단호박죽",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-9f5096182b20d251374111d3",
-      "brandId": "brand-d788dc4427d306fe",
-      "name": "고구마옥수수죽",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-083e3bd786dba8a307956961",
-      "brandId": "brand-d788dc4427d306fe",
-      "name": "콩국수",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-f09c9194ddba72d052c20cb7",
-      "brandId": "brand-d788dc4427d306fe",
-      "name": "진삼계탕",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-bce507b1ce299eef836bce95",
-      "brandId": "brand-d788dc4427d306fe",
-      "name": "들깨삼계탕",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-f7d7da071008379050735e0b",
-      "brandId": "brand-d788dc4427d306fe",
-      "name": "얼큰삼계탕",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-e0a3706bafd2ce206d267131",
-      "brandId": "brand-d788dc4427d306fe",
-      "name": "낙지김치솥죽",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-46c77b7c1cd4d966ee8ce14f",
-      "brandId": "brand-d788dc4427d306fe",
-      "name": "모듬해물죽",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-1f1d3426b8b7ad78cd18f056",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "황치즈 미쯔 요아정",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-cd22e93429b87bf2b8b6cb28",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "허니 무화과 몽땅",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-5b8f05e9102f891a39b7b3e1",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "무화과가 달콤하구마",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-3fc8e47ba753f1cf4861685d",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "호박인절미 빠작하구마",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-065598e1962d1155f52553b2",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "허니 무화과 그릭의 정석",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-6be5de87eac234367cdb429f",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "요아정 수빈 PICK",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-4040422112b30ff74602574f",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "요아정 연준 PICK",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-52525cee82507b8f0ca50717",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "요아정 범규 PICK",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-d5f9b6b855ff18748f6a4a06",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "요아정 태현 PICK",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-5735716c99d8ff1d80745b78",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "[저당 복숭아]내맘대로 복숭아 요거트 아이스크림 + 초코쉘",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-4170b12ce682d9f5e902ad6a",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "요아정 휴닝카이 PICK",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-9db90223ca7a143a14f7f71a",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "[저당 복숭아] 리틀어피치 스윗 그릭보바 복숭아",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-65a2d7765a8df8a77bd9ad15",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "[저당 복숭아] 리틀어피치 허니 그래 복숭아",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-dc1a07df20c7af72751cee2c",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "[저당 복숭아] 리틀어피치 자몽 톡톡 복숭아",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-558acda9b0fbfc908c27831e",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "양즈깐루 복숭아",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-d4506a479b0b2084232329d3",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "그릭통통 복숭아",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-d4f41d2e5363d10a7f558847",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "[요아정 시그니처] 초코쉘+내맘대로",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-50d843d252b232a0b4f65825",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "[요아정 시그니처] 딸기우유초코쉘+내맘대로",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-71bd9213bf1d19e7b85956be",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "[요아정 시그니처] 망고초코쉘+내맘대로",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-40cd56d6828aa16ac9f2df20",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "[요아정 시그니처] 멜론쉘+내맘대로",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-11fef7114037d72d0d36b52e",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "[요아정 시그니처] 민트초코쉘+내맘대로",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-e33dfddb860c198afb1c0b01",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "무지개 요아정",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-2b865ec504368f575f5797fd",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "Health의 정석",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-cf3c2dadf9b9103eaa742ad2",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "Individuality의 정석",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-8287f847060f297d2bb5d2c2",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "Premium의 정석",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-6119757332b783845f033f54",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "빠삭 두바이 초코쉘",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-31e5d97cc3be2027e5727c07",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "빠삭말차 초코쉘의 정석",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-6a606daa2c23bdb655750fb0",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "말차숲 오렌지의 정석",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-0a4d29c3b068ca3f3fbfc7b9",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "멜론의 정석",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-7983297b1b7265d54bde554f",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "망고의 정석",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-6000d199be0ea2663955bcfe",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "블루베리의 정석",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-5212a2780caa1828833dfd31",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "새콤달콤의 정석",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-2d74f07a3a2077ffba6764eb",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "오자몽의 정석",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-e40816c84d79ddba8d9e5ef3",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "달달자몽의 정석",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-197e72aedf62636963aaa305",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "초코자몽의 정석",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-3dcee785143357598dc119c9",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "달콤청포도의 정석",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-c12765ae3ca50e05ba071541",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "망고샤인바나나의 정석",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-2b4bda306dae543049ee41d1",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "요아 팥빙의 정석",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-40a57d5f814d7963d99b73d1",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "흑백쿠키의 정석",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-4ece46b6fb44de1d2e2593e4",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "달콤모닝의 정석",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-ae5897dad718da0ed7c9a3d7",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "요아정 스쿱볼의 정석",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-e9c5f7ce4fbc6b464cd6a2d6",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "달콤 샤인멜론볼의 정석",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-f184cf3df90c0dffe27f3c8a",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "골드 오망고볼의 정석",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-455e06df2c53fc47a2f72813",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "빠작 바나나 브륄레",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-f3e477a65ad1d092e5c2ccbb",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "행운 찰떡의 정석",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-1ec480350d069bc3e7c0711c",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "민초의 정석",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-b77f7f434475562d08bc19a2",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "[요아정 시그니처] 벌집꿀+그래놀라",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-10bcc8eb518383d0e62656dd",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "시그니처 허니 그릭의 정석",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-6e1bcc45d3a59de85640c28f",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "허니 블루베리 그릭의 정석",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-6c87757bfb005bffe1533f37",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "두바이 베리초코 아사이",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-e8e3357f6c59ca7a14668008",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "트로피칼 아사이망고",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-f16278ff1d3295225ed82fcf",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "허니자몽링 아사이",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-b44811bf53ee674ac649e03c",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "말차오렌지링 아사이",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-a665a051ab58ac281e9c532b",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "넛츠리 아사이",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-f51d5a6674f35987b7d57b56",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "허니 샤인베리 망고",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-d8c88acabd96313fe43c374c",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "클래식 아사이",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-e5177d4a11ad7bcb67b901e8",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "트윈베리 아사이",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-344ff8d5594f4cf9b3aef6c5",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "카카오맘보 아사이",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-d137e72e995d1612753f8ecd",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "망고차차 아사이",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-73fd284fcdb323c020825959",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "오몽코코 아사이",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-3470bc03fe8f8ae293146645",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "그레이프베리 아사이",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-8d05337ac26214d541572b9a",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "파인애플 100g",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-5ebeb1d78b57cd534783f175",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "바나나 100g",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-9cdc23bad512714bc0a8178e",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "골든키위 1개(83g)",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-7c3e6be2d5736ad90292958c",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "멜론 100g",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-5244d07da448d375f8ded8de",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "애플망고 (1/2)100g",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-4bf48fa2c9497fdd75642f6a",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "오렌지 100g",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-3f9bc0d271ad16c650f2d159",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "백용과 100g",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-52ce19adfda23f3630b600a5",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "블루베리 50g",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-fcd6034c0abd767ddbff7097",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "자몽 100g",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-84048dd232f528734a0a56ff",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "청포도 100g",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-d12765669fe5715310a27909",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "딸기 100g",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-2dc0a7ab4d3daa877f2e233c",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "골드망고 (1/2)100g",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-c06f163efdcae21d97741dd9",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "무화과 50g",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-f0af1c0bbbd7754d1cb8b9ac",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "자두 50g",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-014ac7ddef1f0b540a513b44",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "그린키위 1개(93g)",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-0c9e47595bf8989b9724f9cc",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "샤인머스캣 100g",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-1fd9f671d8f5ef25fd17bf61",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "블랙사파이어포도 100g",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-46dac414c25ddad5b7e074ca",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "감귤 1개(40g)",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-5b78cdbe3cb51f0eb9b5b93c",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "순수 요거트 빙수",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-adec6548358b78e77c897a69",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "쫀득 인절미 팥빙수",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-3d18243443a0d7d56b6c2dae",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "프리미엄 생망고 빙수",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-65068aa758ca5ecf817d49ee",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "리얼 꿀 자몽 빙수",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-fc412e88ec0cda9e4ed53df6",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "두바이 딥초코 빙수",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-8127e14242acb458f40fd000",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "해남 초당옥수수 브륄레 빙수",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-df3541c66265139d63e66b0b",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "말차 인절미 팥빙수",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-32b0c7da61f92c4ac2b86f7b",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "와르르 허니 멜론 빙수",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-c82052d6e04503cbdd9ba36d",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "와르르 리얼 수박 빙수",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-b48f30cda26770830606de74",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "쫀득 인절미 팥 컵빙수",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-afa11caf05d52d682ee78d23",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "두바이 딥초코 컵빙수",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-4654dbb10e03c68ec09f7495",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "해남 초당옥수수 브륄레 컵빙수",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-b6df44ea797261cc25b4e62f",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "프리미엄 생망고 컵빙수",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-3ab984a0f9fbd138db14fb18",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "와르르 리얼 수박 컵빙수",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-4cb7a11b1671f342bd4a7788",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "그릭 꿀 복숭아 빙수",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-6802005d36b6a03b6091617f",
-      "brandId": "brand-61b7f46d49620328",
-      "name": "황치즈 미쯔 빙수",
+      "id": "remote-franchise-174602e9b3654e0e2373ab41",
+      "brandId": "brand-8032e5a2633bc1e3",
+      "name": "아보가든 브런치 세트",
       "state": "EXISTING"
     }
   ],
   "brands": [
     {
-      "brandId": "brand-d788dc4427d306fe",
-      "status": "SUCCESS",
-      "checkedAt": "2026-10-08T10:09:28.274658+00:00",
+      "brandId": "brand-517e6e3a0f2a227b",
+      "status": "REVIEW_REQUIRED",
+      "checkedAt": "2026-10-08T10:15:40.435037+00:00",
       "sources": [
         {
-          "brandId": "brand-d788dc4427d306fe",
-          "sourceUrl": "https://www.jukstory.com/15",
+          "brandId": "brand-517e6e3a0f2a227b",
+          "sourceUrl": "http://schoolfood.freewebclub.com/menu/menu.html",
           "adapter": "reviewed-html",
           "sourceKey": "",
-          "status": "SUCCESS",
-          "checkedAt": "2026-10-08T10:09:28.274658+00:00",
-          "htmlSha256": "9862f928ffe2a52d72c5082ebf29072ec0ff99b32a41f83a1e7a835010941932",
+          "status": "REVIEW_REQUIRED",
+          "checkedAt": "2026-10-08T10:15:40.435037+00:00",
+          "htmlSha256": "5ff04221300e2338acc6f10e8e1be354839379deb0e73d7d30b26824830cd21f",
           "httpStatus": 200
         }
       ]
     },
     {
-      "brandId": "brand-61b7f46d49620328",
+      "brandId": "brand-8032e5a2633bc1e3",
       "status": "SUCCESS",
-      "checkedAt": "2026-10-08T10:09:28.274917+00:00",
+      "checkedAt": "2026-10-08T10:15:40.435291+00:00",
       "sources": [
         {
-          "brandId": "brand-61b7f46d49620328",
-          "sourceUrl": "https://yoajung.co.kr/bbs/content.php?co_id=menustore",
-          "adapter": "reviewed-delivery",
-          "sourceKey": "yoajung-list",
+          "brandId": "brand-8032e5a2633bc1e3",
+          "sourceUrl": "https://eggdrop.com/menu/list.php",
+          "adapter": "reviewed-html",
+          "sourceKey": "",
           "status": "SUCCESS",
-          "checkedAt": "2026-10-08T10:09:28.274917+00:00",
-          "htmlSha256": "ee2fd829e5241983c9c026215990983f92ba6b2fd6d2d9048100a6016e379f74",
+          "checkedAt": "2026-10-08T10:15:40.435291+00:00",
+          "htmlSha256": "ebbbc05b57d897b40e26df8cb44987fbc53e3e598931eabb1609ee8065e17843",
           "httpStatus": 200
         }
       ]
     }
   ],
-  "autoReadyBrands": 2,
+  "autoReadyBrands": 1,
   "sourceBlockedBrands": 0,
   "adapterRequiredBrands": 0,
   "brokenBrands": 0,
-  "reviewRequiredBrands": 0,
+  "reviewRequiredBrands": 1,
   "totalBrands": 102,
-  "finishedAt": "2026-10-08T10:09:31.996868+00:00",
+  "finishedAt": "2026-10-08T10:15:41.702585+00:00",
   "catalogVersion": "b4e21d5494ab54660560ee21ad24c558303a7864d72f5ab0308a2f16302996f3",
   "checksum": "b4e21d5494ab54660560ee21ad24c558303a7864d72f5ab0308a2f16302996f3",
   "status": "PUBLISHED"
