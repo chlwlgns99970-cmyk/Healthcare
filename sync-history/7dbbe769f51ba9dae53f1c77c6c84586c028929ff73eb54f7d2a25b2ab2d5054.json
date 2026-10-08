@@ -1,0 +1,465 @@
+{
+  "runId": "operator-browser-2026-10-08-v4",
+  "startedAt": "2026-10-08T14:14:28.947975+00:00",
+  "endedAt": "2026-10-08T14:18:05.742886+00:00",
+  "timezone": "Asia/Seoul",
+  "scope": "TARGETED_VERIFICATION",
+  "registryBrands": 102,
+  "targetBrands": 10,
+  "successBrands": 8,
+  "failedBrands": 2,
+  "sourceMissing": 0,
+  "reviewRequired": 0,
+  "candidateCount": 458,
+  "publishedNewCount": 0,
+  "duplicateCount": 458,
+  "invalidCount": 0,
+  "identityReviewCount": 0,
+  "newWithNutrition": 0,
+  "newWithoutNutrition": 0,
+  "autoReadyBrands": 8,
+  "sourceBlockedBrands": 0,
+  "adapterRequiredBrands": 0,
+  "brokenBrands": 2,
+  "reviewRequiredBrands": 0,
+  "totalBrands": 102,
+  "finishedAt": "2026-10-08T14:18:05.742886+00:00",
+  "noChangeBrands": 8,
+  "newMenuBrands": 0,
+  "failedCheckBrands": 2,
+  "browserBasedBrands": 8,
+  "apiBasedBrands": 0,
+  "parserBasedBrands": 0,
+  "catalogVersion": "28524b18b87ff0cdfce69b542ed37eca6bfdd2fda7b406ae7be4aa3118c3fd3b",
+  "checksum": "28524b18b87ff0cdfce69b542ed37eca6bfdd2fda7b406ae7be4aa3118c3fd3b",
+  "status": "PUBLISHED",
+  "brands": [
+    {
+      "brandId": "brand-b0f892d2c591ca13",
+      "lastCheckedAt": "2026-10-08T14:18:05.162626+00:00",
+      "lastSuccessAt": null,
+      "lastResult": "FAILED",
+      "lastMenuCount": 0,
+      "lastNewCount": 0,
+      "adapterTypes": [
+        "reviewed-html"
+      ],
+      "sources": [
+        {
+          "sourceUrl": "https://www.momstouch.co.kr/menu/new.php?s_sect1=new",
+          "adapter": "reviewed-html",
+          "sourceType": null,
+          "status": "FETCH_FAILED",
+          "error": "TimeoutError",
+          "errorReason": "Page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://www.momstouch.co.kr/menu/new.php?s_sect1=new\", waiting until \"domcontentloaded\"\n",
+          "attempts": 2
+        },
+        {
+          "sourceUrl": "https://www.momstouch.co.kr/menu/ttoeat.php?s_sect1=CG0045",
+          "adapter": "reviewed-html",
+          "sourceType": null,
+          "status": "FETCH_FAILED",
+          "error": "TimeoutError",
+          "errorReason": "Page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://www.momstouch.co.kr/menu/ttoeat.php?s_sect1=CG0045\", waiting until \"domcontentloaded\"\n",
+          "attempts": 2
+        },
+        {
+          "sourceUrl": "https://www.momstouch.co.kr/menu/new.php?s_sect1=CG0005",
+          "adapter": "reviewed-html",
+          "sourceType": null,
+          "status": "FETCH_FAILED",
+          "error": "TimeoutError",
+          "errorReason": "Page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://www.momstouch.co.kr/menu/new.php?s_sect1=CG0005\", waiting until \"domcontentloaded\"\n",
+          "attempts": 2
+        },
+        {
+          "sourceUrl": "https://www.momstouch.co.kr/menu/new.php?s_sect1=CG0004",
+          "adapter": "reviewed-html",
+          "sourceType": null,
+          "status": "FETCH_FAILED",
+          "error": "Error",
+          "errorReason": "Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://www.momstouch.co.kr/menu/new.php?s_sect1=CG0004\nCall log:\n  - navigating to \"https://www.momstouch.co.kr/menu/new.php?s_sect1=CG0004\", waiting until",
+          "attempts": 1
+        },
+        {
+          "sourceUrl": "https://www.momstouch.co.kr/menu/new.php?s_sect1=CG0003",
+          "adapter": "reviewed-html",
+          "sourceType": null,
+          "status": "FETCH_FAILED",
+          "error": "TimeoutError",
+          "errorReason": "Page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://www.momstouch.co.kr/menu/new.php?s_sect1=CG0003\", waiting until \"domcontentloaded\"\n",
+          "attempts": 2
+        },
+        {
+          "sourceUrl": "https://www.momstouch.co.kr/menu/new.php?s_sect1=CG0002",
+          "adapter": "reviewed-html",
+          "sourceType": null,
+          "status": "FETCH_FAILED",
+          "error": "Error",
+          "errorReason": "Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://www.momstouch.co.kr/menu/new.php?s_sect1=CG0002\nCall log:\n  - navigating to \"https://www.momstouch.co.kr/menu/new.php?s_sect1=CG0002\", waiting until",
+          "attempts": 1
+        },
+        {
+          "sourceUrl": "https://www.momstouch.co.kr/menu/new.php?s_sect1=CG0001",
+          "adapter": "reviewed-html",
+          "sourceType": null,
+          "status": "FETCH_FAILED",
+          "error": "TimeoutError",
+          "errorReason": "Page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://www.momstouch.co.kr/menu/new.php?s_sect1=CG0001\", waiting until \"domcontentloaded\"\n",
+          "attempts": 2
+        },
+        {
+          "sourceUrl": "https://www.momstouch.co.kr/menu/new.php?s_sect1=CG0046",
+          "adapter": "reviewed-html",
+          "sourceType": null,
+          "status": "FETCH_FAILED",
+          "error": "Error",
+          "errorReason": "Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://www.momstouch.co.kr/menu/new.php?s_sect1=CG0046\nCall log:\n  - navigating to \"https://www.momstouch.co.kr/menu/new.php?s_sect1=CG0046\", waiting until",
+          "attempts": 1
+        }
+      ]
+    },
+    {
+      "brandId": "brand-2366ea85553dc984",
+      "lastCheckedAt": "2026-10-08T14:14:28.953765+00:00",
+      "lastSuccessAt": "2026-10-08T14:14:28.953765+00:00",
+      "lastResult": "NO_CHANGE",
+      "lastMenuCount": 19,
+      "lastNewCount": 0,
+      "adapterTypes": [
+        "reviewed-html"
+      ],
+      "sources": [
+        {
+          "sourceUrl": "https://www.twozzim.com/bbs/content.php?co_id=menu",
+          "adapter": "reviewed-html",
+          "sourceType": "browser",
+          "status": "SUCCESS",
+          "error": null,
+          "errorReason": null,
+          "attempts": 1
+        }
+      ]
+    },
+    {
+      "brandId": "brand-e237cdd96675b8e9",
+      "lastCheckedAt": "2026-10-08T14:14:28.954102+00:00",
+      "lastSuccessAt": "2026-10-08T14:14:28.954102+00:00",
+      "lastResult": "NO_CHANGE",
+      "lastMenuCount": 10,
+      "lastNewCount": 0,
+      "adapterTypes": [
+        "reviewed-html"
+      ],
+      "sources": [
+        {
+          "sourceUrl": "http://www.hyundaiok.com/menu",
+          "adapter": "reviewed-html",
+          "sourceType": "browser",
+          "status": "SUCCESS",
+          "error": null,
+          "errorReason": null,
+          "attempts": 1
+        }
+      ]
+    },
+    {
+      "brandId": "brand-a6a2f91c0a858eab",
+      "lastCheckedAt": "2026-10-08T14:15:56.448094+00:00",
+      "lastSuccessAt": "2026-10-08T14:15:56.448094+00:00",
+      "lastResult": "NO_CHANGE",
+      "lastMenuCount": 13,
+      "lastNewCount": 0,
+      "adapterTypes": [
+        "reviewed-html"
+      ],
+      "sources": [
+        {
+          "sourceUrl": "https://ihwasoo.com/bbs/board.php?bo_table=menu",
+          "adapter": "reviewed-html",
+          "sourceType": "browser",
+          "status": "SUCCESS",
+          "error": null,
+          "errorReason": null,
+          "attempts": 1
+        },
+        {
+          "sourceUrl": "https://ihwasoo.com/bbs/board.php?bo_table=menu&sca=%EB%A9%94%EC%9D%B8+%EB%A9%94%EB%89%B4",
+          "adapter": "reviewed-html",
+          "sourceType": "browser",
+          "status": "SUCCESS",
+          "error": null,
+          "errorReason": null,
+          "attempts": 1
+        }
+      ]
+    },
+    {
+      "brandId": "brand-517e6e3a0f2a227b",
+      "lastCheckedAt": "2026-10-08T14:14:34.361237+00:00",
+      "lastSuccessAt": "2026-10-08T14:14:34.361237+00:00",
+      "lastResult": "NO_CHANGE",
+      "lastMenuCount": 90,
+      "lastNewCount": 0,
+      "adapterTypes": [
+        "reviewed-html"
+      ],
+      "sources": [
+        {
+          "sourceUrl": "http://schoolfood.freewebclub.com/menu/menu.html",
+          "adapter": "reviewed-html",
+          "sourceType": "browser",
+          "status": "SUCCESS",
+          "error": null,
+          "errorReason": null,
+          "attempts": 1
+        }
+      ]
+    },
+    {
+      "brandId": "brand-9e7aeb464781f115",
+      "lastCheckedAt": "2026-10-08T14:14:42.286274+00:00",
+      "lastSuccessAt": "2026-10-08T14:14:42.286274+00:00",
+      "lastResult": "NO_CHANGE",
+      "lastMenuCount": 58,
+      "lastNewCount": 0,
+      "adapterTypes": [
+        "hecbob-rendered"
+      ],
+      "sources": [
+        {
+          "sourceUrl": "https://www.hecbob.com/hecbobmenu",
+          "adapter": "hecbob-rendered",
+          "sourceType": "browser",
+          "status": "SUCCESS",
+          "error": null,
+          "errorReason": null,
+          "attempts": 1
+        }
+      ]
+    },
+    {
+      "brandId": "brand-29327af78758b6f5",
+      "lastCheckedAt": "2026-10-08T14:14:50.828235+00:00",
+      "lastSuccessAt": null,
+      "lastResult": "FAILED",
+      "lastMenuCount": 0,
+      "lastNewCount": 0,
+      "adapterTypes": [
+        "subway-list"
+      ],
+      "sources": [
+        {
+          "sourceUrl": "https://www.subway.co.kr/menuList/sandwich",
+          "adapter": "subway-list",
+          "sourceType": null,
+          "status": "FETCH_FAILED",
+          "error": "ValueError",
+          "errorReason": "ACCESS_DENIED: 403",
+          "attempts": 1
+        },
+        {
+          "sourceUrl": "https://www.subway.co.kr/menuList/grain_salad",
+          "adapter": "subway-list",
+          "sourceType": null,
+          "status": "FETCH_FAILED",
+          "error": "ValueError",
+          "errorReason": "ACCESS_DENIED: 403",
+          "attempts": 1
+        },
+        {
+          "sourceUrl": "https://www.subway.co.kr/menuList/salad",
+          "adapter": "subway-list",
+          "sourceType": null,
+          "status": "FETCH_FAILED",
+          "error": "ValueError",
+          "errorReason": "ACCESS_DENIED: 403",
+          "attempts": 1
+        },
+        {
+          "sourceUrl": "https://www.subway.co.kr/menuList/unit",
+          "adapter": "subway-list",
+          "sourceType": null,
+          "status": "FETCH_FAILED",
+          "error": "ValueError",
+          "errorReason": "ACCESS_DENIED: 403",
+          "attempts": 1
+        },
+        {
+          "sourceUrl": "https://www.subway.co.kr/menuList/morning",
+          "adapter": "subway-list",
+          "sourceType": null,
+          "status": "FETCH_FAILED",
+          "error": "ValueError",
+          "errorReason": "ACCESS_DENIED: 403",
+          "attempts": 1
+        },
+        {
+          "sourceUrl": "https://www.subway.co.kr/menuList/sidedrink",
+          "adapter": "subway-list",
+          "sourceType": null,
+          "status": "FETCH_FAILED",
+          "error": "ValueError",
+          "errorReason": "ACCESS_DENIED: 403",
+          "attempts": 1
+        },
+        {
+          "sourceUrl": "https://www.subway.co.kr/menuList/catering",
+          "adapter": "subway-list",
+          "sourceType": null,
+          "status": "FETCH_FAILED",
+          "error": "ValueError",
+          "errorReason": "ACCESS_DENIED: 403",
+          "attempts": 1
+        }
+      ]
+    },
+    {
+      "brandId": "brand-c242a10bbca4c411",
+      "lastCheckedAt": "2026-10-08T14:15:00.441443+00:00",
+      "lastSuccessAt": "2026-10-08T14:15:00.441443+00:00",
+      "lastResult": "NO_CHANGE",
+      "lastMenuCount": 44,
+      "lastNewCount": 0,
+      "adapterTypes": [
+        "cheogajip-list"
+      ],
+      "sources": [
+        {
+          "sourceUrl": "https://www.cheogajip.co.kr/bbs/board.php?bo_table=allmenu",
+          "adapter": "cheogajip-list",
+          "sourceType": "browser",
+          "status": "SUCCESS",
+          "error": null,
+          "errorReason": null,
+          "attempts": 1
+        },
+        {
+          "sourceUrl": "https://www.cheogajip.co.kr/bbs/board.php?bo_table=allmenu&page=2",
+          "adapter": "cheogajip-list",
+          "sourceType": "browser",
+          "status": "SUCCESS",
+          "error": null,
+          "errorReason": null,
+          "attempts": 1
+        },
+        {
+          "sourceUrl": "https://www.cheogajip.co.kr/bbs/board.php?bo_table=allmenu&page=1",
+          "adapter": "cheogajip-list",
+          "sourceType": "browser",
+          "status": "SUCCESS",
+          "error": null,
+          "errorReason": null,
+          "attempts": 1
+        }
+      ]
+    },
+    {
+      "brandId": "brand-69ad361cd26106b1",
+      "lastCheckedAt": "2026-10-08T14:15:04.352359+00:00",
+      "lastSuccessAt": "2026-10-08T14:15:04.352359+00:00",
+      "lastResult": "NO_CHANGE",
+      "lastMenuCount": 55,
+      "lastNewCount": 0,
+      "adapterTypes": [
+        "reviewed-delivery"
+      ],
+      "sources": [
+        {
+          "sourceUrl": "https://www.shinsegaefood.com/nobrandburger/index.sf",
+          "adapter": "reviewed-delivery",
+          "sourceType": "browser",
+          "status": "SUCCESS",
+          "error": null,
+          "errorReason": null,
+          "attempts": 1
+        }
+      ]
+    },
+    {
+      "brandId": "brand-9fa9c3eca7bcf563",
+      "lastCheckedAt": "2026-10-08T14:15:46.088888+00:00",
+      "lastSuccessAt": "2026-10-08T14:15:46.088888+00:00",
+      "lastResult": "NO_CHANGE",
+      "lastMenuCount": 169,
+      "lastNewCount": 0,
+      "adapterTypes": [
+        "venti-list"
+      ],
+      "sources": [
+        {
+          "sourceUrl": "https://www.theventi.co.kr/new2022/menu/all.html?mode=1",
+          "adapter": "venti-list",
+          "sourceType": "browser",
+          "status": "SUCCESS",
+          "error": null,
+          "errorReason": null,
+          "attempts": 1
+        },
+        {
+          "sourceUrl": "https://www.theventi.co.kr/new2022/menu/all.html?mode=2",
+          "adapter": "venti-list",
+          "sourceType": "browser",
+          "status": "SUCCESS",
+          "error": null,
+          "errorReason": null,
+          "attempts": 1
+        },
+        {
+          "sourceUrl": "https://www.theventi.co.kr/new2022/menu/all.html?mode=3",
+          "adapter": "venti-list",
+          "sourceType": "browser",
+          "status": "SUCCESS",
+          "error": null,
+          "errorReason": null,
+          "attempts": 1
+        },
+        {
+          "sourceUrl": "https://www.theventi.co.kr/new2022/menu/all.html?mode=4",
+          "adapter": "venti-list",
+          "sourceType": "browser",
+          "status": "SUCCESS",
+          "error": null,
+          "errorReason": null,
+          "attempts": 1
+        },
+        {
+          "sourceUrl": "https://www.theventi.co.kr/new2022/menu/all.html?mode=5",
+          "adapter": "venti-list",
+          "sourceType": "browser",
+          "status": "SUCCESS",
+          "error": null,
+          "errorReason": null,
+          "attempts": 1
+        },
+        {
+          "sourceUrl": "https://www.theventi.co.kr/new2022/menu/all.html?mode=6",
+          "adapter": "venti-list",
+          "sourceType": "browser",
+          "status": "SUCCESS",
+          "error": null,
+          "errorReason": null,
+          "attempts": 1
+        },
+        {
+          "sourceUrl": "https://www.theventi.co.kr/new2022/menu/all.html?mode=7",
+          "adapter": "venti-list",
+          "sourceType": "browser",
+          "status": "SUCCESS",
+          "error": null,
+          "errorReason": null,
+          "attempts": 1
+        },
+        {
+          "sourceUrl": "https://www.theventi.co.kr/new2022/menu/all.html?mode=8",
+          "adapter": "venti-list",
+          "sourceType": "browser",
+          "status": "SUCCESS",
+          "error": null,
+          "errorReason": null,
+          "attempts": 1
+        }
+      ]
+    }
+  ]
+}
