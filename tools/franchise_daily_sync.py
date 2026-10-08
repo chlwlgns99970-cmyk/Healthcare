@@ -317,6 +317,8 @@ def run(out, run_key, brands=None, batches=None, target_brand_ids=None):
             existing=json.loads(data)
         report_path=out/'latest-franchise-sync-report.json'
         previous_report=json.loads(report_path.read_text(encoding='utf-8')) if report_path.exists() else {}
+        state_path=out/'latest-franchise-brand-status.json'
+        previous_state=json.loads(state_path.read_text(encoding='utf-8')) if state_path.exists() else previous_report.get('brands',[])
         if manifest.get('runKey')==run_key or previous_report.get('runId')==run_key:
             return {'status':'ALREADY_COMPLETED','runKey':run_key}
         started=datetime.now(timezone.utc).isoformat()
@@ -337,7 +339,7 @@ def run(out, run_key, brands=None, batches=None, target_brand_ids=None):
         report.update(autoReadyBrands=states.count('AUTO_READY'),sourceBlockedBrands=states.count('SOURCE_BLOCKED'),
             adapterRequiredBrands=states.count('ADAPTER_REQUIRED'),brokenBrands=states.count('BROKEN'),
             reviewRequiredBrands=states.count('REVIEW_REQUIRED'),totalBrands=len(brands),finishedAt=report['endedAt'])
-        previous_by_id={b['brandId']:b for b in previous_report.get('brands',[]) if b.get('brandId')}
+        previous_by_id={b['brandId']:b for b in previous_state if b.get('brandId')}
         for batch in report['brands']:
             old=previous_by_id.get(batch.get('brandId'),{})
             new_count=sum(d['brandId']==batch.get('brandId') and d['state']=='NEW' for d in counts['decisions'])
@@ -361,6 +363,16 @@ def run(out, run_key, brands=None, batches=None, target_brand_ids=None):
                 atomic_write(manifest_path,json.dumps(manifest,sort_keys=True).encode())
         report['catalogVersion']=manifest.get('version');report['checksum']=manifest.get('sha256')
         report['status']='PUBLISHED' if successes else 'EXISTING_CATALOG_RETAINED'
+        persistent=dict(previous_by_id)
+        for batch in report['brands']:
+            if not batch.get('brandId'):continue
+            persistent[batch['brandId']]={k:batch[k] for k in ('brandId','lastCheckedAt','lastSuccessAt','lastResult','lastMenuCount','lastNewCount','adapterTypes')}
+            persistent[batch['brandId']]['sources']=[{k:s.get(k) for k in ('sourceUrl','adapter','sourceType','status','error','errorReason','attempts')} for s in batch.get('sources',[])]
+        atomic_write(state_path,json.dumps(list(persistent.values()),ensure_ascii=False,indent=2).encode())
+        history=out/'sync-history';history.mkdir(exist_ok=True)
+        summary={k:v for k,v in report.items() if k not in ('brands','decisions')}
+        summary['brands']=[persistent[b['brandId']] for b in report['brands'] if b.get('brandId')]
+        atomic_write(history/(hashlib.sha256(run_key.encode()).hexdigest()+'.json'),json.dumps(summary,ensure_ascii=False,indent=2).encode())
         atomic_write(out/'latest-franchise-sync-report.json',json.dumps(report,ensure_ascii=False,indent=2).encode())
         return report
     finally: lock.unlink(missing_ok=True)

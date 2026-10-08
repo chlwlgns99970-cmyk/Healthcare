@@ -2,7 +2,7 @@
 import copy, gzip, json, tempfile, unittest
 from pathlib import Path
 from unittest.mock import patch
-from franchise_daily_sync import CONFIG, ROOT, candidates, fetch, fetch_source, merge, normalize, source_identity
+from franchise_daily_sync import CONFIG, ROOT, candidates, fetch, fetch_source, merge, normalize, source_identity,run
 from franchise_pagination import additional_pages
 
 class CompletionTest(unittest.TestCase):
@@ -12,6 +12,23 @@ class CompletionTest(unittest.TestCase):
         self.menu=candidates(self.brand,'<a href="menu_view.php?menu=991123">검증 신메뉴</a>','2026-10-08T00:00:00Z')[0]
     def batch(self,menus,status='SUCCESS'):
         return dict(brandId=self.brand['brandId'],checkedAt='2026-10-08T00:00:00Z',status=status,menus=menus)
+    def test_transient_retry_bounded_and_403_not_retried(self):
+        brand=dict(self.brand,sources=self.brand['sources'][:1])
+        failed=dict(self.batch([],'FETCH_FAILED'),error='TimeoutError',httpStatus=None)
+        with patch('franchise_daily_sync.fetch_source',side_effect=[failed,self.batch([self.menu])]) as transport,patch('franchise_daily_sync.time.sleep'):
+            result=fetch(brand)
+        self.assertEqual(2,transport.call_count);self.assertEqual('SUCCESS',result['status'])
+        forbidden=dict(failed,error='HTTPError',httpStatus=403)
+        with patch('franchise_daily_sync.fetch_source',return_value=forbidden) as transport:fetch(brand)
+        self.assertEqual(1,transport.call_count)
+    def test_audit_history_retains_last_success_after_failure(self):
+        with tempfile.TemporaryDirectory() as directory:
+            first=run(directory,'success',self.brands,[self.batch([self.menu])])
+            failure=self.batch([],'FETCH_FAILED');failure['checkedAt']='2026-10-09T00:00:00Z'
+            second=run(directory,'failed',self.brands,[failure])
+            state=json.loads((Path(directory)/'latest-franchise-brand-status.json').read_text(encoding='utf-8'))[0]
+            self.assertEqual('FAILED',state['lastResult']);self.assertEqual('2026-10-08T00:00:00Z',state['lastSuccessAt'])
+            self.assertEqual(2,len(list((Path(directory)/'sync-history').glob('*.json'))));self.assertEqual(first['checksum'],second['checksum'])
     def test_spike_withholds_all_new_candidates(self):
         brand=dict(self.brand,expectedMenuCount=20)
         source=self.batch([dict(self.menu,id=str(i)) for i in range(100)])

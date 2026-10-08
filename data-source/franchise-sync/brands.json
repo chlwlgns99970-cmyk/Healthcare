@@ -140,42 +140,50 @@
       {
         "url": "https://www.momstouch.co.kr/menu/new.php?s_sect1=new",
         "adapter": "reviewed-html",
-        "key": "New!"
+        "key": "New!",
+        "transport": "browser"
       },
       {
         "url": "https://www.momstouch.co.kr/menu/ttoeat.php?s_sect1=CG0045",
         "adapter": "reviewed-html",
-        "key": "또잇 치킨"
+        "key": "또잇 치킨",
+        "transport": "browser"
       },
       {
         "url": "https://www.momstouch.co.kr/menu/new.php?s_sect1=CG0005",
         "adapter": "reviewed-html",
-        "key": "버거"
+        "key": "버거",
+        "transport": "browser"
       },
       {
         "url": "https://www.momstouch.co.kr/menu/new.php?s_sect1=CG0004",
         "adapter": "reviewed-html",
-        "key": "치킨"
+        "key": "치킨",
+        "transport": "browser"
       },
       {
         "url": "https://www.momstouch.co.kr/menu/new.php?s_sect1=CG0003",
         "adapter": "reviewed-html",
-        "key": "맘스세트"
+        "key": "맘스세트",
+        "transport": "browser"
       },
       {
         "url": "https://www.momstouch.co.kr/menu/new.php?s_sect1=CG0002",
         "adapter": "reviewed-html",
-        "key": "사이드"
+        "key": "사이드",
+        "transport": "browser"
       },
       {
         "url": "https://www.momstouch.co.kr/menu/new.php?s_sect1=CG0001",
         "adapter": "reviewed-html",
-        "key": "음료"
+        "key": "음료",
+        "transport": "browser"
       },
       {
         "url": "https://www.momstouch.co.kr/menu/new.php?s_sect1=CG0046",
         "adapter": "reviewed-html",
-        "key": "피자"
+        "key": "피자",
+        "transport": "browser"
       }
     ],
     "expectedMenuCount": 66
@@ -1835,37 +1843,44 @@
       {
         "url": "https://www.subway.co.kr/menuList/sandwich",
         "adapter": "subway-list",
-        "key": "sandwich"
+        "key": "sandwich",
+        "transport": "browser"
       },
       {
         "url": "https://www.subway.co.kr/menuList/grain_salad",
         "adapter": "subway-list",
-        "key": "grain_salad"
+        "key": "grain_salad",
+        "transport": "browser"
       },
       {
         "url": "https://www.subway.co.kr/menuList/salad",
         "adapter": "subway-list",
-        "key": "salad"
+        "key": "salad",
+        "transport": "browser"
       },
       {
         "url": "https://www.subway.co.kr/menuList/unit",
         "adapter": "subway-list",
-        "key": "unit"
+        "key": "unit",
+        "transport": "browser"
       },
       {
         "url": "https://www.subway.co.kr/menuList/morning",
         "adapter": "subway-list",
-        "key": "morning"
+        "key": "morning",
+        "transport": "browser"
       },
       {
         "url": "https://www.subway.co.kr/menuList/sidedrink",
         "adapter": "subway-list",
-        "key": "sidedrink"
+        "key": "sidedrink",
+        "transport": "browser"
       },
       {
         "url": "https://www.subway.co.kr/menuList/catering",
         "adapter": "subway-list",
-        "key": "catering"
+        "key": "catering",
+        "transport": "browser"
       }
     ],
     "expectedMenuCount": 100
