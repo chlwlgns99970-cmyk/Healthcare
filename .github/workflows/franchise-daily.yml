@@ -1,0 +1,46 @@
+name: Daily official franchise menu audit
+on:
+  schedule:
+    - cron: '17 19 * * *' # UTC 19:17 = Asia/Seoul 04:17 next day; schedules may be delayed.
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: franchise-menu-publish
+  cancel-in-progress: false
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: source
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Load previous published data
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git clone --branch franchise-data --depth 1 https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git published
+      - name: Test adapter and publish safety
+        run: python source/tools/test_franchise_daily_sync.py
+      - name: Audit official sources and publish locally
+        run: python source/tools/franchise_daily_sync.py --output published
+      - name: Publish one atomic Git commit
+        working-directory: published
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add latest.json catalog-*.json latest-franchise-sync-report.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Refresh official franchise menu catalog"
+            git push origin HEAD:franchise-data
+          fi
+      - name: Keep audit report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: franchise-sync-report
+          path: published/latest-franchise-sync-report.json
