@@ -28,6 +28,8 @@ RULES = {
  '샐러디&샌드위치': ('/menu2/list_1', '//li[.//a[@href]]/h6|//li[.//h6]//h6'),
  '이삭토스트': ('/menu/menu.php', '//a[contains(@href,"ptype=view")]//h4'),
  '매머드커피': ('/sub/menu/', '//li//div[@class="txt_wrap"]/strong'),
+ '스쿨푸드': ('/menu/menu.html', '//div[@class="txt_bx"]/p[@class="tit" and following-sibling::p[@class="des"]]'),
+ '에그드랍': ('/menu/list.php', '//a[starts-with(@href,"/menu/view.php?seq=")]/span[@class="text"]'),
 }
 
 def reviewed_rows(brand, markup):

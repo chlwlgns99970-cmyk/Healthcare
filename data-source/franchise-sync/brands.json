@@ -780,7 +780,7 @@
       {
         "url": "http://schoolfood.freewebclub.com/menu/menu.html",
         "key": "",
-        "adapter": "jsonld"
+        "adapter": "reviewed-html"
       }
     ]
   },
@@ -1628,7 +1628,7 @@
       {
         "url": "https://eggdrop.com/menu/list.php",
         "key": "",
-        "adapter": "jsonld"
+        "adapter": "reviewed-html"
       }
     ]
   },
