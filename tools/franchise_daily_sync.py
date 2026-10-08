@@ -108,8 +108,9 @@ def fetch(brand):
         with urllib.request.urlopen(request,timeout=8) as response:
             assert official_url(response.url,brand), 'unapproved redirect'
             data=response.read(MAX_BYTES+1);assert len(data)<=MAX_BYTES,'source too large'
-            encoding=response.headers.get_content_charset() or 'utf-8'
-        html=data.decode(encoding,errors='replace')
+            declared=re.search(br'charset\s*=\s*["\']?([a-zA-Z0-9_-]+)',data[:4096])
+            encoding=response.headers.get_content_charset() or (declared.group(1).decode('ascii') if declared else 'utf-8')
+        html=data.decode(encoding,errors='strict')
         menus=candidates(brand,html,checked)
         return dict(brandId=brand['brandId'],status='SUCCESS' if menus else 'REVIEW_REQUIRED',checkedAt=checked,menus=menus)
     except Exception as error:
