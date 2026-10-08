@@ -7,6 +7,11 @@ import re
 _slots=BoundedSemaphore(2)
 _state=local()
 
+class PublicAccessDenied(ValueError):
+    def __init__(self,status):
+        self.code=status
+        super().__init__('ACCESS_DENIED: '+str(status))
+
 def denied(status,text):
     return status in (401,403,429) or bool(re.search(r'captcha|verify you are human|access denied|접근이\s*차단|보안문자',text,re.I))
 
@@ -41,7 +46,7 @@ def render(brand,source):
         entry='https://www.hsd.co.kr/menu/menu_list' if api else source['url']
         response=page.goto(entry,wait_until='domcontentloaded',timeout=20000)
         status=response.status if response else None
-        if status in (401,403,429):raise ValueError('ACCESS_DENIED: '+str(status))
+        if status in (401,403,429):raise PublicAccessDenied(status)
         page.wait_for_timeout(1200)
         assert official_url(page.url,brand),'Unapproved official redirect'
         text=page.locator('body').inner_text(timeout=3000)
@@ -49,7 +54,8 @@ def render(brand,source):
         if api:
             response=_state.context.request.post(source['url'],timeout=20000)
             assert official_url(response.url,brand),'Unapproved API redirect'
-            if denied(response.status,response.text()):raise ValueError('ACCESS_DENIED: browser API')
+            if response.status in (401,403,429):raise PublicAccessDenied(response.status)
+            if denied(response.status,response.text()):raise ValueError('ACCESS_CHALLENGE: browser API')
             response.json() # Schema parser checks identity separately.
             return response.text(),dict(transport='normal-chromium-public-api',httpStatus=response.status,finalUrl=response.url,tlsVerification=True)
         # Bounded scrolling only; load-more contracts must be explicitly reviewed per source.

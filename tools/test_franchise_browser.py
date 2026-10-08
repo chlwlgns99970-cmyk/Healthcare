@@ -4,7 +4,7 @@ from pathlib import Path
 from franchise_daily_sync import candidates,fetch
 from unittest.mock import patch
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
-from franchise_browser import render,brand_browser_session,denied
+from franchise_browser import render,brand_browser_session,denied,PublicAccessDenied
 
 class Handler(BaseHTTPRequestHandler):
     def log_message(self,*args):pass
@@ -52,5 +52,11 @@ class BrowserTests(unittest.TestCase):
         with patch('franchise_daily_sync._fetch',side_effect=ValueError('changed schema')):
             result=fetch(dict(brandId='isolated',sources=[]))
         self.assertEqual('FETCH_FAILED',result['status']);self.assertEqual([],result['menus'])
+    def test_browser_http_status_recorded_without_retry(self):
+        from franchise_daily_sync import fetch_source
+        brand=dict(brandId='test',name='Test',allowedHosts=['127.0.0.1'])
+        with patch('franchise_browser.render',side_effect=PublicAccessDenied(403)):
+            result=fetch_source(brand,dict(url=self.base+'/menu',adapter='jsonld',transport='browser'))
+        self.assertEqual(403,result['httpStatus']);self.assertEqual([],result['menus'])
 
 if __name__=='__main__':unittest.main(verbosity=2)

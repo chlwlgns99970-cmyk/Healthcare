@@ -3,7 +3,7 @@ from pathlib import Path
 from html.parser import HTMLParser
 from urllib.parse import urlparse, urljoin, quote, urlunparse, urlencode
 import argparse, concurrent.futures, hashlib, json, math, os, re, time, unicodedata
-import subprocess, shutil, socket
+import subprocess, shutil
 import urllib.request
 import urllib.error
 from datetime import datetime, timezone
@@ -329,6 +329,7 @@ def run(out, run_key, brands=None, batches=None, target_brand_ids=None):
         static=json.loads(SEED.read_text(encoding='utf-8'))
         menus,counts=merge(existing,batches,brands,static)
         report=dict(runId=run_key,startedAt=started,endedAt=datetime.now(timezone.utc).isoformat(),timezone='Asia/Seoul',
+            dateKst=datetime.fromtimestamp(time.time()+9*3600,timezone.utc).date().isoformat(),
             scope='TARGETED_VERIFICATION' if target_brand_ids is not None else 'FULL',registryBrands=len(brands),
             targetBrands=len(target_brand_ids) if target_brand_ids is not None else len(brands),
             successBrands=sum(b['status']=='SUCCESS' for b in batches),failedBrands=sum(b['status']=='FETCH_FAILED' for b in batches),
