@@ -39,10 +39,12 @@ jobs:
           git clone --branch franchise-data --depth 1 https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git published
       - name: Test adapter and publish safety
         run: |
-          python -m pip install lxml==6.1.1
+          python -m pip install lxml==6.1.1 playwright==1.63.0
+          python -m playwright install --with-deps --only-shell chromium
           python source/tools/test_franchise_daily_sync.py
           python source/tools/test_franchise_auto_audit.py
           python source/tools/test_franchise_completion.py
+          python source/tools/test_franchise_browser.py
       - name: Audit official sources and publish locally
         env:
           VERIFICATION_RUN_KEY: ${{ inputs.verificationRunKey }}

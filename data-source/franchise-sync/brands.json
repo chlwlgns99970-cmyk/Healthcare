@@ -757,7 +757,8 @@
       {
         "url": "https://www.twozzim.com/bbs/content.php?co_id=menu",
         "key": "",
-        "adapter": "reviewed-html"
+        "adapter": "reviewed-html",
+        "transport": "browser"
       }
     ],
     "expectedMenuCount": 19
@@ -857,7 +858,8 @@
       {
         "url": "http://www.hyundaiok.com/menu",
         "key": "",
-        "adapter": "reviewed-html"
+        "adapter": "reviewed-html",
+        "transport": "browser"
       }
     ],
     "expectedMenuCount": 10
@@ -878,13 +880,15 @@
         "url": "https://ihwasoo.com/bbs/board.php?bo_table=menu",
         "key": "",
         "adapter": "reviewed-html",
-        "pagination": "gnuboard"
+        "pagination": "gnuboard",
+        "transport": "browser"
       },
       {
         "url": "https://ihwasoo.com/bbs/board.php?bo_table=menu&sca=%EB%A9%94%EC%9D%B8+%EB%A9%94%EB%89%B4",
         "key": "",
         "adapter": "reviewed-html",
-        "pagination": "gnuboard"
+        "pagination": "gnuboard",
+        "transport": "browser"
       }
     ],
     "expectedMenuCount": 13
@@ -1007,7 +1011,8 @@
       {
         "url": "http://schoolfood.freewebclub.com/menu/menu.html",
         "key": "",
-        "adapter": "reviewed-html"
+        "adapter": "reviewed-html",
+        "transport": "browser"
       }
     ],
     "expectedMenuCount": 90
@@ -1648,9 +1653,10 @@
     "registryUrl": "https://www.hecbob.com/main",
     "sources": [
       {
-        "url": "https://www.hecbob.com/main",
-        "key": "",
-        "adapter": "jsonld"
+        "url": "https://www.hecbob.com/hecbobmenu",
+        "adapter": "hecbob-rendered",
+        "transport": "browser",
+        "key": "all-six-categories"
       }
     ]
   },
@@ -2206,7 +2212,8 @@
         "url": "https://www.cheogajip.co.kr/bbs/board.php?bo_table=allmenu",
         "key": "cheogajip-all",
         "adapter": "cheogajip-list",
-        "pagination": "gnuboard"
+        "pagination": "gnuboard",
+        "transport": "browser"
       }
     ],
     "expectedMenuCount": 44
@@ -3480,42 +3487,50 @@
       {
         "url": "https://www.theventi.co.kr/new2022/menu/all.html?mode=1",
         "adapter": "venti-list",
-        "key": "venti-1"
+        "key": "venti-1",
+        "transport": "browser"
       },
       {
         "url": "https://www.theventi.co.kr/new2022/menu/all.html?mode=2",
         "adapter": "venti-list",
-        "key": "venti-2"
+        "key": "venti-2",
+        "transport": "browser"
       },
       {
         "url": "https://www.theventi.co.kr/new2022/menu/all.html?mode=3",
         "adapter": "venti-list",
-        "key": "venti-3"
+        "key": "venti-3",
+        "transport": "browser"
       },
       {
         "url": "https://www.theventi.co.kr/new2022/menu/all.html?mode=4",
         "adapter": "venti-list",
-        "key": "venti-4"
+        "key": "venti-4",
+        "transport": "browser"
       },
       {
         "url": "https://www.theventi.co.kr/new2022/menu/all.html?mode=5",
         "adapter": "venti-list",
-        "key": "venti-5"
+        "key": "venti-5",
+        "transport": "browser"
       },
       {
         "url": "https://www.theventi.co.kr/new2022/menu/all.html?mode=6",
         "adapter": "venti-list",
-        "key": "venti-6"
+        "key": "venti-6",
+        "transport": "browser"
       },
       {
         "url": "https://www.theventi.co.kr/new2022/menu/all.html?mode=7",
         "adapter": "venti-list",
-        "key": "venti-7"
+        "key": "venti-7",
+        "transport": "browser"
       },
       {
         "url": "https://www.theventi.co.kr/new2022/menu/all.html?mode=8",
         "adapter": "venti-list",
-        "key": "venti-8"
+        "key": "venti-8",
+        "transport": "browser"
       }
     ],
     "expectedMenuCount": 169

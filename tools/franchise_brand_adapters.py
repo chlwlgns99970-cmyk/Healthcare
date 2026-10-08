@@ -77,6 +77,21 @@ def public_next_records(markup):
 
 def reviewed_rows(brand, markup):
     adapter=brand['adapter']; url=brand['sourceUrl']
+    if adapter=='hecbob-rendered':
+        assert brand['name']=='핵밥' and urlparse(url).path=='/hecbobmenu'
+        root=html.fromstring(markup);rows=[]
+        groups={'menu_bowl':'덮밥','menu_ramen':'라멘','menu_udon':'우동','menu_soba':'소바','menu_curry':'카레','menu_gatsu':'카츠'}
+        for key,category in groups.items():
+            containers=root.xpath('//*[@id="'+key+'"]');assert len(containers)==1,'Official menu category disappeared'
+            nodes=containers[0].xpath('.//div[@class="tg-thumb-info"]');assert nodes,'Rendered menu cards missing'
+            for node in nodes:
+                titles=node.xpath('./div[@class="tg-thumb-title"]');descs=node.xpath('./div[@class="tg-thumb-desc"]')
+                assert len(titles)==len(descs)==1,'Official menu identity schema changed'
+                name=clean(titles[0].text_content());assert name
+                variants=re.findall(r'(단품|정식|닭튀김정식|돈카츠정식)\s*:',descs[0].text_content())
+                assert variants,'Official sold variant labels missing'
+                for variant in set(variants):rows.append((name+' ('+variant+')',category,url,''))
+        return rows
     if adapter=='poke-fixed':
         assert brand['name']=='포케올데이' and urlparse(url).path in ('/menu_balance_box','/protein_poke','/rice_bowl','/side','/drink','/newmenu')
         root=html.fromstring(markup);rows=[]

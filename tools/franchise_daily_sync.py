@@ -3,7 +3,7 @@ from pathlib import Path
 from html.parser import HTMLParser
 from urllib.parse import urlparse, urljoin, quote, urlunparse, urlencode
 import argparse, concurrent.futures, hashlib, json, math, os, re, time, unicodedata
-import subprocess, shutil
+import subprocess, shutil, socket
 import urllib.request
 import urllib.error
 from datetime import datetime, timezone
@@ -133,8 +133,12 @@ def fetch_source(brand, source, capture_dir=None):
             assert form['delivery_subGroupCd']==source['key']
             body=urlencode(form).encode();headers['Content-Type']='application/x-www-form-urlencoded';headers['Accept-Language']='ko-KR'
         request=urllib.request.Request(encoded,method=method,data=body,headers=headers)
-        tls_evidence=None
-        if source.get('transport')=='default-jvm':
+        tls_evidence=None;browser_evidence=None
+        if source.get('transport')=='browser':
+            from franchise_browser import render
+            html,browser_evidence=render(brand,source)
+            data=html.encode('utf-8');encoding='utf-8'
+        elif source.get('transport')=='default-jvm':
             assert brand['name']=='노랑통닭' and method=='GET'
             java=shutil.which('java')
             if not java and os.environ.get('JAVA_HOME'):
@@ -185,6 +189,7 @@ def fetch_source(brand, source, capture_dir=None):
             coverageReferenceIds=coverage_refs,
             sourceDiagnostics=diagnostics,
             confirmedEmpty=confirmed_empty,tlsEvidence=tls_evidence,
+            browserEvidence=browser_evidence,sourceType='browser' if browser_evidence else 'json' if source['adapter'].endswith(('-json','-api')) else 'html',
             captureKey=hashlib.sha256(source_identity(source).encode()).hexdigest(),
             discoveredPages=next_pages)
     except Exception as error:
@@ -195,6 +200,15 @@ def source_identity(source):
     return source['url']+(('|'+json.dumps(source['form'],sort_keys=True)) if source.get('form') else '')
 
 def fetch(brand, capture_dir=None):
+    try:
+        if any(s.get('transport')=='browser' for s in brand.get('sources',[])):
+            from franchise_browser import brand_browser_session
+            with brand_browser_session():return _fetch(brand,capture_dir)
+        return _fetch(brand,capture_dir)
+    except Exception as error:
+        return dict(brandId=brand['brandId'],status='FETCH_FAILED',checkedAt=datetime.now(timezone.utc).isoformat(),menus=[],sources=[],warnings=['BRAND_FAILURE_ISOLATED'],error=type(error).__name__)
+
+def _fetch(brand, capture_dir=None):
     if not brand.get('sourceUrl'): return dict(brandId=brand['brandId'],status='SOURCE_MISSING',menus=[],sources=[])
     sources=brand.get('sources') or [dict(url=brand['sourceUrl'],adapter=brand['adapter'])]
     batches=[];seen=set();queue=list(sources)
@@ -206,7 +220,12 @@ def fetch(brand, capture_dir=None):
             return dict(brandId=brand['brandId'],status='FETCH_FAILED',menus=[],sources=batches,
                 checkedAt=datetime.now(timezone.utc).isoformat(),warnings=['SOURCE_TRAVERSAL_LIMIT'])
         seen.add(identity)
-        batch=fetch_source(brand,source,capture_dir);queue+=batch.pop('discoveredPages',[]);batches.append(batch)
+        batch=fetch_source(brand,source,capture_dir)
+        retryable=batch.get('httpStatus') in (500,502,503,504) or batch.get('error') in ('TimeoutError','ConnectionResetError') or batch.get('error')=='URLError' and any(t in batch.get('errorReason','').lower() for t in ('timed out','reset'))
+        if retryable:
+            time.sleep(0.5);batch=fetch_source(brand,source,capture_dir);batch['attempts']=2
+        else:batch['attempts']=1
+        queue+=batch.pop('discoveredPages',[]);batches.append(batch)
     external_ids={m['externalId'] for batch in batches for m in batch['menus']}
     for batch in batches:
         if not set(batch.get('coverageReferenceIds',[]))<=external_ids:
@@ -318,6 +337,19 @@ def run(out, run_key, brands=None, batches=None, target_brand_ids=None):
         report.update(autoReadyBrands=states.count('AUTO_READY'),sourceBlockedBrands=states.count('SOURCE_BLOCKED'),
             adapterRequiredBrands=states.count('ADAPTER_REQUIRED'),brokenBrands=states.count('BROKEN'),
             reviewRequiredBrands=states.count('REVIEW_REQUIRED'),totalBrands=len(brands),finishedAt=report['endedAt'])
+        previous_by_id={b['brandId']:b for b in previous_report.get('brands',[]) if b.get('brandId')}
+        for batch in report['brands']:
+            old=previous_by_id.get(batch.get('brandId'),{})
+            new_count=sum(d['brandId']==batch.get('brandId') and d['state']=='NEW' for d in counts['decisions'])
+            ok=batch['status']=='SUCCESS'
+            batch.update(lastCheckedAt=batch.get('checkedAt',started),lastSuccessAt=batch.get('checkedAt',started) if ok else old.get('lastSuccessAt'),
+                lastResult='SUCCESS' if ok and new_count else 'NO_CHANGE' if ok else 'FAILED',lastMenuCount=batch.get('observedMenuCount',0),lastNewCount=new_count,
+                adapterTypes=sorted({s['adapter'] for s in batch.get('sources',[])}))
+        report.update(noChangeBrands=sum(b['lastResult']=='NO_CHANGE' for b in report['brands']),newMenuBrands=sum(b['lastResult']=='SUCCESS' for b in report['brands']),
+            failedCheckBrands=sum(b['lastResult']=='FAILED' for b in report['brands']),
+            browserBasedBrands=sum(any(s.get('browserEvidence') for s in b.get('sources',[])) for b in report['brands']),
+            apiBasedBrands=sum(any(s.get('sourceType')=='json' for s in b.get('sources',[])) for b in report['brands']),
+            parserBasedBrands=sum(any(s.get('sourceType')=='html' for s in b.get('sources',[])) for b in report['brands']))
         successes=report['successBrands']
         if successes:
             payload=json.dumps(dict(schemaVersion=1,menus=sorted(menus,key=lambda m:m['id'])),ensure_ascii=False,sort_keys=True,separators=(',',':')).encode()
