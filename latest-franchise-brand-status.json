@@ -9235,7 +9235,7 @@
   },
   {
     "brandId": "brand-29327af78758b6f5",
-    "lastCheckedAt": "2026-10-08T14:14:50.828235+00:00",
+    "lastCheckedAt": "2026-10-08T14:23:34.409149+00:00",
     "lastSuccessAt": null,
     "lastResult": "FAILED",
     "lastMenuCount": 0,
@@ -9249,7 +9249,7 @@
         "adapter": "subway-list",
         "sourceType": null,
         "status": "FETCH_FAILED",
-        "error": "ValueError",
+        "error": "PublicAccessDenied",
         "errorReason": "ACCESS_DENIED: 403",
         "attempts": 1
       },
@@ -9258,7 +9258,7 @@
         "adapter": "subway-list",
         "sourceType": null,
         "status": "FETCH_FAILED",
-        "error": "ValueError",
+        "error": "PublicAccessDenied",
         "errorReason": "ACCESS_DENIED: 403",
         "attempts": 1
       },
@@ -9267,7 +9267,7 @@
         "adapter": "subway-list",
         "sourceType": null,
         "status": "FETCH_FAILED",
-        "error": "ValueError",
+        "error": "PublicAccessDenied",
         "errorReason": "ACCESS_DENIED: 403",
         "attempts": 1
       },
@@ -9276,7 +9276,7 @@
         "adapter": "subway-list",
         "sourceType": null,
         "status": "FETCH_FAILED",
-        "error": "ValueError",
+        "error": "PublicAccessDenied",
         "errorReason": "ACCESS_DENIED: 403",
         "attempts": 1
       },
@@ -9285,7 +9285,7 @@
         "adapter": "subway-list",
         "sourceType": null,
         "status": "FETCH_FAILED",
-        "error": "ValueError",
+        "error": "PublicAccessDenied",
         "errorReason": "ACCESS_DENIED: 403",
         "attempts": 1
       },
@@ -9294,7 +9294,7 @@
         "adapter": "subway-list",
         "sourceType": null,
         "status": "FETCH_FAILED",
-        "error": "ValueError",
+        "error": "PublicAccessDenied",
         "errorReason": "ACCESS_DENIED: 403",
         "attempts": 1
       },
@@ -9303,7 +9303,7 @@
         "adapter": "subway-list",
         "sourceType": null,
         "status": "FETCH_FAILED",
-        "error": "ValueError",
+        "error": "PublicAccessDenied",
         "errorReason": "ACCESS_DENIED: 403",
         "attempts": 1
       }

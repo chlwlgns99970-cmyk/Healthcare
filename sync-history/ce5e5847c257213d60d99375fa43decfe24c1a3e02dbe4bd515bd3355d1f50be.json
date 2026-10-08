@@ -18,114 +18,6 @@
   "identityReviewCount": 0,
   "newWithNutrition": 0,
   "newWithoutNutrition": 0,
-  "decisions": [],
-  "brands": [
-    {
-      "brandId": "brand-29327af78758b6f5",
-      "status": "FETCH_FAILED",
-      "checkedAt": "2026-10-08T14:23:34.409149+00:00",
-      "menuCount": 0,
-      "observedMenuCount": 0,
-      "warnings": [
-        "INCOMPLETE_SOURCE_COVERAGE_WITHHELD",
-        "MENU_COUNT_DROP_EXISTING_RETAINED"
-      ],
-      "sources": [
-        {
-          "brandId": "brand-29327af78758b6f5",
-          "sourceUrl": "https://www.subway.co.kr/menuList/sandwich",
-          "adapter": "subway-list",
-          "sourceKey": "sandwich",
-          "status": "FETCH_FAILED",
-          "checkedAt": "2026-10-08T14:23:32.372801+00:00",
-          "error": "PublicAccessDenied",
-          "errorReason": "ACCESS_DENIED: 403",
-          "httpStatus": 403,
-          "attempts": 1
-        },
-        {
-          "brandId": "brand-29327af78758b6f5",
-          "sourceUrl": "https://www.subway.co.kr/menuList/grain_salad",
-          "adapter": "subway-list",
-          "sourceKey": "grain_salad",
-          "status": "FETCH_FAILED",
-          "checkedAt": "2026-10-08T14:23:33.492798+00:00",
-          "error": "PublicAccessDenied",
-          "errorReason": "ACCESS_DENIED: 403",
-          "httpStatus": 403,
-          "attempts": 1
-        },
-        {
-          "brandId": "brand-29327af78758b6f5",
-          "sourceUrl": "https://www.subway.co.kr/menuList/salad",
-          "adapter": "subway-list",
-          "sourceKey": "salad",
-          "status": "FETCH_FAILED",
-          "checkedAt": "2026-10-08T14:23:33.674421+00:00",
-          "error": "PublicAccessDenied",
-          "errorReason": "ACCESS_DENIED: 403",
-          "httpStatus": 403,
-          "attempts": 1
-        },
-        {
-          "brandId": "brand-29327af78758b6f5",
-          "sourceUrl": "https://www.subway.co.kr/menuList/unit",
-          "adapter": "subway-list",
-          "sourceKey": "unit",
-          "status": "FETCH_FAILED",
-          "checkedAt": "2026-10-08T14:23:33.857982+00:00",
-          "error": "PublicAccessDenied",
-          "errorReason": "ACCESS_DENIED: 403",
-          "httpStatus": 403,
-          "attempts": 1
-        },
-        {
-          "brandId": "brand-29327af78758b6f5",
-          "sourceUrl": "https://www.subway.co.kr/menuList/morning",
-          "adapter": "subway-list",
-          "sourceKey": "morning",
-          "status": "FETCH_FAILED",
-          "checkedAt": "2026-10-08T14:23:34.040018+00:00",
-          "error": "PublicAccessDenied",
-          "errorReason": "ACCESS_DENIED: 403",
-          "httpStatus": 403,
-          "attempts": 1
-        },
-        {
-          "brandId": "brand-29327af78758b6f5",
-          "sourceUrl": "https://www.subway.co.kr/menuList/sidedrink",
-          "adapter": "subway-list",
-          "sourceKey": "sidedrink",
-          "status": "FETCH_FAILED",
-          "checkedAt": "2026-10-08T14:23:34.225090+00:00",
-          "error": "PublicAccessDenied",
-          "errorReason": "ACCESS_DENIED: 403",
-          "httpStatus": 403,
-          "attempts": 1
-        },
-        {
-          "brandId": "brand-29327af78758b6f5",
-          "sourceUrl": "https://www.subway.co.kr/menuList/catering",
-          "adapter": "subway-list",
-          "sourceKey": "catering",
-          "status": "FETCH_FAILED",
-          "checkedAt": "2026-10-08T14:23:34.409149+00:00",
-          "error": "PublicAccessDenied",
-          "errorReason": "ACCESS_DENIED: 403",
-          "httpStatus": 403,
-          "attempts": 1
-        }
-      ],
-      "lastCheckedAt": "2026-10-08T14:23:34.409149+00:00",
-      "lastSuccessAt": null,
-      "lastResult": "FAILED",
-      "lastMenuCount": 0,
-      "lastNewCount": 0,
-      "adapterTypes": [
-        "subway-list"
-      ]
-    }
-  ],
   "autoReadyBrands": 0,
   "sourceBlockedBrands": 1,
   "adapterRequiredBrands": 0,
@@ -141,5 +33,83 @@
   "parserBasedBrands": 0,
   "catalogVersion": "28524b18b87ff0cdfce69b542ed37eca6bfdd2fda7b406ae7be4aa3118c3fd3b",
   "checksum": "28524b18b87ff0cdfce69b542ed37eca6bfdd2fda7b406ae7be4aa3118c3fd3b",
-  "status": "EXISTING_CATALOG_RETAINED"
+  "status": "EXISTING_CATALOG_RETAINED",
+  "brands": [
+    {
+      "brandId": "brand-29327af78758b6f5",
+      "lastCheckedAt": "2026-10-08T14:23:34.409149+00:00",
+      "lastSuccessAt": null,
+      "lastResult": "FAILED",
+      "lastMenuCount": 0,
+      "lastNewCount": 0,
+      "adapterTypes": [
+        "subway-list"
+      ],
+      "sources": [
+        {
+          "sourceUrl": "https://www.subway.co.kr/menuList/sandwich",
+          "adapter": "subway-list",
+          "sourceType": null,
+          "status": "FETCH_FAILED",
+          "error": "PublicAccessDenied",
+          "errorReason": "ACCESS_DENIED: 403",
+          "attempts": 1
+        },
+        {
+          "sourceUrl": "https://www.subway.co.kr/menuList/grain_salad",
+          "adapter": "subway-list",
+          "sourceType": null,
+          "status": "FETCH_FAILED",
+          "error": "PublicAccessDenied",
+          "errorReason": "ACCESS_DENIED: 403",
+          "attempts": 1
+        },
+        {
+          "sourceUrl": "https://www.subway.co.kr/menuList/salad",
+          "adapter": "subway-list",
+          "sourceType": null,
+          "status": "FETCH_FAILED",
+          "error": "PublicAccessDenied",
+          "errorReason": "ACCESS_DENIED: 403",
+          "attempts": 1
+        },
+        {
+          "sourceUrl": "https://www.subway.co.kr/menuList/unit",
+          "adapter": "subway-list",
+          "sourceType": null,
+          "status": "FETCH_FAILED",
+          "error": "PublicAccessDenied",
+          "errorReason": "ACCESS_DENIED: 403",
+          "attempts": 1
+        },
+        {
+          "sourceUrl": "https://www.subway.co.kr/menuList/morning",
+          "adapter": "subway-list",
+          "sourceType": null,
+          "status": "FETCH_FAILED",
+          "error": "PublicAccessDenied",
+          "errorReason": "ACCESS_DENIED: 403",
+          "attempts": 1
+        },
+        {
+          "sourceUrl": "https://www.subway.co.kr/menuList/sidedrink",
+          "adapter": "subway-list",
+          "sourceType": null,
+          "status": "FETCH_FAILED",
+          "error": "PublicAccessDenied",
+          "errorReason": "ACCESS_DENIED: 403",
+          "attempts": 1
+        },
+        {
+          "sourceUrl": "https://www.subway.co.kr/menuList/catering",
+          "adapter": "subway-list",
+          "sourceType": null,
+          "status": "FETCH_FAILED",
+          "error": "PublicAccessDenied",
+          "errorReason": "ACCESS_DENIED: 403",
+          "attempts": 1
+        }
+      ]
+    }
+  ]
 }
