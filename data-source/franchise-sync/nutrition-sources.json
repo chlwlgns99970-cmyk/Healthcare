@@ -186,9 +186,12 @@
   {
     "brandId": "brand-0dc8558d4e8f58fd",
     "brand": "이디야",
-    "adapter": null,
-    "sources": [],
-    "status": "NUTRITION_SOURCE_MISSING",
+    "adapter": "ediya-product-nutrition",
+    "sources": [
+      "https://www.ediya.com/contents/drink.html",
+      "https://www.ediya.com/contents/bakery.html"
+    ],
+    "status": "REGISTERED",
     "allowedHosts": [
       "ediya.com",
       "www.ediya.com"
@@ -652,16 +655,17 @@
   {
     "brandId": "brand-b028605b3b64ee47",
     "brand": "포케올데이",
-    "adapter": null,
+    "adapter": "poke-finished-menu-nutrition",
     "sources": [
-      "https://pokeallday.co.kr/nutrition"
+      "https://pokeallday.co.kr/nutrition_info"
     ],
-    "status": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+    "status": "REGISTERED",
     "allowedHosts": [
       "pokeallday.co.kr",
       "www.pokeallday.co.kr"
     ],
-    "evidenceStatus": "SOURCE_FOUND"
+    "evidenceStatus": "SOURCE_FOUND",
+    "url": "https://pokeallday.co.kr/nutrition_info"
   },
   {
     "brandId": "brand-1bc146a27ab0e421",

@@ -3,12 +3,36 @@ import json
 import unittest
 from pathlib import Path
 
-from franchise_nutrition import parse_starbucks, parse_hansot, parse_mcdonalds, parse_dunkin, parse_salady, dunkin_pages, refresh, validate_nutrition
+from franchise_nutrition import parse_starbucks, parse_hansot, parse_mcdonalds, parse_dunkin, parse_salady, parse_ediya, parse_pokeallday, dunkin_pages, refresh, validate_nutrition
 
 FIX = Path(__file__).resolve().parents[1] / 'data-source/franchise-sync/fixtures'
 
 
 class NutritionTests(unittest.TestCase):
+    def test_poke_finished_menu_not_same_name_ingredient(self):
+        fact=parse_pokeallday(dict(brand='포케올데이',name='육회'),(FIX/'poke-nutrition.html').read_bytes())
+        self.assertEqual(811.63,fact['energyKcal']);self.assertEqual(493,fact['servingAmount']);self.assertEqual(6,fact['nutritionGroup'])
+
+    def test_poke_exact_hot_ice_variant(self):
+        with self.assertRaises(AssertionError):parse_pokeallday(dict(brand='포케올데이',name='아메리카노 (Hot)'),(FIX/'poke-nutrition.html').read_bytes())
+        fact=parse_pokeallday(dict(brand='포케올데이',name='카페라떼(ICE)'),(FIX/'poke-nutrition.html').read_bytes())
+        self.assertEqual(120,fact['energyKcal']);self.assertIsNone(fact['servingUnit']);self.assertIn('16oz',fact['servingDescription'])
+
+    def test_poke_different_topping_is_not_base_menu(self):
+        with self.assertRaises(AssertionError):parse_pokeallday(dict(brand='포케올데이',name='들기름 메밀면 샐러드 + 육회'),(FIX/'poke-nutrition.html').read_bytes())
+
+    def test_ediya_exact_product_weight_and_nullable_macros(self):
+        fact=parse_ediya(dict(brand='이디야',name='잉글리쉬 머핀',externalId='58'),(FIX/'ediya-nutrition-food.html').read_bytes())
+        self.assertEqual(278,fact['energyKcal']);self.assertEqual(140,fact['servingAmount']);self.assertEqual(13,fact['proteinGrams']);self.assertEqual(770,fact['sodiumMilligrams'])
+        self.assertIsNone(fact['fatGrams']);self.assertIsNone(fact['carbohydrateGrams'])
+
+    def test_ediya_cup_capacity_is_not_assumed_liquid_basis(self):
+        fact=parse_ediya(dict(brand='이디야',name='(L) HOT 가나 시그니처 초콜릿',externalId='1319'),(FIX/'ediya-nutrition-drink.html').read_bytes())
+        self.assertEqual(548,fact['energyKcal']);self.assertIsNone(fact['servingAmount']);self.assertIsNone(fact['servingUnit'])
+
+    def test_ediya_wrong_variant_not_matched(self):
+        with self.assertRaises(AssertionError):parse_ediya(dict(brand='이디야',name='(L) ICE 가나 시그니처 초콜릿',externalId='1319'),(FIX/'ediya-nutrition-drink.html').read_bytes())
+
     def test_dunkin_id_match_keeps_saturated_fat_unknown(self):
         rows=json.loads((FIX/'dunkin-nutrition-rows.json').read_text(encoding='utf-8'));row=next(r for r in rows if r['NUTRITION_KCAL'] not in ('-',None))
         fact=parse_dunkin(dict(brand='던킨',name=row['TITLE'],externalId='products:'+str(row['id'])),(FIX/'dunkin-nutrition-rows.json').read_bytes())

@@ -364,7 +364,7 @@ def run(out, run_key, brands=None, batches=None, target_brand_ids=None):
         static=json.loads(SEED.read_text(encoding='utf-8'))
         menus,counts=merge(existing,batches,brands,static)
         nutrition_audit = None
-        if live_fetch and batches and any(b['status']=='SUCCESS' for b in batches):
+        if live_fetch:
             from franchise_nutrition import REGISTRY, refresh
             if REGISTRY.exists():
                 menus,nutrition_audit=refresh(menus)

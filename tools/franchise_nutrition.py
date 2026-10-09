@@ -194,6 +194,68 @@ def parse_salady(menu,payload):
 PARSERS['salady-nutrition-pdf']=parse_salady
 
 
+def parse_ediya(menu, payload):
+    assert menu['brand']=='이디야'
+    root=html.fragment_fromstring(payload.decode('utf-8'),create_parent='div')
+    matches=root.xpath('//div[@class="pro_detail"][@id="nutri_'+menu['externalId']+'"]')
+    assert len(matches)==1,'Ediya product ID not uniquely matched'
+    product=matches[0]
+    names=product.xpath('./div[@class="detail_con"]/h2')
+    assert len(names)==1 and ' '.join(' '.join(names[0].xpath('./text()')).split())==' '.join(menu['name'].split()),'Ediya product name/variant changed'
+    values={}
+    for block in product.xpath('.//div[@class="pro_nutri"]/dl'):
+        label=''.join(block.xpath('./dt//text()')).strip()
+        assert label not in values
+        values[label]=''.join(block.xpath('./dd//text()')).strip().strip('()')
+    # Cup capacity is not the published amount of liquid. Only explicit weight
+    # qualifies as a serving basis; sugars/saturated fat are separate nutrients.
+    sizes=product.xpath('.//div[@class="pro_size"]//text()')
+    weight=re.fullmatch(r'\s*중량\s*:\s*(\d+(?:\.\d+)?)\s*g\s*',' '.join(sizes))
+    return dict(energyKcal=number(values.get('칼로리',''),'kcal'),
+                carbohydrateGrams=None,fatGrams=None,
+                proteinGrams=number(values.get('단백질',''),'g'),
+                sodiumMilligrams=number(values.get('나트륨',''),'mg'),
+                servingAmount=float(weight[1]) if weight else None,
+                servingUnit='g' if weight else None,servingDescription='공식 제품 중량' if weight else '')
+
+
+PARSERS['ediya-product-nutrition']=parse_ediya
+
+
+def parse_pokeallday(menu,payload):
+    assert menu['brand']=='포케올데이'
+    text=payload.decode('utf-8')
+    assert all(header in text for header in ('원재료 용량(g)','열량(kcal)','나트륨(mg)','탄수화물(g)','단백질(g)','지방(g)'))
+    root=html.fromstring(text)
+    normalize=lambda value:re.sub(r'\s','',html.fragment_fromstring(value,create_parent='div').text_content())
+    matches=[]
+    # Only complete sold-menu groups. Topping/protein/ingredient rows (1–5)
+    # must never be assigned to a finished menu of the same name.
+    for group in (6,7,8,9,10,11):
+        scripts=root.xpath('//div[contains(concat(" ",@class," ")," wrap'+str(group)+' ")]/script/text()')
+        assert len(scripts)==1
+        raw=re.search(r'let itemInfoArr = \[(.*?)\]\s*let itemTable',scripts[0],re.S)
+        assert raw
+        from franchise_literal_data import parse_object_literal
+        body=re.sub(r'(?m)^\s*//[^\n]*','',raw[1])
+        records=parse_object_literal('{rows:['+body+']}')['rows']
+        assert records and all(set(r)=={'name','value'} for r in records)
+        pairs=[(r['name'],r['value']) for r in records]
+        matches.extend((group,name,value) for name,value in pairs if normalize(name)==normalize(menu['name']))
+    assert len(matches)==1,'Poke finished menu name/variant not uniquely matched'
+    group,name,raw=matches[0];values=raw.split('|');assert len(values)==10
+    amount=re.fullmatch(r'(\d+(?:\.\d+)?)(ml|ea)?',values[0])
+    assert amount or re.fullmatch(r'\d+(?:\.\d+)?oz',values[0]),'Unexpected official basis'
+    numbers=[number(v+'g','g') for v in values[1:]];assert all(v is not None for v in numbers)
+    kcal,sodium,carbs,sugar,protein,fat,cholesterol,saturated,trans=numbers
+    return dict(energyKcal=kcal,carbohydrateGrams=carbs,proteinGrams=protein,fatGrams=fat,sodiumMilligrams=sodium,
+                servingAmount=float(amount[1]) if amount else None,servingUnit={'ml':'ml','ea':'개',None:'g'}[amount[2]] if amount else None,
+                servingDescription='공식 완성 메뉴 기준 · 추가 재료는 별도' if amount else '공식 기준량 '+values[0]+' · 단위를 직접 확인해 기록해 주세요.',matchedBy='EXACT_FINISHED_MENU_NAME_AND_VARIANT',nutritionGroup=group)
+
+
+PARSERS['poke-finished-menu-nutrition']=parse_pokeallday
+
+
 def validate_nutrition(fact, allowed_hosts):
     uri = urlparse(fact['sourceUrl'])
     assert uri.scheme in ('https', 'http') and not uri.username and not uri.password
@@ -220,7 +282,8 @@ def refresh(menus, registry=None, fetcher=None):
     audit = []
 
     def fetch(url):
-        with urllib.request.urlopen(urllib.request.Request(url, headers={'User-Agent': 'HealthcareMenuAudit/1.0 (official nutrition refresh)'}), timeout=12) as response:
+        post = urlparse(url).hostname=='www.ediya.com' and urlparse(url).path=='/inc/ajax_brand.php'
+        with urllib.request.urlopen(urllib.request.Request(url, data=b'' if post else None, headers={'User-Agent': 'HealthcareMenuAudit/1.0 (official nutrition refresh)'}), timeout=12) as response:
             assert response.status == 200 and urlparse(response.url).hostname == urlparse(url).hostname
             payload = response.read(2000001)
             assert 0 < len(payload) <= 2000000
@@ -228,6 +291,13 @@ def refresh(menus, registry=None, fetcher=None):
 
     get = fetcher or fetch
     shared = {}
+    # A paginated page contains multiple products. Read each official page once.
+    page_urls={m['sourceUrl'] for m in menus if sources.get(m['brandId'],{}).get('adapter')=='ediya-product-nutrition'}
+    def page(url):
+        try:return url,get(url)
+        except Exception as error:return url,error
+    with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
+        shared.update(pool.map(page,sorted(page_urls)))
     for source in registry:
         if source.get('adapter') in PARSERS and source.get('url') and any(m['brandId']==source['brandId'] for m in menus):
             try: shared[source['url']] = dunkin_pages(source['url'], get) if source['adapter']=='dunkin-nutrition-pages' else get(source['url'])
