@@ -11,6 +11,7 @@ import json
 import math
 import re
 import urllib.request
+import urllib.error
 from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
@@ -20,6 +21,7 @@ from lxml import html
 
 ROOT = Path(__file__).resolve().parents[1]
 REGISTRY = ROOT / 'data-source/franchise-sync/nutrition-sources.json'
+REVIEWED = ROOT / 'data-source/franchise-sync/verified-nutrition-snapshot.json'
 STATUSES = {'NUTRITION_COMPLETE', 'NUTRITION_PARTIAL', 'NUTRITION_NOT_PUBLISHED',
             'NUTRITION_SOURCE_FOUND_UNMATCHED', 'NUTRITION_SOURCE_MISSING'}
 FIELDS = ('energyKcal', 'carbohydrateGrams', 'proteinGrams', 'fatGrams', 'sodiumMilligrams')
@@ -280,6 +282,7 @@ def refresh(menus, registry=None, fetcher=None):
     sources = {b['brandId']: b for b in registry}
     checked = datetime.now(timezone.utc).isoformat()
     audit = []
+    snapshots = {m['id']:m for m in json.loads(REVIEWED.read_text(encoding='utf-8'))} if REVIEWED.exists() else {}
 
     def fetch(url):
         post = urlparse(url).hostname=='www.ediya.com' and urlparse(url).path=='/inc/ajax_brand.php'
@@ -324,6 +327,16 @@ def refresh(menus, registry=None, fetcher=None):
                 evidence.update(result='MATCHED', nutritionStatus=menu['nutritionStatus'], sourceUrl=fact['sourceUrl'])
             except Exception as error:
                 # Never erase previously verified official values on fetch/schema errors.
+                captured=snapshots.get(menu['id'])
+                if not menu.get('officialNutrition') and isinstance(error,(urllib.error.URLError,TimeoutError)) and captured:
+                    assert all(captured[k]==menu[k] for k in ('brandId','brand','name','externalId','sourceUrl')),'Reviewed snapshot identity changed'
+                    fact=captured['officialNutrition']
+                    assert fact['officialProductId']==menu['externalId']
+                    validate_nutrition(fact,source['allowedHosts'])
+                    # Keep the actual capture timestamp. A failed cloud fetch is
+                    # never represented as fresh verification or a successful fetch.
+                    menu['officialNutrition']=dict(fact)
+                    evidence['reviewedSnapshotRetained']=True
                 menu['nutritionStatus'] = status(menu['officialNutrition']) if menu.get('officialNutrition') else 'NUTRITION_SOURCE_FOUND_UNMATCHED'
                 evidence.update(result='FAILED_RETAINED', nutritionStatus=menu['nutritionStatus'], error=type(error).__name__, reason=str(error)[:300])
         else:
@@ -345,5 +358,6 @@ def refresh(menus, registry=None, fetcher=None):
     return refreshed, dict(total=len(refreshed), states=dict(counts), known=known,
                            nutritionLinkedMenus=sum(linked(m.get('officialNutrition',{})) for m in refreshed),
                            newlyVerifiedMenus=newly, nutritionChangedMenus=changed,
+                           reviewedSnapshotsRetained=sum(a.get('reviewedSnapshotRetained',False) for a in audit),
                            recordable=sum(m.get('officialNutrition', {}).get('energyKcal') is not None and m.get('officialNutrition', {}).get('servingAmount') is not None for m in refreshed),
                            matched=sum(a['result']=='MATCHED' for a in audit), failed=sum(a['result']=='FAILED_RETAINED' for a in audit), menus=audit)

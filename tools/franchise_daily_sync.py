@@ -368,6 +368,10 @@ def run(out, run_key, brands=None, batches=None, target_brand_ids=None):
             from franchise_nutrition import REGISTRY, refresh
             if REGISTRY.exists():
                 menus,nutrition_audit=refresh(menus)
+                previous_ids={m['id'] for m in existing.get('menus',[])}
+                new_menus=[m for m in menus if m['id'] not in previous_ids]
+                counts['newWithNutrition']=sum(any(m.get('officialNutrition',{}).get(k) is not None for k in ('energyKcal','carbohydrateGrams','proteinGrams','fatGrams','sodiumMilligrams')) for m in new_menus)
+                counts['newWithoutNutrition']=len(new_menus)-counts['newWithNutrition']
         report=dict(runId=run_key,triggerType=os.environ.get('GITHUB_EVENT_NAME','local'),startedAt=started,endedAt=datetime.now(timezone.utc).isoformat(),timezone='Asia/Seoul',
             dateKst=datetime.fromtimestamp(time.time()+9*3600,timezone.utc).date().isoformat(),
             scope='TARGETED_VERIFICATION' if target_brand_ids is not None else 'FULL',registryBrands=len(brands),

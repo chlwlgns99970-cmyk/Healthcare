@@ -9,6 +9,20 @@ FIX = Path(__file__).resolve().parents[1] / 'data-source/franchise-sync/fixtures
 
 
 class NutritionTests(unittest.TestCase):
+    def test_reviewed_snapshot_retains_capture_date_after_network_timeout(self):
+        import franchise_nutrition as n
+        from unittest.mock import patch
+        captured=json.loads(n.REVIEWED.read_text(encoding='utf-8'))[0]
+        menu={k:v for k,v in captured.items() if k!='officialNutrition'}
+        sources=[dict(brandId=menu['brandId'],adapter='starbucks-product-jsonld',allowedHosts=['www.starbucks.co.kr'])]
+        def fail(_):raise TimeoutError('temporary network timeout')
+        rows,audit=refresh([menu],sources,fail)
+        self.assertEqual(captured['officialNutrition'],rows[0]['officialNutrition'])
+        self.assertEqual(1,audit['reviewedSnapshotsRetained']);self.assertEqual(1,audit['failed'])
+        def mismatch(_):raise AssertionError('official product name changed')
+        rows,audit=refresh([menu],sources,mismatch)
+        self.assertNotIn('officialNutrition',rows[0]);self.assertEqual(0,audit['reviewedSnapshotsRetained'])
+
     def test_poke_finished_menu_not_same_name_ingredient(self):
         fact=parse_pokeallday(dict(brand='포케올데이',name='육회'),(FIX/'poke-nutrition.html').read_bytes())
         self.assertEqual(811.63,fact['energyKcal']);self.assertEqual(493,fact['servingAmount']);self.assertEqual(6,fact['nutritionGroup'])
