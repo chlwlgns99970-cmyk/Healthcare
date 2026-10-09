@@ -5,6 +5,42 @@ import unicodedata
 from lxml import html
 from urllib.parse import urlparse, parse_qs
 
+def mammoth_food_detail_url(menu, payload):
+    assert menu['brand']=='매머드커피'
+    assert parse_qs(urlparse(menu['sourceUrl']).query).get('menuType')==['F']
+    root=html.fromstring(payload.decode('utf-8') if isinstance(payload,bytes) else payload)
+    links=[a for a in root.xpath('//a[strong or .//strong]')
+           if norm(' '.join(a.xpath('.//strong')[0].itertext()))==norm(menu['name'])]
+    assert len(links)==1
+    code=re.fullmatch(r'javascript:goViewB\((\d+)\);',links[0].get('href',''))
+    assert code
+    scripts=' '.join(root.xpath('//script/text()'))
+    assert re.search(r'function\s+goViewB\(pa\)\s*\{\s*var url = "/sub/menu/list_coffee_view.php";',scripts)
+    return 'https://mmthcoffee.com/sub/menu/list_coffee_view.php?menuSeq='+code[1]
+
+def parse_mammoth_food(menu,payload):
+    assert menu['brand']=='매머드커피'
+    assert parse_qs(urlparse(menu['sourceUrl']).query).get('menuType')==['F']
+    root=html.fromstring(payload.decode('utf-8') if isinstance(payload,bytes) else payload)
+    titles=root.xpath('//strong')
+    assert any(norm(' '.join(t.itertext()))==norm(menu['name']) for t in titles)
+    assert '1회 제공량' in ' '.join(root.itertext())
+    tables=root.xpath('//table');assert len(tables)==1
+    headers=[' '.join(t.itertext()).strip() for t in tables[0].xpath('./thead/tr/th')]
+    assert headers==['구분','영양정보',''], 'Temperature/size columns cannot be assigned to a generic menu'
+    values={}
+    for tr in tables[0].xpath('./tbody/tr'):
+        cells=[' '.join(c.itertext()).strip() for c in tr.xpath('./td')]
+        assert len(cells)==3 and cells[2]==''
+        assert cells[0] not in values;values[cells[0]]=number(cells[1])
+    kcal=values.get('칼로리 (Kcal)');assert kcal is not None
+    # The official page publishes one serving, without a gram weight. Preserve
+    # that serving as one portion; never claim that it is one piece or infer g.
+    return dict(energyKcal=kcal,servingAmount=1,servingUnit='인분',servingDescription='공식 1회 제공량 기준 · 중량 미공개',
+                carbohydrateGrams=values.get('탄수화물 (g)'),proteinGrams=values.get('단백질 (g)'),
+                fatGrams=values.get('지방 (g)'),sodiumMilligrams=values.get('나트륨 (mg)'),
+                matchedBy='EXACT_OFFICIAL_LIST_NAME_AND_SINGLE_SERVING_DETAIL')
+
 def parse_kyochon(menu, payload):
     assert menu['brand']=='교촌치킨'
     query=parse_qs(urlparse(menu['sourceUrl']).query)

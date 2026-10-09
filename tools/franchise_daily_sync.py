@@ -411,7 +411,12 @@ def run(out, run_key, brands=None, batches=None, target_brand_ids=None):
                 assert old['id'] in by_menu_id and all(by_menu_id[old['id']].get(k)==v for k,v in old.items() if k not in ('officialNutrition','nutritionStatus')),'Existing menu identity or legacy field changed'
             for menu in menus:validate(menu,by_id[menu['brandId']])
             assert all(m.get('sourceType') in SOURCE_TYPES for m in menus),'Missing verified menu provenance'
-            payload=json.dumps(dict(schemaVersion=1,menus=sorted(menus,key=lambda m:m['id'])),ensure_ascii=False,sort_keys=True,separators=(',',':')).encode()
+            # Optional unknown nutrition fields deserialize as null in Android.
+            # Omit their repeated JSON keys to keep the verified catalog inside
+            # its download limit, without losing facts or changing legacy fields.
+            published=[dict(m,officialNutrition={k:v for k,v in m['officialNutrition'].items() if v is not None})
+                       if m.get('officialNutrition') else m for m in sorted(menus,key=lambda m:m['id'])]
+            payload=json.dumps(dict(schemaVersion=1,menus=published),ensure_ascii=False,sort_keys=True,separators=(',',':')).encode()
             checksum=hashlib.sha256(payload).hexdigest();filename='catalog-'+checksum+'.json'
             assert len(payload)<=MAX_CATALOG_BYTES,'Validated catalog exceeds Android download limit; existing published files unchanged'
             if manifest.get('sha256')!=checksum:

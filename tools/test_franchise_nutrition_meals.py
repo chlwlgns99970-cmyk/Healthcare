@@ -1,11 +1,21 @@
 import json
 import unittest
 from pathlib import Path
-from franchise_nutrition_meals import parse_burgerking,parse_isaac_not_published,parse_slowcali,slow_finished_rows,parse_kyochon
+from franchise_nutrition_meals import parse_burgerking,parse_isaac_not_published,parse_slowcali,slow_finished_rows,parse_kyochon,parse_mammoth_food,mammoth_food_detail_url
 
 FIX=Path(__file__).resolve().parents[1]/'data-source/franchise-sync/fixtures'
 
 class MealsNutritionTests(unittest.TestCase):
+    def test_mammoth_food_preserves_one_serving_without_inventing_grams(self):
+        m=dict(brand='매머드커피',name='소금빵',sourceUrl='https://mmthcoffee.com/sub/menu/list_sub.php?menuType=F')
+        self.assertEqual('https://mmthcoffee.com/sub/menu/list_coffee_view.php?menuSeq=697',
+                         mammoth_food_detail_url(m,(FIX/'mammoth-food-list.html').read_bytes()))
+        raw=(FIX/'mammoth-food-nutrition.html').read_bytes();n=parse_mammoth_food(m,raw)
+        self.assertEqual(226,n['energyKcal']);self.assertEqual(1,n['servingAmount']);self.assertEqual('인분',n['servingUnit'])
+        self.assertEqual(5,n['proteinGrams']);self.assertEqual(490,n['sodiumMilligrams'])
+        self.assertIsNone(n['carbohydrateGrams']);self.assertIsNone(n['fatGrams'])
+        with self.assertRaises(AssertionError):parse_mammoth_food(dict(m,name='소금빵 세트'),raw)
+        with self.assertRaises(AssertionError):parse_mammoth_food(dict(m,sourceUrl='https://mmthcoffee.com/sub/menu/list_coffee.php'),raw)
     def test_kyochon_uses_table_basis_not_raw_chicken_weight(self):
         menu=dict(brand='교촌치킨',name='반반윙콤비[레드+마라레드]',externalId='id:41581',
                   sourceUrl='https://www.kyochon.com/menu/view.asp?id=41581&cg=2')

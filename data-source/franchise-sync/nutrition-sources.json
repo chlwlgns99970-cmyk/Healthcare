@@ -230,13 +230,16 @@
   {
     "brandId": "brand-149ee0d555be8e34",
     "brand": "매머드커피",
-    "adapter": null,
-    "sources": [],
-    "status": "NUTRITION_SOURCE_MISSING",
+    "adapter": "mammoth-food-official-nutrition",
+    "sources": [
+      "https://mmthcoffee.com/sub/menu/list_sub.php?menuType=F"
+    ],
+    "status": "REGISTERED",
     "allowedHosts": [
       "mmthcoffee.com",
       "www.mmthcoffee.com"
-    ]
+    ],
+    "evidenceStatus": "SOURCE_FOUND"
   },
   {
     "brandId": "brand-2366ea85553dc984",

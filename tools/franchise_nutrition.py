@@ -311,11 +311,12 @@ PARSERS['poke-finished-menu-nutrition']=parse_pokeallday
 
 from franchise_nutrition_cafes import PARSERS as CAFE_PARSERS
 from franchise_nutrition_bakery import parse_paris, parse_tlj
-from franchise_nutrition_meals import parse_burgerking, parse_isaac_not_published, parse_slowcali, parse_kyochon
+from franchise_nutrition_meals import parse_burgerking, parse_isaac_not_published, parse_slowcali, parse_kyochon, parse_mammoth_food, mammoth_food_detail_url
 PARSERS.update(CAFE_PARSERS)
 PARSERS.update({'paris-official-nutrition':parse_paris, 'tlj-official-nutrition':parse_tlj})
 PARSERS['burgerking-official-nutrition']=parse_burgerking
 PARSERS['kyochon-official-nutrition']=parse_kyochon
+PARSERS['mammoth-food-official-nutrition']=parse_mammoth_food
 PARSERS['isaac-official-not-published']=parse_isaac_not_published
 PARSERS['slowcali-finished-nutrition']=parse_slowcali
 
@@ -419,6 +420,10 @@ def refresh(menus, registry=None, fetcher=None):
                 assert urlparse(url).hostname in source['allowedHosts']
                 payload = shared[url] if url in shared else get(url)
                 if isinstance(payload, Exception):raise payload
+                if adapter=='mammoth-food-official-nutrition':
+                    url=mammoth_food_detail_url(menu,payload)
+                    assert urlparse(url).hostname in source['allowedHosts']
+                    payload=get(url)
                 if adapter=='mc-nutrition-json':
                     try:
                         fact=PARSERS[adapter](menu,payload)
