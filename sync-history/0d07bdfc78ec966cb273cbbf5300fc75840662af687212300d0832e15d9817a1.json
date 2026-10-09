@@ -19,340 +19,6 @@
   "identityReviewCount": 0,
   "newWithNutrition": 0,
   "newWithoutNutrition": 0,
-  "decisions": [
-    {
-      "id": "remote-franchise-c1f5f990f097fb000bca09d7",
-      "brandId": "brand-1bc146a27ab0e421",
-      "name": "연어 포케",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-587ee72a2d5995a85f17737d",
-      "brandId": "brand-1bc146a27ab0e421",
-      "name": "참치 포케",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-e3b3a8e239d367145a60741b",
-      "brandId": "brand-1bc146a27ab0e421",
-      "name": "문어 포케",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-b6e6771a68e04e96772a72cd",
-      "brandId": "brand-1bc146a27ab0e421",
-      "name": "올인원 포케",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-1ba25e7966c278abfc4c2a19",
-      "brandId": "brand-1bc146a27ab0e421",
-      "name": "육회 포케",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-99343e2e473415a89023f620",
-      "brandId": "brand-1bc146a27ab0e421",
-      "name": "라임폰즈 문어 포케",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-b5e7210c30ebf2a1e77cf6ea",
-      "brandId": "brand-1bc146a27ab0e421",
-      "name": "트러플 버섯 포케",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-dd8911a205cace92b22c01f2",
-      "brandId": "brand-1bc146a27ab0e421",
-      "name": "오리엔탈 두부 포케",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-8e305a90c714fe3ff3ad33e3",
-      "brandId": "brand-1bc146a27ab0e421",
-      "name": "닭가슴살 에그 포케",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-962308740ce8b6b920d8fe4a",
-      "brandId": "brand-1bc146a27ab0e421",
-      "name": "연.참.문.퐄",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-cbcd9b2c2f6777bc7a081f9b",
-      "brandId": "brand-1bc146a27ab0e421",
-      "name": "블랙페퍼 치킨 보울",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-87daa2211771ad0b924cc874",
-      "brandId": "brand-1bc146a27ab0e421",
-      "name": "부채살 스테이크 보울",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-a35be085a235701f95d87416",
-      "brandId": "brand-1bc146a27ab0e421",
-      "name": "비프&치킨 더블프로틴 보울",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-bfe34a4aa669ea917bac300c",
-      "brandId": "brand-1bc146a27ab0e421",
-      "name": "훈제오리&치킨 더블프로틴 보울",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-eb65464115e5ab28318a8d98",
-      "brandId": "brand-1bc146a27ab0e421",
-      "name": "하와이안 갈릭 쉬림프",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-fd4f47e2765139c2644d1916",
-      "brandId": "brand-1bc146a27ab0e421",
-      "name": "프리미엄 연어 스테이크",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-4b7440849eabcb1b9dff1a81",
-      "brandId": "brand-1bc146a27ab0e421",
-      "name": "탄단지데이 샐러드",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-9112b7a1bbdfb738a55c09db",
-      "brandId": "brand-1bc146a27ab0e421",
-      "name": "크런치 시저 샐러드",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-35bf250f26f706025c2281d1",
-      "brandId": "brand-1bc146a27ab0e421",
-      "name": "로스팅 닭다리살 샐러드",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-7713bba8330fd309c41ad7c5",
-      "brandId": "brand-1bc146a27ab0e421",
-      "name": "훈제오리 샐러드",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-660c4eee08bf96483e0619a4",
-      "brandId": "brand-1bc146a27ab0e421",
-      "name": "닭가슴살 에그 통밀랩",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-4b1785c354a7687398f2ad49",
-      "brandId": "brand-1bc146a27ab0e421",
-      "name": "블랙페퍼 치킨 통밀랩",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-1ee2518140021a6ac80ae9e0",
-      "brandId": "brand-1bc146a27ab0e421",
-      "name": "부채살 스테이크 통밀랩",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-64ca4b8175324cf2aed343a8",
-      "brandId": "brand-1bc146a27ab0e421",
-      "name": "스파이시 토마토 야채 스프",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-caa029ed9f7d54f5ce6d49b4",
-      "brandId": "brand-1bc146a27ab0e421",
-      "name": "콘 크림 스프",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-0c056b28a88d440b34ec3158",
-      "brandId": "brand-1bc146a27ab0e421",
-      "name": "트러플 머쉬룸 스프",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-fa4fb76128827c449fa91964",
-      "brandId": "brand-1bc146a27ab0e421",
-      "name": "단호박 스프",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-1ba800d4c28e2b3c83d954c1",
-      "brandId": "brand-1bc146a27ab0e421",
-      "name": "유기농 ABC 주스",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-1600ed43bde67d3a4dd8dae2",
-      "brandId": "brand-1bc146a27ab0e421",
-      "name": "콤부차 석류",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-9760fd5dca7b64b3daf2625a",
-      "brandId": "brand-1bc146a27ab0e421",
-      "name": "콤부차 진저레몬",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-9037169bcdb22efaeb4dee43",
-      "brandId": "brand-1bc146a27ab0e421",
-      "name": "애사비 에이드",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-22d9194cb7c7a6376c7e914b",
-      "brandId": "brand-1bc146a27ab0e421",
-      "name": "클래식 소스",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-99d9670b0a989b55a4779b64",
-      "brandId": "brand-1bc146a27ab0e421",
-      "name": "스파이시 소스",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-d21e9467492bb70f16291cbd",
-      "brandId": "brand-1bc146a27ab0e421",
-      "name": "솔트앤페퍼 소스",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-7476de176fd3ba2366ac17d7",
-      "brandId": "brand-1bc146a27ab0e421",
-      "name": "와사비렌치 소스",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-c016e292aa6008f89e00e027",
-      "brandId": "brand-1bc146a27ab0e421",
-      "name": "라임폰즈 소스",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-580a9bbca9af8e5b17d52704",
-      "brandId": "brand-1bc146a27ab0e421",
-      "name": "트러플폰즈 소스",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-20eb77a5b67006083b4e3ed2",
-      "brandId": "brand-1bc146a27ab0e421",
-      "name": "소이 소스",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-672926cae63a3bf693f775dd",
-      "brandId": "brand-1bc146a27ab0e421",
-      "name": "오리엔탈 소스",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-935f4284578424dc5b5b1e35",
-      "brandId": "brand-1bc146a27ab0e421",
-      "name": "발사믹 소스",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-52819a1571993004fd6615db",
-      "brandId": "brand-1bc146a27ab0e421",
-      "name": "스리라차마요 소스",
-      "state": "ALIAS_MATCH"
-    },
-    {
-      "id": "remote-franchise-0805d41bee51b70de8e8e4dd",
-      "brandId": "brand-1bc146a27ab0e421",
-      "name": "시저 소스",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-6ac4877d097b30bfdc516c36",
-      "brandId": "brand-1bc146a27ab0e421",
-      "name": "레드머스타드 소스",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-c1e763f1f872f217651b91d5",
-      "brandId": "brand-1bc146a27ab0e421",
-      "name": "사워크림 랩 소스",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-51972733850c919ba6034d55",
-      "brandId": "brand-1bc146a27ab0e421",
-      "name": "매콤 깻잎 소이소스",
-      "state": "EXISTING"
-    },
-    {
-      "id": "remote-franchise-8492b92d106666cde64bc819",
-      "brandId": "brand-1bc146a27ab0e421",
-      "name": "서울 고추장 소스",
-      "state": "EXISTING"
-    }
-  ],
-  "brands": [
-    {
-      "brandId": "brand-1bc146a27ab0e421",
-      "status": "SUCCESS",
-      "checkedAt": "2026-10-09T15:27:50.402177+00:00",
-      "menuCount": 46,
-      "observedMenuCount": 46,
-      "warnings": [],
-      "sources": [
-        {
-          "brandId": "brand-1bc146a27ab0e421",
-          "sourceUrl": "https://slowcali.co.kr/bbs/content.php?co_id=menu",
-          "adapter": "reviewed-html",
-          "sourceKey": "",
-          "status": "SUCCESS",
-          "checkedAt": "2026-10-09T15:27:50.402177+00:00",
-          "htmlSha256": "66fc2f465d04a94888b365caccd2cd1441a93cb4b5353c2a99ec0acd4b760914",
-          "httpStatus": 200,
-          "coverageReferenceIds": [],
-          "sourceDiagnostics": {
-            "responseBytes": 298323,
-            "documentTitle": "menu | 슬로우캘리",
-            "visibleTextLength": 15324,
-            "inlineScriptCount": 12,
-            "inlineSignals": {
-              "cookieWrite": false,
-              "locationNavigation": false,
-              "captcha": false,
-              "challenge": false,
-              "eval": false
-            },
-            "accessDeniedIndicator": false,
-            "hasBody": true,
-            "hasMenuNames": false
-          },
-          "confirmedEmpty": false,
-          "tlsEvidence": null,
-          "browserEvidence": null,
-          "sourceType": "HTML",
-          "captureKey": "1442d2b2dd6e2cd45e68029315e27e6690f3a4c945c9570a74589d98fa567a80",
-          "attempts": 1
-        }
-      ],
-      "lastCheckedAt": "2026-10-09T15:27:50.402177+00:00",
-      "lastSuccessAt": "2026-10-09T15:27:50.402177+00:00",
-      "lastResult": "NO_CHANGE",
-      "lastMenuCount": 46,
-      "lastNewCount": 0,
-      "adapterTypes": [
-        "reviewed-html"
-      ],
-      "sourceTypes": [
-        "HTML"
-      ]
-    }
-  ],
   "nutritionAudit": {
     "total": 5103,
     "states": {
@@ -1249,5 +915,32 @@
   "missingSourceTypeCount": 0,
   "catalogVersion": "078bde62331f27e8daa54668cfec029286d1fe3e6684b7ff86cbd065324aa1a0",
   "checksum": "078bde62331f27e8daa54668cfec029286d1fe3e6684b7ff86cbd065324aa1a0",
-  "status": "PUBLISHED"
+  "status": "PUBLISHED",
+  "brands": [
+    {
+      "brandId": "brand-1bc146a27ab0e421",
+      "lastCheckedAt": "2026-10-09T15:27:50.402177+00:00",
+      "lastSuccessAt": "2026-10-09T15:27:50.402177+00:00",
+      "lastResult": "NO_CHANGE",
+      "lastMenuCount": 46,
+      "lastNewCount": 0,
+      "adapterTypes": [
+        "reviewed-html"
+      ],
+      "sourceTypes": [
+        "HTML"
+      ],
+      "sources": [
+        {
+          "sourceUrl": "https://slowcali.co.kr/bbs/content.php?co_id=menu",
+          "adapter": "reviewed-html",
+          "sourceType": "HTML",
+          "status": "SUCCESS",
+          "error": null,
+          "errorReason": null,
+          "attempts": 1
+        }
+      ]
+    }
+  ]
 }
