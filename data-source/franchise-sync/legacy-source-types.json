@@ -1,0 +1,2417 @@
+[
+  {
+    "brandId": "brand-6f80c60267f6bc73",
+    "checkedAt": "2026-10-08T09:53:22.115550+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.starbucks.co.kr/upload/json/menu/W0000003.js",
+    "evidenceSha256": "b81e52650ddaa55ac6e396d402284a78e7578c505474a24da03ba4059d3c8d14"
+  },
+  {
+    "brandId": "brand-6f80c60267f6bc73",
+    "checkedAt": "2026-10-08T09:53:24.707920+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.starbucks.co.kr/upload/json/menu/W0000004.js",
+    "evidenceSha256": "b81e52650ddaa55ac6e396d402284a78e7578c505474a24da03ba4059d3c8d14"
+  },
+  {
+    "brandId": "brand-6f80c60267f6bc73",
+    "checkedAt": "2026-10-08T09:53:28.013729+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.starbucks.co.kr/upload/json/menu/W0000005.js",
+    "evidenceSha256": "b81e52650ddaa55ac6e396d402284a78e7578c505474a24da03ba4059d3c8d14"
+  },
+  {
+    "brandId": "brand-6f80c60267f6bc73",
+    "checkedAt": "2026-10-08T09:53:29.266225+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.starbucks.co.kr/upload/json/menu/W0000013.js",
+    "evidenceSha256": "b81e52650ddaa55ac6e396d402284a78e7578c505474a24da03ba4059d3c8d14"
+  },
+  {
+    "brandId": "brand-6f80c60267f6bc73",
+    "checkedAt": "2026-10-08T09:53:30.898806+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.starbucks.co.kr/upload/json/menu/W0000032.js",
+    "evidenceSha256": "b81e52650ddaa55ac6e396d402284a78e7578c505474a24da03ba4059d3c8d14"
+  },
+  {
+    "brandId": "brand-6f80c60267f6bc73",
+    "checkedAt": "2026-10-08T09:53:32.084204+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.starbucks.co.kr/upload/json/menu/W0000033.js",
+    "evidenceSha256": "b81e52650ddaa55ac6e396d402284a78e7578c505474a24da03ba4059d3c8d14"
+  },
+  {
+    "brandId": "brand-6f80c60267f6bc73",
+    "checkedAt": "2026-10-08T09:53:33.270005+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.starbucks.co.kr/upload/json/menu/W0000053.js",
+    "evidenceSha256": "b81e52650ddaa55ac6e396d402284a78e7578c505474a24da03ba4059d3c8d14"
+  },
+  {
+    "brandId": "brand-6f80c60267f6bc73",
+    "checkedAt": "2026-10-08T09:53:35.495965+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.starbucks.co.kr/upload/json/menu/W0000055.js",
+    "evidenceSha256": "b81e52650ddaa55ac6e396d402284a78e7578c505474a24da03ba4059d3c8d14"
+  },
+  {
+    "brandId": "brand-6f80c60267f6bc73",
+    "checkedAt": "2026-10-08T09:53:36.562449+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.starbucks.co.kr/upload/json/menu/W0000056.js",
+    "evidenceSha256": "b81e52650ddaa55ac6e396d402284a78e7578c505474a24da03ba4059d3c8d14"
+  },
+  {
+    "brandId": "brand-6f80c60267f6bc73",
+    "checkedAt": "2026-10-08T09:53:37.977149+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.starbucks.co.kr/upload/json/menu/W0000060.js",
+    "evidenceSha256": "b81e52650ddaa55ac6e396d402284a78e7578c505474a24da03ba4059d3c8d14"
+  },
+  {
+    "brandId": "brand-6f80c60267f6bc73",
+    "checkedAt": "2026-10-08T09:53:39.020650+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.starbucks.co.kr/upload/json/menu/W0000061.js",
+    "evidenceSha256": "b81e52650ddaa55ac6e396d402284a78e7578c505474a24da03ba4059d3c8d14"
+  },
+  {
+    "brandId": "brand-6f80c60267f6bc73",
+    "checkedAt": "2026-10-08T09:53:40.215274+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.starbucks.co.kr/upload/json/menu/W0000062.js",
+    "evidenceSha256": "b81e52650ddaa55ac6e396d402284a78e7578c505474a24da03ba4059d3c8d14"
+  },
+  {
+    "brandId": "brand-6f80c60267f6bc73",
+    "checkedAt": "2026-10-08T09:53:41.281882+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.starbucks.co.kr/upload/json/menu/W0000064.js",
+    "evidenceSha256": "b81e52650ddaa55ac6e396d402284a78e7578c505474a24da03ba4059d3c8d14"
+  },
+  {
+    "brandId": "brand-6f80c60267f6bc73",
+    "checkedAt": "2026-10-08T09:53:42.324586+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.starbucks.co.kr/upload/json/menu/W0000075.js",
+    "evidenceSha256": "b81e52650ddaa55ac6e396d402284a78e7578c505474a24da03ba4059d3c8d14"
+  },
+  {
+    "brandId": "brand-6f80c60267f6bc73",
+    "checkedAt": "2026-10-08T09:53:44.707652+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.starbucks.co.kr/upload/json/menu/W0000171.js",
+    "evidenceSha256": "b81e52650ddaa55ac6e396d402284a78e7578c505474a24da03ba4059d3c8d14"
+  },
+  {
+    "brandId": "brand-6f80c60267f6bc73",
+    "checkedAt": "2026-10-08T09:53:45.919188+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.starbucks.co.kr/upload/json/menu/W0000422.js",
+    "evidenceSha256": "b81e52650ddaa55ac6e396d402284a78e7578c505474a24da03ba4059d3c8d14"
+  },
+  {
+    "brandId": "brand-149ee0d555be8e34",
+    "checkedAt": "2026-10-08T09:53:24.650425+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://mmthcoffee.com/sub/menu/list_coffee.php",
+    "evidenceSha256": "b81e52650ddaa55ac6e396d402284a78e7578c505474a24da03ba4059d3c8d14"
+  },
+  {
+    "brandId": "brand-149ee0d555be8e34",
+    "checkedAt": "2026-10-08T09:53:27.135581+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://mmthcoffee.com/sub/menu/list_sub.php?menuType=F",
+    "evidenceSha256": "b81e52650ddaa55ac6e396d402284a78e7578c505474a24da03ba4059d3c8d14"
+  },
+  {
+    "brandId": "brand-e391193d95fb4b22",
+    "checkedAt": "2026-10-08T09:53:33.467853+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.sinjeon.co.kr/doc/menu06.php",
+    "evidenceSha256": "b81e52650ddaa55ac6e396d402284a78e7578c505474a24da03ba4059d3c8d14"
+  },
+  {
+    "brandId": "brand-1da93338e8beedb8",
+    "checkedAt": "2026-10-08T09:54:00.029260+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://salady.com/menu/list_1",
+    "evidenceSha256": "b81e52650ddaa55ac6e396d402284a78e7578c505474a24da03ba4059d3c8d14"
+  },
+  {
+    "brandId": "brand-3c12a830fd8e20dd",
+    "checkedAt": "2026-10-08T09:54:00.155001+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://salady.com/menu2/list_1?menu2=1",
+    "evidenceSha256": "b81e52650ddaa55ac6e396d402284a78e7578c505474a24da03ba4059d3c8d14"
+  },
+  {
+    "brandId": "brand-70ce8c35375d9fae",
+    "checkedAt": "2026-10-08T09:54:01.756134+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://isaac-toast.co.kr/menu/menu.php?ptype=list&catcode=10101000",
+    "evidenceSha256": "b81e52650ddaa55ac6e396d402284a78e7578c505474a24da03ba4059d3c8d14"
+  },
+  {
+    "brandId": "brand-537263c2bc830a08",
+    "checkedAt": "2026-10-08T09:54:13.227243+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://paikdabang.com/menu/menu_drink/",
+    "evidenceSha256": "b81e52650ddaa55ac6e396d402284a78e7578c505474a24da03ba4059d3c8d14"
+  },
+  {
+    "brandId": "brand-1742b64ed29107ac",
+    "checkedAt": "2026-10-08T09:54:14.963426+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.baskinrobbins.co.kr/menu/list_subcategory.php?category=C",
+    "evidenceSha256": "b81e52650ddaa55ac6e396d402284a78e7578c505474a24da03ba4059d3c8d14"
+  },
+  {
+    "brandId": "brand-7dfea7361415a819",
+    "checkedAt": "2026-10-08T09:54:13.618738+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.paris.co.kr/products/",
+    "evidenceSha256": "b81e52650ddaa55ac6e396d402284a78e7578c505474a24da03ba4059d3c8d14"
+  },
+  {
+    "brandId": "brand-9d8b8d6c615c6ee7",
+    "checkedAt": "2026-10-08T09:54:21.477998+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.dunkindonuts.co.kr/menu?cat=6",
+    "evidenceSha256": "b81e52650ddaa55ac6e396d402284a78e7578c505474a24da03ba4059d3c8d14"
+  },
+  {
+    "brandId": "brand-a0302f70b937755f",
+    "checkedAt": "2026-10-08T09:54:19.978467+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.tlj.co.kr/product/result.asp",
+    "evidenceSha256": "b81e52650ddaa55ac6e396d402284a78e7578c505474a24da03ba4059d3c8d14"
+  },
+  {
+    "brandId": "brand-ffd3bb1b019cf849",
+    "checkedAt": "2026-10-08T12:50:33.447586+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.mcdonalds.co.kr/api/v1/kor/product/product/list?page=1&view_rows=6&mainCategory=1&subCategory=2&searchWord=",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-ffd3bb1b019cf849",
+    "checkedAt": "2026-10-08T12:50:33.877193+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.mcdonalds.co.kr/api/v1/kor/product/product/list?page=1&view_rows=6&mainCategory=7&subCategory=21&searchWord=",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-ffd3bb1b019cf849",
+    "checkedAt": "2026-10-08T12:50:34.216748+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.mcdonalds.co.kr/api/v1/kor/product/product/list?page=1&view_rows=6&mainCategory=8&subCategory=15&searchWord=",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-ffd3bb1b019cf849",
+    "checkedAt": "2026-10-08T12:50:34.416186+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.mcdonalds.co.kr/api/v1/kor/product/product/list?page=1&view_rows=6&mainCategory=4&subCategory=8&searchWord=",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-ffd3bb1b019cf849",
+    "checkedAt": "2026-10-08T12:50:34.616053+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.mcdonalds.co.kr/api/v1/kor/product/product/list?page=1&view_rows=6&mainCategory=4&subCategory=7&searchWord=",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-ffd3bb1b019cf849",
+    "checkedAt": "2026-10-08T12:50:34.829263+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.mcdonalds.co.kr/api/v1/kor/product/product/list?page=1&view_rows=6&mainCategory=2&subCategory=3&searchWord=",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-ffd3bb1b019cf849",
+    "checkedAt": "2026-10-08T12:50:35.066226+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.mcdonalds.co.kr/api/v1/kor/product/product/list?page=1&view_rows=6&mainCategory=2&subCategory=4&searchWord=",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-ffd3bb1b019cf849",
+    "checkedAt": "2026-10-08T12:50:35.329738+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.mcdonalds.co.kr/api/v1/kor/product/product/list?page=1&view_rows=6&mainCategory=2&subCategory=19&searchWord=",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-ffd3bb1b019cf849",
+    "checkedAt": "2026-10-08T12:50:35.594827+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.mcdonalds.co.kr/api/v1/kor/product/product/list?page=1&view_rows=6&mainCategory=3&subCategory=5&searchWord=",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-ffd3bb1b019cf849",
+    "checkedAt": "2026-10-08T12:50:35.980293+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.mcdonalds.co.kr/api/v1/kor/product/product/list?page=1&view_rows=6&mainCategory=3&subCategory=6&searchWord=",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-ffd3bb1b019cf849",
+    "checkedAt": "2026-10-08T12:50:36.216742+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.mcdonalds.co.kr/api/v1/kor/product/product/list?page=1&view_rows=6&mainCategory=5&subCategory=9&searchWord=",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-ffd3bb1b019cf849",
+    "checkedAt": "2026-10-08T12:50:36.516711+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.mcdonalds.co.kr/api/v1/kor/product/product/list?page=1&view_rows=6&mainCategory=5&subCategory=10&searchWord=",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-ffd3bb1b019cf849",
+    "checkedAt": "2026-10-08T12:50:36.711485+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.mcdonalds.co.kr/api/v1/kor/product/product/list?page=2&view_rows=6&mainCategory=1&subCategory=16&searchWord=",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-ffd3bb1b019cf849",
+    "checkedAt": "2026-10-08T12:50:36.985124+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.mcdonalds.co.kr/api/v1/kor/product/product/list?page=3&view_rows=6&mainCategory=1&subCategory=16&searchWord=",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-ffd3bb1b019cf849",
+    "checkedAt": "2026-10-08T12:50:37.388875+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.mcdonalds.co.kr/api/v1/kor/product/product/list?page=2&view_rows=6&mainCategory=1&subCategory=1&searchWord=",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-ffd3bb1b019cf849",
+    "checkedAt": "2026-10-08T12:50:37.592019+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.mcdonalds.co.kr/api/v1/kor/product/product/list?page=2&view_rows=6&mainCategory=1&subCategory=2&searchWord=",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-ffd3bb1b019cf849",
+    "checkedAt": "2026-10-08T12:50:37.784427+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.mcdonalds.co.kr/api/v1/kor/product/product/list?page=2&view_rows=6&mainCategory=7&subCategory=21&searchWord=",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-ffd3bb1b019cf849",
+    "checkedAt": "2026-10-08T12:50:37.993524+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.mcdonalds.co.kr/api/v1/kor/product/product/list?page=2&view_rows=6&mainCategory=8&subCategory=15&searchWord=",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-ffd3bb1b019cf849",
+    "checkedAt": "2026-10-08T12:50:38.243920+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.mcdonalds.co.kr/api/v1/kor/product/product/list?page=2&view_rows=6&mainCategory=4&subCategory=8&searchWord=",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-ffd3bb1b019cf849",
+    "checkedAt": "2026-10-08T12:50:38.440127+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.mcdonalds.co.kr/api/v1/kor/product/product/list?page=3&view_rows=6&mainCategory=4&subCategory=8&searchWord=",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-ffd3bb1b019cf849",
+    "checkedAt": "2026-10-08T12:50:38.643112+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.mcdonalds.co.kr/api/v1/kor/product/product/list?page=2&view_rows=6&mainCategory=4&subCategory=7&searchWord=",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-ffd3bb1b019cf849",
+    "checkedAt": "2026-10-08T12:50:38.918734+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.mcdonalds.co.kr/api/v1/kor/product/product/list?page=2&view_rows=6&mainCategory=2&subCategory=3&searchWord=",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-ffd3bb1b019cf849",
+    "checkedAt": "2026-10-08T12:50:39.335389+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.mcdonalds.co.kr/api/v1/kor/product/product/list?page=2&view_rows=6&mainCategory=3&subCategory=6&searchWord=",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-ffd3bb1b019cf849",
+    "checkedAt": "2026-10-08T12:50:39.543416+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.mcdonalds.co.kr/api/v1/kor/product/product/list?page=2&view_rows=6&mainCategory=5&subCategory=9&searchWord=",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-ffd3bb1b019cf849",
+    "checkedAt": "2026-10-08T12:50:39.746231+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.mcdonalds.co.kr/api/v1/kor/product/product/list?page=3&view_rows=6&mainCategory=5&subCategory=9&searchWord=",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-ffd3bb1b019cf849",
+    "checkedAt": "2026-10-08T12:50:39.954343+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.mcdonalds.co.kr/api/v1/kor/product/product/list?page=4&view_rows=6&mainCategory=5&subCategory=9&searchWord=",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-ffd3bb1b019cf849",
+    "checkedAt": "2026-10-08T12:50:40.251019+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.mcdonalds.co.kr/api/v1/kor/product/product/list?page=5&view_rows=6&mainCategory=5&subCategory=9&searchWord=",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-ffd3bb1b019cf849",
+    "checkedAt": "2026-10-08T12:50:40.656813+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.mcdonalds.co.kr/api/v1/kor/product/product/list?page=2&view_rows=6&mainCategory=5&subCategory=10&searchWord=",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-ffd3bb1b019cf849",
+    "checkedAt": "2026-10-08T12:50:40.848877+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.mcdonalds.co.kr/api/v1/kor/product/product/list?page=3&view_rows=6&mainCategory=5&subCategory=10&searchWord=",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-ffd3bb1b019cf849",
+    "checkedAt": "2026-10-08T12:50:41.060761+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.mcdonalds.co.kr/api/v1/kor/product/product/list?page=4&view_rows=6&mainCategory=5&subCategory=10&searchWord=",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-24df7e63c9c2314e",
+    "checkedAt": "2026-10-08T12:50:29.892246+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.lotteeatz.com/brand/ria",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-d857c6bf9eb6a6c0",
+    "checkedAt": "2026-10-08T12:50:29.892715+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://web-prd.burgerking.co.kr/burgerking/BKR0632.json",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-2c14410b57ba9fc4",
+    "checkedAt": "2026-10-08T12:50:32.891468+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.kfckorea.com/kfc/interface/selectDeliveryList",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-2c14410b57ba9fc4",
+    "checkedAt": "2026-10-08T12:50:35.694681+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.kfckorea.com/kfc/interface/selectDeliveryList",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-2c14410b57ba9fc4",
+    "checkedAt": "2026-10-08T12:50:38.560446+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.kfckorea.com/kfc/interface/selectDeliveryList",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-2c14410b57ba9fc4",
+    "checkedAt": "2026-10-08T12:50:41.383378+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.kfckorea.com/kfc/interface/selectDeliveryList",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-f91351461391155a",
+    "checkedAt": "2026-10-08T12:50:32.316788+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.dominos.co.kr/goods/list?dsp_ctgr=C0101",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-f91351461391155a",
+    "checkedAt": "2026-10-08T12:50:34.753860+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.dominos.co.kr/goods/list?dsp_ctgr=C0201",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-f91351461391155a",
+    "checkedAt": "2026-10-08T12:50:36.956698+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.dominos.co.kr/goods/list?dsp_ctgr=C0202",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-792c9f221e49eb7e",
+    "checkedAt": "2026-10-08T12:50:41.265666+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.mrpizza.co.kr/bbs/board.php?bo_table=menu&sca=%ED%81%B4%EB%9E%98%EC%8B%9D+%ED%94%BC%EC%9E%90",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-792c9f221e49eb7e",
+    "checkedAt": "2026-10-08T12:50:42.607079+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.mrpizza.co.kr/bbs/board.php?bo_table=menu&sca=%ED%94%84%EB%A6%AC%EB%AF%B8%EC%97%84+%ED%94%BC%EC%9E%90",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-792c9f221e49eb7e",
+    "checkedAt": "2026-10-08T12:50:43.864437+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.mrpizza.co.kr/bbs/board.php?bo_table=menu&sca=%EC%94%AC%ED%81%AC%EB%9F%AC%EC%8A%A4%ED%8A%B8+%ED%94%BC%EC%9E%90",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-792c9f221e49eb7e",
+    "checkedAt": "2026-10-08T12:50:45.291671+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.mrpizza.co.kr/bbs/board.php?bo_table=menu&sca=1%EC%9D%B8%EC%9A%A9+%ED%94%BC%EC%9E%90",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-792c9f221e49eb7e",
+    "checkedAt": "2026-10-08T12:50:46.573815+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.mrpizza.co.kr/bbs/board.php?bo_table=menu&sca=%ED%94%BC%EC%9E%90%EC%83%8C%EB%93%9C",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-792c9f221e49eb7e",
+    "checkedAt": "2026-10-08T12:50:47.826559+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.mrpizza.co.kr/bbs/board.php?bo_table=menu&sca=%ED%8C%8C%EC%8A%A4%ED%83%80%26%EB%9D%BC%EC%9D%B4%EC%8A%A4",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-792c9f221e49eb7e",
+    "checkedAt": "2026-10-08T12:50:49.052332+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.mrpizza.co.kr/bbs/board.php?bo_table=menu&sca=%EC%83%90%EB%9F%AC%EB%93%9C%26%EC%82%AC%EC%9D%B4%EB%93%9C",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-792c9f221e49eb7e",
+    "checkedAt": "2026-10-08T12:50:50.300129+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.mrpizza.co.kr/bbs/board.php?bo_table=menu&sca=%EC%9D%8C%EB%A3%8C",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-792c9f221e49eb7e",
+    "checkedAt": "2026-10-08T12:50:51.456979+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.mrpizza.co.kr/bbs/board.php?bo_table=menu&sca=%ED%8A%B9%EA%B0%80%EC%84%B8%ED%8A%B8-%ED%80%98%EA%B0%90%ED%8F%AC%EC%84%B8%ED%8A%B8",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-792c9f221e49eb7e",
+    "checkedAt": "2026-10-08T12:50:52.241406+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.mrpizza.co.kr/bbs/board.php?bo_table=menu&sca=%ED%8A%B9%EA%B0%80%EC%84%B8%ED%8A%B8-%ED%94%BC%EC%B9%98%EC%84%B8%ED%8A%B8",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-792c9f221e49eb7e",
+    "checkedAt": "2026-10-08T12:50:55.517253+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.mrpizza.co.kr/bbs/board.php?bo_table=menu&sca=%ED%8A%B9%EA%B0%80%EC%84%B8%ED%8A%B8-%EB%B3%B4%EB%84%88%EC%8A%A4%ED%8C%8C%EC%9A%B0%EC%B9%98",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-5b391ae396ab6901",
+    "checkedAt": "2026-10-08T12:50:44.162948+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.kyochon.com/menu/chicken.asp",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-5b391ae396ab6901",
+    "checkedAt": "2026-10-08T12:50:45.442500+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.kyochon.com/menu/side.asp",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-5b391ae396ab6901",
+    "checkedAt": "2026-10-08T12:50:46.605368+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.kyochon.com/menu/liquor.asp",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-5b391ae396ab6901",
+    "checkedAt": "2026-10-08T12:50:47.678225+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.kyochon.com/menu/drink.asp",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-dfbc0be6a9fb565a",
+    "checkedAt": "2026-10-08T12:50:48.712045+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.goobne.co.kr/menu/menu_list_p",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-dfbc0be6a9fb565a",
+    "checkedAt": "2026-10-08T12:50:50.281725+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.goobne.co.kr/menu/menu_list_p?classId=1&classId2=",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-dfbc0be6a9fb565a",
+    "checkedAt": "2026-10-08T12:50:51.610676+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.goobne.co.kr/menu/menu_list_p?classId=12&classId2=",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-dfbc0be6a9fb565a",
+    "checkedAt": "2026-10-08T12:50:52.952131+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.goobne.co.kr/menu/menu_list_p?classId=16&classId2=",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-dfbc0be6a9fb565a",
+    "checkedAt": "2026-10-08T12:50:54.491630+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.goobne.co.kr/menu/menu_list_p?classId=18&classId2=",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-dfbc0be6a9fb565a",
+    "checkedAt": "2026-10-08T12:50:55.429619+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.goobne.co.kr/menu/menu_list_p?classId=3&classId2=",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-913a908f005583f0",
+    "checkedAt": "2026-10-08T12:51:05.219808+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.bbq.co.kr/api/delivery/menu/18",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-913a908f005583f0",
+    "checkedAt": "2026-10-08T12:51:07.486787+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.bbq.co.kr/api/delivery/menu/19",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-913a908f005583f0",
+    "checkedAt": "2026-10-08T12:51:10.007561+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.bbq.co.kr/api/delivery/menu/20",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-913a908f005583f0",
+    "checkedAt": "2026-10-08T12:51:13.060881+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.bbq.co.kr/api/delivery/menu/21",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-913a908f005583f0",
+    "checkedAt": "2026-10-08T12:51:14.904450+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.bbq.co.kr/api/delivery/menu/22",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-913a908f005583f0",
+    "checkedAt": "2026-10-08T12:51:17.664739+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.bbq.co.kr/api/delivery/menu/23",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-1c90aeff2ad68611",
+    "checkedAt": "2026-10-08T12:50:56.728164+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://nenechicken.com/home_menu.asp?SUBID=15",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-1c90aeff2ad68611",
+    "checkedAt": "2026-10-08T12:50:59.870974+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://nenechicken.com/home_menu.asp?SUBID=2",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-1c90aeff2ad68611",
+    "checkedAt": "2026-10-08T12:51:05.223098+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://nenechicken.com/home_menu.asp?SUBID=3",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-1c90aeff2ad68611",
+    "checkedAt": "2026-10-08T12:51:06.884443+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://nenechicken.com/home_menu.asp?SUBID=8",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-1c90aeff2ad68611",
+    "checkedAt": "2026-10-08T12:51:08.908868+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://nenechicken.com/home_menu.asp?SUBID=9",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-1c90aeff2ad68611",
+    "checkedAt": "2026-10-08T12:51:10.715697+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://nenechicken.com/home_menu.asp?SUBID=10",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-6f80c60267f6bc73",
+    "checkedAt": "2026-10-08T12:51:34.600272+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.starbucks.co.kr/upload/json/menu/W0000347.js",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-0dc8558d4e8f58fd",
+    "checkedAt": "2026-10-08T12:51:18.481813+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.ediya.com/contents/drink.html",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-0dc8558d4e8f58fd",
+    "checkedAt": "2026-10-08T12:51:19.914384+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.ediya.com/contents/bakery.html",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-0dc8558d4e8f58fd",
+    "checkedAt": "2026-10-08T12:51:21.294702+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=7&chked_val=&skeyword=&page=2",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-0dc8558d4e8f58fd",
+    "checkedAt": "2026-10-08T12:51:22.350162+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=8&chked_val=&skeyword=&page=2",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-0dc8558d4e8f58fd",
+    "checkedAt": "2026-10-08T12:51:23.357388+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=7&chked_val=&skeyword=&page=3",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-0dc8558d4e8f58fd",
+    "checkedAt": "2026-10-08T12:51:24.438623+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=8&chked_val=&skeyword=&page=3",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-0dc8558d4e8f58fd",
+    "checkedAt": "2026-10-08T12:51:25.410268+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=7&chked_val=&skeyword=&page=4",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-0dc8558d4e8f58fd",
+    "checkedAt": "2026-10-08T12:51:26.212727+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=8&chked_val=&skeyword=&page=4",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-0dc8558d4e8f58fd",
+    "checkedAt": "2026-10-08T12:51:27.211028+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=7&chked_val=&skeyword=&page=5",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-0dc8558d4e8f58fd",
+    "checkedAt": "2026-10-08T12:51:28.201718+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=8&chked_val=&skeyword=&page=5",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-0dc8558d4e8f58fd",
+    "checkedAt": "2026-10-08T12:51:28.999202+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=7&chked_val=&skeyword=&page=6",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-0dc8558d4e8f58fd",
+    "checkedAt": "2026-10-08T12:51:30.026373+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=8&chked_val=&skeyword=&page=6",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-0dc8558d4e8f58fd",
+    "checkedAt": "2026-10-08T12:51:31.043992+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=7&chked_val=&skeyword=&page=7",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-0dc8558d4e8f58fd",
+    "checkedAt": "2026-10-08T12:51:31.845060+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=8&chked_val=&skeyword=&page=7",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-0dc8558d4e8f58fd",
+    "checkedAt": "2026-10-08T12:51:32.859187+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=7&chked_val=&skeyword=&page=8",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-0dc8558d4e8f58fd",
+    "checkedAt": "2026-10-08T12:51:33.644125+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=8&chked_val=&skeyword=&page=8",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-0dc8558d4e8f58fd",
+    "checkedAt": "2026-10-08T12:51:34.663904+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=7&chked_val=&skeyword=&page=9",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-0dc8558d4e8f58fd",
+    "checkedAt": "2026-10-08T12:51:35.473068+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=8&chked_val=&skeyword=&page=9",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-0dc8558d4e8f58fd",
+    "checkedAt": "2026-10-08T12:51:36.459859+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=7&chked_val=&skeyword=&page=10",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-0dc8558d4e8f58fd",
+    "checkedAt": "2026-10-08T12:51:38.075200+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=7&chked_val=&skeyword=&page=11",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-0dc8558d4e8f58fd",
+    "checkedAt": "2026-10-08T12:51:38.874497+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=7&chked_val=&skeyword=&page=12",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-0dc8558d4e8f58fd",
+    "checkedAt": "2026-10-08T12:51:39.700355+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=7&chked_val=&skeyword=&page=13",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-0dc8558d4e8f58fd",
+    "checkedAt": "2026-10-08T12:51:40.768871+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=7&chked_val=&skeyword=&page=14",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-0dc8558d4e8f58fd",
+    "checkedAt": "2026-10-08T12:51:41.767953+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=7&chked_val=&skeyword=&page=15",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-0dc8558d4e8f58fd",
+    "checkedAt": "2026-10-08T12:51:42.579255+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=7&chked_val=&skeyword=&page=16",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-0dc8558d4e8f58fd",
+    "checkedAt": "2026-10-08T12:51:43.637100+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=7&chked_val=&skeyword=&page=17",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-0dc8558d4e8f58fd",
+    "checkedAt": "2026-10-08T12:51:44.437242+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=7&chked_val=&skeyword=&page=18",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-0dc8558d4e8f58fd",
+    "checkedAt": "2026-10-08T12:51:45.232671+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=7&chked_val=&skeyword=&page=19",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-0dc8558d4e8f58fd",
+    "checkedAt": "2026-10-08T12:51:46.221538+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=7&chked_val=&skeyword=&page=20",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-0dc8558d4e8f58fd",
+    "checkedAt": "2026-10-08T12:51:47.317824+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=7&chked_val=&skeyword=&page=21",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-0dc8558d4e8f58fd",
+    "checkedAt": "2026-10-08T12:51:48.342351+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=7&chked_val=&skeyword=&page=22",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-0dc8558d4e8f58fd",
+    "checkedAt": "2026-10-08T12:51:49.149322+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=7&chked_val=&skeyword=&page=23",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-0dc8558d4e8f58fd",
+    "checkedAt": "2026-10-08T12:51:50.154383+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=7&chked_val=&skeyword=&page=24",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-0dc8558d4e8f58fd",
+    "checkedAt": "2026-10-08T12:51:50.974080+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=7&chked_val=&skeyword=&page=25",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-0dc8558d4e8f58fd",
+    "checkedAt": "2026-10-08T12:51:51.768259+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=7&chked_val=&skeyword=&page=26",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-0dc8558d4e8f58fd",
+    "checkedAt": "2026-10-08T12:51:52.571847+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=7&chked_val=&skeyword=&page=27",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-0dc8558d4e8f58fd",
+    "checkedAt": "2026-10-08T12:51:53.366324+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=7&chked_val=&skeyword=&page=28",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-0dc8558d4e8f58fd",
+    "checkedAt": "2026-10-08T12:51:54.176697+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=7&chked_val=&skeyword=&page=29",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-0dc8558d4e8f58fd",
+    "checkedAt": "2026-10-08T12:51:54.987197+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=7&chked_val=&skeyword=&page=30",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-0dc8558d4e8f58fd",
+    "checkedAt": "2026-10-08T12:51:55.982069+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=7&chked_val=&skeyword=&page=31",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-0dc8558d4e8f58fd",
+    "checkedAt": "2026-10-08T12:51:56.806799+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=7&chked_val=&skeyword=&page=32",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-0dc8558d4e8f58fd",
+    "checkedAt": "2026-10-08T12:51:57.604980+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=7&chked_val=&skeyword=&page=33",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-0dc8558d4e8f58fd",
+    "checkedAt": "2026-10-08T12:51:58.414801+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=7&chked_val=&skeyword=&page=34",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-0dc8558d4e8f58fd",
+    "checkedAt": "2026-10-08T12:51:59.245979+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=7&chked_val=&skeyword=&page=35",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-0dc8558d4e8f58fd",
+    "checkedAt": "2026-10-08T12:52:00.059454+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=7&chked_val=&skeyword=&page=36",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-0dc8558d4e8f58fd",
+    "checkedAt": "2026-10-08T12:52:01.057246+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=7&chked_val=&skeyword=&page=37",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-0dc8558d4e8f58fd",
+    "checkedAt": "2026-10-08T12:52:01.861996+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=7&chked_val=&skeyword=&page=38",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-0dc8558d4e8f58fd",
+    "checkedAt": "2026-10-08T12:52:02.877571+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=7&chked_val=&skeyword=&page=39",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-0dc8558d4e8f58fd",
+    "checkedAt": "2026-10-08T12:52:03.863447+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=7&chked_val=&skeyword=&page=40",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-0dc8558d4e8f58fd",
+    "checkedAt": "2026-10-08T12:52:04.875772+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=7&chked_val=&skeyword=&page=41",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-0dc8558d4e8f58fd",
+    "checkedAt": "2026-10-08T12:52:05.885345+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=7&chked_val=&skeyword=&page=42",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-0dc8558d4e8f58fd",
+    "checkedAt": "2026-10-08T12:52:06.720801+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=7&chked_val=&skeyword=&page=43",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-0dc8558d4e8f58fd",
+    "checkedAt": "2026-10-08T12:52:08.321671+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=7&chked_val=&skeyword=&page=44",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-0dc8558d4e8f58fd",
+    "checkedAt": "2026-10-08T12:52:10.170665+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=7&chked_val=&skeyword=&page=45",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-0dc8558d4e8f58fd",
+    "checkedAt": "2026-10-08T12:52:11.174764+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=7&chked_val=&skeyword=&page=46",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-0dc8558d4e8f58fd",
+    "checkedAt": "2026-10-08T12:52:12.271672+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=7&chked_val=&skeyword=&page=47",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-0dc8558d4e8f58fd",
+    "checkedAt": "2026-10-08T12:52:13.079428+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=7&chked_val=&skeyword=&page=48",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-0dc8558d4e8f58fd",
+    "checkedAt": "2026-10-08T12:52:13.882028+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=7&chked_val=&skeyword=&page=49",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-0dc8558d4e8f58fd",
+    "checkedAt": "2026-10-08T12:52:14.881669+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=7&chked_val=&skeyword=&page=50",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-0dc8558d4e8f58fd",
+    "checkedAt": "2026-10-08T12:52:15.955485+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=7&chked_val=&skeyword=&page=51",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-0dc8558d4e8f58fd",
+    "checkedAt": "2026-10-08T12:52:16.784445+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=7&chked_val=&skeyword=&page=52",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-db8f86831d5f2b94",
+    "checkedAt": "2026-10-08T12:51:19.942718+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.mega-mgccoffee.com/menu/menu.php?page=1&menu_category1=1&menu_category2=1&category=&list_checkbox_all=0",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-db8f86831d5f2b94",
+    "checkedAt": "2026-10-08T12:51:21.707702+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.mega-mgccoffee.com/menu/menu.php?page=1&menu_category1=2&menu_category2=2&category=&list_checkbox_all=0",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-db8f86831d5f2b94",
+    "checkedAt": "2026-10-08T12:51:22.821865+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.mega-mgccoffee.com/menu/menu.php?page=2&menu_category1=1&menu_category2=1&list_checkbox_all=0",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-db8f86831d5f2b94",
+    "checkedAt": "2026-10-08T12:51:24.308193+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.mega-mgccoffee.com/menu/menu.php?page=3&menu_category1=1&menu_category2=1&list_checkbox_all=0",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-db8f86831d5f2b94",
+    "checkedAt": "2026-10-08T12:51:25.613480+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.mega-mgccoffee.com/menu/menu.php?page=4&menu_category1=1&menu_category2=1&list_checkbox_all=0",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-db8f86831d5f2b94",
+    "checkedAt": "2026-10-08T12:51:26.743650+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.mega-mgccoffee.com/menu/menu.php?page=5&menu_category1=1&menu_category2=1&list_checkbox_all=0",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-db8f86831d5f2b94",
+    "checkedAt": "2026-10-08T12:51:28.263656+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.mega-mgccoffee.com/menu/menu.php?page=6&menu_category1=1&menu_category2=1&list_checkbox_all=0",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-db8f86831d5f2b94",
+    "checkedAt": "2026-10-08T12:51:29.593105+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.mega-mgccoffee.com/menu/menu.php?page=7&menu_category1=1&menu_category2=1&list_checkbox_all=0",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-db8f86831d5f2b94",
+    "checkedAt": "2026-10-08T12:51:30.964863+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.mega-mgccoffee.com/menu/menu.php?page=8&menu_category1=1&menu_category2=1&list_checkbox_all=0",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-db8f86831d5f2b94",
+    "checkedAt": "2026-10-08T12:51:32.085863+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.mega-mgccoffee.com/menu/menu.php?page=2&menu_category1=2&menu_category2=2&list_checkbox_all=0",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-149ee0d555be8e34",
+    "checkedAt": "2026-10-08T12:51:33.005098+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://mmthcoffee.com/sub/menu/new_list.php",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-149ee0d555be8e34",
+    "checkedAt": "2026-10-08T12:51:48.133804+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://mmthcoffee.com/sub/menu/list_sub.php?menuType=C",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-149ee0d555be8e34",
+    "checkedAt": "2026-10-08T12:51:49.689859+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://mmthcoffee.com/sub/menu/list_sub.php?menuType=D",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-149ee0d555be8e34",
+    "checkedAt": "2026-10-08T12:51:51.594028+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://mmthcoffee.com/sub/menu/list_sub.php?menuType=N",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-149ee0d555be8e34",
+    "checkedAt": "2026-10-08T12:51:52.371747+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://mmthcoffee.com/sub/menu/list_sub.php?menuType=T",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-149ee0d555be8e34",
+    "checkedAt": "2026-10-08T12:51:53.906836+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://mmthcoffee.com/sub/menu/list_sub.php?menuType=B",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-d12ac5629277dd74",
+    "checkedAt": "2026-10-08T12:51:47.805863+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://jawsfood.co.kr/menu/setmenu.html",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-4971bd13f52f50ae",
+    "checkedAt": "2026-10-08T12:52:03.529312+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://chunlimalatang.com/menu/",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-8420421dae1f2ef3",
+    "checkedAt": "2026-10-08T12:52:10.261865+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.hongikdonkatsu.com/menu_2021_pasta",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-8420421dae1f2ef3",
+    "checkedAt": "2026-10-08T12:52:13.638966+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.hongikdonkatsu.com/menu_2021_takeout",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-dfe7aafc7b485943",
+    "checkedAt": "2026-10-08T12:52:11.159554+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://wonandone.co.kr/bossam/menu.asp?KeyCtgM=12",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-dfe7aafc7b485943",
+    "checkedAt": "2026-10-08T12:52:12.337824+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://wonandone.co.kr/bossam/menu.asp?KeyCtgM=4",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-dfe7aafc7b485943",
+    "checkedAt": "2026-10-08T12:52:13.455772+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://wonandone.co.kr/bossam/menu.asp?KeyCtgM=8",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-dfe7aafc7b485943",
+    "checkedAt": "2026-10-08T12:52:14.763433+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://wonandone.co.kr/bossam/menu.asp?KeyCtgM=14",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-1da93338e8beedb8",
+    "checkedAt": "2026-10-08T12:52:24.380436+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://salady.com/menu/list_3?type=side",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-3c12a830fd8e20dd",
+    "checkedAt": "2026-10-08T12:52:24.868361+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://salady.com/menu2/list_3?menu2=1&type=side",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-b028605b3b64ee47",
+    "checkedAt": "2026-10-08T12:52:24.764845+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://pokeallday.co.kr/protein_poke",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-b028605b3b64ee47",
+    "checkedAt": "2026-10-08T12:52:26.135521+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://pokeallday.co.kr/rice_bowl",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-b028605b3b64ee47",
+    "checkedAt": "2026-10-08T12:52:27.528709+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://pokeallday.co.kr/side",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-b028605b3b64ee47",
+    "checkedAt": "2026-10-08T12:52:29.734935+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://pokeallday.co.kr/drink",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-1bc146a27ab0e421",
+    "checkedAt": "2026-10-08T12:52:23.629992+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://slowcali.co.kr/bbs/content.php?co_id=menu",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-70ce8c35375d9fae",
+    "checkedAt": "2026-10-08T12:52:40.635220+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://isaac-toast.co.kr/menu/menu.php?page=1&catcode=10110000",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-70ce8c35375d9fae",
+    "checkedAt": "2026-10-08T12:52:41.986390+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://isaac-toast.co.kr/menu/menu.php?page=1&catcode=10101100",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-70ce8c35375d9fae",
+    "checkedAt": "2026-10-08T12:52:43.529071+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://isaac-toast.co.kr/menu/menu.php?page=2&catcode=10101100",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-70ce8c35375d9fae",
+    "checkedAt": "2026-10-08T12:52:45.112540+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://isaac-toast.co.kr/menu/menu.php?page=1&catcode=10101200",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-70ce8c35375d9fae",
+    "checkedAt": "2026-10-08T12:52:46.086518+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://isaac-toast.co.kr/menu/menu.php?page=1&catcode=10101300",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-2891bc50e9e622e6",
+    "checkedAt": "2026-10-08T12:52:37.124681+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://m.pji.co.kr/menu/other/drink",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-57244fb148c377c6",
+    "checkedAt": "2026-10-08T12:52:47.405712+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://order.banolimpizza.com/menu/list?categoryId=2",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-57244fb148c377c6",
+    "checkedAt": "2026-10-08T12:52:49.099651+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://order.banolimpizza.com/menu/list?categoryId=3",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-57244fb148c377c6",
+    "checkedAt": "2026-10-08T12:52:50.492904+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://order.banolimpizza.com/menu/list?categoryId=4",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-57244fb148c377c6",
+    "checkedAt": "2026-10-08T12:52:52.241809+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://order.banolimpizza.com/menu/list?categoryId=5",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-57244fb148c377c6",
+    "checkedAt": "2026-10-08T12:52:54.086624+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://order.banolimpizza.com/menu/list?categoryId=6",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-57244fb148c377c6",
+    "checkedAt": "2026-10-08T12:52:55.850486+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://order.banolimpizza.com/menu/list?categoryId=7",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-57244fb148c377c6",
+    "checkedAt": "2026-10-08T12:52:57.650264+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://order.banolimpizza.com/menu/list?categoryId=8",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-57244fb148c377c6",
+    "checkedAt": "2026-10-08T12:52:59.060368+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://order.banolimpizza.com/menu/list?categoryId=9",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-7dfea7361415a819",
+    "checkedAt": "2026-10-08T12:52:54.700179+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EB%B8%8C%EB%A0%88%EB%93%9C&per_page=12&paged=1",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-7dfea7361415a819",
+    "checkedAt": "2026-10-08T12:52:56.591632+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EC%BC%80%EC%9D%B4%ED%81%AC&per_page=12&paged=1",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-7dfea7361415a819",
+    "checkedAt": "2026-10-08T12:52:58.367998+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EC%83%8C%EB%93%9C%EC%9C%84%EC%B9%98-%EC%83%90%EB%9F%AC%EB%93%9C&per_page=12&paged=1",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-7dfea7361415a819",
+    "checkedAt": "2026-10-08T12:52:59.657660+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EC%84%A0%EB%AC%BC&per_page=12&paged=1",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-7dfea7361415a819",
+    "checkedAt": "2026-10-08T12:53:01.103879+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EB%94%94%EC%A0%80%ED%8A%B8-%EC%8A%A4%EB%82%B5&per_page=12&paged=1",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-7dfea7361415a819",
+    "checkedAt": "2026-10-08T12:53:02.701247+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EC%BB%A4%ED%94%BC-%EC%9D%8C%EB%A3%8C&per_page=12&paged=1",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-7dfea7361415a819",
+    "checkedAt": "2026-10-08T12:53:04.438931+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%ED%8D%BC%EC%8A%A4%ED%8A%B8%ED%81%B4%EB%9E%98%EC%8A%A4%ED%82%A4%EC%B9%9C&per_page=12&paged=1",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-7dfea7361415a819",
+    "checkedAt": "2026-10-08T12:53:05.728363+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EB%B8%8C%EB%A0%88%EB%93%9C&per_page=12&paged=2",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-7dfea7361415a819",
+    "checkedAt": "2026-10-08T12:53:06.653567+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EB%B8%8C%EB%A0%88%EB%93%9C&per_page=12&paged=3",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-7dfea7361415a819",
+    "checkedAt": "2026-10-08T12:53:08.441432+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EB%B8%8C%EB%A0%88%EB%93%9C&per_page=12&paged=4",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-7dfea7361415a819",
+    "checkedAt": "2026-10-08T12:53:09.362636+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EB%B8%8C%EB%A0%88%EB%93%9C&per_page=12&paged=5",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-7dfea7361415a819",
+    "checkedAt": "2026-10-08T12:53:11.209349+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EB%B8%8C%EB%A0%88%EB%93%9C&per_page=12&paged=6",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-7dfea7361415a819",
+    "checkedAt": "2026-10-08T12:53:13.037876+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EB%B8%8C%EB%A0%88%EB%93%9C&per_page=12&paged=7",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-7dfea7361415a819",
+    "checkedAt": "2026-10-08T12:53:13.942550+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EB%B8%8C%EB%A0%88%EB%93%9C&per_page=12&paged=8",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-7dfea7361415a819",
+    "checkedAt": "2026-10-08T12:53:15.247715+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EB%B8%8C%EB%A0%88%EB%93%9C&per_page=12&paged=9",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-7dfea7361415a819",
+    "checkedAt": "2026-10-08T12:53:16.551131+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EB%B8%8C%EB%A0%88%EB%93%9C&per_page=12&paged=10",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-7dfea7361415a819",
+    "checkedAt": "2026-10-08T12:53:18.397751+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EB%B8%8C%EB%A0%88%EB%93%9C&per_page=12&paged=11",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-7dfea7361415a819",
+    "checkedAt": "2026-10-08T12:53:20.076890+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EB%B8%8C%EB%A0%88%EB%93%9C&per_page=12&paged=12",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-7dfea7361415a819",
+    "checkedAt": "2026-10-08T12:53:21.033344+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EB%B8%8C%EB%A0%88%EB%93%9C&per_page=12&paged=13",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-7dfea7361415a819",
+    "checkedAt": "2026-10-08T12:53:21.874806+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EB%B8%8C%EB%A0%88%EB%93%9C&per_page=12&paged=14",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-7dfea7361415a819",
+    "checkedAt": "2026-10-08T12:53:22.986345+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EB%B8%8C%EB%A0%88%EB%93%9C&per_page=12&paged=15",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-7dfea7361415a819",
+    "checkedAt": "2026-10-08T12:53:23.855026+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EC%BC%80%EC%9D%B4%ED%81%AC&per_page=12&paged=2",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-7dfea7361415a819",
+    "checkedAt": "2026-10-08T12:53:25.076071+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EC%BC%80%EC%9D%B4%ED%81%AC&per_page=12&paged=3",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-7dfea7361415a819",
+    "checkedAt": "2026-10-08T12:53:25.950056+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EC%BC%80%EC%9D%B4%ED%81%AC&per_page=12&paged=4",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-7dfea7361415a819",
+    "checkedAt": "2026-10-08T12:53:26.854987+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EC%BC%80%EC%9D%B4%ED%81%AC&per_page=12&paged=5",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-7dfea7361415a819",
+    "checkedAt": "2026-10-08T12:53:27.768163+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EC%83%8C%EB%93%9C%EC%9C%84%EC%B9%98-%EC%83%90%EB%9F%AC%EB%93%9C&per_page=12&paged=2",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-7dfea7361415a819",
+    "checkedAt": "2026-10-08T12:53:28.606178+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EC%83%8C%EB%93%9C%EC%9C%84%EC%B9%98-%EC%83%90%EB%9F%AC%EB%93%9C&per_page=12&paged=3",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-7dfea7361415a819",
+    "checkedAt": "2026-10-08T12:53:29.957668+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EC%83%8C%EB%93%9C%EC%9C%84%EC%B9%98-%EC%83%90%EB%9F%AC%EB%93%9C&per_page=12&paged=4",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-7dfea7361415a819",
+    "checkedAt": "2026-10-08T12:53:31.777580+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EC%83%8C%EB%93%9C%EC%9C%84%EC%B9%98-%EC%83%90%EB%9F%AC%EB%93%9C&per_page=12&paged=5",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-7dfea7361415a819",
+    "checkedAt": "2026-10-08T12:53:32.680887+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EC%84%A0%EB%AC%BC&per_page=12&paged=2",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-7dfea7361415a819",
+    "checkedAt": "2026-10-08T12:53:33.921488+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EC%84%A0%EB%AC%BC&per_page=12&paged=3",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-7dfea7361415a819",
+    "checkedAt": "2026-10-08T12:53:34.948910+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EC%84%A0%EB%AC%BC&per_page=12&paged=4",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-7dfea7361415a819",
+    "checkedAt": "2026-10-08T12:53:36.636005+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EC%84%A0%EB%AC%BC&per_page=12&paged=5",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-7dfea7361415a819",
+    "checkedAt": "2026-10-08T12:53:38.529565+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EC%84%A0%EB%AC%BC&per_page=12&paged=6",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-7dfea7361415a819",
+    "checkedAt": "2026-10-08T12:53:39.394376+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EB%94%94%EC%A0%80%ED%8A%B8-%EC%8A%A4%EB%82%B5&per_page=12&paged=2",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-7dfea7361415a819",
+    "checkedAt": "2026-10-08T12:53:40.821532+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EB%94%94%EC%A0%80%ED%8A%B8-%EC%8A%A4%EB%82%B5&per_page=12&paged=3",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-7dfea7361415a819",
+    "checkedAt": "2026-10-08T12:53:41.752415+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EB%94%94%EC%A0%80%ED%8A%B8-%EC%8A%A4%EB%82%B5&per_page=12&paged=4",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-7dfea7361415a819",
+    "checkedAt": "2026-10-08T12:53:42.739894+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EB%94%94%EC%A0%80%ED%8A%B8-%EC%8A%A4%EB%82%B5&per_page=12&paged=5",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-7dfea7361415a819",
+    "checkedAt": "2026-10-08T12:53:43.726760+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EB%94%94%EC%A0%80%ED%8A%B8-%EC%8A%A4%EB%82%B5&per_page=12&paged=6",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-7dfea7361415a819",
+    "checkedAt": "2026-10-08T12:53:44.783434+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EB%94%94%EC%A0%80%ED%8A%B8-%EC%8A%A4%EB%82%B5&per_page=12&paged=7",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-7dfea7361415a819",
+    "checkedAt": "2026-10-08T12:53:46.001977+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EC%BB%A4%ED%94%BC-%EC%9D%8C%EB%A3%8C&per_page=12&paged=2",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-7dfea7361415a819",
+    "checkedAt": "2026-10-08T12:53:46.935578+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EC%BB%A4%ED%94%BC-%EC%9D%8C%EB%A3%8C&per_page=12&paged=3",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-7dfea7361415a819",
+    "checkedAt": "2026-10-08T12:53:47.859616+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EC%BB%A4%ED%94%BC-%EC%9D%8C%EB%A3%8C&per_page=12&paged=4",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-7dfea7361415a819",
+    "checkedAt": "2026-10-08T12:53:48.760200+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EC%BB%A4%ED%94%BC-%EC%9D%8C%EB%A3%8C&per_page=12&paged=5",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-7dfea7361415a819",
+    "checkedAt": "2026-10-08T12:53:49.676508+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EC%BB%A4%ED%94%BC-%EC%9D%8C%EB%A3%8C&per_page=12&paged=6",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-7dfea7361415a819",
+    "checkedAt": "2026-10-08T12:53:51.354017+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%EC%BB%A4%ED%94%BC-%EC%9D%8C%EB%A3%8C&per_page=12&paged=7",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-7dfea7361415a819",
+    "checkedAt": "2026-10-08T12:53:53.263684+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.paris.co.kr/wp-admin/admin-ajax.php?action=pb_get_product_list&cat1=%ED%8D%BC%EC%8A%A4%ED%8A%B8%ED%81%B4%EB%9E%98%EC%8A%A4%ED%82%A4%EC%B9%9C&per_page=12&paged=2",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-53314eb3760b340b",
+    "checkedAt": "2026-10-08T12:53:04.622410+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.hollys.co.kr/menu/signature.do",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-53314eb3760b340b",
+    "checkedAt": "2026-10-08T12:53:07.667076+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.hollys.co.kr/menu/hollyccino.do",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-53314eb3760b340b",
+    "checkedAt": "2026-10-08T12:53:09.731837+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.hollys.co.kr/menu/juice.do",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-53314eb3760b340b",
+    "checkedAt": "2026-10-08T12:53:12.433565+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.hollys.co.kr/menu/tea.do",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-53314eb3760b340b",
+    "checkedAt": "2026-10-08T12:53:14.789736+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.hollys.co.kr/menu/bakery.do",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-53314eb3760b340b",
+    "checkedAt": "2026-10-08T12:53:17.861038+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.hollys.co.kr/menu/bean.do",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-07de1aee884692c4",
+    "checkedAt": "2026-10-08T12:53:17.717882+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.7thpizza.com/sub/menu/list.php?menuCate=4&page=2",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-07de1aee884692c4",
+    "checkedAt": "2026-10-08T12:53:19.500563+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.7thpizza.com/sub/menu/list.php?menuCate=8&page=2",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-07de1aee884692c4",
+    "checkedAt": "2026-10-08T12:53:20.724642+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.7thpizza.com/sub/menu/list.php?menuCate=8&page=3",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-07de1aee884692c4",
+    "checkedAt": "2026-10-08T12:53:22.517619+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.7thpizza.com/sub/menu/list.php?menuCate=8&page=4",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-fdb71b87248a93b9",
+    "checkedAt": "2026-10-08T12:53:09.879089+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.gong-cha.co.kr/brand/menu/product?category=001002&scroll=y",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-fdb71b87248a93b9",
+    "checkedAt": "2026-10-08T12:53:11.569259+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.gong-cha.co.kr/brand/menu/product?category=001003&scroll=y",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-fdb71b87248a93b9",
+    "checkedAt": "2026-10-08T12:53:13.319849+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.gong-cha.co.kr/brand/menu/product?category=001006&scroll=y",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-fdb71b87248a93b9",
+    "checkedAt": "2026-10-08T12:53:15.044720+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.gong-cha.co.kr/brand/menu/product?category=001010&scroll=y",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-fdb71b87248a93b9",
+    "checkedAt": "2026-10-08T12:53:16.553439+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.gong-cha.co.kr/brand/menu/product?category=001011&scroll=y",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-fdb71b87248a93b9",
+    "checkedAt": "2026-10-08T12:53:17.679332+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.gong-cha.co.kr/brand/menu/product?category=001015&scroll=y",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-fdb71b87248a93b9",
+    "checkedAt": "2026-10-08T12:53:19.241620+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.gong-cha.co.kr/brand/menu/product?category=001017&scroll=y",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-fdb71b87248a93b9",
+    "checkedAt": "2026-10-08T12:53:20.348456+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.gong-cha.co.kr/brand/menu/product?category=001018&scroll=y",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-fdb71b87248a93b9",
+    "checkedAt": "2026-10-08T12:53:22.068586+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.gong-cha.co.kr/brand/menu/product?category=002001&scroll=y",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-9d8b8d6c615c6ee7",
+    "checkedAt": "2026-10-08T12:53:23.760694+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.dunkindonuts.co.kr/menu?cat=1&page=2",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-9d8b8d6c615c6ee7",
+    "checkedAt": "2026-10-08T12:53:24.159989+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.dunkindonuts.co.kr/menu?cat=1&page=3",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-9d8b8d6c615c6ee7",
+    "checkedAt": "2026-10-08T12:53:24.505978+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.dunkindonuts.co.kr/menu?cat=1&page=4",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-9d8b8d6c615c6ee7",
+    "checkedAt": "2026-10-08T12:53:24.824516+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.dunkindonuts.co.kr/menu?cat=1&page=5",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-9d8b8d6c615c6ee7",
+    "checkedAt": "2026-10-08T12:53:25.090493+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.dunkindonuts.co.kr/menu?cat=1&page=6",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-9d8b8d6c615c6ee7",
+    "checkedAt": "2026-10-08T12:53:25.388738+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.dunkindonuts.co.kr/menu?cat=1&page=7",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-9d8b8d6c615c6ee7",
+    "checkedAt": "2026-10-08T12:53:25.679026+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.dunkindonuts.co.kr/menu?cat=1&page=8",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-9d8b8d6c615c6ee7",
+    "checkedAt": "2026-10-08T12:53:25.944579+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.dunkindonuts.co.kr/menu?cat=1&page=9",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-9d8b8d6c615c6ee7",
+    "checkedAt": "2026-10-08T12:53:26.205802+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.dunkindonuts.co.kr/menu?cat=2&page=2",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-9d8b8d6c615c6ee7",
+    "checkedAt": "2026-10-08T12:53:26.484440+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.dunkindonuts.co.kr/menu?cat=6&page=2",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-9d8b8d6c615c6ee7",
+    "checkedAt": "2026-10-08T12:53:26.825334+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.dunkindonuts.co.kr/menu?cat=3&page=2",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-9d8b8d6c615c6ee7",
+    "checkedAt": "2026-10-08T12:53:27.336580+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.dunkindonuts.co.kr/menu?cat=3&page=3",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-9d8b8d6c615c6ee7",
+    "checkedAt": "2026-10-08T12:53:29.322225+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.dunkindonuts.co.kr/menu?cat=3&page=4",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-9d8b8d6c615c6ee7",
+    "checkedAt": "2026-10-08T12:53:29.588609+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.dunkindonuts.co.kr/menu?cat=3&page=5",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-9d8b8d6c615c6ee7",
+    "checkedAt": "2026-10-08T12:53:29.848797+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.dunkindonuts.co.kr/menu?cat=5&page=2",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-9d8b8d6c615c6ee7",
+    "checkedAt": "2026-10-08T12:53:30.103517+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.dunkindonuts.co.kr/menu?cat=5&page=3",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-9f125dd967fd168e",
+    "checkedAt": "2026-10-08T12:53:28.485628+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.lotteeatz.com/brand/kkd",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-e32a9313e634ead7",
+    "checkedAt": "2026-10-08T12:53:29.936426+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "http://www.hjhbakery.com/product/product_list.asp?code1=3",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-e32a9313e634ead7",
+    "checkedAt": "2026-10-08T12:53:39.820302+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "http://www.hjhbakery.com/product/product_list_best.asp",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-e32a9313e634ead7",
+    "checkedAt": "2026-10-08T12:53:46.798387+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "http://www.hjhbakery.com/product/product_list.asp?page=2&code1=2&code2=&code3=&sort=new&page_size=20",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-e32a9313e634ead7",
+    "checkedAt": "2026-10-08T12:53:47.817959+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "http://www.hjhbakery.com/product/product_list.asp?page=2&code1=6&code2=&code3=&sort=new&page_size=20",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-e32a9313e634ead7",
+    "checkedAt": "2026-10-08T12:53:49.629712+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "http://www.hjhbakery.com/product/product_list.asp?page=1&code1=6&code2=&code3=&sort=new&page_size=20",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-db7ae070c1a211f3",
+    "checkedAt": "2026-10-08T12:53:36.328430+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "http://xn--3e0boln8q87fglcewot4hgi.kr/bbs/board.php?bo_table=tteok_menu&page=2",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-db7ae070c1a211f3",
+    "checkedAt": "2026-10-08T12:53:38.057284+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "http://xn--3e0boln8q87fglcewot4hgi.kr/bbs/board.php?bo_table=tteok_menu&page=3",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-db7ae070c1a211f3",
+    "checkedAt": "2026-10-08T12:53:39.208223+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "http://xn--3e0boln8q87fglcewot4hgi.kr/bbs/board.php?bo_table=chicken_menu&page=2",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-db7ae070c1a211f3",
+    "checkedAt": "2026-10-08T12:53:40.779451+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "http://xn--3e0boln8q87fglcewot4hgi.kr/bbs/board.php?bo_table=tteok_menu&page=1",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-db7ae070c1a211f3",
+    "checkedAt": "2026-10-08T12:53:42.541464+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "http://xn--3e0boln8q87fglcewot4hgi.kr/bbs/board.php?bo_table=chicken_menu&page=1",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-c250fc357adcb9df",
+    "checkedAt": "2026-10-08T12:53:33.900706+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.pascucci.co.kr/product/productList.asp?typeCode=00100010",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-c250fc357adcb9df",
+    "checkedAt": "2026-10-08T12:53:35.621121+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.pascucci.co.kr/product/productList.asp?typeCode=00100020",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-c250fc357adcb9df",
+    "checkedAt": "2026-10-08T12:53:37.378762+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.pascucci.co.kr/product/productList.asp?typeCode=00100030",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-c250fc357adcb9df",
+    "checkedAt": "2026-10-08T12:53:39.070197+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.pascucci.co.kr/product/productList.asp?typeCode=00100040",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-c250fc357adcb9df",
+    "checkedAt": "2026-10-08T12:53:40.758824+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.pascucci.co.kr/product/productList.asp?typeCode=00200010",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-c250fc357adcb9df",
+    "checkedAt": "2026-10-08T12:53:42.476089+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.pascucci.co.kr/product/productList.asp?typeCode=00200020",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-c250fc357adcb9df",
+    "checkedAt": "2026-10-08T12:53:44.166649+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.pascucci.co.kr/product/productList.asp?typeCode=00200030",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-c250fc357adcb9df",
+    "checkedAt": "2026-10-08T12:53:45.701397+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.pascucci.co.kr/product/productList.asp?typeCode=00200050",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-c250fc357adcb9df",
+    "checkedAt": "2026-10-08T12:53:47.377449+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.pascucci.co.kr/product/productList.asp?typeCode=00210010",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-c250fc357adcb9df",
+    "checkedAt": "2026-10-08T12:53:49.073576+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.pascucci.co.kr/product/productList.asp?typeCode=00210020",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-c250fc357adcb9df",
+    "checkedAt": "2026-10-08T12:53:50.769629+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.pascucci.co.kr/product/productList.asp?typeCode=00300010",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-c250fc357adcb9df",
+    "checkedAt": "2026-10-08T12:53:52.510296+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.pascucci.co.kr/product/productList.asp?typeCode=00300020",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-c250fc357adcb9df",
+    "checkedAt": "2026-10-08T12:53:54.296492+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.pascucci.co.kr/product/productList.asp?typeCode=00300030",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-c250fc357adcb9df",
+    "checkedAt": "2026-10-08T12:53:55.431858+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.pascucci.co.kr/product/productList.asp?typeCode=00300040",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-1b6e60f7965bce11",
+    "checkedAt": "2026-10-08T12:53:47.411805+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.dalkomm.com/menu?dalMenu=12",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-1b6e60f7965bce11",
+    "checkedAt": "2026-10-08T12:53:50.787065+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.dalkomm.com/menu?dalMenu=3",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-1b6e60f7965bce11",
+    "checkedAt": "2026-10-08T12:53:53.684052+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.dalkomm.com/menu?dalMenu=10",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-1b6e60f7965bce11",
+    "checkedAt": "2026-10-08T12:53:57.741834+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.dalkomm.com/menu?dalMenu=2",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-1b6e60f7965bce11",
+    "checkedAt": "2026-10-08T12:54:01.057712+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.dalkomm.com/menu?dalMenu=5",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-1b6e60f7965bce11",
+    "checkedAt": "2026-10-08T12:54:04.627521+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.dalkomm.com/menu?dalMenu=4",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-1b6e60f7965bce11",
+    "checkedAt": "2026-10-08T12:54:06.264610+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.dalkomm.com/menu?dalMenu=11",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-1b6e60f7965bce11",
+    "checkedAt": "2026-10-08T12:54:09.209283+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.dalkomm.com/menu?dalMenu=6",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-1b6e60f7965bce11",
+    "checkedAt": "2026-10-08T12:54:10.399498+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.dalkomm.com/menu?dalMenu=8",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-2e050b39b22a7280",
+    "checkedAt": "2026-10-08T12:53:57.301242+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.lotteeatz.com/brand/angel",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-01c5e2f727401b55",
+    "checkedAt": "2026-10-08T12:54:00.207470+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://sulbing.com/menu/?type=사이드",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-01c5e2f727401b55",
+    "checkedAt": "2026-10-08T12:54:01.068387+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://sulbing.com/menu/?type=음료",
+    "evidenceSha256": "160d44f98b18b0cc228a8dac11d4cb20cfc7a760375fd0f4b3021671007bf0e9"
+  },
+  {
+    "brandId": "brand-45ddca38a87b3dcd",
+    "checkedAt": "2026-10-08T12:58:13.479570+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.bhc.co.kr/api/v1/web/categories/1/products",
+    "evidenceSha256": "7d9658f191a17bbf0249522bfabfe37072dcab951261af3b82d5060892c69b98"
+  },
+  {
+    "brandId": "brand-45ddca38a87b3dcd",
+    "checkedAt": "2026-10-08T12:58:14.321406+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.bhc.co.kr/api/v1/web/categories/23/products",
+    "evidenceSha256": "7d9658f191a17bbf0249522bfabfe37072dcab951261af3b82d5060892c69b98"
+  },
+  {
+    "brandId": "brand-45ddca38a87b3dcd",
+    "checkedAt": "2026-10-08T12:58:14.963966+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.bhc.co.kr/api/v1/web/categories/47/products",
+    "evidenceSha256": "7d9658f191a17bbf0249522bfabfe37072dcab951261af3b82d5060892c69b98"
+  },
+  {
+    "brandId": "brand-45ddca38a87b3dcd",
+    "checkedAt": "2026-10-08T12:58:15.620409+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.bhc.co.kr/api/v1/web/categories/50/products",
+    "evidenceSha256": "7d9658f191a17bbf0249522bfabfe37072dcab951261af3b82d5060892c69b98"
+  },
+  {
+    "brandId": "brand-2a13283561756adc",
+    "checkedAt": "2026-10-08T12:58:14.023419+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://www.baeksojeong.com/",
+    "evidenceSha256": "7d9658f191a17bbf0249522bfabfe37072dcab951261af3b82d5060892c69b98"
+  },
+  {
+    "brandId": "brand-2c14410b57ba9fc4",
+    "checkedAt": "2026-10-08T14:07:05.716570+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.kfckorea.com/kfc/interface/selectDeliveryList",
+    "evidenceSha256": "778b264c9b60f7ad7bec7d27adfa711c1eab78cf34424fe415300f2bcc8a5aa5"
+  },
+  {
+    "brandId": "brand-2c14410b57ba9fc4",
+    "checkedAt": "2026-10-08T14:07:07.873892+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.kfckorea.com/kfc/interface/selectDeliveryList",
+    "evidenceSha256": "778b264c9b60f7ad7bec7d27adfa711c1eab78cf34424fe415300f2bcc8a5aa5"
+  },
+  {
+    "brandId": "brand-517e6e3a0f2a227b",
+    "checkedAt": "2026-10-08T14:08:11.847118+00:00",
+    "sourceType": "BROWSER",
+    "sourceUrl": "http://schoolfood.freewebclub.com/menu/menu.html",
+    "evidenceSha256": "778b264c9b60f7ad7bec7d27adfa711c1eab78cf34424fe415300f2bcc8a5aa5"
+  },
+  {
+    "brandId": "brand-9e7aeb464781f115",
+    "checkedAt": "2026-10-08T14:08:35.796847+00:00",
+    "sourceType": "BROWSER",
+    "sourceUrl": "https://www.hecbob.com/hecbobmenu",
+    "evidenceSha256": "778b264c9b60f7ad7bec7d27adfa711c1eab78cf34424fe415300f2bcc8a5aa5"
+  },
+  {
+    "brandId": "brand-c242a10bbca4c411",
+    "checkedAt": "2026-10-08T14:09:06.829525+00:00",
+    "sourceType": "BROWSER",
+    "sourceUrl": "https://www.cheogajip.co.kr/bbs/board.php?bo_table=allmenu&page=2",
+    "evidenceSha256": "778b264c9b60f7ad7bec7d27adfa711c1eab78cf34424fe415300f2bcc8a5aa5"
+  },
+  {
+    "brandId": "brand-c242a10bbca4c411",
+    "checkedAt": "2026-10-08T14:09:10.133563+00:00",
+    "sourceType": "BROWSER",
+    "sourceUrl": "https://www.cheogajip.co.kr/bbs/board.php?bo_table=allmenu&page=1",
+    "evidenceSha256": "778b264c9b60f7ad7bec7d27adfa711c1eab78cf34424fe415300f2bcc8a5aa5"
+  },
+  {
+    "brandId": "brand-9fa9c3eca7bcf563",
+    "checkedAt": "2026-10-08T14:10:00.051287+00:00",
+    "sourceType": "BROWSER",
+    "sourceUrl": "https://www.theventi.co.kr/new2022/menu/all.html?mode=1",
+    "evidenceSha256": "778b264c9b60f7ad7bec7d27adfa711c1eab78cf34424fe415300f2bcc8a5aa5"
+  },
+  {
+    "brandId": "brand-9fa9c3eca7bcf563",
+    "checkedAt": "2026-10-08T14:10:06.560082+00:00",
+    "sourceType": "BROWSER",
+    "sourceUrl": "https://www.theventi.co.kr/new2022/menu/all.html?mode=2",
+    "evidenceSha256": "778b264c9b60f7ad7bec7d27adfa711c1eab78cf34424fe415300f2bcc8a5aa5"
+  },
+  {
+    "brandId": "brand-9fa9c3eca7bcf563",
+    "checkedAt": "2026-10-08T14:10:11.141018+00:00",
+    "sourceType": "BROWSER",
+    "sourceUrl": "https://www.theventi.co.kr/new2022/menu/all.html?mode=3",
+    "evidenceSha256": "778b264c9b60f7ad7bec7d27adfa711c1eab78cf34424fe415300f2bcc8a5aa5"
+  },
+  {
+    "brandId": "brand-9fa9c3eca7bcf563",
+    "checkedAt": "2026-10-08T14:10:15.749121+00:00",
+    "sourceType": "BROWSER",
+    "sourceUrl": "https://www.theventi.co.kr/new2022/menu/all.html?mode=4",
+    "evidenceSha256": "778b264c9b60f7ad7bec7d27adfa711c1eab78cf34424fe415300f2bcc8a5aa5"
+  },
+  {
+    "brandId": "brand-9fa9c3eca7bcf563",
+    "checkedAt": "2026-10-08T14:10:20.418548+00:00",
+    "sourceType": "BROWSER",
+    "sourceUrl": "https://www.theventi.co.kr/new2022/menu/all.html?mode=5",
+    "evidenceSha256": "778b264c9b60f7ad7bec7d27adfa711c1eab78cf34424fe415300f2bcc8a5aa5"
+  },
+  {
+    "brandId": "brand-9fa9c3eca7bcf563",
+    "checkedAt": "2026-10-08T14:10:25.011067+00:00",
+    "sourceType": "BROWSER",
+    "sourceUrl": "https://www.theventi.co.kr/new2022/menu/all.html?mode=6",
+    "evidenceSha256": "778b264c9b60f7ad7bec7d27adfa711c1eab78cf34424fe415300f2bcc8a5aa5"
+  },
+  {
+    "brandId": "brand-9fa9c3eca7bcf563",
+    "checkedAt": "2026-10-08T14:10:29.619491+00:00",
+    "sourceType": "BROWSER",
+    "sourceUrl": "https://www.theventi.co.kr/new2022/menu/all.html?mode=7",
+    "evidenceSha256": "778b264c9b60f7ad7bec7d27adfa711c1eab78cf34424fe415300f2bcc8a5aa5"
+  },
+  {
+    "brandId": "brand-9fa9c3eca7bcf563",
+    "checkedAt": "2026-10-08T14:10:34.276860+00:00",
+    "sourceType": "BROWSER",
+    "sourceUrl": "https://www.theventi.co.kr/new2022/menu/all.html?mode=8",
+    "evidenceSha256": "778b264c9b60f7ad7bec7d27adfa711c1eab78cf34424fe415300f2bcc8a5aa5"
+  },
+  {
+    "brandId": "brand-cf57c271fe920362",
+    "checkedAt": "2026-10-08T08:18:17.195192+00:00",
+    "sourceType": "HTML",
+    "sourceUrl": "https://leesungdang1945.com/category/낱개상품/24/",
+    "evidenceSha256": "95d5b6f6001beed227efff1858fd876534a278beabd8b039a4b98f3b1a3e328a"
+  }
+]

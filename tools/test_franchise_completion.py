@@ -166,4 +166,59 @@ class CompletionTest(unittest.TestCase):
         self.assertTrue(result['inlineSignals']['cookieWrite']);self.assertTrue(result['inlineSignals']['locationNavigation'])
         self.assertNotIn('private',json.dumps(result));self.assertEqual(0,result['visibleTextLength'])
 
+    def test_sungsim_total_and_duplicate_official_id_contract(self):
+        brand=next(b for b in self.brands if b['name']=='성심당')
+        source=brand['sources'][0]
+        context=dict(brand,adapter=source['adapter'],sourceUrl=source['url'],sourceKey=source['key'])
+        markup=(ROOT/'data-source/franchise-sync/fixtures/sungsim-food-list.html').read_text(encoding='utf-8')
+        menus=candidates(context,markup,'2026-10-09T00:00:00Z')
+        self.assertEqual(50,len(menus));self.assertEqual(50,len({m['id'] for m in menus}))
+        self.assertTrue(all(m['sourceUrl']==brand['provenanceAuthorityUrl'] and 'product_cd=' in m['collectionSourceUrl'] for m in menus))
+        self.assertGreaterEqual(len(additional_pages(brand,source,markup)),24)
+        from lxml import html
+        broken=html.fromstring(markup)
+        total=next(n for n in broken.xpath('//div[@class="total"]') if '총 ' in n.text_content())
+        total.clear();total.set('class','total');total.text='총 52개'
+        with self.assertRaises(AssertionError):candidates(context,html.tostring(broken,encoding='unicode'),'2026-10-09T00:00:00Z')
+    def test_isung_food_sets_preserve_identity_and_exclude_goods(self):
+        brand=next(b for b in self.brands if b['name']=='이성당');source=brand['sources'][0]
+        context=dict(brand,adapter=source['adapter'],sourceUrl=source['url'],sourceKey=source.get('key',''))
+        markup=(ROOT/'data-source/franchise-sync/fixtures/isung-food-list.html').read_text(encoding='utf-8')
+        menus=candidates(context,markup,'2026-10-09T00:00:00Z')
+        self.assertEqual(24,len(menus));self.assertTrue(any('쌀오란다' in m['name'] for m in menus))
+        self.assertFalse(any('[생지]' in m['name'] or '에코백' in m['name'] for m in menus))
+        with self.assertRaises(AssertionError):additional_pages(brand,source,'<div class="xans-product-normalpaging"><a href="https://example.com/?page=1">1</a></div>')
+    def test_pizza_piece_variants_and_ui_aliases(self):
+        brand=next(b for b in self.brands if b['name']=='피자헛');source=brand['sources'][0]
+        context=dict(brand,adapter=source['adapter'],sourceUrl=source['url'],sourceKey='치킨')
+        products=[dict(menuCd=str(i),digitalKey='same-group',sizeKind='',name='윙 '+str(i)+'조각') for i in (2,4,8)]
+        products.append(dict(products[0],menuCd='99'))
+        menus=candidates(context,json.dumps(products),'2026-10-09T00:00:00Z')
+        self.assertEqual(3,len(menus));self.assertEqual(3,len({m['id'] for m in menus}))
+        self.assertTrue(all(m['energyKcal'] is None for m in menus))
+        changed=[dict(p,price=9999) for p in products]
+        self.assertEqual([m['id'] for m in menus],[m['id'] for m in candidates(context,json.dumps(changed),'2026-10-10T00:00:00Z')])
+    def test_twosome_terminal_page_and_product_identity(self):
+        brand=next(b for b in self.brands if b['name']=='투썸플레이스')
+        fixtures=json.loads((ROOT/'data-source/franchise-sync/fixtures/twosome-public-menu.json').read_text(encoding='utf-8'))
+        fixture=next(f for f in fixtures if 'menuInfoListAjax' in f['url'] and f['value']['rowCount']>0)
+        context=dict(brand,adapter='twosome-menu-json',sourceUrl=fixture['url'],sourceKey='NEW')
+        menus=candidates(context,json.dumps(fixture['value']),'2026-10-09T00:00:00Z')
+        self.assertEqual(fixture['value']['rowCount'],len(menus))
+        incomplete=copy.deepcopy(fixture['value']);incomplete['fetchResultListSet'][0]['NEXT_PAGE']=1
+        with self.assertRaises(AssertionError):candidates(context,json.dumps(incomplete),'2026-10-09T00:00:00Z')
+        incomplete=copy.deepcopy(fixture['value']);incomplete['rowCount']+=1
+        with self.assertRaises(AssertionError):candidates(context,json.dumps(incomplete),'2026-10-09T00:00:00Z')
+        source=dict(url=fixture['url'],adapter='twosome-categories-json',pagination='twosome-categories',form=dict(grtCd='5'))
+        new_goods=dict(queryCode=1000,queryMessage='SUCCESS',rowCount=1,fetchResultListSet=[dict(MID_NM='새 음식',MID_CD='99',GRT_CD='5')])
+        with self.assertRaises(AssertionError):additional_pages(brand,source,json.dumps(new_goods))
+    def test_dookki_only_independently_priced_foods(self):
+        brand=next(b for b in self.brands if b['name']=='두끼');source=brand['sources'][0]
+        context=dict(brand,adapter=source['adapter'],sourceUrl=source['url'],sourceKey=source.get('key',''))
+        markup=(ROOT/'data-source/franchise-sync/fixtures/dookki-priced-menu.html').read_text(encoding='utf-8')
+        menus=candidates(context,markup,'2026-10-09T00:00:00Z')
+        self.assertEqual(8,len(menus));self.assertFalse(any('소스추가시' in m['name'] or '학생' in m['name'] for m in menus))
+        self.assertEqual({'추가메뉴','포장메뉴'},{m['category'] for m in menus})
+        self.assertTrue(all(m['energyKcal'] is None for m in menus))
+
 if __name__=='__main__':unittest.main(verbosity=2)

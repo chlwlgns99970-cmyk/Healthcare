@@ -1,0 +1,722 @@
+[
+  {
+    "url": "https://www.pizzahut.co.kr/api/menu/0996/list/best/VISIT",
+    "value": [
+      {
+        "digitalKey": "RPPZ2275",
+        "menuCd": "PPZ02698",
+        "name": "쓰리스타 시그니처(L)",
+        "sizeKind": "01"
+      },
+      {
+        "digitalKey": "RPPZ0008",
+        "menuCd": "PPZ00014",
+        "name": "수퍼슈프림(M)",
+        "sizeKind": "02"
+      },
+      {
+        "digitalKey": "RPPZ0008",
+        "menuCd": "PPZ00013",
+        "name": "수퍼슈프림(L)",
+        "sizeKind": "01"
+      },
+      {
+        "digitalKey": "RPPZ2239",
+        "menuCd": "PPZ02646",
+        "name": "한근 치즈 페페로니(L)",
+        "sizeKind": "01"
+      },
+      {
+        "digitalKey": "RPPZ2224",
+        "menuCd": "PPZ02629",
+        "name": "화이트 트러플 스테이크 뇨끼(M)",
+        "sizeKind": "02"
+      },
+      {
+        "digitalKey": "RPPZ2224",
+        "menuCd": "PPZ02628",
+        "name": "화이트 트러플 스테이크 뇨끼(L)",
+        "sizeKind": "01"
+      },
+      {
+        "digitalKey": "RPPZ2240",
+        "menuCd": "PPZ02647",
+        "name": "한근 치즈 콤비네이션(L)",
+        "sizeKind": "01"
+      },
+      {
+        "digitalKey": "RPPZ2183",
+        "menuCd": "PPZ02580",
+        "name": "더블 쉬림프 골드(M)",
+        "sizeKind": "02"
+      },
+      {
+        "digitalKey": "RPPZ2183",
+        "menuCd": "PPZ02579",
+        "name": "더블 쉬림프 골드(L)",
+        "sizeKind": "01"
+      },
+      {
+        "digitalKey": "RSPZ1797",
+        "menuCd": "SPZ03667",
+        "name": "화이트&블랙 스테이크뇨끼",
+        "sizeKind": "01"
+      },
+      {
+        "digitalKey": "RPPZ2243",
+        "menuCd": "PPZ02652",
+        "name": "반근 치즈 페페로니(M)",
+        "sizeKind": "02"
+      },
+      {
+        "digitalKey": "RPPZ2243",
+        "menuCd": "PPZ02651",
+        "name": "반근 치즈 페페로니(L)",
+        "sizeKind": "01"
+      },
+      {
+        "digitalKey": "RPPZ2244",
+        "menuCd": "PPZ02654",
+        "name": "반근 치즈 콤비네이션(M)",
+        "sizeKind": "02"
+      },
+      {
+        "digitalKey": "RPPZ2244",
+        "menuCd": "PPZ02653",
+        "name": "반근 치즈 콤비네이션(L)",
+        "sizeKind": "01"
+      }
+    ]
+  },
+  {
+    "url": "https://www.pizzahut.co.kr/api/menu/0996/list/cheesefesta/VISIT",
+    "value": [
+      {
+        "digitalKey": "RPPZ2238",
+        "menuCd": "PPZ02645",
+        "name": "한근 치즈 클래식(L)",
+        "sizeKind": "01"
+      },
+      {
+        "digitalKey": "RPPZ2239",
+        "menuCd": "PPZ02646",
+        "name": "한근 치즈 페페로니(L)",
+        "sizeKind": "01"
+      },
+      {
+        "digitalKey": "RPPZ2240",
+        "menuCd": "PPZ02647",
+        "name": "한근 치즈 콤비네이션(L)",
+        "sizeKind": "01"
+      },
+      {
+        "digitalKey": "RPPZ2241",
+        "menuCd": "PPZ02648",
+        "name": "한근 치즈 멜팅포테이토(L)",
+        "sizeKind": "01"
+      },
+      {
+        "digitalKey": "RPSD1628",
+        "menuCd": "PSD01724",
+        "name": "치즈 폭탄 파스타",
+        "sizeKind": null
+      },
+      {
+        "digitalKey": "RPPZ2242",
+        "menuCd": "PPZ02650",
+        "name": "반근 치즈 클래식(M)",
+        "sizeKind": "02"
+      },
+      {
+        "digitalKey": "RPPZ2242",
+        "menuCd": "PPZ02649",
+        "name": "반근 치즈 클래식(L)",
+        "sizeKind": "01"
+      },
+      {
+        "digitalKey": "RPPZ2243",
+        "menuCd": "PPZ02652",
+        "name": "반근 치즈 페페로니(M)",
+        "sizeKind": "02"
+      },
+      {
+        "digitalKey": "RPPZ2243",
+        "menuCd": "PPZ02651",
+        "name": "반근 치즈 페페로니(L)",
+        "sizeKind": "01"
+      },
+      {
+        "digitalKey": "RPPZ2244",
+        "menuCd": "PPZ02654",
+        "name": "반근 치즈 콤비네이션(M)",
+        "sizeKind": "02"
+      },
+      {
+        "digitalKey": "RPPZ2244",
+        "menuCd": "PPZ02653",
+        "name": "반근 치즈 콤비네이션(L)",
+        "sizeKind": "01"
+      },
+      {
+        "digitalKey": "RPPZ2245",
+        "menuCd": "PPZ02656",
+        "name": "반근 치즈 멜팅포테이토(M)",
+        "sizeKind": "02"
+      },
+      {
+        "digitalKey": "RPPZ2245",
+        "menuCd": "PPZ02655",
+        "name": "반근 치즈 멜팅포테이토(L)",
+        "sizeKind": "01"
+      }
+    ]
+  },
+  {
+    "url": "https://www.pizzahut.co.kr/api/menu/0996/list/premium/VISIT",
+    "value": [
+      {
+        "digitalKey": "RPPZ2275",
+        "menuCd": "PPZ02698",
+        "name": "쓰리스타 시그니처(L)",
+        "sizeKind": "01"
+      },
+      {
+        "digitalKey": "RPPZ0008",
+        "menuCd": "PPZ00014",
+        "name": "수퍼슈프림(M)",
+        "sizeKind": "02"
+      },
+      {
+        "digitalKey": "RPPZ0008",
+        "menuCd": "PPZ00013",
+        "name": "수퍼슈프림(L)",
+        "sizeKind": "01"
+      },
+      {
+        "digitalKey": "RPPZ2224",
+        "menuCd": "PPZ02629",
+        "name": "화이트 트러플 스테이크 뇨끼(M)",
+        "sizeKind": "02"
+      },
+      {
+        "digitalKey": "RPPZ2224",
+        "menuCd": "PPZ02628",
+        "name": "화이트 트러플 스테이크 뇨끼(L)",
+        "sizeKind": "01"
+      },
+      {
+        "digitalKey": "RPPZ2183",
+        "menuCd": "PPZ02580",
+        "name": "더블 쉬림프 골드(M)",
+        "sizeKind": "02"
+      },
+      {
+        "digitalKey": "RPPZ2183",
+        "menuCd": "PPZ02579",
+        "name": "더블 쉬림프 골드(L)",
+        "sizeKind": "01"
+      },
+      {
+        "digitalKey": "RPPZ2232",
+        "menuCd": "PPZ02638",
+        "name": "블랙 BBQ 스테이크 뇨끼(M)",
+        "sizeKind": "02"
+      },
+      {
+        "digitalKey": "RPPZ2232",
+        "menuCd": "PPZ02637",
+        "name": "블랙 BBQ 스테이크 뇨끼(L)",
+        "sizeKind": "01"
+      },
+      {
+        "digitalKey": "RPPZ1983",
+        "menuCd": "PPZ02258",
+        "name": "씨푸드킹(M)",
+        "sizeKind": "02"
+      },
+      {
+        "digitalKey": "RPPZ1983",
+        "menuCd": "PPZ02257",
+        "name": "씨푸드킹(L)",
+        "sizeKind": "01"
+      },
+      {
+        "digitalKey": "RPPZ0007",
+        "menuCd": "PPZ00012",
+        "name": "베이컨포테이토(M)",
+        "sizeKind": "02"
+      },
+      {
+        "digitalKey": "RPPZ0007",
+        "menuCd": "PPZ00011",
+        "name": "베이컨포테이토(L)",
+        "sizeKind": "01"
+      },
+      {
+        "digitalKey": "RPPZ0014",
+        "menuCd": "PPZ00026",
+        "name": "직화불고기(M)",
+        "sizeKind": "02"
+      },
+      {
+        "digitalKey": "RPPZ0014",
+        "menuCd": "PPZ00025",
+        "name": "직화불고기(L)",
+        "sizeKind": "01"
+      },
+      {
+        "digitalKey": "RPPZ2098",
+        "menuCd": "PPZ02449",
+        "name": "갈릭버터쉬림프(L)",
+        "sizeKind": "01"
+      }
+    ]
+  },
+  {
+    "url": "https://www.pizzahut.co.kr/api/menu/0996/list/sideAndDrinkBest",
+    "value": [
+      {
+        "digitalKey": "RPSD1643",
+        "menuCd": "PSD01745",
+        "name": "피자설기",
+        "sizeKind": null
+      },
+      {
+        "digitalKey": "RPBE1300",
+        "menuCd": "PBE01379",
+        "name": "슈즈참 1개(랜덤발송)",
+        "sizeKind": null
+      },
+      {
+        "digitalKey": "RPSD1612",
+        "menuCd": "PSD01684",
+        "name": "소이갈릭 윙봉 2조각",
+        "sizeKind": null
+      },
+      {
+        "digitalKey": "RPSD1612",
+        "menuCd": "PSD01685",
+        "name": "소이갈릭 윙봉 4조각",
+        "sizeKind": null
+      },
+      {
+        "digitalKey": "RPSD1612",
+        "menuCd": "PSD01686",
+        "name": "소이갈릭 윙봉 8조각",
+        "sizeKind": null
+      },
+      {
+        "digitalKey": "RPSD0032",
+        "menuCd": "PSD00047",
+        "name": "리치 치즈 파스타",
+        "sizeKind": null
+      },
+      {
+        "digitalKey": "RPSD1642",
+        "menuCd": "PSD01744",
+        "name": "미트칠리 치즈감자",
+        "sizeKind": null
+      },
+      {
+        "digitalKey": "RPSD1613",
+        "menuCd": "PSD01687",
+        "name": "슈프림양념 소이윙봉 2조각",
+        "sizeKind": null
+      },
+      {
+        "digitalKey": "RPSD1613",
+        "menuCd": "PSD01688",
+        "name": "슈프림양념 소이윙봉 4조각",
+        "sizeKind": null
+      },
+      {
+        "digitalKey": "RPSD1613",
+        "menuCd": "PSD01689",
+        "name": "슈프림양념 소이윙봉 8조각",
+        "sizeKind": null
+      },
+      {
+        "digitalKey": "RPSD0027",
+        "menuCd": "PSD00075",
+        "name": "팝콘치킨(20ea)",
+        "sizeKind": null
+      },
+      {
+        "digitalKey": "RPBE1257",
+        "menuCd": "PBE01305",
+        "name": "코카-콜라 1.25L",
+        "sizeKind": null
+      },
+      {
+        "digitalKey": "RPBE1257",
+        "menuCd": "PBE01335",
+        "name": "코카-콜라 1.25L",
+        "sizeKind": null
+      },
+      {
+        "digitalKey": "RPBE1280",
+        "menuCd": "PBE01345",
+        "name": "스프라이트 제로 1.5L",
+        "sizeKind": null
+      },
+      {
+        "digitalKey": "RSSD0127",
+        "menuCd": "SSD00128",
+        "name": "더블 디핑(갈릭+스리라차)",
+        "sizeKind": null
+      }
+    ]
+  },
+  {
+    "url": "https://www.pizzahut.co.kr/api/menu/0996/list/dcSide",
+    "value": [
+      {
+        "digitalKey": "RSSD0076",
+        "menuCd": "SSD00044",
+        "name": "해피콤보",
+        "sizeKind": null
+      },
+      {
+        "digitalKey": "RSSD0074",
+        "menuCd": "SSD00042",
+        "name": "서프라이즈 콤보",
+        "sizeKind": null
+      }
+    ]
+  },
+  {
+    "url": "https://www.pizzahut.co.kr/api/menu/0996/list/pastaAndSide",
+    "value": [
+      {
+        "digitalKey": "RPSD1643",
+        "menuCd": "PSD01745",
+        "name": "피자설기",
+        "sizeKind": null
+      },
+      {
+        "digitalKey": "RPSD0032",
+        "menuCd": "PSD00047",
+        "name": "리치 치즈 파스타",
+        "sizeKind": null
+      },
+      {
+        "digitalKey": "RPSD1642",
+        "menuCd": "PSD01744",
+        "name": "미트칠리 치즈감자",
+        "sizeKind": null
+      },
+      {
+        "digitalKey": "RPSD1627",
+        "menuCd": "PSD01723",
+        "name": "쇼콜라 브라우니 싱글",
+        "sizeKind": null
+      },
+      {
+        "digitalKey": "RPSD1626",
+        "menuCd": "PSD01722",
+        "name": "쇼콜라 브라우니 더블",
+        "sizeKind": null
+      },
+      {
+        "digitalKey": "RPSD1628",
+        "menuCd": "PSD01724",
+        "name": "치즈 폭탄 파스타",
+        "sizeKind": null
+      },
+      {
+        "digitalKey": "RPSD1622",
+        "menuCd": "PSD01713",
+        "name": "케이준 양념감자",
+        "sizeKind": null
+      },
+      {
+        "digitalKey": "RPSD1621",
+        "menuCd": "PSD01712",
+        "name": "화이트 트러플 크림파스타",
+        "sizeKind": null
+      },
+      {
+        "digitalKey": "RPSD1597",
+        "menuCd": "PSD01666",
+        "name": "알프레도 베이컨 크림 파스타",
+        "sizeKind": null
+      },
+      {
+        "digitalKey": "RPSD0035",
+        "menuCd": "PSD00052",
+        "name": "상하이 쉬림프 파스타",
+        "sizeKind": null
+      },
+      {
+        "digitalKey": "RPSD0044",
+        "menuCd": "PSD00071",
+        "name": "코울슬로",
+        "sizeKind": null
+      },
+      {
+        "digitalKey": "RPSD0045",
+        "menuCd": "PSD01620",
+        "name": "콘샐러드",
+        "sizeKind": null
+      },
+      {
+        "digitalKey": "RPSD1623",
+        "menuCd": "PSD01714",
+        "name": "케이준 양념감자(half)",
+        "sizeKind": null
+      }
+    ]
+  },
+  {
+    "url": "https://www.pizzahut.co.kr/api/menu/0996/list/dcSide",
+    "value": [
+      {
+        "digitalKey": "RSSD0076",
+        "menuCd": "SSD00044",
+        "name": "해피콤보",
+        "sizeKind": null
+      },
+      {
+        "digitalKey": "RSSD0074",
+        "menuCd": "SSD00042",
+        "name": "서프라이즈 콤보",
+        "sizeKind": null
+      }
+    ]
+  },
+  {
+    "url": "https://www.pizzahut.co.kr/api/menu/0996/list/chicken",
+    "value": [
+      {
+        "digitalKey": "RPSD1612",
+        "menuCd": "PSD01684",
+        "name": "소이갈릭 윙봉 2조각",
+        "sizeKind": null
+      },
+      {
+        "digitalKey": "RPSD1612",
+        "menuCd": "PSD01685",
+        "name": "소이갈릭 윙봉 4조각",
+        "sizeKind": null
+      },
+      {
+        "digitalKey": "RPSD1612",
+        "menuCd": "PSD01686",
+        "name": "소이갈릭 윙봉 8조각",
+        "sizeKind": null
+      },
+      {
+        "digitalKey": "RPSD1613",
+        "menuCd": "PSD01687",
+        "name": "슈프림양념 소이윙봉 2조각",
+        "sizeKind": null
+      },
+      {
+        "digitalKey": "RPSD1613",
+        "menuCd": "PSD01688",
+        "name": "슈프림양념 소이윙봉 4조각",
+        "sizeKind": null
+      },
+      {
+        "digitalKey": "RPSD1613",
+        "menuCd": "PSD01689",
+        "name": "슈프림양념 소이윙봉 8조각",
+        "sizeKind": null
+      },
+      {
+        "digitalKey": "RPSD1618",
+        "menuCd": "PSD01705",
+        "name": "텐더 2조각",
+        "sizeKind": null
+      },
+      {
+        "digitalKey": "RPSD1618",
+        "menuCd": "PSD01706",
+        "name": "텐더 4조각",
+        "sizeKind": null
+      },
+      {
+        "digitalKey": "RPSD1618",
+        "menuCd": "PSD01707",
+        "name": "텐더 8조각",
+        "sizeKind": null
+      },
+      {
+        "digitalKey": "RPSD1619",
+        "menuCd": "PSD01708",
+        "name": "슈프림양념 텐더 2조각",
+        "sizeKind": null
+      },
+      {
+        "digitalKey": "RPSD1619",
+        "menuCd": "PSD01709",
+        "name": "슈프림양념 텐더 4조각",
+        "sizeKind": null
+      },
+      {
+        "digitalKey": "RPSD1619",
+        "menuCd": "PSD01710",
+        "name": "슈프림양념 텐더 8조각",
+        "sizeKind": null
+      },
+      {
+        "digitalKey": "RPSD0027",
+        "menuCd": "PSD00075",
+        "name": "팝콘치킨(20ea)",
+        "sizeKind": null
+      }
+    ]
+  },
+  {
+    "url": "https://www.pizzahut.co.kr/api/menu/0996/list/dcChicken",
+    "value": [
+      {
+        "digitalKey": "RSSD0076",
+        "menuCd": "SSD00044",
+        "name": "해피콤보",
+        "sizeKind": null
+      },
+      {
+        "digitalKey": "RPSD0027",
+        "menuCd": "PSD00075",
+        "name": "팝콘치킨(20ea)",
+        "sizeKind": null
+      }
+    ]
+  },
+  {
+    "url": "https://www.pizzahut.co.kr/api/menu/0996/list/drinkAndEtc",
+    "value": [
+      {
+        "digitalKey": "RPBE1293",
+        "menuCd": "PBE01362",
+        "name": "코카-콜라 245ml (오리지널)",
+        "sizeKind": null
+      },
+      {
+        "digitalKey": "RPBE1300",
+        "menuCd": "PBE01379",
+        "name": "슈즈참 1개(랜덤발송)",
+        "sizeKind": null
+      },
+      {
+        "digitalKey": "RPBE1257",
+        "menuCd": "PBE01305",
+        "name": "코카-콜라 1.25L",
+        "sizeKind": null
+      },
+      {
+        "digitalKey": "RPBE1257",
+        "menuCd": "PBE01335",
+        "name": "코카-콜라 1.25L",
+        "sizeKind": null
+      },
+      {
+        "digitalKey": "RPBE1260",
+        "menuCd": "PBE01336",
+        "name": "코카-콜라 제로 1.25L",
+        "sizeKind": null
+      },
+      {
+        "digitalKey": "RPBE1260",
+        "menuCd": "PBE01308",
+        "name": "코카-콜라 제로 1.25L",
+        "sizeKind": null
+      },
+      {
+        "digitalKey": "RPBE1258",
+        "menuCd": "PBE01306",
+        "name": "코카-콜라 0.5L",
+        "sizeKind": null
+      },
+      {
+        "digitalKey": "RPBE1261",
+        "menuCd": "PBE01309",
+        "name": "코카-콜라 제로 0.5L",
+        "sizeKind": null
+      },
+      {
+        "digitalKey": "RPBE1262",
+        "menuCd": "PBE01310",
+        "name": "스프라이트 1.5L",
+        "sizeKind": null
+      },
+      {
+        "digitalKey": "RPBE1280",
+        "menuCd": "PBE01345",
+        "name": "스프라이트 제로 1.5L",
+        "sizeKind": null
+      },
+      {
+        "digitalKey": "RSSD0127",
+        "menuCd": "SSD00128",
+        "name": "더블 디핑(갈릭+스리라차)",
+        "sizeKind": null
+      },
+      {
+        "digitalKey": "RPBE1297",
+        "menuCd": "PBE01373",
+        "name": "스리라차마요 디핑소스(40g)",
+        "sizeKind": null
+      },
+      {
+        "digitalKey": "RPBE1289",
+        "menuCd": "PBE01358",
+        "name": "리얼 갈릭 디핑소스(40g)",
+        "sizeKind": null
+      },
+      {
+        "digitalKey": "RPBE1290",
+        "menuCd": "PBE01359",
+        "name": "치즈크러스트 디핑소스(11g)",
+        "sizeKind": null
+      },
+      {
+        "digitalKey": "RPBE1281",
+        "menuCd": "PBE01346",
+        "name": "생피클(L)",
+        "sizeKind": null
+      },
+      {
+        "digitalKey": "RPBE1281",
+        "menuCd": "PBE01347",
+        "name": "생피클(M)",
+        "sizeKind": null
+      },
+      {
+        "digitalKey": "RPSD0049",
+        "menuCd": "PBE00086",
+        "name": "핫 소스",
+        "sizeKind": null
+      },
+      {
+        "digitalKey": "RPBE1256",
+        "menuCd": "PBE01301",
+        "name": "피자L 포장 봉투",
+        "sizeKind": "01"
+      },
+      {
+        "digitalKey": "RPBE1272",
+        "menuCd": "PBE01302",
+        "name": "피자M 포장 봉투",
+        "sizeKind": "02"
+      },
+      {
+        "digitalKey": "RPBE1274",
+        "menuCd": "PBE01304",
+        "name": "컨디먼트 포장 봉투",
+        "sizeKind": "99"
+      },
+      {
+        "digitalKey": "RPBE1273",
+        "menuCd": "PBE01303",
+        "name": "음료 포장 봉투",
+        "sizeKind": "99"
+      }
+    ]
+  },
+  {
+    "url": "https://www.pizzahut.co.kr/api/menu/0996/list/dcBeverage",
+    "value": []
+  }
+]

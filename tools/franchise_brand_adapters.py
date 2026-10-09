@@ -137,6 +137,92 @@ def reviewed_rows(brand, markup):
         assert brand['name']=='스타벅스' and urlparse(url).path in ('/menu/drink_list.do','/menu/food_list.do')
         root=html.fromstring(markup);assert root.xpath('//input[starts-with(@id,"product_")]')
         return []
+    if adapter=='twosome-navigation':
+        assert brand['name']=='투썸플레이스'
+        root=html.fromstring(markup)
+        assert set(root.xpath('//a[@name="grtNm"]/@value'))=={'NEW','1','2','3','4','5'},'Official top-level food/category inventory changed'
+        return []
+    if adapter in ('twosome-categories-json','twosome-menu-json'):
+        assert brand['name']=='투썸플레이스'
+        value=json.loads(markup);assert value['queryCode']==1000 and value['queryMessage']=='SUCCESS'
+        data=value['fetchResultListSet'];assert isinstance(data,list) and value['rowCount']==len(data)
+        if adapter=='twosome-categories-json':
+            assert all(isinstance(r['MID_CD'],str) and r['MID_CD'] and r['MID_NM'] for r in data)
+            if brand['sourceKey']=='5':assert {r['MID_NM'] for r in data}<={'원두/티 상품','카페용품'},'New goods category requires food review'
+            return []
+        assert all(r['TPAGE_NUM']==1 and r['NEXT_PAGE']==0 and r['TOTAL_COUNT']==len(data) for r in data),'Official menu is not a complete terminal page'
+        return [(r['MENU_NM'],r['GRT_NM']+' / '+r['MID_NM'],'https://mo.twosome.co.kr/mn/menuInfoDetail.do?menuCd='+r['MENU_CD'],r['MENU_CD']) for r in data]
+    if adapter=='isung-food-list':
+        assert brand['name']=='이성당'
+        root=html.fromstring(markup);rows=[]
+        nodes=root.xpath('//a[starts-with(@name,"anchorBoxName_")][starts-with(@href,"/product/")]')
+        assert nodes,'Official food catalog disappeared'
+        for node in nodes:
+            names={clean(x) for x in node.xpath('.//img/@alt') if clean(x)}
+            assert len(names)==1,'Official product identity missing or ambiguous'
+            name=names.pop();match=re.search(r'/(\d+)/category/(\d+)/',node.get('href'))
+            assert match,'Official product ID missing'
+            if any(x in name for x in ('에코백','텀블러','머그컵','키링','굿즈','상품권','기프티콘','[생지]')):continue
+            rows.append((name,'',urljoin(url,node.get('href')),match[1]))
+        return rows
+    if adapter=='dookki-priced-menu':
+        assert brand['name']=='두끼' and urlparse(url).path=='/menu/dookki'
+        root=html.fromstring(markup)
+        blocks=root.xpath('//p[strong[normalize-space(.)="추가메뉴"] and strong[normalize-space(.)="포장메뉴"]]')
+        assert len(blocks)==1,'Official independently priced menu block changed'
+        rows=[];category=None
+        for fragment in blocks[0].itertext():
+            for line in fragment.splitlines():
+                line=clean(line)
+                if not line:continue
+                if line in ('추가메뉴','포장메뉴'):category=line;continue
+                match=re.fullmatch(r'(.+?)\s+([\d,]+)원',line)
+                assert match and category and int(match[2].replace(',',''))>0,'Official menu/price row changed'
+                if match[1]=='소스추가시':continue # Additional charge, not a separately named product.
+                rows.append((match[1],category,url,''))
+        assert rows and {r[1] for r in rows}=={'추가메뉴','포장메뉴'}
+        return rows
+    if adapter=='sungsim-food-list':
+        assert brand['name']=='성심당' and urlparse(url).path=='/shop/product/product_lists'
+        root=html.fromstring(markup)
+        totals=[clean(n.text_content()) for n in root.xpath('//div[@class="total"]') if clean(n.text_content()).startswith('총 ')]
+        assert len(totals)==1
+        total=re.fullmatch(r'\s*총\s*([\d,]+)개\s*',totals[0]);assert total
+        rows=[]
+        for node in root.xpath('//a[contains(@href,"/shop/product/product_view?")][normalize-space(.)]'):
+            match=re.fullmatch(r'/shop/product/product_view\?product_cd=(\d+)',node.get('href'))
+            assert match,'Official product identity changed'
+            name=clean(node.text_content())
+            assert name and len(name)<=160
+            rows.append((name,brand.get('sourceKey',''),urljoin(url,node.get('href')),match[1]))
+        assert len(rows)==int(total[1].replace(',','')),'Official total differs from fully rendered listing count'
+        by_id={}
+        for row in rows:
+            assert row[3] not in by_id or by_id[row[3]][0]==row[0],'Conflicting names for one official product ID'
+            by_id[row[3]]=row
+        rows=list(by_id.values())
+        return rows
+    if adapter=='pizzahut-complete-json':
+        assert brand['name']=='피자헛' and urlparse(url).path.startswith('/api/menu/')
+        value=json.loads(markup)
+        if isinstance(value,dict):
+            assert isinstance(value.get('menus'),list),'Official side-combo schema changed'
+            value=value['menus']
+        assert isinstance(value,list)
+        rows={}
+        for group in value:
+            for product in group.get('items',[group]):
+                assert isinstance(product.get('menuCd'),str) and product['menuCd'] and isinstance(product.get('digitalKey'),str) and product['digitalKey']
+                name=clean(product['name'])
+                if '슈즈참' in name:continue # Official merchandise, not a food menu.
+                size=product.get('sizeKind') or ''
+                assert isinstance(size,str)
+                # Shared digitalKey groups can contain 2/4/8-piece variants.
+                # Only an identical official group, size AND full variant name is a UI alias.
+                identity=(product['digitalKey'],size,name)
+                row=(name,brand['sourceKey'],'https://www.pizzahut.co.kr/menu/',product['menuCd'])
+                if identity not in rows or row[3]<rows[identity][3]:rows[identity]=row
+        return list(rows.values())
     if adapter=='pizzahut-json':
         assert brand['name']=='피자헛' and urlparse(url).path.startswith('/api/menu/')
         value=json.loads(markup);assert isinstance(value,list) and value
@@ -366,9 +452,16 @@ def reviewed_rows(brand, markup):
         payload=json.loads(markup); assert isinstance(payload['list'],list)
         kind=brand['sourceKey']
         return [(row['product_NM'],'','https://www.starbucks.co.kr/menu/'+kind+'_view.do?product_cd='+str(row['product_CD']),kind+':'+str(row['product_CD'])) for row in payload['list']]
-    if adapter=='hansot-json':
+    if adapter in ('hansot-json','hansot-browser-json'):
         assert brand['name']=='한솥'
-        payload=json.loads(markup);assert payload['cate1Info']['name'] and isinstance(payload['subdata'],list)
+        value=json.loads(markup)
+        if adapter=='hansot-browser-json':
+            assert isinstance(value,list) and 7<=len(value)<=64
+            rows=[]
+            for payload in value:
+                rows+=reviewed_rows(dict(brand,adapter='hansot-json'),json.dumps(payload,ensure_ascii=False))
+            return rows
+        payload=value;assert payload['cate1Info']['name'] and isinstance(payload['subdata'],list)
         return [(row['title'].strip(),payload['cate1Info']['name']+' / '+section['cate2Info']['name'],
             'https://www.hsd.co.kr/menu/menu_view/'+str(row['idx']),str(row['idx']))
             for section in payload['subdata'] for row in section['goodsList']]

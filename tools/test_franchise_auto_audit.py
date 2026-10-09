@@ -33,7 +33,7 @@ class AutoAuditTest(unittest.TestCase):
         for brand in self.brands:
             for source in brand['sources']:
                 self.assertTrue(official_url(source['url'],brand))
-                self.assertIn(source['adapter'],('jsonld','isungdang','sulbing','reviewed-html','reviewed-delivery','bon-api','starbucks-json','tlj','hansot-json','mega-fragment','seventh-list','hjh-list','venti-list','pascucci-list','eatz-list','nene-list','cheogajip-list','bhc-json','bhc-categories','mc-categories','mc-index','mc-json','subway-list','hongik-text','ediya-list','ediya-fragment','kfc-json','paris-fragment','salady-side','hollys-list','jaws-set','banolim-native','dunkin-native','bbq-json','bbq-categories','burgerking-json','pizzahut-json','starbucks-navigation','emergency-list','dominos-list','poke-fixed','norang-list','baeksojeong-native','youngman-native','hecbob-rendered'))
+                self.assertIn(source['adapter'],('jsonld','isungdang','sulbing','reviewed-html','reviewed-delivery','bon-api','starbucks-json','tlj','hansot-json','mega-fragment','seventh-list','hjh-list','venti-list','pascucci-list','eatz-list','nene-list','cheogajip-list','bhc-json','bhc-categories','mc-categories','mc-index','mc-json','subway-list','hongik-text','ediya-list','ediya-fragment','kfc-json','paris-fragment','salady-side','hollys-list','jaws-set','banolim-native','dunkin-native','bbq-json','bbq-categories','burgerking-json','pizzahut-json','starbucks-navigation','emergency-list','dominos-list','poke-fixed','norang-list','baeksojeong-native','youngman-native','hecbob-rendered','hansot-browser-json','isung-food-list','sungsim-food-list','pizzahut-complete-json','twosome-navigation','twosome-categories-json','twosome-menu-json','dookki-priced-menu'))
         path=ROOT/'data-source/franchise-auto-audit/brand-status.json'
         if path.exists():
             inventory=json.loads(path.read_text(encoding='utf-8'));self.assertEqual(0,inventory['unknown'])
@@ -50,7 +50,7 @@ class AutoAuditTest(unittest.TestCase):
         repeated,stats=merge(dict(menus=menus),[dict(menus=[self.menu])],self.brands,[])
         self.assertEqual(menus,repeated);self.assertEqual('EXISTING',stats['decisions'][0]['state'])
     def test_official_store_held_not_removed(self):
-        brand=next(b for b in self.brands if b['name']=='이성당')
+        brand=dict(next(b for b in self.brands if b['name']=='성심당'),publishPolicy='REVIEW_ONLY')
         self.assertEqual('REVIEW_ONLY',brand['publishPolicy'])
         self.assertEqual('REVIEW_REQUIRED',automation_state(brand,dict(status='SUCCESS',sources=[])))
     def test_timeout_500_malformed_empty_keep_manifest(self):

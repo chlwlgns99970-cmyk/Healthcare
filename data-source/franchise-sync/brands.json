@@ -233,17 +233,101 @@
     "sources": [
       {
         "url": "https://www.pizzahut.co.kr/api/menu/pizza/all/VISIT",
-        "adapter": "pizzahut-json",
+        "adapter": "pizzahut-complete-json",
         "key": "피자"
       },
       {
+        "url": "https://www.pizzahut.co.kr/api/menu/0996/list/best/VISIT",
+        "adapter": "pizzahut-complete-json",
+        "key": "best",
+        "optionalPromotion": false
+      },
+      {
+        "url": "https://www.pizzahut.co.kr/api/menu/0996/list/weekdays/half/VISIT",
+        "adapter": "pizzahut-complete-json",
+        "key": "weekdays/half",
+        "optionalPromotion": true
+      },
+      {
+        "url": "https://www.pizzahut.co.kr/api/menu/0996/list/flatzzbest/VISIT",
+        "adapter": "pizzahut-complete-json",
+        "key": "flatzzbest",
+        "optionalPromotion": false
+      },
+      {
+        "url": "https://www.pizzahut.co.kr/api/menu/0996/list/sideAndDrinkBest",
+        "adapter": "pizzahut-complete-json",
+        "key": "sideAndDrinkBest",
+        "optionalPromotion": false
+      },
+      {
+        "url": "https://www.pizzahut.co.kr/api/menu/0996/list/dcSide",
+        "adapter": "pizzahut-complete-json",
+        "key": "dcSide",
+        "optionalPromotion": true
+      },
+      {
+        "url": "https://www.pizzahut.co.kr/api/menu/0996/list/set",
+        "adapter": "pizzahut-complete-json",
+        "key": "set",
+        "optionalPromotion": false
+      },
+      {
+        "url": "https://www.pizzahut.co.kr/api/menu/0996/list/cheesefesta/VISIT",
+        "adapter": "pizzahut-complete-json",
+        "key": "cheesefesta",
+        "optionalPromotion": false
+      },
+      {
+        "url": "https://www.pizzahut.co.kr/api/menu/0996/list/premium/VISIT",
+        "adapter": "pizzahut-complete-json",
+        "key": "premium",
+        "optionalPromotion": false
+      },
+      {
+        "url": "https://www.pizzahut.co.kr/api/menu/0996/list/pastaAndSide",
+        "adapter": "pizzahut-complete-json",
+        "key": "pastaAndSide",
+        "optionalPromotion": false
+      },
+      {
+        "url": "https://www.pizzahut.co.kr/api/menu/0996/list/chicken",
+        "adapter": "pizzahut-complete-json",
+        "key": "chicken",
+        "optionalPromotion": false
+      },
+      {
+        "url": "https://www.pizzahut.co.kr/api/menu/0996/list/dcChicken",
+        "adapter": "pizzahut-complete-json",
+        "key": "dcChicken",
+        "optionalPromotion": true
+      },
+      {
         "url": "https://www.pizzahut.co.kr/api/menu/0996/list/drinkAndEtc",
-        "adapter": "pizzahut-json",
-        "key": "음료·기타"
+        "adapter": "pizzahut-complete-json",
+        "key": "drinkAndEtc",
+        "optionalPromotion": false
+      },
+      {
+        "url": "https://www.pizzahut.co.kr/api/menu/0996/list/dcBeverage",
+        "adapter": "pizzahut-complete-json",
+        "key": "dcBeverage",
+        "optionalPromotion": true
+      },
+      {
+        "url": "https://www.pizzahut.co.kr/api/menu/0996/list/usoriginal/VISIT",
+        "adapter": "pizzahut-complete-json",
+        "key": "usoriginal",
+        "optionalPromotion": false
+      },
+      {
+        "url": "https://www.pizzahut.co.kr/api/menu/0996/list/timesale/VISIT",
+        "adapter": "pizzahut-complete-json",
+        "key": "timesale",
+        "optionalPromotion": true
       }
     ],
-    "publishPolicy": "REVIEW_ONLY",
-    "reviewReason": "Global pizzas verified; drink list is official default-store 0996 scope; global pasta/side endpoint returns HTTP 400 and full set/side coverage remains unverified."
+    "menuScope": "Official public website default-store 0996 menu; store-specific availability is not inferred."
   },
   {
     "brandId": "brand-792c9f221e49eb7e",
@@ -506,17 +590,20 @@
     "sourceUrl": "https://www.twosome.co.kr/",
     "allowedHosts": [
       "twosome.co.kr",
-      "www.twosome.co.kr"
+      "www.twosome.co.kr",
+      "mo.twosome.co.kr"
     ],
     "adapter": "jsonld",
     "registryUrl": "https://www.twosome.co.kr/",
     "sources": [
       {
-        "url": "https://www.twosome.co.kr/",
-        "key": "",
-        "adapter": "jsonld"
+        "url": "https://mo.twosome.co.kr/mn/menuInfoList.do",
+        "adapter": "twosome-navigation",
+        "pagination": "twosome-navigation",
+        "key": "공식 모바일 전체 메뉴"
       }
-    ]
+    ],
+    "provenanceAuthorityUrl": "https://www.twosome.co.kr/"
   },
   {
     "brandId": "brand-9bd2fd2f30a9da68",
@@ -998,11 +1085,12 @@
     "registryUrl": "https://www.dookki.co.kr/",
     "sources": [
       {
-        "url": "https://www.dookki.co.kr/",
-        "key": "",
-        "adapter": "jsonld"
+        "url": "https://www.dookki.co.kr/menu/dookki",
+        "adapter": "dookki-priced-menu",
+        "key": "독립 가격이 명시된 추가·포장 메뉴"
       }
-    ]
+    ],
+    "menuScope": "All separately named and priced additional/takeaway products on the official menu. Buffet age fees are not product variants; ingredient bins and recipe ideas are not independent menus."
   },
   {
     "brandId": "brand-517e6e3a0f2a227b",
@@ -1495,46 +1583,10 @@
     "registryUrl": "https://www.hsd.co.kr/menu/menu_list",
     "sources": [
       {
-        "url": "https://www.hsd.co.kr/api/menu/menu_list/1/0",
-        "key": "",
-        "adapter": "hansot-json",
-        "method": "POST"
-      },
-      {
-        "url": "https://www.hsd.co.kr/api/menu/menu_list/2/0",
-        "key": "",
-        "adapter": "hansot-json",
-        "method": "POST"
-      },
-      {
-        "url": "https://www.hsd.co.kr/api/menu/menu_list/3/0",
-        "key": "",
-        "adapter": "hansot-json",
-        "method": "POST"
-      },
-      {
-        "url": "https://www.hsd.co.kr/api/menu/menu_list/4/0",
-        "key": "",
-        "adapter": "hansot-json",
-        "method": "POST"
-      },
-      {
-        "url": "https://www.hsd.co.kr/api/menu/menu_list/5/0",
-        "key": "",
-        "adapter": "hansot-json",
-        "method": "POST"
-      },
-      {
-        "url": "https://www.hsd.co.kr/api/menu/menu_list/53/0",
-        "key": "",
-        "adapter": "hansot-json",
-        "method": "POST"
-      },
-      {
-        "url": "https://www.hsd.co.kr/api/menu/menu_list/59/0",
-        "key": "",
-        "adapter": "hansot-json",
-        "method": "POST"
+        "url": "https://www.hsd.co.kr/menu/menu_list",
+        "adapter": "hansot-browser-json",
+        "transport": "browser",
+        "key": "전체 공개 카테고리"
       }
     ]
   },
@@ -3248,18 +3300,28 @@
     "sourceUrl": "https://sungsimdang.co.kr/",
     "allowedHosts": [
       "sungsimdang.co.kr",
-      "www.sungsimdang.co.kr"
+      "www.sungsimdang.co.kr",
+      "sungsimdangmall.co.kr",
+      "www.sungsimdangmall.co.kr"
     ],
     "adapter": "jsonld",
     "registryUrl": "https://sungsimdang.co.kr/",
     "sources": [
       {
-        "url": "https://sungsimdang.co.kr/",
-        "key": "",
-        "adapter": "jsonld"
+        "url": "https://www.sungsimdangmall.co.kr/shop/product/product_lists?sh_category1_cd=10000",
+        "adapter": "sungsim-food-list",
+        "transport": "browser",
+        "pagination": "sungsim-store",
+        "key": "빵"
       }
     ],
-    "publishPolicy": "REVIEW_ONLY"
+    "provenanceAuthorityUrl": "https://sungsimdang.co.kr/",
+    "officialSourceLinkEvidence": {
+      "authorityUrl": "https://sungsimdang.co.kr/",
+      "linkedUrl": "https://www.sungsimdangmall.co.kr/",
+      "linkText": "성심당 쇼핑몰",
+      "checkedAt": "2026-10-08T14:48:57.370224+00:00"
+    }
   },
   {
     "brandId": "brand-cf57c271fe920362",
@@ -3275,11 +3337,11 @@
     "sources": [
       {
         "url": "https://leesungdang1945.com/category/낱개상품/24/",
-        "key": "",
-        "adapter": "isungdang"
+        "adapter": "isung-food-list",
+        "pagination": "isung-store",
+        "key": "공식 판매 식품 전체"
       }
-    ],
-    "publishPolicy": "REVIEW_ONLY"
+    ]
   },
   {
     "brandId": "brand-db7ae070c1a211f3",

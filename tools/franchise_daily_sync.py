@@ -13,6 +13,15 @@ CONFIG = ROOT / 'data-source/franchise-sync/brands.json'
 SEED = ROOT / 'data-source/franchise-sync/static-identities.json'
 MAX_BYTES = 2_000_000
 MAX_CATALOG_BYTES = 4_000_000
+SOURCE_TYPES = {'API','JSON','HTML','BROWSER','PDF','XLSX','CSV','HYBRID'}
+LEGACY_PROVENANCE = ROOT / 'data-source/franchise-sync/legacy-source-types.json'
+
+def source_type(source):
+    if source.get('transport') == 'browser': return 'BROWSER'
+    adapter=source.get('adapter','')
+    if adapter.endswith('-api'): return 'API'
+    if adapter.endswith('-json'): return 'JSON'
+    return 'HTML'
 
 def normalize(name):
     name=unicodedata.normalize('NFKC',name)
@@ -29,10 +38,14 @@ def official_url(url, brand):
     return parsed.scheme in ('https', 'http') and not parsed.username and not parsed.password and parsed.hostname and parsed.hostname.encode('idna').decode().lower() in hosts
 
 def validate(menu, brand):
+    assert 'sourceType' not in menu or menu['sourceType'] in SOURCE_TYPES
     assert menu['brandId'] == brand['brandId'] and menu['brand'] == brand['name']
     assert isinstance(menu['name'], str) and 0 < len(menu['name']) <= 160 and not any(ord(c)<32 for c in menu['name'])
     assert not re.search(r'<\s*/?\s*[a-zA-Z!][^>]*>',menu['name']), 'HTML garbage menu name'
     assert official_url(menu['sourceUrl'], brand)
+    if menu.get('collectionSourceUrl'):
+        assert official_url(menu['collectionSourceUrl'],brand)
+        assert menu['sourceUrl']==brand.get('provenanceAuthorityUrl')
     assert menu['checkedAt'] and menu['externalId'] is not None
     assert datetime.fromisoformat(menu['checkedAt'].replace('Z','+00:00')).utcoffset() is not None
     nutrition = [menu.get(k) for k in ('energyKcal', 'carbohydrateGrams', 'proteinGrams', 'fatGrams')]
@@ -80,8 +93,11 @@ def candidates(brand, html, checked):
     def item(name, external_id, url, category=''):
         if any(word in name for word in ('텀블러','머그컵','에코백','키링','굿즈','기프티콘','상품권')): return
         menu=dict(brandId=brand['brandId'],brand=brand['name'],name=name,normalizedName=normalize(name),
-            externalId=external_id,category=category,sourceUrl=url,checkedAt=checked,
+            externalId=external_id,category=category,sourceUrl=url,checkedAt=checked,sourceType=brand.get('sourceType',source_type(brand)),
             energyKcal=None,carbohydrateGrams=None,proteinGrams=None,fatGrams=None,servingAmount=None,servingUnit=None)
+        if brand.get('provenanceAuthorityUrl'):
+            menu['collectionSourceUrl']=url
+            menu['sourceUrl']=brand['provenanceAuthorityUrl']
         menu['id']=stable_id(brand['brandId'],external_id,name,category)
         validate(menu,brand);results.append(menu)
     for href,name in page.items:
@@ -110,7 +126,7 @@ def candidates(brand, html, checked):
     return list({r['id']:r for r in results}.values())
 
 def fetch_source(brand, source, capture_dir=None):
-    brand=dict(brand,sourceUrl=source['url'],adapter=source['adapter'],sourceKey=source.get('key',''))
+    brand=dict(brand,sourceUrl=source['url'],adapter=source['adapter'],sourceKey=source.get('key',''),sourceType=source_type(source))
     if not brand.get('sourceUrl'): return dict(brandId=brand['brandId'],status='SOURCE_MISSING',menus=[])
     checked=datetime.now(timezone.utc).isoformat()
     try:
@@ -118,9 +134,16 @@ def fetch_source(brand, source, capture_dir=None):
         parsed=urlparse(brand['sourceUrl'])
         encoded=urlunparse(parsed._replace(netloc=parsed.netloc.encode('idna').decode(),path=quote(parsed.path,safe='/%'),query=quote(parsed.query,safe='=&%+')))
         method=source.get('method','GET')
-        assert method=='GET' or method=='POST' and source['adapter'] in ('hansot-json','ediya-fragment','kfc-json','burgerking-json')
+        assert method=='GET' or method=='POST' and source['adapter'] in ('hansot-json','ediya-fragment','kfc-json','burgerking-json','twosome-categories-json','twosome-menu-json')
         body=None;headers={'User-Agent':'HealthcareMenuAudit/1.0 (once-daily official-menu check)', 'Accept':'application/json,text/html;q=0.9,*/*;q=0.5'}
         if method=='POST':body=b''
+        if source['adapter'] in ('twosome-categories-json','twosome-menu-json'):
+            assert brand['name']=='투썸플레이스' and method=='POST' and parsed.hostname=='mo.twosome.co.kr'
+            form=source['form']
+            if source['adapter']=='twosome-categories-json':assert parsed.path=='/mn/menuInfoMidListAjax.json' and set(form)=={'grtCd'}
+            else:assert parsed.path=='/mn/menuInfoListAjax.json' and set(form)=={'pageNum','grtCd','midCd'} and form['pageNum']=='1' and (form['midCd']=='NEW' or form['midCd']=='' or form['midCd'].isdigit())
+            assert form['grtCd'] in ('NEW','1','2','3','4','5')
+            body=urlencode(form).encode();headers['Content-Type']='application/x-www-form-urlencoded'
         if source['adapter']=='burgerking-json':
             assert method=='POST' and brand['name']=='버거킹' and source['url']=='https://web-prd.burgerking.co.kr/burgerking/BKR0632.json'
             message=dict(header=dict(result=True,error_code='',error_text='',info_text='',message_version='',login_session_id='',trcode='BKR0632'),body=dict(menuKeywordList=[]))
@@ -164,7 +187,7 @@ def fetch_source(brand, source, capture_dir=None):
         if re.search(r'<html\b|<!doctype\b',html,re.I):
             from franchise_source_diagnostics import public_response_diagnostics
             diagnostics=public_response_diagnostics(html,len(data))
-        if source['adapter'] not in ('bon-api','starbucks-json','hansot-json','mega-fragment','bhc-json','bhc-categories','mc-categories','mc-index','mc-json','ediya-fragment','kfc-json','paris-fragment','bbq-json','bbq-categories','burgerking-json','pizzahut-json') and not re.search(r'<html\b|<!doctype\b',html,re.I):
+        if source['adapter'] not in ('bon-api','starbucks-json','hansot-json','mega-fragment','bhc-json','bhc-categories','mc-categories','mc-index','mc-json','ediya-fragment','kfc-json','paris-fragment','bbq-json','bbq-categories','burgerking-json','pizzahut-json','hansot-browser-json','pizzahut-complete-json','twosome-categories-json','twosome-menu-json') and not re.search(r'<html\b|<!doctype\b',html,re.I):
             raise ValueError('Malformed official HTML response')
         if capture_dir:
             capture_dir=Path(capture_dir);capture_dir.mkdir(parents=True,exist_ok=True)
@@ -185,16 +208,16 @@ def fetch_source(brand, source, capture_dir=None):
                 coverage_refs.append(code)
             assert coverage_refs,'Official best-menu references disappeared'
         return dict(brandId=brand['brandId'],sourceUrl=source['url'],adapter=source['adapter'],sourceKey=source.get('key',''),
-            status='SUCCESS' if menus or confirmed_empty or coverage_refs or source['adapter'] in ('bhc-categories','mc-categories','mc-index','bbq-categories','starbucks-navigation') and next_pages else 'REVIEW_REQUIRED' if source['adapter']=='jsonld' else 'FAIL',checkedAt=checked,menus=menus,htmlSha256=hashlib.sha256(html.encode()).hexdigest(),httpStatus=200,
+            status='SUCCESS' if menus or confirmed_empty or coverage_refs or source['adapter']=='twosome-categories-json' or source['adapter'] in ('bhc-categories','mc-categories','mc-index','bbq-categories','starbucks-navigation','twosome-navigation') and next_pages else 'REVIEW_REQUIRED' if source['adapter']=='jsonld' else 'FAIL',checkedAt=checked,menus=menus,htmlSha256=hashlib.sha256(html.encode()).hexdigest(),httpStatus=200,
             coverageReferenceIds=coverage_refs,
             sourceDiagnostics=diagnostics,
             confirmedEmpty=confirmed_empty,tlsEvidence=tls_evidence,
-            browserEvidence=browser_evidence,sourceType='browser' if browser_evidence else 'json' if source['adapter'].endswith(('-json','-api')) else 'html',
+            browserEvidence=browser_evidence,sourceType=source_type(source),
             captureKey=hashlib.sha256(source_identity(source).encode()).hexdigest(),
             discoveredPages=next_pages)
     except Exception as error:
         return dict(brandId=brand['brandId'],sourceUrl=source['url'],adapter=source['adapter'],sourceKey=source.get('key',''),
-            status='FETCH_FAILED',checkedAt=checked,menus=[],error=type(error).__name__,errorReason=str(error)[:200],httpStatus=getattr(error,'code',None))
+            status='FETCH_FAILED',checkedAt=checked,sourceType=source_type(source),menus=[],error=type(error).__name__,errorReason=str(error)[:200],httpStatus=getattr(error,'code',None))
 
 def source_identity(source):
     return source['url']+(('|'+json.dumps(source['form'],sort_keys=True)) if source.get('form') else '')
@@ -266,7 +289,12 @@ def automation_state(brand,batch):
 
 def merge(existing, fetched, brands, static):
     by_brand={b['brandId']:b for b in brands}
-    existing_menus=list(existing.get('menus',[]))
+    existing_menus=[dict(m) for m in existing.get('menus',[])]
+    provenance={(r['brandId'],r['checkedAt']):r for r in json.loads(LEGACY_PROVENANCE.read_text(encoding='utf-8'))} if LEGACY_PROVENANCE.exists() else {}
+    for menu in existing_menus:
+        if 'sourceType' not in menu:
+            evidence=provenance.get((menu['brandId'],menu['checkedAt']))
+            if evidence: menu['sourceType']=evidence['sourceType']
     for menu in existing_menus: validate(menu,by_brand[menu['brandId']])
     names={(r['brandId'],normalize(r['name'])) for r in static+existing_menus}
     ids={r['id'] for r in existing_menus}
@@ -328,7 +356,7 @@ def run(out, run_key, brands=None, batches=None, target_brand_ids=None):
             with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool: batches=list(pool.map(fetch,selected))
         static=json.loads(SEED.read_text(encoding='utf-8'))
         menus,counts=merge(existing,batches,brands,static)
-        report=dict(runId=run_key,startedAt=started,endedAt=datetime.now(timezone.utc).isoformat(),timezone='Asia/Seoul',
+        report=dict(runId=run_key,triggerType=os.environ.get('GITHUB_EVENT_NAME','local'),startedAt=started,endedAt=datetime.now(timezone.utc).isoformat(),timezone='Asia/Seoul',
             dateKst=datetime.fromtimestamp(time.time()+9*3600,timezone.utc).date().isoformat(),
             scope='TARGETED_VERIFICATION' if target_brand_ids is not None else 'FULL',registryBrands=len(brands),
             targetBrands=len(target_brand_ids) if target_brand_ids is not None else len(brands),
@@ -347,14 +375,22 @@ def run(out, run_key, brands=None, batches=None, target_brand_ids=None):
             ok=batch['status']=='SUCCESS'
             batch.update(lastCheckedAt=batch.get('checkedAt',started),lastSuccessAt=batch.get('checkedAt',started) if ok else old.get('lastSuccessAt'),
                 lastResult='SUCCESS' if ok and new_count else 'NO_CHANGE' if ok else 'FAILED',lastMenuCount=batch.get('observedMenuCount',0),lastNewCount=new_count,
-                adapterTypes=sorted({s['adapter'] for s in batch.get('sources',[])}))
+                adapterTypes=sorted({s['adapter'] for s in batch.get('sources',[])}),
+                sourceTypes=sorted({s['sourceType'] for s in batch.get('sources',[]) if s.get('sourceType')}))
         report.update(noChangeBrands=sum(b['lastResult']=='NO_CHANGE' for b in report['brands']),newMenuBrands=sum(b['lastResult']=='SUCCESS' for b in report['brands']),
             failedCheckBrands=sum(b['lastResult']=='FAILED' for b in report['brands']),
             browserBasedBrands=sum(any(s.get('browserEvidence') for s in b.get('sources',[])) for b in report['brands']),
-            apiBasedBrands=sum(any(s.get('sourceType')=='json' for s in b.get('sources',[])) for b in report['brands']),
-            parserBasedBrands=sum(any(s.get('sourceType')=='html' for s in b.get('sources',[])) for b in report['brands']))
+            apiBasedBrands=sum(any(s.get('sourceType') in ('API','JSON') for s in b.get('sources',[])) for b in report['brands']),
+            parserBasedBrands=sum(any(s.get('sourceType')=='HTML' for s in b.get('sources',[])) for b in report['brands']),
+            sourceTypeMenuCounts={t:sum(m.get('sourceType')==t for m in menus) for t in sorted(SOURCE_TYPES)},
+            missingSourceTypeCount=sum('sourceType' not in m for m in menus))
         successes=report['successBrands']
         if successes:
+            by_menu_id={m['id']:m for m in menus}
+            assert len(by_menu_id)==len(menus),'Duplicate stable menu ID'
+            for old in existing.get('menus',[]):
+                assert old['id'] in by_menu_id and all(by_menu_id[old['id']].get(k)==v for k,v in old.items()),'Existing menu field changed'
+            assert all(m.get('sourceType') in SOURCE_TYPES for m in menus),'Missing verified menu provenance'
             payload=json.dumps(dict(schemaVersion=1,menus=sorted(menus,key=lambda m:m['id'])),ensure_ascii=False,sort_keys=True,separators=(',',':')).encode()
             checksum=hashlib.sha256(payload).hexdigest();filename='catalog-'+checksum+'.json'
             assert len(payload)<=MAX_CATALOG_BYTES,'Validated catalog exceeds Android download limit; existing published files unchanged'
@@ -367,7 +403,7 @@ def run(out, run_key, brands=None, batches=None, target_brand_ids=None):
         persistent=dict(previous_by_id)
         for batch in report['brands']:
             if not batch.get('brandId'):continue
-            persistent[batch['brandId']]={k:batch[k] for k in ('brandId','lastCheckedAt','lastSuccessAt','lastResult','lastMenuCount','lastNewCount','adapterTypes')}
+            persistent[batch['brandId']]={k:batch[k] for k in ('brandId','lastCheckedAt','lastSuccessAt','lastResult','lastMenuCount','lastNewCount','adapterTypes','sourceTypes')}
             persistent[batch['brandId']]['sources']=[{k:s.get(k) for k in ('sourceUrl','adapter','sourceType','status','error','errorReason','attempts')} for s in batch.get('sources',[])]
         atomic_write(state_path,json.dumps(list(persistent.values()),ensure_ascii=False,indent=2).encode())
         history=out/'sync-history';history.mkdir(exist_ok=True)

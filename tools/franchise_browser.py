@@ -2,7 +2,42 @@
 from contextlib import contextmanager
 from threading import BoundedSemaphore, local
 from urllib.parse import urlparse
-import re
+import re,json
+
+def hansot_public_menu(page):
+    """Read the JSON the site's own category links request, without replaying credentials."""
+    responses={}
+    def capture(response):
+        if re.fullmatch(r'https://www\.hsd\.co\.kr/api/menu/menu_list/\d+/\d+',response.url):
+            responses[response.url]=response
+    page.on('response',capture)
+    try:
+        response=page.goto('https://www.hsd.co.kr/menu/menu_list',wait_until='domcontentloaded',timeout=20000)
+        if response.status in (401,403,429):raise PublicAccessDenied(response.status)
+        page.wait_for_timeout(1200)
+        links=page.locator('a[onclick^="showMenuList("]').evaluate_all('(xs)=>xs.map(x=>x.getAttribute("onclick"))')
+        pairs=[]
+        for action in links:
+            match=re.fullmatch(r"showMenuList\('(\d+)', '(\d+)'\);return false;",action)
+            assert match,'Official category action changed'
+            pair=tuple(match.groups())
+            if pair not in pairs:pairs.append(pair)
+        assert 7<=len(pairs)<=64,'Official category inventory changed'
+        categories=[]
+        for main,sub in pairs:
+            url=f'https://www.hsd.co.kr/api/menu/menu_list/{main}/{sub}'
+            with page.expect_response(lambda r:r.url==url,timeout=15000) as event:
+                page.locator('a[onclick="'+f"showMenuList('{main}', '{sub}');return false;"+'"]').first.click(timeout=3000)
+            result=event.value
+            if result.status in (401,403,429):raise PublicAccessDenied(result.status)
+            assert result.ok,'Official menu category failed'
+            value=result.json()
+            assert value['cate1Info']['idx']==int(main)
+            assert len(value['subdata'])==1 and value['subdata'][0]['cate2Info']['idx']==int(sub)
+            assert isinstance(value['subdata'][0]['goodsList'],list)
+            categories.append(value)
+        return json.dumps(categories,ensure_ascii=False),dict(transport='normal-chromium-ui-xhr',httpStatus=200,finalUrl=page.url,tlsVerification=True,categoryCount=len(pairs),allCategoryActionsCompleted=True)
+    finally:page.remove_listener('response',capture)
 
 _slots=BoundedSemaphore(2)
 _state=local()
@@ -43,6 +78,9 @@ def render(brand,source):
             if request.is_navigation_request() and request.frame==page.main_frame and not official_url(request.url,brand):request_route.abort()
             else:request_route.continue_()
         page.route('**/*',route)
+        if source.get('adapter')=='hansot-browser-json':
+            assert brand['name']=='한솥' and source['url']=='https://www.hsd.co.kr/menu/menu_list'
+            return hansot_public_menu(page)
         entry='https://www.hsd.co.kr/menu/menu_list' if api else source['url']
         response=page.goto(entry,wait_until='domcontentloaded',timeout=20000)
         status=response.status if response else None

@@ -6,6 +6,15 @@ import json
 
 def confirmed_empty_source(brand,source,markup):
     adapter=source['adapter']
+    if adapter=='twosome-menu-json' and brand['name']=='투썸플레이스':
+        value=json.loads(markup)
+        return value.get('queryCode')==1000 and value.get('queryMessage')=='SUCCESS' and value.get('rowCount')==0 and value.get('fetchResultListSet')==[]
+    if adapter=='pizzahut-complete-json' and brand['name']=='피자헛' and source.get('optionalPromotion'):
+        value=json.loads(markup)
+        return value==[] or isinstance(value,dict) and value.get('menus')==[]
+    if adapter=='sungsim-food-list' and brand['name']=='성심당':
+        root=html.fromstring(markup)
+        return any(' '.join(n.text_content().split())=='총 0개' for n in root.xpath('//div[@class="total"]')) and not root.xpath('//a[contains(@href,"product_view?")][normalize-space(.)]')
     if adapter=='ediya-fragment' and brand['name']=='이디야':return markup.strip()=='none'
     if adapter=='starbucks-json' and brand['name']=='스타벅스':
         value=json.loads(markup);return set(value)=={'list'} and value['list']==[]
@@ -25,6 +34,44 @@ def confirmed_empty_source(brand,source,markup):
 def additional_pages(brand,source,markup):
     mode=source.get('pagination')
     if not mode:return []
+    if mode=='twosome-navigation':
+        assert brand['name']=='투썸플레이스'
+        root=html.fromstring(markup);codes=root.xpath('//a[@name="grtNm"]/@value')
+        assert set(codes)=={'NEW','1','2','3','4','5'}
+        return [dict(url='https://mo.twosome.co.kr/mn/menuInfoMidListAjax.json',adapter='twosome-categories-json',method='POST',key=code,form=dict(grtCd=code),pagination='twosome-categories') for code in codes if code!='NEW']+[dict(url='https://mo.twosome.co.kr/mn/menuInfoListAjax.json',adapter='twosome-menu-json',method='POST',key='NEW',form=dict(pageNum='1',grtCd='NEW',midCd=''))]
+    if mode=='twosome-categories':
+        assert brand['name']=='투썸플레이스'
+        value=json.loads(markup);assert value['queryCode']==1000 and value['queryMessage']=='SUCCESS'
+        data=value['fetchResultListSet'];assert len(data)==value['rowCount'] and len(data)<=32
+        code=source['form']['grtCd']
+        if code=='5':
+            assert {r['MID_NM'] for r in data}<={'원두/티 상품','카페용품'}
+            return []
+        assert data and all(r['GRT_CD']==code for r in data)
+        return [dict(url='https://mo.twosome.co.kr/mn/menuInfoListAjax.json',adapter='twosome-menu-json',method='POST',key=code+' / '+r['MID_NM'],form=dict(pageNum='1',grtCd=code,midCd=r['MID_CD'])) for r in data]
+    if mode=='sungsim-store':
+        assert brand['name']=='성심당'
+        root=html.fromstring(markup);result=[]
+        for node in root.xpath('//button[@onclick]'):
+            match=re.fullmatch(r"location.href='(/shop/product/product_lists\?sh_category1_cd=(\d{5})&sh_category2_cd=(\d{5}))'",node.get('onclick'))
+            if not match:continue
+            # Explicit non-food merchandise/card categories; all public food tabs are traversed.
+            if match[2]=='70000' or match[3]=='30401':continue
+            assert match[2] in {'10000','20000','30000','40000','50000','60000','80000'},'Unreviewed new product category'
+            result.append(dict(source,url=urljoin(source['url'],match[1]),key=' '.join(node.text_content().split())))
+        assert 10<=len(result)<=64,'Official food category navigation changed'
+        return result
+    if mode=='isung-store':
+        assert brand['name']=='이성당'
+        parsed=urlparse(source['url']);root=html.fromstring(markup);result=[]
+        assert root.xpath('//div[contains(@class,"xans-product-normalpaging")]'),'Official paging contract missing'
+        for href in root.xpath('//div[contains(@class,"xans-product-normalpaging")]//a/@href'):
+            if href=='#none':continue
+            p=urlparse(urljoin(source['url'],href));query=parse_qs(p.query)
+            assert p.netloc==parsed.netloc and p.path==parsed.path and set(query)=={'page'}
+            number=query['page'][0];assert number.isdigit() and 1<=int(number)<=64
+            result.append(dict(source,url=p.geturl()))
+        return result
     if mode=='youngman':
         assert brand['name']=='청년피자'
         root=html.fromstring(markup);parsed=urlparse(source['url']);paths={'/sub01/menu.php','/sub01/menu2.php','/sub01/menu3.php','/sub01/menu4.php','/sub01/menu6.php','/sub01/menu7.php'}

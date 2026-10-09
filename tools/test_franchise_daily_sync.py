@@ -25,6 +25,25 @@ class DailySyncTest(unittest.TestCase):
         with self.assertRaises(AssertionError): validate(bad,self.brand)
     def test_unknown_not_zero(self):
         self.assertIsNone(self.menu['energyKcal']);self.assertIsNone(self.menu['proteinGrams'])
+    def test_actual_source_types_and_legacy_compatibility(self):
+        self.assertEqual('HTML',self.menu['sourceType'])
+        for source,expected in [(dict(adapter='bon-api'),'API'),(dict(adapter='kfc-json'),'JSON'),(dict(adapter='hecbob-rendered',transport='browser'),'BROWSER')]:
+            self.assertEqual(expected,source_type(source))
+        old=dict(self.menu);old.pop('sourceType');validate(old,self.brand)
+        bad=dict(self.menu,sourceType='GUESS')
+        with self.assertRaises(AssertionError):validate(bad,self.brand)
+    def test_legacy_provenance_is_additive_and_never_guessed(self):
+        evidence=json.loads(LEGACY_PROVENANCE.read_text(encoding='utf-8'))[0]
+        brand=next(b for b in self.brands if b['brandId']==evidence['brandId'])
+        old=dict(brandId=brand['brandId'],brand=brand['name'],name='보존 확인',normalizedName=normalize('보존 확인'),externalId='legacy-check',category='',sourceUrl=evidence['sourceUrl'],checkedAt=evidence['checkedAt'],energyKcal=None)
+        old['id']=stable_id(old['brandId'],old['externalId'],old['name'],'')
+        before=copy.deepcopy(old)
+        menus,stats=merge(dict(menus=[old]),[],self.brands,[])
+        self.assertEqual(before,old)
+        self.assertTrue(all(menus[0][k]==v for k,v in before.items()))
+        self.assertEqual(evidence['sourceType'],menus[0]['sourceType'])
+        old['checkedAt']='2020-01-01T00:00:00Z'
+        self.assertNotIn('sourceType',merge(dict(menus=[old]),[],self.brands,[])[0][0])
     def test_nutrition_basis_and_invalid(self):
         known=copy.deepcopy(self.menu);known.update(energyKcal=0,carbohydrateGrams=0,servingAmount=100,servingUnit='g',nutritionSourceUrl=known['sourceUrl'])
         validate(known,self.brand)
