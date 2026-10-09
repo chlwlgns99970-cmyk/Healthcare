@@ -37,6 +37,10 @@ def parse_mega(menu,payload):
     if len(values)==1:
         t=clean(values[0].text_content());m=re.fullmatch(r'(\d+(?:\.\d+)?)\s*(g|ml)',t)
         if m:out.update(servingAmount=float(m[1]),servingUnit=m[2])
+    if out['servingAmount'] is None and out['energyKcal'] is not None:
+        # This product's calorie label explicitly says 1회 제공량. Preserve
+        # that one serving without treating cup capacity as consumed ml.
+        out.update(servingAmount=1,servingUnit='인분',servingDescription='공식 1회 제공량 기준 · 컵용량을 섭취 ml로 환산하지 않음')
     return out
 
 def parse_hollys(menu,payload):

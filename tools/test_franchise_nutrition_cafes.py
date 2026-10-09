@@ -5,6 +5,11 @@ from franchise_nutrition_cafes import parse_mega,parse_hollys,parse_dalkomm,pars
 FIX=Path(__file__).resolve().parents[1]/'data-source/franchise-sync/fixtures'
 
 class CafeNutritionTests(unittest.TestCase):
+    def test_explicit_per_serving_calories_do_not_use_cup_capacity(self):
+        menu=dict(brand='메가MGC커피',name='골드망고스무디 (ICE)')
+        f=parse_mega(menu,(FIX/'mega-nutrition.html').read_bytes())
+        self.assertEqual(209.5,f['energyKcal']);self.assertEqual(1,f['servingAmount']);self.assertEqual('인분',f['servingUnit'])
+        self.assertNotEqual(591,f['servingAmount']);self.assertIsNone(f['carbohydrateGrams']);self.assertIsNone(f['fatGrams'])
     def test_official_fixtures_keep_independent_nulls_and_basis(self):
         for key,parser in [('mega',parse_mega),('hollys',parse_hollys),('dalkomm',parse_dalkomm),('paik',parse_paik),('gongcha',parse_gongcha),('pascucci',parse_pascucci)]:
             with self.subTest(brand=key):
