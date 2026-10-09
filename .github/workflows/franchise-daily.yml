@@ -46,6 +46,7 @@ jobs:
           python source/tools/test_franchise_completion.py
           python source/tools/test_franchise_browser.py
           python source/tools/test_franchise_nutrition.py
+          python -m unittest discover -s source/tools -p 'test_franchise_nutrition_*.py'
       - name: Audit official sources and publish locally
         env:
           VERIFICATION_RUN_KEY: ${{ inputs.verificationRunKey }}

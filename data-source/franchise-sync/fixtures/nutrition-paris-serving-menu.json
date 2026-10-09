@@ -1,0 +1,19 @@
+{
+  "brand": "파리바게뜨",
+  "brandId": "brand-7dfea7361415a819",
+  "carbohydrateGrams": null,
+  "category": "케이크",
+  "checkedAt": "2026-10-08T12:53:23.855026+00:00",
+  "energyKcal": null,
+  "externalId": "/product/soda-pop-cake",
+  "fatGrams": null,
+  "id": "remote-franchise-038dab8c795d647743a748b6",
+  "name": "소다팝 케이크",
+  "normalizedName": "소다팝케이크",
+  "nutritionStatus": "NUTRITION_SOURCE_MISSING",
+  "proteinGrams": null,
+  "servingAmount": null,
+  "servingUnit": null,
+  "sourceType": "HTML",
+  "sourceUrl": "https://www.paris.co.kr/product/soda-pop-cake/"
+}

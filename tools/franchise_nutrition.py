@@ -10,6 +10,7 @@ import functools
 import json
 import math
 import re
+import unicodedata
 import urllib.request
 import urllib.error
 from collections import Counter
@@ -25,6 +26,38 @@ REVIEWED = ROOT / 'data-source/franchise-sync/verified-nutrition-snapshot.json'
 STATUSES = {'NUTRITION_COMPLETE', 'NUTRITION_PARTIAL', 'NUTRITION_NOT_PUBLISHED',
             'NUTRITION_SOURCE_FOUND_UNMATCHED', 'NUTRITION_SOURCE_MISSING'}
 FIELDS = ('energyKcal', 'carbohydrateGrams', 'proteinGrams', 'fatGrams', 'sodiumMilligrams')
+
+
+def normalized_nutrition_name(value):
+    """Typography only: retain size, temperature, flavor and composition tokens."""
+    return re.sub(r'[\s®™]', '', unicodedata.normalize('NFKC', value).casefold())
+
+
+def retain_verified_on_conflict(menu, candidate):
+    """Never silently replace a verified value or combine distinct serving bases."""
+    old = menu.get('officialNutrition')
+    if not old:
+        return candidate, []
+    keys = FIELDS + ('servingAmount', 'servingUnit')
+    differences = [dict(field=k, oldValue=old[k], newValue=candidate[k])
+                   for k in keys if old.get(k) is not None and candidate.get(k) is not None
+                   and old[k] != candidate[k]]
+    if differences:
+        return dict(old), [dict(menuId=menu['id'], differences=differences,
+            sourceA=old.get('sourceUrl'), sourceB=candidate.get('sourceUrl'),
+            basisA=[old.get('servingAmount'), old.get('servingUnit')],
+            basisB=[candidate.get('servingAmount'), candidate.get('servingUnit')],
+            decision='RETAIN_VERIFIED_PENDING_REVIEW')]
+    # Retain known fields if a current page omits them; every retained field
+    # carries its original capture provenance instead of a fake fresh timestamp.
+    merged = dict(candidate)
+    retained = [k for k in keys if old.get(k) is not None and candidate.get(k) is None]
+    for k in retained:
+        merged[k] = old[k]
+    if retained:
+        merged['retainedFieldEvidence'] = {k: old.get('retainedFieldEvidence', {}).get(k,
+            {p: old.get(p) for p in ('sourceUrl', 'checkedAt', 'sourceSha256')}) for k in retained}
+    return merged, []
 
 
 def number(value, suffix):
@@ -100,7 +133,7 @@ def parse_mcdonalds(menu, payload):
     assert data['resultCode'] == 100
     rows = data['resultObject']['list']
     assert len(rows) == data['resultObject']['totalCount']
-    normalize = lambda value: re.sub(r'[\s®™]', '', value)
+    normalize = normalized_nutrition_name
     matches = [r for r in rows if normalize(r['menuName']) == normalize(menu['name'])]
     assert len(matches) == 1, 'Nutrition name/variant not uniquely matched'
     row = matches[0]
@@ -229,7 +262,7 @@ def parse_pokeallday(menu,payload):
     text=payload.decode('utf-8')
     assert all(header in text for header in ('원재료 용량(g)','열량(kcal)','나트륨(mg)','탄수화물(g)','단백질(g)','지방(g)'))
     root=html.fromstring(text)
-    normalize=lambda value:re.sub(r'\s','',html.fragment_fromstring(value,create_parent='div').text_content())
+    normalize=lambda value:normalized_nutrition_name(html.fragment_fromstring(value,create_parent='div').text_content())
     matches=[]
     # Only complete sold-menu groups. Topping/protein/ingredient rows (1–5)
     # must never be assigned to a finished menu of the same name.
@@ -257,6 +290,15 @@ def parse_pokeallday(menu,payload):
 
 PARSERS['poke-finished-menu-nutrition']=parse_pokeallday
 
+from franchise_nutrition_cafes import PARSERS as CAFE_PARSERS
+from franchise_nutrition_bakery import parse_paris, parse_tlj
+from franchise_nutrition_meals import parse_burgerking, parse_isaac_not_published, parse_slowcali
+PARSERS.update(CAFE_PARSERS)
+PARSERS.update({'paris-official-nutrition':parse_paris, 'tlj-official-nutrition':parse_tlj})
+PARSERS['burgerking-official-nutrition']=parse_burgerking
+PARSERS['isaac-official-not-published']=parse_isaac_not_published
+PARSERS['slowcali-finished-nutrition']=parse_slowcali
+
 
 def validate_nutrition(fact, allowed_hosts):
     uri = urlparse(fact['sourceUrl'])
@@ -272,6 +314,8 @@ def validate_nutrition(fact, allowed_hosts):
 
 
 def status(fact):
+    if fact.get('notPublishedConfirmed') and not any(fact.get(k) is not None for k in FIELDS):
+        return 'NUTRITION_NOT_PUBLISHED'
     if fact.get('energyKcal') is not None and fact.get('servingAmount') is not None:
         return 'NUTRITION_COMPLETE'
     return 'NUTRITION_PARTIAL' if any(fact.get(k) is not None for k in FIELDS) else 'NUTRITION_SOURCE_FOUND_UNMATCHED'
@@ -287,7 +331,14 @@ def refresh(menus, registry=None, fetcher=None):
 
     def fetch(url):
         post = urlparse(url).hostname=='www.ediya.com' and urlparse(url).path=='/inc/ajax_brand.php'
-        with urllib.request.urlopen(urllib.request.Request(url, data=b'' if post else None, headers={'User-Agent': 'HealthcareMenuAudit/1.0 (official nutrition refresh)'}), timeout=12) as response:
+        body=b'' if post else None
+        headers={'User-Agent': 'HealthcareMenuAudit/1.0 (official nutrition refresh)'}
+        if url=='https://web-prd.burgerking.co.kr/burgerking/BKR0347.json':
+            from urllib.parse import urlencode
+            message=dict(header=dict(result=True,error_code='',error_text='',info_text='',message_version='',login_session_id='',trcode='BKR0347'),body={})
+            body=urlencode(dict(message=json.dumps(message,separators=(',',':')))).encode()
+            headers['Content-Type']='application/x-www-form-urlencoded; charset=UTF-8'
+        with urllib.request.urlopen(urllib.request.Request(url, data=body, headers=headers), timeout=12) as response:
             assert response.status == 200 and urlparse(response.url).hostname == urlparse(url).hostname
             payload = response.read(2000001)
             assert 0 < len(payload) <= 2000000
@@ -315,7 +366,8 @@ def refresh(menus, registry=None, fetcher=None):
                 if source is not None:source['evidenceStatus']='SOURCE_FOUND';source['discoveredSources']=found
     shared = {}
     # A paginated page contains multiple products. Read each official page once.
-    page_urls={m['sourceUrl'] for m in menus if sources.get(m['brandId'],{}).get('adapter')=='ediya-product-nutrition'}
+    page_urls={m['sourceUrl'] for m in menus if sources.get(m['brandId'],{}).get('adapter') in PARSERS
+               and not sources.get(m['brandId'],{}).get('url')}
     def page(url):
         try:return url,get(url)
         except Exception as error:return url,error
@@ -342,9 +394,11 @@ def refresh(menus, registry=None, fetcher=None):
                             sourceSha256=fact.get('sourceSha256',hashlib.sha256(payload).hexdigest()), officialProductId=menu['externalId'])
                 fact['sourceType']='PDF' if adapter=='salady-nutrition-pdf' else 'JSON' if adapter=='mc-nutrition-json' else 'HTML'
                 validate_nutrition(fact, source['allowedHosts'])
+                fact, conflicts = retain_verified_on_conflict(menu, fact)
                 menu['officialNutrition'] = fact
                 menu['nutritionStatus'] = status(fact)
-                evidence.update(result='MATCHED', nutritionStatus=menu['nutritionStatus'], sourceUrl=fact['sourceUrl'])
+                evidence.update(result='CONFLICT_RETAINED' if conflicts else 'MATCHED',
+                                conflicts=conflicts, nutritionStatus=menu['nutritionStatus'], sourceUrl=fact['sourceUrl'])
             except Exception as error:
                 # Never erase previously verified official values on fetch/schema errors.
                 captured=snapshots.get(menu['id'])
@@ -377,6 +431,7 @@ def refresh(menus, registry=None, fetcher=None):
     changed=sum(linked(old[m['id']]) and any(old[m['id']].get(k)!=m.get('officialNutrition',{}).get(k) for k in FIELDS+('servingAmount','servingUnit')) for m in refreshed)
     return refreshed, dict(total=len(refreshed), states=dict(counts), known=known,
                            sourceDiscovery=discovery,
+                           conflicts=[c for a in audit for c in a.get('conflicts', [])],
                            nutritionLinkedMenus=sum(linked(m.get('officialNutrition',{})) for m in refreshed),
                            newlyVerifiedMenus=newly, nutritionChangedMenus=changed,
                            reviewedSnapshotsRetained=sum(a.get('reviewedSnapshotRetained',False) for a in audit),

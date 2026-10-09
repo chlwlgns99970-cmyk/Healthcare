@@ -77,6 +77,10 @@ def public_next_records(markup):
 
 def reviewed_rows(brand, markup):
     adapter=brand['adapter']; url=brand['sourceUrl']
+    if adapter=='slowcali-finished-variants':
+        assert brand['name']=='슬로우캘리' and url=='https://slowcali.co.kr/bbs/content.php?co_id=menu'
+        from franchise_nutrition_meals import slow_finished_rows
+        return [(name,'샐러드·포케',url,'') for name,_ in slow_finished_rows(markup)]
     if adapter=='hecbob-rendered':
         assert brand['name']=='핵밥' and urlparse(url).path=='/hecbobmenu'
         root=html.fromstring(markup);rows=[]

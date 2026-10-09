@@ -9,6 +9,25 @@ FIX = Path(__file__).resolve().parents[1] / 'data-source/franchise-sync/fixtures
 
 
 class NutritionTests(unittest.TestCase):
+    def test_verified_conflict_keeps_original_and_reports_sources(self):
+        from franchise_nutrition import retain_verified_on_conflict
+        old=dict(energyKcal=100, servingAmount=50, servingUnit='g', sourceUrl='https://official/a')
+        new=dict(old, energyKcal=120, sourceUrl='https://official/b')
+        fact, conflicts=retain_verified_on_conflict(dict(id='stable',officialNutrition=old),new)
+        self.assertEqual(old,fact)
+        self.assertEqual('stable',conflicts[0]['menuId'])
+        self.assertEqual('RETAIN_VERIFIED_PENDING_REVIEW',conflicts[0]['decision'])
+
+    def test_refresh_fills_null_without_erasing_known_zero(self):
+        from franchise_nutrition import retain_verified_on_conflict
+        old=dict(energyKcal=0, proteinGrams=None, servingAmount=100, servingUnit='ml',
+                 sourceUrl='https://official/a',checkedAt='2026-10-01T00:00:00Z',sourceSha256='a'*64)
+        new=dict(old, energyKcal=None, proteinGrams=2, sourceUrl='https://official/b')
+        fact, conflicts=retain_verified_on_conflict(dict(id='stable',officialNutrition=old),new)
+        self.assertEqual(0,fact['energyKcal']);self.assertEqual(2,fact['proteinGrams'])
+        self.assertEqual(old['sourceUrl'],fact['retainedFieldEvidence']['energyKcal']['sourceUrl'])
+        self.assertFalse(conflicts)
+
     def test_daily_source_discovery_uses_official_nutrition_links_only(self):
         from discover_franchise_nutrition_sources import discover
         brand=dict(brandId='b',name='공식 브랜드',sourceUrl='https://official.example/',allowedHosts=['official.example'])
@@ -36,6 +55,7 @@ class NutritionTests(unittest.TestCase):
 
     def test_poke_exact_hot_ice_variant(self):
         with self.assertRaises(AssertionError):parse_pokeallday(dict(brand='포케올데이',name='아메리카노 (Hot)'),(FIX/'poke-nutrition.html').read_bytes())
+        with self.assertRaises(AssertionError):parse_pokeallday(dict(brand='포케올데이',name='아메리카노'),(FIX/'poke-nutrition.html').read_bytes())
         fact=parse_pokeallday(dict(brand='포케올데이',name='카페라떼(ICE)'),(FIX/'poke-nutrition.html').read_bytes())
         self.assertEqual(120,fact['energyKcal']);self.assertEqual('oz',fact['servingUnit']);self.assertEqual(16,fact['servingAmount'])
 

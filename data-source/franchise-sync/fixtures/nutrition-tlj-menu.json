@@ -1,0 +1,19 @@
+{
+  "brand": "뚜레쥬르",
+  "brandId": "brand-a0302f70b937755f",
+  "carbohydrateGrams": null,
+  "category": "",
+  "checkedAt": "2026-10-08T09:54:19.978467+00:00",
+  "energyKcal": null,
+  "externalId": "4348",
+  "fatGrams": null,
+  "id": "remote-franchise-00ebe679991ebd21ac209469",
+  "name": "진한 우유 크림빵",
+  "normalizedName": "진한우유크림빵",
+  "nutritionStatus": "NUTRITION_SOURCE_MISSING",
+  "proteinGrams": null,
+  "servingAmount": null,
+  "servingUnit": null,
+  "sourceType": "HTML",
+  "sourceUrl": "https://www.tlj.co.kr/product/detail.asp?gubun=result&prod_num=4348"
+}
