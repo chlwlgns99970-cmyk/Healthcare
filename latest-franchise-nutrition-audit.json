@@ -1,46 +1,46 @@
 {
   "total": 5103,
   "states": {
-    "NUTRITION_SOURCE_MISSING": 2024,
-    "NUTRITION_SOURCE_FOUND_UNMATCHED": 671,
-    "NUTRITION_COMPLETE": 1453,
+    "NUTRITION_SOURCE_MISSING": 1911,
+    "NUTRITION_SOURCE_FOUND_UNMATCHED": 683,
+    "NUTRITION_COMPLETE": 1554,
     "NUTRITION_PARTIAL": 898,
     "NUTRITION_NOT_PUBLISHED": 57
   },
   "known": {
-    "energyKcal": 2340,
+    "energyKcal": 2441,
     "carbohydrateGrams": 398,
-    "proteinGrams": 2111,
+    "proteinGrams": 2211,
     "fatGrams": 377,
-    "sodiumMilligrams": 2115,
-    "servingAmount": 1472
+    "sodiumMilligrams": 2216,
+    "servingAmount": 1573
   },
   "sourceDiscovery": [
     {
       "brandId": "brand-24df7e63c9c2314e",
       "brand": "롯데리아",
       "url": "https://www.lotteeatz.com/",
-      "checkedAt": "2026-10-09T15:27:52.558490+00:00",
+      "checkedAt": "2026-10-09T15:36:29.531211+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "2cbe34ce1a254640f5e1a043d35356e5ada0a6435e3ffcb8dcb1da8fefb334fd",
+      "sourceSha256": "ca6becc6216f927f32866d33df225789395bd9e9ad919091124cb9011c26cc7d",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-2c14410b57ba9fc4",
       "brand": "KFC",
       "url": "https://www.kfckorea.com/",
-      "checkedAt": "2026-10-09T15:27:52.558799+00:00",
+      "checkedAt": "2026-10-09T15:36:29.531533+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "d243d08356b2ad681ae88a2bdb9a8161645b9be948ce356c1c6c2f5bd5a99bb1",
+      "sourceSha256": "fc75af30d1ed5b1498a5fbb1c9176bcc9c25b2508076921e5a82af766e645d2f",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-b0f892d2c591ca13",
       "brand": "맘스터치",
       "url": "https://www.momstouch.co.kr/",
-      "checkedAt": "2026-10-09T15:27:52.559031+00:00",
+      "checkedAt": "2026-10-09T15:36:29.531746+00:00",
       "links": [],
       "error": "URLError",
       "reason": "<urlopen error timed out>",
@@ -50,7 +50,7 @@
       "brandId": "brand-f91351461391155a",
       "brand": "도미노피자",
       "url": "https://www.dominos.co.kr/",
-      "checkedAt": "2026-10-09T15:27:52.559245+00:00",
+      "checkedAt": "2026-10-09T15:36:29.531974+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "20e9a3e939009ec79e19230d5a54dda58dffc23ba62a38227bafe75e9fef2ea2",
@@ -60,7 +60,7 @@
       "brandId": "brand-dfd7712a868b7cd2",
       "brand": "피자헛",
       "url": "https://www.pizzahut.co.kr/",
-      "checkedAt": "2026-10-09T15:27:53.660011+00:00",
+      "checkedAt": "2026-10-09T15:36:30.630680+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "5cfde7a2c255e57484f061351760b51d44c95b41d43d80e4f24c99561800fbd2",
@@ -70,7 +70,7 @@
       "brandId": "brand-792c9f221e49eb7e",
       "brand": "미스터피자",
       "url": "https://www.mrpizza.co.kr/",
-      "checkedAt": "2026-10-09T15:27:54.162255+00:00",
+      "checkedAt": "2026-10-09T15:36:31.227316+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "6337fd5a5f78b04ec04b48718cc5f1350698ee4a3ffe9ca43c96a9dfb39a625e",
@@ -80,37 +80,27 @@
       "brandId": "brand-45ddca38a87b3dcd",
       "brand": "BHC",
       "url": "https://www.bhc.co.kr/",
-      "checkedAt": "2026-10-09T15:27:55.014859+00:00",
+      "checkedAt": "2026-10-09T15:36:31.662047+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "5aab57dff467709fe9b4368c822fb50824d40c52e1bcd64523e8111282c4f4ac",
       "confirmedNutritionSources": []
     },
     {
-      "brandId": "brand-5b391ae396ab6901",
-      "brand": "교촌치킨",
-      "url": "https://www.kyochon.com/",
-      "checkedAt": "2026-10-09T15:27:55.285441+00:00",
-      "links": [],
-      "httpStatus": 200,
-      "sourceSha256": "f3b1683a97ac13909de0af38309f6510c4e60b192be96afee3b153617fb5547e",
-      "confirmedNutritionSources": []
-    },
-    {
       "brandId": "brand-dfbc0be6a9fb565a",
       "brand": "굽네치킨",
       "url": "https://www.goobne.co.kr/",
-      "checkedAt": "2026-10-09T15:27:55.813564+00:00",
+      "checkedAt": "2026-10-09T15:36:32.137371+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "b327c4193c30871a408343dca34e7f5b5e547999b2eb7c0139df552309fc15c9",
+      "sourceSha256": "d947776bec8ea5bbc9548e595f388731384f1594123787b8905e114fd5aa98a7",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-913a908f005583f0",
       "brand": "BBQ",
       "url": "https://www.bbq.co.kr/",
-      "checkedAt": "2026-10-09T15:27:56.393311+00:00",
+      "checkedAt": "2026-10-09T15:36:32.833689+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "b1f770e613bf0272edb3d8cfe0db7e901394f4074f49bd02661aec533e15423f",
@@ -120,17 +110,17 @@
       "brandId": "brand-1c90aeff2ad68611",
       "brand": "네네치킨",
       "url": "https://nenechicken.com/",
-      "checkedAt": "2026-10-09T15:27:57.665333+00:00",
+      "checkedAt": "2026-10-09T15:36:34.404574+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "0b26d8eb93ab44850b3456381f17197335c52806d19cb35f206b3b9090fe2a7e",
+      "sourceSha256": "8007210e7788f63a936f3fe2f440a689814d5b7dc0fe7d77903c7be416eec603",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-044f74822bd63a2c",
       "brand": "투썸플레이스",
       "url": "https://www.twosome.co.kr/",
-      "checkedAt": "2026-10-09T15:27:58.032262+00:00",
+      "checkedAt": "2026-10-09T15:36:35.225757+00:00",
       "links": [],
       "error": "HTTPError",
       "reason": "HTTP Error 403: Forbidden",
@@ -140,7 +130,7 @@
       "brandId": "brand-9bd2fd2f30a9da68",
       "brand": "컴포즈커피",
       "url": "https://composecoffee.com/",
-      "checkedAt": "2026-10-09T15:27:58.310948+00:00",
+      "checkedAt": "2026-10-09T15:36:35.481496+00:00",
       "links": [],
       "error": "HTTPError",
       "reason": "HTTP Error 403: Forbidden",
@@ -150,7 +140,7 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "url": "https://mmthcoffee.com/",
-      "checkedAt": "2026-10-09T15:27:58.913270+00:00",
+      "checkedAt": "2026-10-09T15:36:35.890226+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "2eb8713f3d38e9353faebb24d1805ef5e11e261144061e1b4ffa5fa937ce2aaa",
@@ -160,17 +150,17 @@
       "brandId": "brand-2366ea85553dc984",
       "brand": "두찜",
       "url": "https://www.twozzim.com/",
-      "checkedAt": "2026-10-09T15:27:59.100951+00:00",
+      "checkedAt": "2026-10-09T15:36:35.996134+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "154bb2f6f5945384c34fd73c947a4316d1a11550967700421c6dc68f34642bff",
+      "sourceSha256": "bf4c707310114d74b462d2c978e308cbafd436dd52743313b686662b96b909ae",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-9bbe44a999e4d158",
       "brand": "봉추찜닭",
       "url": "http://www.bongchu.com/layout/res/home.php?go=page1.0&mid=10",
-      "checkedAt": "2026-10-09T15:27:59.144298+00:00",
+      "checkedAt": "2026-10-09T15:36:36.040341+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "f8b4739ff04b19fe582ab433a18f2b5bb5f72bbaff7c637ab2fe1ebd68bec540",
@@ -180,47 +170,47 @@
       "brandId": "brand-9fe52457ea35b575",
       "brand": "일미리금계찜닭",
       "url": "https://goldjjimdak.com/main.php",
-      "checkedAt": "2026-10-09T15:27:59.862256+00:00",
+      "checkedAt": "2026-10-09T15:36:36.752564+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "7f2017556c1265c88fb9cc9c06e2999356485db117bab188748c33c8f444b3cd",
+      "sourceSha256": "261f9ee31f788166303bc72946111164816898c299aefbfac38d8cd3e25722c6",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-6b4062eb7d56bbc2",
       "brand": "육수당",
       "url": "https://yuksudang.com/",
-      "checkedAt": "2026-10-09T15:28:00.260315+00:00",
+      "checkedAt": "2026-10-09T15:36:37.349491+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "f548cf9f3c2c94260f5bf53cbfcd6fce0248d47a02b64674f8becda09aa2e87a",
+      "sourceSha256": "023c3f05cae1affcfbe008cdfcb7d73142ac499b2fbe678156cdeceaa02af1e0",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-e237cdd96675b8e9",
       "brand": "현대옥",
       "url": "http://www.hyundaiok.com/menu",
-      "checkedAt": "2026-10-09T15:28:00.261535+00:00",
+      "checkedAt": "2026-10-09T15:36:37.513165+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "e55d664648c78e3fd0007720215ba09fc09b595ab4556f09f72c8a82d3fd5d9b",
+      "sourceSha256": "ebc41b8da161756bef07de0d0d2fd144eef6aa857ede6976b97a0df58f2c114b",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-a6a2f91c0a858eab",
       "brand": "이화수전통육개장",
       "url": "https://ihwasoo.com/",
-      "checkedAt": "2026-10-09T15:28:01.158664+00:00",
+      "checkedAt": "2026-10-09T15:36:37.861830+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "c20416b692258ff4f87e6acd72d815705623ed5eec0672529a008156b55431bb",
+      "sourceSha256": "77430a71b0986308f9922465af47878e1d488cdb7a4c67eb2a600079ab4d0fa5",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-e391193d95fb4b22",
       "brand": "신전떡볶이",
       "url": "https://sinjeon.co.kr/",
-      "checkedAt": "2026-10-09T15:28:01.245716+00:00",
+      "checkedAt": "2026-10-09T15:36:38.254732+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "6d1aa3882a8cc6ae863de82319bbd673606182b559eb0adf8fae500eb2f6b2eb",
@@ -230,7 +220,7 @@
       "brandId": "brand-d12ac5629277dd74",
       "brand": "죠스떡볶이",
       "url": "https://jawsfood.co.kr/menu/menu.html",
-      "checkedAt": "2026-10-09T15:28:01.304842+00:00",
+      "checkedAt": "2026-10-09T15:36:38.313227+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "51b4d350dd66e7b9b15432183776dabaf89a2e9e96b86ff22aa4358a3dcb1fc6",
@@ -240,47 +230,47 @@
       "brandId": "brand-d3742bdc75b7cfff",
       "brand": "청년다방",
       "url": "https://youngdabang.com/",
-      "checkedAt": "2026-10-09T15:28:01.594057+00:00",
+      "checkedAt": "2026-10-09T15:36:38.677143+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "94080a575771de9f89b0e4d84b21a32d5e0e849621b27c49858942fb0e097aa1",
+      "sourceSha256": "b4dd41cbc0e44575e62e4a509919a5fe015149b31c74332d930ab62ef57ed130",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-b06d5a467c2e2917",
       "brand": "두끼",
       "url": "https://www.dookki.co.kr/",
-      "checkedAt": "2026-10-09T15:28:01.953227+00:00",
+      "checkedAt": "2026-10-09T15:36:39.059292+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "115dbf0dbe1634eac8ad53e84d93eb89adc8864a6ab22ed324e90a29317ec168",
+      "sourceSha256": "8fef0b0a9a1a509814ab06bd98ba5b8a54c20d684a14961adac8a90d14a45bc4",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-517e6e3a0f2a227b",
       "brand": "스쿨푸드",
       "url": "http://schoolfood.freewebclub.com/menu/menu.html",
-      "checkedAt": "2026-10-09T15:28:02.259327+00:00",
+      "checkedAt": "2026-10-09T15:36:39.293522+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "61b27ea0d7317482d289fe690ac27749b0c5b82b58cd700b91b36727a6c42b08",
+      "sourceSha256": "1d2bb87205213a8913d8005406cfb13607c5177d1e5fa1d6883ce010305bf8ca",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-3af4368565dc9463",
       "brand": "김가네",
       "url": "https://www.gimgane.co.kr/",
-      "checkedAt": "2026-10-09T15:28:02.391223+00:00",
+      "checkedAt": "2026-10-09T15:36:39.511799+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "979888aa7dd56ad5e350d424037ac388fb0288ca039463cb5b12131794cf0b1f",
+      "sourceSha256": "39db7e81d6442c94ff292a7ebf0fedcde9e29d335475201b42b967755ff01cbf",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-09811efd43af8395",
       "brand": "고봉민김밥인",
       "url": "https://www.kobongmin.com/renewal/main/main.php",
-      "checkedAt": "2026-10-09T15:28:03.028492+00:00",
+      "checkedAt": "2026-10-09T15:36:40.137334+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "59f61604560009e9d5c6248736bc6c8a18cf5524da99b67c625548865251f487",
@@ -290,7 +280,7 @@
       "brandId": "brand-62da25d9478406f9",
       "brand": "바르다김선생",
       "url": "https://www.teacherkim.co.kr/",
-      "checkedAt": "2026-10-09T15:28:03.322036+00:00",
+      "checkedAt": "2026-10-09T15:36:40.730597+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "753a7427c3a91c6e3dfc95a51758085af6926068d1a68b5dc07cbc3bdf5a3035",
@@ -300,7 +290,7 @@
       "brandId": "brand-52b7eab533bf064f",
       "brand": "홍콩반점0410",
       "url": "https://www.theborn.co.kr/theborn_brand/홍콩반점0410/",
-      "checkedAt": "2026-10-09T15:28:03.834170+00:00",
+      "checkedAt": "2026-10-09T15:36:41.053527+00:00",
       "links": [],
       "error": "UnicodeEncodeError",
       "reason": "'ascii' codec can't encode characters in position 19-22: ordinal not in range(128)",
@@ -310,7 +300,7 @@
       "brandId": "brand-98d0269278f56dd7",
       "brand": "이비가짬뽕",
       "url": "https://www.ebiga.co.kr/",
-      "checkedAt": "2026-10-09T15:28:03.834480+00:00",
+      "checkedAt": "2026-10-09T15:36:41.053910+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "30bb1510b98c35128e0f1bb125a849d8b9d0923b0da092f9fa2cb132e67ef86a",
@@ -320,7 +310,7 @@
       "brandId": "brand-eb1ea6f3cfeef4a1",
       "brand": "탕화쿵푸",
       "url": "https://tanghuokungfu.co.kr/default/brand/Introduction.php",
-      "checkedAt": "2026-10-09T15:28:03.845831+00:00",
+      "checkedAt": "2026-10-09T15:36:41.065182+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "9d033c1b26b6eec1873ea785f2f516741ffb497669419fbd36254d2e45f1de13",
@@ -330,7 +320,7 @@
       "brandId": "brand-4971bd13f52f50ae",
       "brand": "춘리마라탕",
       "url": "https://chunlimalatang.com/menu/",
-      "checkedAt": "2026-10-09T15:28:03.922284+00:00",
+      "checkedAt": "2026-10-09T15:36:41.251703+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "34f67258590beb072811abc9d1fccb016f9c1c14320c4e90ae9935526a8cbcac",
@@ -340,7 +330,7 @@
       "brandId": "brand-bd40e3bf63110e3a",
       "brand": "본죽",
       "url": "https://www.bonif.co.kr/brand/store?brdCd=BF101",
-      "checkedAt": "2026-10-09T15:28:04.947239+00:00",
+      "checkedAt": "2026-10-09T15:36:42.569063+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "3f71cd8a14aa5e01da35bbe3ee869662d3ed378278d5dfbfe5c104f6fcc41c5e",
@@ -350,7 +340,7 @@
       "brandId": "brand-2d083c367c257949",
       "brand": "본죽&비빔밥",
       "url": "https://www.bonif.co.kr/brand/menu?brdCd=BF102",
-      "checkedAt": "2026-10-09T15:28:05.124695+00:00",
+      "checkedAt": "2026-10-09T15:36:42.663332+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "7eff3b58bd909f930f6d5b487718e837745423ed026dbc6a180b858d9b6e2686",
@@ -360,47 +350,47 @@
       "brandId": "brand-d788dc4427d306fe",
       "brand": "죽이야기",
       "url": "https://www.jukstory.com/",
-      "checkedAt": "2026-10-09T15:28:05.943220+00:00",
+      "checkedAt": "2026-10-09T15:36:43.166295+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "9378dc4f4ba899ed69ab0d235329e067cf377320ac9b415a25db89bb7290f030",
+      "sourceSha256": "84ede344af3bc1bef07d74b247b99f30a78e905fd51673230ba03b8728b0f188",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-440ae94a942a4921",
       "brand": "국수나무",
       "url": "https://www.namuya.co.kr/food/food.php",
-      "checkedAt": "2026-10-09T15:28:06.156106+00:00",
+      "checkedAt": "2026-10-09T15:36:43.442433+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "f4e3dbc0dd0cbd1a89195c859bf1c56fdd43753d5c218955b84bb1b28924635a",
+      "sourceSha256": "10f0eec91041d575240cd1c411d3036f043f8dca40d278fec2dc74aad6e5b67a",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-71bb2f53e15c0897",
       "brand": "역전우동0410",
       "url": "https://udon0410.com/menu/",
-      "checkedAt": "2026-10-09T15:28:06.400755+00:00",
+      "checkedAt": "2026-10-09T15:36:43.759851+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "6e5ef417b9fc55eb1e1c6d4e5f557260a2587cf140a8bea808aab72bb990b88d",
+      "sourceSha256": "12bf60ece18d75e8f1e882aead78ea18be30279fd5dc7b74d96f5d7a402fda4c",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-2a13283561756adc",
       "brand": "백소정",
       "url": "https://www.baeksojeong.com/",
-      "checkedAt": "2026-10-09T15:28:06.404351+00:00",
+      "checkedAt": "2026-10-09T15:36:44.715127+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "e0cb3ebc9f810624a2ce844a58948f801e55edae8f1bc03921965b4ac05463f1",
+      "sourceSha256": "f6c96a295a6263501e2e21a64852c0df7aebd4ea9a37f104704ecc93f3d01a6c",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-8420421dae1f2ef3",
       "brand": "홍익돈까스",
       "url": "https://www.hongikdonkatsu.com/",
-      "checkedAt": "2026-10-09T15:28:06.985244+00:00",
+      "checkedAt": "2026-10-09T15:36:44.912790+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "4e9f1b28d40269a700d100a73489830be21bda8f66977d8c8130b82a236df3c6",
@@ -410,17 +400,17 @@
       "brandId": "brand-dfe7aafc7b485943",
       "brand": "원할머니보쌈",
       "url": "https://wonandone.co.kr/bossam/",
-      "checkedAt": "2026-10-09T15:28:07.270938+00:00",
+      "checkedAt": "2026-10-09T15:36:45.695963+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "f66c5338115081d916ee7e596f8aa58058d66bc3d035d79cf3b9e4bbb169eae0",
+      "sourceSha256": "4249408764b167dfc519452a1accd74d531831e4d9a241c67b378bb30682acbe",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-3ab715e02b724b84",
       "brand": "놀부부대찌개",
       "url": "https://nolboo.co.kr/",
-      "checkedAt": "2026-10-09T15:28:07.411600+00:00",
+      "checkedAt": "2026-10-09T15:36:45.775266+00:00",
       "links": [],
       "error": "URLError",
       "reason": "<urlopen error timed out>",
@@ -430,7 +420,7 @@
       "brandId": "brand-39adcc9276d724e2",
       "brand": "본도시락",
       "url": "https://www.bonif.co.kr/brand/menu?brdCd=BF104",
-      "checkedAt": "2026-10-09T15:28:08.077782+00:00",
+      "checkedAt": "2026-10-09T15:36:45.982912+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "a1fc8bc734256b4055432e04476f512bb6d2accd248a6d43dd3cb1ac9a84b8dd",
@@ -440,7 +430,7 @@
       "brandId": "brand-e37848e7ad911d2a",
       "brand": "본설렁탕",
       "url": "https://www.bonif.co.kr/brand/menu?brdCd=BF105",
-      "checkedAt": "2026-10-09T15:28:08.117123+00:00",
+      "checkedAt": "2026-10-09T15:36:46.801415+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "de9c3ea329d9f8043ff7fa8982f1150da932bff1e0a0909ff171db5f240bb0db",
@@ -450,7 +440,7 @@
       "brandId": "brand-e1baf7db5ac285a7",
       "brand": "본우리반상",
       "url": "https://www.bonif.co.kr/brand/menu?brdCd=BF107",
-      "checkedAt": "2026-10-09T15:28:08.233657+00:00",
+      "checkedAt": "2026-10-09T15:36:47.022213+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "34eb66207b764c1028f93219c0bf58c0eb4fd148d6966fe0e02db4695c9076bb",
@@ -460,7 +450,7 @@
       "brandId": "brand-0e65f6b77b14e324",
       "brand": "멘지",
       "url": "https://www.bonif.co.kr/brand/menu?brdCd=BF111",
-      "checkedAt": "2026-10-09T15:28:09.048110+00:00",
+      "checkedAt": "2026-10-09T15:36:47.825117+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "dc7695cc5f0686a7bde92a5a1aefc0f0775213fe585761f0f4885de9182156af",
@@ -470,7 +460,7 @@
       "brandId": "brand-5cf4a5c95ff85d3a",
       "brand": "본흑염소·능이삼계탕",
       "url": "https://www.bonif.co.kr/brand/menu?brdCd=BF113",
-      "checkedAt": "2026-10-09T15:28:09.051587+00:00",
+      "checkedAt": "2026-10-09T15:36:47.856165+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "07ce74942ecb09e9f87e2036b1f77d7e17e14b17097fd4f15644cc5999a01a61",
@@ -480,17 +470,17 @@
       "brandId": "brand-9e7aeb464781f115",
       "brand": "핵밥",
       "url": "https://www.hecbob.com/main",
-      "checkedAt": "2026-10-09T15:28:09.156751+00:00",
+      "checkedAt": "2026-10-09T15:36:48.041249+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "551599a0f90249c78e40ef9e43fae127ca0ec613b5a2d3e0f13a8c12e433fc67",
+      "sourceSha256": "7ac9ce72e905c376330db320e5816ed54743ee04af11a849c02cda146afe588f",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-97c4b3edd331ff83",
       "brand": "채선당",
       "url": "https://www.chaesundang.co.kr/",
-      "checkedAt": "2026-10-09T15:28:10.027002+00:00",
+      "checkedAt": "2026-10-09T15:36:48.841551+00:00",
       "links": [],
       "error": "HTTPError",
       "reason": "HTTP Error 403: Forbidden",
@@ -500,17 +490,17 @@
       "brandId": "brand-a9a4ba8b5ad2ca3d",
       "brand": "소담촌",
       "url": "https://www.sodamchon.com/",
-      "checkedAt": "2026-10-09T15:28:10.039188+00:00",
+      "checkedAt": "2026-10-09T15:36:48.845338+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "e31f03a05286230e8b838074fd1a1582b5b4bfbeff797a48fa271f1d071fdf3f",
+      "sourceSha256": "c66ea32a07e60c0b7f1e53e68dacdd03e8f65ff332797744c2bf5ae1eed1ba0c",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-29327af78758b6f5",
       "brand": "써브웨이",
       "url": "https://www.subway.co.kr/",
-      "checkedAt": "2026-10-09T15:28:10.255394+00:00",
+      "checkedAt": "2026-10-09T15:36:49.106030+00:00",
       "links": [],
       "error": "HTTPError",
       "reason": "HTTP Error 403: Forbidden",
@@ -520,7 +510,7 @@
       "brandId": "brand-8032e5a2633bc1e3",
       "brand": "에그드랍",
       "url": "https://eggdrop.com/menu/list.php",
-      "checkedAt": "2026-10-09T15:28:10.903667+00:00",
+      "checkedAt": "2026-10-09T15:36:49.777589+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "ebbbc05b57d897b40e26df8cb44987fbc53e3e598931eabb1609ee8065e17843",
@@ -530,37 +520,37 @@
       "brandId": "brand-adb1fa3e7378cd49",
       "brand": "캠토토스트",
       "url": "https://camtotoast.com/",
-      "checkedAt": "2026-10-09T15:28:11.731549+00:00",
+      "checkedAt": "2026-10-09T15:36:49.789668+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "6dcd8c0f261390c7ccb85e877ee96223b631aa9fe70388d9b4e9cef7b04c3aa7",
+      "sourceSha256": "6f19e976a5b7178193a1eff61047fa6080b948007d996f59defaa5ed47eb45b5",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-d715f712d950d0e8",
       "brand": "피자스쿨",
       "url": "http://pizzaschool.net/menu/",
-      "checkedAt": "2026-10-09T15:28:11.782298+00:00",
+      "checkedAt": "2026-10-09T15:36:50.468885+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "d791238f5e081cc914f85cb2dc22180b288006659aeb2fd1aa701e820fac3a67",
+      "sourceSha256": "d324762b54830644ca59d276e86ceb16233f468c672bd5ecdb0b42610eb65fb3",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-2891bc50e9e622e6",
       "brand": "파파존스",
       "url": "https://m.pji.co.kr/menu/pizza",
-      "checkedAt": "2026-10-09T15:28:11.860885+00:00",
+      "checkedAt": "2026-10-09T15:36:50.863742+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "36ad93cbbd1813e1955d7024cffdba8fa319501743b504ff521c07a67b3fb5cf",
+      "sourceSha256": "c4f52e1396f53fd72a1737adc2c87620428c1e3224b877509937c1a35d0dfc5f",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-f2c4cd89053b4ff8",
       "brand": "청년피자",
       "url": "https://youngmanpizza.co.kr/sub01/menu2.php",
-      "checkedAt": "2026-10-09T15:28:13.361478+00:00",
+      "checkedAt": "2026-10-09T15:36:52.102305+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "601aac22885e81a00ce6ce30a1f66aac934a21dadca1545d933100f9c426319b",
@@ -570,7 +560,7 @@
       "brandId": "brand-e7bc4d2ab88a800c",
       "brand": "노랑통닭",
       "url": "https://www.norangtongdak.co.kr/menu/chicken_list.html",
-      "checkedAt": "2026-10-09T15:28:13.365012+00:00",
+      "checkedAt": "2026-10-09T15:36:52.309326+00:00",
       "links": [],
       "error": "URLError",
       "reason": "<urlopen error [SSL: DH_KEY_TOO_SMALL] dh key too small (_ssl.c:1010)>",
@@ -580,7 +570,7 @@
       "brandId": "brand-c253f58a17fc9b81",
       "brand": "지코바",
       "url": "http://www.gcova.co.kr/sub_3_1.htm",
-      "checkedAt": "2026-10-09T15:28:14.300390+00:00",
+      "checkedAt": "2026-10-09T15:36:52.365144+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "797c8001dbf9cb226952d468a189c6ba723a039b310d9a28b9b3624d8148ea83",
@@ -590,27 +580,27 @@
       "brandId": "brand-c242a10bbca4c411",
       "brand": "처갓집양념치킨",
       "url": "https://www.cheogajip.co.kr/bbs/board.php?bo_table=menu",
-      "checkedAt": "2026-10-09T15:28:14.475248+00:00",
+      "checkedAt": "2026-10-09T15:36:53.108535+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "cd72324dc37cd3ed6367714066cd38c39bf91109218520483868244fa665306b",
+      "sourceSha256": "a538721cfdd57993e04430edf6111cfb1b9e98f249a01b19ce61ced5925d9caa",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-1e99fd5b57a9f5cb",
       "brand": "피자마루",
       "url": "https://www.pizzamaru.kr/",
-      "checkedAt": "2026-10-09T15:28:14.722744+00:00",
+      "checkedAt": "2026-10-09T15:36:53.670846+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "405d56349a2d890288e3c7dffb6a9e2333322265389c85f7e99114e1835483e3",
+      "sourceSha256": "9748ba38089bfce03561c0cc91c78a31bfdebb15d37576114703bf6b83e8dff5",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-f4abfad35563de25",
       "brand": "멕시카나",
       "url": "https://www.mexicana.co.kr/menu/product.asp",
-      "checkedAt": "2026-10-09T15:28:15.522347+00:00",
+      "checkedAt": "2026-10-09T15:36:53.776087+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "a9a504628cc896968b10f547a83a2266c7a467d94c806af6df190a4987466962",
@@ -620,7 +610,7 @@
       "brandId": "brand-b0d0c4de8cdf23bc",
       "brand": "60계치킨",
       "url": "https://60chicken.com/bbs/content.php?co_id=menu",
-      "checkedAt": "2026-10-09T15:28:15.603490+00:00",
+      "checkedAt": "2026-10-09T15:36:54.182639+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "5a83d0f1736aa348419428efde6349028d045240738394ce567948fe94863f7f",
@@ -630,17 +620,17 @@
       "brandId": "brand-57244fb148c377c6",
       "brand": "반올림피자",
       "url": "https://order.banolimpizza.com/menu/list?menuId=1",
-      "checkedAt": "2026-10-09T15:28:15.732359+00:00",
+      "checkedAt": "2026-10-09T15:36:54.644563+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "6b20374fcd6ce26b9b7fb32fa546a2425ae13a7b335b2f291c8e05cb7214e768",
+      "sourceSha256": "d2b8533809f3fc538c7cb3a3142cc5e25ff10985c02450064fcbdba0b15c89e5",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-41b772c57bada9f9",
       "brand": "프랭크버거",
       "url": "https://www.frankburger.co.kr/html/menu_1.html",
-      "checkedAt": "2026-10-09T15:28:16.143105+00:00",
+      "checkedAt": "2026-10-09T15:36:54.723961+00:00",
       "links": [
         {
           "url": "https://frankburger.co.kr/html/ingredient.html",
@@ -648,7 +638,7 @@
         }
       ],
       "httpStatus": 200,
-      "sourceSha256": "583bac1c138a9a9990c9c7f8fafc2aa2e4495f0df5c0331fe2eb4281077b2094",
+      "sourceSha256": "c88b11e089a19230dd529fa855208b889064d17c7a4a0c86ae81130c65d95f0d",
       "confirmedNutritionSources": [
         "https://frankburger.co.kr/html/ingredient.html"
       ]
@@ -657,17 +647,17 @@
       "brandId": "brand-69ad361cd26106b1",
       "brand": "노브랜드버거",
       "url": "https://www.shinsegaefood.com/nobrandburger/index.sf",
-      "checkedAt": "2026-10-09T15:28:16.664915+00:00",
+      "checkedAt": "2026-10-09T15:36:55.377034+00:00",
       "links": [],
-      "httpStatus": 200,
-      "sourceSha256": "efd7ffbc1e6e377a8ec1615554f0a7f7053fd97829cc9b1fa9cbab8390b61437",
+      "error": "URLError",
+      "reason": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-2cf7eb0ea975163d",
       "brand": "새마을식당",
       "url": "https://newmaul.com/sub/menu.php",
-      "checkedAt": "2026-10-09T15:28:16.991031+00:00",
+      "checkedAt": "2026-10-09T15:36:55.752796+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "fbc240c6560343f2f971b3554242016dc62456982f08f4dd9e769c93d9bab3b9",
@@ -677,7 +667,7 @@
       "brandId": "brand-1742b64ed29107ac",
       "brand": "배스킨라빈스",
       "url": "https://www.baskinrobbins.co.kr/menu/list.php?category=A",
-      "checkedAt": "2026-10-09T15:28:17.136278+00:00",
+      "checkedAt": "2026-10-09T15:36:55.966261+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "386a6b0df24c5647a0ce0aeec3381652db689e8af822cf8cd411229bdef74936",
@@ -687,7 +677,7 @@
       "brandId": "brand-61b7f46d49620328",
       "brand": "요아정",
       "url": "https://yoajung.co.kr/bbs/content.php?co_id=menustore",
-      "checkedAt": "2026-10-09T15:28:17.801824+00:00",
+      "checkedAt": "2026-10-09T15:36:56.265704+00:00",
       "links": [],
       "error": "AssertionError",
       "reason": "",
@@ -697,17 +687,17 @@
       "brandId": "brand-3d3d7aa34cc1f578",
       "brand": "미소야",
       "url": "https://www.misoya.co.kr/menu",
-      "checkedAt": "2026-10-09T15:28:18.008122+00:00",
+      "checkedAt": "2026-10-09T15:36:56.668569+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "034c88f8767b39d4bc895a388564e85750bd89aaa7761158074fc73b6686209e",
+      "sourceSha256": "233ebdb0558dde3573697c7fadf844f9cf06a0e99b4f2711d56276b8e08cfaac",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-07de1aee884692c4",
       "brand": "7번가피자",
       "url": "https://www.7thpizza.com/sub/menu/list.php",
-      "checkedAt": "2026-10-09T15:28:18.668209+00:00",
+      "checkedAt": "2026-10-09T15:36:56.939522+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "e8dd019bbb03d4f1bf291762bd8dd9ad5b7e076b25d64df08dd40ba8ba736b76",
@@ -717,17 +707,17 @@
       "brandId": "brand-35225ece8d72c5b9",
       "brand": "토마토도시락",
       "url": "https://www.tomatodosirak.co.kr/board/index.php?board=menu_01&sca=all",
-      "checkedAt": "2026-10-09T15:28:20.096393+00:00",
+      "checkedAt": "2026-10-09T15:36:57.610809+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "01bc310148599962d7274e8a82485dbb9a735575492ee404914622e680635735",
+      "sourceSha256": "eb50e525be67f8eb9911424d73a206843fd0f6a9455ebcce665ef6c04b10182e",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-977382baa9a9159b",
       "brand": "동대문엽기떡볶이",
       "url": "https://www.yupdduk.com/sub/menu/yup-menu",
-      "checkedAt": "2026-10-09T15:28:20.147941+00:00",
+      "checkedAt": "2026-10-09T15:36:58.234606+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "4c8350de849c03e88846d16c8453f583815b13ac26d397ae8549fb72bcfbbfd9",
@@ -737,37 +727,37 @@
       "brandId": "brand-5203807bf8b4bc7a",
       "brand": "족발야시장",
       "url": "https://xn--ih3bm7ju8bi1cb3a.com/html/menu.html",
-      "checkedAt": "2026-10-09T15:28:20.163918+00:00",
+      "checkedAt": "2026-10-09T15:36:58.805778+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "c86fb1184854251b5a6259732e6d7ab4e8511070588f72835eeb512272a416f7",
+      "sourceSha256": "38672b1d1ee679a15203caf0ca957765fb9f7d596890b7fcd0e548cd8e9181f6",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-7b853dd449517e57",
       "brand": "호식이두마리치킨",
       "url": "https://www.9922.co.kr/menu",
-      "checkedAt": "2026-10-09T15:28:20.632683+00:00",
+      "checkedAt": "2026-10-09T15:36:58.953011+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "5079c8d83773469edc2126aec9844e9d5cb04d005652a853cf5df26c08d7b9de",
+      "sourceSha256": "71c01f0168601d842ea1355a74cd7482819482b5d5901a9b41e0d871881d9b57",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-9f125dd967fd168e",
       "brand": "크리스피크림도넛",
       "url": "https://www.lotteeatz.com/brand/kkd",
-      "checkedAt": "2026-10-09T15:28:21.105334+00:00",
+      "checkedAt": "2026-10-09T15:36:59.227136+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "1f8e6bf2adaf8390ecdb32e579b61073124e4f9a50910539fe244e353edb1b75",
+      "sourceSha256": "6472e3782c0d29a4107a59cf4bade964b8a22509e8c10b92a9f80425dbb891c4",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-e32a9313e634ead7",
       "brand": "홍종흔베이커리",
       "url": "http://www.hjhbakery.com/product/product_list.asp",
-      "checkedAt": "2026-10-09T15:28:21.891566+00:00",
+      "checkedAt": "2026-10-09T15:36:59.796098+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "2bead995220d998174dc6b84dc3c1562105bd5452679db6cd9f732e2525606d7",
@@ -777,7 +767,7 @@
       "brandId": "brand-a7444ee050c62abd",
       "brand": "성심당",
       "url": "https://sungsimdang.co.kr/",
-      "checkedAt": "2026-10-09T15:28:22.209773+00:00",
+      "checkedAt": "2026-10-09T15:36:59.961525+00:00",
       "links": [
         {
           "url": "https://sungsimdang.co.kr/page/71",
@@ -792,7 +782,7 @@
       "brandId": "brand-cf57c271fe920362",
       "brand": "이성당",
       "url": "https://leesungdang1945.com/category/낱개상품/24/",
-      "checkedAt": "2026-10-09T15:28:22.241260+00:00",
+      "checkedAt": "2026-10-09T15:37:00.800100+00:00",
       "links": [],
       "error": "UnicodeEncodeError",
       "reason": "'ascii' codec can't encode characters in position 14-17: ordinal not in range(128)",
@@ -802,7 +792,7 @@
       "brandId": "brand-db7ae070c1a211f3",
       "brand": "응급실국물떡볶이",
       "url": "https://응급실국물떡볶이.kr/",
-      "checkedAt": "2026-10-09T15:28:22.241415+00:00",
+      "checkedAt": "2026-10-09T15:37:00.800219+00:00",
       "links": [],
       "error": "UnicodeEncodeError",
       "reason": "'latin-1' codec can't encode characters in position 0-7: ordinal not in range(256)",
@@ -812,47 +802,47 @@
       "brandId": "brand-87f52291726f6891",
       "brand": "국대떡볶이",
       "url": "https://kukde.kr/menu",
-      "checkedAt": "2026-10-09T15:28:22.241464+00:00",
+      "checkedAt": "2026-10-09T15:37:00.800275+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "1a3940d3e8c9b2bda955c75b6d8dbfb22946e753414b6dea1c4179ded1c7a2a8",
+      "sourceSha256": "17ed48c13da100bc607d3c81f39b5b7bf81ba7a7b1a88112f0a3f7290458d64c",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-5f1ac0e21ddf73b1",
       "brand": "우지커피",
       "url": "https://www.oozycoffee.com/coffee",
-      "checkedAt": "2026-10-09T15:28:22.710271+00:00",
+      "checkedAt": "2026-10-09T15:37:00.823187+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "292c4710884d4f9250f4b1519cd068f3319e9d4b9d308ae757506b8663093a6e",
+      "sourceSha256": "792dcc3915263da7d43aa00ff9ec30f595add22564b77fbd04ecc38a8db2d7de",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-9fa9c3eca7bcf563",
       "brand": "더벤티",
       "url": "https://www.theventi.co.kr/",
-      "checkedAt": "2026-10-09T15:28:22.803346+00:00",
+      "checkedAt": "2026-10-09T15:37:00.974768+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "9cd2725fd1afd64dce1728b16cd2d74c4d86223a302fefc5ec169d853a94ea5f",
+      "sourceSha256": "d42eff3a68259aa9fc5ce6d5ee709dcdeb1252a2d29413a27191d2c27b7c168a",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-2e050b39b22a7280",
       "brand": "엔제리너스",
       "url": "https://www.lotteeatz.com/brand/angel",
-      "checkedAt": "2026-10-09T15:28:23.383522+00:00",
+      "checkedAt": "2026-10-09T15:37:01.845083+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "729f8263025fec5fee0009ce1e61b1e7fa9cd96aa701a4a3ab9ecb21c3cb5d8c",
+      "sourceSha256": "0e4919ac49f0299c77abc3a34a34918350c9592190aadc0230b935c2de232adb",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-01c5e2f727401b55",
       "brand": "설빙",
       "url": "https://sulbing.com/menu/",
-      "checkedAt": "2026-10-09T15:28:23.729953+00:00",
+      "checkedAt": "2026-10-09T15:37:01.846570+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "6a88543817554b01ca9eec5d378bf2b26aa418a8f65c0ef5e5a8419dbd770252",
@@ -860,13 +850,13 @@
     }
   ],
   "conflicts": [],
-  "nutritionLinkedMenus": 2351,
-  "newlyVerifiedMenus": 60,
+  "nutritionLinkedMenus": 2452,
+  "newlyVerifiedMenus": 101,
   "nutritionChangedMenus": 0,
   "reviewedSnapshotsRetained": 0,
-  "recordable": 1453,
-  "matched": 2430,
-  "failed": 649,
+  "recordable": 1554,
+  "matched": 2512,
+  "failed": 680,
   "menus": [
     {
       "id": "remote-franchise-000a63b1884cf6e0bf66ae9f",
@@ -1817,8 +1807,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "반반윙콤비[레드+마라레드]",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=41581&cg=2"
     },
     {
       "id": "remote-franchise-04c8e977046f88b3d224749f",
@@ -1937,8 +1929,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "양념치킨싱글윙",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=40915&cg=2"
     },
     {
       "id": "remote-franchise-057682ff89c31adae6a6b84e",
@@ -2035,8 +2029,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "간장스틱",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=30083&cg=2"
     },
     {
       "id": "remote-franchise-05fa8e114eae67e4a8b4cb2f",
@@ -2531,8 +2527,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "후라이드양념반반순살",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=40963&cg=2"
     },
     {
       "id": "remote-franchise-08829abbdf7aeb2ae4c11011",
@@ -2575,8 +2573,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "허니순살[S]",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=38055&cg=2"
     },
     {
       "id": "remote-franchise-08ccdea859282e1a45fa4da1",
@@ -3501,8 +3501,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "간장순살[S]",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=38393&cg=2"
     },
     {
       "id": "remote-franchise-0ce6cebca47397057fcfed75",
@@ -3807,8 +3809,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "허니갈릭싱글윙",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=41131&cg=2"
     },
     {
       "id": "remote-franchise-0e20b04025cfa5349137e7cf",
@@ -4835,8 +4839,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "파채소이살살",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=39271&cg=2"
     },
     {
       "id": "remote-franchise-1359f02754a350f7ac8f3958",
@@ -4989,10 +4995,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "바나나 푸딩 케이크",
-      "result": "MATCHED",
-      "conflicts": [],
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000006873"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-14807625aea9ac7e068a138b",
@@ -5163,8 +5169,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "레드순살[S]",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=38394&cg=2"
     },
     {
       "id": "remote-franchise-155fb1a572f9b690245a5fc7",
@@ -5377,8 +5385,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "마라레드윙콤비",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=41576&cg=2"
     },
     {
       "id": "remote-franchise-16ac6fdd37ba97d946e628b6",
@@ -5469,8 +5479,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "간장윙박스16PCS",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=40936&cg=2"
     },
     {
       "id": "remote-franchise-171d9eb0bb7290f44a319c62",
@@ -5531,8 +5543,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "반반윙콤비[레드+허니갈릭]",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=41582&cg=2"
     },
     {
       "id": "remote-franchise-173d09367fb577a276aa3f11",
@@ -5913,8 +5927,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "후라이드싱글윙",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=40885&cg=2"
     },
     {
       "id": "remote-franchise-1945e3a0458353a167381e2a",
@@ -5959,8 +5975,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "반반한마리[간장+허니갈릭]",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=41133&cg=2"
     },
     {
       "id": "remote-franchise-19582b4b285789b11ee40682",
@@ -6117,16 +6135,20 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "간장싱글윙",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=40801&cg=2"
     },
     {
       "id": "remote-franchise-1a4e73a1c83e6a551ad6e4db",
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "블랙시크릿팝콘",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": "Only explicitly published nutrition basis"
     },
     {
       "id": "remote-franchise-1a50d9b82128baa7993b43a7",
@@ -6405,8 +6427,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "문베어 윈디힐 라거(500ml CAN, KEG)",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-1bc547bb21b488b3599a0182",
@@ -6523,8 +6547,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "국물맵떡",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=39170&cg=3"
     },
     {
       "id": "remote-franchise-1c9b9ace15ad2b010975c867",
@@ -6919,8 +6945,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "양념치킨한마리",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=40878&cg=2"
     },
     {
       "id": "remote-franchise-1f14d7ba5a8e7cc33cf6b147",
@@ -7107,10 +7135,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "프리미엄 바나나",
-      "result": "MATCHED",
-      "conflicts": [],
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_PARTIAL",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=5110009171"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-200991d3d3a6596510943565",
@@ -8009,8 +8037,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "포테이토앤칩스(점보팩)",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=39168&cg=3"
     },
     {
       "id": "remote-franchise-246a8de6cd9ef42da6d8f05f",
@@ -8359,8 +8389,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "후라이드윙박스16PCS",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=40890&cg=2"
     },
     {
       "id": "remote-franchise-26c223079728f5211612a771",
@@ -8833,8 +8865,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "문베어 짙은밤 페일에일(500ml CAN)",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-29dc66bca3393e34e46315d2",
@@ -11181,8 +11215,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "바삭근위튀김(똥집튀김)",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=41199&cg=3"
     },
     {
       "id": "remote-franchise-361e4c20f82785f6dc3fc7fa",
@@ -11445,8 +11481,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "문베어 소빈블랑 IPA(500ml CAN)",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-386316219cbad1c40317b731",
@@ -12105,8 +12143,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "레드콤보[S]",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=30032&cg=2"
     },
     {
       "id": "remote-franchise-3b91e70f32838900a9712b14",
@@ -12309,8 +12349,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "웨지고구마",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=41310&cg=3"
     },
     {
       "id": "remote-franchise-3cac0a65837886ce5a03f453",
@@ -12479,8 +12521,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "허니윙박스20PCS",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=41369&cg=2"
     },
     {
       "id": "remote-franchise-3d592c4688fb1a1b493d7f5f",
@@ -12585,8 +12629,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "은하수 깊은밤 8도(650ml)",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-3dbd83582ac65ff290ad8c3a",
@@ -12923,10 +12969,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "바게트 소금빵",
-      "result": "MATCHED",
-      "conflicts": [],
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000006831"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-3f71492d8bea56eb10619e36",
@@ -13613,8 +13659,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "허니갈릭한마리",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=41130&cg=2"
     },
     {
       "id": "remote-franchise-42dc8cf89db1a273341d97ab",
@@ -13639,8 +13687,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "레드한마리",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=30022&cg=2"
     },
     {
       "id": "remote-franchise-42ff5d792a9d539bbfcc837d",
@@ -13667,8 +13717,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "웨지감자",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=30105&cg=3"
     },
     {
       "id": "remote-franchise-4321e70fe4aaf1aa16d4ad98",
@@ -13829,16 +13881,20 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "간장콤보[S]",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=30148&cg=2"
     },
     {
       "id": "remote-franchise-43dd53b94923514cc5deb4a2",
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "은하수 별헤는밤 12도(500ml)",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-43e1428004804cecb7e3c7af",
@@ -14123,8 +14179,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "꽈배기(3ea)",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=40504&cg=3"
     },
     {
       "id": "remote-franchise-453502aa1ae7596d4978f674",
@@ -14411,8 +14469,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "국물맵떡[S]",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=40490&cg=3"
     },
     {
       "id": "remote-franchise-46db5cd341f942aa72e187b3",
@@ -14729,10 +14789,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "한 입에 쏙 카스텔라",
-      "result": "MATCHED",
-      "conflicts": [],
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000002718"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-4864ea243089ad9895dcdd2a",
@@ -15273,18 +15333,20 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "쿠키 스트로우 단품",
-      "result": "MATCHED",
-      "conflicts": [],
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000006019"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-4b41ca96269e2d09b1cd4db2",
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "퐁듀치즈볼(6ea)",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=38301&cg=3"
     },
     {
       "id": "remote-franchise-4b443663bc8a06b4eade143b",
@@ -15499,8 +15561,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "마라레드한마리",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=41062&cg=2"
     },
     {
       "id": "remote-franchise-4c4d97afbde56045de01a1f0",
@@ -15995,8 +16059,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "반반콤보[간장+레드]",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=30150&cg=2"
     },
     {
       "id": "remote-franchise-4fdefbc7c363e0dd81b0b273",
@@ -16641,8 +16707,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "반반윙콤비[마라레드+허니갈릭]",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=41583&cg=2"
     },
     {
       "id": "remote-franchise-52fa223c02a070f287f9fbe9",
@@ -16847,8 +16915,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "후라이드윙박스20PCS",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=41367&cg=2"
     },
     {
       "id": "remote-franchise-54245472bb42e23d262c1ea6",
@@ -16931,16 +17001,20 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "샐러드",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=30510&cg=3"
     },
     {
       "id": "remote-franchise-5491a7c389eb7499181e277b",
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "살살후라이드",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=39270&cg=2"
     },
     {
       "id": "remote-franchise-54a76f5d2c5834ab0923d3b0",
@@ -16991,8 +17065,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "레드콤보",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=30030&cg=2"
     },
     {
       "id": "remote-franchise-54e6a3f7c40057a6ff223688",
@@ -17025,8 +17101,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "반반순살[간장+레드]",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=38392&cg=2"
     },
     {
       "id": "remote-franchise-556498254f643574586eca23",
@@ -17241,10 +17319,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "우리쌀 전병 땅콩맛",
-      "result": "MATCHED",
-      "conflicts": [],
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000006322"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-571b0becf862dfc82846b1eb",
@@ -17593,8 +17671,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "반반한마리[레드+마라레드]",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=41136&cg=2"
     },
     {
       "id": "remote-franchise-5974bb3468902cfe9872c294",
@@ -17773,8 +17853,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "고르곤치즈볼(3ea)",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=39143&cg=3"
     },
     {
       "id": "remote-franchise-5aa026fa93b8d890b161e333",
@@ -17937,10 +18019,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "복숭아 가득 핸디 젤리",
-      "result": "MATCHED",
-      "conflicts": [],
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000004508"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-5be01f9ca01448f86480dd66",
@@ -18171,10 +18253,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "초콜릿 칩 쿠키 바스켓",
-      "result": "MATCHED",
-      "conflicts": [],
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000006162"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-5d31ae1f259dfdfb907e6205",
@@ -18445,10 +18527,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "한 입에 쏙 고구마",
-      "result": "MATCHED",
-      "conflicts": [],
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005562"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-5e3f71052db038fbf79a6f07",
@@ -18687,8 +18769,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "소이파채샐러드",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=39358&cg=3"
     },
     {
       "id": "remote-franchise-5eff4daf0ae5f01f9b362357",
@@ -18713,8 +18797,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "퐁듀치즈볼(3ea)",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=39144&cg=3"
     },
     {
       "id": "remote-franchise-5f1c05e8a9cddeeb6e100b0a",
@@ -19017,8 +19103,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "허니치룽지",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=41171&cg=3"
     },
     {
       "id": "remote-franchise-60714595611668f9489896f2",
@@ -19245,8 +19333,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "반반윙박스20PCS[레드+마라레드]",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=41373&cg=2"
     },
     {
       "id": "remote-franchise-6194cb77add81354b40c41ec",
@@ -19717,8 +19807,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "살살후라이드미니",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=30231&cg=3"
     },
     {
       "id": "remote-franchise-63f2c6aa46e3dce8ff3c851f",
@@ -19773,8 +19865,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "반반한마리[간장+레드]",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=30100&cg=2"
     },
     {
       "id": "remote-franchise-643a945366f2511686542225",
@@ -20093,16 +20187,20 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "궁중닭갈비볶음밥",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=38246&cg=3"
     },
     {
       "id": "remote-franchise-65f85692b9224a37d26f0ed9",
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "레드치룽지",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=41172&cg=3"
     },
     {
       "id": "remote-franchise-65fc5203e41b7a4d3e096446",
@@ -21153,8 +21251,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "간장콤보",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=30146&cg=2"
     },
     {
       "id": "remote-franchise-6c5be9a7386266fd6153946f",
@@ -21481,8 +21581,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "반반윙박스20PCS[후라이드+양념]",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=41376&cg=2"
     },
     {
       "id": "remote-franchise-6ec85786681cfae25d94359c",
@@ -21939,8 +22041,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "레드스틱[S]",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=30020&cg=2"
     },
     {
       "id": "remote-franchise-713b600c383e8200de9154e3",
@@ -23081,10 +23185,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "하트 파이",
-      "result": "MATCHED",
-      "conflicts": [],
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=5110006070"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-77bffff1fba3db983a4ed5d4",
@@ -23125,8 +23229,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "후라이드한마리",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=40877&cg=2"
     },
     {
       "id": "remote-franchise-781bb83696f010a0c4b08be1",
@@ -23143,8 +23249,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "체다치즈찰도그(3ea)",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=41560&cg=3"
     },
     {
       "id": "remote-franchise-7822dfdfa5bef0fe561aadd6",
@@ -24549,8 +24657,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "마라레드싱글윙",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=40993&cg=2"
     },
     {
       "id": "remote-franchise-80644725f48a5506320ab67f",
@@ -25151,8 +25261,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "아, 귀한 먹태[홀전용메뉴]",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=39011&cg=3"
     },
     {
       "id": "remote-franchise-8453a46c40681d52a202aba3",
@@ -25335,8 +25447,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "포테토칩 교촌간장치킨맛(55g)",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": "Only explicitly published nutrition basis"
     },
     {
       "id": "remote-franchise-85a999c915bf7ba2124a2ae3",
@@ -25381,8 +25495,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "후라이드양념반반한마리",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=40879&cg=2"
     },
     {
       "id": "remote-franchise-85ef8b351c08e1a089f91330",
@@ -26021,10 +26137,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "자일리톨 캔디 크리스탈 레몬",
-      "result": "MATCHED",
-      "conflicts": [],
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000002556"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-8a0f37a860cbeb4ff95f4d71",
@@ -26151,8 +26267,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "고르곤치즈볼(6ea)",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=38300&cg=3"
     },
     {
       "id": "remote-franchise-8b0268a68adbac57b43163ef",
@@ -26415,8 +26533,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "허니한마리",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=30161&cg=2"
     },
     {
       "id": "remote-franchise-8cbedd23f85d9e3ae56048ef",
@@ -26625,8 +26745,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "허니콤보",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=30164&cg=2"
     },
     {
       "id": "remote-franchise-8e079e6e7400e41d4ab2e3d5",
@@ -26829,8 +26951,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "문베어 문댄스 골든에일(500ml CAN)",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-8f3e85ae55f8331c5379ddb7",
@@ -27037,8 +27161,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "반반스틱[간장+레드]",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=30086&cg=2"
     },
     {
       "id": "remote-franchise-903fa52e05170007503614b0",
@@ -27591,10 +27717,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "잉글리쉬 스콘",
-      "result": "MATCHED",
-      "conflicts": [],
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005663"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-93a5902606bd06173862900f",
@@ -28363,8 +28489,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "허니갈릭윙박스20PCS",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=41366&cg=2"
     },
     {
       "id": "remote-franchise-97e2cb618a5046d0abfdb878",
@@ -29147,8 +29275,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "달걀듬뿍볶음밥",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=39785&cg=3"
     },
     {
       "id": "remote-franchise-9c0ed38981291bee432ac7cd",
@@ -29583,10 +29713,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "레이디핑거 티라미수 케이크",
-      "result": "MATCHED",
-      "conflicts": [],
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005607"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-9ee419772e77b3ed63e1cd60",
@@ -29639,8 +29769,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "양념치킨윙박스20PCS",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=41368&cg=2"
     },
     {
       "id": "remote-franchise-9f58d9e720c6c82917aef33c",
@@ -29733,8 +29865,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "레드스틱",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=30018&cg=2"
     },
     {
       "id": "remote-franchise-9fbec27ed2d811c7c27a665a",
@@ -30261,8 +30395,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "허니갈릭윙박스16PCS",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=41132&cg=2"
     },
     {
       "id": "remote-franchise-a1cec6210073b2c41f642b0a",
@@ -30463,8 +30599,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "허니순살",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=38053&cg=2"
     },
     {
       "id": "remote-franchise-a2a88b0a1c740ed1d13b4bd3",
@@ -30641,8 +30779,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "후라이드순살",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=40961&cg=2"
     },
     {
       "id": "remote-franchise-a37bdd81bd8d389c8050208f",
@@ -30725,10 +30865,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "풀문 잼 쿠키 세트",
-      "result": "MATCHED",
-      "conflicts": [],
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000006825"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-a3f01f3e3767a7f64f42ab2d",
@@ -31043,10 +31183,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "더블 에그 브렉퍼스트 & 체다 샌드위치",
-      "result": "MATCHED",
-      "conflicts": [],
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005697"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-a5d6a1bb725aa2c04088bc98",
@@ -32159,8 +32299,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "오리지널찰도그(3ea)",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=41559&cg=3"
     },
     {
       "id": "remote-franchise-abc6b790b1ac3ac95257890e",
@@ -32185,8 +32327,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "반반한마리[레드+허니갈릭]",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=41134&cg=2"
     },
     {
       "id": "remote-franchise-abe5af9f10bf49ccf05420aa",
@@ -32565,8 +32709,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "간장한마리",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=30098&cg=2"
     },
     {
       "id": "remote-franchise-ae3a0952d02943aea7b6483b",
@@ -33323,8 +33469,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "반반윙콤비[간장+마라레드]",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=41579&cg=2"
     },
     {
       "id": "remote-franchise-b2696b6b8155309a701c5dc7",
@@ -34317,8 +34465,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "허니옥수수순살",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=40486&cg=2"
     },
     {
       "id": "remote-franchise-b857e730202d99002a11132b",
@@ -34403,8 +34553,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "간장윙콤비",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=41574&cg=2"
     },
     {
       "id": "remote-franchise-b8e468d728c9d4ca81401ebc",
@@ -34571,8 +34723,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "은하수 푸른밤 6도(650ml)",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-b9e4937cec3bc8c4b4f95b68",
@@ -34785,8 +34939,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "반반윙박스20PCS[레드+허니갈릭]",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=41374&cg=2"
     },
     {
       "id": "remote-franchise-baabd48978217959c12ac4f3",
@@ -35429,10 +35585,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "베이스볼 팝콘&프레첼",
-      "result": "MATCHED",
-      "conflicts": [],
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000006466"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-bdf44980bcdff64d3439dbda",
@@ -35523,8 +35679,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "문베어 모스카토 스위트 ALE (500ml CAN)",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-be6ce011cee18b77b15d31dc",
@@ -36317,8 +36475,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "레드윙박스20PCS",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=41364&cg=2"
     },
     {
       "id": "remote-franchise-c1f5f990f097fb000bca09d7",
@@ -36719,8 +36879,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "레드윙콤비",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=41575&cg=2"
     },
     {
       "id": "remote-franchise-c3c35c8d58d19181faf9a4f0",
@@ -36745,8 +36907,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "반반윙박스20PCS[간장+허니갈릭]",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=41372&cg=2"
     },
     {
       "id": "remote-franchise-c3fa8cef885319c0fe799324",
@@ -38207,8 +38371,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "허니갈릭윙콤비",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=41577&cg=2"
     },
     {
       "id": "remote-franchise-cb3205768189fbda3275d98c",
@@ -38735,10 +38901,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "파예 무지방 그릭 요거트 허니",
-      "result": "MATCHED",
-      "conflicts": [],
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005996"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-ce3fb613eb2a4794437de972",
@@ -38781,8 +38947,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "레드순살",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=38391&cg=2"
     },
     {
       "id": "remote-franchise-cecbe4e01d491b4ec3e329df",
@@ -38839,8 +39007,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "반반윙박스20PCS[간장+마라레드]",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=41371&cg=2"
     },
     {
       "id": "remote-franchise-cf4b41632dd73ee9e5cb2199",
@@ -39191,8 +39361,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "반반윙콤비[간장+허니갈릭]",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=41580&cg=2"
     },
     {
       "id": "remote-franchise-d13a715cf2c6eb45fb376abc",
@@ -39565,8 +39737,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "간장순살",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=38390&cg=2"
     },
     {
       "id": "remote-franchise-d31424ba94641a5f4871fa6a",
@@ -40361,8 +40535,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "마라레드윙박스20PCS",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=41365&cg=2"
     },
     {
       "id": "remote-franchise-d84d20b5d71ebbcfe51ccea7",
@@ -40529,8 +40705,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "반반한마리[마라레드+허니갈릭]",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=41137&cg=2"
     },
     {
       "id": "remote-franchise-d8eab8ec31fcbdc2c8a9250e",
@@ -40839,8 +41017,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "문베어 여름밤 IPA(500ml CAN)",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-dac831d1fa4b0c1c65d6a61d",
@@ -41165,8 +41345,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "간장윙박스20PCS",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=41363&cg=2"
     },
     {
       "id": "remote-franchise-dcf30896a0a88c9acaf6449c",
@@ -41545,8 +41727,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "허니옥수수한마리",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=40484&cg=2"
     },
     {
       "id": "remote-franchise-df1e91b688bf02392b4ad5b4",
@@ -41571,8 +41755,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "웨지반반",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=41626&cg=3"
     },
     {
       "id": "remote-franchise-df49331a9467f424635bd2f4",
@@ -41627,10 +41813,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "초콜릿 바닐라 그래놀라",
-      "result": "MATCHED",
-      "conflicts": [],
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000006125"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-dfbadad1c922f0e0998e46fb",
@@ -42183,8 +42369,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "모둠어묵탕[홀전용메뉴]",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=99999&cg=3"
     },
     {
       "id": "remote-franchise-e2836166cb6333cfaa8ce9c4",
@@ -42589,8 +42777,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "반반순살[레드+허니]",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=38414&cg=2"
     },
     {
       "id": "remote-franchise-e45dadbca83e4e1a0671d1fb",
@@ -43065,8 +43255,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "양념치킨윙박스16PCS",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=40914&cg=2"
     },
     {
       "id": "remote-franchise-e688eaca74504fa2d58b984a",
@@ -43293,8 +43485,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "칩카사바",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=38604&cg=3"
     },
     {
       "id": "remote-franchise-e7cd588ae8ba14bb2ad97dfa",
@@ -43393,8 +43587,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "레드싱글윙",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=40802&cg=2"
     },
     {
       "id": "remote-franchise-e8536dfe15bc810e395d98ac",
@@ -43557,8 +43753,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "교촌X노티드 츄러스(5ea)",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=40805&cg=3"
     },
     {
       "id": "remote-franchise-e8f99cfd7208fa72b4920feb",
@@ -43603,8 +43801,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "반반윙박스20PCS[마라레드+허니갈릭]",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=41375&cg=2"
     },
     {
       "id": "remote-franchise-e969a8ade43f214849c97e6d",
@@ -43681,8 +43881,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "간장스틱[S]",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-ea1e774f9cd65b21682d74f5",
@@ -43709,8 +43911,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "반반한마리[간장+마라레드]",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=41135&cg=2"
     },
     {
       "id": "remote-franchise-ea439e13a5ec51fc303f9a1d",
@@ -43787,8 +43991,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "반반윙콤비[간장+레드]",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=41578&cg=2"
     },
     {
       "id": "remote-franchise-eab6dc0c9f59c63b3ae73d67",
@@ -44283,10 +44489,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "버터바",
-      "result": "MATCHED",
-      "conflicts": [],
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000004784"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-ed408d8750c76b9a3c0ad4fe",
@@ -44565,8 +44771,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "허니싱글윙",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=40864&cg=2"
     },
     {
       "id": "remote-franchise-eec00851e317b6b2e88d823c",
@@ -45635,8 +45843,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "마라레드윙박스16PCS",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=40992&cg=2"
     },
     {
       "id": "remote-franchise-f48db83241ad2507bc729f81",
@@ -46477,8 +46687,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "허니윙박스16PCS",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=40875&cg=2"
     },
     {
       "id": "remote-franchise-f8d37beceb0039e7e169a8c0",
@@ -46633,8 +46845,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "레드윙박스16PCS",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=40937&cg=2"
     },
     {
       "id": "remote-franchise-f9cf3b83c5d136c000ceb2b3",
@@ -47081,8 +47295,10 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "name": "양념치킨순살",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://www.kyochon.com/menu/view.asp?id=40962&cg=2"
     },
     {
       "id": "remote-franchise-fbc66acabd0c9381bcfddfb2",
