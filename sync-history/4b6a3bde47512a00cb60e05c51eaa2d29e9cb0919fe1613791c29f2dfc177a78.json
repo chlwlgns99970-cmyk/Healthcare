@@ -1,0 +1,100 @@
+{
+  "runId": "operator-nutrition-2026-10-09-v3",
+  "triggerType": "workflow_dispatch",
+  "startedAt": "2026-10-09T13:27:10.391749+00:00",
+  "endedAt": "2026-10-09T13:29:35.995990+00:00",
+  "timezone": "Asia/Seoul",
+  "dateKst": "2026-10-09",
+  "scope": "TARGETED_VERIFICATION",
+  "registryBrands": 102,
+  "targetBrands": 1,
+  "successBrands": 1,
+  "failedBrands": 0,
+  "sourceMissing": 0,
+  "reviewRequired": 0,
+  "candidateCount": 111,
+  "publishedNewCount": 0,
+  "duplicateCount": 111,
+  "invalidCount": 0,
+  "identityReviewCount": 0,
+  "newWithNutrition": 0,
+  "newWithoutNutrition": 0,
+  "nutritionAudit": {
+    "total": 5103,
+    "states": {
+      "NUTRITION_SOURCE_MISSING": 3933,
+      "NUTRITION_COMPLETE": 532,
+      "NUTRITION_PARTIAL": 493,
+      "NUTRITION_SOURCE_FOUND_UNMATCHED": 145
+    },
+    "known": {
+      "energyKcal": 1018,
+      "carbohydrateGrams": 342,
+      "proteinGrams": 904,
+      "fatGrams": 342,
+      "sodiumMilligrams": 900,
+      "servingAmount": 536
+    },
+    "nutritionLinkedMenus": 1025,
+    "newlyVerifiedMenus": 0,
+    "nutritionChangedMenus": 0,
+    "reviewedSnapshotsRetained": 0,
+    "recordable": 532,
+    "matched": 1056,
+    "failed": 114
+  },
+  "autoReadyBrands": 1,
+  "sourceBlockedBrands": 0,
+  "adapterRequiredBrands": 0,
+  "brokenBrands": 0,
+  "reviewRequiredBrands": 0,
+  "totalBrands": 102,
+  "finishedAt": "2026-10-09T13:29:35.995990+00:00",
+  "noChangeBrands": 1,
+  "newMenuBrands": 0,
+  "failedCheckBrands": 0,
+  "browserBasedBrands": 1,
+  "apiBasedBrands": 0,
+  "parserBasedBrands": 0,
+  "sourceTypeMenuCounts": {
+    "API": 0,
+    "BROWSER": 371,
+    "CSV": 0,
+    "HTML": 3582,
+    "HYBRID": 0,
+    "JSON": 1150,
+    "PDF": 0,
+    "XLSX": 0
+  },
+  "missingSourceTypeCount": 0,
+  "catalogVersion": "5e3ce566e322c1b87cd5f7d074642608b49858e2de5872f0b1c5ed29b13e72d8",
+  "checksum": "5e3ce566e322c1b87cd5f7d074642608b49858e2de5872f0b1c5ed29b13e72d8",
+  "status": "PUBLISHED",
+  "brands": [
+    {
+      "brandId": "brand-3869f6f268d4afd6",
+      "lastCheckedAt": "2026-10-09T13:27:10.393794+00:00",
+      "lastSuccessAt": "2026-10-09T13:27:10.393794+00:00",
+      "lastResult": "NO_CHANGE",
+      "lastMenuCount": 111,
+      "lastNewCount": 0,
+      "adapterTypes": [
+        "hansot-browser-json"
+      ],
+      "sourceTypes": [
+        "BROWSER"
+      ],
+      "sources": [
+        {
+          "sourceUrl": "https://www.hsd.co.kr/menu/menu_list",
+          "adapter": "hansot-browser-json",
+          "sourceType": "BROWSER",
+          "status": "SUCCESS",
+          "error": null,
+          "errorReason": null,
+          "attempts": 1
+        }
+      ]
+    }
+  ]
+}

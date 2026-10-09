@@ -1,8 +1,8 @@
 {
-  "runId": "operator-nutrition-2026-10-09-v2",
+  "runId": "operator-nutrition-2026-10-09-v3",
   "triggerType": "workflow_dispatch",
-  "startedAt": "2026-10-09T13:21:46.849541+00:00",
-  "endedAt": "2026-10-09T13:24:14.190425+00:00",
+  "startedAt": "2026-10-09T13:27:10.391749+00:00",
+  "endedAt": "2026-10-09T13:29:35.995990+00:00",
   "timezone": "Asia/Seoul",
   "dateKst": "2026-10-09",
   "scope": "TARGETED_VERIFICATION",
@@ -691,7 +691,7 @@
     {
       "brandId": "brand-3869f6f268d4afd6",
       "status": "SUCCESS",
-      "checkedAt": "2026-10-09T13:21:46.851591+00:00",
+      "checkedAt": "2026-10-09T13:27:10.393794+00:00",
       "menuCount": 111,
       "observedMenuCount": 111,
       "warnings": [],
@@ -702,7 +702,7 @@
           "adapter": "hansot-browser-json",
           "sourceKey": "전체 공개 카테고리",
           "status": "SUCCESS",
-          "checkedAt": "2026-10-09T13:21:46.851591+00:00",
+          "checkedAt": "2026-10-09T13:27:10.393794+00:00",
           "htmlSha256": "6cb8b3e2b742126fa46dee6c413c005b933a1650f5a53e614665bb26ca3c662c",
           "httpStatus": 200,
           "coverageReferenceIds": [],
@@ -724,8 +724,8 @@
           "attempts": 1
         }
       ],
-      "lastCheckedAt": "2026-10-09T13:21:46.851591+00:00",
-      "lastSuccessAt": "2026-10-09T13:21:46.851591+00:00",
+      "lastCheckedAt": "2026-10-09T13:27:10.393794+00:00",
+      "lastSuccessAt": "2026-10-09T13:27:10.393794+00:00",
       "lastResult": "NO_CHANGE",
       "lastMenuCount": 111,
       "lastNewCount": 0,
@@ -754,11 +754,12 @@
       "servingAmount": 536
     },
     "nutritionLinkedMenus": 1025,
-    "newlyVerifiedMenus": 522,
+    "newlyVerifiedMenus": 0,
     "nutritionChangedMenus": 0,
+    "reviewedSnapshotsRetained": 0,
     "recordable": 532,
-    "matched": 1055,
-    "failed": 115
+    "matched": 1056,
+    "failed": 114
   },
   "autoReadyBrands": 1,
   "sourceBlockedBrands": 0,
@@ -766,7 +767,7 @@
   "brokenBrands": 0,
   "reviewRequiredBrands": 0,
   "totalBrands": 102,
-  "finishedAt": "2026-10-09T13:24:14.190425+00:00",
+  "finishedAt": "2026-10-09T13:29:35.995990+00:00",
   "noChangeBrands": 1,
   "newMenuBrands": 0,
   "failedCheckBrands": 0,
@@ -784,7 +785,7 @@
     "XLSX": 0
   },
   "missingSourceTypeCount": 0,
-  "catalogVersion": "56b14945dfcdd7e8c76f56de100a39756fe51722a668d8979a1775b3c30fdbf6",
-  "checksum": "56b14945dfcdd7e8c76f56de100a39756fe51722a668d8979a1775b3c30fdbf6",
+  "catalogVersion": "5e3ce566e322c1b87cd5f7d074642608b49858e2de5872f0b1c5ed29b13e72d8",
+  "checksum": "5e3ce566e322c1b87cd5f7d074642608b49858e2de5872f0b1c5ed29b13e72d8",
   "status": "PUBLISHED"
 }

@@ -15,11 +15,12 @@
     "servingAmount": 536
   },
   "nutritionLinkedMenus": 1025,
-  "newlyVerifiedMenus": 522,
+  "newlyVerifiedMenus": 0,
   "nutritionChangedMenus": 0,
+  "reviewedSnapshotsRetained": 0,
   "recordable": 532,
-  "matched": 1055,
-  "failed": 115,
+  "matched": 1056,
+  "failed": 114,
   "menus": [
     {
       "id": "remote-franchise-000a63b1884cf6e0bf66ae9f",
@@ -27438,10 +27439,9 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "스타벅스 리저브 오리진 초콜릿 밀크",
-      "result": "FAILED_RETAINED",
+      "result": "MATCHED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "error": "URLError",
-      "reason": "<urlopen error timed out>"
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005547"
     },
     {
       "id": "remote-franchise-a802edd488205b5b06c7c15b",
