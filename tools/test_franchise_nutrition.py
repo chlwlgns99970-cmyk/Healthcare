@@ -9,6 +9,15 @@ FIX = Path(__file__).resolve().parents[1] / 'data-source/franchise-sync/fixtures
 
 
 class NutritionTests(unittest.TestCase):
+    def test_product_id_resolves_nutrition_name_difference_without_assuming_basis(self):
+        from franchise_nutrition import parse_mcdonalds_product
+        menu=dict(brand='맥도날드',name='아메리카노 Medium',externalId='28')
+        f=parse_mcdonalds_product(menu,(FIX/'mc-product-nutrition.json').read_bytes())
+        self.assertEqual(12,f['energyKcal']);self.assertIsNone(f['servingAmount'])
+        self.assertIsNone(f['fatGrams']);self.assertIsNone(f['carbohydrateGrams'])
+        with self.assertRaises(AssertionError):parse_mcdonalds_product(dict(menu,name='아메리카노 Large'),(FIX/'mc-product-nutrition.json').read_bytes())
+        with self.assertRaises(AssertionError):parse_mcdonalds_product(dict(menu,externalId='999999'),(FIX/'mc-product-nutrition.json').read_bytes())
+
     def test_verified_conflict_keeps_original_and_reports_sources(self):
         from franchise_nutrition import retain_verified_on_conflict
         old=dict(energyKcal=100, servingAmount=50, servingUnit='g', sourceUrl='https://official/a')

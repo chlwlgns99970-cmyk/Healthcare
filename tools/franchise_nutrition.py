@@ -149,6 +149,25 @@ def parse_mcdonalds(menu, payload):
                 nutritionProductId=row['plu'], matchedBy='EXACT_NAME_AND_VARIANT')
 
 
+def parse_mcdonalds_product(menu,payload):
+    """Use the official product ID when the separate nutrition name differs."""
+    assert menu['brand']=='맥도날드' and menu['externalId'].isdigit()
+    data=json.loads(payload);assert data['resultCode']==100
+    rows=data['resultObject']['list']
+    matches=[r for r in rows if str(r['seq'])==menu['externalId'] and
+             normalized_nutrition_name(r['korName'])==normalized_nutrition_name(menu['name'])]
+    assert len(matches)==1,'Official product ID and full size/variant name changed'
+    row=matches[0]
+    # Only actual numeric fields, never ranges, percentages, sugar or saturated fat.
+    result={field:number(str(row.get(key,''))+unit,unit) for field,key,unit in (
+        ('energyKcal','calorie','kcal'),('carbohydrateGrams','carbohydrate','g'),
+        ('proteinGrams','protein','g'),('fatGrams','fat','g'),('sodiumMilligrams','sodium','mg'))}
+    # A bare weight/volume field without a published unit is insufficient basis.
+    result.update(servingAmount=None,servingUnit=None,servingDescription='',matchedBy='EXACT_OFFICIAL_PRODUCT_ID_AND_NAME')
+    assert any(result[k] is not None for k in FIELDS),'Product list publishes no exact numeric nutrition'
+    return result
+
+
 PARSERS = {'starbucks-product-jsonld': parse_starbucks, 'hansot-detail-kcal': parse_hansot,
            'mc-nutrition-json': parse_mcdonalds}
 
@@ -374,6 +393,7 @@ def refresh(menus, registry=None, fetcher=None):
     # A paginated page contains multiple products. Read each official page once.
     page_urls={m['sourceUrl'] for m in menus if sources.get(m['brandId'],{}).get('adapter') in PARSERS
                and not sources.get(m['brandId'],{}).get('url')}
+    page_urls.update(m['sourceUrl'] for m in menus if sources.get(m['brandId'],{}).get('adapter')=='mc-nutrition-json')
     def page(url):
         try:return url,get(url)
         except Exception as error:return url,error
@@ -398,10 +418,19 @@ def refresh(menus, registry=None, fetcher=None):
                 assert urlparse(url).hostname in source['allowedHosts']
                 payload = shared[url] if url in shared else get(url)
                 if isinstance(payload, Exception):raise payload
-                fact = PARSERS[adapter](menu, payload)
+                if adapter=='mc-nutrition-json':
+                    try:
+                        fact=PARSERS[adapter](menu,payload)
+                        assert any(fact.get(k) is not None for k in FIELDS)
+                    except AssertionError:
+                        url=menu['sourceUrl'];payload=shared[url]
+                        if isinstance(payload,Exception):raise payload
+                        fact=parse_mcdonalds_product(menu,payload)
+                else:
+                    fact = PARSERS[adapter](menu, payload)
                 fact.update(sourceUrl=fact.get('sourceUrl',url), checkedAt=checked,
                             sourceSha256=fact.get('sourceSha256',hashlib.sha256(payload).hexdigest()), officialProductId=menu['externalId'])
-                fact['sourceType']='PDF' if adapter=='salady-nutrition-pdf' else 'JSON' if adapter=='mc-nutrition-json' else 'HTML'
+                fact['sourceType']='PDF' if adapter=='salady-nutrition-pdf' else 'JSON' if adapter in ('mc-nutrition-json','burgerking-official-nutrition') else 'HTML'
                 validate_nutrition(fact, source['allowedHosts'])
                 fact, conflicts = retain_verified_on_conflict(menu, fact)
                 menu['officialNutrition'] = fact
