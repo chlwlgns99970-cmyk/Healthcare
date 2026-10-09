@@ -36,8 +36,9 @@ def parse_paris(menu, payload):
         assert float(per100[2]) <= 900, 'Official per-100g kcal exceeds physical upper bound; conflicting unit label withheld'
         result.update(energyKcal=float(per100[2]), servingAmount=100.0, servingUnit=per100[1], servingDescription='공식 100'+per100[1]+' 기준')
     if not energy and not per100 and per_serving:
-        # Whole package weight does not establish the unstated serving mass.
-        result.update(energyKcal=float(per_serving[1]), servingDescription='공식 1회 제공량: 제공 중량 미확인')
+        # Keep the explicit one serving; do not use whole cake/package grams.
+        result.update(energyKcal=float(per_serving[1]),servingAmount=1,servingUnit='인분',
+                      servingDescription='공식 1회 제공량 기준 · 제공 중량 미공개')
     if energy:
         result['energyKcal'] = float(energy[1])
         if basis and float(basis[1]) > 0:

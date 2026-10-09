@@ -21,7 +21,7 @@ class BakeryNutritionTest(unittest.TestCase):
         self.assertEqual((f['energyKcal'],f['servingAmount'],f['proteinGrams']),(335,100,11))
     def test_serving_calories_not_whole_cake_mass(self):
         m,p=fixture('paris-serving');f=parse_paris(m,p)
-        self.assertEqual(f['energyKcal'],370);self.assertIsNone(f['servingAmount'])
+        self.assertEqual(f['energyKcal'],370);self.assertEqual(1,f['servingAmount']);self.assertEqual('인분',f['servingUnit'])
     def test_less_than_is_not_an_exact_protein_value(self):
         m,p=fixture('paris');p=p.replace('단백질(g): 18'.encode(),'단백질(g): 1g 미만'.encode())
         self.assertIsNone(parse_paris(m,p)['proteinGrams'])
