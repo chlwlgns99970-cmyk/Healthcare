@@ -1,0 +1,1163 @@
+[
+  {
+    "brandId": "brand-ffd3bb1b019cf849",
+    "brand": "맥도날드",
+    "adapter": "mc-nutrition-json",
+    "sources": [
+      "https://www.mcdonalds.co.kr/kor/menu/information/nutrition"
+    ],
+    "status": "REGISTERED",
+    "allowedHosts": [
+      "mcdonalds.co.kr",
+      "www.mcdonalds.co.kr"
+    ],
+    "url": "https://www.mcdonalds.co.kr/api/v1/kor/product/nutrition"
+  },
+  {
+    "brandId": "brand-24df7e63c9c2314e",
+    "brand": "롯데리아",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "lotteeatz.com",
+      "www.lotteeatz.com"
+    ]
+  },
+  {
+    "brandId": "brand-d857c6bf9eb6a6c0",
+    "brand": "버거킹",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "burgerking.co.kr",
+      "www.burgerking.co.kr",
+      "web-prd.burgerking.co.kr"
+    ]
+  },
+  {
+    "brandId": "brand-2c14410b57ba9fc4",
+    "brand": "KFC",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "kfckorea.com",
+      "www.kfckorea.com"
+    ]
+  },
+  {
+    "brandId": "brand-b0f892d2c591ca13",
+    "brand": "맘스터치",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "momstouch.co.kr",
+      "www.momstouch.co.kr"
+    ]
+  },
+  {
+    "brandId": "brand-f91351461391155a",
+    "brand": "도미노피자",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "dominos.co.kr",
+      "www.dominos.co.kr",
+      "web.dominos.co.kr"
+    ]
+  },
+  {
+    "brandId": "brand-dfd7712a868b7cd2",
+    "brand": "피자헛",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "pizzahut.co.kr",
+      "www.pizzahut.co.kr"
+    ]
+  },
+  {
+    "brandId": "brand-792c9f221e49eb7e",
+    "brand": "미스터피자",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "mrpizza.co.kr",
+      "www.mrpizza.co.kr"
+    ]
+  },
+  {
+    "brandId": "brand-45ddca38a87b3dcd",
+    "brand": "BHC",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "bhc.co.kr",
+      "www.bhc.co.kr"
+    ]
+  },
+  {
+    "brandId": "brand-5b391ae396ab6901",
+    "brand": "교촌치킨",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "kyochon.com",
+      "www.kyochon.com"
+    ]
+  },
+  {
+    "brandId": "brand-dfbc0be6a9fb565a",
+    "brand": "굽네치킨",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "goobne.co.kr",
+      "www.goobne.co.kr"
+    ]
+  },
+  {
+    "brandId": "brand-913a908f005583f0",
+    "brand": "BBQ",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "bbq.co.kr",
+      "www.bbq.co.kr"
+    ]
+  },
+  {
+    "brandId": "brand-1c90aeff2ad68611",
+    "brand": "네네치킨",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "nenechicken.com",
+      "www.nenechicken.com"
+    ]
+  },
+  {
+    "brandId": "brand-6f80c60267f6bc73",
+    "brand": "스타벅스",
+    "adapter": "starbucks-product-jsonld",
+    "sources": [
+      "Exact official product detail URL from menu catalog"
+    ],
+    "status": "REGISTERED",
+    "allowedHosts": [
+      "starbucks.co.kr",
+      "www.starbucks.co.kr"
+    ]
+  },
+  {
+    "brandId": "brand-044f74822bd63a2c",
+    "brand": "투썸플레이스",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "twosome.co.kr",
+      "www.twosome.co.kr",
+      "mo.twosome.co.kr"
+    ]
+  },
+  {
+    "brandId": "brand-9bd2fd2f30a9da68",
+    "brand": "컴포즈커피",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "composecoffee.com",
+      "www.composecoffee.com"
+    ]
+  },
+  {
+    "brandId": "brand-0dc8558d4e8f58fd",
+    "brand": "이디야",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "ediya.com",
+      "www.ediya.com"
+    ]
+  },
+  {
+    "brandId": "brand-db8f86831d5f2b94",
+    "brand": "메가MGC커피",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "mega-mgccoffee.com",
+      "www.mega-mgccoffee.com"
+    ]
+  },
+  {
+    "brandId": "brand-149ee0d555be8e34",
+    "brand": "매머드커피",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "mmthcoffee.com",
+      "www.mmthcoffee.com"
+    ]
+  },
+  {
+    "brandId": "brand-2366ea85553dc984",
+    "brand": "두찜",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "twozzim.com",
+      "www.twozzim.com"
+    ]
+  },
+  {
+    "brandId": "brand-9bbe44a999e4d158",
+    "brand": "봉추찜닭",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "bongchu.com",
+      "www.bongchu.com"
+    ]
+  },
+  {
+    "brandId": "brand-9fe52457ea35b575",
+    "brand": "일미리금계찜닭",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "goldjjimdak.com",
+      "www.goldjjimdak.com"
+    ]
+  },
+  {
+    "brandId": "brand-6b4062eb7d56bbc2",
+    "brand": "육수당",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "www.yuksudang.com",
+      "yuksudang.com"
+    ]
+  },
+  {
+    "brandId": "brand-e237cdd96675b8e9",
+    "brand": "현대옥",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "hyundaiok.com",
+      "www.hyundaiok.com"
+    ]
+  },
+  {
+    "brandId": "brand-a6a2f91c0a858eab",
+    "brand": "이화수전통육개장",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "ihwasoo.com",
+      "www.ihwasoo.com"
+    ]
+  },
+  {
+    "brandId": "brand-e391193d95fb4b22",
+    "brand": "신전떡볶이",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "sinjeon.co.kr",
+      "www.sinjeon.co.kr"
+    ]
+  },
+  {
+    "brandId": "brand-d12ac5629277dd74",
+    "brand": "죠스떡볶이",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "jawsfood.co.kr",
+      "www.jawsfood.co.kr"
+    ]
+  },
+  {
+    "brandId": "brand-d3742bdc75b7cfff",
+    "brand": "청년다방",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "www.youngdabang.com",
+      "youngdabang.com"
+    ]
+  },
+  {
+    "brandId": "brand-b06d5a467c2e2917",
+    "brand": "두끼",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "dookki.co.kr",
+      "www.dookki.co.kr"
+    ]
+  },
+  {
+    "brandId": "brand-517e6e3a0f2a227b",
+    "brand": "스쿨푸드",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "schoolfood.freewebclub.com",
+      "www.schoolfood.freewebclub.com"
+    ]
+  },
+  {
+    "brandId": "brand-3af4368565dc9463",
+    "brand": "김가네",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "gimgane.co.kr",
+      "www.gimgane.co.kr"
+    ]
+  },
+  {
+    "brandId": "brand-09811efd43af8395",
+    "brand": "고봉민김밥인",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "kobongmin.com",
+      "www.kobongmin.com"
+    ]
+  },
+  {
+    "brandId": "brand-62da25d9478406f9",
+    "brand": "바르다김선생",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "teacherkim.co.kr",
+      "www.teacherkim.co.kr"
+    ]
+  },
+  {
+    "brandId": "brand-52b7eab533bf064f",
+    "brand": "홍콩반점0410",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "theborn.co.kr",
+      "www.theborn.co.kr"
+    ]
+  },
+  {
+    "brandId": "brand-98d0269278f56dd7",
+    "brand": "이비가짬뽕",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "ebiga.co.kr",
+      "www.ebiga.co.kr"
+    ]
+  },
+  {
+    "brandId": "brand-eb1ea6f3cfeef4a1",
+    "brand": "탕화쿵푸",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "tanghuokungfu.co.kr",
+      "www.tanghuokungfu.co.kr"
+    ]
+  },
+  {
+    "brandId": "brand-4971bd13f52f50ae",
+    "brand": "춘리마라탕",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "chunlimalatang.com",
+      "www.chunlimalatang.com"
+    ]
+  },
+  {
+    "brandId": "brand-bd40e3bf63110e3a",
+    "brand": "본죽",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "api.bonif.co.kr",
+      "bonif.co.kr",
+      "www.bonif.co.kr"
+    ]
+  },
+  {
+    "brandId": "brand-2d083c367c257949",
+    "brand": "본죽&비빔밥",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "api.bonif.co.kr",
+      "bonif.co.kr",
+      "www.bonif.co.kr"
+    ]
+  },
+  {
+    "brandId": "brand-d788dc4427d306fe",
+    "brand": "죽이야기",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "jukstory.com",
+      "www.jukstory.com"
+    ]
+  },
+  {
+    "brandId": "brand-440ae94a942a4921",
+    "brand": "국수나무",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "namuya.co.kr",
+      "www.namuya.co.kr"
+    ]
+  },
+  {
+    "brandId": "brand-71bb2f53e15c0897",
+    "brand": "역전우동0410",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "udon0410.com",
+      "www.udon0410.com"
+    ]
+  },
+  {
+    "brandId": "brand-2a13283561756adc",
+    "brand": "백소정",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "baeksojeong.com",
+      "www.baeksojeong.com"
+    ]
+  },
+  {
+    "brandId": "brand-8420421dae1f2ef3",
+    "brand": "홍익돈까스",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "hongikdonkatsu.com",
+      "www.hongikdonkatsu.com"
+    ]
+  },
+  {
+    "brandId": "brand-dfe7aafc7b485943",
+    "brand": "원할머니보쌈",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "wonandone.co.kr",
+      "www.wonandone.co.kr"
+    ]
+  },
+  {
+    "brandId": "brand-3ab715e02b724b84",
+    "brand": "놀부부대찌개",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "nolboo.co.kr",
+      "www.nolboo.co.kr"
+    ]
+  },
+  {
+    "brandId": "brand-3869f6f268d4afd6",
+    "brand": "한솥",
+    "adapter": "hansot-detail-kcal",
+    "sources": [
+      "Exact official product detail URL from menu catalog"
+    ],
+    "status": "REGISTERED",
+    "allowedHosts": [
+      "hsd.co.kr",
+      "www.hsd.co.kr"
+    ]
+  },
+  {
+    "brandId": "brand-39adcc9276d724e2",
+    "brand": "본도시락",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "api.bonif.co.kr",
+      "bonif.co.kr",
+      "www.bonif.co.kr"
+    ]
+  },
+  {
+    "brandId": "brand-e37848e7ad911d2a",
+    "brand": "본설렁탕",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "api.bonif.co.kr",
+      "bonif.co.kr",
+      "www.bonif.co.kr"
+    ]
+  },
+  {
+    "brandId": "brand-e1baf7db5ac285a7",
+    "brand": "본우리반상",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "api.bonif.co.kr",
+      "bonif.co.kr",
+      "www.bonif.co.kr"
+    ]
+  },
+  {
+    "brandId": "brand-0e65f6b77b14e324",
+    "brand": "멘지",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "api.bonif.co.kr",
+      "bonif.co.kr",
+      "www.bonif.co.kr"
+    ]
+  },
+  {
+    "brandId": "brand-5cf4a5c95ff85d3a",
+    "brand": "본흑염소·능이삼계탕",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "api.bonif.co.kr",
+      "bonif.co.kr",
+      "www.bonif.co.kr"
+    ]
+  },
+  {
+    "brandId": "brand-9e7aeb464781f115",
+    "brand": "핵밥",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "hecbob.com",
+      "www.hecbob.com"
+    ]
+  },
+  {
+    "brandId": "brand-97c4b3edd331ff83",
+    "brand": "채선당",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "chaesundang.co.kr",
+      "www.chaesundang.co.kr"
+    ]
+  },
+  {
+    "brandId": "brand-a9a4ba8b5ad2ca3d",
+    "brand": "소담촌",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "sodamchon.com",
+      "www.sodamchon.com"
+    ]
+  },
+  {
+    "brandId": "brand-1da93338e8beedb8",
+    "brand": "샐러디",
+    "adapter": "salady-nutrition-pdf",
+    "sources": [
+      "https://salady.com/menu/content2"
+    ],
+    "status": "REGISTERED",
+    "allowedHosts": [
+      "salady.com",
+      "www.salady.com"
+    ],
+    "url": "https://salady.com/pdf/nutrition.pdf?ver=260915"
+  },
+  {
+    "brandId": "brand-3c12a830fd8e20dd",
+    "brand": "샐러디&샌드위치",
+    "adapter": "salady-nutrition-pdf",
+    "sources": [
+      "https://salady.com/menu/content2"
+    ],
+    "status": "REGISTERED",
+    "allowedHosts": [
+      "salady.com",
+      "www.salady.com"
+    ],
+    "url": "https://salady.com/pdf/nutrition.pdf?ver=260915"
+  },
+  {
+    "brandId": "brand-b028605b3b64ee47",
+    "brand": "포케올데이",
+    "adapter": null,
+    "sources": [
+      "https://pokeallday.co.kr/nutrition"
+    ],
+    "status": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+    "allowedHosts": [
+      "pokeallday.co.kr",
+      "www.pokeallday.co.kr"
+    ],
+    "evidenceStatus": "SOURCE_FOUND"
+  },
+  {
+    "brandId": "brand-1bc146a27ab0e421",
+    "brand": "슬로우캘리",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "slowcali.co.kr",
+      "www.slowcali.co.kr"
+    ]
+  },
+  {
+    "brandId": "brand-29327af78758b6f5",
+    "brand": "써브웨이",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "subway.co.kr",
+      "www.subway.co.kr"
+    ]
+  },
+  {
+    "brandId": "brand-70ce8c35375d9fae",
+    "brand": "이삭토스트",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "isaac-toast.co.kr",
+      "www.isaac-toast.co.kr"
+    ]
+  },
+  {
+    "brandId": "brand-8032e5a2633bc1e3",
+    "brand": "에그드랍",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "eggdrop.com",
+      "www.eggdrop.com"
+    ]
+  },
+  {
+    "brandId": "brand-adb1fa3e7378cd49",
+    "brand": "캠토토스트",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "camtotoast.com",
+      "www.camtotoast.com"
+    ]
+  },
+  {
+    "brandId": "brand-d715f712d950d0e8",
+    "brand": "피자스쿨",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "pizzaschool.net",
+      "www.pizzaschool.net"
+    ]
+  },
+  {
+    "brandId": "brand-2891bc50e9e622e6",
+    "brand": "파파존스",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "m.pji.co.kr",
+      "www.m.pji.co.kr"
+    ]
+  },
+  {
+    "brandId": "brand-f2c4cd89053b4ff8",
+    "brand": "청년피자",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "www.youngmanpizza.co.kr",
+      "youngmanpizza.co.kr"
+    ]
+  },
+  {
+    "brandId": "brand-e7bc4d2ab88a800c",
+    "brand": "노랑통닭",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "norangtongdak.co.kr",
+      "www.norangtongdak.co.kr"
+    ]
+  },
+  {
+    "brandId": "brand-c253f58a17fc9b81",
+    "brand": "지코바",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "gcova.co.kr",
+      "www.gcova.co.kr"
+    ]
+  },
+  {
+    "brandId": "brand-c242a10bbca4c411",
+    "brand": "처갓집양념치킨",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "cheogajip.co.kr",
+      "www.cheogajip.co.kr"
+    ]
+  },
+  {
+    "brandId": "brand-1e99fd5b57a9f5cb",
+    "brand": "피자마루",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "pizzamaru.kr",
+      "www.pizzamaru.kr"
+    ]
+  },
+  {
+    "brandId": "brand-f4abfad35563de25",
+    "brand": "멕시카나",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "mexicana.co.kr",
+      "www.mexicana.co.kr"
+    ]
+  },
+  {
+    "brandId": "brand-b0d0c4de8cdf23bc",
+    "brand": "60계치킨",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "60chicken.com",
+      "www.60chicken.com"
+    ]
+  },
+  {
+    "brandId": "brand-57244fb148c377c6",
+    "brand": "반올림피자",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "order.banolimpizza.com",
+      "www.order.banolimpizza.com"
+    ]
+  },
+  {
+    "brandId": "brand-41b772c57bada9f9",
+    "brand": "프랭크버거",
+    "adapter": null,
+    "sources": [
+      "https://frankburger.co.kr/html/ingredient.html"
+    ],
+    "status": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+    "allowedHosts": [
+      "frankburger.co.kr",
+      "www.frankburger.co.kr"
+    ],
+    "evidenceStatus": "SOURCE_FOUND"
+  },
+  {
+    "brandId": "brand-69ad361cd26106b1",
+    "brand": "노브랜드버거",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "shinsegaefood.com",
+      "www.shinsegaefood.com"
+    ]
+  },
+  {
+    "brandId": "brand-2cf7eb0ea975163d",
+    "brand": "새마을식당",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "newmaul.com",
+      "www.newmaul.com"
+    ]
+  },
+  {
+    "brandId": "brand-537263c2bc830a08",
+    "brand": "빽다방",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "paikdabang.com",
+      "www.paikdabang.com"
+    ]
+  },
+  {
+    "brandId": "brand-1742b64ed29107ac",
+    "brand": "배스킨라빈스",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "baskinrobbins.co.kr",
+      "www.baskinrobbins.co.kr"
+    ]
+  },
+  {
+    "brandId": "brand-7dfea7361415a819",
+    "brand": "파리바게뜨",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "paris.co.kr",
+      "www.paris.co.kr"
+    ]
+  },
+  {
+    "brandId": "brand-61b7f46d49620328",
+    "brand": "요아정",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "www.yoajung.co.kr",
+      "yoajung.co.kr"
+    ]
+  },
+  {
+    "brandId": "brand-3d3d7aa34cc1f578",
+    "brand": "미소야",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "misoya.co.kr",
+      "www.misoya.co.kr"
+    ]
+  },
+  {
+    "brandId": "brand-53314eb3760b340b",
+    "brand": "할리스",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "hollys.co.kr",
+      "www.hollys.co.kr"
+    ]
+  },
+  {
+    "brandId": "brand-07de1aee884692c4",
+    "brand": "7번가피자",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "7thpizza.com",
+      "www.7thpizza.com"
+    ]
+  },
+  {
+    "brandId": "brand-35225ece8d72c5b9",
+    "brand": "토마토도시락",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "tomatodosirak.co.kr",
+      "www.tomatodosirak.co.kr"
+    ]
+  },
+  {
+    "brandId": "brand-977382baa9a9159b",
+    "brand": "동대문엽기떡볶이",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "www.yupdduk.com",
+      "yupdduk.com"
+    ]
+  },
+  {
+    "brandId": "brand-fdb71b87248a93b9",
+    "brand": "공차",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "gong-cha.co.kr",
+      "www.gong-cha.co.kr"
+    ]
+  },
+  {
+    "brandId": "brand-9d8b8d6c615c6ee7",
+    "brand": "던킨",
+    "adapter": "dunkin-nutrition-pages",
+    "sources": [
+      "https://www.dunkindonuts.co.kr/nutrition"
+    ],
+    "status": "REGISTERED",
+    "allowedHosts": [
+      "dunkindonuts.co.kr",
+      "www.dunkindonuts.co.kr"
+    ],
+    "url": "https://www.dunkindonuts.co.kr/nutrition"
+  },
+  {
+    "brandId": "brand-5203807bf8b4bc7a",
+    "brand": "족발야시장",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "www.xn--ih3bm7ju8bi1cb3a.com",
+      "xn--ih3bm7ju8bi1cb3a.com"
+    ]
+  },
+  {
+    "brandId": "brand-7b853dd449517e57",
+    "brand": "호식이두마리치킨",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "9922.co.kr",
+      "www.9922.co.kr"
+    ]
+  },
+  {
+    "brandId": "brand-a0302f70b937755f",
+    "brand": "뚜레쥬르",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "tlj.co.kr",
+      "www.tlj.co.kr"
+    ]
+  },
+  {
+    "brandId": "brand-9f125dd967fd168e",
+    "brand": "크리스피크림도넛",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "lotteeatz.com",
+      "www.lotteeatz.com"
+    ]
+  },
+  {
+    "brandId": "brand-e32a9313e634ead7",
+    "brand": "홍종흔베이커리",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "hjhbakery.com",
+      "www.hjhbakery.com"
+    ]
+  },
+  {
+    "brandId": "brand-a7444ee050c62abd",
+    "brand": "성심당",
+    "adapter": null,
+    "sources": [
+      "https://sungsimdang.co.kr/page/71"
+    ],
+    "status": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+    "allowedHosts": [
+      "sungsimdang.co.kr",
+      "www.sungsimdang.co.kr",
+      "sungsimdangmall.co.kr",
+      "www.sungsimdangmall.co.kr"
+    ],
+    "evidenceStatus": "SOURCE_FOUND"
+  },
+  {
+    "brandId": "brand-cf57c271fe920362",
+    "brand": "이성당",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "leesungdang1945.com",
+      "www.leesungdang1945.com"
+    ]
+  },
+  {
+    "brandId": "brand-db7ae070c1a211f3",
+    "brand": "응급실국물떡볶이",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "www.응급실국물떡볶이.kr",
+      "응급실국물떡볶이.kr"
+    ]
+  },
+  {
+    "brandId": "brand-87f52291726f6891",
+    "brand": "국대떡볶이",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "kukde.kr",
+      "www.kukde.kr"
+    ]
+  },
+  {
+    "brandId": "brand-c250fc357adcb9df",
+    "brand": "파스쿠찌",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "caffe-pascucci.co.kr",
+      "www.caffe-pascucci.co.kr",
+      "www.pascucci.co.kr",
+      "pascucci.co.kr"
+    ]
+  },
+  {
+    "brandId": "brand-1b6e60f7965bce11",
+    "brand": "달콤",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "dalkomm.com",
+      "www.dalkomm.com"
+    ]
+  },
+  {
+    "brandId": "brand-5f1ac0e21ddf73b1",
+    "brand": "우지커피",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "oozycoffee.com",
+      "www.oozycoffee.com"
+    ]
+  },
+  {
+    "brandId": "brand-9fa9c3eca7bcf563",
+    "brand": "더벤티",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "theventi.co.kr",
+      "www.theventi.co.kr"
+    ]
+  },
+  {
+    "brandId": "brand-2e050b39b22a7280",
+    "brand": "엔제리너스",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "lotteeatz.com",
+      "www.lotteeatz.com"
+    ]
+  },
+  {
+    "brandId": "brand-01c5e2f727401b55",
+    "brand": "설빙",
+    "adapter": null,
+    "sources": [],
+    "status": "NUTRITION_SOURCE_MISSING",
+    "allowedHosts": [
+      "sulbing.com",
+      "www.sulbing.com"
+    ]
+  }
+]

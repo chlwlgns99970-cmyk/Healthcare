@@ -57,6 +57,11 @@ def validate(menu, brand):
         assert menu.get('nutritionSourceUrl') == menu['sourceUrl']
     expected = stable_id(menu['brandId'], menu['externalId'], menu['name'], menu.get('category',''))
     assert menu['id'] == expected
+    if menu.get('nutritionStatus'):
+        from franchise_nutrition import STATUSES, validate_nutrition
+        assert menu['nutritionStatus'] in STATUSES
+        if menu.get('officialNutrition'):
+            validate_nutrition(menu['officialNutrition'], brand['allowedHosts'])
 
 class SourcePage(HTMLParser):
     """Only explicit brand selectors and schema.org MenuItem; never arbitrary page text."""
@@ -351,12 +356,18 @@ def run(out, run_key, brands=None, batches=None, target_brand_ids=None):
         if manifest.get('runKey')==run_key or previous_report.get('runId')==run_key:
             return {'status':'ALREADY_COMPLETED','runKey':run_key}
         started=datetime.now(timezone.utc).isoformat()
+        live_fetch = batches is None
         if batches is None:
             selected=[b for b in brands if target_brand_ids is None or b['brandId'] in target_brand_ids]
             assert selected
             with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool: batches=list(pool.map(fetch,selected))
         static=json.loads(SEED.read_text(encoding='utf-8'))
         menus,counts=merge(existing,batches,brands,static)
+        nutrition_audit = None
+        if live_fetch and batches and any(b['status']=='SUCCESS' for b in batches):
+            from franchise_nutrition import REGISTRY, refresh
+            if REGISTRY.exists():
+                menus,nutrition_audit=refresh(menus)
         report=dict(runId=run_key,triggerType=os.environ.get('GITHUB_EVENT_NAME','local'),startedAt=started,endedAt=datetime.now(timezone.utc).isoformat(),timezone='Asia/Seoul',
             dateKst=datetime.fromtimestamp(time.time()+9*3600,timezone.utc).date().isoformat(),
             scope='TARGETED_VERIFICATION' if target_brand_ids is not None else 'FULL',registryBrands=len(brands),
@@ -364,6 +375,9 @@ def run(out, run_key, brands=None, batches=None, target_brand_ids=None):
             successBrands=sum(b['status']=='SUCCESS' for b in batches),failedBrands=sum(b['status']=='FETCH_FAILED' for b in batches),
             sourceMissing=sum(b['status']=='SOURCE_MISSING' for b in batches),reviewRequired=sum(b['status']=='REVIEW_REQUIRED' for b in batches),
             **counts,brands=[{k:v for k,v in b.items() if k!='menus'} for b in batches])
+        if nutrition_audit:
+            report['nutritionAudit']={k:v for k,v in nutrition_audit.items() if k!='menus'}
+            atomic_write(out/'latest-franchise-nutrition-audit.json',json.dumps(nutrition_audit,ensure_ascii=False,indent=2).encode())
         by_id={b['brandId']:b for b in brands}
         states=[automation_state(by_id[b['brandId']],b) for b in batches if b.get('brandId') in by_id]
         report.update(autoReadyBrands=states.count('AUTO_READY'),sourceBlockedBrands=states.count('SOURCE_BLOCKED'),
@@ -390,7 +404,8 @@ def run(out, run_key, brands=None, batches=None, target_brand_ids=None):
             by_menu_id={m['id']:m for m in menus}
             assert len(by_menu_id)==len(menus),'Duplicate stable menu ID'
             for old in existing.get('menus',[]):
-                assert old['id'] in by_menu_id and all(by_menu_id[old['id']].get(k)==v for k,v in old.items()),'Existing menu field changed'
+                assert old['id'] in by_menu_id and all(by_menu_id[old['id']].get(k)==v for k,v in old.items() if k not in ('officialNutrition','nutritionStatus')),'Existing menu identity or legacy field changed'
+            for menu in menus:validate(menu,by_id[menu['brandId']])
             assert all(m.get('sourceType') in SOURCE_TYPES for m in menus),'Missing verified menu provenance'
             payload=json.dumps(dict(schemaVersion=1,menus=sorted(menus,key=lambda m:m['id'])),ensure_ascii=False,sort_keys=True,separators=(',',':')).encode()
             checksum=hashlib.sha256(payload).hexdigest();filename='catalog-'+checksum+'.json'
