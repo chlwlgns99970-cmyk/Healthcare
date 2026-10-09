@@ -1,0 +1,126 @@
+{
+  "runId": "operator-final-102-2026-10-09-v3",
+  "triggerType": "workflow_dispatch",
+  "startedAt": "2026-10-09T12:18:11.229218+00:00",
+  "endedAt": "2026-10-09T12:18:14.175081+00:00",
+  "timezone": "Asia/Seoul",
+  "dateKst": "2026-10-09",
+  "scope": "TARGETED_VERIFICATION",
+  "registryBrands": 102,
+  "targetBrands": 3,
+  "successBrands": 1,
+  "failedBrands": 2,
+  "sourceMissing": 0,
+  "reviewRequired": 0,
+  "candidateCount": 15,
+  "publishedNewCount": 0,
+  "duplicateCount": 15,
+  "invalidCount": 0,
+  "identityReviewCount": 0,
+  "newWithNutrition": 0,
+  "newWithoutNutrition": 0,
+  "autoReadyBrands": 1,
+  "sourceBlockedBrands": 1,
+  "adapterRequiredBrands": 0,
+  "brokenBrands": 1,
+  "reviewRequiredBrands": 0,
+  "totalBrands": 102,
+  "finishedAt": "2026-10-09T12:18:14.175081+00:00",
+  "noChangeBrands": 1,
+  "newMenuBrands": 0,
+  "failedCheckBrands": 2,
+  "browserBasedBrands": 0,
+  "apiBasedBrands": 0,
+  "parserBasedBrands": 1,
+  "sourceTypeMenuCounts": {
+    "API": 0,
+    "BROWSER": 371,
+    "CSV": 0,
+    "HTML": 3582,
+    "HYBRID": 0,
+    "JSON": 1150,
+    "PDF": 0,
+    "XLSX": 0
+  },
+  "missingSourceTypeCount": 0,
+  "catalogVersion": "1914b7a5bb3e6149910f742ddf8cba4f379634544cba51fef95cd8f71df0faeb",
+  "checksum": "1914b7a5bb3e6149910f742ddf8cba4f379634544cba51fef95cd8f71df0faeb",
+  "status": "PUBLISHED",
+  "brands": [
+    {
+      "brandId": "brand-044f74822bd63a2c",
+      "lastCheckedAt": "2026-10-09T12:18:11.234671+00:00",
+      "lastSuccessAt": null,
+      "lastResult": "FAILED",
+      "lastMenuCount": 0,
+      "lastNewCount": 0,
+      "adapterTypes": [
+        "twosome-navigation"
+      ],
+      "sourceTypes": [
+        "BROWSER"
+      ],
+      "sources": [
+        {
+          "sourceUrl": "https://mo.twosome.co.kr/mn/menuInfoList.do",
+          "adapter": "twosome-navigation",
+          "sourceType": "BROWSER",
+          "status": "FETCH_FAILED",
+          "error": "PublicAccessDenied",
+          "errorReason": "ACCESS_DENIED: 403",
+          "attempts": 1
+        }
+      ]
+    },
+    {
+      "brandId": "brand-9fe52457ea35b575",
+      "lastCheckedAt": "2026-10-09T12:18:11.233881+00:00",
+      "lastSuccessAt": "2026-10-09T12:18:11.233881+00:00",
+      "lastResult": "NO_CHANGE",
+      "lastMenuCount": 15,
+      "lastNewCount": 0,
+      "adapterTypes": [
+        "reviewed-html"
+      ],
+      "sourceTypes": [
+        "HTML"
+      ],
+      "sources": [
+        {
+          "sourceUrl": "https://goldjjimdak.com/html/menu.php",
+          "adapter": "reviewed-html",
+          "sourceType": "HTML",
+          "status": "SUCCESS",
+          "error": null,
+          "errorReason": null,
+          "attempts": 1
+        }
+      ]
+    },
+    {
+      "brandId": "brand-a7444ee050c62abd",
+      "lastCheckedAt": "2026-10-09T12:18:13.383919+00:00",
+      "lastSuccessAt": null,
+      "lastResult": "FAILED",
+      "lastMenuCount": 0,
+      "lastNewCount": 0,
+      "adapterTypes": [
+        "sungsim-food-list"
+      ],
+      "sourceTypes": [
+        "BROWSER"
+      ],
+      "sources": [
+        {
+          "sourceUrl": "https://www.sungsimdangmall.co.kr/shop/product/product_lists?sh_category1_cd=10000",
+          "adapter": "sungsim-food-list",
+          "sourceType": "BROWSER",
+          "status": "FETCH_FAILED",
+          "error": "Error",
+          "errorReason": "Page.goto: net::ERR_CONNECTION_RESET at https://www.sungsimdangmall.co.kr/shop/product/product_lists?sh_category1_cd=10000\nCall log:\n  - navigating to \"https://www.sungsimdangmall.co.kr/shop/product/p",
+          "attempts": 2
+        }
+      ]
+    }
+  ]
+}

@@ -1530,7 +1530,7 @@
   },
   {
     "brandId": "brand-044f74822bd63a2c",
-    "lastCheckedAt": "2026-10-09T12:09:32.896152+00:00",
+    "lastCheckedAt": "2026-10-09T12:18:11.234671+00:00",
     "lastSuccessAt": null,
     "lastResult": "FAILED",
     "lastMenuCount": 0,
@@ -1539,16 +1539,16 @@
       "twosome-navigation"
     ],
     "sourceTypes": [
-      "HTML"
+      "BROWSER"
     ],
     "sources": [
       {
         "sourceUrl": "https://mo.twosome.co.kr/mn/menuInfoList.do",
         "adapter": "twosome-navigation",
-        "sourceType": "HTML",
+        "sourceType": "BROWSER",
         "status": "FETCH_FAILED",
-        "error": "HTTPError",
-        "errorReason": "HTTP Error 403: Forbidden",
+        "error": "PublicAccessDenied",
+        "errorReason": "ACCESS_DENIED: 403",
         "attempts": 1
       }
     ]
@@ -2579,10 +2579,10 @@
   },
   {
     "brandId": "brand-9fe52457ea35b575",
-    "lastCheckedAt": "2026-10-09T12:10:09.123941+00:00",
-    "lastSuccessAt": "2026-10-08T23:46:03.039323+00:00",
-    "lastResult": "FAILED",
-    "lastMenuCount": 0,
+    "lastCheckedAt": "2026-10-09T12:18:11.233881+00:00",
+    "lastSuccessAt": "2026-10-09T12:18:11.233881+00:00",
+    "lastResult": "NO_CHANGE",
+    "lastMenuCount": 15,
     "lastNewCount": 0,
     "adapterTypes": [
       "reviewed-html"
@@ -2595,9 +2595,9 @@
         "sourceUrl": "https://goldjjimdak.com/html/menu.php",
         "adapter": "reviewed-html",
         "sourceType": "HTML",
-        "status": "FETCH_FAILED",
-        "error": "URLError",
-        "errorReason": "<urlopen error [Errno -3] Temporary failure in name resolution>",
+        "status": "SUCCESS",
+        "error": null,
+        "errorReason": null,
         "attempts": 1
       }
     ]
@@ -6454,7 +6454,7 @@
   },
   {
     "brandId": "brand-a7444ee050c62abd",
-    "lastCheckedAt": "2026-10-09T12:13:00.804080+00:00",
+    "lastCheckedAt": "2026-10-09T12:18:13.383919+00:00",
     "lastSuccessAt": null,
     "lastResult": "FAILED",
     "lastMenuCount": 0,
@@ -6473,7 +6473,7 @@
         "status": "FETCH_FAILED",
         "error": "Error",
         "errorReason": "Page.goto: net::ERR_CONNECTION_RESET at https://www.sungsimdangmall.co.kr/shop/product/product_lists?sh_category1_cd=10000\nCall log:\n  - navigating to \"https://www.sungsimdangmall.co.kr/shop/product/p",
-        "attempts": 1
+        "attempts": 2
       }
     ]
   },
