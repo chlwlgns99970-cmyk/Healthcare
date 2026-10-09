@@ -9,6 +9,13 @@ FIX = Path(__file__).resolve().parents[1] / 'data-source/franchise-sync/fixtures
 
 
 class NutritionTests(unittest.TestCase):
+    def test_daily_source_discovery_uses_official_nutrition_links_only(self):
+        from discover_franchise_nutrition_sources import discover
+        brand=dict(brandId='b',name='공식 브랜드',sourceUrl='https://official.example/',allowedHosts=['official.example'])
+        markup=b'<a href="/nutrition">Nutrition</a><a href="https://blog.example/nutrition">Nutrition</a><a href="/promotion">\xec\x98\x81\xec\x96\x91</a>'
+        rows=discover([brand],out=None,fetcher=lambda _:markup)
+        self.assertEqual([dict(url='https://official.example/nutrition',label='Nutrition')],rows[0]['links'])
+
     def test_reviewed_snapshot_retains_capture_date_after_network_timeout(self):
         import franchise_nutrition as n
         from unittest.mock import patch

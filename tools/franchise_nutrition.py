@@ -278,6 +278,7 @@ def status(fact):
 
 
 def refresh(menus, registry=None, fetcher=None):
+    discover_live = registry is None and fetcher is None
     registry = registry if registry is not None else json.loads(REGISTRY.read_text(encoding='utf-8'))
     sources = {b['brandId']: b for b in registry}
     checked = datetime.now(timezone.utc).isoformat()
@@ -293,6 +294,25 @@ def refresh(menus, registry=None, fetcher=None):
             return payload
 
     get = fetcher or fetch
+    discovery=[]
+    if discover_live:
+        from franchise_daily_sync import CONFIG
+        from discover_franchise_nutrition_sources import discover
+        brands=json.loads(CONFIG.read_text(encoding='utf-8'))
+        unresolved=[b for b in brands if sources.get(b['brandId'],{}).get('adapter') not in PARSERS]
+        discovery=discover(unresolved,out=None)
+        for row in discovery:
+            found=[]
+            for link in row['links']:
+                try:
+                    payload=get(link['url']);text=payload.decode('utf-8',errors='replace')
+                    # A link alone is not proof that usable nutrition exists.
+                    if re.search(r'kcal|열량|단백질|영양성분',text,re.I):found.append(link['url'])
+                except Exception:pass
+            row['confirmedNutritionSources']=found
+            if found:
+                source=sources.get(row['brandId'])
+                if source is not None:source['evidenceStatus']='SOURCE_FOUND';source['discoveredSources']=found
     shared = {}
     # A paginated page contains multiple products. Read each official page once.
     page_urls={m['sourceUrl'] for m in menus if sources.get(m['brandId'],{}).get('adapter')=='ediya-product-nutrition'}
@@ -356,6 +376,7 @@ def refresh(menus, registry=None, fetcher=None):
     newly=sum(linked(m.get('officialNutrition',{})) and not linked(old[m['id']]) for m in refreshed)
     changed=sum(linked(old[m['id']]) and any(old[m['id']].get(k)!=m.get('officialNutrition',{}).get(k) for k in FIELDS+('servingAmount','servingUnit')) for m in refreshed)
     return refreshed, dict(total=len(refreshed), states=dict(counts), known=known,
+                           sourceDiscovery=discovery,
                            nutritionLinkedMenus=sum(linked(m.get('officialNutrition',{})) for m in refreshed),
                            newlyVerifiedMenus=newly, nutritionChangedMenus=changed,
                            reviewedSnapshotsRetained=sum(a.get('reviewedSnapshotRetained',False) for a in audit),
