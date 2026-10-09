@@ -1,46 +1,46 @@
 {
   "total": 5103,
   "states": {
-    "NUTRITION_SOURCE_MISSING": 1911,
-    "NUTRITION_SOURCE_FOUND_UNMATCHED": 683,
-    "NUTRITION_COMPLETE": 1554,
+    "NUTRITION_SOURCE_MISSING": 1658,
+    "NUTRITION_SOURCE_FOUND_UNMATCHED": 903,
+    "NUTRITION_COMPLETE": 1587,
     "NUTRITION_PARTIAL": 898,
     "NUTRITION_NOT_PUBLISHED": 57
   },
   "known": {
-    "energyKcal": 2441,
+    "energyKcal": 2474,
     "carbohydrateGrams": 398,
-    "proteinGrams": 2211,
+    "proteinGrams": 2244,
     "fatGrams": 377,
-    "sodiumMilligrams": 2216,
-    "servingAmount": 1573
+    "sodiumMilligrams": 2249,
+    "servingAmount": 1606
   },
   "sourceDiscovery": [
     {
       "brandId": "brand-24df7e63c9c2314e",
       "brand": "롯데리아",
       "url": "https://www.lotteeatz.com/",
-      "checkedAt": "2026-10-09T15:36:29.531211+00:00",
+      "checkedAt": "2026-10-09T15:47:20.813306+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "ca6becc6216f927f32866d33df225789395bd9e9ad919091124cb9011c26cc7d",
+      "sourceSha256": "e48f4fbfd53e53ec5a4ea1676ed5b425fed35f1d9a51b9cda997bebb50431d3e",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-2c14410b57ba9fc4",
       "brand": "KFC",
       "url": "https://www.kfckorea.com/",
-      "checkedAt": "2026-10-09T15:36:29.531533+00:00",
+      "checkedAt": "2026-10-09T15:47:20.813716+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "fc75af30d1ed5b1498a5fbb1c9176bcc9c25b2508076921e5a82af766e645d2f",
+      "sourceSha256": "a6333b157944b8f3e98c025989ca79a29bf7d09eedc4bffc75fa0152adeaf6b4",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-b0f892d2c591ca13",
       "brand": "맘스터치",
       "url": "https://www.momstouch.co.kr/",
-      "checkedAt": "2026-10-09T15:36:29.531746+00:00",
+      "checkedAt": "2026-10-09T15:47:20.814254+00:00",
       "links": [],
       "error": "URLError",
       "reason": "<urlopen error timed out>",
@@ -50,7 +50,7 @@
       "brandId": "brand-f91351461391155a",
       "brand": "도미노피자",
       "url": "https://www.dominos.co.kr/",
-      "checkedAt": "2026-10-09T15:36:29.531974+00:00",
+      "checkedAt": "2026-10-09T15:47:20.814569+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "20e9a3e939009ec79e19230d5a54dda58dffc23ba62a38227bafe75e9fef2ea2",
@@ -60,17 +60,17 @@
       "brandId": "brand-dfd7712a868b7cd2",
       "brand": "피자헛",
       "url": "https://www.pizzahut.co.kr/",
-      "checkedAt": "2026-10-09T15:36:30.630680+00:00",
+      "checkedAt": "2026-10-09T15:47:21.770832+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "5cfde7a2c255e57484f061351760b51d44c95b41d43d80e4f24c99561800fbd2",
+      "sourceSha256": "61c41fb4830005de7796ec004659eb8b4d41bade304eb252e6d9a598e9c5ab55",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-792c9f221e49eb7e",
       "brand": "미스터피자",
       "url": "https://www.mrpizza.co.kr/",
-      "checkedAt": "2026-10-09T15:36:31.227316+00:00",
+      "checkedAt": "2026-10-09T15:47:22.166839+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "6337fd5a5f78b04ec04b48718cc5f1350698ee4a3ffe9ca43c96a9dfb39a625e",
@@ -80,7 +80,7 @@
       "brandId": "brand-45ddca38a87b3dcd",
       "brand": "BHC",
       "url": "https://www.bhc.co.kr/",
-      "checkedAt": "2026-10-09T15:36:31.662047+00:00",
+      "checkedAt": "2026-10-09T15:47:22.816829+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "5aab57dff467709fe9b4368c822fb50824d40c52e1bcd64523e8111282c4f4ac",
@@ -90,17 +90,17 @@
       "brandId": "brand-dfbc0be6a9fb565a",
       "brand": "굽네치킨",
       "url": "https://www.goobne.co.kr/",
-      "checkedAt": "2026-10-09T15:36:32.137371+00:00",
+      "checkedAt": "2026-10-09T15:47:22.909425+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "d947776bec8ea5bbc9548e595f388731384f1594123787b8905e114fd5aa98a7",
+      "sourceSha256": "9429527839fad969ad2c2be843faf83da599195b134d6e8cab3d086d09b0d602",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-913a908f005583f0",
       "brand": "BBQ",
       "url": "https://www.bbq.co.kr/",
-      "checkedAt": "2026-10-09T15:36:32.833689+00:00",
+      "checkedAt": "2026-10-09T15:47:23.727460+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "b1f770e613bf0272edb3d8cfe0db7e901394f4074f49bd02661aec533e15423f",
@@ -110,17 +110,17 @@
       "brandId": "brand-1c90aeff2ad68611",
       "brand": "네네치킨",
       "url": "https://nenechicken.com/",
-      "checkedAt": "2026-10-09T15:36:34.404574+00:00",
+      "checkedAt": "2026-10-09T15:47:24.939410+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "8007210e7788f63a936f3fe2f440a689814d5b7dc0fe7d77903c7be416eec603",
+      "sourceSha256": "0f09266a1870eaae18a1102bba887ce01c09bd0f0f202dde21fb22ae8afa6a61",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-044f74822bd63a2c",
       "brand": "투썸플레이스",
       "url": "https://www.twosome.co.kr/",
-      "checkedAt": "2026-10-09T15:36:35.225757+00:00",
+      "checkedAt": "2026-10-09T15:47:25.917161+00:00",
       "links": [],
       "error": "HTTPError",
       "reason": "HTTP Error 403: Forbidden",
@@ -130,37 +130,27 @@
       "brandId": "brand-9bd2fd2f30a9da68",
       "brand": "컴포즈커피",
       "url": "https://composecoffee.com/",
-      "checkedAt": "2026-10-09T15:36:35.481496+00:00",
+      "checkedAt": "2026-10-09T15:47:26.086337+00:00",
       "links": [],
       "error": "HTTPError",
       "reason": "HTTP Error 403: Forbidden",
       "confirmedNutritionSources": []
     },
     {
-      "brandId": "brand-149ee0d555be8e34",
-      "brand": "매머드커피",
-      "url": "https://mmthcoffee.com/",
-      "checkedAt": "2026-10-09T15:36:35.890226+00:00",
-      "links": [],
-      "httpStatus": 200,
-      "sourceSha256": "2eb8713f3d38e9353faebb24d1805ef5e11e261144061e1b4ffa5fa937ce2aaa",
-      "confirmedNutritionSources": []
-    },
-    {
       "brandId": "brand-2366ea85553dc984",
       "brand": "두찜",
       "url": "https://www.twozzim.com/",
-      "checkedAt": "2026-10-09T15:36:35.996134+00:00",
+      "checkedAt": "2026-10-09T15:47:26.114179+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "bf4c707310114d74b462d2c978e308cbafd436dd52743313b686662b96b909ae",
+      "sourceSha256": "5947ba766ecc4db35d1e7c608875c5bba8b9d3d034d23827eec5eae0f4a0036c",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-9bbe44a999e4d158",
       "brand": "봉추찜닭",
       "url": "http://www.bongchu.com/layout/res/home.php?go=page1.0&mid=10",
-      "checkedAt": "2026-10-09T15:36:36.040341+00:00",
+      "checkedAt": "2026-10-09T15:47:26.263422+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "f8b4739ff04b19fe582ab433a18f2b5bb5f72bbaff7c637ab2fe1ebd68bec540",
@@ -170,47 +160,47 @@
       "brandId": "brand-9fe52457ea35b575",
       "brand": "일미리금계찜닭",
       "url": "https://goldjjimdak.com/main.php",
-      "checkedAt": "2026-10-09T15:36:36.752564+00:00",
+      "checkedAt": "2026-10-09T15:47:26.642677+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "261f9ee31f788166303bc72946111164816898c299aefbfac38d8cd3e25722c6",
+      "sourceSha256": "d9630359d3fa053ff7e01c182901139dbdd2b861a61e56be6741924b38fc66c1",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-6b4062eb7d56bbc2",
       "brand": "육수당",
       "url": "https://yuksudang.com/",
-      "checkedAt": "2026-10-09T15:36:37.349491+00:00",
+      "checkedAt": "2026-10-09T15:47:26.813228+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "023c3f05cae1affcfbe008cdfcb7d73142ac499b2fbe678156cdeceaa02af1e0",
+      "sourceSha256": "ec7edf998641ceaa600054e94791645db77201646cdfa31e632b27ff5fac667b",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-e237cdd96675b8e9",
       "brand": "현대옥",
       "url": "http://www.hyundaiok.com/menu",
-      "checkedAt": "2026-10-09T15:36:37.513165+00:00",
+      "checkedAt": "2026-10-09T15:47:27.066872+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "ebc41b8da161756bef07de0d0d2fd144eef6aa857ede6976b97a0df58f2c114b",
+      "sourceSha256": "b79687310ad96caacf5a2f7f42d11669d1c1fc3cebcd6e5bb9a2ff723cb9dab4",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-a6a2f91c0a858eab",
       "brand": "이화수전통육개장",
       "url": "https://ihwasoo.com/",
-      "checkedAt": "2026-10-09T15:36:37.861830+00:00",
+      "checkedAt": "2026-10-09T15:47:27.656459+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "77430a71b0986308f9922465af47878e1d488cdb7a4c67eb2a600079ab4d0fa5",
+      "sourceSha256": "003325a3b704067598f0b39e0c8ae60fe86cf31c580487988288032bb2328ebd",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-e391193d95fb4b22",
       "brand": "신전떡볶이",
       "url": "https://sinjeon.co.kr/",
-      "checkedAt": "2026-10-09T15:36:38.254732+00:00",
+      "checkedAt": "2026-10-09T15:47:27.750014+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "6d1aa3882a8cc6ae863de82319bbd673606182b559eb0adf8fae500eb2f6b2eb",
@@ -220,7 +210,7 @@
       "brandId": "brand-d12ac5629277dd74",
       "brand": "죠스떡볶이",
       "url": "https://jawsfood.co.kr/menu/menu.html",
-      "checkedAt": "2026-10-09T15:36:38.313227+00:00",
+      "checkedAt": "2026-10-09T15:47:27.903072+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "51b4d350dd66e7b9b15432183776dabaf89a2e9e96b86ff22aa4358a3dcb1fc6",
@@ -230,47 +220,47 @@
       "brandId": "brand-d3742bdc75b7cfff",
       "brand": "청년다방",
       "url": "https://youngdabang.com/",
-      "checkedAt": "2026-10-09T15:36:38.677143+00:00",
+      "checkedAt": "2026-10-09T15:47:28.330522+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "b4dd41cbc0e44575e62e4a509919a5fe015149b31c74332d930ab62ef57ed130",
+      "sourceSha256": "085cef18f44c059ef274be1c7056669d5e5188dc73554b744f16a5309e88ae55",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-b06d5a467c2e2917",
       "brand": "두끼",
       "url": "https://www.dookki.co.kr/",
-      "checkedAt": "2026-10-09T15:36:39.059292+00:00",
+      "checkedAt": "2026-10-09T15:47:28.718139+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "8fef0b0a9a1a509814ab06bd98ba5b8a54c20d684a14961adac8a90d14a45bc4",
+      "sourceSha256": "67fd23fe835063202e20348b14e56cb834c9ba4149a2a8ba0fef0e26a4d323b4",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-517e6e3a0f2a227b",
       "brand": "스쿨푸드",
       "url": "http://schoolfood.freewebclub.com/menu/menu.html",
-      "checkedAt": "2026-10-09T15:36:39.293522+00:00",
+      "checkedAt": "2026-10-09T15:47:29.084050+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "1d2bb87205213a8913d8005406cfb13607c5177d1e5fa1d6883ce010305bf8ca",
+      "sourceSha256": "33c74e9fbb498256942a769ce7637bd60f523db087198faba56ffbea0a724fe0",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-3af4368565dc9463",
       "brand": "김가네",
       "url": "https://www.gimgane.co.kr/",
-      "checkedAt": "2026-10-09T15:36:39.511799+00:00",
+      "checkedAt": "2026-10-09T15:47:29.225077+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "39db7e81d6442c94ff292a7ebf0fedcde9e29d335475201b42b967755ff01cbf",
+      "sourceSha256": "df020fec9de1919cbed57c73a6cd468caf802a3d6d54a2f8730f078160ac9b1f",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-09811efd43af8395",
       "brand": "고봉민김밥인",
       "url": "https://www.kobongmin.com/renewal/main/main.php",
-      "checkedAt": "2026-10-09T15:36:40.137334+00:00",
+      "checkedAt": "2026-10-09T15:47:29.542891+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "59f61604560009e9d5c6248736bc6c8a18cf5524da99b67c625548865251f487",
@@ -280,7 +270,7 @@
       "brandId": "brand-62da25d9478406f9",
       "brand": "바르다김선생",
       "url": "https://www.teacherkim.co.kr/",
-      "checkedAt": "2026-10-09T15:36:40.730597+00:00",
+      "checkedAt": "2026-10-09T15:47:29.558991+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "753a7427c3a91c6e3dfc95a51758085af6926068d1a68b5dc07cbc3bdf5a3035",
@@ -290,7 +280,7 @@
       "brandId": "brand-52b7eab533bf064f",
       "brand": "홍콩반점0410",
       "url": "https://www.theborn.co.kr/theborn_brand/홍콩반점0410/",
-      "checkedAt": "2026-10-09T15:36:41.053527+00:00",
+      "checkedAt": "2026-10-09T15:47:30.246953+00:00",
       "links": [],
       "error": "UnicodeEncodeError",
       "reason": "'ascii' codec can't encode characters in position 19-22: ordinal not in range(128)",
@@ -300,7 +290,7 @@
       "brandId": "brand-98d0269278f56dd7",
       "brand": "이비가짬뽕",
       "url": "https://www.ebiga.co.kr/",
-      "checkedAt": "2026-10-09T15:36:41.053910+00:00",
+      "checkedAt": "2026-10-09T15:47:30.247458+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "30bb1510b98c35128e0f1bb125a849d8b9d0923b0da092f9fa2cb132e67ef86a",
@@ -310,7 +300,7 @@
       "brandId": "brand-eb1ea6f3cfeef4a1",
       "brand": "탕화쿵푸",
       "url": "https://tanghuokungfu.co.kr/default/brand/Introduction.php",
-      "checkedAt": "2026-10-09T15:36:41.065182+00:00",
+      "checkedAt": "2026-10-09T15:47:30.256289+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "9d033c1b26b6eec1873ea785f2f516741ffb497669419fbd36254d2e45f1de13",
@@ -320,7 +310,7 @@
       "brandId": "brand-4971bd13f52f50ae",
       "brand": "춘리마라탕",
       "url": "https://chunlimalatang.com/menu/",
-      "checkedAt": "2026-10-09T15:36:41.251703+00:00",
+      "checkedAt": "2026-10-09T15:47:30.726989+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "34f67258590beb072811abc9d1fccb016f9c1c14320c4e90ae9935526a8cbcac",
@@ -330,7 +320,7 @@
       "brandId": "brand-bd40e3bf63110e3a",
       "brand": "본죽",
       "url": "https://www.bonif.co.kr/brand/store?brdCd=BF101",
-      "checkedAt": "2026-10-09T15:36:42.569063+00:00",
+      "checkedAt": "2026-10-09T15:47:31.077170+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "3f71cd8a14aa5e01da35bbe3ee869662d3ed378278d5dfbfe5c104f6fcc41c5e",
@@ -340,7 +330,7 @@
       "brandId": "brand-2d083c367c257949",
       "brand": "본죽&비빔밥",
       "url": "https://www.bonif.co.kr/brand/menu?brdCd=BF102",
-      "checkedAt": "2026-10-09T15:36:42.663332+00:00",
+      "checkedAt": "2026-10-09T15:47:31.625703+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "7eff3b58bd909f930f6d5b487718e837745423ed026dbc6a180b858d9b6e2686",
@@ -350,47 +340,47 @@
       "brandId": "brand-d788dc4427d306fe",
       "brand": "죽이야기",
       "url": "https://www.jukstory.com/",
-      "checkedAt": "2026-10-09T15:36:43.166295+00:00",
+      "checkedAt": "2026-10-09T15:47:31.721461+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "84ede344af3bc1bef07d74b247b99f30a78e905fd51673230ba03b8728b0f188",
+      "sourceSha256": "d2ab3e47bcd8d2ac58bfcb98fa5129e5fc42aac7850483e20093998ef82c9b0c",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-440ae94a942a4921",
       "brand": "국수나무",
       "url": "https://www.namuya.co.kr/food/food.php",
-      "checkedAt": "2026-10-09T15:36:43.442433+00:00",
+      "checkedAt": "2026-10-09T15:47:31.883081+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "10f0eec91041d575240cd1c411d3036f043f8dca40d278fec2dc74aad6e5b67a",
+      "sourceSha256": "6387d3363ec35efa0d48feba2ec55d74403db404e967069103063078bbfbb57d",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-71bb2f53e15c0897",
       "brand": "역전우동0410",
       "url": "https://udon0410.com/menu/",
-      "checkedAt": "2026-10-09T15:36:43.759851+00:00",
+      "checkedAt": "2026-10-09T15:47:32.175206+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "12bf60ece18d75e8f1e882aead78ea18be30279fd5dc7b74d96f5d7a402fda4c",
+      "sourceSha256": "a67bb5496794a1baa77007ba4b6869ea0a14428d288a87191ff1c7491228b3fe",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-2a13283561756adc",
       "brand": "백소정",
       "url": "https://www.baeksojeong.com/",
-      "checkedAt": "2026-10-09T15:36:44.715127+00:00",
+      "checkedAt": "2026-10-09T15:47:32.290273+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "f6c96a295a6263501e2e21a64852c0df7aebd4ea9a37f104704ecc93f3d01a6c",
+      "sourceSha256": "70b6102d5e96b8ac4ad36701a68d39bdc18f15141fd6fdb3dfdb662e512834bb",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-8420421dae1f2ef3",
       "brand": "홍익돈까스",
       "url": "https://www.hongikdonkatsu.com/",
-      "checkedAt": "2026-10-09T15:36:44.912790+00:00",
+      "checkedAt": "2026-10-09T15:47:32.450383+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "4e9f1b28d40269a700d100a73489830be21bda8f66977d8c8130b82a236df3c6",
@@ -400,17 +390,17 @@
       "brandId": "brand-dfe7aafc7b485943",
       "brand": "원할머니보쌈",
       "url": "https://wonandone.co.kr/bossam/",
-      "checkedAt": "2026-10-09T15:36:45.695963+00:00",
+      "checkedAt": "2026-10-09T15:47:32.860142+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "4249408764b167dfc519452a1accd74d531831e4d9a241c67b378bb30682acbe",
+      "sourceSha256": "909954ee1e0d269e508112a0f202f557ae74e86670c1cdf77434b992e36b5058",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-3ab715e02b724b84",
       "brand": "놀부부대찌개",
       "url": "https://nolboo.co.kr/",
-      "checkedAt": "2026-10-09T15:36:45.775266+00:00",
+      "checkedAt": "2026-10-09T15:47:33.141068+00:00",
       "links": [],
       "error": "URLError",
       "reason": "<urlopen error timed out>",
@@ -420,7 +410,7 @@
       "brandId": "brand-39adcc9276d724e2",
       "brand": "본도시락",
       "url": "https://www.bonif.co.kr/brand/menu?brdCd=BF104",
-      "checkedAt": "2026-10-09T15:36:45.982912+00:00",
+      "checkedAt": "2026-10-09T15:47:33.369374+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "a1fc8bc734256b4055432e04476f512bb6d2accd248a6d43dd3cb1ac9a84b8dd",
@@ -430,7 +420,7 @@
       "brandId": "brand-e37848e7ad911d2a",
       "brand": "본설렁탕",
       "url": "https://www.bonif.co.kr/brand/menu?brdCd=BF105",
-      "checkedAt": "2026-10-09T15:36:46.801415+00:00",
+      "checkedAt": "2026-10-09T15:47:33.665039+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "de9c3ea329d9f8043ff7fa8982f1150da932bff1e0a0909ff171db5f240bb0db",
@@ -440,7 +430,7 @@
       "brandId": "brand-e1baf7db5ac285a7",
       "brand": "본우리반상",
       "url": "https://www.bonif.co.kr/brand/menu?brdCd=BF107",
-      "checkedAt": "2026-10-09T15:36:47.022213+00:00",
+      "checkedAt": "2026-10-09T15:47:33.671172+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "34eb66207b764c1028f93219c0bf58c0eb4fd148d6966fe0e02db4695c9076bb",
@@ -450,7 +440,7 @@
       "brandId": "brand-0e65f6b77b14e324",
       "brand": "멘지",
       "url": "https://www.bonif.co.kr/brand/menu?brdCd=BF111",
-      "checkedAt": "2026-10-09T15:36:47.825117+00:00",
+      "checkedAt": "2026-10-09T15:47:34.197142+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "dc7695cc5f0686a7bde92a5a1aefc0f0775213fe585761f0f4885de9182156af",
@@ -460,7 +450,7 @@
       "brandId": "brand-5cf4a5c95ff85d3a",
       "brand": "본흑염소·능이삼계탕",
       "url": "https://www.bonif.co.kr/brand/menu?brdCd=BF113",
-      "checkedAt": "2026-10-09T15:36:47.856165+00:00",
+      "checkedAt": "2026-10-09T15:47:34.476627+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "07ce74942ecb09e9f87e2036b1f77d7e17e14b17097fd4f15644cc5999a01a61",
@@ -470,17 +460,17 @@
       "brandId": "brand-9e7aeb464781f115",
       "brand": "핵밥",
       "url": "https://www.hecbob.com/main",
-      "checkedAt": "2026-10-09T15:36:48.041249+00:00",
+      "checkedAt": "2026-10-09T15:47:34.498556+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "7ac9ce72e905c376330db320e5816ed54743ee04af11a849c02cda146afe588f",
+      "sourceSha256": "97cbdd384d8699b401e5f71910ce2bd8de4cb6252697397b58856f2be300f51c",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-97c4b3edd331ff83",
       "brand": "채선당",
       "url": "https://www.chaesundang.co.kr/",
-      "checkedAt": "2026-10-09T15:36:48.841551+00:00",
+      "checkedAt": "2026-10-09T15:47:35.022418+00:00",
       "links": [],
       "error": "HTTPError",
       "reason": "HTTP Error 403: Forbidden",
@@ -490,17 +480,17 @@
       "brandId": "brand-a9a4ba8b5ad2ca3d",
       "brand": "소담촌",
       "url": "https://www.sodamchon.com/",
-      "checkedAt": "2026-10-09T15:36:48.845338+00:00",
+      "checkedAt": "2026-10-09T15:47:35.247508+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "c66ea32a07e60c0b7f1e53e68dacdd03e8f65ff332797744c2bf5ae1eed1ba0c",
+      "sourceSha256": "26173506ebffd46237e73c96960db75b04daa62bad18937a3a9ed60679869a6b",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-29327af78758b6f5",
       "brand": "써브웨이",
       "url": "https://www.subway.co.kr/",
-      "checkedAt": "2026-10-09T15:36:49.106030+00:00",
+      "checkedAt": "2026-10-09T15:47:35.299949+00:00",
       "links": [],
       "error": "HTTPError",
       "reason": "HTTP Error 403: Forbidden",
@@ -510,7 +500,7 @@
       "brandId": "brand-8032e5a2633bc1e3",
       "brand": "에그드랍",
       "url": "https://eggdrop.com/menu/list.php",
-      "checkedAt": "2026-10-09T15:36:49.777589+00:00",
+      "checkedAt": "2026-10-09T15:47:35.833157+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "ebbbc05b57d897b40e26df8cb44987fbc53e3e598931eabb1609ee8065e17843",
@@ -520,27 +510,27 @@
       "brandId": "brand-adb1fa3e7378cd49",
       "brand": "캠토토스트",
       "url": "https://camtotoast.com/",
-      "checkedAt": "2026-10-09T15:36:49.789668+00:00",
+      "checkedAt": "2026-10-09T15:47:36.212279+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "6f19e976a5b7178193a1eff61047fa6080b948007d996f59defaa5ed47eb45b5",
+      "sourceSha256": "b15e49a15384e1b183182d17812810b8af879e91d6ff808bdbcae422a794c4c8",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-d715f712d950d0e8",
       "brand": "피자스쿨",
       "url": "http://pizzaschool.net/menu/",
-      "checkedAt": "2026-10-09T15:36:50.468885+00:00",
+      "checkedAt": "2026-10-09T15:47:36.671593+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "d324762b54830644ca59d276e86ceb16233f468c672bd5ecdb0b42610eb65fb3",
+      "sourceSha256": "4a06dc18f7a1a0be602247747918aed56dfde5d89762417a61a29c1242d132e6",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-2891bc50e9e622e6",
       "brand": "파파존스",
       "url": "https://m.pji.co.kr/menu/pizza",
-      "checkedAt": "2026-10-09T15:36:50.863742+00:00",
+      "checkedAt": "2026-10-09T15:47:36.757826+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "c4f52e1396f53fd72a1737adc2c87620428c1e3224b877509937c1a35d0dfc5f",
@@ -550,7 +540,7 @@
       "brandId": "brand-f2c4cd89053b4ff8",
       "brand": "청년피자",
       "url": "https://youngmanpizza.co.kr/sub01/menu2.php",
-      "checkedAt": "2026-10-09T15:36:52.102305+00:00",
+      "checkedAt": "2026-10-09T15:47:38.158042+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "601aac22885e81a00ce6ce30a1f66aac934a21dadca1545d933100f9c426319b",
@@ -560,7 +550,7 @@
       "brandId": "brand-e7bc4d2ab88a800c",
       "brand": "노랑통닭",
       "url": "https://www.norangtongdak.co.kr/menu/chicken_list.html",
-      "checkedAt": "2026-10-09T15:36:52.309326+00:00",
+      "checkedAt": "2026-10-09T15:47:38.187632+00:00",
       "links": [],
       "error": "URLError",
       "reason": "<urlopen error [SSL: DH_KEY_TOO_SMALL] dh key too small (_ssl.c:1010)>",
@@ -570,7 +560,7 @@
       "brandId": "brand-c253f58a17fc9b81",
       "brand": "지코바",
       "url": "http://www.gcova.co.kr/sub_3_1.htm",
-      "checkedAt": "2026-10-09T15:36:52.365144+00:00",
+      "checkedAt": "2026-10-09T15:47:38.417209+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "797c8001dbf9cb226952d468a189c6ba723a039b310d9a28b9b3624d8148ea83",
@@ -580,27 +570,27 @@
       "brandId": "brand-c242a10bbca4c411",
       "brand": "처갓집양념치킨",
       "url": "https://www.cheogajip.co.kr/bbs/board.php?bo_table=menu",
-      "checkedAt": "2026-10-09T15:36:53.108535+00:00",
+      "checkedAt": "2026-10-09T15:47:38.954833+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "a538721cfdd57993e04430edf6111cfb1b9e98f249a01b19ce61ced5925d9caa",
+      "sourceSha256": "a41295af4107cb68ce54d8b2c0ecffae3fbb401c9a3c3f0de2ef7eaf717f85f6",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-1e99fd5b57a9f5cb",
       "brand": "피자마루",
       "url": "https://www.pizzamaru.kr/",
-      "checkedAt": "2026-10-09T15:36:53.670846+00:00",
+      "checkedAt": "2026-10-09T15:47:39.366134+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "9748ba38089bfce03561c0cc91c78a31bfdebb15d37576114703bf6b83e8dff5",
+      "sourceSha256": "b1c59a3234dc115d2b7b1e360a68fe3763162ad8730e6bbc942e5fa5adc1a37a",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-f4abfad35563de25",
       "brand": "멕시카나",
       "url": "https://www.mexicana.co.kr/menu/product.asp",
-      "checkedAt": "2026-10-09T15:36:53.776087+00:00",
+      "checkedAt": "2026-10-09T15:47:39.740071+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "a9a504628cc896968b10f547a83a2266c7a467d94c806af6df190a4987466962",
@@ -610,7 +600,7 @@
       "brandId": "brand-b0d0c4de8cdf23bc",
       "brand": "60계치킨",
       "url": "https://60chicken.com/bbs/content.php?co_id=menu",
-      "checkedAt": "2026-10-09T15:36:54.182639+00:00",
+      "checkedAt": "2026-10-09T15:47:40.137281+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "5a83d0f1736aa348419428efde6349028d045240738394ce567948fe94863f7f",
@@ -620,17 +610,17 @@
       "brandId": "brand-57244fb148c377c6",
       "brand": "반올림피자",
       "url": "https://order.banolimpizza.com/menu/list?menuId=1",
-      "checkedAt": "2026-10-09T15:36:54.644563+00:00",
+      "checkedAt": "2026-10-09T15:47:40.774058+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "d2b8533809f3fc538c7cb3a3142cc5e25ff10985c02450064fcbdba0b15c89e5",
+      "sourceSha256": "013950de29986a5e18f767e9b31f9279dde369b39af28e7686619623613c85ba",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-41b772c57bada9f9",
       "brand": "프랭크버거",
       "url": "https://www.frankburger.co.kr/html/menu_1.html",
-      "checkedAt": "2026-10-09T15:36:54.723961+00:00",
+      "checkedAt": "2026-10-09T15:47:40.978797+00:00",
       "links": [
         {
           "url": "https://frankburger.co.kr/html/ingredient.html",
@@ -638,7 +628,7 @@
         }
       ],
       "httpStatus": 200,
-      "sourceSha256": "c88b11e089a19230dd529fa855208b889064d17c7a4a0c86ae81130c65d95f0d",
+      "sourceSha256": "a87812628532b01c173b0b0c1a02e14d99a7fd7d34f897173393946ad6aef9a5",
       "confirmedNutritionSources": [
         "https://frankburger.co.kr/html/ingredient.html"
       ]
@@ -647,17 +637,17 @@
       "brandId": "brand-69ad361cd26106b1",
       "brand": "노브랜드버거",
       "url": "https://www.shinsegaefood.com/nobrandburger/index.sf",
-      "checkedAt": "2026-10-09T15:36:55.377034+00:00",
+      "checkedAt": "2026-10-09T15:47:41.545972+00:00",
       "links": [],
-      "error": "URLError",
-      "reason": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>",
+      "httpStatus": 200,
+      "sourceSha256": "efd7ffbc1e6e377a8ec1615554f0a7f7053fd97829cc9b1fa9cbab8390b61437",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-2cf7eb0ea975163d",
       "brand": "새마을식당",
       "url": "https://newmaul.com/sub/menu.php",
-      "checkedAt": "2026-10-09T15:36:55.752796+00:00",
+      "checkedAt": "2026-10-09T15:47:41.590201+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "fbc240c6560343f2f971b3554242016dc62456982f08f4dd9e769c93d9bab3b9",
@@ -667,7 +657,7 @@
       "brandId": "brand-1742b64ed29107ac",
       "brand": "배스킨라빈스",
       "url": "https://www.baskinrobbins.co.kr/menu/list.php?category=A",
-      "checkedAt": "2026-10-09T15:36:55.966261+00:00",
+      "checkedAt": "2026-10-09T15:47:41.845549+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "386a6b0df24c5647a0ce0aeec3381652db689e8af822cf8cd411229bdef74936",
@@ -677,7 +667,7 @@
       "brandId": "brand-61b7f46d49620328",
       "brand": "요아정",
       "url": "https://yoajung.co.kr/bbs/content.php?co_id=menustore",
-      "checkedAt": "2026-10-09T15:36:56.265704+00:00",
+      "checkedAt": "2026-10-09T15:47:41.847668+00:00",
       "links": [],
       "error": "AssertionError",
       "reason": "",
@@ -687,17 +677,17 @@
       "brandId": "brand-3d3d7aa34cc1f578",
       "brand": "미소야",
       "url": "https://www.misoya.co.kr/menu",
-      "checkedAt": "2026-10-09T15:36:56.668569+00:00",
+      "checkedAt": "2026-10-09T15:47:42.394548+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "233ebdb0558dde3573697c7fadf844f9cf06a0e99b4f2711d56276b8e08cfaac",
+      "sourceSha256": "ab44151cfc309c5b04afa831164fcf621605f3f872ad198be5065874b07b6f5a",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-07de1aee884692c4",
       "brand": "7번가피자",
       "url": "https://www.7thpizza.com/sub/menu/list.php",
-      "checkedAt": "2026-10-09T15:36:56.939522+00:00",
+      "checkedAt": "2026-10-09T15:47:43.072406+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "e8dd019bbb03d4f1bf291762bd8dd9ad5b7e076b25d64df08dd40ba8ba736b76",
@@ -707,17 +697,17 @@
       "brandId": "brand-35225ece8d72c5b9",
       "brand": "토마토도시락",
       "url": "https://www.tomatodosirak.co.kr/board/index.php?board=menu_01&sca=all",
-      "checkedAt": "2026-10-09T15:36:57.610809+00:00",
+      "checkedAt": "2026-10-09T15:47:43.907056+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "eb50e525be67f8eb9911424d73a206843fd0f6a9455ebcce665ef6c04b10182e",
+      "sourceSha256": "a1248efe624a09dafcf7cc6eee1c82633fef5a306d43bef3d772a91ddcc7df47",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-977382baa9a9159b",
       "brand": "동대문엽기떡볶이",
       "url": "https://www.yupdduk.com/sub/menu/yup-menu",
-      "checkedAt": "2026-10-09T15:36:58.234606+00:00",
+      "checkedAt": "2026-10-09T15:47:44.430891+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "4c8350de849c03e88846d16c8453f583815b13ac26d397ae8549fb72bcfbbfd9",
@@ -727,37 +717,37 @@
       "brandId": "brand-5203807bf8b4bc7a",
       "brand": "족발야시장",
       "url": "https://xn--ih3bm7ju8bi1cb3a.com/html/menu.html",
-      "checkedAt": "2026-10-09T15:36:58.805778+00:00",
+      "checkedAt": "2026-10-09T15:47:44.967689+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "38672b1d1ee679a15203caf0ca957765fb9f7d596890b7fcd0e548cd8e9181f6",
+      "sourceSha256": "05899a05996ea839bc0f715eaccc5a847aa7c1896128649d6a074500ccbcb404",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-7b853dd449517e57",
       "brand": "호식이두마리치킨",
       "url": "https://www.9922.co.kr/menu",
-      "checkedAt": "2026-10-09T15:36:58.953011+00:00",
+      "checkedAt": "2026-10-09T15:47:45.264430+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "71c01f0168601d842ea1355a74cd7482819482b5d5901a9b41e0d871881d9b57",
+      "sourceSha256": "4c618584128199d2cc2af2bcb61abc64ddfbe959c1874c9ca15b1cfe0f9d6493",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-9f125dd967fd168e",
       "brand": "크리스피크림도넛",
       "url": "https://www.lotteeatz.com/brand/kkd",
-      "checkedAt": "2026-10-09T15:36:59.227136+00:00",
+      "checkedAt": "2026-10-09T15:47:45.284767+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "6472e3782c0d29a4107a59cf4bade964b8a22509e8c10b92a9f80425dbb891c4",
+      "sourceSha256": "4392c0fa487a5f9b0e698ca1d25d16e493ea2077f477c3ef5c92a1ee1258428a",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-e32a9313e634ead7",
       "brand": "홍종흔베이커리",
       "url": "http://www.hjhbakery.com/product/product_list.asp",
-      "checkedAt": "2026-10-09T15:36:59.796098+00:00",
+      "checkedAt": "2026-10-09T15:47:45.799860+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "2bead995220d998174dc6b84dc3c1562105bd5452679db6cd9f732e2525606d7",
@@ -767,7 +757,7 @@
       "brandId": "brand-a7444ee050c62abd",
       "brand": "성심당",
       "url": "https://sungsimdang.co.kr/",
-      "checkedAt": "2026-10-09T15:36:59.961525+00:00",
+      "checkedAt": "2026-10-09T15:47:45.826199+00:00",
       "links": [
         {
           "url": "https://sungsimdang.co.kr/page/71",
@@ -782,7 +772,7 @@
       "brandId": "brand-cf57c271fe920362",
       "brand": "이성당",
       "url": "https://leesungdang1945.com/category/낱개상품/24/",
-      "checkedAt": "2026-10-09T15:37:00.800100+00:00",
+      "checkedAt": "2026-10-09T15:47:46.305571+00:00",
       "links": [],
       "error": "UnicodeEncodeError",
       "reason": "'ascii' codec can't encode characters in position 14-17: ordinal not in range(128)",
@@ -792,7 +782,7 @@
       "brandId": "brand-db7ae070c1a211f3",
       "brand": "응급실국물떡볶이",
       "url": "https://응급실국물떡볶이.kr/",
-      "checkedAt": "2026-10-09T15:37:00.800219+00:00",
+      "checkedAt": "2026-10-09T15:47:46.305929+00:00",
       "links": [],
       "error": "UnicodeEncodeError",
       "reason": "'latin-1' codec can't encode characters in position 0-7: ordinal not in range(256)",
@@ -802,47 +792,47 @@
       "brandId": "brand-87f52291726f6891",
       "brand": "국대떡볶이",
       "url": "https://kukde.kr/menu",
-      "checkedAt": "2026-10-09T15:37:00.800275+00:00",
+      "checkedAt": "2026-10-09T15:47:46.306012+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "17ed48c13da100bc607d3c81f39b5b7bf81ba7a7b1a88112f0a3f7290458d64c",
+      "sourceSha256": "0eaa5c30643d53f9402b0e7c47c5be624bbb6b94142a5c822296dfd551d4a3a9",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-5f1ac0e21ddf73b1",
       "brand": "우지커피",
       "url": "https://www.oozycoffee.com/coffee",
-      "checkedAt": "2026-10-09T15:37:00.823187+00:00",
+      "checkedAt": "2026-10-09T15:47:46.644183+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "792dcc3915263da7d43aa00ff9ec30f595add22564b77fbd04ecc38a8db2d7de",
+      "sourceSha256": "f1633d9061f1ac73605c8cdf74303dd80f99e1ea41f791d1b4d1e698447b7120",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-9fa9c3eca7bcf563",
       "brand": "더벤티",
       "url": "https://www.theventi.co.kr/",
-      "checkedAt": "2026-10-09T15:37:00.974768+00:00",
+      "checkedAt": "2026-10-09T15:47:47.088230+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "d42eff3a68259aa9fc5ce6d5ee709dcdeb1252a2d29413a27191d2c27b7c168a",
+      "sourceSha256": "34830d3f052b23b0b80387103f3ec56f642958bce057915f92aa1ed9b240a7b9",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-2e050b39b22a7280",
       "brand": "엔제리너스",
       "url": "https://www.lotteeatz.com/brand/angel",
-      "checkedAt": "2026-10-09T15:37:01.845083+00:00",
+      "checkedAt": "2026-10-09T15:47:47.357500+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "0e4919ac49f0299c77abc3a34a34918350c9592190aadc0230b935c2de232adb",
+      "sourceSha256": "a256cdfd9a109fc173cc68f4c31fcfba7508343d4ecfd896d9b3880a2df620bf",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-01c5e2f727401b55",
       "brand": "설빙",
       "url": "https://sulbing.com/menu/",
-      "checkedAt": "2026-10-09T15:37:01.846570+00:00",
+      "checkedAt": "2026-10-09T15:47:47.693458+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "6a88543817554b01ca9eec5d378bf2b26aa418a8f65c0ef5e5a8419dbd770252",
@@ -850,13 +840,13 @@
     }
   ],
   "conflicts": [],
-  "nutritionLinkedMenus": 2452,
-  "newlyVerifiedMenus": 101,
+  "nutritionLinkedMenus": 2485,
+  "newlyVerifiedMenus": 33,
   "nutritionChangedMenus": 0,
   "reviewedSnapshotsRetained": 0,
-  "recordable": 1554,
-  "matched": 2512,
-  "failed": 680,
+  "recordable": 1587,
+  "matched": 2560,
+  "failed": 885,
   "menus": [
     {
       "id": "remote-franchise-000a63b1884cf6e0bf66ae9f",
@@ -991,8 +981,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "아몬드 크림 콜드브루",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-009a86f009a5705574007a5b",
@@ -1649,8 +1641,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "매머드 미트 칠리 핫도그",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://mmthcoffee.com/sub/menu/list_coffee_view.php?menuSeq=441"
     },
     {
       "id": "remote-franchise-0403fd7793aa60dc88563bec",
@@ -1667,8 +1661,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "명란 바게트",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-040f7458403d0e5e78d96af0",
@@ -1733,8 +1729,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "카페 모카",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-047ebb98e0f6c4c1001ef6f4",
@@ -1799,8 +1797,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "몰티즈 자망코 컵빙수",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-04c82f73bf7ffee5a49ea080",
@@ -1901,8 +1901,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "매머드 고메버터 플레인 스콘",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://mmthcoffee.com/sub/menu/list_coffee_view.php?menuSeq=440"
     },
     {
       "id": "remote-franchise-055dc6ad58585742df0516d4",
@@ -2451,8 +2453,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "제로 복숭아 아이스티",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-082d052571e93143db6aab84",
@@ -2565,8 +2569,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "지리산 청매실티",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-08c6a5f30056427426ec5e57",
@@ -2747,8 +2753,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "라즈베리 마카롱",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://mmthcoffee.com/sub/menu/list_coffee_view.php?menuSeq=274"
     },
     {
       "id": "remote-franchise-098a2eed013d0e2497ad79a3",
@@ -2801,8 +2809,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "캐모마일티",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-09ce00eba5a9530c6843a546",
@@ -3037,8 +3047,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "디카페인 콜드브루 라떼",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-0ad588e134dd5e89a0538342",
@@ -3119,8 +3131,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "디카페인 카페 모카",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-0b2a00294d71b44579ec17e8",
@@ -3521,8 +3535,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "차이티 라떼",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-0cf2d9814bae9b09d187a043",
@@ -3667,8 +3683,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "분다버그(망고)",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-0d84f80461ab99ef6810a54b",
@@ -3721,8 +3739,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "인크레드불",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-0dd5f6bb28da3c73655794dc",
@@ -3773,8 +3793,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "매머드 리유저블 핫 컵",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-0df5aaeec197ccfa8791d533",
@@ -3921,8 +3943,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "분다버그(핑크자몽)",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-0ea5054956c3b37e5ceee4aa",
@@ -3959,8 +3983,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "자바칩 프라페",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-0efd37b6a7bbc52a9be2644a",
@@ -4595,8 +4621,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "바닐라 초코칩 아이스크림",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://mmthcoffee.com/sub/menu/list_coffee_view.php?menuSeq=607"
     },
     {
       "id": "remote-franchise-1230556f28fd774404c5747c",
@@ -4643,8 +4671,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "꿀바나 라떼",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-12721c9a54cacf04badadb27",
@@ -4735,8 +4765,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "초코 비스킷 슈",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://mmthcoffee.com/sub/menu/list_coffee_view.php?menuSeq=286"
     },
     {
       "id": "remote-franchise-12f404cebe8d0e2ef6e724cc",
@@ -4995,10 +5027,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "바나나 푸딩 케이크",
-      "result": "FAILED_RETAINED",
+      "result": "MATCHED",
+      "conflicts": [],
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "error": "URLError",
-      "reason": "<urlopen error timed out>"
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000006873"
     },
     {
       "id": "remote-franchise-14807625aea9ac7e068a138b",
@@ -5347,8 +5379,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "딸기 라떼",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-16833bedcf042bd248637031",
@@ -5471,8 +5505,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "바닐라 크럼블 아이스크림 라떼",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-1715d1526acb8853711acebd",
@@ -5765,8 +5801,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "레몬밤 민트티",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-1862eb3f037c61636311cd3b",
@@ -5829,8 +5867,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "매머드 미트 칠리 핫도그 세트",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": "Temperature/size columns cannot be assigned to a generic menu"
     },
     {
       "id": "remote-franchise-18c35d01461958daad19e2b2",
@@ -6045,8 +6085,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "믹스 커피",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-19d6d53e53519b92de3a36da",
@@ -6651,8 +6693,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "바닐라 컵 젤라또",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-1d286796b9f506882b5b610b",
@@ -6819,8 +6863,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "튜나 샌드위치",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://mmthcoffee.com/sub/menu/list_coffee_view.php?menuSeq=307"
     },
     {
       "id": "remote-franchise-1e5b96e5e0d215128e99ebf5",
@@ -7039,8 +7085,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "골드메달 애플주스(병)",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-1f656f02183b40dcbfa2bc06",
@@ -7135,10 +7183,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "프리미엄 바나나",
-      "result": "FAILED_RETAINED",
+      "result": "MATCHED",
+      "conflicts": [],
       "nutritionStatus": "NUTRITION_PARTIAL",
-      "error": "URLError",
-      "reason": "<urlopen error timed out>"
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=5110009171"
     },
     {
       "id": "remote-franchise-200991d3d3a6596510943565",
@@ -7371,8 +7419,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "몰티즈 하트 무드등",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-2151b12b373886cd0592d912",
@@ -7389,8 +7439,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "몰티즈&리트리버 랜덤 피규어",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-215c6401d3b947bfb4a2fce9",
@@ -7705,8 +7757,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "클럽 샌드위치",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://mmthcoffee.com/sub/menu/list_coffee_view.php?menuSeq=308"
     },
     {
       "id": "remote-franchise-22ffef4fef86bd7864532734",
@@ -7721,8 +7775,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "말차 클래식 라떼",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-23080a864f301eb09a625f23",
@@ -7737,16 +7793,20 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "꿀 라떼",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-230caab53eee16b6c4301f0b",
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "매머드 렐리시 핫도그",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://mmthcoffee.com/sub/menu/list_coffee_view.php?menuSeq=443"
     },
     {
       "id": "remote-franchise-2312d05fd235e70566f2d7a8",
@@ -7817,8 +7877,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "피치 우롱티",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-237158b3e61470738c039322",
@@ -7917,8 +7979,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "몰티즈 미니 파우치",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-23dee7861a358ad232c72e79",
@@ -8399,8 +8463,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "바닐라 마카롱",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://mmthcoffee.com/sub/menu/list_coffee_view.php?menuSeq=270"
     },
     {
       "id": "remote-franchise-26d1bfccb90d88c23b628897",
@@ -8473,8 +8539,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "시그니처 라떼",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-274d19edb0c3af1e89d2f4b7",
@@ -8627,8 +8695,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "오렌지 티 / 에이드",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-2885fbb457f29bcf1a9946dc",
@@ -8711,8 +8781,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "근대골목 생크림 단팥빵",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://mmthcoffee.com/sub/menu/list_coffee_view.php?menuSeq=529"
     },
     {
       "id": "remote-franchise-28d464c4665d93ec9cdec437",
@@ -8775,8 +8847,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "클래식 치즈 케이크",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-295e7e878bfd5e723c1c5132",
@@ -8819,16 +8893,20 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "잉글리쉬 머핀 샌드위치",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-299e93d7c60da0b5fba7a9ee",
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "아이스티",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-29b1c70cdd45477329f4c99a",
@@ -9091,8 +9169,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "솔티드 카라멜 마키아토",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-2ac609e349f2dbc23244c979",
@@ -9171,8 +9251,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "디카페인 헤이즐넛 모카",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-2b687be4eb01a6eda5be755a",
@@ -9723,8 +9805,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "라임 티 / 에이드",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-2dfb5f5cc410806bbe5439d4",
@@ -10209,8 +10293,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "폭탄 카스테라",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://mmthcoffee.com/sub/menu/list_coffee_view.php?menuSeq=331"
     },
     {
       "id": "remote-franchise-30e65082928750f39cf64eb1",
@@ -10253,8 +10339,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "딸기 스무디",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-3123d5e69317ba7e9d7c9dd0",
@@ -10539,8 +10627,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "디카페인 골든 코코넛 라떼",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-323eb9601de9901cda106e36",
@@ -10697,8 +10787,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "한라봉 티 / 에이드",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-332c618050c72f901ce6bb35",
@@ -10783,8 +10875,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "미니 매머드 빵",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://mmthcoffee.com/sub/menu/list_coffee_view.php?menuSeq=533"
     },
     {
       "id": "remote-franchise-337d41ce2c2d1f2c6b815993",
@@ -11093,16 +11187,20 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "뽀로로(사과)",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-358266d27da71223ce0a0f71",
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "디카페인 카페 라떼",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-358660c36f12be868e3801be",
@@ -11233,8 +11331,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "디카페인 달고나 콜드브루 라떼",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-365b964e7d77044c9de94869",
@@ -11383,8 +11483,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "레몬&오렌지티",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-37b4f5694983ff301502d675",
@@ -11499,8 +11601,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "디카페인 레몬토닉 콜드브루",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-386862e5c172f01a419dfb87",
@@ -11761,8 +11865,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "디카페인 코코넛 크림 콜드브루 라떼",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-39dd970b5cd865dc20cc3e4c",
@@ -11877,8 +11983,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "에그 타르트",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://mmthcoffee.com/sub/menu/list_coffee_view.php?menuSeq=264"
     },
     {
       "id": "remote-franchise-3a61feffda5cd5014667113a",
@@ -11923,8 +12031,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "매머드 커피",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-3a89dcf8fd9cf7288432141d",
@@ -12173,8 +12283,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "디카페인 코코넛 사이공 라떼",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-3bae1c6c6a289e91422908f4",
@@ -12385,8 +12497,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "토피넛 라떼",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-3cc50b050c77cdd821d03e1c",
@@ -12969,10 +13083,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "바게트 소금빵",
-      "result": "FAILED_RETAINED",
+      "result": "MATCHED",
+      "conflicts": [],
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "error": "URLError",
-      "reason": "<urlopen error timed out>"
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000006831"
     },
     {
       "id": "remote-franchise-3f71492d8bea56eb10619e36",
@@ -12987,8 +13101,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "스노우 매머드 커피",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-3f8395fb5ee44ab306772f48",
@@ -13225,8 +13341,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "쿠앤크 프라페",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-40b478fb532b06d7318e1f98",
@@ -13251,8 +13369,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "튜나 샌드위치 세트",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": "Temperature/size columns cannot be assigned to a generic menu"
     },
     {
       "id": "remote-franchise-40ed11d591d6abc21b7ffb77",
@@ -13865,8 +13985,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "창소다워터",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-43d5748d4eba8e102f334271",
@@ -14093,8 +14215,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "히비스커스 유자티",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-44a34c4e95fa3fd9472506ba",
@@ -14307,8 +14431,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "애플 히비스커스티",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-45f6d301318e580da2c4ea85",
@@ -14537,8 +14663,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "블루베리 마카롱",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://mmthcoffee.com/sub/menu/list_coffee_view.php?menuSeq=275"
     },
     {
       "id": "remote-franchise-470321310ac46a515825f2cc",
@@ -14789,10 +14917,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "한 입에 쏙 카스텔라",
-      "result": "FAILED_RETAINED",
+      "result": "MATCHED",
+      "conflicts": [],
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "error": "URLError",
-      "reason": "<urlopen error timed out>"
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000002718"
     },
     {
       "id": "remote-franchise-4864ea243089ad9895dcdd2a",
@@ -14867,8 +14995,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "포도 자스민티 크러쉬",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-48d4313056896bb8fdfc0256",
@@ -14905,8 +15035,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "말차 클래식 프라페",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-48fe1419435526ffb97c9d36",
@@ -14923,8 +15055,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "카페 라떼",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-49074c1c16af6e28c199f05e",
@@ -15071,8 +15205,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "근대골목 단팥빵",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://mmthcoffee.com/sub/menu/list_coffee_view.php?menuSeq=528"
     },
     {
       "id": "remote-franchise-49cef1372adc906ebdb57f9d",
@@ -15173,16 +15309,20 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "레몬 착즙주스",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-4a86876bbdfb91c4f764d2fa",
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "디카페인 아인슈페너 커피",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-4a8fd6b65d855592f17dc1ab",
@@ -15333,10 +15473,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "쿠키 스트로우 단품",
-      "result": "FAILED_RETAINED",
+      "result": "MATCHED",
+      "conflicts": [],
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "error": "URLError",
-      "reason": "<urlopen error timed out>"
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000006019"
     },
     {
       "id": "remote-franchise-4b41ca96269e2d09b1cd4db2",
@@ -15381,8 +15521,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "에그 샐러드 샌드위치",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://mmthcoffee.com/sub/menu/list_coffee_view.php?menuSeq=306"
     },
     {
       "id": "remote-franchise-4b5b17f9096ebcb9602a1924",
@@ -15443,10 +15585,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "더블 치킨 브레스트 체다 & 에그 샌드위치",
-      "result": "MATCHED",
-      "conflicts": [],
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005349"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-4bbd63d34648d2b76ca88e8f",
@@ -15545,8 +15687,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "디카페인 꿀 라떼",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-4c31cb454e5621447c7c9bf4",
@@ -16023,8 +16167,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "매머드 에이드",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-4fc15551ca2a1370547031f3",
@@ -16041,8 +16187,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "아인슈페너 커피",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-4fd404c02b9f33c39649bc98",
@@ -16129,8 +16277,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "스팀 밀크",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-502a24829028d3a1fd818caa",
@@ -16255,10 +16405,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "치킨 & 머쉬룸 멜팅 치즈 샌드위치",
-      "result": "MATCHED",
-      "conflicts": [],
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005157"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-5111bb5576f4545985accf1a",
@@ -16341,8 +16491,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "오렌지 아일랜드티",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-515d7780f72f198855d9a0a9",
@@ -16369,8 +16521,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "몰티즈 수박 화채 에이드",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-51795b3c571927c25e7b3f25",
@@ -16689,8 +16843,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "라임 착즙주스",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-52e529edd47ae6da45ecf3e7",
@@ -16811,8 +16967,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "콜드브루",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-53827032c541ffb28c935f39",
@@ -16945,8 +17103,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "허니베리 홍초 에이드",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-5440446d3a92a8e88677ef51",
@@ -17239,8 +17399,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "매머드 크룽지",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://mmthcoffee.com/sub/menu/list_coffee_view.php?menuSeq=451"
     },
     {
       "id": "remote-franchise-564f0b9767e681846b317a0c",
@@ -17319,18 +17481,20 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "우리쌀 전병 땅콩맛",
-      "result": "FAILED_RETAINED",
+      "result": "MATCHED",
+      "conflicts": [],
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "error": "URLError",
-      "reason": "<urlopen error timed out>"
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000006322"
     },
     {
       "id": "remote-franchise-571b0becf862dfc82846b1eb",
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "고구마 라떼",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-5728a9f44f54aaa021b3b4c8",
@@ -17563,8 +17727,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "부여 밤크크 슈페너",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-5878721652708c8f6ff43d03",
@@ -17903,8 +18069,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "스트로베리 바닐라 프라페",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-5aff56587f4f7ffa49b7b322",
@@ -18011,18 +18179,20 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "달고나 밀크 스무디",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-5bc8375dd3d7ade46597a031",
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "복숭아 가득 핸디 젤리",
-      "result": "FAILED_RETAINED",
+      "result": "MATCHED",
+      "conflicts": [],
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "error": "URLError",
-      "reason": "<urlopen error timed out>"
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000004508"
     },
     {
       "id": "remote-franchise-5be01f9ca01448f86480dd66",
@@ -18253,10 +18423,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "초콜릿 칩 쿠키 바스켓",
-      "result": "FAILED_RETAINED",
+      "result": "MATCHED",
+      "conflicts": [],
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "error": "URLError",
-      "reason": "<urlopen error timed out>"
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000006162"
     },
     {
       "id": "remote-franchise-5d31ae1f259dfdfb907e6205",
@@ -18527,10 +18697,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "한 입에 쏙 고구마",
-      "result": "FAILED_RETAINED",
+      "result": "MATCHED",
+      "conflicts": [],
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "error": "URLError",
-      "reason": "<urlopen error timed out>"
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005562"
     },
     {
       "id": "remote-franchise-5e3f71052db038fbf79a6f07",
@@ -18615,8 +18785,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "달고나 카페라떼",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-5e78e0af92ce2b5ee80501f5",
@@ -18703,8 +18875,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "매머드 레몬 파운드 케이크",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://mmthcoffee.com/sub/menu/list_coffee_view.php?menuSeq=438"
     },
     {
       "id": "remote-franchise-5ed60dd1bdd448290c4474ed",
@@ -18941,8 +19115,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "피치 우롱 밀크티",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-5fcfdb8592c0f221ec0ec435",
@@ -19047,8 +19223,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "당근 케이크",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-5ffad31d404dadad7284c9cf",
@@ -19113,8 +19291,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "블루베리 요거트 스무디",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-607abe648fa459e7a7c80025",
@@ -19177,8 +19357,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "달고나 밀크티",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-60c8f0ad51344dc27ff1a937",
@@ -19929,8 +20111,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "얼그레이티",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-6492eff9155bd41c75c04c51",
@@ -20159,8 +20343,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "솜사탕 쉐이크",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-65f65dce6d530435f7f93d6b",
@@ -20483,8 +20669,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "제주 한라봉 티 / 에이드",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-67b1dbc55a30e149942a2886",
@@ -20663,8 +20851,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "콩가루 라떼",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-689d92486993b0bfa0cf60e3",
@@ -20681,8 +20871,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "바닐라 비스킷 슈",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://mmthcoffee.com/sub/menu/list_coffee_view.php?menuSeq=285"
     },
     {
       "id": "remote-franchise-68b5b0c8da374bdd209dbd83",
@@ -20733,8 +20925,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "몰티즈 액션 볼펜",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-68fef30c5674d8f566e69647",
@@ -20959,8 +21153,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "제리의 치즈 케이크",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-6a83d8a17214bf5bee013eec",
@@ -21315,8 +21511,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "디카페인 꿀바나 라떼",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-6cc267b31e41782bdf8a8e3a",
@@ -21841,8 +22039,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "라임 레몬 깔라만시 티 / 에이드",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-70117636f68fea4f9b80f504",
@@ -22061,16 +22261,20 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "끼리 쿠키앤 크림 치즈 스틱 케이크",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://mmthcoffee.com/sub/menu/list_coffee_view.php?menuSeq=265"
     },
     {
       "id": "remote-franchise-715c1298743cb7c5c2b77ab2",
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "민트초코 마카롱",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://mmthcoffee.com/sub/menu/list_coffee_view.php?menuSeq=273"
     },
     {
       "id": "remote-franchise-715fd5034edddbf73fc39705",
@@ -22223,16 +22427,20 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "자몽 허니 블랙티",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-71fe05bc5f9368748d5b2c41",
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "망고 마카롱",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://mmthcoffee.com/sub/menu/list_coffee_view.php?menuSeq=272"
     },
     {
       "id": "remote-franchise-7220add6fd5ad7fdefd84d28",
@@ -22437,8 +22645,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "뽀로로(보리차)",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-735c92e54ee061155abdd1f7",
@@ -22535,8 +22745,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "제로 체리콕 에이드",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-743edaa58a70d18aacfdeb54",
@@ -22825,8 +23037,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "밀크 크레이프",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://mmthcoffee.com/sub/menu/list_coffee_view.php?menuSeq=329"
     },
     {
       "id": "remote-franchise-7524e018d49d4c02ef71472e",
@@ -23051,8 +23265,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "달고나 콜드브루 라떼",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-768e725ffc2a5671e23a36eb",
@@ -23125,8 +23341,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "샷추가 파인애플 주스",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-7730a06a1463deed27477de9",
@@ -23185,10 +23403,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "하트 파이",
-      "result": "FAILED_RETAINED",
+      "result": "MATCHED",
+      "conflicts": [],
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "error": "URLError",
-      "reason": "<urlopen error timed out>"
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=5110006070"
     },
     {
       "id": "remote-franchise-77bffff1fba3db983a4ed5d4",
@@ -23379,8 +23597,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "아쿠아파나(병)",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-78a16b899869b67dbf44c244",
@@ -23611,8 +23831,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "복숭아 스무디",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-79ece7557b7a5587d42520bb",
@@ -23803,8 +24025,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "소금빵",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://mmthcoffee.com/sub/menu/list_coffee_view.php?menuSeq=697"
     },
     {
       "id": "remote-franchise-7aff3c968dfafc0259046239",
@@ -23945,8 +24169,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "베트남 연유 커피",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-7bb1d684c8bab00b74cb15eb",
@@ -24183,8 +24409,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "아메리카노",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-7d43a788b4da2026e38290f5",
@@ -25003,8 +25231,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "플레인 요거트 스무디",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-826fdd63281e4658e18b7404",
@@ -25513,8 +25743,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "디카페인 베트남 연유 커피",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-861a9d6adebfeda63e69e88d",
@@ -25597,16 +25829,20 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "카라멜 마키아토",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-869b77d5abc6778908724541",
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "버터 스카치 라떼",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-86c52dbbd7ae14216be16ef6",
@@ -25659,8 +25895,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "카푸치노",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-87142ecaaa32dbd1994a0328",
@@ -25799,8 +26037,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "아몬드 라떼",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-8819a75965e8751c49cbf89f",
@@ -25837,8 +26077,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "오미자 크랜베리 티 / 에이드",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-883a65e263ee1617de0ea73d",
@@ -26041,8 +26283,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "우롱 밀크티",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-895446aa6eb21069c75bd8b0",
@@ -26059,8 +26303,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "곡물 쉐이크",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-897803831f4d649e74cd1879",
@@ -26137,18 +26383,20 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "자일리톨 캔디 크리스탈 레몬",
-      "result": "FAILED_RETAINED",
+      "result": "MATCHED",
+      "conflicts": [],
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "error": "URLError",
-      "reason": "<urlopen error timed out>"
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000002556"
     },
     {
       "id": "remote-franchise-8a0f37a860cbeb4ff95f4d71",
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "달고나 라떼",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-8a188be2d6b2b44141a13f6d",
@@ -26315,8 +26563,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "리얼 배 스무디",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-8b4c3cf94bc91681aeb883a7",
@@ -26333,8 +26583,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "딸기 요거트 스무디",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-8b7846f202151b5394bda577",
@@ -26629,8 +26881,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "디카페인 아샷추 복숭아 아이스티",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-8d7ad88b138602739ccd0216",
@@ -26819,8 +27073,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "카야 대만식 샌드위치",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://mmthcoffee.com/sub/menu/list_coffee_view.php?menuSeq=288"
     },
     {
       "id": "remote-franchise-8e6660c0da5ff8c0ab154eb3",
@@ -27121,8 +27377,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "햄&치즈 대만식 샌드위치",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://mmthcoffee.com/sub/menu/list_coffee_view.php?menuSeq=287"
     },
     {
       "id": "remote-franchise-902616161a7f82c0555911d0",
@@ -27153,8 +27411,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "포도 주스",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-903eea91d5183d62962d817d",
@@ -27313,8 +27573,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "레몬&오렌지(홍차)티",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-91bf7548a9a81d11b604a481",
@@ -27411,8 +27673,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "디카페인 코코넛 커피 스무디",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-9231bad90b84c77ddfb6de03",
@@ -27717,10 +27981,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "잉글리쉬 스콘",
-      "result": "FAILED_RETAINED",
+      "result": "MATCHED",
+      "conflicts": [],
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "error": "URLError",
-      "reason": "<urlopen error timed out>"
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005663"
     },
     {
       "id": "remote-franchise-93a5902606bd06173862900f",
@@ -27765,8 +28029,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "메론바나 라떼",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-93d1cfcb23fd853e33cb4572",
@@ -27865,8 +28131,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "디카페인 솔티드 카라멜 마키아토",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-946ef1b7512fb2e189d190cb",
@@ -27935,8 +28203,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "디카페인 꿀 커피",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-94f9dcf11045d3b5603b7871",
@@ -27997,8 +28267,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "디카페인 아샷추 아이스티",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-955e3f9b397c4429dc90e7a9",
@@ -28061,8 +28333,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "매머드 콜드브루 스틱커피",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-95cee1cb66bd2c5aa2b351be",
@@ -28125,8 +28399,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "페퍼민트 라임티",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-95f14b84a3bf8a9c15d8f551",
@@ -28345,24 +28621,30 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "리트리버 액션 볼펜",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-971532593aedb726203985f9",
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "매머드 콜드브루 원액",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-9717b14ad4e34578531f4489",
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "레몬토닉 콜드브루",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-97199581636b66ddd9744548",
@@ -28517,8 +28799,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "유자 티 / 에이드",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-97fbed7858e6f30e944eb72f",
@@ -28859,8 +29143,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "리트리버 바닐라 젤라또 컵빙수",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-99da16a8d803787c305a8318",
@@ -29183,8 +29469,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "뽀로로(밀크)",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-9b8193fd8113a012ae662158",
@@ -29239,8 +29527,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "오렌지 착즙주스",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-9bc1830db31697df95c820f3",
@@ -29419,8 +29709,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "바스크 치즈 케이크",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://mmthcoffee.com/sub/menu/list_coffee_view.php?menuSeq=292"
     },
     {
       "id": "remote-franchise-9ceb40b75a7192878de5140c",
@@ -29485,8 +29777,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "리얼 망고 스무디",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-9d3932677e8d1bfd91be3671",
@@ -29713,10 +30007,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "레이디핑거 티라미수 케이크",
-      "result": "FAILED_RETAINED",
+      "result": "MATCHED",
+      "conflicts": [],
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "error": "URLError",
-      "reason": "<urlopen error timed out>"
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005607"
     },
     {
       "id": "remote-franchise-9ee419772e77b3ed63e1cd60",
@@ -30073,8 +30367,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "에그 샐러드 샌드위치 세트",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": "Temperature/size columns cannot be assigned to a generic menu"
     },
     {
       "id": "remote-franchise-a07a5c124dbcc795b293cfbc",
@@ -30273,8 +30569,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "마스카포네 티라미수",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://mmthcoffee.com/sub/menu/list_coffee_view.php?menuSeq=327"
     },
     {
       "id": "remote-franchise-a1596f7c7545378d6cda923f",
@@ -30563,8 +30861,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "돌체 콜드브루 라떼",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-a2933ba8d2a7f5114c2c47d8",
@@ -30619,10 +30919,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "하트 스트로베리 마카롱",
-      "result": "MATCHED",
-      "conflicts": [],
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000004517"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-a2d44039b76f0bc004807650",
@@ -30865,10 +31165,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "풀문 잼 쿠키 세트",
-      "result": "FAILED_RETAINED",
+      "result": "MATCHED",
+      "conflicts": [],
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "error": "URLError",
-      "reason": "<urlopen error timed out>"
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000006825"
     },
     {
       "id": "remote-franchise-a3f01f3e3767a7f64f42ab2d",
@@ -30883,8 +31183,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "디카페인 매머드 커피",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-a417dd0eeec6cded652c116c",
@@ -30921,8 +31223,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "리트리버 미니 파우치",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-a46b3b330fbc1d51b1143767",
@@ -31183,10 +31487,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "더블 에그 브렉퍼스트 & 체다 샌드위치",
-      "result": "FAILED_RETAINED",
+      "result": "MATCHED",
+      "conflicts": [],
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "error": "URLError",
-      "reason": "<urlopen error timed out>"
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005697"
     },
     {
       "id": "remote-franchise-a5d6a1bb725aa2c04088bc98",
@@ -31203,24 +31507,30 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "민트 초코 프라페",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-a5efab44f8b16d800d8d6d4b",
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "자몽 착즙주스",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-a5f9140595c0ec8efb8eb5aa",
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "디카페인 카라멜 마키아토",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-a5fec95b61e51d6881f18aa3",
@@ -31503,8 +31813,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "초코 프라페",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-a7484821534e130d3c633d4c",
@@ -31827,8 +32139,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "디카페인 바닐라 라떼",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-a98bf5efeb4c1571df26d353",
@@ -31981,8 +32295,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "콜드브루 라떼",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-aa55792c4ac356374e7fa47a",
@@ -32033,8 +32349,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "골든 코코넛 라떼",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-aa72ac8cbdc77784bb6dc4a7",
@@ -32475,8 +32793,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "디카페인 달고나 카페라떼",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-acd6568dae849cc86994d08e",
@@ -32581,16 +32901,20 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "밀크쉐이크",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-ad473b1b248d003c0a298afa",
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "옥수수 라떼",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-ad4f94baa087b5c7b6a383de",
@@ -32683,8 +33007,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "오렌지 루이보스티",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-ae009f017fc3713c988b64e9",
@@ -32811,16 +33137,20 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "딸기 요거트 컵 젤라또",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-aec241c5cadace7761983bcc",
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "멜팅 치즈 샌드위치",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-aec9f52761e7c584ccc5c482",
@@ -32835,8 +33165,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "디카페인 아몬드 크림 콜드브루",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-aecfa775837c12fccfc2b488",
@@ -33189,8 +33521,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "티라미수 라떼",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-b0e9e54c4398283d9e3b94a7",
@@ -33355,8 +33689,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "뽀로로(딸기)",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-b1a94c664b3a8ffb7691cc6b",
@@ -33515,8 +33851,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "바삭 한입 페스츄리 약과",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": "Temperature/size columns cannot be assigned to a generic menu"
     },
     {
       "id": "remote-franchise-b28d92ceab06b1ac9f1fc469",
@@ -33779,8 +34117,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "쇼콜라 아메르 케이크",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-b435d51fcadcf6463d1a6736",
@@ -33893,8 +34233,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "칠리스 치즈 소금빵",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-b5031db61056ae8c81306066",
@@ -34503,8 +34845,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "리얼 레몬티",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-b88909f91bada0724d3d8082",
@@ -34593,8 +34937,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "로얄 밀크티",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-b9010b0dec59a49b0ebcaadd",
@@ -34653,8 +34999,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "포도 자스민 아이스티",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-b96993aa1995d34503309659",
@@ -34749,8 +35097,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "매머드 렐리시 핫도그 세트",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": "Temperature/size columns cannot be assigned to a generic menu"
     },
     {
       "id": "remote-franchise-b9f5d3dc558896b57e0cb1cf",
@@ -34835,8 +35185,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "바닐라 라떼",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-ba56f98f1a9e89f1c7e5aaba",
@@ -35047,8 +35399,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "번트 글레이즈 슈페너",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-bb685d112dd2b7a60b8ff4c0",
@@ -35073,8 +35427,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "아샷추 복숭아 아이스티",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-bb854ba92fe464a8ef6babdf",
@@ -35239,8 +35595,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "패션 오렌지 아이스티",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-bc901ef5f1c001b0fcc17e2d",
@@ -35275,8 +35633,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "쫀득 한입 고구마말랭이",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": "Temperature/size columns cannot be assigned to a generic menu"
     },
     {
       "id": "remote-franchise-bcb9fa09607994b4a6bbcae4",
@@ -35365,8 +35725,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "블루베리 베이글",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-bcebf9d893e07267906cce4b",
@@ -35381,8 +35743,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "디카페인 아인슈페너 라떼",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-bd013826b78bea9eea771c7a",
@@ -35871,8 +36235,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "곡물 라떼",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-bf3d83ae25ff6bdb35b85e9f",
@@ -35955,8 +36321,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "디카페인 샷추가 파인애플 주스",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-bfba18d5f1bb0b65b6eacd3a",
@@ -36053,8 +36421,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "디카페인 스노우 매머드 커피",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-c0624254198e0543ce126cf0",
@@ -36117,8 +36487,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "디카페인 시그니처 라떼",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-c0a1962720c3d824c52b329a",
@@ -36259,8 +36631,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "매머드 고메버터 초코 스콘",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://mmthcoffee.com/sub/menu/list_coffee_view.php?menuSeq=439"
     },
     {
       "id": "remote-franchise-c14a4aa8f8fcb9bc37b6e16d",
@@ -36515,8 +36889,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "헤이즐넛 모카",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-c1fdf13cedbf7079eed308e4",
@@ -36673,8 +37049,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "쌍화차",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-c2d58f80ba64686b1acd7a48",
@@ -36777,8 +37155,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "로리나(핑크레몬)",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-c34f8b119b0114551206cb2a",
@@ -36835,8 +37215,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "디카페인 아몬드 라떼",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-c36b56fb939f1711981e87f1",
@@ -36935,16 +37317,20 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "디카페인 아몬드 아메리카노",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-c413db9ad93a6574f9e2dcf3",
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "페퍼민트티",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-c41c3204744e2bcfcfb477d9",
@@ -37001,8 +37387,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "애플 모과차",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-c478cabbcd686df336a54be4",
@@ -37403,8 +37791,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "디카페인 헤이즐넛 커피",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-c665dfc504216dba1aea440f",
@@ -37419,8 +37809,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "아인슈페너 라떼",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-c688b21d4e91877b24f688dd",
@@ -37475,8 +37867,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "코코넛 크림 콜드브루 라떼",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-c6d8fc4b362a1cbc498ace81",
@@ -38001,8 +38395,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "디카페인 돌체 콜드브루 라떼",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-c96d5fae5b8c99a1ae3708a8",
@@ -38167,8 +38563,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "오레오 초코 프라페",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-c9f8455015c16e038e5e24f0",
@@ -38425,8 +38823,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "분다버그(진저비어)",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-cb4edf0bde6929a56b975b12",
@@ -38707,8 +39107,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "초코 덮인 크로슈",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": "Temperature/size columns cannot be assigned to a generic menu"
     },
     {
       "id": "remote-franchise-cd1fe270a6ea61aadea6ee3f",
@@ -38809,8 +39211,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "디카페인 바닐라 크럼블 아이스크림 라떼",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-cdd96f977f1c14103f979364",
@@ -38901,10 +39305,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "파예 무지방 그릭 요거트 허니",
-      "result": "FAILED_RETAINED",
+      "result": "MATCHED",
+      "conflicts": [],
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "error": "URLError",
-      "reason": "<urlopen error timed out>"
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005996"
     },
     {
       "id": "remote-franchise-ce3fb613eb2a4794437de972",
@@ -39115,8 +39519,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "아몬드 아메리카노",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-cfe654f4098810b5f89a934a",
@@ -39259,8 +39665,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "디카페인 헤이즐넛 라떼",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-d09cbd5b82ff711534998bd2",
@@ -39277,8 +39685,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "몰티즈 초코 생크림 카스텔라",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-d0a92c07a7ee99644bbf29f8",
@@ -39525,8 +39935,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "헤이즐넛 커피",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-d20548680a63565712f2e3b4",
@@ -40193,8 +40605,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "코코넛 사이공 라떼",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-d66aeca0ea1a73f9c23ca7b7",
@@ -40365,8 +40779,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "토마토 주스",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-d72e9e4dea3ebbcd94acdfb0",
@@ -40545,8 +40961,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "장수 오미자 티 / 에이드",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-d857070c2c68714a624ef6e4",
@@ -40753,8 +41171,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "파인애플 주스",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-d92f2b806b07a9b08384eb1c",
@@ -41001,8 +41421,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "베이컨 치즈 샌드위치",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://mmthcoffee.com/sub/menu/list_coffee_view.php?menuSeq=305"
     },
     {
       "id": "remote-franchise-daa1329ce102e5de787cf762",
@@ -41109,8 +41531,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "깔라만시 에이드",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-db56d2d3bbd85477d496aabf",
@@ -41485,8 +41909,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "매머드 초코 파운드 케이크",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://mmthcoffee.com/sub/menu/list_coffee_view.php?menuSeq=437"
     },
     {
       "id": "remote-franchise-dd8911a205cace92b22c01f2",
@@ -41533,8 +41959,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "헤이즐넛 라떼",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-ddf3957da95c3a0e243b91de",
@@ -41549,8 +41977,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "크로플",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://mmthcoffee.com/sub/menu/list_coffee_view.php?menuSeq=262"
     },
     {
       "id": "remote-franchise-de2256f6f82377af7c65bad6",
@@ -41583,8 +42013,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "복숭아 요거트 스무디",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-de5475596ebd6d4831ab0c18",
@@ -41711,8 +42143,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "클럽 샌드위치 세트",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": "Temperature/size columns cannot be assigned to a generic menu"
     },
     {
       "id": "remote-franchise-df0883629319ee4b85b95c29",
@@ -41795,8 +42229,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "디카페인 돌체 라떼",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-dfac59f8e45b623c356b8118",
@@ -41813,10 +42249,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "초콜릿 바닐라 그래놀라",
-      "result": "FAILED_RETAINED",
+      "result": "MATCHED",
+      "conflicts": [],
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "error": "URLError",
-      "reason": "<urlopen error timed out>"
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000006125"
     },
     {
       "id": "remote-franchise-dfbadad1c922f0e0998e46fb",
@@ -41851,8 +42287,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "나주 배숙차",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-dfce6d6380ceb895d793ebfa",
@@ -41905,8 +42343,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "꿀 커피",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-e0331375534b8c5e68eadb03",
@@ -42321,8 +42761,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "복숭아 아이스티",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-e26285581ed20a866ce1ae36",
@@ -42787,8 +43229,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "수박 주스",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-e466112bc787b96ee7622d79",
@@ -42823,8 +43267,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "아샷추 아이스티",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-e490e07fb9bf585a8b09247b",
@@ -43077,8 +43523,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "몰티즈 하트파이",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-e5c5c989ff2cabcc14db5aa6",
@@ -43391,8 +43839,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "디카페인 티라미수 라떼",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-e7442cc87978cdc6952c9619",
@@ -43477,8 +43927,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "피넛버터 밀크쉐이크",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-e7cb2f709787a97cfd4a3df1",
@@ -43707,8 +44159,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "블루레몬 티 / 에이드",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-e8d1987eb4622799a11659f3",
@@ -43845,8 +44299,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "밀크티",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-e999c017b11751952f6eda0b",
@@ -43939,8 +44395,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "코코넛 커피 스무디",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-ea5d3821c20e85802bb2dfd3",
@@ -44489,10 +44947,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "버터바",
-      "result": "FAILED_RETAINED",
+      "result": "MATCHED",
+      "conflicts": [],
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "error": "URLError",
-      "reason": "<urlopen error timed out>"
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000004784"
     },
     {
       "id": "remote-franchise-ed408d8750c76b9a3c0ad4fe",
@@ -44635,8 +45093,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "피스타치오 프라페",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-edb8f9bdc5c23e0a634ad438",
@@ -44887,8 +45347,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "청포도 에이드",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-ef568503d0d980e6daf8255b",
@@ -44941,8 +45403,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "매머드 탄산수",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-efa573d0761fff7d6060a3f5",
@@ -45023,8 +45487,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "딸기 크림 라떼",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-f0201b718a118f58f9a47f23",
@@ -45159,8 +45625,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "베이컨 치즈 샌드위치 세트",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": "Temperature/size columns cannot be assigned to a generic menu"
     },
     {
       "id": "remote-franchise-f0f1081ca37705f038253f7d",
@@ -45699,8 +46167,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "우유 크림 크로슈",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": "Temperature/size columns cannot be assigned to a generic menu"
     },
     {
       "id": "remote-franchise-f3b970b3844a896b05ab6465",
@@ -45769,8 +46239,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "딸기 밀크쉐이크",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-f418cee7f0dc8fa58fde9121",
@@ -45889,8 +46361,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "플레인 베이글",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-f4b8f0652d3bf0af8eb301e0",
@@ -46311,8 +46785,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "치즈 크로플",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_COMPLETE",
+      "sourceUrl": "https://mmthcoffee.com/sub/menu/list_coffee_view.php?menuSeq=263"
     },
     {
       "id": "remote-franchise-f69ced513be2c0675697d47d",
@@ -46903,8 +47379,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "자몽 티 / 에이드",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-fa126a7bd39e308e32791734",
@@ -47037,8 +47515,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "리얼 복숭아 스무디",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-fa71191794571f803b00f583",
@@ -47065,8 +47545,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "매머드 콜드브루 디카페인 원액",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-faa28ed017b2bb13431529e9",
@@ -47147,8 +47629,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "딸기 쿠키 프라페",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-fb0f5f61d771ed3172f54dea",
@@ -47343,16 +47827,20 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "디카페인 아메리카노",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-fbefd78206ede03b924cce82",
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "디카페인 콜드브루",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-fc0fb9784ecf7da5e0bd90e5",
@@ -47495,8 +47983,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "초코 라떼",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-fcd21882bb6fd25b6663a7a5",
@@ -47521,8 +48011,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "돌체 라떼",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-fce60b61ebd2c0a58aec9aa1",
@@ -47585,8 +48077,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "허니브레드",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-fd4f47e2765139c2644d1916",
@@ -47895,8 +48389,10 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "name": "디카페인 카푸치노",
-      "result": "SOURCE_MISSING",
-      "nutritionStatus": "NUTRITION_SOURCE_MISSING"
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": ""
     },
     {
       "id": "remote-franchise-ff6d0552e671b6588a9323c1",
