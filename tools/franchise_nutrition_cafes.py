@@ -60,7 +60,7 @@ def parse_dalkomm(menu,payload):
     assert len(matches)==1,'Exact Dalkomm menu not unique';n=matches[0]
     s=clean(' '.join(n.xpath('.//ul[@class="spec"]//text()')))
     assert len(re.findall(r'\[Size\s*:',s))<=1,'Multiple published sizes require variant selection'
-    out=blank();out['energyKcal']=measured(s,'(?:칼로리\s*)?','kcal')
+    out=blank();out['energyKcal']=measured(s,r'(?:칼로리\s*)?','kcal')
     for field,label,unit in [('proteinGrams','단백질','g'),('sodiumMilligrams','나트륨','mg'),('carbohydrateGrams','탄수화물','g'),('fatGrams','지방','g')]:out[field]=measured(s,label,unit)
     amount,unit=basis(s)
     if amount:out.update(servingAmount=amount,servingUnit=unit)
@@ -84,3 +84,47 @@ def parse_paik(menu,payload):
     return matches[0]
 
 PARSERS={'mega-official-nutrition':parse_mega,'hollys-official-nutrition':parse_hollys,'dalkomm-official-nutrition':parse_dalkomm,'paik-official-nutrition':parse_paik}
+
+def parse_gongcha(menu,payload):
+    assert menu['brand']=='공차'
+    r=root(payload);titles=r.xpath('//div[@class="menu-detail-conts"]//p[contains(@class,"t1")]')
+    assert len(titles)==1 and norm(titles[0].text_content())==norm(menu['name'])
+    blocks=r.xpath('//div[@class="menu-detail-conts"]//div[contains(concat(" ",normalize-space(@class)," ")," table-item ")]')
+    assert len(blocks)==1,'HOT/ICE or size tables require an explicit variant'
+    block=blocks[0];variant=clean(' '.join(block.xpath('./div[@class="table-title"]//text()')))
+    assert not variant,'Unqualified name cannot assume a declared temperature/size variant'
+    headers=[norm(x.text_content()) for x in block.xpath('.//thead/tr/th')]
+    rows=block.xpath('.//tbody/tr');assert len(rows)==1
+    cells=[clean(x.text_content()) for x in rows[0].xpath('./td')];assert len(headers)==len(cells)
+    values=dict(zip(headers,cells));out=blank()
+    for field,label in [('energyKcal','열량(kcal)'),('proteinGrams','단백질(g)'),('fatGrams','지방(g)'),('carbohydrateGrams','탄수화물(g)'),('sodiumMilligrams','나트륨(mg)')]:
+        out[field]=numeric(values.get(norm(label),''))
+    for unit in ('g','ml'):
+        amount=numeric(values.get(norm('1회 제공량('+unit+')'),''))
+        if amount is not None and amount>0:out.update(servingAmount=amount,servingUnit=unit,servingDescription='공식 1회 제공량 기준')
+    assert out['energyKcal'] is not None
+    return out
+
+PARSERS['gongcha-official-nutrition']=parse_gongcha
+
+def parse_pascucci(menu,payload):
+    assert menu['brand']=='파스쿠찌' and menu['externalId'].isdigit()
+    r=root(payload);titles=r.xpath('//div[@class="productDetail"]//h1/strong')
+    assert len(titles)==1 and norm(titles[0].text_content())==norm(menu['name'])
+    options=r.xpath('//select[@name="sizeGubun"]/option')
+    assert len(options)<=1,'Multiple serving sizes cannot be assigned to an unqualified menu'
+    values={}
+    for row in r.xpath('//ul[@class="nutri"]/li'):
+        labels=row.xpath('./span');numbers=row.xpath('./p')
+        assert len(labels)==len(numbers)==1
+        label=norm(labels[0].text_content());assert label not in values
+        values[label]=clean(numbers[0].text_content())
+    out=blank()
+    for field,label,unit in [('energyKcal','kcal','kcal'),('proteinGrams','단백질','g'),('sodiumMilligrams','나트륨','mg'),('carbohydrateGrams','탄수화물','g'),('fatGrams','지방','g')]:
+        out[field]=numeric(values.get(norm(label),''),unit)
+    amount=re.fullmatch(r'(\d+(?:\.\d+)?)\s*(g|ml)',values.get(norm('총 내용량'),''))
+    if amount and float(amount[1])>0:out.update(servingAmount=float(amount[1]),servingUnit=amount[2],servingDescription='공식 총 내용량 기준')
+    assert out['energyKcal'] is not None
+    return out
+
+PARSERS['pascucci-official-nutrition']=parse_pascucci

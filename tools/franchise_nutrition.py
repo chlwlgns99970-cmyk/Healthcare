@@ -338,6 +338,12 @@ def refresh(menus, registry=None, fetcher=None):
             message=dict(header=dict(result=True,error_code='',error_text='',info_text='',message_version='',login_session_id='',trcode='BKR0347'),body={})
             body=urlencode(dict(message=json.dumps(message,separators=(',',':')))).encode()
             headers['Content-Type']='application/x-www-form-urlencoded; charset=UTF-8'
+        if urlparse(url).hostname=='www.pascucci.co.kr' and urlparse(url).path=='/product/ajax/productDetail.asp':
+            from urllib.parse import urlencode
+            params=parse_qs(urlparse(url).query)
+            assert set(params)=={'productSeq'} and len(params['productSeq'])==1 and params['productSeq'][0].isdigit()
+            body=urlencode(dict(productSeq=params['productSeq'][0])).encode()
+            headers['Content-Type']='application/x-www-form-urlencoded'
         with urllib.request.urlopen(urllib.request.Request(url, data=body, headers=headers), timeout=12) as response:
             assert response.status == 200 and urlparse(response.url).hostname == urlparse(url).hostname
             payload = response.read(2000001)
@@ -386,6 +392,9 @@ def refresh(menus, registry=None, fetcher=None):
         if adapter in PARSERS:
             try:
                 url = source.get('url') or menu['sourceUrl']
+                if adapter=='pascucci-official-nutrition':
+                    assert menu['externalId'].isdigit()
+                    url='https://www.pascucci.co.kr/product/ajax/productDetail.asp?productSeq='+menu['externalId']
                 assert urlparse(url).hostname in source['allowedHosts']
                 payload = shared[url] if url in shared else get(url)
                 if isinstance(payload, Exception):raise payload

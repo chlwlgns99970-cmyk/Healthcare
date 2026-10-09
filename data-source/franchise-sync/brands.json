@@ -1877,14 +1877,9 @@
         "url": "https://slowcali.co.kr/bbs/content.php?co_id=menu",
         "key": "",
         "adapter": "reviewed-html"
-      },
-      {
-        "url": "https://slowcali.co.kr/bbs/content.php?co_id=menu",
-        "adapter": "slowcali-finished-variants",
-        "key": "finished-base-variants"
       }
     ],
-    "expectedMenuCount": 60
+    "expectedMenuCount": 46
   },
   {
     "brandId": "brand-29327af78758b6f5",
