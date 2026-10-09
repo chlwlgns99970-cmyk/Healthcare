@@ -2413,5 +2413,12 @@
     "sourceType": "HTML",
     "sourceUrl": "https://leesungdang1945.com/category/낱개상품/24/",
     "evidenceSha256": "95d5b6f6001beed227efff1858fd876534a278beabd8b039a4b98f3b1a3e328a"
+  },
+  {
+    "brandId": "brand-2c14410b57ba9fc4",
+    "checkedAt": "2026-10-08T23:45:01.674810+00:00",
+    "sourceType": "JSON",
+    "sourceUrl": "https://www.kfckorea.com/kfc/interface/selectDeliveryList",
+    "evidenceSha256": "dde893af1129f34ad58bd4783617938489e407c026f6d43a4ffd96be781c890e"
   }
 ]
