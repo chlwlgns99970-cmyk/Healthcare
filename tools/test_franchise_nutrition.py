@@ -37,7 +37,7 @@ class NutritionTests(unittest.TestCase):
     def test_poke_exact_hot_ice_variant(self):
         with self.assertRaises(AssertionError):parse_pokeallday(dict(brand='포케올데이',name='아메리카노 (Hot)'),(FIX/'poke-nutrition.html').read_bytes())
         fact=parse_pokeallday(dict(brand='포케올데이',name='카페라떼(ICE)'),(FIX/'poke-nutrition.html').read_bytes())
-        self.assertEqual(120,fact['energyKcal']);self.assertIsNone(fact['servingUnit']);self.assertIn('16oz',fact['servingDescription'])
+        self.assertEqual(120,fact['energyKcal']);self.assertEqual('oz',fact['servingUnit']);self.assertEqual(16,fact['servingAmount'])
 
     def test_poke_different_topping_is_not_base_menu(self):
         with self.assertRaises(AssertionError):parse_pokeallday(dict(brand='포케올데이',name='들기름 메밀면 샐러드 + 육회'),(FIX/'poke-nutrition.html').read_bytes())

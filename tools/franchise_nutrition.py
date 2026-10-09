@@ -246,13 +246,13 @@ def parse_pokeallday(menu,payload):
         matches.extend((group,name,value) for name,value in pairs if normalize(name)==normalize(menu['name']))
     assert len(matches)==1,'Poke finished menu name/variant not uniquely matched'
     group,name,raw=matches[0];values=raw.split('|');assert len(values)==10
-    amount=re.fullmatch(r'(\d+(?:\.\d+)?)(ml|ea)?',values[0])
-    assert amount or re.fullmatch(r'\d+(?:\.\d+)?oz',values[0]),'Unexpected official basis'
+    amount=re.fullmatch(r'(\d+(?:\.\d+)?)(ml|ea|oz)?',values[0])
+    assert amount,'Unexpected official basis'
     numbers=[number(v+'g','g') for v in values[1:]];assert all(v is not None for v in numbers)
     kcal,sodium,carbs,sugar,protein,fat,cholesterol,saturated,trans=numbers
     return dict(energyKcal=kcal,carbohydrateGrams=carbs,proteinGrams=protein,fatGrams=fat,sodiumMilligrams=sodium,
-                servingAmount=float(amount[1]) if amount else None,servingUnit={'ml':'ml','ea':'개',None:'g'}[amount[2]] if amount else None,
-                servingDescription='공식 완성 메뉴 기준 · 추가 재료는 별도' if amount else '공식 기준량 '+values[0]+' · 단위를 직접 확인해 기록해 주세요.',matchedBy='EXACT_FINISHED_MENU_NAME_AND_VARIANT',nutritionGroup=group)
+                servingAmount=float(amount[1]),servingUnit={'ml':'ml','ea':'개','oz':'oz',None:'g'}[amount[2]],
+                servingDescription='공식 완성 메뉴 기준 · 추가 재료는 별도',matchedBy='EXACT_FINISHED_MENU_NAME_AND_VARIANT',nutritionGroup=group)
 
 
 PARSERS['poke-finished-menu-nutrition']=parse_pokeallday
@@ -268,7 +268,7 @@ def validate_nutrition(fact, allowed_hosts):
         value = fact.get(key)
         assert value is None or isinstance(value, (int, float)) and not isinstance(value, bool) and math.isfinite(value) and 0 <= value <= 100000
     amount = fact.get('servingAmount')
-    assert amount is None and fact.get('servingUnit') is None or isinstance(amount, (int, float)) and not isinstance(amount, bool) and math.isfinite(amount) and 0 < amount <= 10000 and fact.get('servingUnit') in ('g', 'ml', '개', '인분', '잔')
+    assert amount is None and fact.get('servingUnit') is None or isinstance(amount, (int, float)) and not isinstance(amount, bool) and math.isfinite(amount) and 0 < amount <= 10000 and fact.get('servingUnit') in ('g', 'ml', '개', '인분', '잔', 'oz')
 
 
 def status(fact):
