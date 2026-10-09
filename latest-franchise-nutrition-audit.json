@@ -2,8 +2,8 @@
   "total": 5103,
   "states": {
     "NUTRITION_SOURCE_MISSING": 3933,
-    "NUTRITION_COMPLETE": 532,
-    "NUTRITION_PARTIAL": 493,
+    "NUTRITION_COMPLETE": 533,
+    "NUTRITION_PARTIAL": 492,
     "NUTRITION_SOURCE_FOUND_UNMATCHED": 145
   },
   "known": {
@@ -12,24 +12,24 @@
     "proteinGrams": 904,
     "fatGrams": 342,
     "sodiumMilligrams": 900,
-    "servingAmount": 536
+    "servingAmount": 537
   },
   "sourceDiscovery": [
     {
       "brandId": "brand-24df7e63c9c2314e",
       "brand": "롯데리아",
       "url": "https://www.lotteeatz.com/",
-      "checkedAt": "2026-10-09T13:43:48.596708+00:00",
+      "checkedAt": "2026-10-09T13:55:33.776862+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "fd03f6164f2dd9d6c53dffd9c649b8de3207095ec6942567b379e6b7f0f23fe2",
+      "sourceSha256": "a06d50780759f6d5b58376999088ce4935e459273369705d7e6021103bb76663",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-d857c6bf9eb6a6c0",
       "brand": "버거킹",
       "url": "https://www.burgerking.co.kr/",
-      "checkedAt": "2026-10-09T13:43:48.597344+00:00",
+      "checkedAt": "2026-10-09T13:55:33.777580+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "681577892a7c2c28fdea85197edf74bdad97b79b804976606386acfa870acec8",
@@ -39,17 +39,17 @@
       "brandId": "brand-2c14410b57ba9fc4",
       "brand": "KFC",
       "url": "https://www.kfckorea.com/",
-      "checkedAt": "2026-10-09T13:43:48.597980+00:00",
+      "checkedAt": "2026-10-09T13:55:33.778120+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "9277cd852c0ba50ec59ab50dd9a8eceb43d781e5f4239275a88ad5f895fd8028",
+      "sourceSha256": "262633feef82c0a24a03f3b61895dea82dce62c7eef37c0a8f105b7f3bd6e67d",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-b0f892d2c591ca13",
       "brand": "맘스터치",
       "url": "https://www.momstouch.co.kr/",
-      "checkedAt": "2026-10-09T13:43:48.598813+00:00",
+      "checkedAt": "2026-10-09T13:55:33.778969+00:00",
       "links": [],
       "error": "URLError",
       "reason": "<urlopen error timed out>",
@@ -59,7 +59,7 @@
       "brandId": "brand-f91351461391155a",
       "brand": "도미노피자",
       "url": "https://www.dominos.co.kr/",
-      "checkedAt": "2026-10-09T13:43:49.398614+00:00",
+      "checkedAt": "2026-10-09T13:55:34.561543+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "20e9a3e939009ec79e19230d5a54dda58dffc23ba62a38227bafe75e9fef2ea2",
@@ -69,7 +69,7 @@
       "brandId": "brand-dfd7712a868b7cd2",
       "brand": "피자헛",
       "url": "https://www.pizzahut.co.kr/",
-      "checkedAt": "2026-10-09T13:43:49.583462+00:00",
+      "checkedAt": "2026-10-09T13:55:34.803151+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "3cdd3c54452eea935825e32960741466c92ea9d854ff45d017808e78ac058726",
@@ -79,7 +79,7 @@
       "brandId": "brand-792c9f221e49eb7e",
       "brand": "미스터피자",
       "url": "https://www.mrpizza.co.kr/",
-      "checkedAt": "2026-10-09T13:43:50.404460+00:00",
+      "checkedAt": "2026-10-09T13:55:35.805185+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "6337fd5a5f78b04ec04b48718cc5f1350698ee4a3ffe9ca43c96a9dfb39a625e",
@@ -89,7 +89,7 @@
       "brandId": "brand-45ddca38a87b3dcd",
       "brand": "BHC",
       "url": "https://www.bhc.co.kr/",
-      "checkedAt": "2026-10-09T13:43:50.819667+00:00",
+      "checkedAt": "2026-10-09T13:55:35.989010+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "5aab57dff467709fe9b4368c822fb50824d40c52e1bcd64523e8111282c4f4ac",
@@ -99,7 +99,7 @@
       "brandId": "brand-5b391ae396ab6901",
       "brand": "교촌치킨",
       "url": "https://www.kyochon.com/",
-      "checkedAt": "2026-10-09T13:43:51.438949+00:00",
+      "checkedAt": "2026-10-09T13:55:36.578727+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "f3b1683a97ac13909de0af38309f6510c4e60b192be96afee3b153617fb5547e",
@@ -109,17 +109,17 @@
       "brandId": "brand-dfbc0be6a9fb565a",
       "brand": "굽네치킨",
       "url": "https://www.goobne.co.kr/",
-      "checkedAt": "2026-10-09T13:43:51.705267+00:00",
+      "checkedAt": "2026-10-09T13:55:36.875167+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "53e5df0a20461c639ae3fa74bb0a980ba8839365aae6d9d536e20109649abcc5",
+      "sourceSha256": "c3da153e979b58e993797d4a7c513ecd61cdabfb4158321d74c46b02e55a87ed",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-913a908f005583f0",
       "brand": "BBQ",
       "url": "https://www.bbq.co.kr/",
-      "checkedAt": "2026-10-09T13:43:51.946175+00:00",
+      "checkedAt": "2026-10-09T13:55:37.034535+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "b1f770e613bf0272edb3d8cfe0db7e901394f4074f49bd02661aec533e15423f",
@@ -129,17 +129,17 @@
       "brandId": "brand-1c90aeff2ad68611",
       "brand": "네네치킨",
       "url": "https://nenechicken.com/",
-      "checkedAt": "2026-10-09T13:43:53.792311+00:00",
+      "checkedAt": "2026-10-09T13:55:38.413197+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "c1fb0cf649f23b0a1e8b9856b4828cf669ac70337cf9d4447cbc908fe26aca5b",
+      "sourceSha256": "23b2bf436f5c010ef4cbe9dc0a7f219844c7c8764c28df6ca25fc3adba7b0da7",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-044f74822bd63a2c",
       "brand": "투썸플레이스",
       "url": "https://www.twosome.co.kr/",
-      "checkedAt": "2026-10-09T13:43:54.544141+00:00",
+      "checkedAt": "2026-10-09T13:55:38.842551+00:00",
       "links": [],
       "error": "HTTPError",
       "reason": "HTTP Error 403: Forbidden",
@@ -149,7 +149,7 @@
       "brandId": "brand-9bd2fd2f30a9da68",
       "brand": "컴포즈커피",
       "url": "https://composecoffee.com/",
-      "checkedAt": "2026-10-09T13:43:54.743439+00:00",
+      "checkedAt": "2026-10-09T13:55:39.024808+00:00",
       "links": [],
       "error": "HTTPError",
       "reason": "HTTP Error 403: Forbidden",
@@ -159,7 +159,7 @@
       "brandId": "brand-db8f86831d5f2b94",
       "brand": "메가MGC커피",
       "url": "https://www.mega-mgccoffee.com/",
-      "checkedAt": "2026-10-09T13:43:55.011944+00:00",
+      "checkedAt": "2026-10-09T13:55:39.287460+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "c3a8953154582a445785fbe02eb8d612cab7d8f66cd61871ccbb508441d2dfa2",
@@ -169,7 +169,7 @@
       "brandId": "brand-149ee0d555be8e34",
       "brand": "매머드커피",
       "url": "https://mmthcoffee.com/",
-      "checkedAt": "2026-10-09T13:43:55.204972+00:00",
+      "checkedAt": "2026-10-09T13:55:39.493775+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "2eb8713f3d38e9353faebb24d1805ef5e11e261144061e1b4ffa5fa937ce2aaa",
@@ -179,17 +179,17 @@
       "brandId": "brand-2366ea85553dc984",
       "brand": "두찜",
       "url": "https://www.twozzim.com/",
-      "checkedAt": "2026-10-09T13:43:55.753973+00:00",
+      "checkedAt": "2026-10-09T13:55:39.698777+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "4096f943fa20169d7a17aa4bc42f459a125d4b336d8410a50bb1c593bcd1dc67",
+      "sourceSha256": "611d67f34e7e816c9b1eed8d497f44fa5377b17fc427513fc16d8608c0601fcd",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-9bbe44a999e4d158",
       "brand": "봉추찜닭",
       "url": "http://www.bongchu.com/layout/res/home.php?go=page1.0&mid=10",
-      "checkedAt": "2026-10-09T13:43:56.327949+00:00",
+      "checkedAt": "2026-10-09T13:55:40.635896+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "f8b4739ff04b19fe582ab433a18f2b5bb5f72bbaff7c637ab2fe1ebd68bec540",
@@ -199,47 +199,47 @@
       "brandId": "brand-9fe52457ea35b575",
       "brand": "일미리금계찜닭",
       "url": "https://goldjjimdak.com/main.php",
-      "checkedAt": "2026-10-09T13:43:56.440069+00:00",
+      "checkedAt": "2026-10-09T13:55:40.638928+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "829de6282a125fd374899e9a0789d8a7093d78bee8e17c62808bc7bebdac3473",
+      "sourceSha256": "f84dc7374e9a43a2995c055be98fdac644c3177df1eeae8bdd8dfc765985789e",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-6b4062eb7d56bbc2",
       "brand": "육수당",
       "url": "https://yuksudang.com/",
-      "checkedAt": "2026-10-09T13:43:56.716418+00:00",
+      "checkedAt": "2026-10-09T13:55:40.856462+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "8a096b1004dbac9d7b97149a41a8cb1bbdaa66c50ddd5549ae43eb090ca4cb82",
+      "sourceSha256": "79d667855681eeafca5171344b105feb0a231ebbd57810fc2ebb9535435482e7",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-e237cdd96675b8e9",
       "brand": "현대옥",
       "url": "http://www.hyundaiok.com/menu",
-      "checkedAt": "2026-10-09T13:43:56.913994+00:00",
+      "checkedAt": "2026-10-09T13:55:41.225693+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "32fba9427872cf738a4aec28a78836287726acb5d0e0ea03ec65106d2b539c26",
+      "sourceSha256": "1ffc39c6350a267203172fe5d2dcf5062107c60a5b063a06f52ff728fc591426",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-a6a2f91c0a858eab",
       "brand": "이화수전통육개장",
       "url": "https://ihwasoo.com/",
-      "checkedAt": "2026-10-09T13:43:57.066952+00:00",
+      "checkedAt": "2026-10-09T13:55:41.586656+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "bb1b566202cf93668757dfbc42b693d8e347a509b7a3ec5e63eb37c8f39cdfa3",
+      "sourceSha256": "dcdabfb6de69afeac5f7875af8eac41994d63923883a63cb9d217461fb34d9b2",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-e391193d95fb4b22",
       "brand": "신전떡볶이",
       "url": "https://sinjeon.co.kr/",
-      "checkedAt": "2026-10-09T13:43:57.611276+00:00",
+      "checkedAt": "2026-10-09T13:55:41.774852+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "6d1aa3882a8cc6ae863de82319bbd673606182b559eb0adf8fae500eb2f6b2eb",
@@ -249,7 +249,7 @@
       "brandId": "brand-d12ac5629277dd74",
       "brand": "죠스떡볶이",
       "url": "https://jawsfood.co.kr/menu/menu.html",
-      "checkedAt": "2026-10-09T13:43:57.724269+00:00",
+      "checkedAt": "2026-10-09T13:55:42.114089+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "51b4d350dd66e7b9b15432183776dabaf89a2e9e96b86ff22aa4358a3dcb1fc6",
@@ -259,47 +259,47 @@
       "brandId": "brand-d3742bdc75b7cfff",
       "brand": "청년다방",
       "url": "https://youngdabang.com/",
-      "checkedAt": "2026-10-09T13:43:57.879907+00:00",
+      "checkedAt": "2026-10-09T13:55:42.253311+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "05926b15b3551777124791d60a5fee1052aa40d8587d2612ab8fefda39f08d30",
+      "sourceSha256": "78f493932a8ece778d530242d5daacb9f0de02b0786c31b38e6e4e965f0c984f",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-b06d5a467c2e2917",
       "brand": "두끼",
       "url": "https://www.dookki.co.kr/",
-      "checkedAt": "2026-10-09T13:43:58.028842+00:00",
+      "checkedAt": "2026-10-09T13:55:42.985229+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "f2e161ef9d36f2aeeffbbfc6aece433ea5a26b775d4619d9bfb05202d0516665",
+      "sourceSha256": "144267189df4c16a740fe18d1d2a7704d930ebf3e00cd260fcab11958d7f24f0",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-517e6e3a0f2a227b",
       "brand": "스쿨푸드",
       "url": "http://schoolfood.freewebclub.com/menu/menu.html",
-      "checkedAt": "2026-10-09T13:43:58.554198+00:00",
+      "checkedAt": "2026-10-09T13:55:43.042032+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "ee318f06769d01c3c352580d2d84852bc7775680c4945972f9a223cbf2b83904",
+      "sourceSha256": "4ae5c9e039c22ac9ea5648518a50f2e20ea6aecc6eb8a97fa2d146768fb1d63f",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-3af4368565dc9463",
       "brand": "김가네",
       "url": "https://www.gimgane.co.kr/",
-      "checkedAt": "2026-10-09T13:43:58.729867+00:00",
+      "checkedAt": "2026-10-09T13:55:43.455825+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "358d0cf872c5157eca25d6c223e335c43f138322c751e276462ce2b702c1dfa6",
+      "sourceSha256": "06a737b4df9ca65c4b526c0815bce7c9694074eccdac5c2321f74637a929ea86",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-09811efd43af8395",
       "brand": "고봉민김밥인",
       "url": "https://www.kobongmin.com/renewal/main/main.php",
-      "checkedAt": "2026-10-09T13:43:59.077500+00:00",
+      "checkedAt": "2026-10-09T13:55:43.663464+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "59f61604560009e9d5c6248736bc6c8a18cf5524da99b67c625548865251f487",
@@ -309,7 +309,7 @@
       "brandId": "brand-62da25d9478406f9",
       "brand": "바르다김선생",
       "url": "https://www.teacherkim.co.kr/",
-      "checkedAt": "2026-10-09T13:43:59.425332+00:00",
+      "checkedAt": "2026-10-09T13:55:44.395555+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "753a7427c3a91c6e3dfc95a51758085af6926068d1a68b5dc07cbc3bdf5a3035",
@@ -319,7 +319,7 @@
       "brandId": "brand-52b7eab533bf064f",
       "brand": "홍콩반점0410",
       "url": "https://www.theborn.co.kr/theborn_brand/홍콩반점0410/",
-      "checkedAt": "2026-10-09T13:43:59.563410+00:00",
+      "checkedAt": "2026-10-09T13:55:44.401791+00:00",
       "links": [],
       "error": "UnicodeEncodeError",
       "reason": "'ascii' codec can't encode characters in position 19-22: ordinal not in range(128)",
@@ -329,7 +329,7 @@
       "brandId": "brand-98d0269278f56dd7",
       "brand": "이비가짬뽕",
       "url": "https://www.ebiga.co.kr/",
-      "checkedAt": "2026-10-09T13:43:59.563934+00:00",
+      "checkedAt": "2026-10-09T13:55:44.402452+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "30bb1510b98c35128e0f1bb125a849d8b9d0923b0da092f9fa2cb132e67ef86a",
@@ -339,7 +339,7 @@
       "brandId": "brand-eb1ea6f3cfeef4a1",
       "brand": "탕화쿵푸",
       "url": "https://tanghuokungfu.co.kr/default/brand/Introduction.php",
-      "checkedAt": "2026-10-09T13:43:59.795203+00:00",
+      "checkedAt": "2026-10-09T13:55:44.896767+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "9d033c1b26b6eec1873ea785f2f516741ffb497669419fbd36254d2e45f1de13",
@@ -349,7 +349,7 @@
       "brandId": "brand-4971bd13f52f50ae",
       "brand": "춘리마라탕",
       "url": "https://chunlimalatang.com/menu/",
-      "checkedAt": "2026-10-09T13:44:00.263008+00:00",
+      "checkedAt": "2026-10-09T13:55:45.756832+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "34f67258590beb072811abc9d1fccb016f9c1c14320c4e90ae9935526a8cbcac",
@@ -359,7 +359,7 @@
       "brandId": "brand-bd40e3bf63110e3a",
       "brand": "본죽",
       "url": "https://www.bonif.co.kr/brand/store?brdCd=BF101",
-      "checkedAt": "2026-10-09T13:44:00.894365+00:00",
+      "checkedAt": "2026-10-09T13:55:45.898262+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "3f71cd8a14aa5e01da35bbe3ee869662d3ed378278d5dfbfe5c104f6fcc41c5e",
@@ -369,7 +369,7 @@
       "brandId": "brand-2d083c367c257949",
       "brand": "본죽&비빔밥",
       "url": "https://www.bonif.co.kr/brand/menu?brdCd=BF102",
-      "checkedAt": "2026-10-09T13:44:01.067251+00:00",
+      "checkedAt": "2026-10-09T13:55:45.952565+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "7eff3b58bd909f930f6d5b487718e837745423ed026dbc6a180b858d9b6e2686",
@@ -379,47 +379,47 @@
       "brandId": "brand-d788dc4427d306fe",
       "brand": "죽이야기",
       "url": "https://www.jukstory.com/",
-      "checkedAt": "2026-10-09T13:44:01.450616+00:00",
+      "checkedAt": "2026-10-09T13:55:46.299110+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "05f7f58be7fc74202b7160202f8e49eab2ed45a4b337e010b41b3008901f49dd",
+      "sourceSha256": "0f5a2c69a1388b9f6cae0a9cbd6ca9b0f22fb4e3e30b2b7c1454f9701ab9f342",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-440ae94a942a4921",
       "brand": "국수나무",
       "url": "https://www.namuya.co.kr/food/food.php",
-      "checkedAt": "2026-10-09T13:44:01.984563+00:00",
+      "checkedAt": "2026-10-09T13:55:46.856026+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "231e1735d043b551a6540f4675067eaf9d5d72e84e0135a48dcffd1dd8c452e7",
+      "sourceSha256": "da38f807a04a2c8e2b8a422dc0f668d5e8e568cff8c7bc3bda612d4557f9adaa",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-71bb2f53e15c0897",
       "brand": "역전우동0410",
       "url": "https://udon0410.com/menu/",
-      "checkedAt": "2026-10-09T13:44:02.263665+00:00",
+      "checkedAt": "2026-10-09T13:55:47.183024+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "bf34d0c202ee03491ea642eabf69042590064ac653facc0fe63a27fc9313d470",
+      "sourceSha256": "4004d5404480f0cfd53299abe913a883740c13faec543ed3ad68b3dc7d52f845",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-2a13283561756adc",
       "brand": "백소정",
       "url": "https://www.baeksojeong.com/",
-      "checkedAt": "2026-10-09T13:44:02.344344+00:00",
+      "checkedAt": "2026-10-09T13:55:47.199760+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "9b238839753ef52cce69ec46e8ec0d3baddff11fe2823e1d1a8619d1a24a0db7",
+      "sourceSha256": "e1db359d07b1a5eee58e58455695b139c8a5599f55b06907c7a4feb3de29aafa",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-8420421dae1f2ef3",
       "brand": "홍익돈까스",
       "url": "https://www.hongikdonkatsu.com/",
-      "checkedAt": "2026-10-09T13:44:02.639142+00:00",
+      "checkedAt": "2026-10-09T13:55:47.807721+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "4e9f1b28d40269a700d100a73489830be21bda8f66977d8c8130b82a236df3c6",
@@ -429,17 +429,17 @@
       "brandId": "brand-dfe7aafc7b485943",
       "brand": "원할머니보쌈",
       "url": "https://wonandone.co.kr/bossam/",
-      "checkedAt": "2026-10-09T13:44:02.999238+00:00",
+      "checkedAt": "2026-10-09T13:55:47.951385+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "f0143d58f02274045a1d36ccf06db5bdb9d039fc386563f0762a5697b282bb2c",
+      "sourceSha256": "afe2f3d4917f0813fb5a7b2bd1536031270a6896b955829838ba85912812381f",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-3ab715e02b724b84",
       "brand": "놀부부대찌개",
       "url": "https://nolboo.co.kr/",
-      "checkedAt": "2026-10-09T13:44:03.200984+00:00",
+      "checkedAt": "2026-10-09T13:55:48.061281+00:00",
       "links": [],
       "error": "URLError",
       "reason": "<urlopen error timed out>",
@@ -449,7 +449,7 @@
       "brandId": "brand-39adcc9276d724e2",
       "brand": "본도시락",
       "url": "https://www.bonif.co.kr/brand/menu?brdCd=BF104",
-      "checkedAt": "2026-10-09T13:44:03.549235+00:00",
+      "checkedAt": "2026-10-09T13:55:48.596707+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "a1fc8bc734256b4055432e04476f512bb6d2accd248a6d43dd3cb1ac9a84b8dd",
@@ -459,7 +459,7 @@
       "brandId": "brand-e37848e7ad911d2a",
       "brand": "본설렁탕",
       "url": "https://www.bonif.co.kr/brand/menu?brdCd=BF105",
-      "checkedAt": "2026-10-09T13:44:03.863085+00:00",
+      "checkedAt": "2026-10-09T13:55:48.754864+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "de9c3ea329d9f8043ff7fa8982f1150da932bff1e0a0909ff171db5f240bb0db",
@@ -469,7 +469,7 @@
       "brandId": "brand-e1baf7db5ac285a7",
       "brand": "본우리반상",
       "url": "https://www.bonif.co.kr/brand/menu?brdCd=BF107",
-      "checkedAt": "2026-10-09T13:44:04.397568+00:00",
+      "checkedAt": "2026-10-09T13:55:48.949854+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "34eb66207b764c1028f93219c0bf58c0eb4fd148d6966fe0e02db4695c9076bb",
@@ -479,7 +479,7 @@
       "brandId": "brand-0e65f6b77b14e324",
       "brand": "멘지",
       "url": "https://www.bonif.co.kr/brand/menu?brdCd=BF111",
-      "checkedAt": "2026-10-09T13:44:04.663657+00:00",
+      "checkedAt": "2026-10-09T13:55:49.465577+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "dc7695cc5f0686a7bde92a5a1aefc0f0775213fe585761f0f4885de9182156af",
@@ -489,7 +489,7 @@
       "brandId": "brand-5cf4a5c95ff85d3a",
       "brand": "본흑염소·능이삼계탕",
       "url": "https://www.bonif.co.kr/brand/menu?brdCd=BF113",
-      "checkedAt": "2026-10-09T13:44:04.722903+00:00",
+      "checkedAt": "2026-10-09T13:55:49.586867+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "07ce74942ecb09e9f87e2036b1f77d7e17e14b17097fd4f15644cc5999a01a61",
@@ -499,17 +499,17 @@
       "brandId": "brand-9e7aeb464781f115",
       "brand": "핵밥",
       "url": "https://www.hecbob.com/main",
-      "checkedAt": "2026-10-09T13:44:05.253166+00:00",
+      "checkedAt": "2026-10-09T13:55:49.801450+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "b46a7b16a8464cadd1c4726e698247d60ce14dfc2566d2c02ed7e4b1f9027bf3",
+      "sourceSha256": "e6a0acc5ce5f5fcfaba71b0de00fa90daed0c60826237f33ca93bfc7d130252e",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-97c4b3edd331ff83",
       "brand": "채선당",
       "url": "https://www.chaesundang.co.kr/",
-      "checkedAt": "2026-10-09T13:44:05.515405+00:00",
+      "checkedAt": "2026-10-09T13:55:50.369522+00:00",
       "links": [],
       "error": "HTTPError",
       "reason": "HTTP Error 403: Forbidden",
@@ -519,17 +519,17 @@
       "brandId": "brand-a9a4ba8b5ad2ca3d",
       "brand": "소담촌",
       "url": "https://www.sodamchon.com/",
-      "checkedAt": "2026-10-09T13:44:05.584681+00:00",
+      "checkedAt": "2026-10-09T13:55:50.527129+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "2682a04c3d17d77812317606174713af1678084ff9383eebfd127b17dcf75a25",
+      "sourceSha256": "8910c601305257f4880aa53591c3805dba87d3923a6ca13e2995d3bc5dc020ab",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-1bc146a27ab0e421",
       "brand": "슬로우캘리",
       "url": "https://slowcali.co.kr/",
-      "checkedAt": "2026-10-09T13:44:05.704455+00:00",
+      "checkedAt": "2026-10-09T13:55:50.562009+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "e7367cb0ddceae3f496f66ba1e237a46463e1997aaa1e2147debaad7449678e4",
@@ -539,7 +539,7 @@
       "brandId": "brand-29327af78758b6f5",
       "brand": "써브웨이",
       "url": "https://www.subway.co.kr/",
-      "checkedAt": "2026-10-09T13:44:06.925990+00:00",
+      "checkedAt": "2026-10-09T13:55:50.971587+00:00",
       "links": [],
       "error": "HTTPError",
       "reason": "HTTP Error 403: Forbidden",
@@ -549,17 +549,17 @@
       "brandId": "brand-70ce8c35375d9fae",
       "brand": "이삭토스트",
       "url": "https://isaac-toast.co.kr/",
-      "checkedAt": "2026-10-09T13:44:07.152928+00:00",
+      "checkedAt": "2026-10-09T13:55:51.539435+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "7b4650d5542e914d5423da1706e588cc59cc649f54166447f1ca91fe2f1b1795",
+      "sourceSha256": "68ae0d900973d0fc17d5612338d34367734c597debcdf5fdbf9eebe3ae243b14",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-8032e5a2633bc1e3",
       "brand": "에그드랍",
       "url": "https://eggdrop.com/menu/list.php",
-      "checkedAt": "2026-10-09T13:44:07.483364+00:00",
+      "checkedAt": "2026-10-09T13:55:51.777055+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "ebbbc05b57d897b40e26df8cb44987fbc53e3e598931eabb1609ee8065e17843",
@@ -569,27 +569,27 @@
       "brandId": "brand-adb1fa3e7378cd49",
       "brand": "캠토토스트",
       "url": "https://camtotoast.com/",
-      "checkedAt": "2026-10-09T13:44:08.007168+00:00",
+      "checkedAt": "2026-10-09T13:55:52.442726+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "40ea892e0200eee8161123ebdd951056af629ad84cabc06d4c1e4b50dcfc0e38",
+      "sourceSha256": "55054bf717c1ca89dae26135d4e44bb3de905f913ade45fe22d61584b5ee320a",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-d715f712d950d0e8",
       "brand": "피자스쿨",
       "url": "http://pizzaschool.net/menu/",
-      "checkedAt": "2026-10-09T13:44:08.357301+00:00",
+      "checkedAt": "2026-10-09T13:55:52.757991+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "0aecbdca90636e82c0c73a4afe04b26f22d160843ee96e9973bd68645dbb90cc",
+      "sourceSha256": "029366a888609bff9fb91fa64202d281dce85f5574c5f53c7bf94b2a0d0dfef5",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-2891bc50e9e622e6",
       "brand": "파파존스",
       "url": "https://m.pji.co.kr/menu/pizza",
-      "checkedAt": "2026-10-09T13:44:08.399275+00:00",
+      "checkedAt": "2026-10-09T13:55:53.028575+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "1c5d0aff1787bc7f51e76b17da0565671f512fddc364aab0b2cf581acc4e8929",
@@ -599,7 +599,7 @@
       "brandId": "brand-f2c4cd89053b4ff8",
       "brand": "청년피자",
       "url": "https://youngmanpizza.co.kr/sub01/menu2.php",
-      "checkedAt": "2026-10-09T13:44:09.594877+00:00",
+      "checkedAt": "2026-10-09T13:55:54.315934+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "601aac22885e81a00ce6ce30a1f66aac934a21dadca1545d933100f9c426319b",
@@ -609,7 +609,7 @@
       "brandId": "brand-e7bc4d2ab88a800c",
       "brand": "노랑통닭",
       "url": "https://www.norangtongdak.co.kr/menu/chicken_list.html",
-      "checkedAt": "2026-10-09T13:44:09.903445+00:00",
+      "checkedAt": "2026-10-09T13:55:54.476266+00:00",
       "links": [],
       "error": "URLError",
       "reason": "<urlopen error [SSL: DH_KEY_TOO_SMALL] dh key too small (_ssl.c:1010)>",
@@ -619,7 +619,7 @@
       "brandId": "brand-c253f58a17fc9b81",
       "brand": "지코바",
       "url": "http://www.gcova.co.kr/sub_3_1.htm",
-      "checkedAt": "2026-10-09T13:44:10.072084+00:00",
+      "checkedAt": "2026-10-09T13:55:54.489978+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "797c8001dbf9cb226952d468a189c6ba723a039b310d9a28b9b3624d8148ea83",
@@ -629,27 +629,27 @@
       "brandId": "brand-c242a10bbca4c411",
       "brand": "처갓집양념치킨",
       "url": "https://www.cheogajip.co.kr/bbs/board.php?bo_table=menu",
-      "checkedAt": "2026-10-09T13:44:10.432361+00:00",
+      "checkedAt": "2026-10-09T13:55:55.144762+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "c3fd4596039ee080d1d1a45db22508338602c48b4dedbf92bbefd81f44638a10",
+      "sourceSha256": "62de3927807aef38699db50c9ef9b76605afe474c8a59dcbe70f5a86dc9bdc4b",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-1e99fd5b57a9f5cb",
       "brand": "피자마루",
       "url": "https://www.pizzamaru.kr/",
-      "checkedAt": "2026-10-09T13:44:11.118725+00:00",
+      "checkedAt": "2026-10-09T13:55:55.699457+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "2c60ac9b7c8a53b3aec07a6f64f0c2fe7757cf26456864dc511b0189cfc55166",
+      "sourceSha256": "45bae8ffeb1595a41319da2b44cc2944d529b1a37b142904c70e0792ff46e32b",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-f4abfad35563de25",
       "brand": "멕시카나",
       "url": "https://www.mexicana.co.kr/menu/product.asp",
-      "checkedAt": "2026-10-09T13:44:11.171931+00:00",
+      "checkedAt": "2026-10-09T13:55:55.707202+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "a9a504628cc896968b10f547a83a2266c7a467d94c806af6df190a4987466962",
@@ -659,7 +659,7 @@
       "brandId": "brand-b0d0c4de8cdf23bc",
       "brand": "60계치킨",
       "url": "https://60chicken.com/bbs/content.php?co_id=menu",
-      "checkedAt": "2026-10-09T13:44:11.484559+00:00",
+      "checkedAt": "2026-10-09T13:55:56.335536+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "5a83d0f1736aa348419428efde6349028d045240738394ce567948fe94863f7f",
@@ -669,17 +669,17 @@
       "brandId": "brand-57244fb148c377c6",
       "brand": "반올림피자",
       "url": "https://order.banolimpizza.com/menu/list?menuId=1",
-      "checkedAt": "2026-10-09T13:44:11.520949+00:00",
+      "checkedAt": "2026-10-09T13:55:56.344063+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "5375c59d73d9e2214440fe68ba67d0d8dbb2fdb9d5d8c2b26e32539c4eb97aca",
+      "sourceSha256": "da47c1aedb1c4f4da7938c020c3c92816577f24025446d2d4164dbfb85d2f554",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-41b772c57bada9f9",
       "brand": "프랭크버거",
       "url": "https://www.frankburger.co.kr/html/menu_1.html",
-      "checkedAt": "2026-10-09T13:44:11.843911+00:00",
+      "checkedAt": "2026-10-09T13:55:56.403504+00:00",
       "links": [
         {
           "url": "https://frankburger.co.kr/html/ingredient.html",
@@ -687,7 +687,7 @@
         }
       ],
       "httpStatus": 200,
-      "sourceSha256": "30a265adbe28b5b563fc8cc4a35da885c5ecbb400a1add6e54a97c516e9dc121",
+      "sourceSha256": "5432f8789d23e51746b64551f911db44f89f14ad5aa771433ff725d704012fab",
       "confirmedNutritionSources": [
         "https://frankburger.co.kr/html/ingredient.html"
       ]
@@ -696,17 +696,17 @@
       "brandId": "brand-69ad361cd26106b1",
       "brand": "노브랜드버거",
       "url": "https://www.shinsegaefood.com/nobrandburger/index.sf",
-      "checkedAt": "2026-10-09T13:44:12.408027+00:00",
+      "checkedAt": "2026-10-09T13:55:57.227121+00:00",
       "links": [],
-      "error": "URLError",
-      "reason": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>",
+      "httpStatus": 200,
+      "sourceSha256": "efd7ffbc1e6e377a8ec1615554f0a7f7053fd97829cc9b1fa9cbab8390b61437",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-2cf7eb0ea975163d",
       "brand": "새마을식당",
       "url": "https://newmaul.com/sub/menu.php",
-      "checkedAt": "2026-10-09T13:44:12.613241+00:00",
+      "checkedAt": "2026-10-09T13:55:57.270085+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "fbc240c6560343f2f971b3554242016dc62456982f08f4dd9e769c93d9bab3b9",
@@ -716,27 +716,27 @@
       "brandId": "brand-537263c2bc830a08",
       "brand": "빽다방",
       "url": "https://paikdabang.com/menu/menu_coffee/",
-      "checkedAt": "2026-10-09T13:44:12.740248+00:00",
+      "checkedAt": "2026-10-09T13:55:57.405341+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "0b52519e5d0db947edc305f09958252a220b8de6f2855a726f5400be6dbf0f0b",
+      "sourceSha256": "d1da6057c5832811d0837bd5c3cf573c92b3606f5522ce8d3fab5a3bdcc7f737",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-1742b64ed29107ac",
       "brand": "배스킨라빈스",
       "url": "https://www.baskinrobbins.co.kr/menu/list.php?category=A",
-      "checkedAt": "2026-10-09T13:44:13.073859+00:00",
+      "checkedAt": "2026-10-09T13:55:57.596219+00:00",
       "links": [],
-      "httpStatus": 200,
-      "sourceSha256": "386a6b0df24c5647a0ce0aeec3381652db689e8af822cf8cd411229bdef74936",
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-7dfea7361415a819",
       "brand": "파리바게뜨",
       "url": "https://www.paris.co.kr/products/",
-      "checkedAt": "2026-10-09T13:44:13.211176+00:00",
+      "checkedAt": "2026-10-09T13:55:58.204472+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "ee2765069195a4fa3dda1a89273602c5e9d4aa5f15af8c6195b4df18bcf4bfa5",
@@ -746,7 +746,7 @@
       "brandId": "brand-61b7f46d49620328",
       "brand": "요아정",
       "url": "https://yoajung.co.kr/bbs/content.php?co_id=menustore",
-      "checkedAt": "2026-10-09T13:44:13.443449+00:00",
+      "checkedAt": "2026-10-09T13:55:58.473736+00:00",
       "links": [],
       "error": "AssertionError",
       "reason": "",
@@ -756,17 +756,17 @@
       "brandId": "brand-3d3d7aa34cc1f578",
       "brand": "미소야",
       "url": "https://www.misoya.co.kr/menu",
-      "checkedAt": "2026-10-09T13:44:14.203734+00:00",
+      "checkedAt": "2026-10-09T13:55:58.820605+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "253bfa0b0f7ddc3f22bb6c88078716d3bbe645d5d0a2fc8fec56401d2d0f2753",
+      "sourceSha256": "93da0734146df9948c2bd2e7deb1c6df62068745e06cdb06fae87e7114ddb49a",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-53314eb3760b340b",
       "brand": "할리스",
       "url": "https://www.hollys.co.kr/menu/espresso.do",
-      "checkedAt": "2026-10-09T13:44:14.262531+00:00",
+      "checkedAt": "2026-10-09T13:55:59.583886+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "88014cf8336861a8e98881878847d0a903fc0694de038136ee2c775fed5dc50d",
@@ -776,7 +776,7 @@
       "brandId": "brand-07de1aee884692c4",
       "brand": "7번가피자",
       "url": "https://www.7thpizza.com/sub/menu/list.php",
-      "checkedAt": "2026-10-09T13:44:14.725004+00:00",
+      "checkedAt": "2026-10-09T13:56:00.507264+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "463ec0266817d11abddc63367afa5e6d5e7cdf2652951051074872766190f3b6",
@@ -786,17 +786,17 @@
       "brandId": "brand-35225ece8d72c5b9",
       "brand": "토마토도시락",
       "url": "https://www.tomatodosirak.co.kr/board/index.php?board=menu_01&sca=all",
-      "checkedAt": "2026-10-09T13:44:15.554866+00:00",
+      "checkedAt": "2026-10-09T13:56:00.693026+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "9ed9fe1bff806b6ac10d8c142c522fcda44fca2f6a3decbcda04f3ebceac6304",
+      "sourceSha256": "63b0c6b895ac776547bc48a43d71ce0ce197d9f5a1ec0de807d4b846f6fc6b65",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-977382baa9a9159b",
       "brand": "동대문엽기떡볶이",
       "url": "https://www.yupdduk.com/sub/menu/yup-menu",
-      "checkedAt": "2026-10-09T13:44:16.158718+00:00",
+      "checkedAt": "2026-10-09T13:56:00.705257+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "4c8350de849c03e88846d16c8453f583815b13ac26d397ae8549fb72bcfbbfd9",
@@ -806,57 +806,57 @@
       "brandId": "brand-fdb71b87248a93b9",
       "brand": "공차",
       "url": "https://www.gong-cha.co.kr/brand/menu/product?category=001001&scroll=y",
-      "checkedAt": "2026-10-09T13:44:16.274288+00:00",
+      "checkedAt": "2026-10-09T13:56:01.852652+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "b0405e1b1784a54060ddb9b3a5a2c74982ea71fb001d78bcb6d4f18b90b3958d",
+      "sourceSha256": "f6651a0a50e66c1baf11d026c191593c41576d10b611751f02002f03af7c0162",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-5203807bf8b4bc7a",
       "brand": "족발야시장",
       "url": "https://xn--ih3bm7ju8bi1cb3a.com/html/menu.html",
-      "checkedAt": "2026-10-09T13:44:16.323033+00:00",
+      "checkedAt": "2026-10-09T13:56:02.046660+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "b13b5d7aeef8c60985af5cf34fece264793190db51e14e430f29144ed3b4d1e4",
+      "sourceSha256": "aaec1946c7d1c052fd9ddd6abeb5839b1ef440b541de5157ab00bf774f5c02bf",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-7b853dd449517e57",
       "brand": "호식이두마리치킨",
       "url": "https://www.9922.co.kr/menu",
-      "checkedAt": "2026-10-09T13:44:16.955070+00:00",
+      "checkedAt": "2026-10-09T13:56:02.357090+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "6b596634b82c1d942c9f729196c0bbdd17a7b76d802364104efc4d08b026c94e",
+      "sourceSha256": "d7c939753eaa1c0312692470dede8d3bc58cebc1e6e7ac61d903cbe75ce6590c",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-a0302f70b937755f",
       "brand": "뚜레쥬르",
       "url": "https://www.tlj.co.kr/product/list.asp",
-      "checkedAt": "2026-10-09T13:44:17.293954+00:00",
+      "checkedAt": "2026-10-09T13:56:02.532973+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "f3f2b732c8fde4a8f57678da393ac5ca1c29ed5d09b170be6797a6bffc96fa01",
+      "sourceSha256": "dab39b469f216f452f28266b58d66835b349dc80d2f350ce4788fa2c6135ce93",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-9f125dd967fd168e",
       "brand": "크리스피크림도넛",
       "url": "https://www.lotteeatz.com/brand/kkd",
-      "checkedAt": "2026-10-09T13:44:17.507925+00:00",
+      "checkedAt": "2026-10-09T13:56:02.888739+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "8ec4f8058956d30b1ffd55f85c9cf787971d7c92fbaf31266ad67d724f62441a",
+      "sourceSha256": "1fd8483957ed01963067a4a114a20bf6935b693c1579895f4f1d3e9611a5af4d",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-e32a9313e634ead7",
       "brand": "홍종흔베이커리",
       "url": "http://www.hjhbakery.com/product/product_list.asp",
-      "checkedAt": "2026-10-09T13:44:17.684283+00:00",
+      "checkedAt": "2026-10-09T13:56:03.112417+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "2bead995220d998174dc6b84dc3c1562105bd5452679db6cd9f732e2525606d7",
@@ -866,7 +866,7 @@
       "brandId": "brand-a7444ee050c62abd",
       "brand": "성심당",
       "url": "https://sungsimdang.co.kr/",
-      "checkedAt": "2026-10-09T13:44:18.332470+00:00",
+      "checkedAt": "2026-10-09T13:56:03.719052+00:00",
       "links": [
         {
           "url": "https://sungsimdang.co.kr/page/71",
@@ -881,7 +881,7 @@
       "brandId": "brand-cf57c271fe920362",
       "brand": "이성당",
       "url": "https://leesungdang1945.com/category/낱개상품/24/",
-      "checkedAt": "2026-10-09T13:44:18.582469+00:00",
+      "checkedAt": "2026-10-09T13:56:03.832697+00:00",
       "links": [],
       "error": "UnicodeEncodeError",
       "reason": "'ascii' codec can't encode characters in position 14-17: ordinal not in range(128)",
@@ -891,7 +891,7 @@
       "brandId": "brand-db7ae070c1a211f3",
       "brand": "응급실국물떡볶이",
       "url": "https://응급실국물떡볶이.kr/",
-      "checkedAt": "2026-10-09T13:44:18.582810+00:00",
+      "checkedAt": "2026-10-09T13:56:03.832822+00:00",
       "links": [],
       "error": "UnicodeEncodeError",
       "reason": "'latin-1' codec can't encode characters in position 0-7: ordinal not in range(256)",
@@ -901,17 +901,17 @@
       "brandId": "brand-87f52291726f6891",
       "brand": "국대떡볶이",
       "url": "https://kukde.kr/menu",
-      "checkedAt": "2026-10-09T13:44:18.582895+00:00",
+      "checkedAt": "2026-10-09T13:56:03.832914+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "1238f574810e95eee608729cac1830ef9c9a7ca2eb0f33525fd760c783d5ffa4",
+      "sourceSha256": "27948f9bfb54be419db9c31a433226713586424676cb4867f99fee82414813d6",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-c250fc357adcb9df",
       "brand": "파스쿠찌",
       "url": "https://www.pascucci.co.kr/",
-      "checkedAt": "2026-10-09T13:44:18.586281+00:00",
+      "checkedAt": "2026-10-09T13:56:03.845281+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "4eb792158c006ab8a42dd363b3d020b8939cc926a5cc4fb536c0b7777bc49479",
@@ -921,47 +921,47 @@
       "brandId": "brand-1b6e60f7965bce11",
       "brand": "달콤",
       "url": "https://www.dalkomm.com/menu",
-      "checkedAt": "2026-10-09T13:44:18.843489+00:00",
+      "checkedAt": "2026-10-09T13:56:04.801310+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "6743b43dea9fc6010a949cc396e0b4b75288859c72b4e77fa60a103eba46a1c6",
+      "sourceSha256": "aff6d718f0f4b4b16ded83df3211ffe0110c689ab7f518b92b213cea1b201935",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-5f1ac0e21ddf73b1",
       "brand": "우지커피",
       "url": "https://www.oozycoffee.com/coffee",
-      "checkedAt": "2026-10-09T13:44:19.438572+00:00",
+      "checkedAt": "2026-10-09T13:56:04.815012+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "3e729f507aa6bdd398b585e4435f77702aec7e84bd7b199158a8ccce127cb653",
+      "sourceSha256": "995ee33cfc0031fbf0ede9730bc04dc2968fc8eab43ec79ab7105c2b92823f73",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-9fa9c3eca7bcf563",
       "brand": "더벤티",
       "url": "https://www.theventi.co.kr/",
-      "checkedAt": "2026-10-09T13:44:19.585359+00:00",
+      "checkedAt": "2026-10-09T13:56:04.848837+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "11e77380c75fdc6d96a160b91b7d86e6ee3e45e3e18b78cf370cd5fb84c02f19",
+      "sourceSha256": "ddffd1f65c58e321423c596aee7cb2e63ffdf51e6443d5fb691103d93e93958f",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-2e050b39b22a7280",
       "brand": "엔제리너스",
       "url": "https://www.lotteeatz.com/brand/angel",
-      "checkedAt": "2026-10-09T13:44:19.692198+00:00",
+      "checkedAt": "2026-10-09T13:56:05.222144+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "1a6ed1d486e47a7d7675500c0cb8bce130ce2eb10f16fe7b6911b5c9da0271e4",
+      "sourceSha256": "a6cbccb5f555ccc0687b7a7691865df37e340770f6225b8b591e07630e47e858",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-01c5e2f727401b55",
       "brand": "설빙",
       "url": "https://sulbing.com/menu/",
-      "checkedAt": "2026-10-09T13:44:20.346828+00:00",
+      "checkedAt": "2026-10-09T13:56:05.832012+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "6a88543817554b01ca9eec5d378bf2b26aa418a8f65c0ef5e5a8419dbd770252",
@@ -970,11 +970,11 @@
   ],
   "nutritionLinkedMenus": 1025,
   "newlyVerifiedMenus": 0,
-  "nutritionChangedMenus": 0,
+  "nutritionChangedMenus": 1,
   "reviewedSnapshotsRetained": 0,
-  "recordable": 532,
-  "matched": 1056,
-  "failed": 114,
+  "recordable": 533,
+  "matched": 906,
+  "failed": 264,
   "menus": [
     {
       "id": "remote-franchise-000a63b1884cf6e0bf66ae9f",
@@ -1477,9 +1477,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "비타슬러시 리치(S)",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=8"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-02f90ac80a59e7b05681981a",
@@ -1727,9 +1728,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "호박 인절미 카스텔라 도넛",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-046d5d1dd248bd97a4141488",
@@ -1761,9 +1763,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "허니 바나나 시나몬롤",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-04910616bc563b6dd7484aa5",
@@ -2045,9 +2048,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "카카오 후로스티드",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=3"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-063e5d94c3c6f2cbe70433b1",
@@ -2062,9 +2066,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "마카다미아 초코 쿠키 (4개입)",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=9"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-06663883857c8623fdd5716b",
@@ -2354,9 +2359,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "오렌지주스",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=4"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-07cbd6e11e03d12e13caa09a",
@@ -2413,9 +2419,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "비타슬러시 믹솔로지",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_PARTIAL",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=8"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-08346f73656f7ecd53b988e0",
@@ -2678,9 +2685,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "크림 브륄레 도넛",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=2"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-099b7e5767c4d05b6c9b7d47",
@@ -3464,8 +3472,8 @@
       "name": "아이스 에티오피아(Drip Coffee)",
       "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
-      "error": "AssertionError",
-      "reason": "Dunkin official product ID/name not matched"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-0d75b3ce31310b1aeeec301b",
@@ -3513,9 +3521,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "허니후리터",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-0da6c5d465fdca3e4762dc3f",
@@ -3662,8 +3671,8 @@
       "name": "던카치노 오리지널",
       "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
-      "error": "AssertionError",
-      "reason": "Dunkin official product ID/name not matched"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-0e64f87e59ae02c04a60e074",
@@ -4113,9 +4122,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "가평잣미숫가루라떼(S)",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=12"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-10fa720333de8fb2c5d47731",
@@ -4253,9 +4263,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "두바이st 쫀득 먼치킨",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=11"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-11ff2794fb844938f88aeeeb",
@@ -4286,9 +4297,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "밤티라미수 크림도넛",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=8"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-12178491821177c3b3581700",
@@ -4492,7 +4504,7 @@
       "brand": "포케올데이",
       "name": "카페라떼(ICE)",
       "result": "MATCHED",
-      "nutritionStatus": "NUTRITION_PARTIAL",
+      "nutritionStatus": "NUTRITION_COMPLETE",
       "sourceUrl": "https://pokeallday.co.kr/nutrition_info"
     },
     {
@@ -4729,9 +4741,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "가평잣미숫가루라떼(R)",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=12"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-14fb879c45823d0c6965d11e",
@@ -4889,9 +4902,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "비타슬러시 믹솔로지(R)",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_PARTIAL",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=8"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-15fbae09f8f94afbb705a23e",
@@ -5311,9 +5325,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "아이스 제주 그린티 라떼",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=6"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-1853737c0ba2a3edcaba90b3",
@@ -6027,9 +6042,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "소금우유 쿠키슈",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=7"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-1c595039ee8c093ec176682c",
@@ -6284,9 +6300,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "초코 (R)",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=4"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-1e35b090425c36d26fecf416",
@@ -6385,8 +6402,8 @@
       "name": "빅 스트로베리",
       "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
-      "error": "AssertionError",
-      "reason": "Dunkin official product ID/name not matched"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-1ed8d50201929d9aa2b0e781",
@@ -6505,8 +6522,8 @@
       "name": "캡슐 디카페인 블렌드",
       "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
-      "error": "AssertionError",
-      "reason": "Dunkin official product ID/name not matched"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-1f712255b8f3ea32452cf6dc",
@@ -6521,9 +6538,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "바바리안필드",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=8"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-1fafe2023067998a5ab33582",
@@ -6848,9 +6866,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "콘버터 꽈배기 with 에쉬레 버터",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=2"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-21b3ea62d5627a047632e635",
@@ -7312,9 +7331,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "자이언트 버킷 피치",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=4"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-240baf36d3666316e98d864a",
@@ -7575,9 +7595,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "아이스 히비스커스 애플티",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=5"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-25f9206033ba08eb950bfbaa",
@@ -7918,9 +7939,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "피치 아이스티 (R)",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=2"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-288b5b8337740cb0de400967",
@@ -7935,9 +7957,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "핑크 듀얼하트",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=2"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-288d85e9560d6b187632640e",
@@ -8034,9 +8057,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "아이스 밀크티",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=6"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-2933fa0bf059a9268a509c08",
@@ -8512,9 +8536,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "티라미수 롤 케이크",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=2"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-2bdc0e8599c4251376ad3404",
@@ -8580,8 +8605,8 @@
       "name": "더블 초코칩 쿠키",
       "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
-      "error": "AssertionError",
-      "reason": "Dunkin official product ID/name not matched"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-2c4ad2f5965305efd2db291a",
@@ -8960,9 +8985,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "비타슬러시 펀치(R)",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=7"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-2ecb3640072c57e6aff6e047",
@@ -9164,9 +9190,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "삼진어묵 땡초 고로케 도넛",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=7"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-2fefed6c9c2b37467f992bff",
@@ -9394,9 +9421,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "던킨 DOT. 도넛",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=12"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-31516b775132c07bdd66fc97",
@@ -9640,8 +9668,8 @@
       "name": "카라멜 던카치노",
       "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
-      "error": "AssertionError",
-      "reason": "Dunkin official product ID/name not matched"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-328b9313215c45afdebcb203",
@@ -9748,9 +9776,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "히비스커스 애플티",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-3320b0744ce1b359e47f83dc",
@@ -10142,9 +10171,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "라즈베리 피스타치오",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=10"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-35c73c8be3f72b9daad94283",
@@ -10337,9 +10367,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "로우슈거 핫초코 (R)",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=9"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-371ae9d008a01141a3083163",
@@ -11077,9 +11108,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "오리지널 케익 먼치킨",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=4"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-3bb18a398f5449de1c3eded1",
@@ -11151,9 +11183,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "레몬 그린티",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=10"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-3c434a3261063e8a52b44f65",
@@ -11579,9 +11612,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "스트로베리 필드",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=6"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-3e633dd45653a14b78d29ac5",
@@ -12017,9 +12051,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "크리미 우유도넛",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=2"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-40e3185c9b88c83a16138adb",
@@ -12287,18 +12322,20 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "해피먼치킨컵(10개)",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-425931a1f437666f31da8971",
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "학화 호도 쫀득 먼치킨",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-42611f8894a6eaf654bc7509",
@@ -12428,9 +12465,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "비타슬러시 레몬(R)",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=8"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-4313a0afaf4f353055f8fbcd",
@@ -12607,8 +12645,8 @@
       "name": "떠먹는제로티라미수",
       "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
-      "error": "AssertionError",
-      "reason": "Dunkin official product ID/name not matched"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-43ed095d7e4d8ffc097b1185",
@@ -13259,8 +13297,8 @@
       "name": "아이스 카라멜마끼아또",
       "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
-      "error": "AssertionError",
-      "reason": "Dunkin official product ID/name not matched"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-47ab7ef662afff09f730ceee",
@@ -13358,9 +13396,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "레몬 파운드 도넛",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=9"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-483446f19d18a775a1e0ec10",
@@ -14263,9 +14302,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "학화 호도 앙금 먼치킨",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-4e2d9b91aa09f8b4043a5b34",
@@ -14503,9 +14543,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "에스프레소 쿠키슈",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=5"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-4fd78140fd813bffac5225ea",
@@ -15366,9 +15407,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "앙버터 도넛",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=5"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-54e1ad4825adecef08c6ca11",
@@ -15654,9 +15696,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "콘치즈 크로크무슈 by 오스틴 강",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=2"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-57421c682d5ca4463c649bc2",
@@ -16003,9 +16046,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "생크림 카스텔라 도넛",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=7"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-59eb55db4c12ec28a90ba01a",
@@ -16179,9 +16223,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "수박 쿨라타",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=7"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-5b3afa3b95a7c1d1ac9d5a56",
@@ -16425,9 +16470,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "슈크림브륄레",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=6"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-5d2cd6709de493fe2a3dc074",
@@ -16669,9 +16715,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "비타슬러시 펀치",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=7"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-5e3373820825a7b3d4a3047c",
@@ -16995,9 +17042,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "서울역 선셋 크림도넛",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=7"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-5f863f5b01ab50d20c4d8716",
@@ -17014,8 +17062,8 @@
       "name": "크리스피 치즈볼",
       "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
-      "error": "AssertionError",
-      "reason": "Dunkin official product ID/name not matched"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-5f9f6ee43e5084f810d091aa",
@@ -17078,9 +17126,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "원더스 올리브 츄이스티",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=4"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-5fd9fd02b326465dfcf18eb6",
@@ -17393,8 +17442,8 @@
       "name": "프렛즐 필러(스위트 크림 치즈)",
       "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
-      "error": "AssertionError",
-      "reason": "Dunkin official product ID/name not matched"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-616ec64ee55d0d3bfc86f42b",
@@ -17458,9 +17507,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "초코 크러쉬 도넛",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=3"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-6209f885ba6bda8ab04688a5",
@@ -17590,9 +17640,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "남대문 씨앗호떡 츄이스티",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=12"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-630c6ba5ed8a8acb87f818e0",
@@ -17659,9 +17710,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "비타슬러시 믹솔로지(S)",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_PARTIAL",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=8"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-6357616f2da9928e55adf118",
@@ -17972,9 +18024,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "들기름 메밀 츄이스티 by 오스틴 강",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=11"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-64f822d48e55c5ae6bc41ecf",
@@ -18769,9 +18822,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "카카오 파운드 케익",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=3"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-69ef81848a4723ba1e15b707",
@@ -18900,9 +18954,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "레몬딜라이트 퍼프",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=9"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-6accb7c7c29967a66cb0479b",
@@ -19068,9 +19123,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "바닐라 슈크림도넛",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=9"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-6c01570832c94f57d5928443",
@@ -19193,8 +19249,8 @@
       "name": "자이언트 버킷 아메리카노",
       "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
-      "error": "AssertionError",
-      "reason": "Dunkin official product ID/name not matched"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-6cd2f2a64e823ad7a6615b6d",
@@ -19242,9 +19298,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "소프트 우유크림 도넛",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=7"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-6d589fecf6aeae5ca153cbfe",
@@ -19593,9 +19650,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "퀸아망",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=2"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-6f9ff6026a6c73bdd265d23c",
@@ -19812,8 +19870,8 @@
       "name": "카라멜마끼아또",
       "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
-      "error": "AssertionError",
-      "reason": "Dunkin official product ID/name not matched"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-712d9bb3a837815e31c6c032",
@@ -20168,9 +20226,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "마카다미아 초코쿠키",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=9"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-735a63bf510c36e8f68d4b60",
@@ -20282,9 +20341,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "아이스 레몬 그린티",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=6"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-745e0f20f6da6887949fc278",
@@ -20393,9 +20453,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "가평잣미숫가루라떼(HOT)(R)",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=12"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-74b62fb176c719332e617497",
@@ -20595,8 +20656,8 @@
       "name": "(앳홈) 치즈풀 크로크무슈",
       "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
-      "error": "AssertionError",
-      "reason": "Dunkin official product ID/name not matched"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-757f6f6c8b304f18e137c7a2",
@@ -21055,9 +21116,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "아이스 초코 (R)",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=5"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-78c3d1034c3d27e42c322118",
@@ -21684,9 +21746,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "더블 치즈 머핀",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=12"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-7c8a1035e4d843fb682ba855",
@@ -21807,9 +21870,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "스트로베리 핑크링",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=6"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-7dc10f5a4c6c9fad79517ad8",
@@ -21930,9 +21994,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "카카오하니딥 먼치킨",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=3"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-7e73c178b542630d19d36082",
@@ -22772,9 +22837,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "몽실 구름 크림도넛",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=9"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-84a109c11e89215e216e318f",
@@ -22848,9 +22914,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "베리머치 퍼프",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=8"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-855f259d18be725e4a794d9a",
@@ -23217,8 +23284,8 @@
       "name": "제주 햇살담은 우도땅콩 파운드",
       "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
-      "error": "AssertionError",
-      "reason": "Dunkin official product ID/name not matched"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-88260360a30ba14e64971832",
@@ -23535,9 +23602,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "블루베리치즈케익 요거트 크림도넛",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=8"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-8a545f99824d0093efafddee",
@@ -23817,18 +23885,20 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "초코 카라멜 비스킷",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=4"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-8c79da27da951d38683c4b9b",
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "비타슬러시 레몬(S)",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=8"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-8c84eac4ff9c314ca8636eb8",
@@ -24025,9 +24095,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "미니도넛세트",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=9"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-8e05bf9a41e0154fe1ec580f",
@@ -24050,9 +24121,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "디어샌드(5개입)",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=11"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-8e0d356507e1e3d11977a912",
@@ -24128,17 +24200,18 @@
       "name": "드립백 커피 틴케이스 세트 (20EA)",
       "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
-      "error": "AssertionError",
-      "reason": "Dunkin official product ID/name not matched"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-8e80ec185b24d9c814ce2bb7",
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "삼진어묵 새우 고로케 도넛",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=7"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-8e9663bf2099adb0ee3b77db",
@@ -24290,9 +24363,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "비타슬러시 펀치(S)",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=7"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-8fb08cbe388abae598d05f9d",
@@ -24323,9 +24397,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "플레인 베이글",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=2"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-8ff115a414d7f294ac8973bc",
@@ -24470,9 +24545,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "소시지 인 치즈 베이글",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=7"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-90a611215711a86c7b2258a3",
@@ -24674,8 +24750,8 @@
       "name": "던킨 아이스 블렌드 빈",
       "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
-      "error": "AssertionError",
-      "reason": "Dunkin official product ID/name not matched"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-924b3f675e633376f68fb452",
@@ -24862,9 +24938,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "정통 보름달 도넛",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=4"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-935c795a64dfa2898615e9eb",
@@ -24997,9 +25074,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "학화 호도 먼치킨 세트(4입)",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-9410bb554adbdd3583f91af0",
@@ -25542,9 +25620,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "미숫가루 라떼",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=9"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-9777bfb306ec71f650a21371",
@@ -25595,8 +25674,8 @@
       "name": "제주 햇살담은 한라봉 파운드",
       "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
-      "error": "AssertionError",
-      "reason": "Dunkin official product ID/name not matched"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-97dc3d5621fababbd17a64fd",
@@ -25986,9 +26065,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "서울역 쫀득 쌀크림 도넛",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=7"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-9a33d7077e4eddff96eaf3c5",
@@ -26655,9 +26735,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "로우슈거 초코 쿨라타",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=9"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-9ea2fb05ec042bb23f3b9b4a",
@@ -26977,9 +27058,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "밀크티",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=9"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-a05eee452debffbba7daf7e6",
@@ -27209,9 +27291,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "스타벅스 슬래머",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000003659"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-a1669500b8230d201075403f",
@@ -27269,8 +27352,8 @@
       "name": "초코칩 월넛 쿠키",
       "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
-      "error": "AssertionError",
-      "reason": "Dunkin official product ID/name not matched"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-a19e5adc2f06cb5db6347913",
@@ -27309,9 +27392,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "아이스 스타벅스 클래식 밀크 티",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000004936"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-a1df098ce15eda4c79a215b0",
@@ -27326,9 +27410,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "우리 찹쌀 꽈배기",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000006492"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-a1faf714b7d5f3718cd725df",
@@ -27491,18 +27576,20 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "보스톤 크림",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=8"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-a2cda49f208a1f3815d75281",
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "하트 스트로베리 마카롱",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000004517"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-a2d44039b76f0bc004807650",
@@ -27607,9 +27694,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "햇사과 주스 190ML",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9300000002565"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-a348d66b307bedcffd02e235",
@@ -27690,9 +27778,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "가평잣미숫가루라떼(HOT)(S)",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=12"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-a3d441ae9a0b9e5e6f0584bb",
@@ -27978,9 +28067,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "바바리안 먼치킨",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=8"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-a5b37e488249a9b632ab1f06",
@@ -28426,9 +28516,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "씨앗 츄이스틱",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=6"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-a839d4d0d9ff53ae6d3679af",
@@ -28525,9 +28616,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "제주 오름 초콜릿 세트",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000001257"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-a941a7d4a0daab033ee75089",
@@ -28623,9 +28715,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "딸기 크림 가득 수줍은 스마일",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=10"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-a9de76617ecbaf78dbaaa158",
@@ -28640,9 +28733,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "베르가못 딸기 크림 프라푸치노",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000006304"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-aa08bbfe776f7c9bcfec0454",
@@ -28812,9 +28906,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "아이스 초코 (S)",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=5"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-aac1c791b16fd4537cc84d10",
@@ -28951,9 +29046,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "초콜릿 크런치 케이크",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000006565"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-ab7d3a524e3c5195edaf3a91",
@@ -29094,8 +29190,8 @@
       "name": "드립백 커피 브라질 (8EA)",
       "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
-      "error": "AssertionError",
-      "reason": "Dunkin official product ID/name not matched"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-ac5c76b7092c673fa9d1a78c",
@@ -29429,9 +29525,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "스타벅스 클래식 밀크티 블렌디드",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000004945"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-ae95059d90ef637d84662654",
@@ -30070,9 +30167,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "아이스 바닐라 빈 라떼",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000001941"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-b27cfdb402bf3904e7697308",
@@ -30541,9 +30639,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "허쉬 초코 마시멜로",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-b58e9aa63adfbbecb611e8a9",
@@ -30659,18 +30758,20 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "클래식 올드훼션드",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=2"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-b653718dca4ab3e902436adb",
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "북한산 레몬 얼 그레이 블렌디드",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000004716"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-b676ee44948466c960516caa",
@@ -30848,9 +30949,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "남포동 씨앗호떡 츄이스티",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=12"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-b7828daf622afdd126a3c3e9",
@@ -31349,8 +31451,8 @@
       "name": "도넛아이스크림 (허니초코크런치)",
       "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
-      "error": "AssertionError",
-      "reason": "Dunkin official product ID/name not matched"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-baa8c4d517b46c8d8a89045e",
@@ -31374,9 +31476,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "칠리 베이컨 에그 랩 샌드위치",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=3"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-bad2cc0bd1de28357b410482",
@@ -31391,9 +31494,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "가평잣미숫가루라떼(K)",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=12"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-bb00f43efee99ce54911dc71",
@@ -31633,9 +31737,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "제주 그린티 라떼",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=4"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-bc91b167ca5b2c38eb8a6f0e",
@@ -31969,9 +32074,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "카푸치노 츄이스티",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=3"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-be15dae5a78fa3d86d376a88",
@@ -32180,8 +32286,8 @@
       "name": "케냐(Drip Coffee)",
       "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
-      "error": "AssertionError",
-      "reason": "Dunkin official product ID/name not matched"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-bf3633a36696b36c404009fd",
@@ -32196,18 +32302,20 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "월넛 초코칩쿠키",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=4"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-bf46cea87a1f3608eb00c6ef",
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "서울우유 크림도넛",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=7"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-bf5c8a685906a6460075d3d7",
@@ -32436,9 +32544,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "미숫가루 쿨라타",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=9"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-c0b04ec67b527dc37bd2f71a",
@@ -32837,9 +32946,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "두바이 스타일 초콜릿 도넛",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=12"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-c28ed26055857402a54c8173",
@@ -33175,9 +33285,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "행운경단 먼치킨 세트(7개입)",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-c4578fb03bb1d88a6e2ce486",
@@ -33348,9 +33459,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "아이스 미숫가루 라떼",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=6"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-c516981cbb1cc7924531ed43",
@@ -33406,9 +33518,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "광안리 소금우유 크림도넛",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=12"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-c572e19161470d2e1c234602",
@@ -33744,9 +33857,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "카스텔라 도넛",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=3"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-c7b314963d24e9db4be7c5cc",
@@ -33798,8 +33912,8 @@
       "name": "딸기 듬뿍 미니도넛",
       "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
-      "error": "AssertionError",
-      "reason": "Dunkin official product ID/name not matched"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-c7e834f2a15026d2cdac06a4",
@@ -33888,9 +34002,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "블루베리 베이글",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=8"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-c88f73433ad424354faba99f",
@@ -34279,9 +34394,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "로우슈거 아이스 초코 (R)",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=9"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-ca4a9a238abaed0eaacb32b4",
@@ -34525,9 +34641,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "던킨 플레인 베이글",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=12"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-cba1370dfd6ec0bc33c8255a",
@@ -35337,9 +35454,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "피치 아이스티 (K)",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=2"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-d14d5df5159031722d32483c",
@@ -35430,9 +35548,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "히비스커스&유자 펀치",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-d1f4a45ba51944aa823ca23f",
@@ -35774,9 +35893,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "던킨 랩 샌드위치(치킨텐더)",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=12"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-d41709e43ad4405e4d1be394",
@@ -36087,9 +36207,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "바스크 치즈케이크",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=8"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-d6d76c6659b7fbd38b0980fb",
@@ -36137,9 +36258,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "학화 호도 앙버터",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-d6ff37c49961947668cdb1b0",
@@ -36163,9 +36285,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "원더스 카푸치노 츄이스티",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=4"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-d70e9d3083f15e787f416354",
@@ -36643,9 +36766,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "치즈풀 크로크무슈",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=3"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-d9be8dbc5359da0369e61487",
@@ -36732,9 +36856,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "던킨 블루베리 베이글",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=12"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-da2b0802baa3a5751a98424c",
@@ -37112,9 +37237,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "레드벨벳 먼치킨",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=10"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-dd194ae25f3cfad8f97adf9c",
@@ -37495,9 +37621,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "초콜릿 바닐라 그래놀라",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000006125"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-dfbadad1c922f0e0998e46fb",
@@ -37522,8 +37649,8 @@
       "name": "아이스 케냐(Drip Coffee)",
       "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
-      "error": "AssertionError",
-      "reason": "Dunkin official product ID/name not matched"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-dfc443ee4c688a5c7fefdd61",
@@ -37554,9 +37681,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "스트로베리 먼치킨",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=6"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-dff43bddec3e24f376013c7c",
@@ -39444,9 +39572,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "비타슬러시 리치(R)",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=8"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-eaeea7b2ab2e218e69e7bd9a",
@@ -39518,9 +39647,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "초코쿨라타",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=3"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-eb3870b695813e1f7632f1c3",
@@ -39535,9 +39665,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "말돈 소금우유 도넛",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=9"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-eb5b7626b168f66b1969cd43",
@@ -39611,9 +39742,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "레몬에이드 (R)",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=9"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-ebc2f894cde63d799c75d52b",
@@ -39782,9 +39914,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "레몬 크림 브륄레",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=10"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-ecf0444659a34acea70124ad",
@@ -39888,9 +40021,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "학화 호도 말차 먼치킨",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-ed85d14a0aa85e274e4583e4",
@@ -40055,9 +40189,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "블루베리 머핀",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=8"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-ee1638516b210e2aa57e5d32",
@@ -40154,9 +40289,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "초코 바나나 생도넛",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=4"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-ef11e1b1f6fcb9aa05b62fda",
@@ -40359,9 +40495,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "피치 아이스티 (S)",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=2"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-f03efa92be57008acbc05083",
@@ -40425,9 +40562,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "월넛 초코칩 쿠키 (4개입)",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=4"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-f0b50367743cde2d526dbd0b",
@@ -40624,9 +40762,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "올리브 치아바타",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=4"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-f1ef52c09a45eaedd4791e55",
@@ -40684,8 +40823,8 @@
       "name": "바바리안 듬뿍 미니도넛",
       "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
-      "error": "AssertionError",
-      "reason": "Dunkin official product ID/name not matched"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-f2579f4676c1417b14fab9ed",
@@ -41359,18 +41498,20 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "티슈 브레드",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=2"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-f5f3d95315b6cad1517fd614",
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "딸기 필링 듬뿍 초코 생도넛",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=10"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-f5fd88e708fe281d2b7c83ef",
@@ -41558,9 +41699,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "애플시나몬 파이필드",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=5"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-f6bde4995f570b47e0fde46a",
@@ -41665,9 +41807,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "히비스커스&패션후르츠 펀치",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-f77b25c80385d2b3323ef208",
@@ -41682,9 +41825,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "던킨 카페모카롤",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=12"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-f78d870d6b6ad3437d902f1b",
@@ -42035,9 +42179,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "솔티연유 퍼프",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=7"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-fa12f791b1374a4a9782578f",
@@ -42414,9 +42559,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "자몽에이드 (R)",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=4"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-fbefc582cc6df16d5d942832",
@@ -42466,8 +42612,8 @@
       "name": "에티오피아(Drip Coffee)",
       "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
-      "error": "AssertionError",
-      "reason": "Dunkin official product ID/name not matched"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-fc4b544b76aa3aedb7977eba",
@@ -42491,9 +42637,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "딸기 요거트 크림도넛",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=10"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-fc5656aba816455a193eec77",
@@ -42542,9 +42689,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "빅 소시지롤",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition?page=7"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-fcc23c306c37f03f52594417",
@@ -43022,9 +43170,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "크랜베리 치킨 샌드위치",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005855"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-ffd4f69ae1cda41a320f57b2",
@@ -43048,9 +43197,10 @@
       "brandId": "brand-9d8b8d6c615c6ee7",
       "brand": "던킨",
       "name": "학화 백앙금 먼치킨",
-      "result": "MATCHED",
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.dunkindonuts.co.kr/nutrition"
+      "error": "HTTPError",
+      "reason": "HTTP Error 404: Not Found"
     },
     {
       "id": "remote-franchise-ffec46a20aa9b9cb048d5252",
