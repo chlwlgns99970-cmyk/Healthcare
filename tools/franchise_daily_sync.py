@@ -244,7 +244,8 @@ def _fetch(brand, capture_dir=None):
                 checkedAt=datetime.now(timezone.utc).isoformat(),warnings=['SOURCE_TRAVERSAL_LIMIT'])
         seen.add(identity)
         batch=fetch_source(brand,source,capture_dir)
-        retryable=batch.get('httpStatus') in (500,502,503,504) or batch.get('error') in ('TimeoutError','ConnectionResetError') or batch.get('error')=='URLError' and any(t in batch.get('errorReason','').lower() for t in ('timed out','reset'))
+        reason=batch.get('errorReason','').lower()
+        retryable=batch.get('httpStatus') in (500,502,503,504) or batch.get('error') in ('TimeoutError','ConnectionResetError') or batch.get('error')=='URLError' and any(t in reason for t in ('timed out','reset','temporary failure in name resolution')) or batch.get('error')=='Error' and any(t in reason for t in ('net::err_connection_reset','net::err_connection_timed_out'))
         if retryable:
             time.sleep(0.5);batch=fetch_source(brand,source,capture_dir);batch['attempts']=2
         else:batch['attempts']=1

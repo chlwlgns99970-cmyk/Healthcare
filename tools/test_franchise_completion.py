@@ -29,6 +29,13 @@ class CompletionTest(unittest.TestCase):
             state=json.loads((Path(directory)/'latest-franchise-brand-status.json').read_text(encoding='utf-8'))[0]
             self.assertEqual('FAILED',state['lastResult']);self.assertEqual('2026-10-08T00:00:00Z',state['lastSuccessAt'])
             self.assertEqual(2,len(list((Path(directory)/'sync-history').glob('*.json'))));self.assertEqual(first['checksum'],second['checksum'])
+    def test_browser_reset_and_temporary_dns_retry_once(self):
+        brand=dict(self.brand,sources=self.brand['sources'][:1])
+        for error,reason in [('Error','Page.goto: net::ERR_CONNECTION_RESET'),('URLError','Temporary failure in name resolution')]:
+            failed=dict(self.batch([],'FETCH_FAILED'),error=error,errorReason=reason,httpStatus=None)
+            with patch('franchise_daily_sync.fetch_source',side_effect=[failed,self.batch([self.menu])]) as transport,patch('franchise_daily_sync.time.sleep'):
+                result=fetch(brand)
+            self.assertEqual(2,transport.call_count);self.assertEqual('SUCCESS',result['status'])
     def test_spike_withholds_all_new_candidates(self):
         brand=dict(self.brand,expectedMenuCount=20)
         source=self.batch([dict(self.menu,id=str(i)) for i in range(100)])

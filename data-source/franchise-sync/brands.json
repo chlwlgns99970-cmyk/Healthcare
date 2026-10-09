@@ -600,7 +600,8 @@
         "url": "https://mo.twosome.co.kr/mn/menuInfoList.do",
         "adapter": "twosome-navigation",
         "pagination": "twosome-navigation",
-        "key": "공식 모바일 전체 메뉴"
+        "key": "공식 모바일 전체 메뉴",
+        "transport": "browser"
       }
     ],
     "provenanceAuthorityUrl": "https://www.twosome.co.kr/"
