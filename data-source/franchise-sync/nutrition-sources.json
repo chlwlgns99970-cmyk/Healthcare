@@ -110,13 +110,16 @@
   {
     "brandId": "brand-5b391ae396ab6901",
     "brand": "교촌치킨",
-    "adapter": null,
-    "sources": [],
-    "status": "NUTRITION_SOURCE_MISSING",
+    "adapter": "kyochon-official-nutrition",
+    "sources": [
+      "https://www.kyochon.com/menu/"
+    ],
+    "status": "REGISTERED",
     "allowedHosts": [
       "kyochon.com",
       "www.kyochon.com"
-    ]
+    ],
+    "evidenceStatus": "SOURCE_FOUND"
   },
   {
     "brandId": "brand-dfbc0be6a9fb565a",

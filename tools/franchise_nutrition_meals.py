@@ -3,6 +3,35 @@ import json
 import re
 import unicodedata
 from lxml import html
+from urllib.parse import urlparse, parse_qs
+
+def parse_kyochon(menu, payload):
+    assert menu['brand']=='교촌치킨'
+    query=parse_qs(urlparse(menu['sourceUrl']).query)
+    assert menu['externalId']=='id:'+query['id'][0]
+    root=html.fromstring(payload.decode('utf-8') if isinstance(payload,bytes) else payload)
+    titles=root.xpath('//dl[@class="tit"]/dt')
+    assert len(titles)==1 and norm(' '.join(titles[0].itertext()))==norm(menu['name'])
+    tables=root.xpath('//table[caption[contains(text(),"영양정보")]]')
+    assert len(tables)==1
+    headers=tables[0].xpath('./thead/tr/th')
+    assert len(headers)==2, 'Multiple components/serving bases must not be combined'
+    basis=' '.join(headers[1].itertext()).strip()
+    match=re.fullmatch(r'(\d+(?:\.\d+)?)\s*(g|ml)',basis)
+    assert match and float(match[1])>0, 'Only explicitly published nutrition basis'
+    values={}
+    for row in tables[0].xpath('./tbody/tr'):
+        cells=row.xpath('./td')
+        if len(cells)==2:
+            label=' '.join(cells[0].itertext()).strip()
+            assert label not in values
+            values[label]=number(' '.join(cells[1].itertext()).strip())
+    kcal=values.get('열량(Kcal)');assert kcal is not None
+    # Raw chicken weight in the footnote is not the nutrition basis or serving weight.
+    return dict(energyKcal=kcal,servingAmount=float(match[1]),servingUnit=match[2],
+                carbohydrateGrams=values.get('탄수화물(g)'),proteinGrams=values.get('단백질(g)'),
+                fatGrams=values.get('지방(g)'),sodiumMilligrams=values.get('나트륨(mg)'),
+                servingDescription='공식 영양정보 표 기준',matchedBy='EXACT_PRODUCT_ID_NAME_AND_TABLE_BASIS')
 
 def slow_finished_rows(payload):
     root=html.fromstring(payload)

@@ -311,10 +311,11 @@ PARSERS['poke-finished-menu-nutrition']=parse_pokeallday
 
 from franchise_nutrition_cafes import PARSERS as CAFE_PARSERS
 from franchise_nutrition_bakery import parse_paris, parse_tlj
-from franchise_nutrition_meals import parse_burgerking, parse_isaac_not_published, parse_slowcali
+from franchise_nutrition_meals import parse_burgerking, parse_isaac_not_published, parse_slowcali, parse_kyochon
 PARSERS.update(CAFE_PARSERS)
 PARSERS.update({'paris-official-nutrition':parse_paris, 'tlj-official-nutrition':parse_tlj})
 PARSERS['burgerking-official-nutrition']=parse_burgerking
+PARSERS['kyochon-official-nutrition']=parse_kyochon
 PARSERS['isaac-official-not-published']=parse_isaac_not_published
 PARSERS['slowcali-finished-nutrition']=parse_slowcali
 

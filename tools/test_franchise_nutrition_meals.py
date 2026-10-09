@@ -1,11 +1,22 @@
 import json
 import unittest
 from pathlib import Path
-from franchise_nutrition_meals import parse_burgerking,parse_isaac_not_published,parse_slowcali,slow_finished_rows
+from franchise_nutrition_meals import parse_burgerking,parse_isaac_not_published,parse_slowcali,slow_finished_rows,parse_kyochon
 
 FIX=Path(__file__).resolve().parents[1]/'data-source/franchise-sync/fixtures'
 
 class MealsNutritionTests(unittest.TestCase):
+    def test_kyochon_uses_table_basis_not_raw_chicken_weight(self):
+        menu=dict(brand='교촌치킨',name='반반윙콤비[레드+마라레드]',externalId='id:41581',
+                  sourceUrl='https://www.kyochon.com/menu/view.asp?id=41581&cg=2')
+        raw=(FIX/'kyochon-nutrition.html').read_bytes()
+        fact=parse_kyochon(menu,raw)
+        self.assertEqual(100,fact['servingAmount']);self.assertEqual(336,fact['energyKcal'])
+        self.assertEqual(24,fact['proteinGrams']);self.assertEqual(440,fact['sodiumMilligrams'])
+        self.assertIsNone(fact['carbohydrateGrams']);self.assertIsNone(fact['fatGrams'])
+        with self.assertRaises(AssertionError):parse_kyochon(dict(menu,name='반반윙콤비[레드+허니]'),raw)
+        with self.assertRaises(AssertionError):parse_kyochon(dict(menu,externalId='id:1'),raw)
+        with self.assertRaises(AssertionError):parse_kyochon(menu,raw.replace(b'100g',b'100'))
     def test_burgerking_g_or_ml_is_not_guessed(self):
         f=parse_burgerking(dict(brand='버거킹',name='몬스터와퍼'),(FIX/'burgerking-nutrition.json').read_bytes())
         self.assertEqual(1094,f['energyKcal']);self.assertEqual(52,f['proteinGrams'])
