@@ -1,14 +1,14 @@
 {
-  "total": 5103,
+  "total": 5123,
   "states": {
     "NUTRITION_SOURCE_MISSING": 1658,
-    "NUTRITION_SOURCE_FOUND_UNMATCHED": 903,
+    "NUTRITION_SOURCE_FOUND_UNMATCHED": 921,
     "NUTRITION_COMPLETE": 1753,
-    "NUTRITION_PARTIAL": 732,
+    "NUTRITION_PARTIAL": 734,
     "NUTRITION_NOT_PUBLISHED": 57
   },
   "known": {
-    "energyKcal": 2474,
+    "energyKcal": 2476,
     "carbohydrateGrams": 398,
     "proteinGrams": 2244,
     "fatGrams": 377,
@@ -20,27 +20,27 @@
       "brandId": "brand-24df7e63c9c2314e",
       "brand": "롯데리아",
       "url": "https://www.lotteeatz.com/",
-      "checkedAt": "2026-10-10T22:35:01.583408+00:00",
+      "checkedAt": "2026-10-11T22:57:55.065331+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "8d10ca597622cf0d44aeb28282013ea6a204ff639844ef623c9b6b8e523a6ef4",
+      "sourceSha256": "9bef6ee98871b10059fad50b8b4c1f68e272638b93769e3cf9fe208a4f1539cd",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-2c14410b57ba9fc4",
       "brand": "KFC",
       "url": "https://www.kfckorea.com/",
-      "checkedAt": "2026-10-10T22:35:01.583652+00:00",
+      "checkedAt": "2026-10-11T22:57:55.065637+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "992cd261bfd17c2290240ded124c386e4876557a1b971408df7aa7d37c6ca082",
+      "sourceSha256": "1de827e6aa112b1b01f94ac885f52f4e3374e365309d1d933c25633d44457a80",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-b0f892d2c591ca13",
       "brand": "맘스터치",
       "url": "https://www.momstouch.co.kr/",
-      "checkedAt": "2026-10-10T22:35:01.583931+00:00",
+      "checkedAt": "2026-10-11T22:57:55.065937+00:00",
       "links": [],
       "error": "URLError",
       "reason": "<urlopen error timed out>",
@@ -50,7 +50,7 @@
       "brandId": "brand-f91351461391155a",
       "brand": "도미노피자",
       "url": "https://www.dominos.co.kr/",
-      "checkedAt": "2026-10-10T22:35:01.584227+00:00",
+      "checkedAt": "2026-10-11T22:57:55.066158+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "20e9a3e939009ec79e19230d5a54dda58dffc23ba62a38227bafe75e9fef2ea2",
@@ -60,17 +60,17 @@
       "brandId": "brand-dfd7712a868b7cd2",
       "brand": "피자헛",
       "url": "https://www.pizzahut.co.kr/",
-      "checkedAt": "2026-10-10T22:35:02.520397+00:00",
+      "checkedAt": "2026-10-11T22:57:56.179214+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "6c55dc7f5679f02ea8453b84f2ded67df87bffd2092d148ae5b2665cfa9fb916",
+      "sourceSha256": "f49526d07278101aebd1138b7df9892632d2cc93144ffbf4cb32f0687fbb9d70",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-792c9f221e49eb7e",
       "brand": "미스터피자",
       "url": "https://www.mrpizza.co.kr/",
-      "checkedAt": "2026-10-10T22:35:03.004988+00:00",
+      "checkedAt": "2026-10-11T22:57:56.908013+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "6337fd5a5f78b04ec04b48718cc5f1350698ee4a3ffe9ca43c96a9dfb39a625e",
@@ -80,7 +80,7 @@
       "brandId": "brand-45ddca38a87b3dcd",
       "brand": "BHC",
       "url": "https://www.bhc.co.kr/",
-      "checkedAt": "2026-10-10T22:35:03.263417+00:00",
+      "checkedAt": "2026-10-11T22:57:57.295826+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "5aab57dff467709fe9b4368c822fb50824d40c52e1bcd64523e8111282c4f4ac",
@@ -90,17 +90,17 @@
       "brandId": "brand-dfbc0be6a9fb565a",
       "brand": "굽네치킨",
       "url": "https://www.goobne.co.kr/",
-      "checkedAt": "2026-10-10T22:35:03.863075+00:00",
+      "checkedAt": "2026-10-11T22:57:57.739491+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "700a819d51ee993ffbb68fa5e32820945a35ffacf2993086932c3014ccb809c4",
+      "sourceSha256": "f66bd4208d65df50811db23a0746811e8b3ccfcd7858015189ebcc832beec027",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-913a908f005583f0",
       "brand": "BBQ",
       "url": "https://www.bbq.co.kr/",
-      "checkedAt": "2026-10-10T22:35:03.871210+00:00",
+      "checkedAt": "2026-10-11T22:57:58.444661+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "b1f770e613bf0272edb3d8cfe0db7e901394f4074f49bd02661aec533e15423f",
@@ -110,17 +110,17 @@
       "brandId": "brand-1c90aeff2ad68611",
       "brand": "네네치킨",
       "url": "https://nenechicken.com/",
-      "checkedAt": "2026-10-10T22:35:05.264563+00:00",
+      "checkedAt": "2026-10-11T22:57:59.812075+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "56b9c8543c869b91af6010ae2f246d50a9390759db39928e1ae4d3f105de5c15",
+      "sourceSha256": "7d122210c139626311253bd9f79acbe74e2d410e724b6a8d63f496212ece11d5",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-044f74822bd63a2c",
       "brand": "투썸플레이스",
       "url": "https://www.twosome.co.kr/",
-      "checkedAt": "2026-10-10T22:35:06.286014+00:00",
+      "checkedAt": "2026-10-11T22:58:00.023487+00:00",
       "links": [],
       "error": "HTTPError",
       "reason": "HTTP Error 403: Forbidden",
@@ -130,7 +130,7 @@
       "brandId": "brand-9bd2fd2f30a9da68",
       "brand": "컴포즈커피",
       "url": "https://composecoffee.com/",
-      "checkedAt": "2026-10-10T22:35:06.436972+00:00",
+      "checkedAt": "2026-10-11T22:58:00.295150+00:00",
       "links": [],
       "error": "HTTPError",
       "reason": "HTTP Error 403: Forbidden",
@@ -140,17 +140,17 @@
       "brandId": "brand-2366ea85553dc984",
       "brand": "두찜",
       "url": "https://www.twozzim.com/",
-      "checkedAt": "2026-10-10T22:35:06.465493+00:00",
+      "checkedAt": "2026-10-11T22:58:00.945441+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "b85e818c48fc6ec9784f189151b4844177f146fbd99748b69d30cfb2443588e9",
+      "sourceSha256": "bea1b2c81e5d974b23d3d8ce5d30ea476e9091ae71326c09d16b92a3d2f77b48",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-9bbe44a999e4d158",
       "brand": "봉추찜닭",
       "url": "http://www.bongchu.com/layout/res/home.php?go=page1.0&mid=10",
-      "checkedAt": "2026-10-10T22:35:06.894803+00:00",
+      "checkedAt": "2026-10-11T22:58:01.381123+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "f8b4739ff04b19fe582ab433a18f2b5bb5f72bbaff7c637ab2fe1ebd68bec540",
@@ -160,47 +160,47 @@
       "brandId": "brand-9fe52457ea35b575",
       "brand": "일미리금계찜닭",
       "url": "https://goldjjimdak.com/main.php",
-      "checkedAt": "2026-10-10T22:35:07.131509+00:00",
+      "checkedAt": "2026-10-11T22:58:01.772048+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "4bdf81be65068256d0b24c48699597cddfe80b21954cef5d1a83b1cfa4a897b3",
+      "sourceSha256": "d3df9fce7117e54d9501000ffd51b01820ccac043a42a209e3f199721d668167",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-6b4062eb7d56bbc2",
       "brand": "육수당",
       "url": "https://yuksudang.com/",
-      "checkedAt": "2026-10-10T22:35:07.470495+00:00",
+      "checkedAt": "2026-10-11T22:58:02.072957+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "8eb39fb253dbe9443326dbb8b8bac8c593cadbc8149c88e0f0ac9d9c422d9ed0",
+      "sourceSha256": "9c1307d88e4370aa3412d81df90e9755976fb5404098224e4d8350d4c39cb8ea",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-e237cdd96675b8e9",
       "brand": "현대옥",
       "url": "http://www.hyundaiok.com/menu",
-      "checkedAt": "2026-10-10T22:35:07.699117+00:00",
+      "checkedAt": "2026-10-11T22:58:02.913301+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "788b2b6252fca2cac64106a83d86635654f72319f995d4f662984311b7d5286c",
+      "sourceSha256": "336ad2bfff4d95299eaf7cfa9dab025393ffa8cc17577a22dfc178f3b992de76",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-a6a2f91c0a858eab",
       "brand": "이화수전통육개장",
       "url": "https://ihwasoo.com/",
-      "checkedAt": "2026-10-10T22:35:08.261058+00:00",
+      "checkedAt": "2026-10-11T22:58:03.268397+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "c6cd2e1196a07910be39cbc777b88127b260f6686afb759f9ee456f47e6626ab",
+      "sourceSha256": "e6b7a0bec7039a8562ea7e7e662e9312deaa766a8f3831b503578dfa699ebca6",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-e391193d95fb4b22",
       "brand": "신전떡볶이",
       "url": "https://sinjeon.co.kr/",
-      "checkedAt": "2026-10-10T22:35:08.368400+00:00",
+      "checkedAt": "2026-10-11T22:58:03.355093+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "6d1aa3882a8cc6ae863de82319bbd673606182b559eb0adf8fae500eb2f6b2eb",
@@ -210,7 +210,7 @@
       "brandId": "brand-d12ac5629277dd74",
       "brand": "죠스떡볶이",
       "url": "https://jawsfood.co.kr/menu/menu.html",
-      "checkedAt": "2026-10-10T22:35:08.406448+00:00",
+      "checkedAt": "2026-10-11T22:58:03.502785+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "51b4d350dd66e7b9b15432183776dabaf89a2e9e96b86ff22aa4358a3dcb1fc6",
@@ -220,47 +220,47 @@
       "brandId": "brand-d3742bdc75b7cfff",
       "brand": "청년다방",
       "url": "https://youngdabang.com/",
-      "checkedAt": "2026-10-10T22:35:08.935265+00:00",
+      "checkedAt": "2026-10-11T22:58:04.104634+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "6c30efd60741cac7b3d159b435f0062c3d2f48d073bd76d6d598d9485ef2c89e",
+      "sourceSha256": "f81e77d5cebace5fc3f7096be4dea0e194472645f548b3f42e3b503a5666ac80",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-b06d5a467c2e2917",
       "brand": "두끼",
       "url": "https://www.dookki.co.kr/",
-      "checkedAt": "2026-10-10T22:35:09.240318+00:00",
+      "checkedAt": "2026-10-11T22:58:04.503166+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "f7c5d9eb8937244efa5fa705c93a3596c3f24a96f676f542de395bf30bc16f86",
+      "sourceSha256": "50192a23b9e7cdd5af552c00d833403458606ce489ae2c73adddde457c48fb14",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-517e6e3a0f2a227b",
       "brand": "스쿨푸드",
       "url": "http://schoolfood.freewebclub.com/menu/menu.html",
-      "checkedAt": "2026-10-10T22:35:09.736797+00:00",
+      "checkedAt": "2026-10-11T22:58:04.719559+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "ad43c868c8e89bece33084be9cb93e3e3ec3e5ad9559456ce78905f8788bdaf6",
+      "sourceSha256": "3fd2db7bbba51a0c12a48d770b098ea2e45c0d64c3b710754682978ed8cc26b1",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-3af4368565dc9463",
       "brand": "김가네",
       "url": "https://www.gimgane.co.kr/",
-      "checkedAt": "2026-10-10T22:35:09.855817+00:00",
+      "checkedAt": "2026-10-11T22:58:04.971545+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "89c2da4f75ab21dff27052a3e8a30548461c4a688cf76cc29bee9dccaf5125c0",
+      "sourceSha256": "61b9825aab627dc1853b5c31f58faf3847726456d8551196f997fd276a946125",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-09811efd43af8395",
       "brand": "고봉민김밥인",
       "url": "https://www.kobongmin.com/renewal/main/main.php",
-      "checkedAt": "2026-10-10T22:35:10.167422+00:00",
+      "checkedAt": "2026-10-11T22:58:05.553193+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "59f61604560009e9d5c6248736bc6c8a18cf5524da99b67c625548865251f487",
@@ -270,7 +270,7 @@
       "brandId": "brand-62da25d9478406f9",
       "brand": "바르다김선생",
       "url": "https://www.teacherkim.co.kr/",
-      "checkedAt": "2026-10-10T22:35:10.222401+00:00",
+      "checkedAt": "2026-10-11T22:58:05.554839+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "753a7427c3a91c6e3dfc95a51758085af6926068d1a68b5dc07cbc3bdf5a3035",
@@ -280,7 +280,7 @@
       "brandId": "brand-52b7eab533bf064f",
       "brand": "홍콩반점0410",
       "url": "https://www.theborn.co.kr/theborn_brand/홍콩반점0410/",
-      "checkedAt": "2026-10-10T22:35:10.324401+00:00",
+      "checkedAt": "2026-10-11T22:58:05.776268+00:00",
       "links": [],
       "error": "UnicodeEncodeError",
       "reason": "'ascii' codec can't encode characters in position 19-22: ordinal not in range(128)",
@@ -290,7 +290,7 @@
       "brandId": "brand-98d0269278f56dd7",
       "brand": "이비가짬뽕",
       "url": "https://www.ebiga.co.kr/",
-      "checkedAt": "2026-10-10T22:35:10.324966+00:00",
+      "checkedAt": "2026-10-11T22:58:05.776727+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "30bb1510b98c35128e0f1bb125a849d8b9d0923b0da092f9fa2cb132e67ef86a",
@@ -300,7 +300,7 @@
       "brandId": "brand-eb1ea6f3cfeef4a1",
       "brand": "탕화쿵푸",
       "url": "https://tanghuokungfu.co.kr/default/brand/Introduction.php",
-      "checkedAt": "2026-10-10T22:35:11.010983+00:00",
+      "checkedAt": "2026-10-11T22:58:06.285272+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "9d033c1b26b6eec1873ea785f2f516741ffb497669419fbd36254d2e45f1de13",
@@ -310,17 +310,17 @@
       "brandId": "brand-4971bd13f52f50ae",
       "brand": "춘리마라탕",
       "url": "https://chunlimalatang.com/menu/",
-      "checkedAt": "2026-10-10T22:35:11.437098+00:00",
+      "checkedAt": "2026-10-11T22:58:06.540127+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "d37b8a929dfa2485f7c5cd926cbf892a81d009c2de7b53b89f5e288f8af68e51",
+      "sourceSha256": "97721b280ab1f647c27c55c10de35a68ac61bc66ee53249de67097230db8eeff",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-bd40e3bf63110e3a",
       "brand": "본죽",
       "url": "https://www.bonif.co.kr/brand/store?brdCd=BF101",
-      "checkedAt": "2026-10-10T22:35:11.517474+00:00",
+      "checkedAt": "2026-10-11T22:58:07.216948+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "3f71cd8a14aa5e01da35bbe3ee869662d3ed378278d5dfbfe5c104f6fcc41c5e",
@@ -330,7 +330,7 @@
       "brandId": "brand-2d083c367c257949",
       "brand": "본죽&비빔밥",
       "url": "https://www.bonif.co.kr/brand/menu?brdCd=BF102",
-      "checkedAt": "2026-10-10T22:35:11.704753+00:00",
+      "checkedAt": "2026-10-11T22:58:07.332208+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "7eff3b58bd909f930f6d5b487718e837745423ed026dbc6a180b858d9b6e2686",
@@ -340,47 +340,47 @@
       "brandId": "brand-d788dc4427d306fe",
       "brand": "죽이야기",
       "url": "https://www.jukstory.com/",
-      "checkedAt": "2026-10-10T22:35:12.229339+00:00",
+      "checkedAt": "2026-10-11T22:58:07.617526+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "c4c923f7b104f21fe93044daa035df72ba538a7d2ba0259ea836eba1aae43d5c",
+      "sourceSha256": "e92c2c70a37fb97f5f4d3bc8a329e630d12e76e92234848fb0ded402c2774efc",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-440ae94a942a4921",
       "brand": "국수나무",
       "url": "https://www.namuya.co.kr/food/food.php",
-      "checkedAt": "2026-10-10T22:35:12.878176+00:00",
+      "checkedAt": "2026-10-11T22:58:08.260200+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "648e4eb9a08475b57f744503ef028d274cc81e52e604cb629813f23ffb72a256",
+      "sourceSha256": "6733ddb98e56f9137699a5f2e51f002bcf7f6ad8b268a7c76ce14f43198eb7b6",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-71bb2f53e15c0897",
       "brand": "역전우동0410",
       "url": "https://udon0410.com/menu/",
-      "checkedAt": "2026-10-10T22:35:12.884712+00:00",
+      "checkedAt": "2026-10-11T22:58:08.333227+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "033b95c65c6fb7ee96047a171aadd1898ddd2e529c6c7419406a5a231c84fb4c",
+      "sourceSha256": "7a7b93d5567016b9ee5edd9ff9bf7dd1bff396e97966be51cd41bd05b30722a7",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-2a13283561756adc",
       "brand": "백소정",
       "url": "https://www.baeksojeong.com/",
-      "checkedAt": "2026-10-10T22:35:13.082275+00:00",
+      "checkedAt": "2026-10-11T22:58:08.594950+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "1aa9dc5320a6215195a7d41ab4da22346bf9c04277c6571cccbfe4180d9567c6",
+      "sourceSha256": "611802dc5bbf4ac95be5ba30795e28818abb12f10a6d285c856bdf126f11ec95",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-8420421dae1f2ef3",
       "brand": "홍익돈까스",
       "url": "https://www.hongikdonkatsu.com/",
-      "checkedAt": "2026-10-10T22:35:13.458247+00:00",
+      "checkedAt": "2026-10-11T22:58:08.598047+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "4e9f1b28d40269a700d100a73489830be21bda8f66977d8c8130b82a236df3c6",
@@ -390,17 +390,17 @@
       "brandId": "brand-dfe7aafc7b485943",
       "brand": "원할머니보쌈",
       "url": "https://wonandone.co.kr/bossam/",
-      "checkedAt": "2026-10-10T22:35:13.794105+00:00",
+      "checkedAt": "2026-10-11T22:58:09.394778+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "2da00a340d8afcefc784543f5f6a06cd49ba6cf860b6cb250486ee7c5a6c9c49",
+      "sourceSha256": "9e1ea45616954a2888e824eccdd8b77f19827af17ee1e9b5f96be9c8a44d3796",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-3ab715e02b724b84",
       "brand": "놀부부대찌개",
       "url": "https://nolboo.co.kr/",
-      "checkedAt": "2026-10-10T22:35:13.849020+00:00",
+      "checkedAt": "2026-10-11T22:58:09.416253+00:00",
       "links": [],
       "error": "URLError",
       "reason": "<urlopen error timed out>",
@@ -410,7 +410,7 @@
       "brandId": "brand-39adcc9276d724e2",
       "brand": "본도시락",
       "url": "https://www.bonif.co.kr/brand/menu?brdCd=BF104",
-      "checkedAt": "2026-10-10T22:35:14.373794+00:00",
+      "checkedAt": "2026-10-11T22:58:09.657625+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "a1fc8bc734256b4055432e04476f512bb6d2accd248a6d43dd3cb1ac9a84b8dd",
@@ -420,7 +420,7 @@
       "brandId": "brand-e37848e7ad911d2a",
       "brand": "본설렁탕",
       "url": "https://www.bonif.co.kr/brand/menu?brdCd=BF105",
-      "checkedAt": "2026-10-10T22:35:14.700348+00:00",
+      "checkedAt": "2026-10-11T22:58:10.405610+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "de9c3ea329d9f8043ff7fa8982f1150da932bff1e0a0909ff171db5f240bb0db",
@@ -430,7 +430,7 @@
       "brandId": "brand-e1baf7db5ac285a7",
       "brand": "본우리반상",
       "url": "https://www.bonif.co.kr/brand/menu?brdCd=BF107",
-      "checkedAt": "2026-10-10T22:35:14.732312+00:00",
+      "checkedAt": "2026-10-11T22:58:10.669478+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "34eb66207b764c1028f93219c0bf58c0eb4fd148d6966fe0e02db4695c9076bb",
@@ -440,7 +440,7 @@
       "brandId": "brand-0e65f6b77b14e324",
       "brand": "멘지",
       "url": "https://www.bonif.co.kr/brand/menu?brdCd=BF111",
-      "checkedAt": "2026-10-10T22:35:15.195841+00:00",
+      "checkedAt": "2026-10-11T22:58:10.786447+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "dc7695cc5f0686a7bde92a5a1aefc0f0775213fe585761f0f4885de9182156af",
@@ -450,7 +450,7 @@
       "brandId": "brand-5cf4a5c95ff85d3a",
       "brand": "본흑염소·능이삼계탕",
       "url": "https://www.bonif.co.kr/brand/menu?brdCd=BF113",
-      "checkedAt": "2026-10-10T22:35:15.547830+00:00",
+      "checkedAt": "2026-10-11T22:58:11.397969+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "07ce74942ecb09e9f87e2036b1f77d7e17e14b17097fd4f15644cc5999a01a61",
@@ -460,17 +460,17 @@
       "brandId": "brand-9e7aeb464781f115",
       "brand": "핵밥",
       "url": "https://www.hecbob.com/main",
-      "checkedAt": "2026-10-10T22:35:15.555814+00:00",
+      "checkedAt": "2026-10-11T22:58:11.712408+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "af1ac5c0777eb376cb820481e2f5bc8051e91dfd1a01e9947b1bfb2aec4631e7",
+      "sourceSha256": "0564a123501ee1b9605053d64c705ce99094f6103085c0abe4ee5d0da7999b1a",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-97c4b3edd331ff83",
       "brand": "채선당",
       "url": "https://www.chaesundang.co.kr/",
-      "checkedAt": "2026-10-10T22:35:16.025965+00:00",
+      "checkedAt": "2026-10-11T22:58:11.776192+00:00",
       "links": [],
       "error": "HTTPError",
       "reason": "HTTP Error 403: Forbidden",
@@ -480,17 +480,17 @@
       "brandId": "brand-a9a4ba8b5ad2ca3d",
       "brand": "소담촌",
       "url": "https://www.sodamchon.com/",
-      "checkedAt": "2026-10-10T22:35:16.065940+00:00",
+      "checkedAt": "2026-10-11T22:58:11.871594+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "e664826dbdc919ec5043f26e65d880d5913a1e89631488e6463138e6159dfde3",
+      "sourceSha256": "90db2fc6e0d20a929253e327ef6993e74d530188128c098718104df137579bce",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-29327af78758b6f5",
       "brand": "써브웨이",
       "url": "https://www.subway.co.kr/",
-      "checkedAt": "2026-10-10T22:35:16.383735+00:00",
+      "checkedAt": "2026-10-11T22:58:12.410891+00:00",
       "links": [],
       "error": "HTTPError",
       "reason": "HTTP Error 403: Forbidden",
@@ -500,7 +500,7 @@
       "brandId": "brand-8032e5a2633bc1e3",
       "brand": "에그드랍",
       "url": "https://eggdrop.com/menu/list.php",
-      "checkedAt": "2026-10-10T22:35:16.939699+00:00",
+      "checkedAt": "2026-10-11T22:58:13.095775+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "ebbbc05b57d897b40e26df8cb44987fbc53e3e598931eabb1609ee8065e17843",
@@ -510,27 +510,27 @@
       "brandId": "brand-adb1fa3e7378cd49",
       "brand": "캠토토스트",
       "url": "https://camtotoast.com/",
-      "checkedAt": "2026-10-10T22:35:17.262892+00:00",
+      "checkedAt": "2026-10-11T22:58:14.121316+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "bc31c32dd92c20d38c21af9753af2c2d4334e289ea2ca7c364cd1646099523af",
+      "sourceSha256": "9543d184f188c457bcc6351825767d9ab547c54c10cc989401005da3acbda67c",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-d715f712d950d0e8",
       "brand": "피자스쿨",
       "url": "http://pizzaschool.net/menu/",
-      "checkedAt": "2026-10-10T22:35:17.802981+00:00",
+      "checkedAt": "2026-10-11T22:58:15.996532+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "6ea5bab47bfd07e5da4fd29ac88a914c3a19b9b656b435fbe2449d687711e8de",
+      "sourceSha256": "06e573759f2e1f8150e5a951323bc6bcfc74770ef01afeef4f2c11bb574cf261",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-2891bc50e9e622e6",
       "brand": "파파존스",
       "url": "https://m.pji.co.kr/menu/pizza",
-      "checkedAt": "2026-10-10T22:35:18.967659+00:00",
+      "checkedAt": "2026-10-11T22:58:16.204892+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "c4f52e1396f53fd72a1737adc2c87620428c1e3224b877509937c1a35d0dfc5f",
@@ -540,7 +540,7 @@
       "brandId": "brand-f2c4cd89053b4ff8",
       "brand": "청년피자",
       "url": "https://youngmanpizza.co.kr/sub01/menu2.php",
-      "checkedAt": "2026-10-10T22:35:19.132602+00:00",
+      "checkedAt": "2026-10-11T22:58:16.796985+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "601aac22885e81a00ce6ce30a1f66aac934a21dadca1545d933100f9c426319b",
@@ -550,7 +550,7 @@
       "brandId": "brand-e7bc4d2ab88a800c",
       "brand": "노랑통닭",
       "url": "https://www.norangtongdak.co.kr/menu/chicken_list.html",
-      "checkedAt": "2026-10-10T22:35:19.355722+00:00",
+      "checkedAt": "2026-10-11T22:58:17.742772+00:00",
       "links": [],
       "error": "URLError",
       "reason": "<urlopen error [SSL: DH_KEY_TOO_SMALL] dh key too small (_ssl.c:1010)>",
@@ -560,7 +560,7 @@
       "brandId": "brand-c253f58a17fc9b81",
       "brand": "지코바",
       "url": "http://www.gcova.co.kr/sub_3_1.htm",
-      "checkedAt": "2026-10-10T22:35:19.951665+00:00",
+      "checkedAt": "2026-10-11T22:58:17.784767+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "797c8001dbf9cb226952d468a189c6ba723a039b310d9a28b9b3624d8148ea83",
@@ -570,27 +570,27 @@
       "brandId": "brand-c242a10bbca4c411",
       "brand": "처갓집양념치킨",
       "url": "https://www.cheogajip.co.kr/bbs/board.php?bo_table=menu",
-      "checkedAt": "2026-10-10T22:35:20.378240+00:00",
+      "checkedAt": "2026-10-11T22:58:17.785224+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "f59a95a9cf0636f3bceb0f3a4e1cf0747cd671adff604cf8774be075d38744b4",
+      "sourceSha256": "645f6c17c2666cfd72f58944bbb3421a75c75c93facf125c9b478b3450682953",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-1e99fd5b57a9f5cb",
       "brand": "피자마루",
       "url": "https://www.pizzamaru.kr/",
-      "checkedAt": "2026-10-10T22:35:20.536205+00:00",
+      "checkedAt": "2026-10-11T22:58:18.559386+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "2d698c1abc8bf2febc9a730a1819f810f18ba67014e550e94c14efcf563699ab",
+      "sourceSha256": "c714cec697d9f29a37c0da57d2aca880ec96f4a18dc4b6454227370d6f75d857",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-f4abfad35563de25",
       "brand": "멕시카나",
       "url": "https://www.mexicana.co.kr/menu/product.asp",
-      "checkedAt": "2026-10-10T22:35:20.633741+00:00",
+      "checkedAt": "2026-10-11T22:58:18.599952+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "a9a504628cc896968b10f547a83a2266c7a467d94c806af6df190a4987466962",
@@ -600,7 +600,7 @@
       "brandId": "brand-b0d0c4de8cdf23bc",
       "brand": "60계치킨",
       "url": "https://60chicken.com/bbs/content.php?co_id=menu",
-      "checkedAt": "2026-10-10T22:35:21.087393+00:00",
+      "checkedAt": "2026-10-11T22:58:18.747417+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "5a83d0f1736aa348419428efde6349028d045240738394ce567948fe94863f7f",
@@ -610,17 +610,17 @@
       "brandId": "brand-57244fb148c377c6",
       "brand": "반올림피자",
       "url": "https://order.banolimpizza.com/menu/list?menuId=1",
-      "checkedAt": "2026-10-10T22:35:21.427893+00:00",
+      "checkedAt": "2026-10-11T22:58:19.198100+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "1a2181aeb519c1a715d6d9cfaec392e041870feaba4a2339e3142eb6be7209c1",
+      "sourceSha256": "c14dc71942cbf1cf032749fc2da8964c7126180b50612c00283fa7a3ad7421af",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-41b772c57bada9f9",
       "brand": "프랭크버거",
       "url": "https://www.frankburger.co.kr/html/menu_1.html",
-      "checkedAt": "2026-10-10T22:35:21.921645+00:00",
+      "checkedAt": "2026-10-11T22:58:19.301773+00:00",
       "links": [
         {
           "url": "https://frankburger.co.kr/html/ingredient.html",
@@ -628,7 +628,7 @@
         }
       ],
       "httpStatus": 200,
-      "sourceSha256": "ca9be643b93a3f9cacca0a67575886909b5421b5925dd9a6b5a7c39823a0b584",
+      "sourceSha256": "3463c8a5e5fe9bfa5bfd1e07074e296fb94b46be67b6a077717b87d4ae7a441f",
       "confirmedNutritionSources": [
         "https://frankburger.co.kr/html/ingredient.html"
       ]
@@ -637,17 +637,17 @@
       "brandId": "brand-69ad361cd26106b1",
       "brand": "노브랜드버거",
       "url": "https://www.shinsegaefood.com/nobrandburger/index.sf",
-      "checkedAt": "2026-10-10T22:35:21.981680+00:00",
+      "checkedAt": "2026-10-11T22:58:19.802069+00:00",
       "links": [],
-      "httpStatus": 200,
-      "sourceSha256": "efd7ffbc1e6e377a8ec1615554f0a7f7053fd97829cc9b1fa9cbab8390b61437",
+      "error": "URLError",
+      "reason": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-2cf7eb0ea975163d",
       "brand": "새마을식당",
       "url": "https://newmaul.com/sub/menu.php",
-      "checkedAt": "2026-10-10T22:35:22.247813+00:00",
+      "checkedAt": "2026-10-11T22:58:20.184379+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "fbc240c6560343f2f971b3554242016dc62456982f08f4dd9e769c93d9bab3b9",
@@ -657,7 +657,7 @@
       "brandId": "brand-1742b64ed29107ac",
       "brand": "배스킨라빈스",
       "url": "https://www.baskinrobbins.co.kr/menu/list.php?category=A",
-      "checkedAt": "2026-10-10T22:35:22.475805+00:00",
+      "checkedAt": "2026-10-11T22:58:20.348010+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "386a6b0df24c5647a0ce0aeec3381652db689e8af822cf8cd411229bdef74936",
@@ -667,7 +667,7 @@
       "brandId": "brand-61b7f46d49620328",
       "brand": "요아정",
       "url": "https://yoajung.co.kr/bbs/content.php?co_id=menustore",
-      "checkedAt": "2026-10-10T22:35:22.783511+00:00",
+      "checkedAt": "2026-10-11T22:58:20.521440+00:00",
       "links": [],
       "error": "AssertionError",
       "reason": "",
@@ -677,37 +677,37 @@
       "brandId": "brand-3d3d7aa34cc1f578",
       "brand": "미소야",
       "url": "https://www.misoya.co.kr/menu",
-      "checkedAt": "2026-10-10T22:35:23.160793+00:00",
+      "checkedAt": "2026-10-11T22:58:20.938941+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "2b29e2840050890edd935cfe7d2d3e663ea7dbcf6312595051cb340b098d01f0",
+      "sourceSha256": "d58878376efc9fb5cea0dc07104b1eb24f6b53471ef33a0a76f5ed7ac36e24b5",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-07de1aee884692c4",
       "brand": "7번가피자",
       "url": "https://www.7thpizza.com/sub/menu/list.php",
-      "checkedAt": "2026-10-10T22:35:23.328546+00:00",
+      "checkedAt": "2026-10-11T22:58:21.097520+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "08fdf41383503e697eb0188d0625ad80be468f399eefbf1e418b57ddc7867ec9",
+      "sourceSha256": "2fa9ae27586eeecff0c1a2900adbc62960dcf03b702100f21901ca8c224753f0",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-35225ece8d72c5b9",
       "brand": "토마토도시락",
       "url": "https://www.tomatodosirak.co.kr/board/index.php?board=menu_01&sca=all",
-      "checkedAt": "2026-10-10T22:35:24.535845+00:00",
+      "checkedAt": "2026-10-11T22:58:21.213490+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "ee7a779db9bb5caf0f5dbd1024ffd678c55f9d3e5abe29448e06330489727d77",
+      "sourceSha256": "c5d5acf14dff49b420cc0cf16db02095fdfbd82e20e3cc00500a4bc4b4a71967",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-977382baa9a9159b",
       "brand": "동대문엽기떡볶이",
       "url": "https://www.yupdduk.com/sub/menu/yup-menu",
-      "checkedAt": "2026-10-10T22:35:24.694885+00:00",
+      "checkedAt": "2026-10-11T22:58:22.725943+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "4c8350de849c03e88846d16c8453f583815b13ac26d397ae8549fb72bcfbbfd9",
@@ -717,37 +717,37 @@
       "brandId": "brand-5203807bf8b4bc7a",
       "brand": "족발야시장",
       "url": "https://xn--ih3bm7ju8bi1cb3a.com/html/menu.html",
-      "checkedAt": "2026-10-10T22:35:25.345306+00:00",
+      "checkedAt": "2026-10-11T22:58:22.870886+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "c1fb0e94d80cb55644e8c38bf7bde1fb44c2b2d69d82950bc427e204431a79a0",
+      "sourceSha256": "4afb525bec36b315e3d53ebf82736016ee2c46bda602856dab52a32634216a43",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-7b853dd449517e57",
       "brand": "호식이두마리치킨",
       "url": "https://www.9922.co.kr/menu",
-      "checkedAt": "2026-10-10T22:35:25.660834+00:00",
+      "checkedAt": "2026-10-11T22:58:22.994978+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "893938b599279fb3658c4f50810ad27d99db9dd17900f8e02d063cff3bc7488c",
+      "sourceSha256": "db99f3117a1e466fc8d82a2fe43a85f6923433dc869e117795d13a747cce8988",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-9f125dd967fd168e",
       "brand": "크리스피크림도넛",
       "url": "https://www.lotteeatz.com/brand/kkd",
-      "checkedAt": "2026-10-10T22:35:25.907361+00:00",
+      "checkedAt": "2026-10-11T22:58:23.719932+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "ff2531443b0eb28f794342f53f01d6ff16874f24e1fe8bd2bf3d7c5354e1b5b2",
+      "sourceSha256": "7234b2678b12cdaf83eb32c1b68dceea94fff9872f2361a2fdf0e9aabb354d30",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-e32a9313e634ead7",
       "brand": "홍종흔베이커리",
       "url": "http://www.hjhbakery.com/product/product_list.asp",
-      "checkedAt": "2026-10-10T22:35:26.150745+00:00",
+      "checkedAt": "2026-10-11T22:58:24.038116+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "2bead995220d998174dc6b84dc3c1562105bd5452679db6cd9f732e2525606d7",
@@ -757,7 +757,7 @@
       "brandId": "brand-a7444ee050c62abd",
       "brand": "성심당",
       "url": "https://sungsimdang.co.kr/",
-      "checkedAt": "2026-10-10T22:35:26.181257+00:00",
+      "checkedAt": "2026-10-11T22:58:24.311753+00:00",
       "links": [
         {
           "url": "https://sungsimdang.co.kr/page/71",
@@ -772,7 +772,7 @@
       "brandId": "brand-cf57c271fe920362",
       "brand": "이성당",
       "url": "https://leesungdang1945.com/category/낱개상품/24/",
-      "checkedAt": "2026-10-10T22:35:26.884068+00:00",
+      "checkedAt": "2026-10-11T22:58:24.907761+00:00",
       "links": [],
       "error": "UnicodeEncodeError",
       "reason": "'ascii' codec can't encode characters in position 14-17: ordinal not in range(128)",
@@ -782,7 +782,7 @@
       "brandId": "brand-db7ae070c1a211f3",
       "brand": "응급실국물떡볶이",
       "url": "https://응급실국물떡볶이.kr/",
-      "checkedAt": "2026-10-10T22:35:26.884180+00:00",
+      "checkedAt": "2026-10-11T22:58:24.907872+00:00",
       "links": [],
       "error": "UnicodeEncodeError",
       "reason": "'latin-1' codec can't encode characters in position 0-7: ordinal not in range(256)",
@@ -792,47 +792,47 @@
       "brandId": "brand-87f52291726f6891",
       "brand": "국대떡볶이",
       "url": "https://kukde.kr/menu",
-      "checkedAt": "2026-10-10T22:35:26.884239+00:00",
+      "checkedAt": "2026-10-11T22:58:24.907923+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "0204fccef1ed92a8a6feba2d732b1d869000b13156a027a6b49340fb68c6aaef",
+      "sourceSha256": "0b8ceb74696984d5fd453bcc59215e99d50d6816704353516ffc752e5f5bf905",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-5f1ac0e21ddf73b1",
       "brand": "우지커피",
       "url": "https://www.oozycoffee.com/coffee",
-      "checkedAt": "2026-10-10T22:35:27.190680+00:00",
+      "checkedAt": "2026-10-11T22:58:24.940195+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "0c3004a277de5b20c61e72919f368a40932585d9fa6dc905fc68f3c38b27f03e",
+      "sourceSha256": "bb9e27b311d7187207d91690c032f0ccf75387652f89359a6cbdb679692aa272",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-9fa9c3eca7bcf563",
       "brand": "더벤티",
       "url": "https://www.theventi.co.kr/",
-      "checkedAt": "2026-10-10T22:35:27.198625+00:00",
+      "checkedAt": "2026-10-11T22:58:25.208974+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "aff4f1aefa54ac938e11701bc58f5e9749ac59f30c30186b200082739ddb2cf7",
+      "sourceSha256": "77bf03861864dc2e8baf91fbec2b5d9b5140ec946ee1b7c5f28c148f5bd59175",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-2e050b39b22a7280",
       "brand": "엔제리너스",
       "url": "https://www.lotteeatz.com/brand/angel",
-      "checkedAt": "2026-10-10T22:35:27.731161+00:00",
+      "checkedAt": "2026-10-11T22:58:26.125511+00:00",
       "links": [],
       "httpStatus": 200,
-      "sourceSha256": "3775173ac344c2d0ef401094cf5fe60c5bbf6dd1a22b2375bd96e81286c544e4",
+      "sourceSha256": "1df058710cc6fbc10ad113b42c56ad6d15a3b255b4ec2a614b3294becb36e7ca",
       "confirmedNutritionSources": []
     },
     {
       "brandId": "brand-01c5e2f727401b55",
       "brand": "설빙",
       "url": "https://sulbing.com/menu/",
-      "checkedAt": "2026-10-10T22:35:27.977092+00:00",
+      "checkedAt": "2026-10-11T22:58:26.149330+00:00",
       "links": [],
       "httpStatus": 200,
       "sourceSha256": "6a88543817554b01ca9eec5d378bf2b26aa418a8f65c0ef5e5a8419dbd770252",
@@ -840,13 +840,13 @@
     }
   ],
   "conflicts": [],
-  "nutritionLinkedMenus": 2485,
-  "newlyVerifiedMenus": 0,
+  "nutritionLinkedMenus": 2487,
+  "newlyVerifiedMenus": 2,
   "nutritionChangedMenus": 0,
   "reviewedSnapshotsRetained": 0,
   "recordable": 1753,
-  "matched": 2560,
-  "failed": 885,
+  "matched": 2533,
+  "failed": 932,
   "menus": [
     {
       "id": "remote-franchise-000a63b1884cf6e0bf66ae9f",
@@ -1473,10 +1473,10 @@
       "brandId": "brand-ffd3bb1b019cf849",
       "brand": "맥도날드",
       "name": "아이스 드립 커피 Large",
-      "result": "MATCHED",
-      "conflicts": [],
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_PARTIAL",
-      "sourceUrl": "https://www.mcdonalds.co.kr/api/v1/kor/product/product/list?page=2&view_rows=6&mainCategory=8&subCategory=15&searchWord="
+      "error": "AssertionError",
+      "reason": "Official product ID and full size/variant name changed"
     },
     {
       "id": "remote-franchise-032510505775504ba75cf4ed",
@@ -2041,10 +2041,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "바닐라 크림 콜드 브루",
-      "result": "MATCHED",
-      "conflicts": [],
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000000487"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-061eedc3ed7c7f16536fa866",
@@ -2559,10 +2559,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "헤이즐넛 스타벅스 더블 샷",
-      "result": "FAILED_RETAINED",
+      "result": "MATCHED",
+      "conflicts": [],
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "error": "URLError",
-      "reason": "<urlopen error timed out>"
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=110614"
     },
     {
       "id": "remote-franchise-08adb8c1a673fb35801da256",
@@ -3803,10 +3803,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "민트 콜드 브루",
-      "result": "MATCHED",
-      "conflicts": [],
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000004312"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-0dfebde7710fa89cd9b16ff5",
@@ -4087,10 +4087,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "티라미수 크레이프 케이크",
-      "result": "MATCHED",
-      "conflicts": [],
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000006880"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-0f899b7a028e1f4d347b5430",
@@ -5027,10 +5027,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "바나나 푸딩 케이크",
-      "result": "MATCHED",
-      "conflicts": [],
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000006873"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-14807625aea9ac7e068a138b",
@@ -6971,10 +6971,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "얼 그레이 카라멜 넛츠 케이크",
-      "result": "FAILED_RETAINED",
+      "result": "MATCHED",
+      "conflicts": [],
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "error": "URLError",
-      "reason": "<urlopen error timed out>"
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000006817"
     },
     {
       "id": "remote-franchise-1ef01b8ede43a8e21ffd18a0",
@@ -7517,10 +7517,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "스타벅스 1호점 크림 라떼",
-      "result": "MATCHED",
-      "conflicts": [],
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_PARTIAL",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000005522"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-21d432a9e6566a7231243d84",
@@ -8743,10 +8743,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "바닐라 빈 젤라또",
-      "result": "MATCHED",
-      "conflicts": [],
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005404"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-288ea570b881753eba7e7e2f",
@@ -12393,10 +12393,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "아이스 브루드 커피",
-      "result": "MATCHED",
-      "conflicts": [],
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=106509"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-3c667488d3403dab1b55f6e5",
@@ -13789,10 +13789,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "제주 비자림 리저브 에스프레소 라떼",
-      "result": "MATCHED",
-      "conflicts": [],
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000006575"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-42ed8a9f49362e20927d584e",
@@ -14577,10 +14577,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "클래식 피낭시에",
-      "result": "MATCHED",
-      "conflicts": [],
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005609"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-46ca80ec9fd7a30f3989d324",
@@ -14741,10 +14741,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "퓨어 호지차",
-      "result": "MATCHED",
-      "conflicts": [],
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000007181"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-47695d9a6c966a22d4ddaac0",
@@ -16873,10 +16873,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "별별꾸러미",
-      "result": "MATCHED",
-      "conflicts": [],
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_PARTIAL",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9900000001764"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-5311779e215075a190b6f396",
@@ -17271,10 +17271,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "망고 패션 프루트 블렌디드",
-      "result": "MATCHED",
-      "conflicts": [],
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=167004"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-556bc9b3c48cdb2b630ca42d",
@@ -21341,10 +21341,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "골든 펌킨 크림 치즈 케이크",
-      "result": "FAILED_RETAINED",
+      "result": "MATCHED",
+      "conflicts": [],
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "error": "URLError",
-      "reason": "<urlopen error timed out>"
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000006871"
     },
     {
       "id": "remote-franchise-6bccc34097510942aa0c9a1f",
@@ -21493,10 +21493,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "아이스 카페 모카",
-      "result": "MATCHED",
-      "conflicts": [],
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=110566"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-6c96681fec93836eca355208",
@@ -24499,10 +24499,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "한라봉주스 190ML",
-      "result": "MATCHED",
-      "conflicts": [],
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=5210008055"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-7dea0331166326c4852bc2c6",
@@ -26543,10 +26543,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "카페 라떼",
-      "result": "MATCHED",
-      "conflicts": [],
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=41"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-8b37f09d5c2cdd4e320df8ce",
@@ -29407,10 +29407,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "딸기주스 190ML",
-      "result": "MATCHED",
-      "conflicts": [],
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=5210008070"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-9b3bfee440938709c652547d",
@@ -30083,10 +30083,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "사케라또 아포가토",
-      "result": "MATCHED",
-      "conflicts": [],
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000003505"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-9f8e256febbe10e2a547818f",
@@ -30505,10 +30505,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "딸기 아사이 레모네이드 스타벅스 리프레셔",
-      "result": "MATCHED",
-      "conflicts": [],
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000004753"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-a11cae5b5af6b1a5261a67cc",
@@ -32045,10 +32045,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "제주팔삭 셔벗",
-      "result": "MATCHED",
-      "conflicts": [],
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_PARTIAL",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000004957"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-a9177dc9b6f696804f06feb4",
@@ -33833,10 +33833,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "아이스 바닐라 빈 라떼",
-      "result": "MATCHED",
-      "conflicts": [],
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000001941"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-b27cfdb402bf3904e7697308",
@@ -35017,10 +35017,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "캐모마일 블렌드 티",
-      "result": "MATCHED",
-      "conflicts": [],
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=4004000000076"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-b9883c912c512716d26f42fd",
@@ -35127,10 +35127,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "딸기 콜드폼 초콜릿",
-      "result": "MATCHED",
-      "conflicts": [],
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_PARTIAL",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000004950"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-ba15b9b140d431580933476b",
@@ -35699,10 +35699,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "스타벅스 꿀 호떡 라떼",
-      "result": "MATCHED",
-      "conflicts": [],
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000006164"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-bcdbb0b29b78302519e90447",
@@ -38257,10 +38257,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "사케라또 비안코 오버 아이스",
-      "result": "MATCHED",
-      "conflicts": [],
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000002095"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-c8d9a3754c3cdd16e259ac17",
@@ -39287,10 +39287,10 @@
       "brandId": "brand-ffd3bb1b019cf849",
       "brand": "맥도날드",
       "name": "후렌치 후라이 Medium",
-      "result": "MATCHED",
-      "conflicts": [],
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_PARTIAL",
-      "sourceUrl": "https://www.mcdonalds.co.kr/api/v1/kor/product/product/list?page=2&view_rows=6&mainCategory=4&subCategory=8&searchWord="
+      "error": "AssertionError",
+      "reason": "Official product ID and full size/variant name changed"
     },
     {
       "id": "remote-franchise-ce33511e7f2dcb4bcde910f7",
@@ -40355,10 +40355,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "인절미 크림 라떼",
-      "result": "MATCHED",
-      "conflicts": [],
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000005284"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-d46205e68e172fd8725b654c",
@@ -41393,10 +41393,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "아이스 말차 글레이즈드 티 라떼",
-      "result": "MATCHED",
-      "conflicts": [],
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000006415"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-da4ca5f72119d18e2458f9b0",
@@ -43503,10 +43503,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "청담스타 얼 그레이 밀크 케이크",
-      "result": "MATCHED",
-      "conflicts": [],
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000001521"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-e5aa540b1b23431b21fcec37",
@@ -44179,10 +44179,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "쿠키 스트로우 세트",
-      "result": "MATCHED",
-      "conflicts": [],
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9900000001722"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-e8e1f1c439ae6abea7ee7614",
@@ -46305,10 +46305,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "우유",
-      "result": "MATCHED",
-      "conflicts": [],
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=18"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-f47e65f976e972c44b24682d",
@@ -47611,10 +47611,10 @@
       "brandId": "brand-6f80c60267f6bc73",
       "brand": "스타벅스",
       "name": "피넛 쿠키 크림 프라푸치노",
-      "result": "MATCHED",
-      "conflicts": [],
+      "result": "FAILED_RETAINED",
       "nutritionStatus": "NUTRITION_COMPLETE",
-      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000006980"
+      "error": "URLError",
+      "reason": "<urlopen error timed out>"
     },
     {
       "id": "remote-franchise-fafb89864b67cbfc58c7a47d",
@@ -48561,6 +48561,206 @@
       "conflicts": [],
       "nutritionStatus": "NUTRITION_COMPLETE",
       "sourceUrl": "https://www.tlj.co.kr/product/detail.asp?gubun=result&prod_num=5250"
+    },
+    {
+      "id": "remote-franchise-1b380cf62551d7b99e755963",
+      "brandId": "brand-ffd3bb1b019cf849",
+      "brand": "맥도날드",
+      "name": "애플 파이",
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_PARTIAL",
+      "sourceUrl": "https://www.mcdonalds.co.kr/api/v1/kor/product/product/list?page=1&view_rows=6&mainCategory=8&subCategory=15&searchWord="
+    },
+    {
+      "id": "remote-franchise-8223e4546a2d2e70ea77326d",
+      "brandId": "brand-ffd3bb1b019cf849",
+      "brand": "맥도날드",
+      "name": "치킨 모짜렐라 스낵랩",
+      "result": "MATCHED",
+      "conflicts": [],
+      "nutritionStatus": "NUTRITION_PARTIAL",
+      "sourceUrl": "https://www.mcdonalds.co.kr/api/v1/kor/product/product/list?page=1&view_rows=6&mainCategory=8&subCategory=15&searchWord="
+    },
+    {
+      "id": "remote-franchise-e1c47dfb512a90931d019ca7",
+      "brandId": "brand-d857c6bf9eb6a6c0",
+      "brand": "버거킹",
+      "name": "불고기와퍼주니어X2",
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": "Exact Burger King name/variant not unique"
+    },
+    {
+      "id": "remote-franchise-91e3f854e7aec807e3cc0669",
+      "brandId": "brand-d857c6bf9eb6a6c0",
+      "brand": "버거킹",
+      "name": "와퍼주니어X2",
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": "Exact Burger King name/variant not unique"
+    },
+    {
+      "id": "remote-franchise-d939313e38c10d8b3d9bcea2",
+      "brandId": "brand-d857c6bf9eb6a6c0",
+      "brand": "버거킹",
+      "name": "와주X불고기와주",
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": "Exact Burger King name/variant not unique"
+    },
+    {
+      "id": "remote-franchise-adbd0d8272aa4e75b5614742",
+      "brandId": "brand-d857c6bf9eb6a6c0",
+      "brand": "버거킹",
+      "name": "와주X불와주+프라이R+콜라R",
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": "Exact Burger King name/variant not unique"
+    },
+    {
+      "id": "remote-franchise-57994044a0834c63ad434f5a",
+      "brandId": "brand-d857c6bf9eb6a6c0",
+      "brand": "버거킹",
+      "name": "와퍼주니어X2+프라이R+콜라R",
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": "Exact Burger King name/variant not unique"
+    },
+    {
+      "id": "remote-franchise-0674447e4ca80261ddeb042e",
+      "brandId": "brand-d857c6bf9eb6a6c0",
+      "brand": "버거킹",
+      "name": "불와주X2+프라이R+콜라R",
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": "Exact Burger King name/variant not unique"
+    },
+    {
+      "id": "remote-franchise-fbadeb915a664f248181ae23",
+      "brandId": "brand-d857c6bf9eb6a6c0",
+      "brand": "버거킹",
+      "name": "불와주X2+프라이L+콜라L",
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": "Exact Burger King name/variant not unique"
+    },
+    {
+      "id": "remote-franchise-d268e55f36d864322ca516c2",
+      "brandId": "brand-d857c6bf9eb6a6c0",
+      "brand": "버거킹",
+      "name": "와퍼주니어X2+프라이L+콜라L",
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": "Exact Burger King name/variant not unique"
+    },
+    {
+      "id": "remote-franchise-c086d8ef1f066d37f23a9f23",
+      "brandId": "brand-d857c6bf9eb6a6c0",
+      "brand": "버거킹",
+      "name": "와주X불와주+프라이L+콜라L",
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": "Exact Burger King name/variant not unique"
+    },
+    {
+      "id": "remote-franchise-2add1f367555fd339f232e5e",
+      "brandId": "brand-d857c6bf9eb6a6c0",
+      "brand": "버거킹",
+      "name": "롱치킨버거X2",
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": "Exact Burger King name/variant not unique"
+    },
+    {
+      "id": "remote-franchise-69284f9c1738fb3121f7f6a8",
+      "brandId": "brand-d857c6bf9eb6a6c0",
+      "brand": "버거킹",
+      "name": "콰트로치즈 와퍼주니어X2",
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": "Exact Burger King name/variant not unique"
+    },
+    {
+      "id": "remote-franchise-296add72a1700286637b035d",
+      "brandId": "brand-d857c6bf9eb6a6c0",
+      "brand": "버거킹",
+      "name": "콰트로치즈와퍼주니어X롱치킨버거",
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": "Exact Burger King name/variant not unique"
+    },
+    {
+      "id": "remote-franchise-b65019b7224c06a1a9aa82ee",
+      "brandId": "brand-d857c6bf9eb6a6c0",
+      "brand": "버거킹",
+      "name": "콰치와주X2+프라이R+콜라R",
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": "Exact Burger King name/variant not unique"
+    },
+    {
+      "id": "remote-franchise-794c8ec0dce1a2e3e223b5c7",
+      "brandId": "brand-d857c6bf9eb6a6c0",
+      "brand": "버거킹",
+      "name": "콰치와주X롱치킨버거+프라이R+콜라R",
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": "Exact Burger King name/variant not unique"
+    },
+    {
+      "id": "remote-franchise-da9ef4e089582ad1376b9587",
+      "brandId": "brand-d857c6bf9eb6a6c0",
+      "brand": "버거킹",
+      "name": "롱치킨버거X2+프라이R+콜라R",
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": "Exact Burger King name/variant not unique"
+    },
+    {
+      "id": "remote-franchise-151f8c2646f7d73f7ff61400",
+      "brandId": "brand-d857c6bf9eb6a6c0",
+      "brand": "버거킹",
+      "name": "롱치킨버거X2+프라이L+콜라L",
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": "Exact Burger King name/variant not unique"
+    },
+    {
+      "id": "remote-franchise-b22fa75bc6a79370112f0813",
+      "brandId": "brand-d857c6bf9eb6a6c0",
+      "brand": "버거킹",
+      "name": "콰치와주X롱치킨버거+프라이L+콜라L",
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": "Exact Burger King name/variant not unique"
+    },
+    {
+      "id": "remote-franchise-56f4fb9589254b1f42425e35",
+      "brandId": "brand-d857c6bf9eb6a6c0",
+      "brand": "버거킹",
+      "name": "콰치와주X2+프라이L+콜라L",
+      "result": "FAILED_RETAINED",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED",
+      "error": "AssertionError",
+      "reason": "Exact Burger King name/variant not unique"
     }
   ]
 }
