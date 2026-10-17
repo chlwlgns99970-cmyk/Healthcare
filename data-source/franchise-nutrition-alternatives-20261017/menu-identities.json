@@ -1,0 +1,2599 @@
+{
+  "menus": [
+    {
+      "brandId": "brand-f2c4cd89053b4ff8",
+      "brand": "청년피자",
+      "name": "진짜감자피자 (R)",
+      "normalizedName": "진짜감자피자(r)",
+      "externalId": "menu_detail_pizza.php:35:R",
+      "category": "피자",
+      "sourceUrl": "https://youngmanpizza.co.kr/sub01/menu_detail_pizza.php?page_num=1&search_text=&search_type=&seq=35",
+      "checkedAt": "2026-10-17T09:49:39.447954+00:00",
+      "sourceType": "HTML",
+      "energyKcal": null,
+      "carbohydrateGrams": null,
+      "proteinGrams": null,
+      "fatGrams": null,
+      "servingAmount": null,
+      "servingUnit": null,
+      "id": "remote-franchise-3d2f796044a500d67b67e876",
+      "officialNutrition": {
+        "energyKcal": 322.0,
+        "carbohydrateGrams": null,
+        "proteinGrams": 12.0,
+        "fatGrams": null,
+        "sodiumMilligrams": 424.0,
+        "sugarsGrams": 5.0,
+        "saturatedFatGrams": 4.0,
+        "servingAmount": 120.0,
+        "servingUnit": "g",
+        "servingDescription": "공식 R 사이즈 1회 제공량 1조각 (120g) 기준 · 피자 전체 중량 아님",
+        "sourceUrl": "https://youngmanpizza.co.kr/sub01/menu_detail_pizza.php?page_num=1&search_text=&search_type=&seq=35",
+        "checkedAt": "2026-10-17T09:51:11.154647+00:00",
+        "sourceSha256": "0ee108ea3e005a0c5ec098d14eda5720f825a62c3a44c2de9f309041fc56f5c7",
+        "officialProductId": "menu_detail_pizza.php:35:R",
+        "sourceType": "HTML"
+      },
+      "nutritionStatus": "NUTRITION_COMPLETE"
+    },
+    {
+      "brandId": "brand-f2c4cd89053b4ff8",
+      "brand": "청년피자",
+      "name": "진짜감자피자 (L)",
+      "normalizedName": "진짜감자피자(l)",
+      "externalId": "menu_detail_pizza.php:35:L",
+      "category": "피자",
+      "sourceUrl": "https://youngmanpizza.co.kr/sub01/menu_detail_pizza.php?page_num=1&search_text=&search_type=&seq=35",
+      "checkedAt": "2026-10-17T09:49:39.447954+00:00",
+      "sourceType": "HTML",
+      "energyKcal": null,
+      "carbohydrateGrams": null,
+      "proteinGrams": null,
+      "fatGrams": null,
+      "servingAmount": null,
+      "servingUnit": null,
+      "id": "remote-franchise-92bf47af7ec660269441d747",
+      "officialNutrition": {
+        "energyKcal": 359.0,
+        "carbohydrateGrams": null,
+        "proteinGrams": 14.0,
+        "fatGrams": null,
+        "sodiumMilligrams": 473.0,
+        "sugarsGrams": 6.0,
+        "saturatedFatGrams": 5.0,
+        "servingAmount": 134.0,
+        "servingUnit": "g",
+        "servingDescription": "공식 L 사이즈 1회 제공량 1조각 (134g) 기준 · 피자 전체 중량 아님",
+        "sourceUrl": "https://youngmanpizza.co.kr/sub01/menu_detail_pizza.php?page_num=1&search_text=&search_type=&seq=35",
+        "checkedAt": "2026-10-17T09:51:11.154647+00:00",
+        "sourceSha256": "0ee108ea3e005a0c5ec098d14eda5720f825a62c3a44c2de9f309041fc56f5c7",
+        "officialProductId": "menu_detail_pizza.php:35:L",
+        "sourceType": "HTML"
+      },
+      "nutritionStatus": "NUTRITION_COMPLETE"
+    },
+    {
+      "brandId": "brand-f2c4cd89053b4ff8",
+      "brand": "청년피자",
+      "name": "할라불고기 (R)",
+      "normalizedName": "할라불고기(r)",
+      "externalId": "menu_detail_pizza.php:36:R",
+      "category": "피자",
+      "sourceUrl": "https://youngmanpizza.co.kr/sub01/menu_detail_pizza.php?page_num=1&search_text=&search_type=&seq=36",
+      "checkedAt": "2026-10-17T09:49:39.447954+00:00",
+      "sourceType": "HTML",
+      "energyKcal": null,
+      "carbohydrateGrams": null,
+      "proteinGrams": null,
+      "fatGrams": null,
+      "servingAmount": null,
+      "servingUnit": null,
+      "id": "remote-franchise-24ef08472df679f7580821eb",
+      "officialNutrition": {
+        "energyKcal": 236.0,
+        "carbohydrateGrams": null,
+        "proteinGrams": 11.0,
+        "fatGrams": null,
+        "sodiumMilligrams": 513.0,
+        "sugarsGrams": 7.0,
+        "saturatedFatGrams": 4.0,
+        "servingAmount": 103.0,
+        "servingUnit": "g",
+        "servingDescription": "공식 R 사이즈 1회 제공량 1조각 (103g) 기준 · 피자 전체 중량 아님",
+        "sourceUrl": "https://youngmanpizza.co.kr/sub01/menu_detail_pizza.php?page_num=1&search_text=&search_type=&seq=36",
+        "checkedAt": "2026-10-17T09:51:11.154647+00:00",
+        "sourceSha256": "ceb7ebdf544020ec9dda0b64d9950902fc70e7a69af1bb5fb6d8b0784006b64d",
+        "officialProductId": "menu_detail_pizza.php:36:R",
+        "sourceType": "HTML"
+      },
+      "nutritionStatus": "NUTRITION_COMPLETE"
+    },
+    {
+      "brandId": "brand-f2c4cd89053b4ff8",
+      "brand": "청년피자",
+      "name": "할라불고기 (L)",
+      "normalizedName": "할라불고기(l)",
+      "externalId": "menu_detail_pizza.php:36:L",
+      "category": "피자",
+      "sourceUrl": "https://youngmanpizza.co.kr/sub01/menu_detail_pizza.php?page_num=1&search_text=&search_type=&seq=36",
+      "checkedAt": "2026-10-17T09:49:39.447954+00:00",
+      "sourceType": "HTML",
+      "energyKcal": null,
+      "carbohydrateGrams": null,
+      "proteinGrams": null,
+      "fatGrams": null,
+      "servingAmount": null,
+      "servingUnit": null,
+      "id": "remote-franchise-40191ba88c9077c565b59b7d",
+      "officialNutrition": {
+        "energyKcal": 280.0,
+        "carbohydrateGrams": null,
+        "proteinGrams": 13.0,
+        "fatGrams": null,
+        "sodiumMilligrams": 607.0,
+        "sugarsGrams": 8.0,
+        "saturatedFatGrams": 4.0,
+        "servingAmount": 122.0,
+        "servingUnit": "g",
+        "servingDescription": "공식 L 사이즈 1회 제공량 1조각 (122g) 기준 · 피자 전체 중량 아님",
+        "sourceUrl": "https://youngmanpizza.co.kr/sub01/menu_detail_pizza.php?page_num=1&search_text=&search_type=&seq=36",
+        "checkedAt": "2026-10-17T09:51:11.154647+00:00",
+        "sourceSha256": "ceb7ebdf544020ec9dda0b64d9950902fc70e7a69af1bb5fb6d8b0784006b64d",
+        "officialProductId": "menu_detail_pizza.php:36:L",
+        "sourceType": "HTML"
+      },
+      "nutritionStatus": "NUTRITION_COMPLETE"
+    },
+    {
+      "brandId": "brand-f2c4cd89053b4ff8",
+      "brand": "청년피자",
+      "name": "빅파불고기피자 (R)",
+      "normalizedName": "빅파불고기피자(r)",
+      "externalId": "menu_detail_pizza.php:39:R",
+      "category": "피자",
+      "sourceUrl": "https://youngmanpizza.co.kr/sub01/menu_detail_pizza.php?page_num=1&search_text=&search_type=&seq=39",
+      "checkedAt": "2026-10-17T09:49:39.447954+00:00",
+      "sourceType": "HTML",
+      "energyKcal": null,
+      "carbohydrateGrams": null,
+      "proteinGrams": null,
+      "fatGrams": null,
+      "servingAmount": null,
+      "servingUnit": null,
+      "id": "remote-franchise-78c397690d3535a69b806267",
+      "officialNutrition": {
+        "energyKcal": 227.0,
+        "carbohydrateGrams": null,
+        "proteinGrams": 11.0,
+        "fatGrams": null,
+        "sodiumMilligrams": 419.0,
+        "sugarsGrams": 6.0,
+        "saturatedFatGrams": 4.0,
+        "servingAmount": 95.0,
+        "servingUnit": "g",
+        "servingDescription": "공식 R 사이즈 1회 제공량 1조각 (95g) 기준 · 피자 전체 중량 아님",
+        "sourceUrl": "https://youngmanpizza.co.kr/sub01/menu_detail_pizza.php?page_num=1&search_text=&search_type=&seq=39",
+        "checkedAt": "2026-10-17T09:51:11.154647+00:00",
+        "sourceSha256": "a1bff937444dbfe29f26cb5ca07443e3b18c926071457e9fd487aa9d0d3deb54",
+        "officialProductId": "menu_detail_pizza.php:39:R",
+        "sourceType": "HTML"
+      },
+      "nutritionStatus": "NUTRITION_COMPLETE"
+    },
+    {
+      "brandId": "brand-f2c4cd89053b4ff8",
+      "brand": "청년피자",
+      "name": "빅파불고기피자 (L)",
+      "normalizedName": "빅파불고기피자(l)",
+      "externalId": "menu_detail_pizza.php:39:L",
+      "category": "피자",
+      "sourceUrl": "https://youngmanpizza.co.kr/sub01/menu_detail_pizza.php?page_num=1&search_text=&search_type=&seq=39",
+      "checkedAt": "2026-10-17T09:49:39.447954+00:00",
+      "sourceType": "HTML",
+      "energyKcal": null,
+      "carbohydrateGrams": null,
+      "proteinGrams": null,
+      "fatGrams": null,
+      "servingAmount": null,
+      "servingUnit": null,
+      "id": "remote-franchise-9060b5c960aa07023cf59137",
+      "officialNutrition": {
+        "energyKcal": 272.0,
+        "carbohydrateGrams": null,
+        "proteinGrams": 13.0,
+        "fatGrams": null,
+        "sodiumMilligrams": 502.0,
+        "sugarsGrams": 7.0,
+        "saturatedFatGrams": 5.0,
+        "servingAmount": 114.0,
+        "servingUnit": "g",
+        "servingDescription": "공식 L 사이즈 1회 제공량 1조각 (114g) 기준 · 피자 전체 중량 아님",
+        "sourceUrl": "https://youngmanpizza.co.kr/sub01/menu_detail_pizza.php?page_num=1&search_text=&search_type=&seq=39",
+        "checkedAt": "2026-10-17T09:51:11.154647+00:00",
+        "sourceSha256": "a1bff937444dbfe29f26cb5ca07443e3b18c926071457e9fd487aa9d0d3deb54",
+        "officialProductId": "menu_detail_pizza.php:39:L",
+        "sourceType": "HTML"
+      },
+      "nutritionStatus": "NUTRITION_COMPLETE"
+    },
+    {
+      "brandId": "brand-f2c4cd89053b4ff8",
+      "brand": "청년피자",
+      "name": "야채 피자 (R)",
+      "normalizedName": "야채피자(r)",
+      "externalId": "menu_detail_pizza.php:41:R",
+      "category": "피자",
+      "sourceUrl": "https://youngmanpizza.co.kr/sub01/menu_detail_pizza.php?page_num=1&search_text=&search_type=&seq=41",
+      "checkedAt": "2026-10-17T09:49:39.542652+00:00",
+      "sourceType": "HTML",
+      "energyKcal": null,
+      "carbohydrateGrams": null,
+      "proteinGrams": null,
+      "fatGrams": null,
+      "servingAmount": null,
+      "servingUnit": null,
+      "id": "remote-franchise-c00ae5164e264199354216cb",
+      "officialNutrition": {
+        "energyKcal": 205.0,
+        "carbohydrateGrams": null,
+        "proteinGrams": 12.0,
+        "fatGrams": null,
+        "sodiumMilligrams": 396.0,
+        "sugarsGrams": 5.0,
+        "saturatedFatGrams": 3.0,
+        "servingAmount": 85.0,
+        "servingUnit": "g",
+        "servingDescription": "공식 R 사이즈 1회 제공량 1조각 (85g) 기준 · 피자 전체 중량 아님",
+        "sourceUrl": "https://youngmanpizza.co.kr/sub01/menu_detail_pizza.php?page_num=1&search_text=&search_type=&seq=41",
+        "checkedAt": "2026-10-17T09:51:11.154647+00:00",
+        "sourceSha256": "591e4a2881173c30833c15e8083d2153717c810ee448607757a046e5b3b71ef4",
+        "officialProductId": "menu_detail_pizza.php:41:R",
+        "sourceType": "HTML"
+      },
+      "nutritionStatus": "NUTRITION_COMPLETE"
+    },
+    {
+      "brandId": "brand-f2c4cd89053b4ff8",
+      "brand": "청년피자",
+      "name": "야채 피자 (L)",
+      "normalizedName": "야채피자(l)",
+      "externalId": "menu_detail_pizza.php:41:L",
+      "category": "피자",
+      "sourceUrl": "https://youngmanpizza.co.kr/sub01/menu_detail_pizza.php?page_num=1&search_text=&search_type=&seq=41",
+      "checkedAt": "2026-10-17T09:49:39.542652+00:00",
+      "sourceType": "HTML",
+      "energyKcal": null,
+      "carbohydrateGrams": null,
+      "proteinGrams": null,
+      "fatGrams": null,
+      "servingAmount": null,
+      "servingUnit": null,
+      "id": "remote-franchise-4f6575e5239533a72cc1906a",
+      "officialNutrition": {
+        "energyKcal": 242.0,
+        "carbohydrateGrams": null,
+        "proteinGrams": 14.0,
+        "fatGrams": null,
+        "sodiumMilligrams": 466.0,
+        "sugarsGrams": 6.0,
+        "saturatedFatGrams": 4.0,
+        "servingAmount": 100.0,
+        "servingUnit": "g",
+        "servingDescription": "공식 L 사이즈 1회 제공량 1조각 (100g) 기준 · 피자 전체 중량 아님",
+        "sourceUrl": "https://youngmanpizza.co.kr/sub01/menu_detail_pizza.php?page_num=1&search_text=&search_type=&seq=41",
+        "checkedAt": "2026-10-17T09:51:11.154647+00:00",
+        "sourceSha256": "591e4a2881173c30833c15e8083d2153717c810ee448607757a046e5b3b71ef4",
+        "officialProductId": "menu_detail_pizza.php:41:L",
+        "sourceType": "HTML"
+      },
+      "nutritionStatus": "NUTRITION_COMPLETE"
+    },
+    {
+      "brandId": "brand-f2c4cd89053b4ff8",
+      "brand": "청년피자",
+      "name": "구름에그콘피자 (R)",
+      "normalizedName": "구름에그콘피자(r)",
+      "externalId": "menu_detail_pizza.php:46:R",
+      "category": "피자",
+      "sourceUrl": "https://youngmanpizza.co.kr/sub01/menu_detail_pizza.php?page_num=1&search_text=&search_type=&seq=46",
+      "checkedAt": "2026-10-17T09:49:39.565355+00:00",
+      "sourceType": "HTML",
+      "energyKcal": null,
+      "carbohydrateGrams": null,
+      "proteinGrams": null,
+      "fatGrams": null,
+      "servingAmount": null,
+      "servingUnit": null,
+      "id": "remote-franchise-15b7bc806db407b37d5dcd64",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED"
+    },
+    {
+      "brandId": "brand-f2c4cd89053b4ff8",
+      "brand": "청년피자",
+      "name": "구름에그콘피자 (L)",
+      "normalizedName": "구름에그콘피자(l)",
+      "externalId": "menu_detail_pizza.php:46:L",
+      "category": "피자",
+      "sourceUrl": "https://youngmanpizza.co.kr/sub01/menu_detail_pizza.php?page_num=1&search_text=&search_type=&seq=46",
+      "checkedAt": "2026-10-17T09:49:39.565355+00:00",
+      "sourceType": "HTML",
+      "energyKcal": null,
+      "carbohydrateGrams": null,
+      "proteinGrams": null,
+      "fatGrams": null,
+      "servingAmount": null,
+      "servingUnit": null,
+      "id": "remote-franchise-fd2e54ef6fbc7fa9efc450d5",
+      "nutritionStatus": "NUTRITION_SOURCE_FOUND_UNMATCHED"
+    }
+  ],
+  "sourceCaptures": [
+    {
+      "url": "https://youngmanpizza.co.kr/sub01/menu_detail_pizza.php?page_num=1&search_text=&search_type=&seq=35",
+      "checkedAt": "2026-10-17T09:49:39.447954+00:00",
+      "status": 200,
+      "finalUrl": "https://youngmanpizza.co.kr/sub01/menu_detail_pizza.php?page_num=1&search_text=&search_type=&seq=35",
+      "sha256": "0ee108ea3e005a0c5ec098d14eda5720f825a62c3a44c2de9f309041fc56f5c7",
+      "file": "0ee108ea3e005a0c5ec098d14eda5720f825a62c3a44c2de9f309041fc56f5c7.html",
+      "bytes": 47696,
+      "encoding": "utf-8",
+      "text": "(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-K9QW5HTP'); 청년피자 // 페이지 내의 모든 map 태그 좌표를 반응형으로 자동 조절합니다. $(document).ready(function() { $('map').imageMapResize(); // jQuery 전용 메서드명은 끝이 'Resize'입니다. }); (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-M5RL8NS'); !function(f,b,e,v,n,t,s) {if(f.fbq)return;n=f.fbq=function(){n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)}; if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0'; n.queue=[];t=b.createElement(e);t.async=!0; t.src=v;s=b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t,s)}(window,document,'script', 'https://connect.facebook.net/en_US/fbevents.js'); fbq('init', '431000447845930'); fbq('track', 'PageView'); !function(f,b,e,v,n,t,s) {if(f.fbq)return;n=f.fbq=function(){n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)}; if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0'; n.queue=[];t=b.createElement(e);t.async=!0; t.src=v;s=b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t,s)}(window, document,'script', 'https://connect.facebook.net/en_US/fbevents.js'); fbq('init', '644059515325767'); fbq('track', 'PageView'); window.karrotPixel.init('1749775708797100001'); window.karrotPixel.track('ViewPage'); !function(f,b,e,v,n,t,s) {if(f.fbq)return;n=f.fbq=function(){n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)}; if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0'; n.queue=[];t=b.createElement(e);t.async=!0; t.src=v;s=b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t,s)}(window, document,'script', 'https://connect.facebook.net/en_US/fbevents.js'); fbq('init', '1978456276065735'); fbq('track', 'PageView'); !function (w, d, t) { w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=[\"page\",\"track\",\"identify\",\"instances\",\"debug\",\"on\",\"off\",\"once\",\"ready\",\"alias\",\"group\",\"enableCookie\",\"disableCookie\",\"holdConsent\",\"revokeConsent\",\"grantConsent\"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for( var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r=\"https://analytics.tiktok.com/i18n/pixel/events.js\",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement(\"script\") ;n.type=\"text/javascript\",n.async=!0,n.src=r+\"?sdkid=\"+e+\"&lib=\"+t;e=document.getElementsByTagName(\"script\")[0];e.parentNode.insertBefore(n,e)}; ttq.load('D6TQ373C77UCO0T91L70'); ttq.page(); }(window, document, 'ttq'); 브랜드 브랜드 CEO 인사말 사회공헌활동 인재채용 오시는 길 메뉴 매장안내 소식 이벤트 보도자료 청년피자웹진 TV CF 인쇄물 광고 청년피자 유튜브 창업안내 및 문의 고객센터 공지사항 자주 묻는 질문 고객의 소리 회사소개 BSB GROUP CEO 인사말 BSB GROUP BRAND 사회공헌활동 보도자료 인재채용 오시는 길 고객센터 공지사항 자주 묻는 질문 고객의 소리 청년피자뉴스 청년피자웹진 광고 갤러리 TV CF 인쇄물 광고 청년피자 유튜브 브랜드 메뉴 매장안내 소식 창업안내 및 문의 고객센터 브랜드 CEO 인사말 사회공헌활동 인재채용 오시는 길 메뉴 매장안내 이벤트 보도자료 청년피자웹진 TV CF 인쇄물 광고 청년피자 유튜브 창업안내 및 문의 공지사항 자주 묻는 질문 고객의 소리 메뉴 피자 세트 메뉴 사이드 메뉴 토핑 추가 음료&기타 진짜감자피자 리얼감자피자?아니죠 진짜감자피자입니다. 청년피자만의 오리지널 감자피자 R 20,900 L 25,900 크러스트 옵션 옵션펼치기 통치즈크러스트 + 5,000원 리치골드 + 5,000원 크림치즈크러스트 + 5,000원 치즈크러스트 + 4,000원 고구마체다크러스트 + 4,000원 토핑정보 웨지감자, 장작통삼겹, 마요네즈 제품소개 원산지 전체보기 장작삼겹토핑[돼지고기(외국산:벨기에,오스트리아,스페인 등)] 알레르기정보 전체보기 계란,대두,밀,쇠고기,우유,토마토,돼지고기 영양성분 전체보기 제품명 사이즈 총중량(g) 조각수 1회 제공량 (조각) 1회분 중량 (g) 열량 (kcal/1회분) 당류 (g/1회분) 단백질 (g/1회분) 포화지방 (g/1회분) 나트륨 (mg/1회분) 진짜감자 피자 R 721 6 1 120 322 5 12 4 424 L 1074 8 1 134 359 6 14 5 473 원산지,영양성분 및 알레르기 유발성분 원산지 제품 알레르기 유발성분 영양성분 피자공통 * 피자치즈:자연치즈[모짜렐라(미국산과 독일산 섞음),프로볼로네(미국산)] * 고메밀크도우:밀가루(밀:미국산과 캐나다산 섞음) * 피망,양파,새송이:국내산 ·피자 제품명 원산지표시 프리미엄 오리지널 ·도우 변경 제품명 원산지표시 ·파스타 제품명 원산지표시 ·사이드 제품명 원산지표시 ·토핑추가 제품명 원산지표시 ·기타 제품명 원산지표시 피자공통 * 피자치즈:우유 * 고메밀크도우:밀,우유,대두 ·피자 제품명 알레르기정보 프리미엄 오리지널 ·도우 변경 제품명 알레르기정보 ·파스타 제품명 알레르기정보 ·사이드 제품명 알레르기정보 ·토핑추가 제품명 알레르기정보 ·기타 제품명 알레르기정보 ·오리지널피자 ·피자 제품명 1회제공량 열량 당류 단백질 포화지방 나트륨 ·도우변경 제품명 1회제공량 열량 당류 단백질 포화지방 나트륨 ·사이드 제품명 1회제공량 열량 당류 단백질 포화지방 나트륨 ·소스 제품명 1회제공량 열량 당류 단백질 포화지방 나트륨 ·음료 제품명 1회제공량 열량 당류 단백질 포화지방 나트륨 ·세트메뉴 분류 사이즈 열량기준 피자 사이드1 사이드2 제공량 열량(kcal) ·토핑 토핑추가 1회제공량 열량 당류 단백질 포화지방 나트륨 비고 피자치즈 100 305 1 24 12 370 페퍼로니 100 215 2 8 5 570 베이컨 100 152 0 16 3 855 옥수수 100 72 7 2 0 193 올리브 100 589 0 1 2 1000 파인애플 100 86 20 0 0 0 할리피뇨 100 9 1 0 0 559 마요네즈 100 730 1 1 14 510 창업문의 대표 : 정관영 사업자번호 : 518-88-01736 주소 : 경기도 안성시 원곡면 지문로 203-86 B2B/제품관련문의 : 070-4450-2737 마케팅/광고문의 이메일 : bsbfoodmarketing@naver.com 업무시간 : 09:30 ~ 18:30 COPYRIGHT© BSB FOOD. ALL RIGHTS RESERVED 가맹문의 1588-9109 1588-9109 오전 09:30 ~ 오후 18:30 점심시간 12:30 ~ 13:50 2018년 헤럴드 고객감동 브랜드대상 스포츠서울 유망강소기업 대상 성공의 정석 꾼 2020 대한민국 최고 브랜드 대상 2021 고객이 신뢰하는 브랜드 대상 2021 고객감동 우수브랜드 대상 2021 대한민국 NO.1 피자부문 대상 2022 대한민국 소비자 선호도 1위 2022 브랜드 파워 인덱스 수상 2022 소비자 만족지수 1위 2022 고객이 신뢰하는 브랜드 대상 2022 한국소비자평가 1위 2023 브랜드 파워 인덱스 수상 2023 대한민국 소비자 선호도 1위 2023 소비자 만족지수 1위 2024 대한민국 소비자 선호도 1위 2024 한국 소비자 선호도 1위 브랜드 대상 2024 대한민국 NO.1 피자부문 대상 2024 브랜드 파워 인덱스 수상 2025 대한민국 소비자 선호도 1위 2025 브랜드 파워 인덱스 수상 2025 대한민국 NO.1 피자부문 대상 2025 소비자 만족지수 1위 2025 고객이 신뢰하는 브랜드 대상 kakaoPixel('5172965623120114642').pageView(); setTimeout(() => { const endRemove = document.querySelectorAll(\".remover\"); const premium = document.querySelectorAll(\"tr.premium\"); const beShow = document.querySelectorAll(\".beShow\"); if (new Date() >= new Date('12/08/2025 00:00:00')) { // endTag.forEach(showEnd => { // showEnd.style.display = \"block\"; // }); endRemove.forEach(remover => { remover.remove(); }); premium.forEach(removeTr => { // console.log(removeTr); removeTr.remove(); // removeTr.style.display = \"none\"; }); beShow.forEach(be => { be.style.display = \"block\"; }); }; }, 500); if (!wcs_add) var wcs_add={}; wcs_add[\"wa\"] = \"s_5116f12411ea\"; if(window.wcs) { wcs.inflow(); } wcs_do();",
+      "images": [
+        {
+          "src": "https://www.facebook.com/tr?id=431000447845930&ev=PageView    &noscript=1",
+          "alt": null
+        },
+        {
+          "src": "https://www.facebook.com/tr?id=644059515325767&ev=PageView&noscript=1",
+          "alt": null
+        },
+        {
+          "src": "https://www.facebook.com/tr?id=1978456276065735&ev=PageView&noscript=1",
+          "alt": null
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/logo.png?v=250514",
+          "alt": "청년피자 로고"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/no_img.png",
+          "alt": "청년피자"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/header_sns1.png",
+          "alt": "페이스북"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/header_sns2.png",
+          "alt": "인스타그램"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/header_sns3.png",
+          "alt": "유튜브"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/no_img.png",
+          "alt": ""
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/upload/M_ori/6678d099abe9c.jpg",
+          "alt": ""
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/upload/M_ori/6678d099abe9c.jpg",
+          "alt": ""
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/ring.png?v=250610",
+          "alt": ""
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/logo_footer.png?v=250515",
+          "alt": "청년피자"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/logo_footer2.png",
+          "alt": "BSB FOOD"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/header_sns1.png",
+          "alt": "페이스북"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/header_sns2.png",
+          "alt": "인스타그램"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/header_sns3.png",
+          "alt": "유튜브"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt1.png",
+          "alt": "헤럴드 고객감동 브랜드대상"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt2.png",
+          "alt": "유망강소기업 대상"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt3.png",
+          "alt": "성공의 정석 꾼"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt4.png",
+          "alt": "대한민국 최고 브랜드 대상"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt5.png",
+          "alt": "고객이 신뢰하는 브랜드 대상"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt6.png",
+          "alt": "고객감동 우수브랜드 대상"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt7.png",
+          "alt": "대한민국 NO.1 피자부문 대상"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt8.png",
+          "alt": "대한민국 소비자 선호도 1위"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt9.png",
+          "alt": "브랜드 파워 인덱스 수상"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt10.png",
+          "alt": "한국 소비자 만족지수 1위"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt11.png",
+          "alt": "고객이 신뢰하는 브랜드 대상"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt12.png",
+          "alt": "한국소비자평가 1위"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt13.png",
+          "alt": "브랜드 파워 인덱스 수상"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt14.png",
+          "alt": "대한민국 소비자 선호도 1위"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt15.png",
+          "alt": "소비자 만족지수 1위"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt16.png",
+          "alt": ""
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt17.png",
+          "alt": ""
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt18.png",
+          "alt": ""
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt19.png",
+          "alt": ""
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt20.png",
+          "alt": ""
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt21.png",
+          "alt": ""
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt22.png",
+          "alt": ""
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt23.png",
+          "alt": ""
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt24.png",
+          "alt": ""
+        }
+      ],
+      "links": [
+        {
+          "href": "https://youngmanpizza.co.kr/main.php",
+          "text": ""
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/brand.php",
+          "text": "브랜드"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/brand.php",
+          "text": "브랜드"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/ceo_greeting.php",
+          "text": "CEO 인사말"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/social_contribution.php",
+          "text": "사회공헌활동"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/recruit.php",
+          "text": "인재채용"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/contact.php",
+          "text": "오시는 길"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub01/menu.php",
+          "text": "메뉴"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub02/branch.php",
+          "text": "매장안내"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub04/event.php",
+          "text": "소식"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub04/event.php",
+          "text": "이벤트"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/press.php",
+          "text": "보도자료"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub07/pizza_web.php",
+          "text": "청년피자웹진"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub08/tv_cf.php",
+          "text": "TV CF"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub08/print_ad.php",
+          "text": "인쇄물 광고"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub08/pizza_youtube.php",
+          "text": "청년피자 유튜브"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub03/foundation_info.php",
+          "text": "창업안내 및 문의"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub06/customer.php",
+          "text": "고객센터"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub06/notice.php",
+          "text": "공지사항"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub06/faq.php",
+          "text": "자주 묻는 질문"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub06/customer.php",
+          "text": "고객의 소리"
+        },
+        {
+          "href": "javascript:void(0);",
+          "text": "BSB GROUP"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/ceo_greeting.php",
+          "text": "CEO 인사말"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/bsb_group.php",
+          "text": "BSB GROUP"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/brand.php",
+          "text": "BRAND"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/social_contribution.php",
+          "text": "사회공헌활동"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/press.php",
+          "text": "보도자료"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/recruit.php",
+          "text": "인재채용"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/contact.php",
+          "text": "오시는 길"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub06/notice.php",
+          "text": "공지사항"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub06/faq.php",
+          "text": "자주 묻는 질문"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub06/customer.php",
+          "text": "고객의 소리"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub07/pizza_web.php",
+          "text": "청년피자웹진"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub08/tv_cf.php",
+          "text": "TV CF"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub08/print_ad.php",
+          "text": "인쇄물 광고"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub08/pizza_youtube.php",
+          "text": "청년피자 유튜브"
+        },
+        {
+          "href": "https://www.facebook.com/ymanpizza/",
+          "text": ""
+        },
+        {
+          "href": "https://www.instagram.com/y_manpizza/",
+          "text": ""
+        },
+        {
+          "href": "https://www.youtube.com/channel/UCwHedDHLt0IQjCn0X85kGsA",
+          "text": ""
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/brand.php",
+          "text": "브랜드"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/ceo_greeting.php",
+          "text": "CEO 인사말"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/social_contribution.php",
+          "text": "사회공헌활동"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/recruit.php",
+          "text": "인재채용"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/contact.php",
+          "text": "오시는 길"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub01/menu.php",
+          "text": "메뉴"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub02/branch.php",
+          "text": "매장안내"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub04/event.php",
+          "text": "이벤트"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/press.php",
+          "text": "보도자료"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub07/pizza_web.php",
+          "text": "청년피자웹진"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub08/tv_cf.php",
+          "text": "TV CF"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub08/print_ad.php",
+          "text": "인쇄물 광고"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub08/pizza_youtube.php",
+          "text": "청년피자 유튜브"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub03/foundation_info.php",
+          "text": "창업안내 및 문의"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub06/notice.php",
+          "text": "공지사항"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub06/faq.php",
+          "text": "자주 묻는 질문"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub06/customer.php",
+          "text": "고객의 소리"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub01/menu.php",
+          "text": "피자"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub01/menu3.php",
+          "text": "세트 메뉴"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub01/menu4.php",
+          "text": "사이드 메뉴"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub01/menu5.php",
+          "text": "토핑 추가"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub01/menu6.php",
+          "text": "음료&기타"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub03/foundation_info.php#inquiry",
+          "text": "창업문의"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/main.php",
+          "text": ""
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/main.php",
+          "text": ""
+        },
+        {
+          "href": "tel:1588-9109",
+          "text": "1588-9109"
+        },
+        {
+          "href": "https://www.facebook.com/ymanpizza/",
+          "text": ""
+        },
+        {
+          "href": "https://www.instagram.com/y_manpizza/",
+          "text": ""
+        },
+        {
+          "href": "https://www.youtube.com/channel/UCwHedDHLt0IQjCn0X85kGsA",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "url": "https://youngmanpizza.co.kr/sub01/menu_detail_pizza.php?page_num=1&search_text=&search_type=&seq=36",
+      "checkedAt": "2026-10-17T09:49:39.447954+00:00",
+      "status": 200,
+      "finalUrl": "https://youngmanpizza.co.kr/sub01/menu_detail_pizza.php?page_num=1&search_text=&search_type=&seq=36",
+      "sha256": "ceb7ebdf544020ec9dda0b64d9950902fc70e7a69af1bb5fb6d8b0784006b64d",
+      "file": "ceb7ebdf544020ec9dda0b64d9950902fc70e7a69af1bb5fb6d8b0784006b64d.html",
+      "bytes": 47471,
+      "encoding": "utf-8",
+      "text": "(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-K9QW5HTP'); 청년피자 // 페이지 내의 모든 map 태그 좌표를 반응형으로 자동 조절합니다. $(document).ready(function() { $('map').imageMapResize(); // jQuery 전용 메서드명은 끝이 'Resize'입니다. }); (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-M5RL8NS'); !function(f,b,e,v,n,t,s) {if(f.fbq)return;n=f.fbq=function(){n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)}; if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0'; n.queue=[];t=b.createElement(e);t.async=!0; t.src=v;s=b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t,s)}(window,document,'script', 'https://connect.facebook.net/en_US/fbevents.js'); fbq('init', '431000447845930'); fbq('track', 'PageView'); !function(f,b,e,v,n,t,s) {if(f.fbq)return;n=f.fbq=function(){n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)}; if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0'; n.queue=[];t=b.createElement(e);t.async=!0; t.src=v;s=b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t,s)}(window, document,'script', 'https://connect.facebook.net/en_US/fbevents.js'); fbq('init', '644059515325767'); fbq('track', 'PageView'); window.karrotPixel.init('1749775708797100001'); window.karrotPixel.track('ViewPage'); !function(f,b,e,v,n,t,s) {if(f.fbq)return;n=f.fbq=function(){n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)}; if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0'; n.queue=[];t=b.createElement(e);t.async=!0; t.src=v;s=b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t,s)}(window, document,'script', 'https://connect.facebook.net/en_US/fbevents.js'); fbq('init', '1978456276065735'); fbq('track', 'PageView'); !function (w, d, t) { w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=[\"page\",\"track\",\"identify\",\"instances\",\"debug\",\"on\",\"off\",\"once\",\"ready\",\"alias\",\"group\",\"enableCookie\",\"disableCookie\",\"holdConsent\",\"revokeConsent\",\"grantConsent\"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for( var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r=\"https://analytics.tiktok.com/i18n/pixel/events.js\",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement(\"script\") ;n.type=\"text/javascript\",n.async=!0,n.src=r+\"?sdkid=\"+e+\"&lib=\"+t;e=document.getElementsByTagName(\"script\")[0];e.parentNode.insertBefore(n,e)}; ttq.load('D6TQ373C77UCO0T91L70'); ttq.page(); }(window, document, 'ttq'); 브랜드 브랜드 CEO 인사말 사회공헌활동 인재채용 오시는 길 메뉴 매장안내 소식 이벤트 보도자료 청년피자웹진 TV CF 인쇄물 광고 청년피자 유튜브 창업안내 및 문의 고객센터 공지사항 자주 묻는 질문 고객의 소리 회사소개 BSB GROUP CEO 인사말 BSB GROUP BRAND 사회공헌활동 보도자료 인재채용 오시는 길 고객센터 공지사항 자주 묻는 질문 고객의 소리 청년피자뉴스 청년피자웹진 광고 갤러리 TV CF 인쇄물 광고 청년피자 유튜브 브랜드 메뉴 매장안내 소식 창업안내 및 문의 고객센터 브랜드 CEO 인사말 사회공헌활동 인재채용 오시는 길 메뉴 매장안내 이벤트 보도자료 청년피자웹진 TV CF 인쇄물 광고 청년피자 유튜브 창업안내 및 문의 공지사항 자주 묻는 질문 고객의 소리 메뉴 피자 세트 메뉴 사이드 메뉴 토핑 추가 음료&기타 할라불고기 매콤! 할라피뇨가 와르르! 육즙 가득한 불고기도 한가득! R 21,900 L 26,900 크러스트 옵션 옵션펼치기 통치즈크러스트 + 5,000원 리치골드 + 5,000원 크림치즈크러스트 + 5,000원 치즈크러스트 + 4,000원 고구마체다크러스트 + 4,000원 토핑정보 새송이버섯, 할라피뇨, 불고기, 마그마소스 제품소개 원산지 전체보기 불고기[쇠고기(외국산:호주,뉴질랜드)] 알레르기정보 전체보기 대두,밀,쇠고기,우유,닭고기,토마토,조개류(굴),이산화황 영양성분 전체보기 제품명 사이즈 총중량(g) 조각수 1회 제공량 (조각) 1회분 중량 (g) 열량 (kcal/1회분) 당류 (g/1회분) 단백질 (g/1회분) 포화지방 (g/1회분) 나트륨 (mg/1회분) 할라불고기 피자 R 616 6 1 103 236 7 11 4 513 L 979 8 1 122 280 8 13 4 607 원산지,영양성분 및 알레르기 유발성분 원산지 제품 알레르기 유발성분 영양성분 피자공통 * 피자치즈:자연치즈[모짜렐라(미국산과 독일산 섞음),프로볼로네(미국산)] * 고메밀크도우:밀가루(밀:미국산과 캐나다산 섞음) * 피망,양파,새송이:국내산 ·피자 제품명 원산지표시 프리미엄 오리지널 ·도우 변경 제품명 원산지표시 ·파스타 제품명 원산지표시 ·사이드 제품명 원산지표시 ·토핑추가 제품명 원산지표시 ·기타 제품명 원산지표시 피자공통 * 피자치즈:우유 * 고메밀크도우:밀,우유,대두 ·피자 제품명 알레르기정보 프리미엄 오리지널 ·도우 변경 제품명 알레르기정보 ·파스타 제품명 알레르기정보 ·사이드 제품명 알레르기정보 ·토핑추가 제품명 알레르기정보 ·기타 제품명 알레르기정보 ·오리지널피자 ·피자 제품명 1회제공량 열량 당류 단백질 포화지방 나트륨 ·도우변경 제품명 1회제공량 열량 당류 단백질 포화지방 나트륨 ·사이드 제품명 1회제공량 열량 당류 단백질 포화지방 나트륨 ·소스 제품명 1회제공량 열량 당류 단백질 포화지방 나트륨 ·음료 제품명 1회제공량 열량 당류 단백질 포화지방 나트륨 ·세트메뉴 분류 사이즈 열량기준 피자 사이드1 사이드2 제공량 열량(kcal) ·토핑 토핑추가 1회제공량 열량 당류 단백질 포화지방 나트륨 비고 피자치즈 100 305 1 24 12 370 페퍼로니 100 215 2 8 5 570 베이컨 100 152 0 16 3 855 옥수수 100 72 7 2 0 193 올리브 100 589 0 1 2 1000 파인애플 100 86 20 0 0 0 할리피뇨 100 9 1 0 0 559 마요네즈 100 730 1 1 14 510 창업문의 대표 : 정관영 사업자번호 : 518-88-01736 주소 : 경기도 안성시 원곡면 지문로 203-86 B2B/제품관련문의 : 070-4450-2737 마케팅/광고문의 이메일 : bsbfoodmarketing@naver.com 업무시간 : 09:30 ~ 18:30 COPYRIGHT© BSB FOOD. ALL RIGHTS RESERVED 가맹문의 1588-9109 1588-9109 오전 09:30 ~ 오후 18:30 점심시간 12:30 ~ 13:50 2018년 헤럴드 고객감동 브랜드대상 스포츠서울 유망강소기업 대상 성공의 정석 꾼 2020 대한민국 최고 브랜드 대상 2021 고객이 신뢰하는 브랜드 대상 2021 고객감동 우수브랜드 대상 2021 대한민국 NO.1 피자부문 대상 2022 대한민국 소비자 선호도 1위 2022 브랜드 파워 인덱스 수상 2022 소비자 만족지수 1위 2022 고객이 신뢰하는 브랜드 대상 2022 한국소비자평가 1위 2023 브랜드 파워 인덱스 수상 2023 대한민국 소비자 선호도 1위 2023 소비자 만족지수 1위 2024 대한민국 소비자 선호도 1위 2024 한국 소비자 선호도 1위 브랜드 대상 2024 대한민국 NO.1 피자부문 대상 2024 브랜드 파워 인덱스 수상 2025 대한민국 소비자 선호도 1위 2025 브랜드 파워 인덱스 수상 2025 대한민국 NO.1 피자부문 대상 2025 소비자 만족지수 1위 2025 고객이 신뢰하는 브랜드 대상 kakaoPixel('5172965623120114642').pageView(); setTimeout(() => { const endRemove = document.querySelectorAll(\".remover\"); const premium = document.querySelectorAll(\"tr.premium\"); const beShow = document.querySelectorAll(\".beShow\"); if (new Date() >= new Date('12/08/2025 00:00:00')) { // endTag.forEach(showEnd => { // showEnd.style.display = \"block\"; // }); endRemove.forEach(remover => { remover.remove(); }); premium.forEach(removeTr => { // console.log(removeTr); removeTr.remove(); // removeTr.style.display = \"none\"; }); beShow.forEach(be => { be.style.display = \"block\"; }); }; }, 500); if (!wcs_add) var wcs_add={}; wcs_add[\"wa\"] = \"s_5116f12411ea\"; if(window.wcs) { wcs.inflow(); } wcs_do();",
+      "images": [
+        {
+          "src": "https://www.facebook.com/tr?id=431000447845930&ev=PageView    &noscript=1",
+          "alt": null
+        },
+        {
+          "src": "https://www.facebook.com/tr?id=644059515325767&ev=PageView&noscript=1",
+          "alt": null
+        },
+        {
+          "src": "https://www.facebook.com/tr?id=1978456276065735&ev=PageView&noscript=1",
+          "alt": null
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/logo.png?v=250514",
+          "alt": "청년피자 로고"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/no_img.png",
+          "alt": "청년피자"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/header_sns1.png",
+          "alt": "페이스북"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/header_sns2.png",
+          "alt": "인스타그램"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/header_sns3.png",
+          "alt": "유튜브"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/no_img.png",
+          "alt": ""
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/upload/M_ori/6678d01b1b7d0.jpg",
+          "alt": ""
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/upload/M_ori/6678d01b1b7d0.jpg",
+          "alt": ""
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/ring.png?v=250610",
+          "alt": ""
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/logo_footer.png?v=250515",
+          "alt": "청년피자"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/logo_footer2.png",
+          "alt": "BSB FOOD"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/header_sns1.png",
+          "alt": "페이스북"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/header_sns2.png",
+          "alt": "인스타그램"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/header_sns3.png",
+          "alt": "유튜브"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt1.png",
+          "alt": "헤럴드 고객감동 브랜드대상"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt2.png",
+          "alt": "유망강소기업 대상"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt3.png",
+          "alt": "성공의 정석 꾼"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt4.png",
+          "alt": "대한민국 최고 브랜드 대상"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt5.png",
+          "alt": "고객이 신뢰하는 브랜드 대상"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt6.png",
+          "alt": "고객감동 우수브랜드 대상"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt7.png",
+          "alt": "대한민국 NO.1 피자부문 대상"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt8.png",
+          "alt": "대한민국 소비자 선호도 1위"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt9.png",
+          "alt": "브랜드 파워 인덱스 수상"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt10.png",
+          "alt": "한국 소비자 만족지수 1위"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt11.png",
+          "alt": "고객이 신뢰하는 브랜드 대상"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt12.png",
+          "alt": "한국소비자평가 1위"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt13.png",
+          "alt": "브랜드 파워 인덱스 수상"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt14.png",
+          "alt": "대한민국 소비자 선호도 1위"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt15.png",
+          "alt": "소비자 만족지수 1위"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt16.png",
+          "alt": ""
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt17.png",
+          "alt": ""
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt18.png",
+          "alt": ""
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt19.png",
+          "alt": ""
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt20.png",
+          "alt": ""
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt21.png",
+          "alt": ""
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt22.png",
+          "alt": ""
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt23.png",
+          "alt": ""
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt24.png",
+          "alt": ""
+        }
+      ],
+      "links": [
+        {
+          "href": "https://youngmanpizza.co.kr/main.php",
+          "text": ""
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/brand.php",
+          "text": "브랜드"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/brand.php",
+          "text": "브랜드"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/ceo_greeting.php",
+          "text": "CEO 인사말"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/social_contribution.php",
+          "text": "사회공헌활동"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/recruit.php",
+          "text": "인재채용"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/contact.php",
+          "text": "오시는 길"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub01/menu.php",
+          "text": "메뉴"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub02/branch.php",
+          "text": "매장안내"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub04/event.php",
+          "text": "소식"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub04/event.php",
+          "text": "이벤트"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/press.php",
+          "text": "보도자료"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub07/pizza_web.php",
+          "text": "청년피자웹진"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub08/tv_cf.php",
+          "text": "TV CF"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub08/print_ad.php",
+          "text": "인쇄물 광고"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub08/pizza_youtube.php",
+          "text": "청년피자 유튜브"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub03/foundation_info.php",
+          "text": "창업안내 및 문의"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub06/customer.php",
+          "text": "고객센터"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub06/notice.php",
+          "text": "공지사항"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub06/faq.php",
+          "text": "자주 묻는 질문"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub06/customer.php",
+          "text": "고객의 소리"
+        },
+        {
+          "href": "javascript:void(0);",
+          "text": "BSB GROUP"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/ceo_greeting.php",
+          "text": "CEO 인사말"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/bsb_group.php",
+          "text": "BSB GROUP"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/brand.php",
+          "text": "BRAND"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/social_contribution.php",
+          "text": "사회공헌활동"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/press.php",
+          "text": "보도자료"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/recruit.php",
+          "text": "인재채용"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/contact.php",
+          "text": "오시는 길"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub06/notice.php",
+          "text": "공지사항"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub06/faq.php",
+          "text": "자주 묻는 질문"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub06/customer.php",
+          "text": "고객의 소리"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub07/pizza_web.php",
+          "text": "청년피자웹진"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub08/tv_cf.php",
+          "text": "TV CF"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub08/print_ad.php",
+          "text": "인쇄물 광고"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub08/pizza_youtube.php",
+          "text": "청년피자 유튜브"
+        },
+        {
+          "href": "https://www.facebook.com/ymanpizza/",
+          "text": ""
+        },
+        {
+          "href": "https://www.instagram.com/y_manpizza/",
+          "text": ""
+        },
+        {
+          "href": "https://www.youtube.com/channel/UCwHedDHLt0IQjCn0X85kGsA",
+          "text": ""
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/brand.php",
+          "text": "브랜드"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/ceo_greeting.php",
+          "text": "CEO 인사말"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/social_contribution.php",
+          "text": "사회공헌활동"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/recruit.php",
+          "text": "인재채용"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/contact.php",
+          "text": "오시는 길"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub01/menu.php",
+          "text": "메뉴"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub02/branch.php",
+          "text": "매장안내"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub04/event.php",
+          "text": "이벤트"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/press.php",
+          "text": "보도자료"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub07/pizza_web.php",
+          "text": "청년피자웹진"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub08/tv_cf.php",
+          "text": "TV CF"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub08/print_ad.php",
+          "text": "인쇄물 광고"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub08/pizza_youtube.php",
+          "text": "청년피자 유튜브"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub03/foundation_info.php",
+          "text": "창업안내 및 문의"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub06/notice.php",
+          "text": "공지사항"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub06/faq.php",
+          "text": "자주 묻는 질문"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub06/customer.php",
+          "text": "고객의 소리"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub01/menu.php",
+          "text": "피자"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub01/menu3.php",
+          "text": "세트 메뉴"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub01/menu4.php",
+          "text": "사이드 메뉴"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub01/menu5.php",
+          "text": "토핑 추가"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub01/menu6.php",
+          "text": "음료&기타"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub03/foundation_info.php#inquiry",
+          "text": "창업문의"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/main.php",
+          "text": ""
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/main.php",
+          "text": ""
+        },
+        {
+          "href": "tel:1588-9109",
+          "text": "1588-9109"
+        },
+        {
+          "href": "https://www.facebook.com/ymanpizza/",
+          "text": ""
+        },
+        {
+          "href": "https://www.instagram.com/y_manpizza/",
+          "text": ""
+        },
+        {
+          "href": "https://www.youtube.com/channel/UCwHedDHLt0IQjCn0X85kGsA",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "url": "https://youngmanpizza.co.kr/sub01/menu_detail_pizza.php?page_num=1&search_text=&search_type=&seq=39",
+      "checkedAt": "2026-10-17T09:49:39.447954+00:00",
+      "status": 200,
+      "finalUrl": "https://youngmanpizza.co.kr/sub01/menu_detail_pizza.php?page_num=1&search_text=&search_type=&seq=39",
+      "sha256": "a1bff937444dbfe29f26cb5ca07443e3b18c926071457e9fd487aa9d0d3deb54",
+      "file": "a1bff937444dbfe29f26cb5ca07443e3b18c926071457e9fd487aa9d0d3deb54.html",
+      "bytes": 47489,
+      "encoding": "utf-8",
+      "text": "(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-K9QW5HTP'); 청년피자 // 페이지 내의 모든 map 태그 좌표를 반응형으로 자동 조절합니다. $(document).ready(function() { $('map').imageMapResize(); // jQuery 전용 메서드명은 끝이 'Resize'입니다. }); (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-M5RL8NS'); !function(f,b,e,v,n,t,s) {if(f.fbq)return;n=f.fbq=function(){n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)}; if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0'; n.queue=[];t=b.createElement(e);t.async=!0; t.src=v;s=b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t,s)}(window,document,'script', 'https://connect.facebook.net/en_US/fbevents.js'); fbq('init', '431000447845930'); fbq('track', 'PageView'); !function(f,b,e,v,n,t,s) {if(f.fbq)return;n=f.fbq=function(){n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)}; if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0'; n.queue=[];t=b.createElement(e);t.async=!0; t.src=v;s=b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t,s)}(window, document,'script', 'https://connect.facebook.net/en_US/fbevents.js'); fbq('init', '644059515325767'); fbq('track', 'PageView'); window.karrotPixel.init('1749775708797100001'); window.karrotPixel.track('ViewPage'); !function(f,b,e,v,n,t,s) {if(f.fbq)return;n=f.fbq=function(){n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)}; if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0'; n.queue=[];t=b.createElement(e);t.async=!0; t.src=v;s=b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t,s)}(window, document,'script', 'https://connect.facebook.net/en_US/fbevents.js'); fbq('init', '1978456276065735'); fbq('track', 'PageView'); !function (w, d, t) { w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=[\"page\",\"track\",\"identify\",\"instances\",\"debug\",\"on\",\"off\",\"once\",\"ready\",\"alias\",\"group\",\"enableCookie\",\"disableCookie\",\"holdConsent\",\"revokeConsent\",\"grantConsent\"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for( var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r=\"https://analytics.tiktok.com/i18n/pixel/events.js\",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement(\"script\") ;n.type=\"text/javascript\",n.async=!0,n.src=r+\"?sdkid=\"+e+\"&lib=\"+t;e=document.getElementsByTagName(\"script\")[0];e.parentNode.insertBefore(n,e)}; ttq.load('D6TQ373C77UCO0T91L70'); ttq.page(); }(window, document, 'ttq'); 브랜드 브랜드 CEO 인사말 사회공헌활동 인재채용 오시는 길 메뉴 매장안내 소식 이벤트 보도자료 청년피자웹진 TV CF 인쇄물 광고 청년피자 유튜브 창업안내 및 문의 고객센터 공지사항 자주 묻는 질문 고객의 소리 회사소개 BSB GROUP CEO 인사말 BSB GROUP BRAND 사회공헌활동 보도자료 인재채용 오시는 길 고객센터 공지사항 자주 묻는 질문 고객의 소리 청년피자뉴스 청년피자웹진 광고 갤러리 TV CF 인쇄물 광고 청년피자 유튜브 브랜드 메뉴 매장안내 소식 창업안내 및 문의 고객센터 브랜드 CEO 인사말 사회공헌활동 인재채용 오시는 길 메뉴 매장안내 이벤트 보도자료 청년피자웹진 TV CF 인쇄물 광고 청년피자 유튜브 창업안내 및 문의 공지사항 자주 묻는 질문 고객의 소리 메뉴 피자 세트 메뉴 사이드 메뉴 토핑 추가 음료&기타 빅파불고기피자 파릇파릇한 구운 대파의 단맛~ 짭짤한 불고기가 어우러져 풍미 가득~ R 21,900 L 26,900 크러스트 옵션 옵션펼치기 통치즈크러스트 + 5,000원 리치골드 + 5,000원 크림치즈크러스트 + 5,000원 치즈크러스트 + 4,000원 고구마체다크러스트 + 4,000원 토핑정보 포크토핑, 구운 대파, 불고기 제품소개 원산지 전체보기 불고기[쇠고기(외국산:호주,뉴질랜드)], 포크토핑[돼지고기(국내산)] 알레르기정보 전체보기 대두,밀,쇠고기,우유,토마토,돼지고기,닭고기 영양성분 전체보기 제품명 사이즈 총중량(g) 조각수 1회 제공량 (조각) 1회분 중량 (g) 열량 (kcal/1회분) 당류 (g/1회분) 단백질 (g/1회분) 포화지방 (g/1회분) 나트륨 (mg/1회분) 빅파불고기피자 R 569 6 1 95 227 6 11 4 419 L 911 8 1 114 272 7 13 5 502 원산지,영양성분 및 알레르기 유발성분 원산지 제품 알레르기 유발성분 영양성분 피자공통 * 피자치즈:자연치즈[모짜렐라(미국산과 독일산 섞음),프로볼로네(미국산)] * 고메밀크도우:밀가루(밀:미국산과 캐나다산 섞음) * 피망,양파,새송이:국내산 ·피자 제품명 원산지표시 프리미엄 오리지널 ·도우 변경 제품명 원산지표시 ·파스타 제품명 원산지표시 ·사이드 제품명 원산지표시 ·토핑추가 제품명 원산지표시 ·기타 제품명 원산지표시 피자공통 * 피자치즈:우유 * 고메밀크도우:밀,우유,대두 ·피자 제품명 알레르기정보 프리미엄 오리지널 ·도우 변경 제품명 알레르기정보 ·파스타 제품명 알레르기정보 ·사이드 제품명 알레르기정보 ·토핑추가 제품명 알레르기정보 ·기타 제품명 알레르기정보 ·오리지널피자 ·피자 제품명 1회제공량 열량 당류 단백질 포화지방 나트륨 ·도우변경 제품명 1회제공량 열량 당류 단백질 포화지방 나트륨 ·사이드 제품명 1회제공량 열량 당류 단백질 포화지방 나트륨 ·소스 제품명 1회제공량 열량 당류 단백질 포화지방 나트륨 ·음료 제품명 1회제공량 열량 당류 단백질 포화지방 나트륨 ·세트메뉴 분류 사이즈 열량기준 피자 사이드1 사이드2 제공량 열량(kcal) ·토핑 토핑추가 1회제공량 열량 당류 단백질 포화지방 나트륨 비고 피자치즈 100 305 1 24 12 370 페퍼로니 100 215 2 8 5 570 베이컨 100 152 0 16 3 855 옥수수 100 72 7 2 0 193 올리브 100 589 0 1 2 1000 파인애플 100 86 20 0 0 0 할리피뇨 100 9 1 0 0 559 마요네즈 100 730 1 1 14 510 창업문의 대표 : 정관영 사업자번호 : 518-88-01736 주소 : 경기도 안성시 원곡면 지문로 203-86 B2B/제품관련문의 : 070-4450-2737 마케팅/광고문의 이메일 : bsbfoodmarketing@naver.com 업무시간 : 09:30 ~ 18:30 COPYRIGHT© BSB FOOD. ALL RIGHTS RESERVED 가맹문의 1588-9109 1588-9109 오전 09:30 ~ 오후 18:30 점심시간 12:30 ~ 13:50 2018년 헤럴드 고객감동 브랜드대상 스포츠서울 유망강소기업 대상 성공의 정석 꾼 2020 대한민국 최고 브랜드 대상 2021 고객이 신뢰하는 브랜드 대상 2021 고객감동 우수브랜드 대상 2021 대한민국 NO.1 피자부문 대상 2022 대한민국 소비자 선호도 1위 2022 브랜드 파워 인덱스 수상 2022 소비자 만족지수 1위 2022 고객이 신뢰하는 브랜드 대상 2022 한국소비자평가 1위 2023 브랜드 파워 인덱스 수상 2023 대한민국 소비자 선호도 1위 2023 소비자 만족지수 1위 2024 대한민국 소비자 선호도 1위 2024 한국 소비자 선호도 1위 브랜드 대상 2024 대한민국 NO.1 피자부문 대상 2024 브랜드 파워 인덱스 수상 2025 대한민국 소비자 선호도 1위 2025 브랜드 파워 인덱스 수상 2025 대한민국 NO.1 피자부문 대상 2025 소비자 만족지수 1위 2025 고객이 신뢰하는 브랜드 대상 kakaoPixel('5172965623120114642').pageView(); setTimeout(() => { const endRemove = document.querySelectorAll(\".remover\"); const premium = document.querySelectorAll(\"tr.premium\"); const beShow = document.querySelectorAll(\".beShow\"); if (new Date() >= new Date('12/08/2025 00:00:00')) { // endTag.forEach(showEnd => { // showEnd.style.display = \"block\"; // }); endRemove.forEach(remover => { remover.remove(); }); premium.forEach(removeTr => { // console.log(removeTr); removeTr.remove(); // removeTr.style.display = \"none\"; }); beShow.forEach(be => { be.style.display = \"block\"; }); }; }, 500); if (!wcs_add) var wcs_add={}; wcs_add[\"wa\"] = \"s_5116f12411ea\"; if(window.wcs) { wcs.inflow(); } wcs_do();",
+      "images": [
+        {
+          "src": "https://www.facebook.com/tr?id=431000447845930&ev=PageView    &noscript=1",
+          "alt": null
+        },
+        {
+          "src": "https://www.facebook.com/tr?id=644059515325767&ev=PageView&noscript=1",
+          "alt": null
+        },
+        {
+          "src": "https://www.facebook.com/tr?id=1978456276065735&ev=PageView&noscript=1",
+          "alt": null
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/logo.png?v=250514",
+          "alt": "청년피자 로고"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/no_img.png",
+          "alt": "청년피자"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/header_sns1.png",
+          "alt": "페이스북"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/header_sns2.png",
+          "alt": "인스타그램"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/header_sns3.png",
+          "alt": "유튜브"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/no_img.png",
+          "alt": ""
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/upload/M_ori/677b8a3c14d41.jpg",
+          "alt": ""
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/upload/M_ori/677b8a3c14d41.jpg",
+          "alt": ""
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/ring.png?v=250610",
+          "alt": ""
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/logo_footer.png?v=250515",
+          "alt": "청년피자"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/logo_footer2.png",
+          "alt": "BSB FOOD"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/header_sns1.png",
+          "alt": "페이스북"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/header_sns2.png",
+          "alt": "인스타그램"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/header_sns3.png",
+          "alt": "유튜브"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt1.png",
+          "alt": "헤럴드 고객감동 브랜드대상"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt2.png",
+          "alt": "유망강소기업 대상"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt3.png",
+          "alt": "성공의 정석 꾼"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt4.png",
+          "alt": "대한민국 최고 브랜드 대상"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt5.png",
+          "alt": "고객이 신뢰하는 브랜드 대상"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt6.png",
+          "alt": "고객감동 우수브랜드 대상"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt7.png",
+          "alt": "대한민국 NO.1 피자부문 대상"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt8.png",
+          "alt": "대한민국 소비자 선호도 1위"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt9.png",
+          "alt": "브랜드 파워 인덱스 수상"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt10.png",
+          "alt": "한국 소비자 만족지수 1위"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt11.png",
+          "alt": "고객이 신뢰하는 브랜드 대상"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt12.png",
+          "alt": "한국소비자평가 1위"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt13.png",
+          "alt": "브랜드 파워 인덱스 수상"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt14.png",
+          "alt": "대한민국 소비자 선호도 1위"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt15.png",
+          "alt": "소비자 만족지수 1위"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt16.png",
+          "alt": ""
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt17.png",
+          "alt": ""
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt18.png",
+          "alt": ""
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt19.png",
+          "alt": ""
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt20.png",
+          "alt": ""
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt21.png",
+          "alt": ""
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt22.png",
+          "alt": ""
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt23.png",
+          "alt": ""
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt24.png",
+          "alt": ""
+        }
+      ],
+      "links": [
+        {
+          "href": "https://youngmanpizza.co.kr/main.php",
+          "text": ""
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/brand.php",
+          "text": "브랜드"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/brand.php",
+          "text": "브랜드"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/ceo_greeting.php",
+          "text": "CEO 인사말"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/social_contribution.php",
+          "text": "사회공헌활동"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/recruit.php",
+          "text": "인재채용"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/contact.php",
+          "text": "오시는 길"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub01/menu.php",
+          "text": "메뉴"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub02/branch.php",
+          "text": "매장안내"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub04/event.php",
+          "text": "소식"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub04/event.php",
+          "text": "이벤트"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/press.php",
+          "text": "보도자료"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub07/pizza_web.php",
+          "text": "청년피자웹진"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub08/tv_cf.php",
+          "text": "TV CF"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub08/print_ad.php",
+          "text": "인쇄물 광고"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub08/pizza_youtube.php",
+          "text": "청년피자 유튜브"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub03/foundation_info.php",
+          "text": "창업안내 및 문의"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub06/customer.php",
+          "text": "고객센터"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub06/notice.php",
+          "text": "공지사항"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub06/faq.php",
+          "text": "자주 묻는 질문"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub06/customer.php",
+          "text": "고객의 소리"
+        },
+        {
+          "href": "javascript:void(0);",
+          "text": "BSB GROUP"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/ceo_greeting.php",
+          "text": "CEO 인사말"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/bsb_group.php",
+          "text": "BSB GROUP"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/brand.php",
+          "text": "BRAND"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/social_contribution.php",
+          "text": "사회공헌활동"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/press.php",
+          "text": "보도자료"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/recruit.php",
+          "text": "인재채용"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/contact.php",
+          "text": "오시는 길"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub06/notice.php",
+          "text": "공지사항"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub06/faq.php",
+          "text": "자주 묻는 질문"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub06/customer.php",
+          "text": "고객의 소리"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub07/pizza_web.php",
+          "text": "청년피자웹진"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub08/tv_cf.php",
+          "text": "TV CF"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub08/print_ad.php",
+          "text": "인쇄물 광고"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub08/pizza_youtube.php",
+          "text": "청년피자 유튜브"
+        },
+        {
+          "href": "https://www.facebook.com/ymanpizza/",
+          "text": ""
+        },
+        {
+          "href": "https://www.instagram.com/y_manpizza/",
+          "text": ""
+        },
+        {
+          "href": "https://www.youtube.com/channel/UCwHedDHLt0IQjCn0X85kGsA",
+          "text": ""
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/brand.php",
+          "text": "브랜드"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/ceo_greeting.php",
+          "text": "CEO 인사말"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/social_contribution.php",
+          "text": "사회공헌활동"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/recruit.php",
+          "text": "인재채용"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/contact.php",
+          "text": "오시는 길"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub01/menu.php",
+          "text": "메뉴"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub02/branch.php",
+          "text": "매장안내"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub04/event.php",
+          "text": "이벤트"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/press.php",
+          "text": "보도자료"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub07/pizza_web.php",
+          "text": "청년피자웹진"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub08/tv_cf.php",
+          "text": "TV CF"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub08/print_ad.php",
+          "text": "인쇄물 광고"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub08/pizza_youtube.php",
+          "text": "청년피자 유튜브"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub03/foundation_info.php",
+          "text": "창업안내 및 문의"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub06/notice.php",
+          "text": "공지사항"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub06/faq.php",
+          "text": "자주 묻는 질문"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub06/customer.php",
+          "text": "고객의 소리"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub01/menu.php",
+          "text": "피자"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub01/menu3.php",
+          "text": "세트 메뉴"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub01/menu4.php",
+          "text": "사이드 메뉴"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub01/menu5.php",
+          "text": "토핑 추가"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub01/menu6.php",
+          "text": "음료&기타"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub03/foundation_info.php#inquiry",
+          "text": "창업문의"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/main.php",
+          "text": ""
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/main.php",
+          "text": ""
+        },
+        {
+          "href": "tel:1588-9109",
+          "text": "1588-9109"
+        },
+        {
+          "href": "https://www.facebook.com/ymanpizza/",
+          "text": ""
+        },
+        {
+          "href": "https://www.instagram.com/y_manpizza/",
+          "text": ""
+        },
+        {
+          "href": "https://www.youtube.com/channel/UCwHedDHLt0IQjCn0X85kGsA",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "url": "https://youngmanpizza.co.kr/sub01/menu_detail_pizza.php?page_num=1&search_text=&search_type=&seq=41",
+      "checkedAt": "2026-10-17T09:49:39.542652+00:00",
+      "status": 200,
+      "finalUrl": "https://youngmanpizza.co.kr/sub01/menu_detail_pizza.php?page_num=1&search_text=&search_type=&seq=41",
+      "sha256": "591e4a2881173c30833c15e8083d2153717c810ee448607757a046e5b3b71ef4",
+      "file": "591e4a2881173c30833c15e8083d2153717c810ee448607757a046e5b3b71ef4.html",
+      "bytes": 47372,
+      "encoding": "utf-8",
+      "text": "(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-K9QW5HTP'); 청년피자 // 페이지 내의 모든 map 태그 좌표를 반응형으로 자동 조절합니다. $(document).ready(function() { $('map').imageMapResize(); // jQuery 전용 메서드명은 끝이 'Resize'입니다. }); (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-M5RL8NS'); !function(f,b,e,v,n,t,s) {if(f.fbq)return;n=f.fbq=function(){n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)}; if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0'; n.queue=[];t=b.createElement(e);t.async=!0; t.src=v;s=b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t,s)}(window,document,'script', 'https://connect.facebook.net/en_US/fbevents.js'); fbq('init', '431000447845930'); fbq('track', 'PageView'); !function(f,b,e,v,n,t,s) {if(f.fbq)return;n=f.fbq=function(){n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)}; if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0'; n.queue=[];t=b.createElement(e);t.async=!0; t.src=v;s=b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t,s)}(window, document,'script', 'https://connect.facebook.net/en_US/fbevents.js'); fbq('init', '644059515325767'); fbq('track', 'PageView'); window.karrotPixel.init('1749775708797100001'); window.karrotPixel.track('ViewPage'); !function(f,b,e,v,n,t,s) {if(f.fbq)return;n=f.fbq=function(){n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)}; if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0'; n.queue=[];t=b.createElement(e);t.async=!0; t.src=v;s=b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t,s)}(window, document,'script', 'https://connect.facebook.net/en_US/fbevents.js'); fbq('init', '1978456276065735'); fbq('track', 'PageView'); !function (w, d, t) { w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=[\"page\",\"track\",\"identify\",\"instances\",\"debug\",\"on\",\"off\",\"once\",\"ready\",\"alias\",\"group\",\"enableCookie\",\"disableCookie\",\"holdConsent\",\"revokeConsent\",\"grantConsent\"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for( var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r=\"https://analytics.tiktok.com/i18n/pixel/events.js\",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement(\"script\") ;n.type=\"text/javascript\",n.async=!0,n.src=r+\"?sdkid=\"+e+\"&lib=\"+t;e=document.getElementsByTagName(\"script\")[0];e.parentNode.insertBefore(n,e)}; ttq.load('D6TQ373C77UCO0T91L70'); ttq.page(); }(window, document, 'ttq'); 브랜드 브랜드 CEO 인사말 사회공헌활동 인재채용 오시는 길 메뉴 매장안내 소식 이벤트 보도자료 청년피자웹진 TV CF 인쇄물 광고 청년피자 유튜브 창업안내 및 문의 고객센터 공지사항 자주 묻는 질문 고객의 소리 회사소개 BSB GROUP CEO 인사말 BSB GROUP BRAND 사회공헌활동 보도자료 인재채용 오시는 길 고객센터 공지사항 자주 묻는 질문 고객의 소리 청년피자뉴스 청년피자웹진 광고 갤러리 TV CF 인쇄물 광고 청년피자 유튜브 브랜드 메뉴 매장안내 소식 창업안내 및 문의 고객센터 브랜드 CEO 인사말 사회공헌활동 인재채용 오시는 길 메뉴 매장안내 이벤트 보도자료 청년피자웹진 TV CF 인쇄물 광고 청년피자 유튜브 창업안내 및 문의 공지사항 자주 묻는 질문 고객의 소리 메뉴 피자 세트 메뉴 사이드 메뉴 토핑 추가 음료&기타 야채 피자 엄청난 토핑의 양과 맛에 빠져든다 미소가 절로나는 FRESH한 맛! R 19,900 L 23,900 크러스트 옵션 옵션펼치기 통치즈크러스트 + 5,000원 리치골드 + 5,000원 크림치즈크러스트 + 5,000원 치즈크러스트 + 4,000원 고구마체다크러스트 + 4,000원 토핑정보 양파, 피망, 새송이버섯, 옥수수, 블랙올리브 제품소개 원산지 전체보기 알레르기정보 전체보기 대두,밀,쇠고기,우유,토마토 영양성분 전체보기 제품명 사이즈 총중량(g) 조각수 1회 제공량 (조각) 1회분 중량 (g) 열량 (kcal/1회분) 당류 (g/1회분) 단백질 (g/1회분) 포화지방 (g/1회분) 나트륨 (mg/1회분) 야채 피자 R 511 6 1 85 205 5 12 3 396 L 800 8 1 100 242 6 14 4 466 원산지,영양성분 및 알레르기 유발성분 원산지 제품 알레르기 유발성분 영양성분 피자공통 * 피자치즈:자연치즈[모짜렐라(미국산과 독일산 섞음),프로볼로네(미국산)] * 고메밀크도우:밀가루(밀:미국산과 캐나다산 섞음) * 피망,양파,새송이:국내산 ·피자 제품명 원산지표시 프리미엄 오리지널 ·도우 변경 제품명 원산지표시 ·파스타 제품명 원산지표시 ·사이드 제품명 원산지표시 ·토핑추가 제품명 원산지표시 ·기타 제품명 원산지표시 피자공통 * 피자치즈:우유 * 고메밀크도우:밀,우유,대두 ·피자 제품명 알레르기정보 프리미엄 오리지널 ·도우 변경 제품명 알레르기정보 ·파스타 제품명 알레르기정보 ·사이드 제품명 알레르기정보 ·토핑추가 제품명 알레르기정보 ·기타 제품명 알레르기정보 ·오리지널피자 ·피자 제품명 1회제공량 열량 당류 단백질 포화지방 나트륨 ·도우변경 제품명 1회제공량 열량 당류 단백질 포화지방 나트륨 ·사이드 제품명 1회제공량 열량 당류 단백질 포화지방 나트륨 ·소스 제품명 1회제공량 열량 당류 단백질 포화지방 나트륨 ·음료 제품명 1회제공량 열량 당류 단백질 포화지방 나트륨 ·세트메뉴 분류 사이즈 열량기준 피자 사이드1 사이드2 제공량 열량(kcal) ·토핑 토핑추가 1회제공량 열량 당류 단백질 포화지방 나트륨 비고 피자치즈 100 305 1 24 12 370 페퍼로니 100 215 2 8 5 570 베이컨 100 152 0 16 3 855 옥수수 100 72 7 2 0 193 올리브 100 589 0 1 2 1000 파인애플 100 86 20 0 0 0 할리피뇨 100 9 1 0 0 559 마요네즈 100 730 1 1 14 510 창업문의 대표 : 정관영 사업자번호 : 518-88-01736 주소 : 경기도 안성시 원곡면 지문로 203-86 B2B/제품관련문의 : 070-4450-2737 마케팅/광고문의 이메일 : bsbfoodmarketing@naver.com 업무시간 : 09:30 ~ 18:30 COPYRIGHT© BSB FOOD. ALL RIGHTS RESERVED 가맹문의 1588-9109 1588-9109 오전 09:30 ~ 오후 18:30 점심시간 12:30 ~ 13:50 2018년 헤럴드 고객감동 브랜드대상 스포츠서울 유망강소기업 대상 성공의 정석 꾼 2020 대한민국 최고 브랜드 대상 2021 고객이 신뢰하는 브랜드 대상 2021 고객감동 우수브랜드 대상 2021 대한민국 NO.1 피자부문 대상 2022 대한민국 소비자 선호도 1위 2022 브랜드 파워 인덱스 수상 2022 소비자 만족지수 1위 2022 고객이 신뢰하는 브랜드 대상 2022 한국소비자평가 1위 2023 브랜드 파워 인덱스 수상 2023 대한민국 소비자 선호도 1위 2023 소비자 만족지수 1위 2024 대한민국 소비자 선호도 1위 2024 한국 소비자 선호도 1위 브랜드 대상 2024 대한민국 NO.1 피자부문 대상 2024 브랜드 파워 인덱스 수상 2025 대한민국 소비자 선호도 1위 2025 브랜드 파워 인덱스 수상 2025 대한민국 NO.1 피자부문 대상 2025 소비자 만족지수 1위 2025 고객이 신뢰하는 브랜드 대상 kakaoPixel('5172965623120114642').pageView(); setTimeout(() => { const endRemove = document.querySelectorAll(\".remover\"); const premium = document.querySelectorAll(\"tr.premium\"); const beShow = document.querySelectorAll(\".beShow\"); if (new Date() >= new Date('12/08/2025 00:00:00')) { // endTag.forEach(showEnd => { // showEnd.style.display = \"block\"; // }); endRemove.forEach(remover => { remover.remove(); }); premium.forEach(removeTr => { // console.log(removeTr); removeTr.remove(); // removeTr.style.display = \"none\"; }); beShow.forEach(be => { be.style.display = \"block\"; }); }; }, 500); if (!wcs_add) var wcs_add={}; wcs_add[\"wa\"] = \"s_5116f12411ea\"; if(window.wcs) { wcs.inflow(); } wcs_do();",
+      "images": [
+        {
+          "src": "https://www.facebook.com/tr?id=431000447845930&ev=PageView    &noscript=1",
+          "alt": null
+        },
+        {
+          "src": "https://www.facebook.com/tr?id=644059515325767&ev=PageView&noscript=1",
+          "alt": null
+        },
+        {
+          "src": "https://www.facebook.com/tr?id=1978456276065735&ev=PageView&noscript=1",
+          "alt": null
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/logo.png?v=250514",
+          "alt": "청년피자 로고"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/no_img.png",
+          "alt": "청년피자"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/header_sns1.png",
+          "alt": "페이스북"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/header_sns2.png",
+          "alt": "인스타그램"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/header_sns3.png",
+          "alt": "유튜브"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/no_img.png",
+          "alt": ""
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/upload/M_ori/6678cc1a9d514.jpg",
+          "alt": ""
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/upload/M_ori/6678cc1a9d514.jpg",
+          "alt": ""
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/ring.png?v=250610",
+          "alt": ""
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/logo_footer.png?v=250515",
+          "alt": "청년피자"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/logo_footer2.png",
+          "alt": "BSB FOOD"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/header_sns1.png",
+          "alt": "페이스북"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/header_sns2.png",
+          "alt": "인스타그램"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/header_sns3.png",
+          "alt": "유튜브"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt1.png",
+          "alt": "헤럴드 고객감동 브랜드대상"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt2.png",
+          "alt": "유망강소기업 대상"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt3.png",
+          "alt": "성공의 정석 꾼"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt4.png",
+          "alt": "대한민국 최고 브랜드 대상"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt5.png",
+          "alt": "고객이 신뢰하는 브랜드 대상"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt6.png",
+          "alt": "고객감동 우수브랜드 대상"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt7.png",
+          "alt": "대한민국 NO.1 피자부문 대상"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt8.png",
+          "alt": "대한민국 소비자 선호도 1위"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt9.png",
+          "alt": "브랜드 파워 인덱스 수상"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt10.png",
+          "alt": "한국 소비자 만족지수 1위"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt11.png",
+          "alt": "고객이 신뢰하는 브랜드 대상"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt12.png",
+          "alt": "한국소비자평가 1위"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt13.png",
+          "alt": "브랜드 파워 인덱스 수상"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt14.png",
+          "alt": "대한민국 소비자 선호도 1위"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt15.png",
+          "alt": "소비자 만족지수 1위"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt16.png",
+          "alt": ""
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt17.png",
+          "alt": ""
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt18.png",
+          "alt": ""
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt19.png",
+          "alt": ""
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt20.png",
+          "alt": ""
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt21.png",
+          "alt": ""
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt22.png",
+          "alt": ""
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt23.png",
+          "alt": ""
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt24.png",
+          "alt": ""
+        }
+      ],
+      "links": [
+        {
+          "href": "https://youngmanpizza.co.kr/main.php",
+          "text": ""
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/brand.php",
+          "text": "브랜드"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/brand.php",
+          "text": "브랜드"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/ceo_greeting.php",
+          "text": "CEO 인사말"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/social_contribution.php",
+          "text": "사회공헌활동"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/recruit.php",
+          "text": "인재채용"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/contact.php",
+          "text": "오시는 길"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub01/menu.php",
+          "text": "메뉴"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub02/branch.php",
+          "text": "매장안내"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub04/event.php",
+          "text": "소식"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub04/event.php",
+          "text": "이벤트"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/press.php",
+          "text": "보도자료"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub07/pizza_web.php",
+          "text": "청년피자웹진"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub08/tv_cf.php",
+          "text": "TV CF"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub08/print_ad.php",
+          "text": "인쇄물 광고"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub08/pizza_youtube.php",
+          "text": "청년피자 유튜브"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub03/foundation_info.php",
+          "text": "창업안내 및 문의"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub06/customer.php",
+          "text": "고객센터"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub06/notice.php",
+          "text": "공지사항"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub06/faq.php",
+          "text": "자주 묻는 질문"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub06/customer.php",
+          "text": "고객의 소리"
+        },
+        {
+          "href": "javascript:void(0);",
+          "text": "BSB GROUP"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/ceo_greeting.php",
+          "text": "CEO 인사말"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/bsb_group.php",
+          "text": "BSB GROUP"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/brand.php",
+          "text": "BRAND"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/social_contribution.php",
+          "text": "사회공헌활동"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/press.php",
+          "text": "보도자료"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/recruit.php",
+          "text": "인재채용"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/contact.php",
+          "text": "오시는 길"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub06/notice.php",
+          "text": "공지사항"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub06/faq.php",
+          "text": "자주 묻는 질문"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub06/customer.php",
+          "text": "고객의 소리"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub07/pizza_web.php",
+          "text": "청년피자웹진"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub08/tv_cf.php",
+          "text": "TV CF"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub08/print_ad.php",
+          "text": "인쇄물 광고"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub08/pizza_youtube.php",
+          "text": "청년피자 유튜브"
+        },
+        {
+          "href": "https://www.facebook.com/ymanpizza/",
+          "text": ""
+        },
+        {
+          "href": "https://www.instagram.com/y_manpizza/",
+          "text": ""
+        },
+        {
+          "href": "https://www.youtube.com/channel/UCwHedDHLt0IQjCn0X85kGsA",
+          "text": ""
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/brand.php",
+          "text": "브랜드"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/ceo_greeting.php",
+          "text": "CEO 인사말"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/social_contribution.php",
+          "text": "사회공헌활동"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/recruit.php",
+          "text": "인재채용"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/contact.php",
+          "text": "오시는 길"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub01/menu.php",
+          "text": "메뉴"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub02/branch.php",
+          "text": "매장안내"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub04/event.php",
+          "text": "이벤트"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/press.php",
+          "text": "보도자료"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub07/pizza_web.php",
+          "text": "청년피자웹진"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub08/tv_cf.php",
+          "text": "TV CF"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub08/print_ad.php",
+          "text": "인쇄물 광고"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub08/pizza_youtube.php",
+          "text": "청년피자 유튜브"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub03/foundation_info.php",
+          "text": "창업안내 및 문의"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub06/notice.php",
+          "text": "공지사항"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub06/faq.php",
+          "text": "자주 묻는 질문"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub06/customer.php",
+          "text": "고객의 소리"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub01/menu.php",
+          "text": "피자"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub01/menu3.php",
+          "text": "세트 메뉴"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub01/menu4.php",
+          "text": "사이드 메뉴"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub01/menu5.php",
+          "text": "토핑 추가"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub01/menu6.php",
+          "text": "음료&기타"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub03/foundation_info.php#inquiry",
+          "text": "창업문의"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/main.php",
+          "text": ""
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/main.php",
+          "text": ""
+        },
+        {
+          "href": "tel:1588-9109",
+          "text": "1588-9109"
+        },
+        {
+          "href": "https://www.facebook.com/ymanpizza/",
+          "text": ""
+        },
+        {
+          "href": "https://www.instagram.com/y_manpizza/",
+          "text": ""
+        },
+        {
+          "href": "https://www.youtube.com/channel/UCwHedDHLt0IQjCn0X85kGsA",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "url": "https://youngmanpizza.co.kr/sub01/menu_detail_pizza.php?page_num=1&search_text=&search_type=&seq=46",
+      "checkedAt": "2026-10-17T09:49:39.565355+00:00",
+      "status": 200,
+      "finalUrl": "https://youngmanpizza.co.kr/sub01/menu_detail_pizza.php?page_num=1&search_text=&search_type=&seq=46",
+      "sha256": "e8654233be566fe110a8ca16bf8c5b23f81e524cfd0ffa3747ef965ab468ed97",
+      "file": "e8654233be566fe110a8ca16bf8c5b23f81e524cfd0ffa3747ef965ab468ed97.html",
+      "bytes": 47532,
+      "encoding": "utf-8",
+      "text": "(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-K9QW5HTP'); 청년피자 // 페이지 내의 모든 map 태그 좌표를 반응형으로 자동 조절합니다. $(document).ready(function() { $('map').imageMapResize(); // jQuery 전용 메서드명은 끝이 'Resize'입니다. }); (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-M5RL8NS'); !function(f,b,e,v,n,t,s) {if(f.fbq)return;n=f.fbq=function(){n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)}; if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0'; n.queue=[];t=b.createElement(e);t.async=!0; t.src=v;s=b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t,s)}(window,document,'script', 'https://connect.facebook.net/en_US/fbevents.js'); fbq('init', '431000447845930'); fbq('track', 'PageView'); !function(f,b,e,v,n,t,s) {if(f.fbq)return;n=f.fbq=function(){n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)}; if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0'; n.queue=[];t=b.createElement(e);t.async=!0; t.src=v;s=b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t,s)}(window, document,'script', 'https://connect.facebook.net/en_US/fbevents.js'); fbq('init', '644059515325767'); fbq('track', 'PageView'); window.karrotPixel.init('1749775708797100001'); window.karrotPixel.track('ViewPage'); !function(f,b,e,v,n,t,s) {if(f.fbq)return;n=f.fbq=function(){n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)}; if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0'; n.queue=[];t=b.createElement(e);t.async=!0; t.src=v;s=b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t,s)}(window, document,'script', 'https://connect.facebook.net/en_US/fbevents.js'); fbq('init', '1978456276065735'); fbq('track', 'PageView'); !function (w, d, t) { w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=[\"page\",\"track\",\"identify\",\"instances\",\"debug\",\"on\",\"off\",\"once\",\"ready\",\"alias\",\"group\",\"enableCookie\",\"disableCookie\",\"holdConsent\",\"revokeConsent\",\"grantConsent\"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for( var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r=\"https://analytics.tiktok.com/i18n/pixel/events.js\",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement(\"script\") ;n.type=\"text/javascript\",n.async=!0,n.src=r+\"?sdkid=\"+e+\"&lib=\"+t;e=document.getElementsByTagName(\"script\")[0];e.parentNode.insertBefore(n,e)}; ttq.load('D6TQ373C77UCO0T91L70'); ttq.page(); }(window, document, 'ttq'); 브랜드 브랜드 CEO 인사말 사회공헌활동 인재채용 오시는 길 메뉴 매장안내 소식 이벤트 보도자료 청년피자웹진 TV CF 인쇄물 광고 청년피자 유튜브 창업안내 및 문의 고객센터 공지사항 자주 묻는 질문 고객의 소리 회사소개 BSB GROUP CEO 인사말 BSB GROUP BRAND 사회공헌활동 보도자료 인재채용 오시는 길 고객센터 공지사항 자주 묻는 질문 고객의 소리 청년피자뉴스 청년피자웹진 광고 갤러리 TV CF 인쇄물 광고 청년피자 유튜브 브랜드 메뉴 매장안내 소식 창업안내 및 문의 고객센터 브랜드 CEO 인사말 사회공헌활동 인재채용 오시는 길 메뉴 매장안내 이벤트 보도자료 청년피자웹진 TV CF 인쇄물 광고 청년피자 유튜브 창업안내 및 문의 공지사항 자주 묻는 질문 고객의 소리 메뉴 피자 세트 메뉴 사이드 메뉴 토핑 추가 음료&기타 구름에그콘피자 몽글몽글 에그포테이토와 달달고소 콘소메소스의 만남! R 21,900 L 27,900 크러스트 옵션 옵션펼치기 통치즈크러스트 + 5,000원 리치골드 + 5,000원 크림치즈크러스트 + 5,000원 치즈크러스트 + 4,000원 고구마체다크러스트 + 4,000원 토핑정보 에그포테이토, 베이컨, 콘소메소스 제품소개 원산지 전체보기 페페로니[돼지고기(외국산:미국,스페인,브라질 등),국내산], 베이컨[돼지고기(외국산:미국,스페인,브라질 등)] 알레르기정보 전체보기 계란, 대두, 밀, 쇠고기, 우유, 토마토, 돼지고기 영양성분 전체보기 제품명 사이즈 총중량(g) 조각수 1회 제공량 (조각) 1회분 중량 (g) 열량 (kcal/1회분) 당류 (g/1회분) 단백질 (g/1회분) 포화지방 (g/1회분) 나트륨 (mg/1회분) 에그콘피자 R 876 6 1 146 348 9 14 5 553 L 1277 8 1 160 381 9 15 5 606 원산지,영양성분 및 알레르기 유발성분 원산지 제품 알레르기 유발성분 영양성분 피자공통 * 피자치즈:자연치즈[모짜렐라(미국산과 독일산 섞음),프로볼로네(미국산)] * 고메밀크도우:밀가루(밀:미국산과 캐나다산 섞음) * 피망,양파,새송이:국내산 ·피자 제품명 원산지표시 프리미엄 오리지널 ·도우 변경 제품명 원산지표시 ·파스타 제품명 원산지표시 ·사이드 제품명 원산지표시 ·토핑추가 제품명 원산지표시 ·기타 제품명 원산지표시 피자공통 * 피자치즈:우유 * 고메밀크도우:밀,우유,대두 ·피자 제품명 알레르기정보 프리미엄 오리지널 ·도우 변경 제품명 알레르기정보 ·파스타 제품명 알레르기정보 ·사이드 제품명 알레르기정보 ·토핑추가 제품명 알레르기정보 ·기타 제품명 알레르기정보 ·오리지널피자 ·피자 제품명 1회제공량 열량 당류 단백질 포화지방 나트륨 ·도우변경 제품명 1회제공량 열량 당류 단백질 포화지방 나트륨 ·사이드 제품명 1회제공량 열량 당류 단백질 포화지방 나트륨 ·소스 제품명 1회제공량 열량 당류 단백질 포화지방 나트륨 ·음료 제품명 1회제공량 열량 당류 단백질 포화지방 나트륨 ·세트메뉴 분류 사이즈 열량기준 피자 사이드1 사이드2 제공량 열량(kcal) ·토핑 토핑추가 1회제공량 열량 당류 단백질 포화지방 나트륨 비고 피자치즈 100 305 1 24 12 370 페퍼로니 100 215 2 8 5 570 베이컨 100 152 0 16 3 855 옥수수 100 72 7 2 0 193 올리브 100 589 0 1 2 1000 파인애플 100 86 20 0 0 0 할리피뇨 100 9 1 0 0 559 마요네즈 100 730 1 1 14 510 창업문의 대표 : 정관영 사업자번호 : 518-88-01736 주소 : 경기도 안성시 원곡면 지문로 203-86 B2B/제품관련문의 : 070-4450-2737 마케팅/광고문의 이메일 : bsbfoodmarketing@naver.com 업무시간 : 09:30 ~ 18:30 COPYRIGHT© BSB FOOD. ALL RIGHTS RESERVED 가맹문의 1588-9109 1588-9109 오전 09:30 ~ 오후 18:30 점심시간 12:30 ~ 13:50 2018년 헤럴드 고객감동 브랜드대상 스포츠서울 유망강소기업 대상 성공의 정석 꾼 2020 대한민국 최고 브랜드 대상 2021 고객이 신뢰하는 브랜드 대상 2021 고객감동 우수브랜드 대상 2021 대한민국 NO.1 피자부문 대상 2022 대한민국 소비자 선호도 1위 2022 브랜드 파워 인덱스 수상 2022 소비자 만족지수 1위 2022 고객이 신뢰하는 브랜드 대상 2022 한국소비자평가 1위 2023 브랜드 파워 인덱스 수상 2023 대한민국 소비자 선호도 1위 2023 소비자 만족지수 1위 2024 대한민국 소비자 선호도 1위 2024 한국 소비자 선호도 1위 브랜드 대상 2024 대한민국 NO.1 피자부문 대상 2024 브랜드 파워 인덱스 수상 2025 대한민국 소비자 선호도 1위 2025 브랜드 파워 인덱스 수상 2025 대한민국 NO.1 피자부문 대상 2025 소비자 만족지수 1위 2025 고객이 신뢰하는 브랜드 대상 kakaoPixel('5172965623120114642').pageView(); setTimeout(() => { const endRemove = document.querySelectorAll(\".remover\"); const premium = document.querySelectorAll(\"tr.premium\"); const beShow = document.querySelectorAll(\".beShow\"); if (new Date() >= new Date('12/08/2025 00:00:00')) { // endTag.forEach(showEnd => { // showEnd.style.display = \"block\"; // }); endRemove.forEach(remover => { remover.remove(); }); premium.forEach(removeTr => { // console.log(removeTr); removeTr.remove(); // removeTr.style.display = \"none\"; }); beShow.forEach(be => { be.style.display = \"block\"; }); }; }, 500); if (!wcs_add) var wcs_add={}; wcs_add[\"wa\"] = \"s_5116f12411ea\"; if(window.wcs) { wcs.inflow(); } wcs_do();",
+      "images": [
+        {
+          "src": "https://www.facebook.com/tr?id=431000447845930&ev=PageView    &noscript=1",
+          "alt": null
+        },
+        {
+          "src": "https://www.facebook.com/tr?id=644059515325767&ev=PageView&noscript=1",
+          "alt": null
+        },
+        {
+          "src": "https://www.facebook.com/tr?id=1978456276065735&ev=PageView&noscript=1",
+          "alt": null
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/logo.png?v=250514",
+          "alt": "청년피자 로고"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/no_img.png",
+          "alt": "청년피자"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/header_sns1.png",
+          "alt": "페이스북"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/header_sns2.png",
+          "alt": "인스타그램"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/header_sns3.png",
+          "alt": "유튜브"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/no_img.png",
+          "alt": ""
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/upload/M_ori/669dbd7d47ae1.jpg",
+          "alt": ""
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/upload/M_ori/669dbd7d47ae1.jpg",
+          "alt": ""
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/ring.png?v=250610",
+          "alt": ""
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/logo_footer.png?v=250515",
+          "alt": "청년피자"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/logo_footer2.png",
+          "alt": "BSB FOOD"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/header_sns1.png",
+          "alt": "페이스북"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/header_sns2.png",
+          "alt": "인스타그램"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/header_sns3.png",
+          "alt": "유튜브"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt1.png",
+          "alt": "헤럴드 고객감동 브랜드대상"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt2.png",
+          "alt": "유망강소기업 대상"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt3.png",
+          "alt": "성공의 정석 꾼"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt4.png",
+          "alt": "대한민국 최고 브랜드 대상"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt5.png",
+          "alt": "고객이 신뢰하는 브랜드 대상"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt6.png",
+          "alt": "고객감동 우수브랜드 대상"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt7.png",
+          "alt": "대한민국 NO.1 피자부문 대상"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt8.png",
+          "alt": "대한민국 소비자 선호도 1위"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt9.png",
+          "alt": "브랜드 파워 인덱스 수상"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt10.png",
+          "alt": "한국 소비자 만족지수 1위"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt11.png",
+          "alt": "고객이 신뢰하는 브랜드 대상"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt12.png",
+          "alt": "한국소비자평가 1위"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt13.png",
+          "alt": "브랜드 파워 인덱스 수상"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt14.png",
+          "alt": "대한민국 소비자 선호도 1위"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt15.png",
+          "alt": "소비자 만족지수 1위"
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt16.png",
+          "alt": ""
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt17.png",
+          "alt": ""
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt18.png",
+          "alt": ""
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt19.png",
+          "alt": ""
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt20.png",
+          "alt": ""
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt21.png",
+          "alt": ""
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt22.png",
+          "alt": ""
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt23.png",
+          "alt": ""
+        },
+        {
+          "src": "https://youngmanpizza.co.kr/img/footer_bt24.png",
+          "alt": ""
+        }
+      ],
+      "links": [
+        {
+          "href": "https://youngmanpizza.co.kr/main.php",
+          "text": ""
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/brand.php",
+          "text": "브랜드"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/brand.php",
+          "text": "브랜드"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/ceo_greeting.php",
+          "text": "CEO 인사말"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/social_contribution.php",
+          "text": "사회공헌활동"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/recruit.php",
+          "text": "인재채용"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/contact.php",
+          "text": "오시는 길"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub01/menu.php",
+          "text": "메뉴"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub02/branch.php",
+          "text": "매장안내"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub04/event.php",
+          "text": "소식"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub04/event.php",
+          "text": "이벤트"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/press.php",
+          "text": "보도자료"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub07/pizza_web.php",
+          "text": "청년피자웹진"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub08/tv_cf.php",
+          "text": "TV CF"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub08/print_ad.php",
+          "text": "인쇄물 광고"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub08/pizza_youtube.php",
+          "text": "청년피자 유튜브"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub03/foundation_info.php",
+          "text": "창업안내 및 문의"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub06/customer.php",
+          "text": "고객센터"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub06/notice.php",
+          "text": "공지사항"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub06/faq.php",
+          "text": "자주 묻는 질문"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub06/customer.php",
+          "text": "고객의 소리"
+        },
+        {
+          "href": "javascript:void(0);",
+          "text": "BSB GROUP"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/ceo_greeting.php",
+          "text": "CEO 인사말"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/bsb_group.php",
+          "text": "BSB GROUP"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/brand.php",
+          "text": "BRAND"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/social_contribution.php",
+          "text": "사회공헌활동"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/press.php",
+          "text": "보도자료"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/recruit.php",
+          "text": "인재채용"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/contact.php",
+          "text": "오시는 길"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub06/notice.php",
+          "text": "공지사항"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub06/faq.php",
+          "text": "자주 묻는 질문"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub06/customer.php",
+          "text": "고객의 소리"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub07/pizza_web.php",
+          "text": "청년피자웹진"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub08/tv_cf.php",
+          "text": "TV CF"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub08/print_ad.php",
+          "text": "인쇄물 광고"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub08/pizza_youtube.php",
+          "text": "청년피자 유튜브"
+        },
+        {
+          "href": "https://www.facebook.com/ymanpizza/",
+          "text": ""
+        },
+        {
+          "href": "https://www.instagram.com/y_manpizza/",
+          "text": ""
+        },
+        {
+          "href": "https://www.youtube.com/channel/UCwHedDHLt0IQjCn0X85kGsA",
+          "text": ""
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/brand.php",
+          "text": "브랜드"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/ceo_greeting.php",
+          "text": "CEO 인사말"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/social_contribution.php",
+          "text": "사회공헌활동"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/recruit.php",
+          "text": "인재채용"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/contact.php",
+          "text": "오시는 길"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub01/menu.php",
+          "text": "메뉴"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub02/branch.php",
+          "text": "매장안내"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub04/event.php",
+          "text": "이벤트"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub05/press.php",
+          "text": "보도자료"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub07/pizza_web.php",
+          "text": "청년피자웹진"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub08/tv_cf.php",
+          "text": "TV CF"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub08/print_ad.php",
+          "text": "인쇄물 광고"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub08/pizza_youtube.php",
+          "text": "청년피자 유튜브"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub03/foundation_info.php",
+          "text": "창업안내 및 문의"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub06/notice.php",
+          "text": "공지사항"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub06/faq.php",
+          "text": "자주 묻는 질문"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub06/customer.php",
+          "text": "고객의 소리"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub01/menu.php",
+          "text": "피자"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub01/menu3.php",
+          "text": "세트 메뉴"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub01/menu4.php",
+          "text": "사이드 메뉴"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub01/menu5.php",
+          "text": "토핑 추가"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub01/menu6.php",
+          "text": "음료&기타"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/sub03/foundation_info.php#inquiry",
+          "text": "창업문의"
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/main.php",
+          "text": ""
+        },
+        {
+          "href": "https://youngmanpizza.co.kr/main.php",
+          "text": ""
+        },
+        {
+          "href": "tel:1588-9109",
+          "text": "1588-9109"
+        },
+        {
+          "href": "https://www.facebook.com/ymanpizza/",
+          "text": ""
+        },
+        {
+          "href": "https://www.instagram.com/y_manpizza/",
+          "text": ""
+        },
+        {
+          "href": "https://www.youtube.com/channel/UCwHedDHLt0IQjCn0X85kGsA",
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "heldNutrition": [
+    {
+      "id": "remote-franchise-15b7bc806db407b37d5dcd64",
+      "name": "구름에그콘피자 (R)",
+      "reason": "Current sale title 구름에그콘피자 differs from table 에그콘피자. No alias assumed; all nutrition and serving-weight fields remain NULL."
+    },
+    {
+      "id": "remote-franchise-fd2e54ef6fbc7fa9efc450d5",
+      "name": "구름에그콘피자 (L)",
+      "reason": "Current sale title 구름에그콘피자 differs from table 에그콘피자. No alias assumed; all nutrition and serving-weight fields remain NULL."
+    }
+  ]
+}

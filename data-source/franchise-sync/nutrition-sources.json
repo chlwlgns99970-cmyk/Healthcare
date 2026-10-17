@@ -777,13 +777,34 @@
   {
     "brandId": "brand-f2c4cd89053b4ff8",
     "brand": "청년피자",
-    "adapter": null,
-    "sources": [],
-    "status": "NUTRITION_SOURCE_MISSING",
+    "adapter": "youngman-detail-nutrition",
+    "sources": [
+      "https://www.youngmanpizza.co.kr/sub01/menu_detail_pizza.php?search_type=&search_text=&page_num=1&seq=54",
+      "https://www.youngmanpizza.co.kr/sub01/menu_detail_pizza.php?search_type=&search_text=&page_num=1&seq=57",
+      "https://www.youngmanpizza.co.kr/sub01/menu_detail_pizza.php?search_type=&search_text=&page_num=1&seq=55",
+      "https://youngmanpizza.co.kr/sub01/menu_detail_pizza.php?search_type=&search_text=&page_num=1&seq=53",
+      "https://youngmanpizza.co.kr/sub01/menu_detail_pizza.php?search_type=&search_text=&page_num=1&seq=52",
+      "https://youngmanpizza.co.kr/sub01/menu_detail_pizza.php?search_type=&search_text=&page_num=1&seq=51",
+      "https://www.youngmanpizza.co.kr/sub01/menu_detail_pizza.php?search_type=&search_text=&page_num=1&seq=56",
+      "https://www.youngmanpizza.co.kr/sub01/menu_detail_pizza.php?page_num=1&search_text=&search_type=&seq=37",
+      "https://www.youngmanpizza.co.kr/sub01/menu_detail_pizza.php?page_num=1&search_text=&search_type=&seq=38",
+      "https://www.youngmanpizza.co.kr/sub01/menu_detail_pizza.php?page_num=1&search_text=&search_type=&seq=40",
+      "https://www.youngmanpizza.co.kr/sub01/menu_detail_pizza.php?page_num=1&search_text=&search_type=&seq=42",
+      "https://www.youngmanpizza.co.kr/sub01/menu_detail_pizza.php?page_num=1&search_text=&search_type=&seq=44",
+      "https://www.youngmanpizza.co.kr/sub01/menu_detail_pizza2.php?page_num=1&search_text=&search_type=&seq=19",
+      "https://www.youngmanpizza.co.kr/sub01/menu_detail_pizza2.php?page_num=1&search_text=&search_type=&seq=25",
+      "https://youngmanpizza.co.kr/sub01/menu_detail_pizza.php?page_num=1&search_text=&search_type=&seq=35",
+      "https://youngmanpizza.co.kr/sub01/menu_detail_pizza.php?page_num=1&search_text=&search_type=&seq=36",
+      "https://youngmanpizza.co.kr/sub01/menu_detail_pizza.php?page_num=1&search_text=&search_type=&seq=39",
+      "https://youngmanpizza.co.kr/sub01/menu_detail_pizza.php?page_num=1&search_text=&search_type=&seq=41",
+      "https://youngmanpizza.co.kr/sub01/menu_detail_pizza.php?page_num=1&search_text=&search_type=&seq=46"
+    ],
+    "status": "NUTRITION_SOURCE_FOUND_UNMATCHED",
     "allowedHosts": [
       "www.youngmanpizza.co.kr",
       "youngmanpizza.co.kr"
-    ]
+    ],
+    "evidenceStatus": "SOURCE_FOUND"
   },
   {
     "brandId": "brand-e7bc4d2ab88a800c",
@@ -2193,13 +2214,17 @@
   {
     "brandId": "brand-5f1ac0e21ddf73b1",
     "brand": "우지커피",
-    "adapter": null,
-    "sources": [],
-    "status": "NUTRITION_SOURCE_MISSING",
+    "adapter": "oozy-reviewed-image-nutrition",
+    "sources": [
+      "https://www.oozycoffee.com/83/?q=YToxOntzOjEyOiJrZXl3b3JkX3R5cGUiO3M6MzoiYWxsIjt9&bmode=view&idx=18209046&t=board"
+    ],
+    "status": "REGISTERED",
     "allowedHosts": [
       "oozycoffee.com",
-      "www.oozycoffee.com"
-    ]
+      "www.oozycoffee.com",
+      "cdn.imweb.me"
+    ],
+    "url": "https://www.oozycoffee.com/83/?q=YToxOntzOjEyOiJrZXl3b3JkX3R5cGUiO3M6MzoiYWxsIjt9&bmode=view&idx=18209046&t=board"
   },
   {
     "brandId": "brand-9fa9c3eca7bcf563",

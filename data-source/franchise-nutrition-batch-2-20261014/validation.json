@@ -1,0 +1,52 @@
+{
+  "before": {
+    "total": 5142,
+    "energyKcal": 2559,
+    "carbohydrateGrams": 398,
+    "proteinGrams": 2327,
+    "fatGrams": 377,
+    "sodiumMilligrams": 2333,
+    "sugarsGrams": 0,
+    "saturatedFatGrams": 0,
+    "allMacros": 375
+  },
+  "after": {
+    "total": 5142,
+    "energyKcal": 2559,
+    "carbohydrateGrams": 398,
+    "proteinGrams": 2327,
+    "fatGrams": 377,
+    "sodiumMilligrams": 2333,
+    "sugarsGrams": 837,
+    "saturatedFatGrams": 839,
+    "allMacros": 375
+  },
+  "enrichedMenus": 842,
+  "brands": {
+    "파리바게뜨": {
+      "total": 469,
+      "enriched": 351,
+      "results": {
+        "MATCHED": 360,
+        "FAILED_RETAINED": 109
+      }
+    },
+    "뚜레쥬르": {
+      "total": 438,
+      "enriched": 359,
+      "results": {
+        "FAILED_RETAINED": 79,
+        "MATCHED": 359
+      }
+    },
+    "던킨": {
+      "total": 162,
+      "enriched": 132,
+      "results": {
+        "MATCHED": 137,
+        "FAILED_RETAINED": 25
+      }
+    }
+  },
+  "environment": "DEVELOPMENT_ONLY_NOT_PUBLISHED"
+}

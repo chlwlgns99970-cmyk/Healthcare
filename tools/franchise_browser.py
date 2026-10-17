@@ -42,6 +42,37 @@ def hansot_public_menu(page):
 _slots=BoundedSemaphore(2)
 _state=local()
 
+def camto_toast_modals(page,markup):
+    from franchise_brand_adapters import camto_toast_inventory,camto_toast_rows
+    actions=camto_toast_inventory(markup);items=[];denials=[]
+    def capture(response):
+        if urlparse(response.url).hostname=='camtotoast.com' and response.status in (401,403,429):denials.append(response.status)
+    page.on('response',capture)
+    try:
+        for product,action in actions.items():
+            if denials:raise PublicAccessDenied(denials[0])
+            link=page.locator('main ._img_box a[href="'+action+'"]')
+            assert link.count()==1,'CAMTO_MODAL_LINK_CHANGED'
+            link.scroll_into_view_if_needed(timeout=5000)
+            link.click(timeout=5000)
+            dialog=page.locator('.modal_site_modal_menu:visible')
+            heading=dialog.locator('.modal-header h4');heading.wait_for(state='attached',timeout=5000)
+            assert heading.count()==1,'CAMTO_AMBIGUOUS_MODAL_TITLE'
+            if denied(None,dialog.inner_text(timeout=3000)):raise ValueError('ACCESS_CHALLENGE: official product modal')
+            items.append(dict(id=product,title=heading.text_content(timeout=3000)))
+            if denials:raise PublicAccessDenied(denials[0])
+            close=dialog.locator('[data-dismiss="modal"]:visible')
+            assert close.count()==1,'CAMTO_MODAL_CLOSE_CHANGED'
+            close.click(timeout=3000);dialog.wait_for(state='hidden',timeout=5000)
+            if denials:raise PublicAccessDenied(denials[0])
+            if denied(None,page.locator('body').inner_text(timeout=3000)):raise ValueError('ACCESS_CHALLENGE: official modal close')
+        if denials:raise PublicAccessDenied(denials[0])
+        encoded=json.dumps(items,ensure_ascii=False).replace('<','\\u003c')
+        result=markup+'<script id="recorded-camto-toasts" type="application/json">'+encoded+'</script>'
+        camto_toast_rows(result,'https://camtotoast.com/44')
+        return result,dict(officialProductModalCount=len(items),allProductModalsCompleted=True,officialModalTitles=items,officialModalActions=actions)
+    finally:page.remove_listener('response',capture)
+
 class PublicAccessDenied(ValueError):
     def __init__(self,status):
         self.code=status
@@ -109,6 +140,10 @@ def render(brand,source):
         else:raise ValueError('LAZY_LOAD_LIMIT: content did not stabilize')
         assert not page.locator('button:visible').filter(has_text=re.compile(r'^(더\s*보기|load more)$',re.I)).count(),'Unreviewed load-more contract'
         markup=page.content()
+        modal_evidence={}
+        if source.get('adapter')=='camto-toast-modal':
+            assert brand['name']=='캠토토스트' and source['url']=='https://camtotoast.com/44'
+            markup,modal_evidence=camto_toast_modals(page,markup)
         assert len(markup.encode())<=brand.get('maxSourceBytes',2_000_000),'Rendered source too large'
-        return markup,dict(transport='normal-chromium',httpStatus=status,finalUrl=page.url,scrollSteps=step+1,scrollStable=True,tlsVerification=True)
+        return markup,dict(transport='normal-chromium',httpStatus=status,finalUrl=page.url,scrollSteps=step+1,scrollStable=True,tlsVerification=True,**modal_evidence)
     finally:page.close()

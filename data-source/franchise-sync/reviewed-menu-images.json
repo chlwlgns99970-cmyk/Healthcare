@@ -1,0 +1,860 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "brand": "캠토토스트",
+      "sourceUrl": "https://camtotoast.com/45",
+      "reviewedAt": "2026-10-16T08:02:50.827685+00:00",
+      "reviewMethod": "Exact Korean names visually read in the official images. Unlabelled product photos are not assigned names or product IDs.",
+      "items": [
+        {
+          "id": "img_w20260331cb8cfa8206898",
+          "url": "https://cdn.imweb.me/thumbnail/20260401/608bb4ffc9f78.png",
+          "sha256": "8170b7fc5c3e42dcbf18e119b7104ff7fcf283dcf61aec1aa7908101fe8d73a5",
+          "names": [
+            "아메리카노"
+          ],
+          "evidence": "reviewed-image-evidence/8170b7fc5c3e42dcbf18e119b7104ff7fcf283dcf61aec1aa7908101fe8d73a5.gz"
+        },
+        {
+          "id": "img_w202603313ef5141454433",
+          "url": "https://cdn.imweb.me/thumbnail/20260401/56f683b97f407.png",
+          "sha256": "797a3b344d0d78ae5eb003e81ef28f4bb391ea37b1a79e3fc94d4f030d9d5bfb",
+          "names": [
+            "카푸치노"
+          ],
+          "evidence": "reviewed-image-evidence/797a3b344d0d78ae5eb003e81ef28f4bb391ea37b1a79e3fc94d4f030d9d5bfb.gz"
+        },
+        {
+          "id": "img_w20260331849ce3139e062",
+          "url": "https://cdn.imweb.me/thumbnail/20260401/f563c3b189979.png",
+          "sha256": "88cdccfee2b97232f78e8cc33d6a17b8e1403dd834bbb188e64a02d32ccd062e",
+          "names": [
+            "카페라떼"
+          ],
+          "evidence": "reviewed-image-evidence/88cdccfee2b97232f78e8cc33d6a17b8e1403dd834bbb188e64a02d32ccd062e.gz"
+        },
+        {
+          "id": "img_w202603311bf35e218b8bd",
+          "url": "https://cdn.imweb.me/thumbnail/20260401/ddfdce853bc1e.png",
+          "sha256": "264084507e4dded2e3feb8061eb798c0d842f42ff4217d28b1808173ac1368ab",
+          "names": [
+            "바닐라 라떼"
+          ],
+          "evidence": "reviewed-image-evidence/264084507e4dded2e3feb8061eb798c0d842f42ff4217d28b1808173ac1368ab.gz"
+        },
+        {
+          "id": "img_w20260401e1f41ce6a6cc9",
+          "url": "https://cdn.imweb.me/thumbnail/20260401/de50fb1c5aac3.png",
+          "sha256": "b1edf132b4e160cfe13e68245580149012b0321527faae783524d46e01b94226",
+          "names": [
+            "카라멜 라떼"
+          ],
+          "evidence": "reviewed-image-evidence/b1edf132b4e160cfe13e68245580149012b0321527faae783524d46e01b94226.gz"
+        },
+        {
+          "id": "img_w20260401594b486039f03",
+          "url": "https://cdn.imweb.me/thumbnail/20260401/c15ef64197a0b.png",
+          "sha256": "27c21ed767e8403082d958d0fdc1a2205cfdfa085f821dcefd054dda3adab392",
+          "names": [
+            "연유 라떼"
+          ],
+          "evidence": "reviewed-image-evidence/27c21ed767e8403082d958d0fdc1a2205cfdfa085f821dcefd054dda3adab392.gz"
+        },
+        {
+          "id": "img_w202604016347e6f681648",
+          "url": "https://cdn.imweb.me/thumbnail/20260401/145d57eb4c68f.png",
+          "sha256": "5e74d2ed8e4f4fadd00dd0d408b08791a4422a4fc2b66c931a328e5f74e14bbb",
+          "names": [
+            "카라멜 마끼아또"
+          ],
+          "evidence": "reviewed-image-evidence/5e74d2ed8e4f4fadd00dd0d408b08791a4422a4fc2b66c931a328e5f74e14bbb.gz"
+        },
+        {
+          "id": "img_w20260401fcc8d1b245b79",
+          "url": "https://cdn.imweb.me/thumbnail/20260401/73832883eef2a.png",
+          "sha256": "e6a390c9ed8362817a44d2dde4fdb1844c9f83d8d99e78e6379632da6f1b94bd",
+          "names": [
+            "민트 초코 라떼"
+          ],
+          "evidence": "reviewed-image-evidence/e6a390c9ed8362817a44d2dde4fdb1844c9f83d8d99e78e6379632da6f1b94bd.gz"
+        },
+        {
+          "id": "img_w202604017492a50a0088b",
+          "url": "https://cdn.imweb.me/thumbnail/20260401/094897bb9f30d.png",
+          "sha256": "29aea1921d9931db08b14c0c6d2f39c881290caf6d274f8c50243c827b89bd28",
+          "names": [
+            "흑임자 라떼"
+          ],
+          "evidence": "reviewed-image-evidence/29aea1921d9931db08b14c0c6d2f39c881290caf6d274f8c50243c827b89bd28.gz"
+        },
+        {
+          "id": "img_w202604012d3d90b4e5a4b",
+          "url": "https://cdn.imweb.me/thumbnail/20260401/5593a47e6affe.png",
+          "sha256": "c88c8729eec33ff0d487de12b4eb2addec00b5ff63f0b7f7857be0a685feb6d3",
+          "names": [
+            "미숫가루 라떼"
+          ],
+          "evidence": "reviewed-image-evidence/c88c8729eec33ff0d487de12b4eb2addec00b5ff63f0b7f7857be0a685feb6d3.gz"
+        },
+        {
+          "id": "img_w20260401ba23b9896b884",
+          "url": "https://cdn.imweb.me/thumbnail/20260401/beb224975549d.png",
+          "sha256": "ba3c7a4a5f5c65401ead2f54361790e686f1ecea84e6b7adee8ec08043fd961d",
+          "names": [
+            "초코 라떼"
+          ],
+          "evidence": "reviewed-image-evidence/ba3c7a4a5f5c65401ead2f54361790e686f1ecea84e6b7adee8ec08043fd961d.gz"
+        },
+        {
+          "id": "img_w202604015826a571c4fff",
+          "url": "https://cdn.imweb.me/thumbnail/20260401/7759a17cff0ee.png",
+          "sha256": "f910b9a2b09c26cd481555b935e0fafacc6c3fa23a55fabb6856669f85bbc14a",
+          "names": [
+            "밀크티 라떼"
+          ],
+          "evidence": "reviewed-image-evidence/f910b9a2b09c26cd481555b935e0fafacc6c3fa23a55fabb6856669f85bbc14a.gz"
+        },
+        {
+          "id": "img_w2026040115d9f2318e561",
+          "url": "https://cdn.imweb.me/thumbnail/20260401/5d0a02b82b950.png",
+          "sha256": "f45235b92a4a43ee25188ee8c0619e9513211689130ed21726c2d87f81686f49",
+          "names": [
+            "그린티 라떼"
+          ],
+          "evidence": "reviewed-image-evidence/f45235b92a4a43ee25188ee8c0619e9513211689130ed21726c2d87f81686f49.gz"
+        },
+        {
+          "id": "img_w20260401ee8b845f3b3f2",
+          "url": "https://cdn.imweb.me/thumbnail/20260401/647d627d2bd12.png",
+          "sha256": "1da416c13f2ef49ce15b9e8dd5a05afd1419bbdbe7210caaac4bacce3269ce29",
+          "names": [
+            "자색 고구마 라떼"
+          ],
+          "evidence": "reviewed-image-evidence/1da416c13f2ef49ce15b9e8dd5a05afd1419bbdbe7210caaac4bacce3269ce29.gz"
+        },
+        {
+          "id": "img_w202604015df7df7e97e16",
+          "url": "https://cdn.imweb.me/thumbnail/20260401/5667b741293c5.png",
+          "sha256": "25a959bb41a667836ae846ffeacf9919a64cc3acbcb473bd1ec3e253cb8690d6",
+          "names": [
+            "쿠앤크 라떼"
+          ],
+          "evidence": "reviewed-image-evidence/25a959bb41a667836ae846ffeacf9919a64cc3acbcb473bd1ec3e253cb8690d6.gz"
+        },
+        {
+          "id": "img_w20260401a3eec5f60887c",
+          "url": "https://cdn.imweb.me/thumbnail/20260401/9f146a3595e5b.png",
+          "sha256": "740444cac24ec61148fd38e4fa12a1b7810d1f8f46f587cb706515efc29cc28f",
+          "names": [
+            "라즈베리 초코라떼"
+          ],
+          "evidence": "reviewed-image-evidence/740444cac24ec61148fd38e4fa12a1b7810d1f8f46f587cb706515efc29cc28f.gz"
+        },
+        {
+          "id": "img_w2026040108aa22efe614f",
+          "url": "https://cdn.imweb.me/thumbnail/20260401/3d231702b0874.png",
+          "sha256": "ce950e2d76613f87c6c821942410b43fe5848c797fde8d5cf36ff25f2ed23c9c",
+          "names": [
+            "딸기 라떼"
+          ],
+          "evidence": "reviewed-image-evidence/ce950e2d76613f87c6c821942410b43fe5848c797fde8d5cf36ff25f2ed23c9c.gz"
+        },
+        {
+          "id": "img_w20260401c30239f696f8f",
+          "url": "https://cdn.imweb.me/thumbnail/20260401/867a8c7263d8b.png",
+          "sha256": "a45e9de3b26dc911fb5c750cd4c53594b541c53bfae5bf62cb0d3119ee793c5d",
+          "names": [
+            "복숭아 아이스티"
+          ],
+          "evidence": "reviewed-image-evidence/a45e9de3b26dc911fb5c750cd4c53594b541c53bfae5bf62cb0d3119ee793c5d.gz"
+        },
+        {
+          "id": "img_w2026040152b74b497621b",
+          "url": "https://cdn.imweb.me/thumbnail/20260401/5e83a076972e8.png",
+          "sha256": "cd302df34f1e31e64d1a9cc3e95060ef7cbf97fd68f6e48a84cccacd67936a7a",
+          "names": [
+            "아샷추"
+          ],
+          "evidence": "reviewed-image-evidence/cd302df34f1e31e64d1a9cc3e95060ef7cbf97fd68f6e48a84cccacd67936a7a.gz"
+        },
+        {
+          "id": "img_w20260401a8be8bae7823c",
+          "url": "https://cdn.imweb.me/thumbnail/20260401/0c5461b072a28.png",
+          "sha256": "66d29624bb5b944e568c84723d33d8a619d89e51b11038c3198bdb14081dbd8f",
+          "names": [
+            "체리 초코 라떼"
+          ],
+          "evidence": "reviewed-image-evidence/66d29624bb5b944e568c84723d33d8a619d89e51b11038c3198bdb14081dbd8f.gz"
+        },
+        {
+          "id": "img_w20260401b399a2e3714b3",
+          "url": "https://cdn.imweb.me/thumbnail/20260401/43120667ff6ec.png",
+          "sha256": "965a315b0c98f007820d9cc2a34e16bcd71cb78dcf9d995df172977edc0dea0e",
+          "names": [
+            "레몬 아이스티"
+          ],
+          "evidence": "reviewed-image-evidence/965a315b0c98f007820d9cc2a34e16bcd71cb78dcf9d995df172977edc0dea0e.gz"
+        },
+        {
+          "id": "img_w202604013945340c87e6a",
+          "url": "https://cdn.imweb.me/thumbnail/20260401/52fc61a437bc3.png",
+          "sha256": "7d8211cb44811aa7b2661421ff3492efc244f501c32ab2064e846ae02b7407da",
+          "names": [
+            "청포도 아이스티"
+          ],
+          "evidence": "reviewed-image-evidence/7d8211cb44811aa7b2661421ff3492efc244f501c32ab2064e846ae02b7407da.gz"
+        },
+        {
+          "id": "img_w202604014a7c4e012be64",
+          "url": "https://cdn.imweb.me/thumbnail/20260401/6063b98024cad.png",
+          "sha256": "663abe6a3b0939f8e0e2ccb0e138376a4a26388099ad3cb8d8764b27f7909d99",
+          "names": [
+            "패션 복숭아 & 다즐링 아이스티"
+          ],
+          "evidence": "reviewed-image-evidence/663abe6a3b0939f8e0e2ccb0e138376a4a26388099ad3cb8d8764b27f7909d99.gz"
+        },
+        {
+          "id": "img_w20260401826629323cdb8",
+          "url": "https://cdn.imweb.me/thumbnail/20260401/a7c9cf2035b05.png",
+          "sha256": "d749d322d44857aa8768f9b45d8a741411882bd16751fd4aae327bcd84af2f38",
+          "names": [
+            "레몬 & 다즐링 아이스티"
+          ],
+          "evidence": "reviewed-image-evidence/d749d322d44857aa8768f9b45d8a741411882bd16751fd4aae327bcd84af2f38.gz"
+        },
+        {
+          "id": "img_w20260401762a75c50e7eb",
+          "url": "https://cdn.imweb.me/thumbnail/20260401/6d828c7a73e86.png",
+          "sha256": "cb88d4ed7a6f758d08e4e6082f702f55d72cebff0dfa18b842a02db0bc7cfa10",
+          "names": [
+            "레몬 & 페퍼민트 아이스티"
+          ],
+          "evidence": "reviewed-image-evidence/cb88d4ed7a6f758d08e4e6082f702f55d72cebff0dfa18b842a02db0bc7cfa10.gz"
+        },
+        {
+          "id": "img_w202604010a603eba4973a",
+          "url": "https://cdn.imweb.me/thumbnail/20260401/0c0e9b75debd4.png",
+          "sha256": "6009ce2642afb14bf337ee166b808e845f8a719abd205e67e2edb803c02c016c",
+          "names": [
+            "레몬 에이드"
+          ],
+          "evidence": "reviewed-image-evidence/6009ce2642afb14bf337ee166b808e845f8a719abd205e67e2edb803c02c016c.gz"
+        },
+        {
+          "id": "img_w2026040173916eb342c6c",
+          "url": "https://cdn.imweb.me/thumbnail/20260401/2d9807aad6ca7.png",
+          "sha256": "86cde594076853eb6796656b04fa4c6e2764cc910c721bf5dc97e13ddbe04f8f",
+          "names": [
+            "청포도 에이드"
+          ],
+          "evidence": "reviewed-image-evidence/86cde594076853eb6796656b04fa4c6e2764cc910c721bf5dc97e13ddbe04f8f.gz"
+        },
+        {
+          "id": "img_w202604015577ef8561226",
+          "url": "https://cdn.imweb.me/thumbnail/20260401/47908d619ee53.png",
+          "sha256": "07c8715b9028d6826a1ef0aff99ff2884d5cee104905e0af4ffd2d882c2d0841",
+          "names": [
+            "자몽 에이드"
+          ],
+          "evidence": "reviewed-image-evidence/07c8715b9028d6826a1ef0aff99ff2884d5cee104905e0af4ffd2d882c2d0841.gz"
+        },
+        {
+          "id": "img_w20260401e275dcd80e90b",
+          "url": "https://cdn.imweb.me/thumbnail/20260401/3914e62c3adb8.png",
+          "sha256": "36f8355c431cfa280ef49fcbecc0181a5eba15b6fe04e557d683213964872a77",
+          "names": [
+            "블루레몬 에이드"
+          ],
+          "evidence": "reviewed-image-evidence/36f8355c431cfa280ef49fcbecc0181a5eba15b6fe04e557d683213964872a77.gz"
+        },
+        {
+          "id": "img_w202604017d93259031640",
+          "url": "https://cdn.imweb.me/thumbnail/20260401/4c5d4902d5429.png",
+          "sha256": "1cb52cf5c298d948acb3cb11608479a337a324c1720048b92da53d4ccc502a47",
+          "names": [
+            "패션후르츠 에이드"
+          ],
+          "evidence": "reviewed-image-evidence/1cb52cf5c298d948acb3cb11608479a337a324c1720048b92da53d4ccc502a47.gz"
+        },
+        {
+          "id": "img_w20260401ce1c6242afba1",
+          "url": "https://cdn.imweb.me/thumbnail/20260401/19584739fd146.png",
+          "sha256": "0e1af40d5da15b95fbc7d709da4d8ac00ed796da343797f323a8ec72aaccb381",
+          "names": [
+            "요거트 스무디"
+          ],
+          "evidence": "reviewed-image-evidence/0e1af40d5da15b95fbc7d709da4d8ac00ed796da343797f323a8ec72aaccb381.gz"
+        },
+        {
+          "id": "img_w20260401ed4e797ee1ab1",
+          "url": "https://cdn.imweb.me/thumbnail/20260401/39aa654e6faac.png",
+          "sha256": "dcae23cd4c865bffa8a9db65c3f1aed267508e845d54a6653ca28ed49b207884",
+          "names": [
+            "딸기 요거트 스무디"
+          ],
+          "evidence": "reviewed-image-evidence/dcae23cd4c865bffa8a9db65c3f1aed267508e845d54a6653ca28ed49b207884.gz"
+        },
+        {
+          "id": "img_w20260401182fb5e50cd0c",
+          "url": "https://cdn.imweb.me/thumbnail/20260401/5ce3421711c34.png",
+          "sha256": "d3c636661dac1dfe9cc4b5e9f4317ca90bca190dfbcfc36967284ee813a0d6ae",
+          "names": [
+            "블루베리 요거트 스무디"
+          ],
+          "evidence": "reviewed-image-evidence/d3c636661dac1dfe9cc4b5e9f4317ca90bca190dfbcfc36967284ee813a0d6ae.gz"
+        },
+        {
+          "id": "img_w20260401aea12f7c77400",
+          "url": "https://cdn.imweb.me/thumbnail/20260401/4cd0887366493.png",
+          "sha256": "3da48db30e320bc87d1829f351d0b5e833238bcfe8942c397d5cfacf93f13910",
+          "names": [
+            "망고 스무디"
+          ],
+          "evidence": "reviewed-image-evidence/3da48db30e320bc87d1829f351d0b5e833238bcfe8942c397d5cfacf93f13910.gz"
+        },
+        {
+          "id": "img_w202604010cdeaf4e55a4e",
+          "url": "https://cdn.imweb.me/thumbnail/20260401/9aa101fd6d420.png",
+          "sha256": "f000a29b1f0dca816fa513ea057d3848c92ccfec48dd9360e0092e99399d9530",
+          "names": [
+            "딸기 & 블루베리 요거트 스무디"
+          ],
+          "evidence": "reviewed-image-evidence/f000a29b1f0dca816fa513ea057d3848c92ccfec48dd9360e0092e99399d9530.gz"
+        },
+        {
+          "id": "img_w20260401a5274a2b55800",
+          "url": "https://cdn.imweb.me/thumbnail/20260401/895db020c1723.png",
+          "sha256": "3bd7e3cf8f3e1ef53a6b62c9d6cfd00551159026e71d407d8b23f27f2b32772d",
+          "names": [
+            "청사과 스무디"
+          ],
+          "evidence": "reviewed-image-evidence/3bd7e3cf8f3e1ef53a6b62c9d6cfd00551159026e71d407d8b23f27f2b32772d.gz"
+        },
+        {
+          "id": "img_w20260401d8193619fb1a8",
+          "url": "https://cdn.imweb.me/thumbnail/20260401/19b2c6faee5a3.png",
+          "sha256": "a43d41a10ad523d3ff49e6705d7abd787badac2a812aa533d085bba9c4839e39",
+          "names": [
+            "망고 & 패션후르츠 스무디"
+          ],
+          "evidence": "reviewed-image-evidence/a43d41a10ad523d3ff49e6705d7abd787badac2a812aa533d085bba9c4839e39.gz"
+        },
+        {
+          "id": "img_w202604013ec3956f0972d",
+          "url": "https://cdn.imweb.me/thumbnail/20260401/e5a5cb1881148.png",
+          "sha256": "dd8eec71599acf969cd0f77fbc7126a466d5988791c9eacb0b1f9aeb72a4abe5",
+          "names": [
+            "스트로베리 & 오렌지 티"
+          ],
+          "evidence": "reviewed-image-evidence/dd8eec71599acf969cd0f77fbc7126a466d5988791c9eacb0b1f9aeb72a4abe5.gz"
+        },
+        {
+          "id": "img_w202604014b656920d7e36",
+          "url": "https://cdn.imweb.me/thumbnail/20260401/25744f13e99b0.png",
+          "sha256": "ee89ac3cff7ec8a02947d419b4cbf77537a9dbfe4af7e47d2c10aeda81db78e2",
+          "names": [
+            "캐모마일 티"
+          ],
+          "evidence": "reviewed-image-evidence/ee89ac3cff7ec8a02947d419b4cbf77537a9dbfe4af7e47d2c10aeda81db78e2.gz"
+        },
+        {
+          "id": "img_w202604017ed88074ab709",
+          "url": "https://cdn.imweb.me/thumbnail/20260401/ee8b23efbb98a.png",
+          "sha256": "f2eca3a96d8a97714e6077f9c178fd96b3c2ce2793444f4ccb1edcf052a3dded",
+          "names": [
+            "페퍼민트 티"
+          ],
+          "evidence": "reviewed-image-evidence/f2eca3a96d8a97714e6077f9c178fd96b3c2ce2793444f4ccb1edcf052a3dded.gz"
+        },
+        {
+          "id": "img_w2026040183545a518dbb1",
+          "url": "https://cdn.imweb.me/thumbnail/20260401/4b82e5fbe3e78.png",
+          "sha256": "015ec945e8cf2e02c9e45abe1ad4b55decc3d73250be044c30d3f9d5d2bec9b6",
+          "names": [
+            "자몽 티"
+          ],
+          "evidence": "reviewed-image-evidence/015ec945e8cf2e02c9e45abe1ad4b55decc3d73250be044c30d3f9d5d2bec9b6.gz"
+        },
+        {
+          "id": "img_w2026040129b463445171f",
+          "url": "https://cdn.imweb.me/thumbnail/20260401/b1921045bcfb4.png",
+          "sha256": "95b7c87d5592e177e653113bddea82681465818f912fd8a119b51c13e186a77c",
+          "names": [
+            "유자 티"
+          ],
+          "evidence": "reviewed-image-evidence/95b7c87d5592e177e653113bddea82681465818f912fd8a119b51c13e186a77c.gz"
+        },
+        {
+          "id": "img_w20260401b564c9a81af07",
+          "url": "https://cdn.imweb.me/thumbnail/20260401/60b79fb3a3ffb.png",
+          "sha256": "a8ae4054ddd17031cf02f1165be5a885e834513b77e1f5032bcbd71299c28f3f",
+          "names": [
+            "쌍화 티"
+          ],
+          "evidence": "reviewed-image-evidence/a8ae4054ddd17031cf02f1165be5a885e834513b77e1f5032bcbd71299c28f3f.gz"
+        }
+      ]
+    },
+    {
+      "brand": "캠토토스트",
+      "sourceUrl": "https://camtotoast.com/46",
+      "reviewedAt": "2026-10-16T08:02:50.866383+00:00",
+      "reviewMethod": "Exact Korean names visually read in the official images. Unlabelled product photos are not assigned names or product IDs.",
+      "items": [
+        {
+          "id": "img_w2026033153b02ce703228",
+          "url": "https://cdn.imweb.me/thumbnail/20260331/40ce94795bba4.png",
+          "sha256": "e5c41377ab9b0a8b6089181ba76f171d7f8c961188cf7650609c876cbb01e864",
+          "names": [
+            "치킨마요"
+          ],
+          "evidence": "reviewed-image-evidence/e5c41377ab9b0a8b6089181ba76f171d7f8c961188cf7650609c876cbb01e864.gz"
+        },
+        {
+          "id": "img_w202603310252828270447",
+          "url": "https://cdn.imweb.me/thumbnail/20260331/76ed0edb471d6.png",
+          "sha256": "4d3f7cc519ff7697b613864de866ad427e7245b707d2e028a82d3f82534f5a96",
+          "names": [
+            "돈까스"
+          ],
+          "evidence": "reviewed-image-evidence/4d3f7cc519ff7697b613864de866ad427e7245b707d2e028a82d3f82534f5a96.gz"
+        },
+        {
+          "id": "img_w20260331c21ceda0451f3",
+          "url": "https://cdn.imweb.me/thumbnail/20260331/f570ac821a5aa.png",
+          "sha256": "622f0f06fb1afecf13e6d3a17106ce05157f0fc1f91e98c9d7f0081d9444d238",
+          "names": [
+            "햄 or 스팸"
+          ],
+          "evidence": "reviewed-image-evidence/622f0f06fb1afecf13e6d3a17106ce05157f0fc1f91e98c9d7f0081d9444d238.gz"
+        },
+        {
+          "id": "img_w20260331d37b9fa8a4bc0",
+          "url": "https://cdn.imweb.me/thumbnail/20260331/f546be4d5d306.png",
+          "sha256": "b2888aea669b1d915c9367021939bc46665987db875ef703dc8ae56708748d94",
+          "names": [
+            "참숯불고기"
+          ],
+          "evidence": "reviewed-image-evidence/b2888aea669b1d915c9367021939bc46665987db875ef703dc8ae56708748d94.gz"
+        },
+        {
+          "id": "img_w20260331a5d6678c00bf3",
+          "url": "https://cdn.imweb.me/thumbnail/20260331/2ef93ae50c7bb.png",
+          "sha256": "74f0f8c0cace475d916bca21795cdb542b2dfa1905b240ef65aff0969e989316",
+          "names": [
+            "불닭"
+          ],
+          "evidence": "reviewed-image-evidence/74f0f8c0cace475d916bca21795cdb542b2dfa1905b240ef65aff0969e989316.gz"
+        },
+        {
+          "id": "img_w202603311f1c626cd3fc7",
+          "url": "https://cdn.imweb.me/thumbnail/20260331/fcda36c969b4b.png",
+          "sha256": "bf9746f8f3fa04fa8ff91a628f523fd68c2846eed83a05c7fb8e5987014de268",
+          "names": [
+            "제육"
+          ],
+          "evidence": "reviewed-image-evidence/bf9746f8f3fa04fa8ff91a628f523fd68c2846eed83a05c7fb8e5987014de268.gz"
+        },
+        {
+          "id": "img_w202603314db1919499063",
+          "url": "https://cdn.imweb.me/thumbnail/20260331/182188d6f6b79.png",
+          "sha256": "21fea2cbeecdb7e5b68a9bd2ae8fce6a919e4b1f75230577c65bc2c84612fba4",
+          "names": [
+            "돈까스 카레"
+          ],
+          "evidence": "reviewed-image-evidence/21fea2cbeecdb7e5b68a9bd2ae8fce6a919e4b1f75230577c65bc2c84612fba4.gz"
+        },
+        {
+          "id": "img_w20260331255592d5028ce",
+          "url": "https://cdn.imweb.me/thumbnail/20260331/4201f49a254c0.png",
+          "sha256": "710324d3de41bbf3770ff8b78e458215ceaa9eeeec5f8b4e6e7c3015716be7bd",
+          "names": [
+            "김말이"
+          ],
+          "evidence": "reviewed-image-evidence/710324d3de41bbf3770ff8b78e458215ceaa9eeeec5f8b4e6e7c3015716be7bd.gz"
+        },
+        {
+          "id": "img_w2026033184459110dd12a",
+          "url": "https://cdn.imweb.me/thumbnail/20260331/05fb7ac56fde9.png",
+          "sha256": "996bdf42e38e8a2cb1f27fb62dc08d0e83c6ab9b86a8c67e86f009ca098cbd4b",
+          "names": [
+            "해시브라운"
+          ],
+          "evidence": "reviewed-image-evidence/996bdf42e38e8a2cb1f27fb62dc08d0e83c6ab9b86a8c67e86f009ca098cbd4b.gz"
+        },
+        {
+          "id": "img_w20260331dd88d51577554",
+          "url": "https://cdn.imweb.me/thumbnail/20260331/7afa3c3657206.png",
+          "sha256": "adcdc6024cbbf5e6cd2ddcb272432c9ecc2be70729a84c463401c2067d03ebc4",
+          "names": [
+            "고추튀김"
+          ],
+          "evidence": "reviewed-image-evidence/adcdc6024cbbf5e6cd2ddcb272432c9ecc2be70729a84c463401c2067d03ebc4.gz"
+        },
+        {
+          "id": "img_w202603315d5f864bb73dc",
+          "url": "https://cdn.imweb.me/thumbnail/20260331/2ba246fc5cb56.png",
+          "sha256": "797f164defb879dd5a7b098c5288cb2a98715c78073d9cac018ba31183234b07",
+          "names": [
+            "왕만두"
+          ],
+          "evidence": "reviewed-image-evidence/797f164defb879dd5a7b098c5288cb2a98715c78073d9cac018ba31183234b07.gz"
+        },
+        {
+          "id": "img_w20260331731f6cb104e39",
+          "url": "https://cdn.imweb.me/thumbnail/20260331/8945ea3fd3a11.png",
+          "sha256": "981ddca36bb2c823eacbf1afc5b4e501e41e1056debf31ff65df9435e6b65cbf",
+          "names": [
+            "소떡소떡"
+          ],
+          "evidence": "reviewed-image-evidence/981ddca36bb2c823eacbf1afc5b4e501e41e1056debf31ff65df9435e6b65cbf.gz"
+        },
+        {
+          "id": "img_w202603316e1aa222783eb",
+          "url": "https://cdn.imweb.me/thumbnail/20260331/29f38f8c8bf89.png",
+          "sha256": "aed80fcc5164dae6a80fc10322c8e2282287892262702ebffa1e6aa0bdf8bfa7",
+          "names": [
+            "닭강정"
+          ],
+          "evidence": "reviewed-image-evidence/aed80fcc5164dae6a80fc10322c8e2282287892262702ebffa1e6aa0bdf8bfa7.gz"
+        },
+        {
+          "id": "img_w2026033136b89121a2a9a",
+          "url": "https://cdn.imweb.me/thumbnail/20260331/1bfbe655d02a3.png",
+          "sha256": "989bda810fcdf7aa679017e8c0ac15e29006b83d1602024e53f980f0c315d762",
+          "names": [
+            "까르보 떡볶이"
+          ],
+          "evidence": "reviewed-image-evidence/989bda810fcdf7aa679017e8c0ac15e29006b83d1602024e53f980f0c315d762.gz"
+        },
+        {
+          "id": "img_w2026033129980a9c99818",
+          "url": "https://cdn.imweb.me/thumbnail/20260331/3abd047e1afab.png",
+          "sha256": "77c8345a4616c46a9b30abb6a1e7f40a2cdf3df0f44f446e6838ebcbb74e7cc0",
+          "names": [
+            "어묵볶이"
+          ],
+          "evidence": "reviewed-image-evidence/77c8345a4616c46a9b30abb6a1e7f40a2cdf3df0f44f446e6838ebcbb74e7cc0.gz"
+        },
+        {
+          "id": "img_w20260331065541711a10e",
+          "url": "https://cdn.imweb.me/thumbnail/20260331/a18d9a17e8566.png",
+          "sha256": "ee9f4ee1301adb15f53339c0eb18e0617487d83ed30b9682421c39ac67b1fe4a",
+          "names": [
+            "캠토 떡볶이"
+          ],
+          "evidence": "reviewed-image-evidence/ee9f4ee1301adb15f53339c0eb18e0617487d83ed30b9682421c39ac67b1fe4a.gz"
+        },
+        {
+          "id": "img_w202603311ac935639666d",
+          "url": "https://cdn.imweb.me/thumbnail/20260331/13f9e41fd4ce2.png",
+          "sha256": "38cdeda5301ad07e010f9fd27c64b125ee970c396735a9c121ca38b09e0ce5e6",
+          "names": [
+            "어묵탕"
+          ],
+          "evidence": "reviewed-image-evidence/38cdeda5301ad07e010f9fd27c64b125ee970c396735a9c121ca38b09e0ce5e6.gz"
+        }
+      ]
+    },
+    {
+      "brand": "우지커피",
+      "sourceUrl": "https://www.oozycoffee.com/Vision",
+      "reviewedAt": "2026-10-16T08:02:51.093890+00:00",
+      "reviewMethod": "Exact Korean names visually read in the official images. Unlabelled product photos are not assigned names or product IDs.",
+      "items": [
+        {
+          "id": "gal_item_33004007",
+          "url": "https://cdn.imweb.me/thumbnail/20260623/cd342fd8cf4b1.jpg",
+          "sha256": "fe119be134cb331d009159aa6aeba53d28351f4fd6fb35031973a11cb3bd7994",
+          "names": [
+            "쿨 피치스",
+            "쿨 파인스",
+            "프루티 슈페너",
+            "딥 플랫화이트"
+          ],
+          "evidence": "reviewed-image-evidence/fe119be134cb331d009159aa6aeba53d28351f4fd6fb35031973a11cb3bd7994.gz"
+        },
+        {
+          "id": "gal_item_33004008",
+          "url": "https://cdn.imweb.me/thumbnail/20260623/f4329cb589046.jpg",
+          "sha256": "22446ad0887224b482ba97c86874b7e5de13ed9f429653088e0cff7b6a6a2546",
+          "names": [
+            "웰니스 복숭아·요거 스무디볼",
+            "웰니스 오트 트로피컬 스무디",
+            "웰니스 시트러스 카카오 스무디",
+            "웰니스 파인 민트 스무디",
+            "웰니스 말차 요거트 스무디"
+          ],
+          "evidence": "reviewed-image-evidence/22446ad0887224b482ba97c86874b7e5de13ed9f429653088e0cff7b6a6a2546.gz"
+        },
+        {
+          "id": "gal_item_33960429",
+          "url": "https://cdn.imweb.me/thumbnail/20260916/25703095b4003.jpg",
+          "sha256": "51332473e73c61e754fa0506782bdfd42fa070b1435909d85ca72f37baaa59c0",
+          "names": [
+            "흑임자 모닝커피",
+            "딥 흑임자라떼",
+            "흑임자 밀크티",
+            "흑임자 빅 글레이즈도넛"
+          ],
+          "evidence": "reviewed-image-evidence/51332473e73c61e754fa0506782bdfd42fa070b1435909d85ca72f37baaa59c0.gz"
+        },
+        {
+          "id": "gal_item_33960430",
+          "url": "https://cdn.imweb.me/thumbnail/20260916/fed1a4c7af020.jpg",
+          "sha256": "66ce944abdf360478aac7bb8cf32cb96e3b8e49ca110ee7d3124d8daf14373cf",
+          "names": [
+            "블루베리 팬케이크 라떼",
+            "솔티드 브라운버터 라떼",
+            "빅 글레이즈도넛"
+          ],
+          "evidence": "reviewed-image-evidence/66ce944abdf360478aac7bb8cf32cb96e3b8e49ca110ee7d3124d8daf14373cf.gz"
+        },
+        {
+          "id": "gal_item_33004007_img",
+          "url": "https://cdn.imweb.me/thumbnail/20260623/97e5b0eac31a8.jpg",
+          "sha256": "f97bdaa62ec81dfde62eda542b7d24738d53a60c8818fb9478568ec5a2bea8b7",
+          "names": [],
+          "evidence": "reviewed-image-evidence/f97bdaa62ec81dfde62eda542b7d24738d53a60c8818fb9478568ec5a2bea8b7.gz"
+        },
+        {
+          "id": "gal_item_33004008_img",
+          "url": "https://cdn.imweb.me/thumbnail/20260623/60a3b4314b98b.jpg",
+          "sha256": "92a80dfc6e9c110034403c04c54c09d5ad81846956eacee8d711f53b80ee7c0b",
+          "names": [],
+          "evidence": "reviewed-image-evidence/92a80dfc6e9c110034403c04c54c09d5ad81846956eacee8d711f53b80ee7c0b.gz"
+        },
+        {
+          "id": "gal_item_33960429_img",
+          "url": "https://cdn.imweb.me/thumbnail/20260916/90f87c6fb62ad.jpg",
+          "sha256": "f4d2d406db09f5e9579d0edd865e7db44c267e4923d1fda07009a41f6d52d682",
+          "names": [],
+          "evidence": "reviewed-image-evidence/f4d2d406db09f5e9579d0edd865e7db44c267e4923d1fda07009a41f6d52d682.gz"
+        },
+        {
+          "id": "gal_item_33960430_img",
+          "url": "https://cdn.imweb.me/thumbnail/20260916/2df37d587d6a6.jpg",
+          "sha256": "fb71942fc969755a4b24900942844255353c5cc9872e5a69315714d57aeffe0e",
+          "names": [],
+          "evidence": "reviewed-image-evidence/fb71942fc969755a4b24900942844255353c5cc9872e5a69315714d57aeffe0e.gz"
+        },
+        {
+          "id": "gal_item_33960460",
+          "url": "https://cdn.imweb.me/thumbnail/20260916/d35caba4cec6c.png",
+          "sha256": "d39e15e9ecabb3de480919d7090f7ba199c778ddf7f0cc4e414b410bcdb1dfab",
+          "names": [],
+          "evidence": "reviewed-image-evidence/d39e15e9ecabb3de480919d7090f7ba199c778ddf7f0cc4e414b410bcdb1dfab.gz"
+        },
+        {
+          "id": "gal_item_33960448",
+          "url": "https://cdn.imweb.me/thumbnail/20260916/d960638a742bb.png",
+          "sha256": "cb5df8468efe434efcde5d412cd40a779da3639890c74f352276740f8fd5d147",
+          "names": [],
+          "evidence": "reviewed-image-evidence/cb5df8468efe434efcde5d412cd40a779da3639890c74f352276740f8fd5d147.gz"
+        },
+        {
+          "id": "gal_item_33960462",
+          "url": "https://cdn.imweb.me/thumbnail/20260916/75c14f8a54cd8.png",
+          "sha256": "7498946db05e31a30f027fe446d167b43be0e8241eb5b0a445e3cb9a7e09e2ae",
+          "names": [],
+          "evidence": "reviewed-image-evidence/7498946db05e31a30f027fe446d167b43be0e8241eb5b0a445e3cb9a7e09e2ae.gz"
+        },
+        {
+          "id": "gal_item_33960459",
+          "url": "https://cdn.imweb.me/thumbnail/20260916/5235b784f7e03.png",
+          "sha256": "08adb5b6508aaf4be9bbd4754b52a1f32d17bf1d12f2a786e481ffe6f5424ec6",
+          "names": [],
+          "evidence": "reviewed-image-evidence/08adb5b6508aaf4be9bbd4754b52a1f32d17bf1d12f2a786e481ffe6f5424ec6.gz"
+        },
+        {
+          "id": "gal_item_33960450",
+          "url": "https://cdn.imweb.me/thumbnail/20260916/57737e51f93c9.png",
+          "sha256": "0ec93ab9be380851f63a9960de8ea2e2188a64be8aa60f656a59dcb5e94d8aaa",
+          "names": [],
+          "evidence": "reviewed-image-evidence/0ec93ab9be380851f63a9960de8ea2e2188a64be8aa60f656a59dcb5e94d8aaa.gz"
+        },
+        {
+          "id": "gal_item_33960454",
+          "url": "https://cdn.imweb.me/thumbnail/20260916/912b61bbd30e1.png",
+          "sha256": "00f7ad87a138d888ad171fae854429f51560ef0dbec5bba9b59d84d4512b952e",
+          "names": [],
+          "evidence": "reviewed-image-evidence/00f7ad87a138d888ad171fae854429f51560ef0dbec5bba9b59d84d4512b952e.gz"
+        },
+        {
+          "id": "gal_item_33960463",
+          "url": "https://cdn.imweb.me/thumbnail/20260916/2207d4811dc82.png",
+          "sha256": "9b3876130ae504cfd7a49b0c4077de09349d8530e36a3aad300a2261e6b038d6",
+          "names": [],
+          "evidence": "reviewed-image-evidence/9b3876130ae504cfd7a49b0c4077de09349d8530e36a3aad300a2261e6b038d6.gz"
+        },
+        {
+          "id": "gal_item_33004029",
+          "url": "https://cdn.imweb.me/thumbnail/20260623/19ab19a51697c.png",
+          "sha256": "24f365a482949eb6d5af85cbe304ab2649b2d84d058c4d9bf14bfd573357dace",
+          "names": [],
+          "evidence": "reviewed-image-evidence/24f365a482949eb6d5af85cbe304ab2649b2d84d058c4d9bf14bfd573357dace.gz"
+        },
+        {
+          "id": "gal_item_33004021",
+          "url": "https://cdn.imweb.me/thumbnail/20260623/ed1f2279391cf.png",
+          "sha256": "91ef0567d6783ac34850cb0de2027b3505828b29403443ae3b1c3b8fe8d41584",
+          "names": [],
+          "evidence": "reviewed-image-evidence/91ef0567d6783ac34850cb0de2027b3505828b29403443ae3b1c3b8fe8d41584.gz"
+        },
+        {
+          "id": "gal_item_33004022",
+          "url": "https://cdn.imweb.me/thumbnail/20260623/aed082269e7a9.png",
+          "sha256": "ba9124cb2deff59ff819768b71abd84bfe4550c43b14ad7301e9b2d449e45841",
+          "names": [],
+          "evidence": "reviewed-image-evidence/ba9124cb2deff59ff819768b71abd84bfe4550c43b14ad7301e9b2d449e45841.gz"
+        },
+        {
+          "id": "gal_item_33004023",
+          "url": "https://cdn.imweb.me/thumbnail/20260623/057435b0b2d3d.png",
+          "sha256": "8d447dcd2a087cb4efad05f78946794425fa01d8ec7b6f702d9e4a25d6156839",
+          "names": [],
+          "evidence": "reviewed-image-evidence/8d447dcd2a087cb4efad05f78946794425fa01d8ec7b6f702d9e4a25d6156839.gz"
+        },
+        {
+          "id": "gal_item_33004025",
+          "url": "https://cdn.imweb.me/thumbnail/20260623/dfeff511c14ca.png",
+          "sha256": "2cc630061d9e463229bc416ae10b50146a1ff82bdd606c9d0ca9b509a5065c12",
+          "names": [],
+          "evidence": "reviewed-image-evidence/2cc630061d9e463229bc416ae10b50146a1ff82bdd606c9d0ca9b509a5065c12.gz"
+        },
+        {
+          "id": "gal_item_33004024",
+          "url": "https://cdn.imweb.me/thumbnail/20260623/68b9daccdd84b.png",
+          "sha256": "f235c016ac42fd30f1d24d5aba09d841a6a0ebc452303599dbdcb60b87074530",
+          "names": [],
+          "evidence": "reviewed-image-evidence/f235c016ac42fd30f1d24d5aba09d841a6a0ebc452303599dbdcb60b87074530.gz"
+        },
+        {
+          "id": "gal_item_33004026",
+          "url": "https://cdn.imweb.me/thumbnail/20260623/8b98061212aaf.png",
+          "sha256": "c6baa07422395fd13412847de2d2f9ad6bfc846c4a387e66fb6b4b29be3f1391",
+          "names": [],
+          "evidence": "reviewed-image-evidence/c6baa07422395fd13412847de2d2f9ad6bfc846c4a387e66fb6b4b29be3f1391.gz"
+        },
+        {
+          "id": "gal_item_33004027",
+          "url": "https://cdn.imweb.me/thumbnail/20260623/eafc05f2b2fbe.png",
+          "sha256": "a4a13362e0b7be9b1e82d0d447c739505cf9c419ab800ea82064effc3cc01672",
+          "names": [],
+          "evidence": "reviewed-image-evidence/a4a13362e0b7be9b1e82d0d447c739505cf9c419ab800ea82064effc3cc01672.gz"
+        },
+        {
+          "id": "gal_item_33004028",
+          "url": "https://cdn.imweb.me/thumbnail/20260623/30f0243675717.png",
+          "sha256": "63992cf44fec83e0f39bb953f5b1e377970671a8b1c441a3d62c3f9fb2123ff8",
+          "names": [],
+          "evidence": "reviewed-image-evidence/63992cf44fec83e0f39bb953f5b1e377970671a8b1c441a3d62c3f9fb2123ff8.gz"
+        }
+      ]
+    },
+    {
+      "brand": "청년다방",
+      "sourceUrl": "https://youngdabang.com/html/menu_1.html",
+      "reviewedAt": "2026-10-16T12:05:07.573489+00:00",
+      "reviewMethod": "Exact printed names/flavour options read from all three official menu-board images. No photo identification, invented product IDs, nutrition or portion weights. Basic dishes are collected without enumerating optional sauces, heat levels or set combinations.",
+      "excluded": [
+        {
+          "type": "customizable sets and toppings",
+          "reason": "Selections are not uniquely specified standalone finished products; no invented combinations or nutrition."
+        },
+        {
+          "name": "치즈폭포순살 떡볶이",
+          "reason": "Existing static entry 치즈폭포떡볶이 has no official product ID. Preserve it and hold the uncertain alias instead of creating a second identity."
+        }
+      ],
+      "items": [
+        {
+          "id": "menu_table1.jpg",
+          "url": "https://youngdabang.com/img/page/menu/01/menu_table1.jpg",
+          "sha256": "c26eb702d0f13b314f12bfaf609b75e59b714b09448a70fa200045b9c9cbc591",
+          "names": [
+            "아메리카노",
+            "통큰 커피",
+            "카페라떼",
+            "바닐라라떼",
+            "카라멜 마끼아또",
+            "복숭커피",
+            "통큰 복숭커피",
+            "카페모카",
+            "아이스티 (복숭아)",
+            "아이스티 (레몬)",
+            "에이드 (한라봉)",
+            "에이드 (청포도)",
+            "에이드 (열대과일)",
+            "통큰 아이스티 (복숭아)",
+            "통큰 아이스티 (레몬)",
+            "통큰 에이드 (한라봉)",
+            "통큰 에이드 (청포도)",
+            "통큰 에이드 (열대과일)",
+            "핫초코",
+            "아이스초코",
+            "미숫가루",
+            "쿨다방 (파인애플)",
+            "쿨다방 (복숭아)",
+            "쿨다방 (사과)"
+          ],
+          "evidence": "reviewed-image-evidence/c26eb702d0f13b314f12bfaf609b75e59b714b09448a70fa200045b9c9cbc591.gz"
+        },
+        {
+          "id": "menu_table2.jpg",
+          "url": "https://youngdabang.com/img/page/menu/01/menu_table2.jpg",
+          "sha256": "19329ef0664a65c444ba4d5aa467fa17e69b7eec91311a72752c994404f9c0c4",
+          "names": [
+            "대패삼겹 떡볶이",
+            "크림차돌 떡볶이",
+            "떡튀순 떡볶이",
+            "불향차돌 떡볶이",
+            "통큰오짱 떡볶이",
+            "마라로제 떡볶이",
+            "차새대 떡볶이",
+            "통통순살치킨",
+            "허니간장순살치킨",
+            "꼬지어묵탕",
+            "버터갈릭 감자튀김",
+            "핫버터갈릭 옥수수튀김",
+            "모듬튀김",
+            "찰순대",
+            "반반 핫도그",
+            "멕시칸돈가스",
+            "경양식돈가스",
+            "파인스윗돈가스",
+            "스파이시돈가스",
+            "반반돈가스",
+            "치즈돈가스",
+            "치킨마요컵밥",
+            "참치마요컵밥",
+            "치즈밥",
+            "김가루 주먹밥",
+            "날치알볶음밥",
+            "공기밥"
+          ],
+          "evidence": "reviewed-image-evidence/19329ef0664a65c444ba4d5aa467fa17e69b7eec91311a72752c994404f9c0c4.gz"
+        },
+        {
+          "id": "menu_table3.jpg",
+          "url": "https://youngdabang.com/img/page/menu/01/menu_table3.jpg",
+          "sha256": "33b72cc4a59675b867a5b97912d3e43bd0238449141a744a0f79982d2499caa5",
+          "names": [
+            "뼈대있는 떡볶이",
+            "말차 크림 떡볶이",
+            "말차 버터갈릭 감자튀김",
+            "아이스 말차",
+            "아이스 말차라떼",
+            "1인 떡튀순떡볶이",
+            "1인 차돌떡볶이",
+            "1인 오짱떡볶이",
+            "1인 치즈떡볶이",
+            "기본떡볶이"
+          ],
+          "evidence": "reviewed-image-evidence/33b72cc4a59675b867a5b97912d3e43bd0238449141a744a0f79982d2499caa5.gz"
+        }
+      ]
+    }
+  ]
+}

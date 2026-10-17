@@ -6,6 +6,66 @@ from franchise_daily_sync import CONFIG, ROOT, candidates, fetch, fetch_source, 
 from franchise_pagination import additional_pages
 
 class CompletionTest(unittest.TestCase):
+    def test_oozy_new_image_only_caption_is_withheld(self):
+        from franchise_brand_adapters import reviewed_rows
+        from franchise_pagination import confirmed_empty_source
+        brand=next(b for b in self.brands if b['name']=='우지커피')
+        source=next(s for s in brand['sources'] if s['key']=='NEW')
+        brand=dict(brand,adapter=source['adapter'],sourceUrl=source['url'])
+        # Official /Vision GET (2026-10-12): image references this empty caption.
+        markup='''<div class="_item item_gallary " style="display: ; position: relative;" data-org="S202112085ca3700daccb4/69210e05582f4.jpg">
+                    <div id="caption_33004007" style="display:none">
+                        <h4></h4><p></p>
+                    </div>
+
+                    <div class="item_container _item_container" ><div class="img_wrap _img_wrap _lightbox_item cursor_pointer no_content" id="gal_item_33004007" style="background-image: url(https://cdn.imweb.me/thumbnail/20260623/cd342fd8cf4b1.jpg);; " data-bg="url(https://cdn.imweb.me/thumbnail/20260623/cd342fd8cf4b1.jpg)" data-src="https://cdn.imweb.me/thumbnail/20260623/b4a2a76d84d1f.jpg" data-sub-html="#caption_33004007" data-no="0"></div><div class="text_wrap _text_wrap hide_text_wrap " id="gal_item_33004007_txt" data-src="https://cdn.imweb.me/thumbnail/20260623/b4a2a76d84d1f.jpg" data-sub-html="#caption_33004007" style="display: none"><p class="title"></p></div><div class="slide_overlay"></div></div>                </div>'''
+        from franchise_menu_images import ImageReviewRequired
+        # One unverified/partial image is still withheld; only a complete,
+        # hash-verified current official inventory can use reviewed labels.
+        with self.assertRaises(ImageReviewRequired):reviewed_rows(brand,markup)
+        with self.assertRaises(ImageReviewRequired):candidates(brand,markup,'2026-10-12T00:00:00Z')
+        self.assertFalse(confirmed_empty_source(brand,source,markup))
+
+    def camto_markup(self,items=None,card_count=2):
+        cards=''.join('<div class="_img_box"><img alt=""><a href="javascript:SITE.openModalMenu(\'m20260414000000000000'+str(i)+'\', \'m20260313858f191fd3fae\');">이미지 맵</a></div>' for i in range(card_count))
+        markup='<html><main>'+cards+'</main></html>'
+        if items is not None:markup+='<script id="recorded-camto-toasts" type="application/json">'+json.dumps(items,ensure_ascii=False)+'</script>'
+        return markup
+    def test_camto_official_modal_identity_and_existing_data_preserved(self):
+        brand=dict(next(b for b in self.brands if b['name']=='캠토토스트'),adapter='camto-toast-modal',sourceUrl='https://camtotoast.com/44')
+        items=[dict(id='m20260414000000000000'+str(i),title=title) for i,title in enumerate(['메뉴(토스트:햄치즈)','메뉴(토스트:모짜햄치즈) '])]
+        markup=self.camto_markup(items)
+        first=candidates(brand,markup,'2026-10-10T00:00:00Z')
+        repeat=candidates(brand,self.camto_markup(list(reversed(items))),'2026-10-10T01:00:00Z')
+        self.assertEqual({m['id'] for m in first},{m['id'] for m in repeat})
+        self.assertEqual(['햄치즈','모짜햄치즈'],[m['name'] for m in first])
+        self.assertTrue(all(m['energyKcal'] is None for m in first))
+        prior=dict(first[0],externalId='',energyKcal=400,servingAmount=180,servingUnit='g',nutritionSourceUrl=brand['sourceUrl'])
+        from franchise_daily_sync import stable_id
+        prior['id']=stable_id(prior['brandId'],'',prior['name'],prior['category'])
+        merged,counts=merge(dict(menus=[prior]),[dict(brandId=brand['brandId'],menus=first)],self.brands,[])
+        self.assertEqual(prior,merged[0]);self.assertEqual(1,counts['duplicateCount'])
+    def test_camto_incomplete_or_guessed_modal_names_are_withheld(self):
+        from franchise_brand_adapters import camto_toast_rows,camto_toast_inventory
+        items=[dict(id='m202604140000000000000',title='메뉴(토스트:햄치즈)')]
+        for markup in [self.camto_markup(),self.camto_markup(items),self.camto_markup(items*2)]:
+            with self.assertRaises(AssertionError):camto_toast_rows(markup,'https://camtotoast.com/44')
+        with self.assertRaises(AssertionError):camto_toast_inventory('<html><main><div class="_img_box"><img alt="햄치즈"><a>이미지 맵</a></div></main></html>')
+        with self.assertRaises(AssertionError):camto_toast_rows(self.camto_markup([dict(id=items[0]['id'],title='사이드 메뉴 (치킨마요)')],1),'https://camtotoast.com/44')
+    def test_camto_final_close_denial_and_200_challenge_stop_collection(self):
+        from unittest.mock import MagicMock
+        from franchise_browser import camto_toast_modals,PublicAccessDenied
+        for status in (401,403,429,200):
+            with self.subTest(status=status):
+                page=MagicMock();link=MagicMock();dialog=MagicMock();heading=MagicMock();close=MagicMock();body=MagicMock()
+                listener=[];page.on.side_effect=lambda event,callback:listener.append(callback)
+                link.count.return_value=1;heading.count.return_value=1;heading.text_content.return_value='메뉴(토스트:햄치즈)'
+                close.count.return_value=1;dialog.inner_text.return_value='닫기';body.inner_text.return_value='verify you are human' if status==200 else '메뉴'
+                dialog.locator.side_effect=lambda selector:heading if selector=='.modal-header h4' else close
+                page.locator.side_effect=lambda selector:dialog if selector=='.modal_site_modal_menu:visible' else body if selector=='body' else link
+                if status!=200:close.click.side_effect=lambda **kwargs:listener[0](type('Response',(),dict(url='https://camtotoast.com/public-modal',status=status))())
+                with self.assertRaises(PublicAccessDenied if status!=200 else ValueError):camto_toast_modals(page,self.camto_markup(card_count=1))
+                page.remove_listener.assert_called_once()
     def setUp(self):
         self.brands=json.loads(CONFIG.read_text(encoding='utf-8'))
         self.brand=next(b for b in self.brands if b['name']=='설빙')

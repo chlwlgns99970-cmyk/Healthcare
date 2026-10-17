@@ -1,0 +1,83 @@
+{
+  "previousReport": "docs/franchise-five-validation-20261017.json",
+  "sources": [
+    {
+      "url": "https://tanghuokungfu.co.kr/default/brand/index.php",
+      "checkedAt": "2026-10-17T09:49:39.581357+00:00",
+      "status": 200,
+      "finalUrl": "https://tanghuokungfu.co.kr/default/brand/index.php",
+      "sha256": "9030b9fe3521a255096ca0897a1e2092efd8113e88e21a86027a0f63cd419b13",
+      "file": "9030b9fe3521a255096ca0897a1e2092efd8113e88e21a86027a0f63cd419b13.html",
+      "bytes": 54854,
+      "encoding": null,
+      "brand": "탕화쿵푸",
+      "officialMenuNames": [
+        "마라비빔",
+        "마라샹궈",
+        "마라탕",
+        "토마토 마라탕",
+        "꿔바로우"
+      ],
+      "reason": "Five official menu names observed in ordinary browser. Configurable meal categories; no exact product-ID/size/serving specification. Do not turn ingredient choices into fixed meal variants."
+    },
+    {
+      "url": "https://tanghuokungfu.co.kr/default/brand/tidings/news.php?com_board_basic=read_form&com_board_id=13&com_board_idx=48&com_board_page=1&com_board_search_code=&com_board_search_value1=&com_board_search_value2=",
+      "checkedAt": "2026-10-17T09:49:39.616872+00:00",
+      "status": 200,
+      "finalUrl": "https://tanghuokungfu.co.kr/default/brand/tidings/news.php?com_board_basic=read_form&com_board_id=13&com_board_idx=48&com_board_page=1&com_board_search_code=&com_board_search_value1=&com_board_search_value2=",
+      "sha256": "9ed245db045767ac29e520d8bb9495249adb86616cc2b1ee7b1805d9cb435fca",
+      "file": "9ed245db045767ac29e520d8bb9495249adb86616cc2b1ee7b1805d9cb435fca.html",
+      "bytes": 30136,
+      "encoding": null,
+      "brand": "탕화쿵푸",
+      "officialMenuNames": [
+        "크림새우",
+        "연근완자튀김",
+        "연근후라이"
+      ],
+      "reason": "Official company repost dated2026-08-03 announces phased branch rollout. No per-item product ID, size, weight or count; not proof of a nationwide fixed variant.",
+      "visibleText": "탕화쿵푸마라탕 브랜드 홈 브랜드 스토리 메뉴 매장찾기 탕화 소식 공지사항 유튜브 SHORTS SNS NEWS 이벤트 고객의 소리 제휴문의 사회 공헌 창업 창업문의 1577-4382 브랜드 홈 브랜드 스토리 메뉴 매장찾기 탕화소식 공지사항 유튜브 SHORTS SNS NEWS 이벤트 고객의 소리 제휴문의 사회 공헌 창업 창업문의 1577-4382 NEWS 탕화쿵푸가 만들어가는 특별한 이야기,그 모든 여정을 확인하세요. 공지사항 유튜브 SHORTS SNS NEWS 이벤트 NEWS 탕화쿵푸의 발자취를 전하는 공간 제목 탕화쿵푸마라탕, 크림새우·연근완자튀김·연근후라이 사이드 메뉴 3종 출시 작성자 tanghwakongfu515 작성일자 2026-08-03 국내 마라탕 프랜차이즈 탕화쿵푸마라탕이 크림새우, 연근완자튀김, 연근후라이 등 사이드 메뉴 3종을 새롭게 출시했다고 밝혔다.이번 신메뉴는 마라탕과 함께 즐길 수 있는 메뉴 구성을 확대하고 고객의 선택 폭을 넓히기 위해 기획됐다. 부드럽고 상큼한 맛부터 바삭하고 담백한 맛까지 서로 다른 맛과 식감으로 구성해 취향에 따라 선택할 수 있도록 했다.이번 메뉴 확대는 마라탕 중심의 구성에 다양한 사이드 메뉴를 더해 식사 선택지를 넓히는 데 초점을 맞췄다.‘크림새우’는 바삭하게 튀긴 새우에 부드럽고 상큼한 레몬크림소스를 더한 메뉴다. 크림소스의 산뜻한 풍미가 마라탕의 얼얼하고 매콤한 맛을 완화해 함께 곁들이기 좋다는 것이 회사 측 설명이다.‘연근완자튀김’은 고기 완자를 연근으로 감싸 튀긴 메뉴다. 연근의 아삭한 식감과 완자의 맛을 함께 느낄 수 있도록 구성했으며, 마라탕과 곁들이는 사이드 메뉴로 선보였다.‘연근후라이’는 감자튀김 형태를 연근으로 재해석한 메뉴다. 연근 특유의 담백한 풍미와 식감을 살렸으며, 간식으로 즐기거나 마라탕과 함께 곁들일 수 있도록 구성했다.이번 사이드 메뉴 3종은 직영점을 시작으로 전국 가맹점에 순차적으로 출시될 예정이다.탕화쿵푸마라탕은 고객의 취향과 외식 트렌드를 반영한 신메뉴 개발을 이어가고 있다. 회사는 기존 마라탕 중심의 메뉴 구성에 사이드 메뉴를 추가해 고객 선택지를 확대하고, 가맹점의 메뉴 운영 폭도 넓힐 수 있을 것으로 보고 있다.탕화쿵푸마라탕 관계자는 “이번 사이드 메뉴 3종은 마라탕의 매콤하고 얼얼한 맛과 조화를 이루면서도 각 메뉴의 특징이 드러나도록 개발했다”며 “앞으로도 고객의 취향과 외식 트렌드를 반영한 신메뉴를 지속적으로 선보일 계획”이라고 말했다.한편 탕화쿵푸마라탕은 고객이 재료와 맵기, 맛을 직접 선택하는 커스터마이징형 주문 방식을 운영하고 있다. 전국 가맹점 운영망과 연구개발 시스템을 바탕으로 K-마라탕과 다양한 메뉴를 선보이고 있다고 회사는 설명했다.출처 : 이투뉴스(http://www.e2news.com) 개인정보처리방침 이메일무단수집거부 대표: 텅페이롱, 위홍타오 | 사업자등록번호: 424-86-01247 주소: 서울 강남구 도산대로 330, 서림빌딩 9층 | 이메일: tanghuokungfukorea@gmail.com | 팩스: 02-511-6665 COPYRIGHT © 탕화쿵푸마라탕 본사 - 한국탕화쿵푸 주식회사 ALL RIGHTS RESERVED."
+    },
+    {
+      "url": "https://www.chaesundang.co.kr/sub/01/board/board_content.asp?b_type=&idx=321&page=1&t_name=BOARD2",
+      "checkedAt": "2026-10-17T09:49:39.635875+00:00",
+      "error": "HTTPError",
+      "reason": "Official company-hosted2018 article found by search is404 on direct GET. Search cache is not a current official product/variant catalog.",
+      "brand": "채선당"
+    },
+    {
+      "brand": "놀부부대찌개",
+      "url": "https://order.kakao.com/brands/NOLBOO",
+      "browserFinalUrl": "https://order.kakao.com/etc/bridge?next=%252Fbrands%252FNOLBOO",
+      "reason": "Ordinary Edge browser displays 카카오톡으로 연결합니다 / 주문하기 서비스는 카카오톡 연결 후 서비스 이용이 가능합니다. No Kakao client/authentication bypass or repeated timed-out homepage request."
+    },
+    {
+      "brand": "국대떡볶이",
+      "url": "https://kukde.kr/",
+      "reason": "Ordinary Edge company homepage identifies publisher as (주)국대에프앤비, 사업자114-86-82440. Navigation contains brand/franchise/menu/contact only; no official downloadable menu/product specifications. No third-party menu assigned as official."
+    },
+    {
+      "brand": "청년피자",
+      "url": "https://www.youngmanpizza.co.kr/sub08/print_ad.php",
+      "reason": "Official BSB FOOD print-ad gallery inspected in ordinary browser; two newest printed name/size posters match already-registered 성수동 애플베이컨/옥수동 새우집. No new registrations or nutrition from those posters; image IDs are not product IDs. Additional exact indexed product-detail pages separately validated.",
+      "inspectedImages": [
+        {
+          "url": "https://www.youngmanpizza.co.kr/upload/Photo/69ae1d99a7ee1.jpg",
+          "status": 200,
+          "finalUrl": "https://www.youngmanpizza.co.kr/upload/Photo/69ae1d99a7ee1.jpg",
+          "sha256": "d0e745d1d7d1dec935fcf9d90474feafa461d2535460611e8d6702ca4cb8e7ce",
+          "file": "d0e745d1d7d1dec935fcf9d90474feafa461d2535460611e8d6702ca4cb8e7ce.jpg",
+          "bytes": 1426143
+        },
+        {
+          "url": "https://www.youngmanpizza.co.kr/upload/Photo/69ae1d813bbc6.jpg",
+          "status": 200,
+          "finalUrl": "https://www.youngmanpizza.co.kr/upload/Photo/69ae1d813bbc6.jpg",
+          "sha256": "155980216480dded04e37417f68cb1a70a5769af423202207bfea5aaa18da366",
+          "file": "155980216480dded04e37417f68cb1a70a5769af423202207bfea5aaa18da366.jpg",
+          "bytes": 1834135
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,389 @@
+[
+  {
+    "menuId": "remote-franchise-220331c935742a58cd51f5bd",
+    "field": "sugarsGrams",
+    "value": 37.0,
+    "sourceUrl": "https://www.tlj.co.kr/product/detail.asp?gubun=result&prod_num=1265",
+    "checkedAt": "2026-10-16T06:37:21.496374+00:00",
+    "sourceSha256": "4faf5c4d45ab3428eaf4fa64015d389d5f8827cb3dc972da288850d6eda09984",
+    "capture": "evidence/4faf5c4d45ab3428eaf4fa64015d389d5f8827cb3dc972da288850d6eda09984.gz"
+  },
+  {
+    "menuId": "remote-franchise-220331c935742a58cd51f5bd",
+    "field": "saturatedFatGrams",
+    "value": 0.0,
+    "sourceUrl": "https://www.tlj.co.kr/product/detail.asp?gubun=result&prod_num=1265",
+    "checkedAt": "2026-10-16T06:37:21.496374+00:00",
+    "sourceSha256": "4faf5c4d45ab3428eaf4fa64015d389d5f8827cb3dc972da288850d6eda09984",
+    "capture": "evidence/4faf5c4d45ab3428eaf4fa64015d389d5f8827cb3dc972da288850d6eda09984.gz"
+  },
+  {
+    "menuId": "remote-franchise-59949674c55f0c6b1eb0190b",
+    "field": "sugarsGrams",
+    "value": 10.0,
+    "sourceUrl": "https://www.tlj.co.kr/product/detail.asp?gubun=result&prod_num=1264",
+    "checkedAt": "2026-10-16T06:37:21.496374+00:00",
+    "sourceSha256": "479fe343b3287e16b7de51b3a7adffae0d9ab107309ca9bd28141c1179427a26",
+    "capture": "evidence/479fe343b3287e16b7de51b3a7adffae0d9ab107309ca9bd28141c1179427a26.gz"
+  },
+  {
+    "menuId": "remote-franchise-59949674c55f0c6b1eb0190b",
+    "field": "saturatedFatGrams",
+    "value": 0.0,
+    "sourceUrl": "https://www.tlj.co.kr/product/detail.asp?gubun=result&prod_num=1264",
+    "checkedAt": "2026-10-16T06:37:21.496374+00:00",
+    "sourceSha256": "479fe343b3287e16b7de51b3a7adffae0d9ab107309ca9bd28141c1179427a26",
+    "capture": "evidence/479fe343b3287e16b7de51b3a7adffae0d9ab107309ca9bd28141c1179427a26.gz"
+  },
+  {
+    "menuId": "remote-franchise-c5f3b5ddf45ccefa08c61f38",
+    "field": "sugarsGrams",
+    "value": 10.0,
+    "sourceUrl": "https://www.tlj.co.kr/product/detail.asp?gubun=result&prod_num=1266",
+    "checkedAt": "2026-10-16T06:37:21.496374+00:00",
+    "sourceSha256": "9032ca00318231700179eb0790b4838df30448b2215b29c7414a2ad9ee1e318a",
+    "capture": "evidence/9032ca00318231700179eb0790b4838df30448b2215b29c7414a2ad9ee1e318a.gz"
+  },
+  {
+    "menuId": "remote-franchise-c5f3b5ddf45ccefa08c61f38",
+    "field": "saturatedFatGrams",
+    "value": 0.0,
+    "sourceUrl": "https://www.tlj.co.kr/product/detail.asp?gubun=result&prod_num=1266",
+    "checkedAt": "2026-10-16T06:37:21.496374+00:00",
+    "sourceSha256": "9032ca00318231700179eb0790b4838df30448b2215b29c7414a2ad9ee1e318a",
+    "capture": "evidence/9032ca00318231700179eb0790b4838df30448b2215b29c7414a2ad9ee1e318a.gz"
+  },
+  {
+    "menuId": "remote-franchise-d7136d50079adfeeff41b532",
+    "field": "sugarsGrams",
+    "value": 38.0,
+    "sourceUrl": "https://www.tlj.co.kr/product/detail.asp?gubun=result&prod_num=1267",
+    "checkedAt": "2026-10-16T06:37:21.496374+00:00",
+    "sourceSha256": "a03ee603f05cdfd311ca20344a054ab3f5f003366992ad1dbdadbff119f712df",
+    "capture": "evidence/a03ee603f05cdfd311ca20344a054ab3f5f003366992ad1dbdadbff119f712df.gz"
+  },
+  {
+    "menuId": "remote-franchise-d7136d50079adfeeff41b532",
+    "field": "saturatedFatGrams",
+    "value": 0.0,
+    "sourceUrl": "https://www.tlj.co.kr/product/detail.asp?gubun=result&prod_num=1267",
+    "checkedAt": "2026-10-16T06:37:21.496374+00:00",
+    "sourceSha256": "a03ee603f05cdfd311ca20344a054ab3f5f003366992ad1dbdadbff119f712df",
+    "capture": "evidence/a03ee603f05cdfd311ca20344a054ab3f5f003366992ad1dbdadbff119f712df.gz"
+  },
+  {
+    "menuId": "remote-franchise-b6f75843e8742abdb42ed2f0",
+    "field": "energyKcal",
+    "value": 400.0,
+    "sourceUrl": "https://www.tlj.co.kr/product/detail.asp?gubun=result&prod_num=5622",
+    "checkedAt": "2026-10-16T06:37:21.496374+00:00",
+    "sourceSha256": "8c4f988ab914a77475e96b747086ae552b4f8b3a91db485a87b3332f3c59c90b",
+    "capture": "evidence/8c4f988ab914a77475e96b747086ae552b4f8b3a91db485a87b3332f3c59c90b.gz"
+  },
+  {
+    "menuId": "remote-franchise-b6f75843e8742abdb42ed2f0",
+    "field": "proteinGrams",
+    "value": 8.0,
+    "sourceUrl": "https://www.tlj.co.kr/product/detail.asp?gubun=result&prod_num=5622",
+    "checkedAt": "2026-10-16T06:37:21.496374+00:00",
+    "sourceSha256": "8c4f988ab914a77475e96b747086ae552b4f8b3a91db485a87b3332f3c59c90b",
+    "capture": "evidence/8c4f988ab914a77475e96b747086ae552b4f8b3a91db485a87b3332f3c59c90b.gz"
+  },
+  {
+    "menuId": "remote-franchise-b6f75843e8742abdb42ed2f0",
+    "field": "sodiumMilligrams",
+    "value": 290.0,
+    "sourceUrl": "https://www.tlj.co.kr/product/detail.asp?gubun=result&prod_num=5622",
+    "checkedAt": "2026-10-16T06:37:21.496374+00:00",
+    "sourceSha256": "8c4f988ab914a77475e96b747086ae552b4f8b3a91db485a87b3332f3c59c90b",
+    "capture": "evidence/8c4f988ab914a77475e96b747086ae552b4f8b3a91db485a87b3332f3c59c90b.gz"
+  },
+  {
+    "menuId": "remote-franchise-b6f75843e8742abdb42ed2f0",
+    "field": "sugarsGrams",
+    "value": 19.0,
+    "sourceUrl": "https://www.tlj.co.kr/product/detail.asp?gubun=result&prod_num=5622",
+    "checkedAt": "2026-10-16T06:37:21.496374+00:00",
+    "sourceSha256": "8c4f988ab914a77475e96b747086ae552b4f8b3a91db485a87b3332f3c59c90b",
+    "capture": "evidence/8c4f988ab914a77475e96b747086ae552b4f8b3a91db485a87b3332f3c59c90b.gz"
+  },
+  {
+    "menuId": "remote-franchise-b6f75843e8742abdb42ed2f0",
+    "field": "saturatedFatGrams",
+    "value": 11.0,
+    "sourceUrl": "https://www.tlj.co.kr/product/detail.asp?gubun=result&prod_num=5622",
+    "checkedAt": "2026-10-16T06:37:21.496374+00:00",
+    "sourceSha256": "8c4f988ab914a77475e96b747086ae552b4f8b3a91db485a87b3332f3c59c90b",
+    "capture": "evidence/8c4f988ab914a77475e96b747086ae552b4f8b3a91db485a87b3332f3c59c90b.gz"
+  },
+  {
+    "menuId": "remote-franchise-a8b0e315b0d3b1bc968efb6b",
+    "field": "energyKcal",
+    "value": 325.0,
+    "sourceUrl": "https://www.tlj.co.kr/product/detail.asp?gubun=result&prod_num=5623",
+    "checkedAt": "2026-10-16T06:37:21.496374+00:00",
+    "sourceSha256": "8fd06794baac45103e8805377c7ad64570946c15a32d5842ef79de88195913c6",
+    "capture": "evidence/8fd06794baac45103e8805377c7ad64570946c15a32d5842ef79de88195913c6.gz"
+  },
+  {
+    "menuId": "remote-franchise-a8b0e315b0d3b1bc968efb6b",
+    "field": "proteinGrams",
+    "value": 3.0,
+    "sourceUrl": "https://www.tlj.co.kr/product/detail.asp?gubun=result&prod_num=5623",
+    "checkedAt": "2026-10-16T06:37:21.496374+00:00",
+    "sourceSha256": "8fd06794baac45103e8805377c7ad64570946c15a32d5842ef79de88195913c6",
+    "capture": "evidence/8fd06794baac45103e8805377c7ad64570946c15a32d5842ef79de88195913c6.gz"
+  },
+  {
+    "menuId": "remote-franchise-a8b0e315b0d3b1bc968efb6b",
+    "field": "sodiumMilligrams",
+    "value": 110.0,
+    "sourceUrl": "https://www.tlj.co.kr/product/detail.asp?gubun=result&prod_num=5623",
+    "checkedAt": "2026-10-16T06:37:21.496374+00:00",
+    "sourceSha256": "8fd06794baac45103e8805377c7ad64570946c15a32d5842ef79de88195913c6",
+    "capture": "evidence/8fd06794baac45103e8805377c7ad64570946c15a32d5842ef79de88195913c6.gz"
+  },
+  {
+    "menuId": "remote-franchise-a8b0e315b0d3b1bc968efb6b",
+    "field": "sugarsGrams",
+    "value": 23.0,
+    "sourceUrl": "https://www.tlj.co.kr/product/detail.asp?gubun=result&prod_num=5623",
+    "checkedAt": "2026-10-16T06:37:21.496374+00:00",
+    "sourceSha256": "8fd06794baac45103e8805377c7ad64570946c15a32d5842ef79de88195913c6",
+    "capture": "evidence/8fd06794baac45103e8805377c7ad64570946c15a32d5842ef79de88195913c6.gz"
+  },
+  {
+    "menuId": "remote-franchise-a8b0e315b0d3b1bc968efb6b",
+    "field": "saturatedFatGrams",
+    "value": 3.9,
+    "sourceUrl": "https://www.tlj.co.kr/product/detail.asp?gubun=result&prod_num=5623",
+    "checkedAt": "2026-10-16T06:37:21.496374+00:00",
+    "sourceSha256": "8fd06794baac45103e8805377c7ad64570946c15a32d5842ef79de88195913c6",
+    "capture": "evidence/8fd06794baac45103e8805377c7ad64570946c15a32d5842ef79de88195913c6.gz"
+  },
+  {
+    "menuId": "remote-franchise-3ce40a92d69942329640ee67",
+    "field": "energyKcal",
+    "value": 410.0,
+    "sourceUrl": "https://www.tlj.co.kr/product/detail.asp?gubun=result&prod_num=5624",
+    "checkedAt": "2026-10-16T06:37:21.496374+00:00",
+    "sourceSha256": "3d966261aa1eb6d63e6d52edbda61ef3f5b037370d702caf402f6e8977053dc5",
+    "capture": "evidence/3d966261aa1eb6d63e6d52edbda61ef3f5b037370d702caf402f6e8977053dc5.gz"
+  },
+  {
+    "menuId": "remote-franchise-3ce40a92d69942329640ee67",
+    "field": "proteinGrams",
+    "value": 11.0,
+    "sourceUrl": "https://www.tlj.co.kr/product/detail.asp?gubun=result&prod_num=5624",
+    "checkedAt": "2026-10-16T06:37:21.496374+00:00",
+    "sourceSha256": "3d966261aa1eb6d63e6d52edbda61ef3f5b037370d702caf402f6e8977053dc5",
+    "capture": "evidence/3d966261aa1eb6d63e6d52edbda61ef3f5b037370d702caf402f6e8977053dc5.gz"
+  },
+  {
+    "menuId": "remote-franchise-3ce40a92d69942329640ee67",
+    "field": "sodiumMilligrams",
+    "value": 550.0,
+    "sourceUrl": "https://www.tlj.co.kr/product/detail.asp?gubun=result&prod_num=5624",
+    "checkedAt": "2026-10-16T06:37:21.496374+00:00",
+    "sourceSha256": "3d966261aa1eb6d63e6d52edbda61ef3f5b037370d702caf402f6e8977053dc5",
+    "capture": "evidence/3d966261aa1eb6d63e6d52edbda61ef3f5b037370d702caf402f6e8977053dc5.gz"
+  },
+  {
+    "menuId": "remote-franchise-3ce40a92d69942329640ee67",
+    "field": "sugarsGrams",
+    "value": 11.0,
+    "sourceUrl": "https://www.tlj.co.kr/product/detail.asp?gubun=result&prod_num=5624",
+    "checkedAt": "2026-10-16T06:37:21.496374+00:00",
+    "sourceSha256": "3d966261aa1eb6d63e6d52edbda61ef3f5b037370d702caf402f6e8977053dc5",
+    "capture": "evidence/3d966261aa1eb6d63e6d52edbda61ef3f5b037370d702caf402f6e8977053dc5.gz"
+  },
+  {
+    "menuId": "remote-franchise-3ce40a92d69942329640ee67",
+    "field": "saturatedFatGrams",
+    "value": 6.0,
+    "sourceUrl": "https://www.tlj.co.kr/product/detail.asp?gubun=result&prod_num=5624",
+    "checkedAt": "2026-10-16T06:37:21.496374+00:00",
+    "sourceSha256": "3d966261aa1eb6d63e6d52edbda61ef3f5b037370d702caf402f6e8977053dc5",
+    "capture": "evidence/3d966261aa1eb6d63e6d52edbda61ef3f5b037370d702caf402f6e8977053dc5.gz"
+  },
+  {
+    "menuId": "remote-franchise-067a08f9df73666503e96c8b",
+    "field": "energyKcal",
+    "value": 2320.0,
+    "sourceUrl": "https://www.tlj.co.kr/product/detail.asp?gubun=result&prod_num=5625",
+    "checkedAt": "2026-10-16T06:37:21.496374+00:00",
+    "sourceSha256": "2fd65b6041a228dac15c100f86f2b0c71c5b4986d4826dd063efe5248bac0879",
+    "capture": "evidence/2fd65b6041a228dac15c100f86f2b0c71c5b4986d4826dd063efe5248bac0879.gz"
+  },
+  {
+    "menuId": "remote-franchise-067a08f9df73666503e96c8b",
+    "field": "proteinGrams",
+    "value": 2.0,
+    "sourceUrl": "https://www.tlj.co.kr/product/detail.asp?gubun=result&prod_num=5625",
+    "checkedAt": "2026-10-16T06:37:21.496374+00:00",
+    "sourceSha256": "2fd65b6041a228dac15c100f86f2b0c71c5b4986d4826dd063efe5248bac0879",
+    "capture": "evidence/2fd65b6041a228dac15c100f86f2b0c71c5b4986d4826dd063efe5248bac0879.gz"
+  },
+  {
+    "menuId": "remote-franchise-067a08f9df73666503e96c8b",
+    "field": "sodiumMilligrams",
+    "value": 300.0,
+    "sourceUrl": "https://www.tlj.co.kr/product/detail.asp?gubun=result&prod_num=5625",
+    "checkedAt": "2026-10-16T06:37:21.496374+00:00",
+    "sourceSha256": "2fd65b6041a228dac15c100f86f2b0c71c5b4986d4826dd063efe5248bac0879",
+    "capture": "evidence/2fd65b6041a228dac15c100f86f2b0c71c5b4986d4826dd063efe5248bac0879.gz"
+  },
+  {
+    "menuId": "remote-franchise-067a08f9df73666503e96c8b",
+    "field": "sugarsGrams",
+    "value": 21.0,
+    "sourceUrl": "https://www.tlj.co.kr/product/detail.asp?gubun=result&prod_num=5625",
+    "checkedAt": "2026-10-16T06:37:21.496374+00:00",
+    "sourceSha256": "2fd65b6041a228dac15c100f86f2b0c71c5b4986d4826dd063efe5248bac0879",
+    "capture": "evidence/2fd65b6041a228dac15c100f86f2b0c71c5b4986d4826dd063efe5248bac0879.gz"
+  },
+  {
+    "menuId": "remote-franchise-067a08f9df73666503e96c8b",
+    "field": "saturatedFatGrams",
+    "value": 8.0,
+    "sourceUrl": "https://www.tlj.co.kr/product/detail.asp?gubun=result&prod_num=5625",
+    "checkedAt": "2026-10-16T06:37:21.496374+00:00",
+    "sourceSha256": "2fd65b6041a228dac15c100f86f2b0c71c5b4986d4826dd063efe5248bac0879",
+    "capture": "evidence/2fd65b6041a228dac15c100f86f2b0c71c5b4986d4826dd063efe5248bac0879.gz"
+  },
+  {
+    "menuId": "remote-franchise-03e9a44cb076e0350c02d734",
+    "field": "energyKcal",
+    "value": 255.0,
+    "sourceUrl": "https://www.tlj.co.kr/product/detail.asp?gubun=result&prod_num=5626",
+    "checkedAt": "2026-10-16T06:37:21.496374+00:00",
+    "sourceSha256": "ad27d8c5a8cb601ee0144b5d92c4e6312ba237f8de5fef492f6b2fa24474c916",
+    "capture": "evidence/ad27d8c5a8cb601ee0144b5d92c4e6312ba237f8de5fef492f6b2fa24474c916.gz"
+  },
+  {
+    "menuId": "remote-franchise-03e9a44cb076e0350c02d734",
+    "field": "proteinGrams",
+    "value": 3.0,
+    "sourceUrl": "https://www.tlj.co.kr/product/detail.asp?gubun=result&prod_num=5626",
+    "checkedAt": "2026-10-16T06:37:21.496374+00:00",
+    "sourceSha256": "ad27d8c5a8cb601ee0144b5d92c4e6312ba237f8de5fef492f6b2fa24474c916",
+    "capture": "evidence/ad27d8c5a8cb601ee0144b5d92c4e6312ba237f8de5fef492f6b2fa24474c916.gz"
+  },
+  {
+    "menuId": "remote-franchise-03e9a44cb076e0350c02d734",
+    "field": "sodiumMilligrams",
+    "value": 300.0,
+    "sourceUrl": "https://www.tlj.co.kr/product/detail.asp?gubun=result&prod_num=5626",
+    "checkedAt": "2026-10-16T06:37:21.496374+00:00",
+    "sourceSha256": "ad27d8c5a8cb601ee0144b5d92c4e6312ba237f8de5fef492f6b2fa24474c916",
+    "capture": "evidence/ad27d8c5a8cb601ee0144b5d92c4e6312ba237f8de5fef492f6b2fa24474c916.gz"
+  },
+  {
+    "menuId": "remote-franchise-03e9a44cb076e0350c02d734",
+    "field": "sugarsGrams",
+    "value": 21.0,
+    "sourceUrl": "https://www.tlj.co.kr/product/detail.asp?gubun=result&prod_num=5626",
+    "checkedAt": "2026-10-16T06:37:21.496374+00:00",
+    "sourceSha256": "ad27d8c5a8cb601ee0144b5d92c4e6312ba237f8de5fef492f6b2fa24474c916",
+    "capture": "evidence/ad27d8c5a8cb601ee0144b5d92c4e6312ba237f8de5fef492f6b2fa24474c916.gz"
+  },
+  {
+    "menuId": "remote-franchise-03e9a44cb076e0350c02d734",
+    "field": "saturatedFatGrams",
+    "value": 8.0,
+    "sourceUrl": "https://www.tlj.co.kr/product/detail.asp?gubun=result&prod_num=5626",
+    "checkedAt": "2026-10-16T06:37:21.496374+00:00",
+    "sourceSha256": "ad27d8c5a8cb601ee0144b5d92c4e6312ba237f8de5fef492f6b2fa24474c916",
+    "capture": "evidence/ad27d8c5a8cb601ee0144b5d92c4e6312ba237f8de5fef492f6b2fa24474c916.gz"
+  },
+  {
+    "menuId": "remote-franchise-acf4726e3823bb5cfac18b8c",
+    "field": "energyKcal",
+    "value": 725.0,
+    "sourceUrl": "https://www.tlj.co.kr/product/detail.asp?gubun=result&prod_num=5627",
+    "checkedAt": "2026-10-16T06:37:21.496374+00:00",
+    "sourceSha256": "fd7858f1aa8be55f694a7fb4cffda9c5f626c9f0efc3265a9acf6b2464aeed7b",
+    "capture": "evidence/fd7858f1aa8be55f694a7fb4cffda9c5f626c9f0efc3265a9acf6b2464aeed7b.gz"
+  },
+  {
+    "menuId": "remote-franchise-acf4726e3823bb5cfac18b8c",
+    "field": "proteinGrams",
+    "value": 11.0,
+    "sourceUrl": "https://www.tlj.co.kr/product/detail.asp?gubun=result&prod_num=5627",
+    "checkedAt": "2026-10-16T06:37:21.496374+00:00",
+    "sourceSha256": "fd7858f1aa8be55f694a7fb4cffda9c5f626c9f0efc3265a9acf6b2464aeed7b",
+    "capture": "evidence/fd7858f1aa8be55f694a7fb4cffda9c5f626c9f0efc3265a9acf6b2464aeed7b.gz"
+  },
+  {
+    "menuId": "remote-franchise-acf4726e3823bb5cfac18b8c",
+    "field": "sodiumMilligrams",
+    "value": 920.0,
+    "sourceUrl": "https://www.tlj.co.kr/product/detail.asp?gubun=result&prod_num=5627",
+    "checkedAt": "2026-10-16T06:37:21.496374+00:00",
+    "sourceSha256": "fd7858f1aa8be55f694a7fb4cffda9c5f626c9f0efc3265a9acf6b2464aeed7b",
+    "capture": "evidence/fd7858f1aa8be55f694a7fb4cffda9c5f626c9f0efc3265a9acf6b2464aeed7b.gz"
+  },
+  {
+    "menuId": "remote-franchise-acf4726e3823bb5cfac18b8c",
+    "field": "sugarsGrams",
+    "value": 69.0,
+    "sourceUrl": "https://www.tlj.co.kr/product/detail.asp?gubun=result&prod_num=5627",
+    "checkedAt": "2026-10-16T06:37:21.496374+00:00",
+    "sourceSha256": "fd7858f1aa8be55f694a7fb4cffda9c5f626c9f0efc3265a9acf6b2464aeed7b",
+    "capture": "evidence/fd7858f1aa8be55f694a7fb4cffda9c5f626c9f0efc3265a9acf6b2464aeed7b.gz"
+  },
+  {
+    "menuId": "remote-franchise-acf4726e3823bb5cfac18b8c",
+    "field": "saturatedFatGrams",
+    "value": 19.0,
+    "sourceUrl": "https://www.tlj.co.kr/product/detail.asp?gubun=result&prod_num=5627",
+    "checkedAt": "2026-10-16T06:37:21.496374+00:00",
+    "sourceSha256": "fd7858f1aa8be55f694a7fb4cffda9c5f626c9f0efc3265a9acf6b2464aeed7b",
+    "capture": "evidence/fd7858f1aa8be55f694a7fb4cffda9c5f626c9f0efc3265a9acf6b2464aeed7b.gz"
+  },
+  {
+    "menuId": "remote-franchise-d81646eb5dea8f91d8cb8a09",
+    "field": "energyKcal",
+    "value": 142.0,
+    "sourceUrl": "https://www.paris.co.kr/product/black-sesame-dressing/",
+    "checkedAt": "2026-10-16T06:37:21.496374+00:00",
+    "sourceSha256": "0d7ddbbe71c2bd7fcf1c66bd31fb64f802d467c74eb09aa21642a8a081feb8fa",
+    "capture": "evidence/0d7ddbbe71c2bd7fcf1c66bd31fb64f802d467c74eb09aa21642a8a081feb8fa.gz"
+  },
+  {
+    "menuId": "remote-franchise-d81646eb5dea8f91d8cb8a09",
+    "field": "proteinGrams",
+    "value": 0.6,
+    "sourceUrl": "https://www.paris.co.kr/product/black-sesame-dressing/",
+    "checkedAt": "2026-10-16T06:37:21.496374+00:00",
+    "sourceSha256": "0d7ddbbe71c2bd7fcf1c66bd31fb64f802d467c74eb09aa21642a8a081feb8fa",
+    "capture": "evidence/0d7ddbbe71c2bd7fcf1c66bd31fb64f802d467c74eb09aa21642a8a081feb8fa.gz"
+  },
+  {
+    "menuId": "remote-franchise-d81646eb5dea8f91d8cb8a09",
+    "field": "sodiumMilligrams",
+    "value": 320.0,
+    "sourceUrl": "https://www.paris.co.kr/product/black-sesame-dressing/",
+    "checkedAt": "2026-10-16T06:37:21.496374+00:00",
+    "sourceSha256": "0d7ddbbe71c2bd7fcf1c66bd31fb64f802d467c74eb09aa21642a8a081feb8fa",
+    "capture": "evidence/0d7ddbbe71c2bd7fcf1c66bd31fb64f802d467c74eb09aa21642a8a081feb8fa.gz"
+  },
+  {
+    "menuId": "remote-franchise-d81646eb5dea8f91d8cb8a09",
+    "field": "sugarsGrams",
+    "value": 6.0,
+    "sourceUrl": "https://www.paris.co.kr/product/black-sesame-dressing/",
+    "checkedAt": "2026-10-16T06:37:21.496374+00:00",
+    "sourceSha256": "0d7ddbbe71c2bd7fcf1c66bd31fb64f802d467c74eb09aa21642a8a081feb8fa",
+    "capture": "evidence/0d7ddbbe71c2bd7fcf1c66bd31fb64f802d467c74eb09aa21642a8a081feb8fa.gz"
+  },
+  {
+    "menuId": "remote-franchise-d81646eb5dea8f91d8cb8a09",
+    "field": "saturatedFatGrams",
+    "value": 2.2,
+    "sourceUrl": "https://www.paris.co.kr/product/black-sesame-dressing/",
+    "checkedAt": "2026-10-16T06:37:21.496374+00:00",
+    "sourceSha256": "0d7ddbbe71c2bd7fcf1c66bd31fb64f802d467c74eb09aa21642a8a081feb8fa",
+    "capture": "evidence/0d7ddbbe71c2bd7fcf1c66bd31fb64f802d467c74eb09aa21642a8a081feb8fa.gz"
+  }
+]

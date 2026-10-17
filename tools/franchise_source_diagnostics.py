@@ -13,6 +13,8 @@ def public_response_diagnostics(markup, byte_count):
     visible=' '.join(root.text_content().split())
     titles=root.xpath('//title/text()')
     denied=bool(re.search(r'access\s+denied|request\s+(?:blocked|rejected)|forbidden|접근\s*차단|접근이\s*차단',visible,re.I))
+    quota=('This site is currently unavailable' in visible and 'Site traffic resets at midnight' in visible)
     return dict(responseBytes=byte_count,documentTitle=' '.join(titles)[:120],visibleTextLength=len(visible),
-        inlineScriptCount=len(scripts),inlineSignals=signals,accessDeniedIndicator=denied,
+        inlineScriptCount=len(scripts),inlineSignals=signals,accessDeniedIndicator=denied or quota,
+        officialTrafficLimit=quota,
         hasBody=bool(root.xpath('//body')),hasMenuNames=bool(root.xpath('//*[contains(@class,"menu_name")]')))

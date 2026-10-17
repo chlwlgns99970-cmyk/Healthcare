@@ -1,0 +1,49 @@
+{
+  "status": "PARTIAL",
+  "selectedBrands": [
+    "뚜레쥬르",
+    "파리바게뜨",
+    "던킨"
+  ],
+  "brandLinkedCounts": {
+    "뚜레쥬르": 0,
+    "파리바게뜨": 77,
+    "던킨": 0
+  },
+  "before": {
+    "total": 5142,
+    "energyKcal": 2482,
+    "servingAmount": 1777,
+    "carbohydrateGrams": 398,
+    "proteinGrams": 2252,
+    "fatGrams": 377,
+    "sodiumMilligrams": 2257,
+    "recordable": 1758,
+    "allMacros": 375
+  },
+  "after": {
+    "total": 5142,
+    "energyKcal": 2559,
+    "servingAmount": 1854,
+    "carbohydrateGrams": 398,
+    "proteinGrams": 2327,
+    "fatGrams": 377,
+    "sodiumMilligrams": 2333,
+    "recordable": 1835,
+    "allMacros": 375
+  },
+  "gains": {
+    "energyKcal": 77,
+    "servingAmount": 77,
+    "carbohydrateGrams": 0,
+    "proteinGrams": 75,
+    "fatGrams": 0,
+    "sodiumMilligrams": 76
+  },
+  "linkedMenus": 77,
+  "developmentCatalogSha256": "ce5a04f26da0dc1b6c290dafe8ed04932e0cbe19b61ca17b4a1b946cfcba8a4b",
+  "developmentOnly": true,
+  "productionWrites": 0,
+  "stableIdsPreserved": 5142,
+  "knownNutrientChanges": 0
+}

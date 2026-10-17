@@ -1,0 +1,268 @@
+{
+  "pizzaDetails": [
+    {
+      "url": "https://www.youngmanpizza.co.kr/sub01/menu_detail_pizza.php?page_num=1&search_text=&search_type=&seq=37",
+      "checkedAt": "2026-10-17T09:24:31.504529+00:00",
+      "status": 200,
+      "finalUrl": "https://www.youngmanpizza.co.kr/sub01/menu_detail_pizza.php?page_num=1&search_text=&search_type=&seq=37",
+      "sha256": "87af1a0975b35a7db0fe0d7b8065944e445704104c51802d0fb47027b230b0da",
+      "bytes": 47326
+    },
+    {
+      "url": "https://www.youngmanpizza.co.kr/sub01/menu_detail_pizza.php?page_num=1&search_text=&search_type=&seq=38",
+      "checkedAt": "2026-10-17T09:24:31.505528+00:00",
+      "status": 200,
+      "finalUrl": "https://www.youngmanpizza.co.kr/sub01/menu_detail_pizza.php?page_num=1&search_text=&search_type=&seq=38",
+      "sha256": "03e943c7ade495ecea3a6b2039ae097d0c5af43807f3154b5cbc1c2c5e56c343",
+      "bytes": 47455
+    },
+    {
+      "url": "https://www.youngmanpizza.co.kr/sub01/menu_detail_pizza.php?page_num=1&search_text=&search_type=&seq=40",
+      "checkedAt": "2026-10-17T09:24:31.505528+00:00",
+      "status": 200,
+      "finalUrl": "https://www.youngmanpizza.co.kr/sub01/menu_detail_pizza.php?page_num=1&search_text=&search_type=&seq=40",
+      "sha256": "3a3b1df6569a927ee2bfb6cb5027c0f0dbae85e153eed52bff9a3c3cb887e8fa",
+      "bytes": 47769
+    },
+    {
+      "url": "https://www.youngmanpizza.co.kr/sub01/menu_detail_pizza.php?page_num=1&search_text=&search_type=&seq=42",
+      "checkedAt": "2026-10-17T09:24:31.591151+00:00",
+      "status": 200,
+      "finalUrl": "https://www.youngmanpizza.co.kr/sub01/menu_detail_pizza.php?page_num=1&search_text=&search_type=&seq=42",
+      "sha256": "4d5bf3856b64df6f8595e45f68683b7ec5f176f085fab37f3edde941cf98f8c6",
+      "bytes": 47416
+    },
+    {
+      "url": "https://www.youngmanpizza.co.kr/sub01/menu_detail_pizza.php?page_num=1&search_text=&search_type=&seq=44",
+      "checkedAt": "2026-10-17T09:24:31.606150+00:00",
+      "status": 200,
+      "finalUrl": "https://www.youngmanpizza.co.kr/sub01/menu_detail_pizza.php?page_num=1&search_text=&search_type=&seq=44",
+      "sha256": "67d5ca86fa8ac3bb609dd6cdb052ea9d6e7e94ff2ccb5d2a42d85d59bb1785bd",
+      "bytes": 47172
+    },
+    {
+      "url": "https://www.youngmanpizza.co.kr/sub01/menu_detail_pizza2.php?page_num=1&search_text=&search_type=&seq=19",
+      "checkedAt": "2026-10-17T09:24:31.622152+00:00",
+      "status": 200,
+      "finalUrl": "https://www.youngmanpizza.co.kr/sub01/menu_detail_pizza2.php?page_num=1&search_text=&search_type=&seq=19",
+      "sha256": "807fb5b56debc3aaf1fa34219e1cfa53027224113bce4986d6d0335a926f34f1",
+      "bytes": 46353
+    },
+    {
+      "url": "https://www.youngmanpizza.co.kr/sub01/menu_detail_pizza2.php?page_num=1&search_text=&search_type=&seq=25",
+      "checkedAt": "2026-10-17T09:24:31.662567+00:00",
+      "status": 200,
+      "finalUrl": "https://www.youngmanpizza.co.kr/sub01/menu_detail_pizza2.php?page_num=1&search_text=&search_type=&seq=25",
+      "sha256": "0a86595d17a12567394df6c440ac3ee806ed8c29d155c827fbfe7453c17252b3",
+      "bytes": 46155
+    }
+  ],
+  "youngmanGeneral": {
+    "url": "https://www.youngmanpizza.co.kr/sub01/menu.php",
+    "checkedAt": "2026-10-17T09:23:24.846849+00:00",
+    "status": 200,
+    "finalUrl": "https://www.youngmanpizza.co.kr/sub01/menu.php",
+    "sha256": "81011535f14562e0d838e7d4ca2dc06d7966ecd34a134f14af1601d1d06f1a14",
+    "bytes": 7021
+  },
+  "unidentifiedSources": [
+    {
+      "url": "https://tanghuokungfu.co.kr/default/brand/menu/menu.php",
+      "checkedAt": "2026-10-17T09:23:24.951555+00:00",
+      "status": 200,
+      "finalUrl": "https://tanghuokungfu.co.kr/default/brand/menu/menu.php",
+      "sha256": "5bbcde5d79804040bcf00058b4a230e9768133aff924ab3bc508210d6f89beae",
+      "bytes": 42475,
+      "brand": "탕화쿵푸",
+      "ingredientCount": 72,
+      "reason": "72 ingredient names; no exact finished-product/serving identity. Existing Ingredient requires nutrition/basis; cannot insert these as foods or infer nutrition."
+    },
+    {
+      "url": "https://www.chaesundang.co.kr/sub/02/sub_1_1.asp",
+      "checkedAt": "2026-10-17T09:23:24.989869+00:00",
+      "status": 200,
+      "finalUrl": "https://www.chaesundang.co.kr/sub/02/sub_1_1.asp",
+      "sha256": "f22fa64300f45a0f0d03267f1aa2180816c2f9ad6ae2cc58aa0827dd134a72e9",
+      "bytes": 34156,
+      "brand": "채선당",
+      "reason": "SHABU/PLUS/subbrand introduction, not parent-brand product IDs/serving definitions.",
+      "subbrandLinks": [
+        {
+          "text": "채선당 SHABU",
+          "href": "https://www.chaesundang.co.kr/sub/02/sub_1_1.asp"
+        },
+        {
+          "text": "채선당 SHABU 자연한가득",
+          "href": "https://www.chaesundang.co.kr/sub/02/sub_3_1.asp"
+        },
+        {
+          "text": "채선당한가득",
+          "href": "https://www.chaesundang.co.kr/sub/02/sub_2_1.asp"
+        },
+        {
+          "text": "샤브보트",
+          "href": "https://www.chaesundang.co.kr/sub/02/sub_7_1.asp"
+        }
+      ]
+    },
+    {
+      "url": "https://www.chaesundang.co.kr/sub/02/sub_2_1.asp",
+      "checkedAt": "2026-10-17T09:23:25.047963+00:00",
+      "status": 200,
+      "finalUrl": "https://www.chaesundang.co.kr/sub/02/sub_2_1.asp",
+      "sha256": "1d6636a9a2e0c646ecfbd5d83e96da1e1249745c35b4b941bb2b71fc4522bc7a",
+      "bytes": 30108,
+      "brand": "채선당",
+      "reason": "SHABU/PLUS/subbrand introduction, not parent-brand product IDs/serving definitions.",
+      "subbrandLinks": [
+        {
+          "text": "채선당 SHABU",
+          "href": "https://www.chaesundang.co.kr/sub/02/sub_1_1.asp"
+        },
+        {
+          "text": "채선당 SHABU 자연한가득",
+          "href": "https://www.chaesundang.co.kr/sub/02/sub_3_1.asp"
+        },
+        {
+          "text": "채선당한가득",
+          "href": "https://www.chaesundang.co.kr/sub/02/sub_2_1.asp"
+        },
+        {
+          "text": "샤브보트",
+          "href": "https://www.chaesundang.co.kr/sub/02/sub_7_1.asp"
+        }
+      ]
+    },
+    {
+      "url": "https://kukde.kr/menu",
+      "checkedAt": "2026-10-17T09:23:25.535483+00:00",
+      "status": 200,
+      "finalUrl": "https://kukde.kr/menu",
+      "sha256": "14194cd7fc2b90ad532afbf385e1ab6bbc2028230b33eeb4d9a1daffcdd4664c",
+      "bytes": 302724,
+      "brand": "국대떡볶이",
+      "photoCount": 17,
+      "captions": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "reason": "17 official gallery photos without printed product names (previous visual review reused), caption names or product-detail links; gallery IDs are not product identities."
+    }
+  ],
+  "nolbooConnections": [
+    {
+      "host": "nolboo.co.kr",
+      "stages": [
+        {
+          "stage": "DNS",
+          "status": "PASS",
+          "addresses": [
+            "175.196.7.35"
+          ]
+        },
+        {
+          "stage": "TCP443",
+          "status": "FAIL",
+          "error": "timed out"
+        }
+      ]
+    },
+    {
+      "host": "www.nolboo.co.kr",
+      "stages": [
+        {
+          "stage": "DNS",
+          "status": "PASS",
+          "addresses": [
+            "175.196.7.35"
+          ]
+        },
+        {
+          "stage": "TCP443",
+          "status": "FAIL",
+          "error": "timed out"
+        }
+      ]
+    }
+  ],
+  "nolbooRequests": [
+    {
+      "url": "https://nolboo.co.kr/",
+      "checkedAt": "2026-10-17T09:23:24.847851+00:00",
+      "error": "URLError",
+      "message": "<urlopen error timed out>"
+    },
+    {
+      "url": "https://www.nolboo.co.kr/pages/brand/boodae.asp",
+      "checkedAt": "2026-10-17T09:23:24.847851+00:00",
+      "error": "URLError",
+      "message": "<urlopen error timed out>"
+    }
+  ],
+  "coverage": "PARTIAL: exact product details only; required general list missing; no full-brand success asserted.",
+  "pizzaTabs": [
+    {
+      "url": "https://www.youngmanpizza.co.kr/sub01/menu4.php",
+      "checkedAt": "2026-10-17T09:24:31.678584+00:00",
+      "status": 200,
+      "finalUrl": "https://www.youngmanpizza.co.kr/sub01/menu4.php",
+      "sha256": "fe17d8b355628f4f99523ca5fdf565edf8bf1be3dcafc6ea67ef4b1c65468b27",
+      "bytes": 48018
+    },
+    {
+      "url": "https://www.youngmanpizza.co.kr/sub01/menu2.php",
+      "checkedAt": "2026-10-17T09:24:31.717878+00:00",
+      "status": 200,
+      "finalUrl": "https://www.youngmanpizza.co.kr/sub01/menu2.php",
+      "sha256": "601aac22885e81a00ce6ce30a1f66aac934a21dadca1545d933100f9c426319b",
+      "bytes": 35687
+    },
+    {
+      "url": "https://www.youngmanpizza.co.kr/sub01/menu3.php",
+      "checkedAt": "2026-10-17T09:24:31.734892+00:00",
+      "status": 200,
+      "finalUrl": "https://www.youngmanpizza.co.kr/sub01/menu3.php",
+      "sha256": "0d41dae9cda82193f187e8d1425225bd909b48b96a0f3fcded6f54559e53a032",
+      "bytes": 28926
+    },
+    {
+      "url": "https://www.youngmanpizza.co.kr/sub01/menu6.php",
+      "checkedAt": "2026-10-17T09:24:31.754150+00:00",
+      "status": 200,
+      "finalUrl": "https://www.youngmanpizza.co.kr/sub01/menu6.php",
+      "sha256": "3c2d5d6411dc2086f846be49e231c2e9a27e76e5375ebdf35afff847c7f94d24",
+      "bytes": 34838
+    },
+    {
+      "url": "https://www.youngmanpizza.co.kr/sub01/menu7.php",
+      "checkedAt": "2026-10-17T09:24:31.785514+00:00",
+      "status": 200,
+      "finalUrl": "https://www.youngmanpizza.co.kr/sub01/menu7.php",
+      "sha256": "0f085974c4cc2210ad4fcda1c74e249196e23d4ee81507b2efd01c8308069599",
+      "bytes": 25197
+    },
+    {
+      "url": "https://www.youngmanpizza.co.kr/sub01/menu.php",
+      "checkedAt": "2026-10-17T09:23:24.846849+00:00",
+      "status": 200,
+      "finalUrl": "https://www.youngmanpizza.co.kr/sub01/menu.php",
+      "sha256": "81011535f14562e0d838e7d4ca2dc06d7966ecd34a134f14af1601d1d06f1a14",
+      "bytes": 7021
+    }
+  ]
+}

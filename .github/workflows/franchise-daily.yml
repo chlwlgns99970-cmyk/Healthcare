@@ -9,7 +9,7 @@ on:
         required: false
         default: ''
       verificationOnlyBrands:
-        description: 'Optional comma-separated operator verification brands; daily cron audits all brands'
+        description: 'Optional comma-separated verification brands within the 97 active brands'
         required: false
         default: ''
 permissions:
@@ -42,6 +42,7 @@ jobs:
           python -m pip install lxml==6.1.1 playwright==1.63.0 pypdf==6.10.0
           python -m playwright install --with-deps --only-shell chromium
           python source/tools/test_franchise_daily_sync.py
+          python source/tools/test_franchise_update.py
           python source/tools/test_franchise_auto_audit.py
           python source/tools/test_franchise_completion.py
           python source/tools/test_franchise_browser.py
@@ -52,15 +53,14 @@ jobs:
           VERIFICATION_RUN_KEY: ${{ inputs.verificationRunKey }}
           VERIFICATION_ONLY_BRANDS: ${{ inputs.verificationOnlyBrands }}
         run: |
+          # Keep the checked app baseline and reviewed nutrition even when the
+          # publication branch predates local verified menu additions.
+          args=(--output published --healthy-only --baseline-catalog source/app/src/main/assets/franchise/catalog.json)
           if [ -n "$VERIFICATION_RUN_KEY" ]; then
-            if [ -n "$VERIFICATION_ONLY_BRANDS" ]; then
-              python source/tools/franchise_daily_sync.py --output published --run-key "$VERIFICATION_RUN_KEY" --brand-only "$VERIFICATION_ONLY_BRANDS"
-            else
-              python source/tools/franchise_daily_sync.py --output published --run-key "$VERIFICATION_RUN_KEY"
-            fi
-          else
-            python source/tools/franchise_daily_sync.py --output published
+            args+=(--run-key "$VERIFICATION_RUN_KEY")
           fi
+          if [ -n "$VERIFICATION_ONLY_BRANDS" ]; then args+=(--brand-only "$VERIFICATION_ONLY_BRANDS"); fi
+          python source/tools/franchise_daily_sync.py "${args[@]}"
       - name: Publish one atomic Git commit
         working-directory: published
         run: |

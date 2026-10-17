@@ -75,8 +75,43 @@ def public_next_records(markup):
         except ValueError:continue
     return records
 
+def camto_toast_inventory(markup):
+    """Every official toast image map must identify a public product modal."""
+    root=html.fromstring(markup);actions={}
+    cards=root.xpath('//main//div[contains(concat(" ",normalize-space(@class)," ")," _img_box ")][img]')
+    assert 1<=len(cards)<=128,'CAMTO_TOAST_INVENTORY_MISSING_OR_LIMIT'
+    for card in cards:
+        links=card.xpath('./a/@href')
+        assert len(links)==1,'CAMTO_IMAGE_ONLY_PRODUCT_WITHHELD'
+        match=re.fullmatch(r"javascript:SITE\.openModalMenu\('(m[0-9a-f]{21})', '(m[0-9a-f]{21})'\);",links[0])
+        assert match,'CAMTO_UNREVIEWED_MODAL_ACTION'
+        product,parent=match.groups()
+        assert parent=='m20260313858f191fd3fae','CAMTO_TOAST_PARENT_CHANGED'
+        assert product not in actions or actions[product]==links[0],'CAMTO_AMBIGUOUS_MODAL_ID'
+        actions[product]=links[0]
+    return actions
+
+def camto_toast_rows(markup,url):
+    actions=camto_toast_inventory(markup)
+    root=html.fromstring(markup)
+    recorded=root.xpath('//script[@id="recorded-camto-toasts"][@type="application/json"]/text()')
+    assert len(recorded)==1,'CAMTO_OFFICIAL_MODAL_TITLES_REQUIRED'
+    data=json.loads(recorded[0]);assert isinstance(data,list) and len(data)==len(actions),'CAMTO_INCOMPLETE_MODALS_WITHHELD'
+    rows=[];seen=set()
+    for item in data:
+        assert set(item)=={'id','title'} and item['id'] in actions and item['id'] not in seen,'CAMTO_MODAL_ID_MISMATCH'
+        match=re.fullmatch(r'메뉴\(토스트:([^()<>\r\n]+)\)',clean(item['title']))
+        assert match,'CAMTO_OFFICIAL_TOAST_TITLE_CHANGED'
+        name=clean(match[1]);assert name
+        seen.add(item['id']);rows.append((name,'토스트',url,item['id']))
+    assert seen==set(actions),'CAMTO_INCOMPLETE_MODALS_WITHHELD'
+    return rows
+
 def reviewed_rows(brand, markup):
     adapter=brand['adapter']; url=brand['sourceUrl']
+    if adapter=='reviewed-image-labels':
+        from franchise_menu_images import rows
+        return rows(brand, markup)
     if adapter=='slowcali-finished-variants':
         assert brand['name']=='슬로우캘리' and url=='https://slowcali.co.kr/bbs/content.php?co_id=menu'
         from franchise_nutrition_meals import slow_finished_rows
@@ -317,7 +352,7 @@ def reviewed_rows(brand, markup):
         value=payload['kfcs']['data'];assert isinstance(value['list'],list) and value['totCnt']==len(value['list'])
         rows=[]
         for row in value['list']:
-            assert (row['subGroupCd']==brand['sourceKey'] or brand['sourceKey']=='RCMD' and row['subGroupCd'] in ('BEGR','CHKN'))
+            assert (row['subGroupCd']==brand['sourceKey'] or brand['sourceKey']=='RCMD' and row['subGroupCd'] in ('BEGR','CHKN','SIDE')), 'Official KFC category mismatch'
             assert isinstance(row['menuCd'],str) and row['menuCd']
             rows.append((clean(row['menuNm']),row['subGroupNm'],url,row['menuCd']))
         return rows
@@ -503,6 +538,12 @@ def reviewed_rows(brand, markup):
             code=re.search(r"viewDetail\('([0-9]+)'\)",html.tostring(block,encoding='unicode'))
             if names and code: rows.append((clean(names[0].text_content()),'',urljoin(url,'detail.asp?gubun=result&prod_num='+code[1]),code[1]))
         return rows
+    if adapter=='camto-toast-modal':
+        assert brand['name']=='캠토토스트' and url=='https://camtotoast.com/44'
+        return camto_toast_rows(markup,url)
+    if adapter=='youngman-detail':
+        from franchise_nutrition_youngman import rows as detail_rows
+        return detail_rows(brand,markup)
     if adapter=='youngman-native':
         assert brand['name']=='청년피자'
         assert urlparse(url).path in {'/sub01/menu.php','/sub01/menu2.php','/sub01/menu3.php','/sub01/menu4.php','/sub01/menu6.php','/sub01/menu7.php'},'Topping/option page is not an independent menu source'

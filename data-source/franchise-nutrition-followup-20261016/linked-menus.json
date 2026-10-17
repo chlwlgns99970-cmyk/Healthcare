@@ -1,0 +1,733 @@
+{
+  "schemaVersion": 1,
+  "environment": "DEVELOPMENT_ONLY_NOT_PUBLISHED",
+  "baseCatalogSha256": "82dd3d03b30758242639d59d45313c3edbae6f79c46e7651eb7e2a444130265d",
+  "menus": [
+    {
+      "id": "remote-franchise-1bf9cca340ed2391280db202",
+      "brandId": "brand-5f1ac0e21ddf73b1",
+      "brand": "우지커피",
+      "name": "슈프림 피스타치오 아몬드 쿠키",
+      "externalId": "",
+      "sourceUrl": "https://www.oozycoffee.com/32",
+      "officialNutrition": {
+        "energyKcal": 280,
+        "sodiumMilligrams": 279,
+        "carbohydrateGrams": 39,
+        "sugarsGrams": 17,
+        "saturatedFatGrams": 5,
+        "proteinGrams": 5,
+        "fatGrams": null,
+        "servingAmount": 1.0,
+        "servingUnit": "인분",
+        "servingDescription": "공식 1회 제공량 기준 · 중량 미공개 · 표준 레시피 · 2026-09 자료",
+        "matchedBy": "EXACT_REVIEWED_IMAGE_NAME_SINGLE_SERVING",
+        "retainedFieldEvidence": {
+          "energyKcal": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          },
+          "sodiumMilligrams": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          },
+          "carbohydrateGrams": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          },
+          "sugarsGrams": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          },
+          "saturatedFatGrams": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          },
+          "proteinGrams": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          }
+        },
+        "sourceUrl": "https://www.oozycoffee.com/83/?q=YToxOntzOjEyOiJrZXl3b3JkX3R5cGUiO3M6MzoiYWxsIjt9&bmode=view&idx=18209046&t=board",
+        "checkedAt": "2026-10-16T08:18:21.263231+00:00",
+        "sourceSha256": "64bf23d99b611244e5ee8ae79bb2fd7c1b0510813455ee330c9f7c969b42d203",
+        "officialProductId": "",
+        "sourceType": "HTML"
+      },
+      "addedFields": [
+        "energyKcal",
+        "carbohydrateGrams",
+        "proteinGrams",
+        "sodiumMilligrams",
+        "sugarsGrams",
+        "saturatedFatGrams"
+      ]
+    },
+    {
+      "id": "remote-franchise-27e889862394a71d4a5aab9d",
+      "brandId": "brand-5f1ac0e21ddf73b1",
+      "brand": "우지커피",
+      "name": "슈프림 월넛 다크 초코 쿠키",
+      "externalId": "",
+      "sourceUrl": "https://www.oozycoffee.com/32",
+      "officialNutrition": {
+        "energyKcal": 300,
+        "sodiumMilligrams": 147,
+        "carbohydrateGrams": 35,
+        "sugarsGrams": 21,
+        "saturatedFatGrams": 16,
+        "proteinGrams": 4,
+        "fatGrams": null,
+        "servingAmount": 1.0,
+        "servingUnit": "인분",
+        "servingDescription": "공식 1회 제공량 기준 · 중량 미공개 · 표준 레시피 · 2026-09 자료",
+        "matchedBy": "EXACT_REVIEWED_IMAGE_NAME_SINGLE_SERVING",
+        "retainedFieldEvidence": {
+          "energyKcal": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          },
+          "sodiumMilligrams": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          },
+          "carbohydrateGrams": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          },
+          "sugarsGrams": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          },
+          "saturatedFatGrams": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          },
+          "proteinGrams": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          }
+        },
+        "sourceUrl": "https://www.oozycoffee.com/83/?q=YToxOntzOjEyOiJrZXl3b3JkX3R5cGUiO3M6MzoiYWxsIjt9&bmode=view&idx=18209046&t=board",
+        "checkedAt": "2026-10-16T08:18:21.263231+00:00",
+        "sourceSha256": "64bf23d99b611244e5ee8ae79bb2fd7c1b0510813455ee330c9f7c969b42d203",
+        "officialProductId": "",
+        "sourceType": "HTML"
+      },
+      "addedFields": [
+        "energyKcal",
+        "carbohydrateGrams",
+        "proteinGrams",
+        "sodiumMilligrams",
+        "sugarsGrams",
+        "saturatedFatGrams"
+      ]
+    },
+    {
+      "id": "remote-franchise-405345bb0032a76bb67d9eba",
+      "brandId": "brand-5f1ac0e21ddf73b1",
+      "brand": "우지커피",
+      "name": "바삭츄러스호두과자",
+      "externalId": "",
+      "sourceUrl": "https://www.oozycoffee.com/32",
+      "officialNutrition": {
+        "energyKcal": 268,
+        "sodiumMilligrams": 208,
+        "carbohydrateGrams": 36,
+        "sugarsGrams": 8,
+        "saturatedFatGrams": 8,
+        "proteinGrams": 4,
+        "fatGrams": null,
+        "servingAmount": 1.0,
+        "servingUnit": "인분",
+        "servingDescription": "공식 1회 제공량 기준 · 중량 미공개 · 표준 레시피 · 2026-09 자료",
+        "matchedBy": "EXACT_REVIEWED_IMAGE_NAME_SINGLE_SERVING",
+        "retainedFieldEvidence": {
+          "energyKcal": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          },
+          "sodiumMilligrams": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          },
+          "carbohydrateGrams": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          },
+          "sugarsGrams": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          },
+          "saturatedFatGrams": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          },
+          "proteinGrams": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          }
+        },
+        "sourceUrl": "https://www.oozycoffee.com/83/?q=YToxOntzOjEyOiJrZXl3b3JkX3R5cGUiO3M6MzoiYWxsIjt9&bmode=view&idx=18209046&t=board",
+        "checkedAt": "2026-10-16T08:18:21.263231+00:00",
+        "sourceSha256": "64bf23d99b611244e5ee8ae79bb2fd7c1b0510813455ee330c9f7c969b42d203",
+        "officialProductId": "",
+        "sourceType": "HTML"
+      },
+      "addedFields": [
+        "energyKcal",
+        "carbohydrateGrams",
+        "proteinGrams",
+        "sodiumMilligrams",
+        "sugarsGrams",
+        "saturatedFatGrams"
+      ]
+    },
+    {
+      "id": "remote-franchise-4f1e7001c46e597af41f82f0",
+      "brandId": "brand-5f1ac0e21ddf73b1",
+      "brand": "우지커피",
+      "name": "딥 미니버거",
+      "externalId": "",
+      "sourceUrl": "https://www.oozycoffee.com/32",
+      "officialNutrition": {
+        "energyKcal": 214,
+        "sodiumMilligrams": 305,
+        "carbohydrateGrams": 20,
+        "sugarsGrams": 2,
+        "saturatedFatGrams": 4,
+        "proteinGrams": 8.5,
+        "fatGrams": null,
+        "servingAmount": 1.0,
+        "servingUnit": "인분",
+        "servingDescription": "공식 1회 제공량 기준 · 중량 미공개 · 표준 레시피 · 2026-09 자료",
+        "matchedBy": "EXACT_REVIEWED_IMAGE_NAME_SINGLE_SERVING",
+        "retainedFieldEvidence": {
+          "energyKcal": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          },
+          "sodiumMilligrams": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          },
+          "carbohydrateGrams": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          },
+          "sugarsGrams": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          },
+          "saturatedFatGrams": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          },
+          "proteinGrams": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          }
+        },
+        "sourceUrl": "https://www.oozycoffee.com/83/?q=YToxOntzOjEyOiJrZXl3b3JkX3R5cGUiO3M6MzoiYWxsIjt9&bmode=view&idx=18209046&t=board",
+        "checkedAt": "2026-10-16T08:18:21.263231+00:00",
+        "sourceSha256": "64bf23d99b611244e5ee8ae79bb2fd7c1b0510813455ee330c9f7c969b42d203",
+        "officialProductId": "",
+        "sourceType": "HTML"
+      },
+      "addedFields": [
+        "energyKcal",
+        "carbohydrateGrams",
+        "proteinGrams",
+        "sodiumMilligrams",
+        "sugarsGrams",
+        "saturatedFatGrams"
+      ]
+    },
+    {
+      "id": "remote-franchise-737b168b7b6b02cf301ffd98",
+      "brandId": "brand-5f1ac0e21ddf73b1",
+      "brand": "우지커피",
+      "name": "벨지움초코무스케이크",
+      "externalId": "",
+      "sourceUrl": "https://www.oozycoffee.com/32",
+      "officialNutrition": {
+        "energyKcal": 373,
+        "sodiumMilligrams": 31,
+        "carbohydrateGrams": 37,
+        "sugarsGrams": 20,
+        "saturatedFatGrams": 23,
+        "proteinGrams": 6,
+        "fatGrams": null,
+        "servingAmount": 1.0,
+        "servingUnit": "인분",
+        "servingDescription": "공식 1회 제공량 기준 · 중량 미공개 · 표준 레시피 · 2026-09 자료",
+        "matchedBy": "EXACT_REVIEWED_IMAGE_NAME_SINGLE_SERVING",
+        "retainedFieldEvidence": {
+          "energyKcal": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          },
+          "sodiumMilligrams": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          },
+          "carbohydrateGrams": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          },
+          "sugarsGrams": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          },
+          "saturatedFatGrams": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          },
+          "proteinGrams": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          }
+        },
+        "sourceUrl": "https://www.oozycoffee.com/83/?q=YToxOntzOjEyOiJrZXl3b3JkX3R5cGUiO3M6MzoiYWxsIjt9&bmode=view&idx=18209046&t=board",
+        "checkedAt": "2026-10-16T08:18:21.263231+00:00",
+        "sourceSha256": "64bf23d99b611244e5ee8ae79bb2fd7c1b0510813455ee330c9f7c969b42d203",
+        "officialProductId": "",
+        "sourceType": "HTML"
+      },
+      "addedFields": [
+        "energyKcal",
+        "carbohydrateGrams",
+        "proteinGrams",
+        "sodiumMilligrams",
+        "sugarsGrams",
+        "saturatedFatGrams"
+      ]
+    },
+    {
+      "id": "remote-franchise-78a770e76e1d366b6cfc4376",
+      "brandId": "brand-5f1ac0e21ddf73b1",
+      "brand": "우지커피",
+      "name": "더블치즈베이글",
+      "externalId": "",
+      "sourceUrl": "https://www.oozycoffee.com/32",
+      "officialNutrition": {
+        "energyKcal": 505,
+        "sodiumMilligrams": 740,
+        "carbohydrateGrams": 82,
+        "sugarsGrams": 11,
+        "saturatedFatGrams": 8,
+        "proteinGrams": 13,
+        "fatGrams": null,
+        "servingAmount": 1.0,
+        "servingUnit": "인분",
+        "servingDescription": "공식 1회 제공량 기준 · 중량 미공개 · 표준 레시피 · 2026-09 자료",
+        "matchedBy": "EXACT_REVIEWED_IMAGE_NAME_SINGLE_SERVING",
+        "retainedFieldEvidence": {
+          "energyKcal": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          },
+          "sodiumMilligrams": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          },
+          "carbohydrateGrams": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          },
+          "sugarsGrams": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          },
+          "saturatedFatGrams": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          },
+          "proteinGrams": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          }
+        },
+        "sourceUrl": "https://www.oozycoffee.com/83/?q=YToxOntzOjEyOiJrZXl3b3JkX3R5cGUiO3M6MzoiYWxsIjt9&bmode=view&idx=18209046&t=board",
+        "checkedAt": "2026-10-16T08:18:21.263231+00:00",
+        "sourceSha256": "64bf23d99b611244e5ee8ae79bb2fd7c1b0510813455ee330c9f7c969b42d203",
+        "officialProductId": "",
+        "sourceType": "HTML"
+      },
+      "addedFields": [
+        "energyKcal",
+        "carbohydrateGrams",
+        "proteinGrams",
+        "sodiumMilligrams",
+        "sugarsGrams",
+        "saturatedFatGrams"
+      ]
+    },
+    {
+      "id": "remote-franchise-928fd391cc35a459e81fd0fb",
+      "brandId": "brand-5f1ac0e21ddf73b1",
+      "brand": "우지커피",
+      "name": "슈프림 오트밀 크랜베리 쿠키",
+      "externalId": "",
+      "sourceUrl": "https://www.oozycoffee.com/32",
+      "officialNutrition": {
+        "energyKcal": 250,
+        "sodiumMilligrams": 187,
+        "carbohydrateGrams": 41,
+        "sugarsGrams": 21,
+        "saturatedFatGrams": 4.4,
+        "proteinGrams": 4,
+        "fatGrams": null,
+        "servingAmount": 1.0,
+        "servingUnit": "인분",
+        "servingDescription": "공식 1회 제공량 기준 · 중량 미공개 · 표준 레시피 · 2026-09 자료",
+        "matchedBy": "EXACT_REVIEWED_IMAGE_NAME_SINGLE_SERVING",
+        "retainedFieldEvidence": {
+          "energyKcal": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          },
+          "sodiumMilligrams": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          },
+          "carbohydrateGrams": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          },
+          "sugarsGrams": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          },
+          "saturatedFatGrams": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          },
+          "proteinGrams": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          }
+        },
+        "sourceUrl": "https://www.oozycoffee.com/83/?q=YToxOntzOjEyOiJrZXl3b3JkX3R5cGUiO3M6MzoiYWxsIjt9&bmode=view&idx=18209046&t=board",
+        "checkedAt": "2026-10-16T08:18:21.263231+00:00",
+        "sourceSha256": "64bf23d99b611244e5ee8ae79bb2fd7c1b0510813455ee330c9f7c969b42d203",
+        "officialProductId": "",
+        "sourceType": "HTML"
+      },
+      "addedFields": [
+        "energyKcal",
+        "carbohydrateGrams",
+        "proteinGrams",
+        "sodiumMilligrams",
+        "sugarsGrams",
+        "saturatedFatGrams"
+      ]
+    },
+    {
+      "id": "remote-franchise-96855c3a3eae8f731dc5a8e3",
+      "brandId": "brand-5f1ac0e21ddf73b1",
+      "brand": "우지커피",
+      "name": "프렌치치즈케이크",
+      "externalId": "",
+      "sourceUrl": "https://www.oozycoffee.com/32",
+      "officialNutrition": {
+        "energyKcal": 268,
+        "sodiumMilligrams": 183.6,
+        "carbohydrateGrams": 28.8,
+        "sugarsGrams": 17.1,
+        "saturatedFatGrams": 14.4,
+        "proteinGrams": 6.3,
+        "fatGrams": null,
+        "servingAmount": 1.0,
+        "servingUnit": "인분",
+        "servingDescription": "공식 1회 제공량 기준 · 중량 미공개 · 표준 레시피 · 2026-09 자료",
+        "matchedBy": "EXACT_REVIEWED_IMAGE_NAME_SINGLE_SERVING",
+        "retainedFieldEvidence": {
+          "energyKcal": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          },
+          "sodiumMilligrams": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          },
+          "carbohydrateGrams": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          },
+          "sugarsGrams": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          },
+          "saturatedFatGrams": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          },
+          "proteinGrams": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          }
+        },
+        "sourceUrl": "https://www.oozycoffee.com/83/?q=YToxOntzOjEyOiJrZXl3b3JkX3R5cGUiO3M6MzoiYWxsIjt9&bmode=view&idx=18209046&t=board",
+        "checkedAt": "2026-10-16T08:18:21.263231+00:00",
+        "sourceSha256": "64bf23d99b611244e5ee8ae79bb2fd7c1b0510813455ee330c9f7c969b42d203",
+        "officialProductId": "",
+        "sourceType": "HTML"
+      },
+      "addedFields": [
+        "energyKcal",
+        "carbohydrateGrams",
+        "proteinGrams",
+        "sodiumMilligrams",
+        "sugarsGrams",
+        "saturatedFatGrams"
+      ]
+    },
+    {
+      "id": "remote-franchise-96d9ca0516f1d0be518ccde0",
+      "brandId": "brand-5f1ac0e21ddf73b1",
+      "brand": "우지커피",
+      "name": "츄러스",
+      "externalId": "",
+      "sourceUrl": "https://www.oozycoffee.com/32",
+      "officialNutrition": {
+        "energyKcal": 159.8,
+        "sodiumMilligrams": 79.9,
+        "carbohydrateGrams": 11,
+        "sugarsGrams": 0.9,
+        "saturatedFatGrams": 7.5,
+        "proteinGrams": 2.4,
+        "fatGrams": null,
+        "servingAmount": 1.0,
+        "servingUnit": "인분",
+        "servingDescription": "공식 1회 제공량 기준 · 중량 미공개 · 표준 레시피 · 2026-09 자료",
+        "matchedBy": "EXACT_REVIEWED_IMAGE_NAME_SINGLE_SERVING",
+        "retainedFieldEvidence": {
+          "energyKcal": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          },
+          "sodiumMilligrams": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          },
+          "carbohydrateGrams": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          },
+          "sugarsGrams": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          },
+          "saturatedFatGrams": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          },
+          "proteinGrams": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          }
+        },
+        "sourceUrl": "https://www.oozycoffee.com/83/?q=YToxOntzOjEyOiJrZXl3b3JkX3R5cGUiO3M6MzoiYWxsIjt9&bmode=view&idx=18209046&t=board",
+        "checkedAt": "2026-10-16T08:18:21.263231+00:00",
+        "sourceSha256": "64bf23d99b611244e5ee8ae79bb2fd7c1b0510813455ee330c9f7c969b42d203",
+        "officialProductId": "",
+        "sourceType": "HTML"
+      },
+      "addedFields": [
+        "energyKcal",
+        "carbohydrateGrams",
+        "proteinGrams",
+        "sodiumMilligrams",
+        "sugarsGrams",
+        "saturatedFatGrams"
+      ]
+    },
+    {
+      "id": "remote-franchise-bab378ac28c001a6d1edb835",
+      "brandId": "brand-5f1ac0e21ddf73b1",
+      "brand": "우지커피",
+      "name": "소금빵",
+      "externalId": "",
+      "sourceUrl": "https://www.oozycoffee.com/32",
+      "officialNutrition": {
+        "energyKcal": 232,
+        "sodiumMilligrams": 315.6,
+        "carbohydrateGrams": 31.9,
+        "sugarsGrams": 2.6,
+        "saturatedFatGrams": 9.1,
+        "proteinGrams": 5.6,
+        "fatGrams": null,
+        "servingAmount": 1.0,
+        "servingUnit": "인분",
+        "servingDescription": "공식 1회 제공량 기준 · 중량 미공개 · 표준 레시피 · 2026-09 자료",
+        "matchedBy": "EXACT_REVIEWED_IMAGE_NAME_SINGLE_SERVING",
+        "retainedFieldEvidence": {
+          "energyKcal": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          },
+          "sodiumMilligrams": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          },
+          "carbohydrateGrams": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          },
+          "sugarsGrams": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          },
+          "saturatedFatGrams": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          },
+          "proteinGrams": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          }
+        },
+        "sourceUrl": "https://www.oozycoffee.com/83/?q=YToxOntzOjEyOiJrZXl3b3JkX3R5cGUiO3M6MzoiYWxsIjt9&bmode=view&idx=18209046&t=board",
+        "checkedAt": "2026-10-16T08:18:21.263231+00:00",
+        "sourceSha256": "64bf23d99b611244e5ee8ae79bb2fd7c1b0510813455ee330c9f7c969b42d203",
+        "officialProductId": "",
+        "sourceType": "HTML"
+      },
+      "addedFields": [
+        "energyKcal",
+        "carbohydrateGrams",
+        "proteinGrams",
+        "sodiumMilligrams",
+        "sugarsGrams",
+        "saturatedFatGrams"
+      ]
+    },
+    {
+      "id": "remote-franchise-f032447f0ea885009212ca0a",
+      "brandId": "brand-5f1ac0e21ddf73b1",
+      "brand": "우지커피",
+      "name": "클래식 프렌치 토스트",
+      "externalId": "",
+      "sourceUrl": "https://www.oozycoffee.com/32",
+      "officialNutrition": {
+        "energyKcal": 425.7,
+        "sodiumMilligrams": 323.8,
+        "carbohydrateGrams": 59.6,
+        "sugarsGrams": 28.1,
+        "saturatedFatGrams": 12.2,
+        "proteinGrams": 8.4,
+        "fatGrams": null,
+        "servingAmount": 1.0,
+        "servingUnit": "인분",
+        "servingDescription": "공식 1회 제공량 기준 · 중량 미공개 · 표준 레시피 · 2026-09 자료",
+        "matchedBy": "EXACT_REVIEWED_IMAGE_NAME_SINGLE_SERVING",
+        "retainedFieldEvidence": {
+          "energyKcal": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          },
+          "sodiumMilligrams": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          },
+          "carbohydrateGrams": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          },
+          "sugarsGrams": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          },
+          "saturatedFatGrams": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          },
+          "proteinGrams": {
+            "sourceUrl": "https://cdn.imweb.me/upload/S202112085ca3700daccb4/eba8c48373f46.jpg",
+            "sourceSha256": "1d563eb05640fdc844a1daed39662685f3d82a315174bf8b3d5015b184404d13",
+            "checkedAt": "2026-10-16T08:18:21.263231+00:00"
+          }
+        },
+        "sourceUrl": "https://www.oozycoffee.com/83/?q=YToxOntzOjEyOiJrZXl3b3JkX3R5cGUiO3M6MzoiYWxsIjt9&bmode=view&idx=18209046&t=board",
+        "checkedAt": "2026-10-16T08:18:21.263231+00:00",
+        "sourceSha256": "64bf23d99b611244e5ee8ae79bb2fd7c1b0510813455ee330c9f7c969b42d203",
+        "officialProductId": "",
+        "sourceType": "HTML"
+      },
+      "addedFields": [
+        "energyKcal",
+        "carbohydrateGrams",
+        "proteinGrams",
+        "sodiumMilligrams",
+        "sugarsGrams",
+        "saturatedFatGrams"
+      ]
+    }
+  ]
+}

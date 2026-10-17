@@ -1058,18 +1058,18 @@
     "brandId": "brand-d3742bdc75b7cfff",
     "name": "청년다방",
     "category": "분식",
-    "sourceUrl": "https://youngdabang.com/",
+    "sourceUrl": "https://youngdabang.com/html/menu_1.html",
     "allowedHosts": [
       "www.youngdabang.com",
       "youngdabang.com"
     ],
-    "adapter": "jsonld",
+    "adapter": "reviewed-image-labels",
     "registryUrl": "https://youngdabang.com/",
     "sources": [
       {
-        "url": "https://youngdabang.com/",
+        "url": "https://youngdabang.com/html/menu_1.html",
         "key": "",
-        "adapter": "jsonld"
+        "adapter": "reviewed-image-labels"
       }
     ]
   },
@@ -1273,7 +1273,7 @@
     "brandId": "brand-eb1ea6f3cfeef4a1",
     "name": "탕화쿵푸",
     "category": "마라탕",
-    "sourceUrl": "https://tanghuokungfu.co.kr/default/brand/Introduction.php",
+    "sourceUrl": "https://tanghuokungfu.co.kr/default/brand/menu/menu.php",
     "allowedHosts": [
       "tanghuokungfu.co.kr",
       "www.tanghuokungfu.co.kr"
@@ -1282,11 +1282,12 @@
     "registryUrl": "https://tanghuokungfu.co.kr/default/brand/Introduction.php",
     "sources": [
       {
-        "url": "https://tanghuokungfu.co.kr/default/brand/Introduction.php",
-        "key": "",
+        "url": "https://tanghuokungfu.co.kr/default/brand/menu/menu.php",
+        "key": "ingredients-require-finished-menu-evidence",
         "adapter": "jsonld"
       }
-    ]
+    ],
+    "reviewReason": "공식 재료 페이지는 72종의 선택 재료입니다. 별도 공식 홈 메뉴명 5종과 사이드 출시 공지 3종은 확인했으나 제품 ID·규격·제공량이 없어 완성 음식의 고정 규격으로 연결하지 않습니다."
   },
   {
     "brandId": "brand-4971bd13f52f50ae",
@@ -1738,7 +1739,8 @@
         "key": "",
         "adapter": "jsonld"
       }
-    ]
+    ],
+    "reviewReason": "공식 하위 브랜드(SHABU·자연한가득·한가득·샤브보트)의 업태와 선택 구성이 다릅니다. 일반 채선당 제품 ID·규격의 대응이 확인될 때까지 교차 연결하지 않습니다."
   },
   {
     "brandId": "brand-a9a4ba8b5ad2ca3d",
@@ -2070,17 +2072,18 @@
       {
         "url": "https://camtotoast.com/44",
         "key": "토스트",
-        "adapter": "reviewed-html"
+        "adapter": "camto-toast-modal",
+        "transport": "browser"
       },
       {
         "url": "https://camtotoast.com/46",
         "key": "사이드",
-        "adapter": "reviewed-html"
+        "adapter": "reviewed-image-labels"
       },
       {
         "url": "https://camtotoast.com/45",
         "key": "음료",
-        "adapter": "reviewed-html"
+        "adapter": "reviewed-image-labels"
       }
     ]
   },
@@ -3388,7 +3391,8 @@
         "key": "",
         "adapter": "jsonld"
       }
-    ]
+    ],
+    "reviewReason": "공식 메뉴 갤러리 17개는 사진이며 제목·설명·제품 링크에 제품명이 없습니다. 사진 번호를 제품 ID로 간주하거나 이름을 추측하지 않습니다."
   },
   {
     "brandId": "brand-c250fc357adcb9df",
@@ -3512,7 +3516,7 @@
       {
         "url": "https://www.oozycoffee.com/Vision",
         "key": "NEW",
-        "adapter": "reviewed-html"
+        "adapter": "reviewed-image-labels"
       },
       {
         "url": "https://www.oozycoffee.com/coffee",

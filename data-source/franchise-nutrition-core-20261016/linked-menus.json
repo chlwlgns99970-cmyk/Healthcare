@@ -1,0 +1,352 @@
+{
+  "schemaVersion": 1,
+  "environment": "DEVELOPMENT_ONLY_NOT_PUBLISHED",
+  "baseCatalogSha256": "0c47231c8fad174230ce5e7e202da2a058fc1554ff94c6bc3b6edfd2b26d455d",
+  "menus": [
+    {
+      "id": "remote-franchise-220331c935742a58cd51f5bd",
+      "brandId": "brand-a0302f70b937755f",
+      "brand": "뚜레쥬르",
+      "name": "탑클래식(포도)375ml",
+      "externalId": "1265",
+      "sourceUrl": "https://www.tlj.co.kr/product/detail.asp?gubun=result&prod_num=1265",
+      "officialNutrition": {
+        "energyKcal": 190.0,
+        "carbohydrateGrams": null,
+        "proteinGrams": 0.2,
+        "fatGrams": null,
+        "sodiumMilligrams": 25.0,
+        "servingAmount": 375.0,
+        "servingUnit": "ml",
+        "servingDescription": "공식 1회 제공량 기준",
+        "sugarsGrams": 37.0,
+        "saturatedFatGrams": 0.0,
+        "sourceUrl": "https://www.tlj.co.kr/product/detail.asp?gubun=result&prod_num=1265",
+        "checkedAt": "2026-10-16T06:37:21.496374+00:00",
+        "sourceSha256": "4faf5c4d45ab3428eaf4fa64015d389d5f8827cb3dc972da288850d6eda09984",
+        "officialProductId": "1265",
+        "sourceType": "HTML"
+      },
+      "addedFields": [
+        "sugarsGrams",
+        "saturatedFatGrams"
+      ]
+    },
+    {
+      "id": "remote-franchise-59949674c55f0c6b1eb0190b",
+      "brandId": "brand-a0302f70b937755f",
+      "brand": "뚜레쥬르",
+      "name": "탑클래식(포도)750ml",
+      "externalId": "1264",
+      "sourceUrl": "https://www.tlj.co.kr/product/detail.asp?gubun=result&prod_num=1264",
+      "officialNutrition": {
+        "energyKcal": 50.0,
+        "carbohydrateGrams": null,
+        "proteinGrams": 0.2,
+        "fatGrams": null,
+        "sodiumMilligrams": 5.0,
+        "servingAmount": 100.0,
+        "servingUnit": "ml",
+        "servingDescription": "공식 1회 제공량 기준",
+        "sugarsGrams": 10.0,
+        "saturatedFatGrams": 0.0,
+        "sourceUrl": "https://www.tlj.co.kr/product/detail.asp?gubun=result&prod_num=1264",
+        "checkedAt": "2026-10-16T06:37:21.496374+00:00",
+        "sourceSha256": "479fe343b3287e16b7de51b3a7adffae0d9ab107309ca9bd28141c1179427a26",
+        "officialProductId": "1264",
+        "sourceType": "HTML"
+      },
+      "addedFields": [
+        "sugarsGrams",
+        "saturatedFatGrams"
+      ]
+    },
+    {
+      "id": "remote-franchise-c5f3b5ddf45ccefa08c61f38",
+      "brandId": "brand-a0302f70b937755f",
+      "brand": "뚜레쥬르",
+      "name": "탑클래식(사과)750ml",
+      "externalId": "1266",
+      "sourceUrl": "https://www.tlj.co.kr/product/detail.asp?gubun=result&prod_num=1266",
+      "officialNutrition": {
+        "energyKcal": 50.0,
+        "carbohydrateGrams": null,
+        "proteinGrams": 0.0,
+        "fatGrams": null,
+        "sodiumMilligrams": 5.0,
+        "servingAmount": 100.0,
+        "servingUnit": "ml",
+        "servingDescription": "공식 1회 제공량 기준",
+        "sugarsGrams": 10.0,
+        "saturatedFatGrams": 0.0,
+        "sourceUrl": "https://www.tlj.co.kr/product/detail.asp?gubun=result&prod_num=1266",
+        "checkedAt": "2026-10-16T06:37:21.496374+00:00",
+        "sourceSha256": "9032ca00318231700179eb0790b4838df30448b2215b29c7414a2ad9ee1e318a",
+        "officialProductId": "1266",
+        "sourceType": "HTML"
+      },
+      "addedFields": [
+        "sugarsGrams",
+        "saturatedFatGrams"
+      ]
+    },
+    {
+      "id": "remote-franchise-d7136d50079adfeeff41b532",
+      "brandId": "brand-a0302f70b937755f",
+      "brand": "뚜레쥬르",
+      "name": "탑클래식(사과)375ml",
+      "externalId": "1267",
+      "sourceUrl": "https://www.tlj.co.kr/product/detail.asp?gubun=result&prod_num=1267",
+      "officialNutrition": {
+        "energyKcal": 190.0,
+        "carbohydrateGrams": null,
+        "proteinGrams": 0.6,
+        "fatGrams": null,
+        "sodiumMilligrams": 25.0,
+        "servingAmount": 375.0,
+        "servingUnit": "ml",
+        "servingDescription": "공식 1회 제공량 기준",
+        "sugarsGrams": 38.0,
+        "saturatedFatGrams": 0.0,
+        "sourceUrl": "https://www.tlj.co.kr/product/detail.asp?gubun=result&prod_num=1267",
+        "checkedAt": "2026-10-16T06:37:21.496374+00:00",
+        "sourceSha256": "a03ee603f05cdfd311ca20344a054ab3f5f003366992ad1dbdadbff119f712df",
+        "officialProductId": "1267",
+        "sourceType": "HTML"
+      },
+      "addedFields": [
+        "sugarsGrams",
+        "saturatedFatGrams"
+      ]
+    },
+    {
+      "id": "remote-franchise-b6f75843e8742abdb42ed2f0",
+      "brandId": "brand-a0302f70b937755f",
+      "brand": "뚜레쥬르",
+      "name": "사르르 호박 카스테라 크림...",
+      "externalId": "5622",
+      "sourceUrl": "https://www.tlj.co.kr/product/detail.asp?gubun=result&prod_num=5622",
+      "officialNutrition": {
+        "energyKcal": 400.0,
+        "carbohydrateGrams": null,
+        "proteinGrams": 8.0,
+        "fatGrams": null,
+        "sodiumMilligrams": 290.0,
+        "servingAmount": 136.0,
+        "servingUnit": "g",
+        "servingDescription": "공식 1회 제공량 기준",
+        "matchedBy": "tlj-listing-display-id-alt",
+        "listSourceURL": "https://www.tlj.co.kr/product/result.asp",
+        "listSourceSha256": "5277d0068b01c9e9754b8ade75ab391575c15eb3a06786135f5b5601713dd6ab",
+        "officialDetailFullName": "사르르 호박 카스테라 크림빵(3개입)",
+        "listingDisplayName": "사르르 호박 카스테라 크림...",
+        "sugarsGrams": 19.0,
+        "saturatedFatGrams": 11.0,
+        "sourceUrl": "https://www.tlj.co.kr/product/detail.asp?gubun=result&prod_num=5622",
+        "checkedAt": "2026-10-16T06:37:21.496374+00:00",
+        "sourceSha256": "8c4f988ab914a77475e96b747086ae552b4f8b3a91db485a87b3332f3c59c90b",
+        "officialProductId": "5622",
+        "sourceType": "HTML"
+      },
+      "addedFields": [
+        "energyKcal",
+        "proteinGrams",
+        "sodiumMilligrams",
+        "sugarsGrams",
+        "saturatedFatGrams"
+      ]
+    },
+    {
+      "id": "remote-franchise-a8b0e315b0d3b1bc968efb6b",
+      "brandId": "brand-a0302f70b937755f",
+      "brand": "뚜레쥬르",
+      "name": "꿀맛 고구마 생도넛",
+      "externalId": "5623",
+      "sourceUrl": "https://www.tlj.co.kr/product/detail.asp?gubun=result&prod_num=5623",
+      "officialNutrition": {
+        "energyKcal": 325.0,
+        "carbohydrateGrams": null,
+        "proteinGrams": 3.0,
+        "fatGrams": null,
+        "sodiumMilligrams": 110.0,
+        "servingAmount": 82.0,
+        "servingUnit": "g",
+        "servingDescription": "공식 1회 제공량 기준",
+        "sugarsGrams": 23.0,
+        "saturatedFatGrams": 3.9,
+        "sourceUrl": "https://www.tlj.co.kr/product/detail.asp?gubun=result&prod_num=5623",
+        "checkedAt": "2026-10-16T06:37:21.496374+00:00",
+        "sourceSha256": "8fd06794baac45103e8805377c7ad64570946c15a32d5842ef79de88195913c6",
+        "officialProductId": "5623",
+        "sourceType": "HTML"
+      },
+      "addedFields": [
+        "energyKcal",
+        "proteinGrams",
+        "sodiumMilligrams",
+        "sugarsGrams",
+        "saturatedFatGrams"
+      ]
+    },
+    {
+      "id": "remote-franchise-3ce40a92d69942329640ee67",
+      "brandId": "brand-a0302f70b937755f",
+      "brand": "뚜레쥬르",
+      "name": "흑임자 가나슈 바게트",
+      "externalId": "5624",
+      "sourceUrl": "https://www.tlj.co.kr/product/detail.asp?gubun=result&prod_num=5624",
+      "officialNutrition": {
+        "energyKcal": 410.0,
+        "carbohydrateGrams": null,
+        "proteinGrams": 11.0,
+        "fatGrams": null,
+        "sodiumMilligrams": 550.0,
+        "servingAmount": 144.0,
+        "servingUnit": "g",
+        "servingDescription": "공식 1회 제공량 기준",
+        "sugarsGrams": 11.0,
+        "saturatedFatGrams": 6.0,
+        "sourceUrl": "https://www.tlj.co.kr/product/detail.asp?gubun=result&prod_num=5624",
+        "checkedAt": "2026-10-16T06:37:21.496374+00:00",
+        "sourceSha256": "3d966261aa1eb6d63e6d52edbda61ef3f5b037370d702caf402f6e8977053dc5",
+        "officialProductId": "5624",
+        "sourceType": "HTML"
+      },
+      "addedFields": [
+        "energyKcal",
+        "proteinGrams",
+        "sodiumMilligrams",
+        "sugarsGrams",
+        "saturatedFatGrams"
+      ]
+    },
+    {
+      "id": "remote-franchise-067a08f9df73666503e96c8b",
+      "brandId": "brand-a0302f70b937755f",
+      "brand": "뚜레쥬르",
+      "name": "오리지널 퀴니아망",
+      "externalId": "5625",
+      "sourceUrl": "https://www.tlj.co.kr/product/detail.asp?gubun=result&prod_num=5625",
+      "officialNutrition": {
+        "energyKcal": 2320.0,
+        "carbohydrateGrams": null,
+        "proteinGrams": 2.0,
+        "fatGrams": null,
+        "sodiumMilligrams": 300.0,
+        "servingAmount": 63.0,
+        "servingUnit": "g",
+        "servingDescription": "공식 1회 제공량 기준",
+        "sugarsGrams": 21.0,
+        "saturatedFatGrams": 8.0,
+        "sourceUrl": "https://www.tlj.co.kr/product/detail.asp?gubun=result&prod_num=5625",
+        "checkedAt": "2026-10-16T06:37:21.496374+00:00",
+        "sourceSha256": "2fd65b6041a228dac15c100f86f2b0c71c5b4986d4826dd063efe5248bac0879",
+        "officialProductId": "5625",
+        "sourceType": "HTML"
+      },
+      "addedFields": [
+        "energyKcal",
+        "proteinGrams",
+        "sodiumMilligrams",
+        "sugarsGrams",
+        "saturatedFatGrams"
+      ]
+    },
+    {
+      "id": "remote-franchise-03e9a44cb076e0350c02d734",
+      "brandId": "brand-a0302f70b937755f",
+      "brand": "뚜레쥬르",
+      "name": "흑임자 퀴니아망",
+      "externalId": "5626",
+      "sourceUrl": "https://www.tlj.co.kr/product/detail.asp?gubun=result&prod_num=5626",
+      "officialNutrition": {
+        "energyKcal": 255.0,
+        "carbohydrateGrams": null,
+        "proteinGrams": 3.0,
+        "fatGrams": null,
+        "sodiumMilligrams": 300.0,
+        "servingAmount": 67.0,
+        "servingUnit": "g",
+        "servingDescription": "공식 1회 제공량 기준",
+        "sugarsGrams": 21.0,
+        "saturatedFatGrams": 8.0,
+        "sourceUrl": "https://www.tlj.co.kr/product/detail.asp?gubun=result&prod_num=5626",
+        "checkedAt": "2026-10-16T06:37:21.496374+00:00",
+        "sourceSha256": "ad27d8c5a8cb601ee0144b5d92c4e6312ba237f8de5fef492f6b2fa24474c916",
+        "officialProductId": "5626",
+        "sourceType": "HTML"
+      },
+      "addedFields": [
+        "energyKcal",
+        "proteinGrams",
+        "sodiumMilligrams",
+        "sugarsGrams",
+        "saturatedFatGrams"
+      ]
+    },
+    {
+      "id": "remote-franchise-acf4726e3823bb5cfac18b8c",
+      "brandId": "brand-a0302f70b937755f",
+      "brand": "뚜레쥬르",
+      "name": "골든 버터 식빵",
+      "externalId": "5627",
+      "sourceUrl": "https://www.tlj.co.kr/product/detail.asp?gubun=result&prod_num=5627",
+      "officialNutrition": {
+        "energyKcal": 725.0,
+        "carbohydrateGrams": null,
+        "proteinGrams": 11.0,
+        "fatGrams": null,
+        "sodiumMilligrams": 920.0,
+        "servingAmount": 223.0,
+        "servingUnit": "g",
+        "servingDescription": "공식 1회 제공량 기준",
+        "sugarsGrams": 69.0,
+        "saturatedFatGrams": 19.0,
+        "sourceUrl": "https://www.tlj.co.kr/product/detail.asp?gubun=result&prod_num=5627",
+        "checkedAt": "2026-10-16T06:37:21.496374+00:00",
+        "sourceSha256": "fd7858f1aa8be55f694a7fb4cffda9c5f626c9f0efc3265a9acf6b2464aeed7b",
+        "officialProductId": "5627",
+        "sourceType": "HTML"
+      },
+      "addedFields": [
+        "energyKcal",
+        "proteinGrams",
+        "sodiumMilligrams",
+        "sugarsGrams",
+        "saturatedFatGrams"
+      ]
+    },
+    {
+      "id": "remote-franchise-d81646eb5dea8f91d8cb8a09",
+      "brandId": "brand-7dfea7361415a819",
+      "brand": "파리바게뜨",
+      "name": "흑임자 참깨 드레싱",
+      "externalId": "/product/black-sesame-dressing",
+      "sourceUrl": "https://www.paris.co.kr/product/black-sesame-dressing/",
+      "officialNutrition": {
+        "energyKcal": 142.0,
+        "carbohydrateGrams": null,
+        "proteinGrams": 0.6,
+        "fatGrams": null,
+        "sodiumMilligrams": 320.0,
+        "servingAmount": 40.0,
+        "servingUnit": "g",
+        "servingDescription": "공식 총 내용량 기준",
+        "sugarsGrams": 6.0,
+        "saturatedFatGrams": 2.2,
+        "sourceUrl": "https://www.paris.co.kr/product/black-sesame-dressing/",
+        "checkedAt": "2026-10-16T06:37:21.496374+00:00",
+        "sourceSha256": "0d7ddbbe71c2bd7fcf1c66bd31fb64f802d467c74eb09aa21642a8a081feb8fa",
+        "officialProductId": "/product/black-sesame-dressing",
+        "sourceType": "HTML"
+      },
+      "addedFields": [
+        "energyKcal",
+        "proteinGrams",
+        "sodiumMilligrams",
+        "sugarsGrams",
+        "saturatedFatGrams"
+      ]
+    }
+  ]
+}

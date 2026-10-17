@@ -3,7 +3,8 @@ from pathlib import Path
 from html.parser import HTMLParser
 from urllib.parse import urlparse, urljoin, quote, urlunparse, urlencode
 import argparse, concurrent.futures, hashlib, json, math, os, re, time, unicodedata
-import subprocess, shutil
+import subprocess, shutil, copy
+from types import FunctionType
 import urllib.request
 import urllib.error
 from datetime import datetime, timezone
@@ -12,9 +13,18 @@ ROOT = Path(__file__).resolve().parents[1]
 CONFIG = ROOT / 'data-source/franchise-sync/brands.json'
 SEED = ROOT / 'data-source/franchise-sync/static-identities.json'
 MAX_BYTES = 2_000_000
-MAX_CATALOG_BYTES = 4_000_000
+MAX_CATALOG_BYTES = 8_000_000
 SOURCE_TYPES = {'API','JSON','HTML','BROWSER','PDF','XLSX','CSV','HYBRID'}
 LEGACY_PROVENANCE = ROOT / 'data-source/franchise-sync/legacy-source-types.json'
+DEFERRED_BRANDS = frozenset(('청년피자', '놀부부대찌개', '탕화쿵푸', '채선당', '국대떡볶이'))
+
+def update_targets(brands, healthy_only=False, names=None):
+    """Scope acquisition only; never filter already verified catalog rows."""
+    selected = [b for b in brands if not healthy_only or b['name'] not in DEFERRED_BRANDS]
+    if names is not None:
+        assert names <= {b['name'] for b in selected}, 'Unknown or deferred verification brand'
+        selected = [b for b in selected if b['name'] in names]
+    return {b['brandId'] for b in selected}
 
 def source_type(source):
     if source.get('transport') == 'browser': return 'BROWSER'
@@ -96,7 +106,10 @@ def candidates(brand, html, checked):
     page=SourcePage(brand);page.feed(html)
     results=[]
     def item(name, external_id, url, category=''):
-        if any(word in name for word in ('텀블러','머그컵','에코백','키링','굿즈','기프티콘','상품권')): return
+        # The official Banolim product schema contains priced pizza + merchandise bundles.
+        # Keep that actual food product; standalone merchandise/coupons remain excluded.
+        pizza_bundle = brand['name']=='반올림피자' and brand['adapter']=='banolim-native' and re.fullmatch(r'.+ 세트\([^()]*피자\+굿즈\)',name)
+        if not pizza_bundle and any(word in name for word in ('텀블러','머그컵','에코백','키링','굿즈','기프티콘','상품권')): return
         menu=dict(brandId=brand['brandId'],brand=brand['name'],name=name,normalizedName=normalize(name),
             externalId=external_id,category=category,sourceUrl=url,checkedAt=checked,sourceType=brand.get('sourceType',source_type(brand)),
             energyKcal=None,carbohydrateGrams=None,proteinGrams=None,fatGrams=None,servingAmount=None,servingUnit=None)
@@ -187,6 +200,9 @@ def fetch_source(brand, source, capture_dir=None):
                 declared=re.search(br'charset\s*=\s*["\']?([a-zA-Z0-9_-]+)',data[:4096])
                 encoding=response.headers.get_content_charset() or (declared.group(1).decode('ascii') if declared else 'utf-8')
         html=data.decode(encoding,errors='strict')
+        if source['adapter']=='reviewed-image-labels':
+            from franchise_menu_images import enrich
+            html=enrich(dict(brand, adapter=source['adapter'], sourceUrl=source['url']),html)
         if not html.strip(): raise ValueError('Empty official response')
         diagnostics=dict(responseBytes=len(data))
         if re.search(r'<html\b|<!doctype\b',html,re.I):
@@ -197,11 +213,25 @@ def fetch_source(brand, source, capture_dir=None):
         if capture_dir:
             capture_dir=Path(capture_dir);capture_dir.mkdir(parents=True,exist_ok=True)
             (capture_dir/(hashlib.sha256(source_identity(source).encode()).hexdigest()+'.txt')).write_text(html,encoding='utf-8')
+        if diagnostics.get('officialTrafficLimit'):
+            return dict(brandId=brand['brandId'],sourceUrl=source['url'],adapter=source['adapter'],
+                sourceKey=source.get('key',''),status='REVIEW_REQUIRED',menus=[],checkedAt=checked,
+                sourceType=source_type(source),httpStatus=200,accessBlocked=True,
+                error='OfficialTrafficLimit',errorReason='공식 사이트의 트래픽 한도 안내 응답입니다. 제한을 우회하지 않고 보류합니다.',
+                sourceDiagnostics=diagnostics)
         menus=candidates(brand,html,checked)
         from franchise_pagination import additional_pages
         next_pages=additional_pages(brand,source,html)
         from franchise_pagination import confirmed_empty_source
         confirmed_empty=confirmed_empty_source(brand,source,html)
+        # Keep unresolved official sources distinguishable from an empty menu.
+        # These diagnostics do not authorize partial coverage or invent products.
+        empty_reason=None
+        if not menus and not confirmed_empty:
+            if brand['name']=='청년피자' and source['adapter']=='youngman-native' and diagnostics.get('hasBody') is False:
+                empty_reason='공식 목록은 HTTP 200이지만 body와 메뉴 본문이 없습니다. 전체 메뉴 수집 완료로 처리하지 않습니다.'
+            elif brand['name'] in ('탕화쿵푸','채선당','국대떡볶이'):
+                empty_reason=brand.get('reviewReason')
         coverage_refs=[]
         if brand['name']=='노랑통닭' and source['adapter']=='norang-list' and urlparse(source['url']).path=='/menu/best.html':
             from lxml import html as dom
@@ -216,13 +246,14 @@ def fetch_source(brand, source, capture_dir=None):
             status='SUCCESS' if menus or confirmed_empty or coverage_refs or source['adapter']=='twosome-categories-json' or source['adapter'] in ('bhc-categories','mc-categories','mc-index','bbq-categories','starbucks-navigation','twosome-navigation') and next_pages else 'REVIEW_REQUIRED' if source['adapter']=='jsonld' else 'FAIL',checkedAt=checked,menus=menus,htmlSha256=hashlib.sha256(html.encode()).hexdigest(),httpStatus=200,
             coverageReferenceIds=coverage_refs,
             sourceDiagnostics=diagnostics,
+            **({'errorReason':empty_reason} if empty_reason else {}),
             confirmedEmpty=confirmed_empty,tlsEvidence=tls_evidence,
             browserEvidence=browser_evidence,sourceType=source_type(source),
             captureKey=hashlib.sha256(source_identity(source).encode()).hexdigest(),
             discoveredPages=next_pages)
     except Exception as error:
         return dict(brandId=brand['brandId'],sourceUrl=source['url'],adapter=source['adapter'],sourceKey=source.get('key',''),
-            status='FETCH_FAILED',checkedAt=checked,sourceType=source_type(source),menus=[],error=type(error).__name__,errorReason=str(error)[:200],httpStatus=getattr(error,'code',None))
+            status='REVIEW_REQUIRED' if getattr(error,'review_required',False) else 'FETCH_FAILED',checkedAt=checked,sourceType=source_type(source),menus=[],error=type(error).__name__,errorReason=str(error)[:200],httpStatus=getattr(error,'code',None))
 
 def source_identity(source):
     return source['url']+(('|'+json.dumps(source['form'],sort_keys=True)) if source.get('form') else '')
@@ -288,7 +319,7 @@ def automation_state(brand,batch):
     if brand.get('publishPolicy')=='REVIEW_ONLY': return 'REVIEW_REQUIRED'
     if 'MENU_COUNT_SPIKE_REVIEW' in batch.get('warnings',[]):return 'REVIEW_REQUIRED'
     if batch['status']=='SUCCESS' and all(s['status']=='SUCCESS' for s in sources): return 'AUTO_READY'
-    if any(s.get('httpStatus') in (401,403,429) for s in sources): return 'SOURCE_BLOCKED'
+    if any(s.get('accessBlocked') or s.get('httpStatus') in (401,403,429) for s in sources): return 'SOURCE_BLOCKED'
     explicit=any(s.get('adapter')!='jsonld' for s in sources)
     if explicit and any(s['status']=='FETCH_FAILED' for s in sources): return 'BROKEN'
     return 'REVIEW_REQUIRED' if explicit else 'ADAPTER_REQUIRED'
@@ -308,13 +339,38 @@ def merge(existing, fetched, brands, static):
     exact_names={(r['brandId'],r['name']) for r in static+existing_menus}
     menu_names={}
     for row in existing_menus:menu_names.setdefault((row['brandId'],normalize(row['name'])),[]).append(row)
-    added=[];duplicates=0;invalid=0;count=0;decisions=[];identity_reviews=0
+    by_id={r['id']:r for r in existing_menus}
+    added=[];duplicates=0;invalid=0;count=0;decisions=[];identity_reviews=0;changes=0;missing=0
     for batch in fetched:
+        if batch.get('status') not in (None,'SUCCESS') or any(s.get('status')!='SUCCESS' for s in batch.get('sources',[])):
+            continue
         for menu in batch.get('menus',[]):
             count+=1
             try: validate(menu,by_brand[menu['brandId']])
             except (AssertionError,KeyError,TypeError,ValueError): invalid+=1;continue
             name=(menu['brandId'],normalize(menu['name'])); key=(menu['brandId'],menu.get('externalId'))
+            old=by_id.get(menu['id'])
+            if old is not None:
+                # A repeated ID is not proof that its product/size/basis stayed
+                # the same. Missing parser values are not evidence of deletion.
+                fields=('name','category','externalId','sourceUrl','servingAmount','servingUnit',
+                    'energyKcal','carbohydrateGrams','proteinGrams','fatGrams','sodiumMilligrams',
+                    'imageUrl','imageSha256','saleState')
+                changed=[k for k in fields if menu.get(k) is not None and old.get(k) is not None
+                         and menu[k]!=old[k]]
+                old_fact=old.get('officialNutrition') or {}; new_fact=menu.get('officialNutrition') or {}
+                fact_fields=('energyKcal','carbohydrateGrams','proteinGrams','fatGrams','sodiumMilligrams',
+                    'sugarsGrams','saturatedFatGrams','servingAmount','servingUnit','officialProductId')
+                fact_changes=[k for k in fact_fields if old_fact.get(k) is not None and new_fact.get(k) is not None
+                              and old_fact[k]!=new_fact[k]]
+                changed+=['officialNutrition.'+k for k in fact_changes]
+                if changed:
+                    changes+=1
+                    decisions.append(dict(id=old['id'],brandId=old['brandId'],name=old['name'],
+                        state='REVIEW_REQUIRED',reason='EXISTING_PRODUCT_CHANGED',changedFields=changed,
+                        previous={k:(old_fact[k.split('.')[1]] if '.' in k else old[k]) for k in changed},
+                        observed={k:(new_fact[k.split('.')[1]] if '.' in k else menu[k]) for k in changed}))
+                    continue
             matches=menu_names.get(name,[])
             if menu.get('externalId') and matches and menu['id'] not in ids and key not in external and any(r.get('externalId') and r['externalId']!=menu['externalId'] for r in matches):
                 identity_reviews+=1
@@ -324,18 +380,130 @@ def merge(existing, fetched, brands, static):
                 exact=(menu['brandId'],menu['name']) in exact_names
                 decisions.append(dict(id=menu['id'],brandId=menu['brandId'],name=menu['name'],state='EXISTING' if exact or menu['id'] in ids or key in external else 'ALIAS_MATCH'))
                 duplicates+=1;continue
-            added.append(menu);ids.add(menu['id']);names.add(name)
+            added.append(menu);ids.add(menu['id']);names.add(name);by_id[menu['id']]=menu
             menu_names.setdefault(name,[]).append(menu);exact_names.add((menu['brandId'],menu['name']))
             decisions.append(dict(id=menu['id'],brandId=menu['brandId'],name=menu['name'],state='NEW'))
             if menu.get('externalId'): external.add(key)
+        if batch.get('status')=='SUCCESS' and batch.get('brandId'):
+            observed={m['id'] for m in batch.get('menus',[])}
+            for old in existing_menus:
+                if old['brandId']==batch['brandId'] and old['id'] not in observed:
+                    missing+=1
+                    decisions.append(dict(id=old['id'],brandId=old['brandId'],name=old['name'],
+                        state='REVIEW_REQUIRED',reason='NOT_OBSERVED_EXISTING_RETAINED'))
     return existing_menus+added,dict(candidateCount=count,publishedNewCount=len(added),duplicateCount=duplicates,invalidCount=invalid,identityReviewCount=identity_reviews,
+        changeReviewCount=changes,availabilityReviewCount=missing,
         newWithNutrition=sum(any(r.get(k) is not None for k in ('energyKcal','carbohydrateGrams','proteinGrams','fatGrams')) for r in added),
         newWithoutNutrition=sum(all(r.get(k) is None for k in ('energyKcal','carbohydrateGrams','proteinGrams','fatGrams')) for r in added),decisions=decisions)
 
 def atomic_write(path,data):
     temporary=path.with_suffix(path.suffix+'.tmp');temporary.write_bytes(data);os.replace(temporary,path)
 
-def run(out, run_key, brands=None, batches=None, target_brand_ids=None):
+def published_menu(menu):
+    """Keep nutrition values/source proof; duplicate renderer proof is in audit."""
+    if not menu.get('officialNutrition'):
+        return menu
+    return dict(menu, officialNutrition={k:v for k,v in menu['officialNutrition'].items()
+                if v is not None and k not in ('optionalFieldEvidence', 'retainedFieldEvidence',
+                    'sourceType', 'listSourceURL', 'listSourceSha256', 'officialDetailFullName',
+                    'listingDisplayName', 'groupCrosswalkEvidence')})
+
+def daily_nutrition(menus, live_fetch, target_brand_ids=None):
+    """Seed the complete range before live acquisition; fail before publication."""
+    from franchise_nutrition import REGISTRY, load_reviewed_nutrition, refresh, FIELDS, OPTIONAL_FIELDS
+    original = copy.deepcopy(menus)
+    registry = json.loads(REGISTRY.read_text(encoding='utf-8')) if REGISTRY.exists() else []
+    seeded, replay = load_reviewed_nutrition(menus, registry)
+    if any('differences' in row for row in replay):
+        raise ValueError('Reviewed nutrition conflicts with retained catalog facts')
+    if replay:
+        # Android's previous catalog deliberately omits audit dictionaries.
+        # Reconstruct only equal-field proof from the validated replay, even
+        # when no numeric NULL remains to fill on a repeated daily run.
+        proof_inputs = copy.deepcopy(menus)
+        for menu in proof_inputs:
+            menu.pop('officialNutrition', None)
+        proof_menus, _ = load_reviewed_nutrition(proof_inputs, registry)
+        for menu, proof_menu in zip(seeded, proof_menus):
+            fact = menu.get('officialNutrition')
+            proof = proof_menu.get('officialNutrition') or {}
+            if not fact:
+                continue
+            for key in ('optionalFieldEvidence', 'retainedFieldEvidence'):
+                for field, evidence in proof.get(key, {}).items():
+                    if fact.get(field) == proof.get(field):
+                        fact.setdefault(key, {}).setdefault(field, copy.deepcopy(evidence))
+    audit = {}
+    refreshed = seeded
+    if live_fetch and REGISTRY.exists():
+        if target_brand_ids is None:
+            refreshed, audit = refresh(seeded)
+        else:
+            selected = [m for m in seeded if m['brandId'] in target_brand_ids]
+            selected_registry = [b for b in registry if b['brandId'] in target_brand_ids]
+            # Refresh also validates the complete replay index. Bind that
+            # validation to the full policy registry, while its acquisition
+            # registry and menu range remain target-only. A private globals
+            # copy avoids changing the shared helper or any module globals.
+            scoped_globals = dict(refresh.__globals__)
+            scoped_globals['load_reviewed_nutrition'] = lambda menus, policies: load_reviewed_nutrition(menus, registry)
+            scoped_refresh = FunctionType(refresh.__code__, scoped_globals,
+                                          refresh.__name__, refresh.__defaults__, refresh.__closure__)
+            rows, audit = scoped_refresh(selected, registry=selected_registry)
+            assert [m['id'] for m in rows] == [m['id'] for m in selected], 'Refresh identity range changed'
+            by_id = {m['id']: m for m in rows}
+            refreshed = [by_id.get(m['id'], m) for m in seeded]
+    assert [m['id'] for m in refreshed] == [m['id'] for m in original], 'Nutrition identity range changed'
+    # Live parsers can omit proof for previously known equal/retained values.
+    # Preserve that reusable evidence without changing primary live provenance.
+    for old, menu in zip(seeded, refreshed):
+        fact = menu.get('officialNutrition')
+        if not fact:
+            continue
+        for key in ('optionalFieldEvidence', 'retainedFieldEvidence'):
+            for field, evidence in (old.get('officialNutrition') or {}).get(key, {}).items():
+                if fact.get(field) == old['officialNutrition'].get(field):
+                    fact.setdefault(key, {}).setdefault(field, copy.deepcopy(evidence))
+    fields = FIELDS + OPTIONAL_FIELDS
+    old_facts = {m['id']: m.get('officialNutrition') or {} for m in original}
+    linked = lambda fact: any(fact.get(k) is not None for k in FIELDS)
+    audit.update(reviewedReplay=replay,
+        reviewedReplayAppliedMenus=sum(any(old_facts[m['id']].get(k) is None and
+            (m.get('officialNutrition') or {}).get(k) is not None for k in fields) for m in seeded),
+        newlyVerifiedMenus=sum(not linked(old_facts[m['id']]) and linked(m.get('officialNutrition') or {}) for m in refreshed),
+        nutritionChangedMenus=sum(linked(old_facts[m['id']]) and any(old_facts[m['id']].get(k) !=
+            (m.get('officialNutrition') or {}).get(k) for k in fields + ('servingAmount', 'servingUnit')) for m in refreshed))
+    audit['conflicts'] = [row for row in audit.get('conflicts', []) if 'differences' in row]
+    audit['conflictCount'] = len(audit['conflicts'])
+    evidence_by_id = {row['id']: copy.deepcopy(row) for row in audit.get('menus', [])}
+    audit['menus'] = []
+    for menu in refreshed:
+        row = evidence_by_id.get(menu['id'], dict(id=menu['id'], brandId=menu['brandId']))
+        if menu.get('officialNutrition'):
+            row['officialNutrition'] = copy.deepcopy(menu['officialNutrition'])
+            for key in ('optionalFieldEvidence', 'retainedFieldEvidence'):
+                if key in menu['officialNutrition']:
+                    row[key] = copy.deepcopy(menu['officialNutrition'][key])
+        audit['menus'].append(row)
+    return refreshed, audit
+
+def seed_verified_catalog(existing, path, brands):
+    """Use the checksum-validated app baseline without replacing remote facts.
+
+    This is explicit input, not an unverified discovery or a publication action.
+    Nutrition patch replay below supplies reviewed NULL-only enrichment.
+    """
+    path=Path(path)
+    payload=path.read_bytes()
+    manifest=json.loads(path.with_name('catalog-manifest.json').read_bytes())
+    assert manifest['schemaVersion']==1 and hashlib.sha256(payload).hexdigest()==manifest['sha256']
+    baseline=json.loads(payload)
+    assert baseline['schemaVersion']==1 and len(baseline['menus'])==manifest['menuCount']
+    assert len({m['id'] for m in baseline['menus']})==len(baseline['menus'])
+    merged,audit=merge(existing,[dict(menus=baseline['menus'])],brands,[])
+    return dict(schemaVersion=1,menus=merged),audit
+
+def run(out, run_key, brands=None, batches=None, target_brand_ids=None, baseline_catalog=None):
     out=Path(out);out.mkdir(parents=True,exist_ok=True)
     lock=out/'.sync-lock'
     try: fd=os.open(lock,os.O_CREAT|os.O_EXCL|os.O_WRONLY)
@@ -355,6 +523,9 @@ def run(out, run_key, brands=None, batches=None, target_brand_ids=None):
         previous_state=json.loads(state_path.read_text(encoding='utf-8')) if state_path.exists() else previous_report.get('brands',[])
         if manifest.get('runKey')==run_key or previous_report.get('runId')==run_key:
             return {'status':'ALREADY_COMPLETED','runKey':run_key}
+        baseline_audit=None
+        if baseline_catalog is not None:
+            existing,baseline_audit=seed_verified_catalog(existing,baseline_catalog,brands)
         started=datetime.now(timezone.utc).isoformat()
         live_fetch = batches is None
         if batches is None:
@@ -363,25 +534,22 @@ def run(out, run_key, brands=None, batches=None, target_brand_ids=None):
             with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool: batches=list(pool.map(fetch,selected))
         static=json.loads(SEED.read_text(encoding='utf-8'))
         menus,counts=merge(existing,batches,brands,static)
-        nutrition_audit = None
-        if live_fetch:
-            from franchise_nutrition import REGISTRY, refresh
-            if REGISTRY.exists():
-                menus,nutrition_audit=refresh(menus)
-                previous_ids={m['id'] for m in existing.get('menus',[])}
-                new_menus=[m for m in menus if m['id'] not in previous_ids]
-                counts['newWithNutrition']=sum(any(m.get('officialNutrition',{}).get(k) is not None for k in ('energyKcal','carbohydrateGrams','proteinGrams','fatGrams','sodiumMilligrams')) for m in new_menus)
-                counts['newWithoutNutrition']=len(new_menus)-counts['newWithNutrition']
+        menus,nutrition_audit=daily_nutrition(menus,live_fetch,target_brand_ids)
+        previous_ids={m['id'] for m in existing.get('menus',[])}
+        new_menus=[m for m in menus if m['id'] not in previous_ids]
+        counts['newWithNutrition']=sum(any(m.get('officialNutrition',{}).get(k) is not None for k in ('energyKcal','carbohydrateGrams','proteinGrams','fatGrams','sodiumMilligrams')) for m in new_menus)
+        counts['newWithoutNutrition']=len(new_menus)-counts['newWithNutrition']
         report=dict(runId=run_key,triggerType=os.environ.get('GITHUB_EVENT_NAME','local'),startedAt=started,endedAt=datetime.now(timezone.utc).isoformat(),timezone='Asia/Seoul',
             dateKst=datetime.fromtimestamp(time.time()+9*3600,timezone.utc).date().isoformat(),
-            scope='TARGETED_VERIFICATION' if target_brand_ids is not None else 'FULL',registryBrands=len(brands),
+            scope=('ACTIVE_BRANDS' if target_brand_ids==update_targets(brands,True) else 'TARGETED_VERIFICATION') if target_brand_ids is not None else 'FULL',registryBrands=len(brands),
             targetBrands=len(target_brand_ids) if target_brand_ids is not None else len(brands),
             successBrands=sum(b['status']=='SUCCESS' for b in batches),failedBrands=sum(b['status']=='FETCH_FAILED' for b in batches),
             sourceMissing=sum(b['status']=='SOURCE_MISSING' for b in batches),reviewRequired=sum(b['status']=='REVIEW_REQUIRED' for b in batches),
             **counts,brands=[{k:v for k,v in b.items() if k!='menus'} for b in batches])
         if nutrition_audit:
             report['nutritionAudit']={k:v for k,v in nutrition_audit.items() if k!='menus'}
-            atomic_write(out/'latest-franchise-nutrition-audit.json',json.dumps(nutrition_audit,ensure_ascii=False,indent=2).encode())
+        if baseline_audit is not None:
+            report['baselineAudit']=baseline_audit
         by_id={b['brandId']:b for b in brands}
         states=[automation_state(by_id[b['brandId']],b) for b in batches if b.get('brandId') in by_id]
         report.update(autoReadyBrands=states.count('AUTO_READY'),sourceBlockedBrands=states.count('SOURCE_BLOCKED'),
@@ -391,9 +559,11 @@ def run(out, run_key, brands=None, batches=None, target_brand_ids=None):
         for batch in report['brands']:
             old=previous_by_id.get(batch.get('brandId'),{})
             new_count=sum(d['brandId']==batch.get('brandId') and d['state']=='NEW' for d in counts['decisions'])
+            review_count=sum(d['brandId']==batch.get('brandId') and d['state']=='REVIEW_REQUIRED' for d in counts['decisions'])
             ok=batch['status']=='SUCCESS'
             batch.update(lastCheckedAt=batch.get('checkedAt',started),lastSuccessAt=batch.get('checkedAt',started) if ok else old.get('lastSuccessAt'),
-                lastResult='SUCCESS' if ok and new_count else 'NO_CHANGE' if ok else 'FAILED',lastMenuCount=batch.get('observedMenuCount',0),lastNewCount=new_count,
+                lastResult='REVIEW_REQUIRED' if review_count else 'SUCCESS' if ok and new_count else 'NO_CHANGE' if ok else 'FAILED',
+                reviewMenuCount=review_count,lastMenuCount=batch.get('observedMenuCount',0),lastNewCount=new_count,
                 adapterTypes=sorted({s['adapter'] for s in batch.get('sources',[])}),
                 sourceTypes=sorted({s['sourceType'] for s in batch.get('sources',[]) if s.get('sourceType')}))
         report.update(noChangeBrands=sum(b['lastResult']=='NO_CHANGE' for b in report['brands']),newMenuBrands=sum(b['lastResult']=='SUCCESS' for b in report['brands']),
@@ -404,6 +574,8 @@ def run(out, run_key, brands=None, batches=None, target_brand_ids=None):
             sourceTypeMenuCounts={t:sum(m.get('sourceType')==t for m in menus) for t in sorted(SOURCE_TYPES)},
             missingSourceTypeCount=sum('sourceType' not in m for m in menus))
         successes=report['successBrands']
+        report['catalogWritten']=False
+        report['publicationStage']='LOCAL_ARTIFACT_ONLY'
         if successes:
             by_menu_id={m['id']:m for m in menus}
             assert len(by_menu_id)==len(menus),'Duplicate stable menu ID'
@@ -414,8 +586,7 @@ def run(out, run_key, brands=None, batches=None, target_brand_ids=None):
             # Optional unknown nutrition fields deserialize as null in Android.
             # Omit their repeated JSON keys to keep the verified catalog inside
             # its download limit, without losing facts or changing legacy fields.
-            published=[dict(m,officialNutrition={k:v for k,v in m['officialNutrition'].items() if v is not None})
-                       if m.get('officialNutrition') else m for m in sorted(menus,key=lambda m:m['id'])]
+            published=[published_menu(m) for m in sorted(menus,key=lambda m:m['id'])]
             payload=json.dumps(dict(schemaVersion=1,menus=published),ensure_ascii=False,sort_keys=True,separators=(',',':')).encode()
             checksum=hashlib.sha256(payload).hexdigest();filename='catalog-'+checksum+'.json'
             assert len(payload)<=MAX_CATALOG_BYTES,'Validated catalog exceeds Android download limit; existing published files unchanged'
@@ -423,6 +594,9 @@ def run(out, run_key, brands=None, batches=None, target_brand_ids=None):
                 atomic_write(out/filename,payload)
                 manifest=dict(schemaVersion=1,file=filename,sha256=checksum,version=checksum,menuCount=len(menus),runKey=run_key,publishedAt=report['endedAt'])
                 atomic_write(manifest_path,json.dumps(manifest,sort_keys=True).encode())
+                report['catalogWritten']=True
+        if nutrition_audit:
+            atomic_write(out/'latest-franchise-nutrition-audit.json',json.dumps(nutrition_audit,ensure_ascii=False,indent=2).encode())
         report['catalogVersion']=manifest.get('version');report['checksum']=manifest.get('sha256')
         report['status']='PUBLISHED' if successes else 'EXISTING_CATALOG_RETAINED'
         persistent=dict(previous_by_id)
@@ -433,6 +607,7 @@ def run(out, run_key, brands=None, batches=None, target_brand_ids=None):
         atomic_write(state_path,json.dumps(list(persistent.values()),ensure_ascii=False,indent=2).encode())
         history=out/'sync-history';history.mkdir(exist_ok=True)
         summary={k:v for k,v in report.items() if k not in ('brands','decisions')}
+        summary['reviewDecisions']=[d for d in report['decisions'] if d['state']=='REVIEW_REQUIRED']
         summary['brands']=[persistent[b['brandId']] for b in report['brands'] if b.get('brandId')]
         atomic_write(history/(hashlib.sha256(run_key.encode()).hexdigest()+'.json'),json.dumps(summary,ensure_ascii=False,indent=2).encode())
         atomic_write(out/'latest-franchise-sync-report.json',json.dumps(report,ensure_ascii=False,indent=2).encode())
@@ -441,12 +616,13 @@ def run(out, run_key, brands=None, batches=None, target_brand_ids=None):
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser();parser.add_argument('--output',required=True);parser.add_argument('--run-key');parser.add_argument('--brand-only')
+    parser.add_argument('--healthy-only',action='store_true')
+    parser.add_argument('--baseline-catalog',type=Path)
     args=parser.parse_args()
     key=args.run_key or datetime.fromtimestamp(time.time()+9*3600,timezone.utc).strftime('%Y-%m-%d')
     all_brands=json.loads(CONFIG.read_text(encoding='utf-8'))
     targets=None
-    if args.brand_only:
-        names=set(args.brand_only.split(','));targets={b['brandId'] for b in all_brands if b['name'] in names}
-        assert len(targets)==len(names), 'Unknown verification brand'
-    result=run(args.output,key,all_brands,target_brand_ids=targets)
+    if args.brand_only or args.healthy_only:
+        targets=update_targets(all_brands,args.healthy_only,set(args.brand_only.split(',')) if args.brand_only else None)
+    result=run(args.output,key,all_brands,target_brand_ids=targets,baseline_catalog=args.baseline_catalog)
     print(json.dumps({k:v for k,v in result.items() if k!='brands'},ensure_ascii=False))

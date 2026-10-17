@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "patches": [
+    {
+      "path": "data-source/franchise-nutrition-batch-20261014/linked-menus.json",
+      "sha256": "3a324e102cf698c67c1e960dbac6af4cc4afb93387b727745d96350aa3f0af8d"
+    },
+    {
+      "path": "data-source/franchise-nutrition-batch-2-20261014/linked-menus.json",
+      "sha256": "af4a13f7d1a048c7eafe53522e9dcb0154117e6fa299a4e84dae21027eb77200"
+    },
+    {
+      "path": "data-source/franchise-nutrition-stability-20261014/linked-menus.json",
+      "sha256": "6601fe55a4fa8e09c3800201fab7d49b92f8d01e6ccafcd6fc8b9c833836173a"
+    },
+    {
+      "path": "data-source/franchise-nutrition-core-20261016/linked-menus.json",
+      "sha256": "6b72523b23599120a19c7c680584026b43d0d56773e0825c58a5d9da70c522b9"
+    },
+    {
+      "path": "data-source/franchise-nutrition-followup-20261016/linked-menus.json",
+      "sha256": "1e3c73ea55fc856c48406fd894ab8511ee937627a0f35b3aae484173caaa76ce"
+    },
+    {
+      "path": "data-source/franchise-nutrition-remaining-six-20261016/linked-menus.json",
+      "sha256": "a1ac34a65a4fd68006197d4ed7b0c137ea3e06881beb80478c448d97511862b4"
+    },
+    {
+      "path": "data-source/franchise-nutrition-five-20261017/linked-menus.json",
+      "sha256": "5171621943d71892ae8aec40b21b62ea57728067d84e2451890e7580288e65d6"
+    },
+    {
+      "path": "data-source/franchise-nutrition-alternatives-20261017/linked-menus.json",
+      "sha256": "3c1b3dfcfada97ddfa36fc27c6304df579c591b77faec25252b7ba3c1af3f85f"
+    }
+  ]
+}
