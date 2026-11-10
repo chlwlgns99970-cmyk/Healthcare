@@ -1,8 +1,8 @@
 [
   {
     "brandId": "brand-ffd3bb1b019cf849",
-    "lastCheckedAt": "2026-11-08T22:56:29.815245+00:00",
-    "lastSuccessAt": "2026-11-08T22:56:29.815245+00:00",
+    "lastCheckedAt": "2026-11-10T02:13:21.027922+00:00",
+    "lastSuccessAt": "2026-11-10T02:13:21.027922+00:00",
     "lastResult": "REVIEW_REQUIRED",
     "lastMenuCount": 128,
     "lastNewCount": 0,
@@ -398,8 +398,8 @@
   },
   {
     "brandId": "brand-24df7e63c9c2314e",
-    "lastCheckedAt": "2026-11-08T22:56:18.999880+00:00",
-    "lastSuccessAt": "2026-11-08T22:56:18.999880+00:00",
+    "lastCheckedAt": "2026-11-10T02:13:11.740701+00:00",
+    "lastSuccessAt": "2026-11-10T02:13:11.740701+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 77,
     "lastNewCount": 0,
@@ -423,8 +423,8 @@
   },
   {
     "brandId": "brand-d857c6bf9eb6a6c0",
-    "lastCheckedAt": "2026-11-08T22:56:19.000314+00:00",
-    "lastSuccessAt": "2026-11-08T22:56:19.000314+00:00",
+    "lastCheckedAt": "2026-11-10T02:13:11.741476+00:00",
+    "lastSuccessAt": "2026-11-10T02:13:11.741476+00:00",
     "lastResult": "REVIEW_REQUIRED",
     "lastMenuCount": 197,
     "lastNewCount": 0,
@@ -448,11 +448,11 @@
   },
   {
     "brandId": "brand-2c14410b57ba9fc4",
-    "lastCheckedAt": "2026-11-08T22:56:28.380071+00:00",
-    "lastSuccessAt": "2026-11-08T22:56:28.380071+00:00",
+    "lastCheckedAt": "2026-11-10T02:13:21.550609+00:00",
+    "lastSuccessAt": "2026-11-10T02:13:21.550609+00:00",
     "lastResult": "REVIEW_REQUIRED",
-    "lastMenuCount": 173,
-    "lastNewCount": 0,
+    "lastMenuCount": 164,
+    "lastNewCount": 16,
     "adapterTypes": [
       "kfc-json"
     ],
@@ -509,7 +509,7 @@
   },
   {
     "brandId": "brand-b0f892d2c591ca13",
-    "lastCheckedAt": "2026-11-08T23:00:51.265394+00:00",
+    "lastCheckedAt": "2026-11-10T02:17:46.060642+00:00",
     "lastSuccessAt": null,
     "lastResult": "FAILED",
     "lastMenuCount": 0,
@@ -597,8 +597,8 @@
   },
   {
     "brandId": "brand-f91351461391155a",
-    "lastCheckedAt": "2026-11-08T22:56:25.104480+00:00",
-    "lastSuccessAt": "2026-11-08T22:56:25.104480+00:00",
+    "lastCheckedAt": "2026-11-10T02:13:18.613799+00:00",
+    "lastSuccessAt": "2026-11-10T02:13:18.613799+00:00",
     "lastResult": "REVIEW_REQUIRED",
     "lastMenuCount": 51,
     "lastNewCount": 0,
@@ -640,8 +640,8 @@
   },
   {
     "brandId": "brand-dfd7712a868b7cd2",
-    "lastCheckedAt": "2026-11-08T22:56:40.081888+00:00",
-    "lastSuccessAt": "2026-11-08T22:56:40.081888+00:00",
+    "lastCheckedAt": "2026-11-10T02:13:29.125207+00:00",
+    "lastSuccessAt": "2026-11-10T02:13:29.125207+00:00",
     "lastResult": "REVIEW_REQUIRED",
     "lastMenuCount": 120,
     "lastNewCount": 0,
@@ -800,8 +800,8 @@
   },
   {
     "brandId": "brand-792c9f221e49eb7e",
-    "lastCheckedAt": "2026-11-08T22:56:39.728740+00:00",
-    "lastSuccessAt": "2026-11-08T22:56:39.728740+00:00",
+    "lastCheckedAt": "2026-11-10T02:13:31.254217+00:00",
+    "lastSuccessAt": "2026-11-10T02:13:31.254217+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 83,
     "lastNewCount": 0,
@@ -915,8 +915,8 @@
   },
   {
     "brandId": "brand-45ddca38a87b3dcd",
-    "lastCheckedAt": "2026-11-08T22:56:33.548879+00:00",
-    "lastSuccessAt": "2026-11-08T22:56:33.548879+00:00",
+    "lastCheckedAt": "2026-11-10T02:13:27.967394+00:00",
+    "lastSuccessAt": "2026-11-10T02:13:27.967394+00:00",
     "lastResult": "REVIEW_REQUIRED",
     "lastMenuCount": 195,
     "lastNewCount": 0,
@@ -987,8 +987,8 @@
   },
   {
     "brandId": "brand-5b391ae396ab6901",
-    "lastCheckedAt": "2026-11-08T22:56:36.939665+00:00",
-    "lastSuccessAt": "2026-11-08T22:56:36.939665+00:00",
+    "lastCheckedAt": "2026-11-10T02:13:32.149333+00:00",
+    "lastSuccessAt": "2026-11-10T02:13:32.149333+00:00",
     "lastResult": "REVIEW_REQUIRED",
     "lastMenuCount": 119,
     "lastNewCount": 0,
@@ -1039,8 +1039,8 @@
   },
   {
     "brandId": "brand-dfbc0be6a9fb565a",
-    "lastCheckedAt": "2026-11-08T22:56:43.535065+00:00",
-    "lastSuccessAt": "2026-11-08T22:56:43.535065+00:00",
+    "lastCheckedAt": "2026-11-10T02:13:35.627836+00:00",
+    "lastSuccessAt": "2026-11-10T02:13:35.627836+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 59,
     "lastNewCount": 0,
@@ -1109,8 +1109,8 @@
   },
   {
     "brandId": "brand-913a908f005583f0",
-    "lastCheckedAt": "2026-11-08T22:56:58.918007+00:00",
-    "lastSuccessAt": "2026-11-08T22:56:58.918007+00:00",
+    "lastCheckedAt": "2026-11-10T02:13:51.024433+00:00",
+    "lastSuccessAt": "2026-11-10T02:13:51.024433+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 102,
     "lastNewCount": 0,
@@ -1208,7 +1208,7 @@
   },
   {
     "brandId": "brand-1c90aeff2ad68611",
-    "lastCheckedAt": "2026-11-08T22:56:49.756709+00:00",
+    "lastCheckedAt": "2026-11-10T02:13:42.517481+00:00",
     "lastSuccessAt": "2026-10-21T22:25:51.487951+00:00",
     "lastResult": "FAILED",
     "lastMenuCount": 68,
@@ -1287,7 +1287,7 @@
   },
   {
     "brandId": "brand-6f80c60267f6bc73",
-    "lastCheckedAt": "2026-11-08T22:57:17.827934+00:00",
+    "lastCheckedAt": "2026-11-10T02:14:09.421708+00:00",
     "lastSuccessAt": "2026-10-20T22:23:06.956681+00:00",
     "lastResult": "FAILED",
     "lastMenuCount": 323,
@@ -1503,7 +1503,7 @@
   },
   {
     "brandId": "brand-044f74822bd63a2c",
-    "lastCheckedAt": "2026-11-08T22:56:50.953577+00:00",
+    "lastCheckedAt": "2026-11-10T02:13:43.811814+00:00",
     "lastSuccessAt": null,
     "lastResult": "FAILED",
     "lastMenuCount": 0,
@@ -1528,7 +1528,7 @@
   },
   {
     "brandId": "brand-9bd2fd2f30a9da68",
-    "lastCheckedAt": "2026-11-08T22:56:56.964843+00:00",
+    "lastCheckedAt": "2026-11-10T02:13:50.330571+00:00",
     "lastSuccessAt": null,
     "lastResult": "FAILED",
     "lastMenuCount": 0,
@@ -1634,11 +1634,11 @@
   },
   {
     "brandId": "brand-0dc8558d4e8f58fd",
-    "lastCheckedAt": "2026-11-08T22:57:46.064672+00:00",
-    "lastSuccessAt": "2026-11-08T22:57:46.064672+00:00",
+    "lastCheckedAt": "2026-11-10T02:14:44.606130+00:00",
+    "lastSuccessAt": "2026-11-10T02:14:44.606130+00:00",
     "lastResult": "REVIEW_REQUIRED",
-    "lastMenuCount": 490,
-    "lastNewCount": 0,
+    "lastMenuCount": 510,
+    "lastNewCount": 18,
     "adapterTypes": [
       "ediya-fragment",
       "ediya-list"
@@ -1855,6 +1855,15 @@
         "attempts": 1
       },
       {
+        "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=8&chked_val=&skeyword=&page=12",
+        "adapter": "ediya-fragment",
+        "sourceType": "HTML",
+        "status": "SUCCESS",
+        "error": null,
+        "errorReason": null,
+        "attempts": 1
+      },
+      {
         "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=7&chked_val=&skeyword=&page=13",
         "adapter": "ediya-fragment",
         "sourceType": "HTML",
@@ -1864,7 +1873,25 @@
         "attempts": 1
       },
       {
+        "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=8&chked_val=&skeyword=&page=13",
+        "adapter": "ediya-fragment",
+        "sourceType": "HTML",
+        "status": "SUCCESS",
+        "error": null,
+        "errorReason": null,
+        "attempts": 1
+      },
+      {
         "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=7&chked_val=&skeyword=&page=14",
+        "adapter": "ediya-fragment",
+        "sourceType": "HTML",
+        "status": "SUCCESS",
+        "error": null,
+        "errorReason": null,
+        "attempts": 1
+      },
+      {
+        "sourceUrl": "https://www.ediya.com/inc/ajax_brand.php?gubun=menu_more&product_cate=8&chked_val=&skeyword=&page=14",
         "adapter": "ediya-fragment",
         "sourceType": "HTML",
         "status": "SUCCESS",
@@ -2227,8 +2254,8 @@
   },
   {
     "brandId": "brand-db8f86831d5f2b94",
-    "lastCheckedAt": "2026-11-08T22:57:11.717066+00:00",
-    "lastSuccessAt": "2026-11-08T22:57:11.717066+00:00",
+    "lastCheckedAt": "2026-11-10T02:14:05.351461+00:00",
+    "lastSuccessAt": "2026-11-10T02:14:05.351461+00:00",
     "lastResult": "REVIEW_REQUIRED",
     "lastMenuCount": 202,
     "lastNewCount": 0,
@@ -2342,11 +2369,11 @@
   },
   {
     "brandId": "brand-149ee0d555be8e34",
-    "lastCheckedAt": "2026-11-08T22:57:32.325064+00:00",
-    "lastSuccessAt": "2026-11-08T22:57:32.325064+00:00",
-    "lastResult": "NO_CHANGE",
-    "lastMenuCount": 261,
-    "lastNewCount": 0,
+    "lastCheckedAt": "2026-11-10T02:14:25.761587+00:00",
+    "lastSuccessAt": "2026-11-10T02:14:25.761587+00:00",
+    "lastResult": "REVIEW_REQUIRED",
+    "lastMenuCount": 248,
+    "lastNewCount": 4,
     "adapterTypes": [
       "reviewed-html"
     ],
@@ -2520,8 +2547,8 @@
   },
   {
     "brandId": "brand-2366ea85553dc984",
-    "lastCheckedAt": "2026-11-08T22:57:20.089970+00:00",
-    "lastSuccessAt": "2026-11-08T22:57:20.089970+00:00",
+    "lastCheckedAt": "2026-11-10T02:14:11.812866+00:00",
+    "lastSuccessAt": "2026-11-10T02:14:11.812866+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 19,
     "lastNewCount": 0,
@@ -2545,8 +2572,8 @@
   },
   {
     "brandId": "brand-9bbe44a999e4d158",
-    "lastCheckedAt": "2026-11-08T22:57:25.397219+00:00",
-    "lastSuccessAt": "2026-11-08T22:57:25.397219+00:00",
+    "lastCheckedAt": "2026-11-10T02:14:17.180940+00:00",
+    "lastSuccessAt": "2026-11-10T02:14:17.180940+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 7,
     "lastNewCount": 0,
@@ -2570,8 +2597,8 @@
   },
   {
     "brandId": "brand-9fe52457ea35b575",
-    "lastCheckedAt": "2026-11-08T22:57:26.067027+00:00",
-    "lastSuccessAt": "2026-11-08T22:57:26.067027+00:00",
+    "lastCheckedAt": "2026-11-10T02:14:17.895715+00:00",
+    "lastSuccessAt": "2026-11-10T02:14:17.895715+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 15,
     "lastNewCount": 0,
@@ -2595,8 +2622,8 @@
   },
   {
     "brandId": "brand-6b4062eb7d56bbc2",
-    "lastCheckedAt": "2026-11-08T22:57:31.501470+00:00",
-    "lastSuccessAt": "2026-11-08T22:57:31.501470+00:00",
+    "lastCheckedAt": "2026-11-10T02:14:23.520130+00:00",
+    "lastSuccessAt": "2026-11-10T02:14:23.520130+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 19,
     "lastNewCount": 0,
@@ -2656,8 +2683,8 @@
   },
   {
     "brandId": "brand-e237cdd96675b8e9",
-    "lastCheckedAt": "2026-11-08T22:57:32.509286+00:00",
-    "lastSuccessAt": "2026-11-08T22:57:32.509286+00:00",
+    "lastCheckedAt": "2026-11-10T02:14:24.844724+00:00",
+    "lastSuccessAt": "2026-11-10T02:14:24.844724+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 10,
     "lastNewCount": 0,
@@ -2681,8 +2708,8 @@
   },
   {
     "brandId": "brand-a6a2f91c0a858eab",
-    "lastCheckedAt": "2026-11-08T22:57:42.906327+00:00",
-    "lastSuccessAt": "2026-11-08T22:57:42.906327+00:00",
+    "lastCheckedAt": "2026-11-10T02:14:35.807163+00:00",
+    "lastSuccessAt": "2026-11-10T02:14:35.807163+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 13,
     "lastNewCount": 0,
@@ -2715,8 +2742,8 @@
   },
   {
     "brandId": "brand-e391193d95fb4b22",
-    "lastCheckedAt": "2026-11-08T22:57:41.241812+00:00",
-    "lastSuccessAt": "2026-11-08T22:57:41.241812+00:00",
+    "lastCheckedAt": "2026-11-10T02:14:33.979491+00:00",
+    "lastSuccessAt": "2026-11-10T02:14:33.979491+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 49,
     "lastNewCount": 0,
@@ -2767,8 +2794,8 @@
   },
   {
     "brandId": "brand-d12ac5629277dd74",
-    "lastCheckedAt": "2026-11-08T22:57:44.642588+00:00",
-    "lastSuccessAt": "2026-11-08T22:57:44.642588+00:00",
+    "lastCheckedAt": "2026-11-10T02:14:37.548495+00:00",
+    "lastSuccessAt": "2026-11-10T02:14:37.548495+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 19,
     "lastNewCount": 0,
@@ -2811,8 +2838,8 @@
   },
   {
     "brandId": "brand-d3742bdc75b7cfff",
-    "lastCheckedAt": "2026-11-08T22:57:45.579820+00:00",
-    "lastSuccessAt": "2026-11-08T22:57:45.579820+00:00",
+    "lastCheckedAt": "2026-11-10T02:14:38.604109+00:00",
+    "lastSuccessAt": "2026-11-10T02:14:38.604109+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 61,
     "lastNewCount": 0,
@@ -2836,8 +2863,8 @@
   },
   {
     "brandId": "brand-b06d5a467c2e2917",
-    "lastCheckedAt": "2026-11-08T22:57:46.738716+00:00",
-    "lastSuccessAt": "2026-11-08T22:57:46.738716+00:00",
+    "lastCheckedAt": "2026-11-10T02:14:39.763844+00:00",
+    "lastSuccessAt": "2026-11-10T02:14:39.763844+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 8,
     "lastNewCount": 0,
@@ -2861,8 +2888,8 @@
   },
   {
     "brandId": "brand-517e6e3a0f2a227b",
-    "lastCheckedAt": "2026-11-08T22:57:46.758754+00:00",
-    "lastSuccessAt": "2026-11-08T22:57:46.758754+00:00",
+    "lastCheckedAt": "2026-11-10T02:14:42.311098+00:00",
+    "lastSuccessAt": "2026-11-10T02:14:42.311098+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 90,
     "lastNewCount": 0,
@@ -2886,8 +2913,8 @@
   },
   {
     "brandId": "brand-3af4368565dc9463",
-    "lastCheckedAt": "2026-11-08T22:57:53.359519+00:00",
-    "lastSuccessAt": "2026-11-08T22:57:53.359519+00:00",
+    "lastCheckedAt": "2026-11-10T02:14:52.324113+00:00",
+    "lastSuccessAt": "2026-11-10T02:14:52.324113+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 62,
     "lastNewCount": 0,
@@ -2956,8 +2983,8 @@
   },
   {
     "brandId": "brand-09811efd43af8395",
-    "lastCheckedAt": "2026-11-08T22:57:55.477374+00:00",
-    "lastSuccessAt": "2026-11-08T22:57:55.477374+00:00",
+    "lastCheckedAt": "2026-11-10T02:14:50.381398+00:00",
+    "lastSuccessAt": "2026-11-10T02:14:50.381398+00:00",
     "lastResult": "REVIEW_REQUIRED",
     "lastMenuCount": 67,
     "lastNewCount": 0,
@@ -3026,8 +3053,8 @@
   },
   {
     "brandId": "brand-62da25d9478406f9",
-    "lastCheckedAt": "2026-11-08T22:58:01.917905+00:00",
-    "lastSuccessAt": "2026-11-08T22:58:01.917905+00:00",
+    "lastCheckedAt": "2026-11-10T02:14:57.062523+00:00",
+    "lastSuccessAt": "2026-11-10T02:14:57.062523+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 29,
     "lastNewCount": 0,
@@ -3096,8 +3123,8 @@
   },
   {
     "brandId": "brand-52b7eab533bf064f",
-    "lastCheckedAt": "2026-11-08T22:57:55.218646+00:00",
-    "lastSuccessAt": "2026-11-08T22:57:55.218646+00:00",
+    "lastCheckedAt": "2026-11-10T02:14:51.257163+00:00",
+    "lastSuccessAt": "2026-11-10T02:14:51.257163+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 22,
     "lastNewCount": 0,
@@ -3121,8 +3148,8 @@
   },
   {
     "brandId": "brand-98d0269278f56dd7",
-    "lastCheckedAt": "2026-11-08T22:57:57.927768+00:00",
-    "lastSuccessAt": "2026-11-08T22:57:57.927768+00:00",
+    "lastCheckedAt": "2026-11-10T02:14:55.473451+00:00",
+    "lastSuccessAt": "2026-11-10T02:14:55.473451+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 21,
     "lastNewCount": 0,
@@ -3180,8 +3207,8 @@
   },
   {
     "brandId": "brand-4971bd13f52f50ae",
-    "lastCheckedAt": "2026-11-08T22:57:56.318040+00:00",
-    "lastSuccessAt": "2026-11-08T22:57:56.318040+00:00",
+    "lastCheckedAt": "2026-11-10T02:14:53.216503+00:00",
+    "lastSuccessAt": "2026-11-10T02:14:53.216503+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 4,
     "lastNewCount": 0,
@@ -3205,8 +3232,8 @@
   },
   {
     "brandId": "brand-bd40e3bf63110e3a",
-    "lastCheckedAt": "2026-11-08T22:57:58.528158+00:00",
-    "lastSuccessAt": "2026-11-08T22:57:58.528158+00:00",
+    "lastCheckedAt": "2026-11-10T02:14:55.352460+00:00",
+    "lastSuccessAt": "2026-11-10T02:14:55.352460+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 70,
     "lastNewCount": 0,
@@ -3230,8 +3257,8 @@
   },
   {
     "brandId": "brand-2d083c367c257949",
-    "lastCheckedAt": "2026-11-08T22:57:59.591005+00:00",
-    "lastSuccessAt": "2026-11-08T22:57:59.591005+00:00",
+    "lastCheckedAt": "2026-11-10T02:14:56.996317+00:00",
+    "lastSuccessAt": "2026-11-10T02:14:56.996317+00:00",
     "lastResult": "REVIEW_REQUIRED",
     "lastMenuCount": 96,
     "lastNewCount": 0,
@@ -3255,8 +3282,8 @@
   },
   {
     "brandId": "brand-d788dc4427d306fe",
-    "lastCheckedAt": "2026-11-08T22:58:00.128248+00:00",
-    "lastSuccessAt": "2026-11-08T22:58:00.128248+00:00",
+    "lastCheckedAt": "2026-11-10T02:14:57.323822+00:00",
+    "lastSuccessAt": "2026-11-10T02:14:57.323822+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 57,
     "lastNewCount": 0,
@@ -3280,8 +3307,8 @@
   },
   {
     "brandId": "brand-440ae94a942a4921",
-    "lastCheckedAt": "2026-11-08T22:58:07.528091+00:00",
-    "lastSuccessAt": "2026-11-08T22:58:07.528091+00:00",
+    "lastCheckedAt": "2026-11-10T02:15:04.402730+00:00",
+    "lastSuccessAt": "2026-11-10T02:15:04.402730+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 83,
     "lastNewCount": 0,
@@ -3359,11 +3386,11 @@
   },
   {
     "brandId": "brand-71bb2f53e15c0897",
-    "lastCheckedAt": "2026-11-08T22:58:03.117141+00:00",
-    "lastSuccessAt": "2026-11-08T22:58:03.117141+00:00",
-    "lastResult": "NO_CHANGE",
+    "lastCheckedAt": "2026-11-10T02:14:58.287539+00:00",
+    "lastSuccessAt": "2026-11-10T02:14:58.287539+00:00",
+    "lastResult": "SUCCESS",
     "lastMenuCount": 41,
-    "lastNewCount": 0,
+    "lastNewCount": 2,
     "adapterTypes": [
       "reviewed-html"
     ],
@@ -3384,8 +3411,8 @@
   },
   {
     "brandId": "brand-2a13283561756adc",
-    "lastCheckedAt": "2026-11-08T22:58:04.203659+00:00",
-    "lastSuccessAt": "2026-11-08T22:58:04.203659+00:00",
+    "lastCheckedAt": "2026-11-10T02:14:59.409133+00:00",
+    "lastSuccessAt": "2026-11-10T02:14:59.409133+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 9,
     "lastNewCount": 0,
@@ -3409,8 +3436,8 @@
   },
   {
     "brandId": "brand-8420421dae1f2ef3",
-    "lastCheckedAt": "2026-11-08T22:58:09.078572+00:00",
-    "lastSuccessAt": "2026-11-08T22:58:09.078572+00:00",
+    "lastCheckedAt": "2026-11-10T02:15:04.483268+00:00",
+    "lastSuccessAt": "2026-11-10T02:15:04.483268+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 37,
     "lastNewCount": 0,
@@ -3479,8 +3506,8 @@
   },
   {
     "brandId": "brand-dfe7aafc7b485943",
-    "lastCheckedAt": "2026-11-08T22:58:11.748501+00:00",
-    "lastSuccessAt": "2026-11-08T22:58:11.748501+00:00",
+    "lastCheckedAt": "2026-11-10T02:15:08.900303+00:00",
+    "lastSuccessAt": "2026-11-10T02:15:08.900303+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 59,
     "lastNewCount": 0,
@@ -3583,11 +3610,11 @@
   },
   {
     "brandId": "brand-3869f6f268d4afd6",
-    "lastCheckedAt": "2026-11-08T22:58:08.205159+00:00",
-    "lastSuccessAt": "2026-11-08T22:58:08.205159+00:00",
+    "lastCheckedAt": "2026-11-10T02:15:05.144718+00:00",
+    "lastSuccessAt": "2026-11-10T02:15:05.144718+00:00",
     "lastResult": "REVIEW_REQUIRED",
-    "lastMenuCount": 114,
-    "lastNewCount": 0,
+    "lastMenuCount": 115,
+    "lastNewCount": 1,
     "adapterTypes": [
       "hansot-browser-json"
     ],
@@ -3608,8 +3635,8 @@
   },
   {
     "brandId": "brand-39adcc9276d724e2",
-    "lastCheckedAt": "2026-11-08T22:58:09.772875+00:00",
-    "lastSuccessAt": "2026-11-08T22:58:09.772875+00:00",
+    "lastCheckedAt": "2026-11-10T02:15:05.656597+00:00",
+    "lastSuccessAt": "2026-11-10T02:15:05.656597+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 79,
     "lastNewCount": 0,
@@ -3633,8 +3660,8 @@
   },
   {
     "brandId": "brand-e37848e7ad911d2a",
-    "lastCheckedAt": "2026-11-08T22:58:10.663854+00:00",
-    "lastSuccessAt": "2026-11-08T22:58:10.663854+00:00",
+    "lastCheckedAt": "2026-11-10T02:15:06.589910+00:00",
+    "lastSuccessAt": "2026-11-10T02:15:06.589910+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 64,
     "lastNewCount": 0,
@@ -3658,8 +3685,8 @@
   },
   {
     "brandId": "brand-e1baf7db5ac285a7",
-    "lastCheckedAt": "2026-11-08T22:58:11.545278+00:00",
-    "lastSuccessAt": "2026-11-08T22:58:11.545278+00:00",
+    "lastCheckedAt": "2026-11-10T02:15:07.517836+00:00",
+    "lastSuccessAt": "2026-11-10T02:15:07.517836+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 37,
     "lastNewCount": 0,
@@ -3683,8 +3710,8 @@
   },
   {
     "brandId": "brand-0e65f6b77b14e324",
-    "lastCheckedAt": "2026-11-08T22:58:12.263062+00:00",
-    "lastSuccessAt": "2026-11-08T22:58:12.263062+00:00",
+    "lastCheckedAt": "2026-11-10T02:15:08.244513+00:00",
+    "lastSuccessAt": "2026-11-10T02:15:08.244513+00:00",
     "lastResult": "REVIEW_REQUIRED",
     "lastMenuCount": 29,
     "lastNewCount": 0,
@@ -3708,8 +3735,8 @@
   },
   {
     "brandId": "brand-5cf4a5c95ff85d3a",
-    "lastCheckedAt": "2026-11-08T22:58:12.729380+00:00",
-    "lastSuccessAt": "2026-11-08T22:58:12.729380+00:00",
+    "lastCheckedAt": "2026-11-10T02:15:08.987929+00:00",
+    "lastSuccessAt": "2026-11-10T02:15:08.987929+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 14,
     "lastNewCount": 0,
@@ -3733,8 +3760,8 @@
   },
   {
     "brandId": "brand-9e7aeb464781f115",
-    "lastCheckedAt": "2026-11-08T22:58:13.000236+00:00",
-    "lastSuccessAt": "2026-11-08T22:58:13.000236+00:00",
+    "lastCheckedAt": "2026-11-10T02:15:09.532869+00:00",
+    "lastSuccessAt": "2026-11-10T02:15:09.532869+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 58,
     "lastNewCount": 0,
@@ -3783,8 +3810,8 @@
   },
   {
     "brandId": "brand-a9a4ba8b5ad2ca3d",
-    "lastCheckedAt": "2026-11-08T22:58:13.238689+00:00",
-    "lastSuccessAt": "2026-11-08T22:58:13.238689+00:00",
+    "lastCheckedAt": "2026-11-10T02:15:09.959578+00:00",
+    "lastSuccessAt": "2026-11-10T02:15:09.959578+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 9,
     "lastNewCount": 0,
@@ -3808,8 +3835,8 @@
   },
   {
     "brandId": "brand-1da93338e8beedb8",
-    "lastCheckedAt": "2026-11-08T22:58:16.029515+00:00",
-    "lastSuccessAt": "2026-11-08T22:58:16.029515+00:00",
+    "lastCheckedAt": "2026-11-10T02:15:13.121668+00:00",
+    "lastSuccessAt": "2026-11-10T02:15:13.121668+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 56,
     "lastNewCount": 0,
@@ -3843,8 +3870,8 @@
   },
   {
     "brandId": "brand-3c12a830fd8e20dd",
-    "lastCheckedAt": "2026-11-08T22:58:18.077502+00:00",
-    "lastSuccessAt": "2026-11-08T22:58:18.077502+00:00",
+    "lastCheckedAt": "2026-11-10T02:15:15.233406+00:00",
+    "lastSuccessAt": "2026-11-10T02:15:15.233406+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 58,
     "lastNewCount": 0,
@@ -3878,8 +3905,8 @@
   },
   {
     "brandId": "brand-b028605b3b64ee47",
-    "lastCheckedAt": "2026-11-08T22:58:23.081475+00:00",
-    "lastSuccessAt": "2026-11-08T22:58:23.081475+00:00",
+    "lastCheckedAt": "2026-11-10T02:15:21.410209+00:00",
+    "lastSuccessAt": "2026-11-10T02:15:21.410209+00:00",
     "lastResult": "REVIEW_REQUIRED",
     "lastMenuCount": 41,
     "lastNewCount": 0,
@@ -3948,8 +3975,8 @@
   },
   {
     "brandId": "brand-1bc146a27ab0e421",
-    "lastCheckedAt": "2026-11-08T22:58:19.316830+00:00",
-    "lastSuccessAt": "2026-11-08T22:58:19.316830+00:00",
+    "lastCheckedAt": "2026-11-10T02:15:16.322888+00:00",
+    "lastSuccessAt": "2026-11-10T02:15:16.322888+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 46,
     "lastNewCount": 0,
@@ -3973,7 +4000,7 @@
   },
   {
     "brandId": "brand-29327af78758b6f5",
-    "lastCheckedAt": "2026-11-08T22:58:25.056461+00:00",
+    "lastCheckedAt": "2026-11-10T02:15:23.485644+00:00",
     "lastSuccessAt": null,
     "lastResult": "FAILED",
     "lastMenuCount": 0,
@@ -4052,8 +4079,8 @@
   },
   {
     "brandId": "brand-70ce8c35375d9fae",
-    "lastCheckedAt": "2026-11-08T22:58:38.352649+00:00",
-    "lastSuccessAt": "2026-11-08T22:58:38.352649+00:00",
+    "lastCheckedAt": "2026-11-10T02:15:39.602126+00:00",
+    "lastSuccessAt": "2026-11-10T02:15:39.602126+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 60,
     "lastNewCount": 0,
@@ -4212,7 +4239,7 @@
   },
   {
     "brandId": "brand-8032e5a2633bc1e3",
-    "lastCheckedAt": "2026-11-08T22:58:28.414972+00:00",
+    "lastCheckedAt": "2026-11-10T02:15:25.718048+00:00",
     "lastSuccessAt": "2026-10-29T23:22:39.016852+00:00",
     "lastResult": "FAILED",
     "lastMenuCount": 0,
@@ -4309,10 +4336,10 @@
   },
   {
     "brandId": "brand-adb1fa3e7378cd49",
-    "lastCheckedAt": "2026-11-08T22:59:06.676780+00:00",
+    "lastCheckedAt": "2026-11-10T02:16:14.296087+00:00",
     "lastSuccessAt": "2026-11-07T22:50:34.563767+00:00",
     "lastResult": "FAILED",
-    "lastMenuCount": 0,
+    "lastMenuCount": 48,
     "lastNewCount": 0,
     "adapterTypes": [
       "camto-toast-modal",
@@ -4327,18 +4354,18 @@
         "sourceUrl": "https://camtotoast.com/44",
         "adapter": "camto-toast-modal",
         "sourceType": "BROWSER",
-        "status": "FETCH_FAILED",
-        "error": "PublicAccessDenied",
-        "errorReason": "ACCESS_DENIED: 403",
-        "attempts": 2
+        "status": "SUCCESS",
+        "error": null,
+        "errorReason": null,
+        "attempts": 1
       },
       {
         "sourceUrl": "https://camtotoast.com/46",
         "adapter": "reviewed-image-labels",
         "sourceType": "HTML",
-        "status": "FETCH_FAILED",
-        "error": "HTTPError",
-        "errorReason": "HTTP Error 403: Forbidden",
+        "status": "SUCCESS",
+        "error": null,
+        "errorReason": null,
         "attempts": 1
       },
       {
@@ -4354,8 +4381,8 @@
   },
   {
     "brandId": "brand-d715f712d950d0e8",
-    "lastCheckedAt": "2026-11-08T22:58:28.805365+00:00",
-    "lastSuccessAt": "2026-11-08T22:58:28.805365+00:00",
+    "lastCheckedAt": "2026-11-10T02:15:26.608611+00:00",
+    "lastSuccessAt": "2026-11-10T02:15:26.608611+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 38,
     "lastNewCount": 0,
@@ -4379,8 +4406,8 @@
   },
   {
     "brandId": "brand-2891bc50e9e622e6",
-    "lastCheckedAt": "2026-11-08T22:58:33.327612+00:00",
-    "lastSuccessAt": "2026-11-08T22:58:33.327612+00:00",
+    "lastCheckedAt": "2026-11-10T02:15:31.445897+00:00",
+    "lastSuccessAt": "2026-11-10T02:15:31.445897+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 49,
     "lastNewCount": 0,
@@ -4492,8 +4519,8 @@
   },
   {
     "brandId": "brand-e7bc4d2ab88a800c",
-    "lastCheckedAt": "2026-11-08T22:58:40.139170+00:00",
-    "lastSuccessAt": "2026-11-08T22:58:40.139170+00:00",
+    "lastCheckedAt": "2026-11-10T02:15:42.481169+00:00",
+    "lastSuccessAt": "2026-11-10T02:15:42.481169+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 49,
     "lastNewCount": 0,
@@ -4535,8 +4562,8 @@
   },
   {
     "brandId": "brand-c253f58a17fc9b81",
-    "lastCheckedAt": "2026-11-08T22:58:42.987607+00:00",
-    "lastSuccessAt": "2026-11-08T22:58:42.987607+00:00",
+    "lastCheckedAt": "2026-11-10T02:15:44.170374+00:00",
+    "lastSuccessAt": "2026-11-10T02:15:44.170374+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 5,
     "lastNewCount": 0,
@@ -4596,8 +4623,8 @@
   },
   {
     "brandId": "brand-c242a10bbca4c411",
-    "lastCheckedAt": "2026-11-08T22:59:22.526118+00:00",
-    "lastSuccessAt": "2026-11-08T22:59:22.526118+00:00",
+    "lastCheckedAt": "2026-11-10T02:16:23.568308+00:00",
+    "lastSuccessAt": "2026-11-10T02:16:23.568308+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 44,
     "lastNewCount": 0,
@@ -4639,8 +4666,8 @@
   },
   {
     "brandId": "brand-1e99fd5b57a9f5cb",
-    "lastCheckedAt": "2026-11-08T22:58:43.498216+00:00",
-    "lastSuccessAt": "2026-11-08T22:58:43.498216+00:00",
+    "lastCheckedAt": "2026-11-10T02:15:45.418314+00:00",
+    "lastSuccessAt": "2026-11-10T02:15:45.418314+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 31,
     "lastNewCount": 0,
@@ -4664,8 +4691,8 @@
   },
   {
     "brandId": "brand-f4abfad35563de25",
-    "lastCheckedAt": "2026-11-08T22:58:52.241800+00:00",
-    "lastSuccessAt": "2026-11-08T22:58:52.241800+00:00",
+    "lastCheckedAt": "2026-11-10T02:15:54.408500+00:00",
+    "lastSuccessAt": "2026-11-10T02:15:54.408500+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 33,
     "lastNewCount": 0,
@@ -4734,8 +4761,8 @@
   },
   {
     "brandId": "brand-b0d0c4de8cdf23bc",
-    "lastCheckedAt": "2026-11-08T22:58:53.326308+00:00",
-    "lastSuccessAt": "2026-11-08T22:58:53.326308+00:00",
+    "lastCheckedAt": "2026-11-10T02:15:56.084848+00:00",
+    "lastSuccessAt": "2026-11-10T02:15:56.084848+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 60,
     "lastNewCount": 0,
@@ -4759,8 +4786,8 @@
   },
   {
     "brandId": "brand-57244fb148c377c6",
-    "lastCheckedAt": "2026-11-08T22:59:04.981085+00:00",
-    "lastSuccessAt": "2026-11-08T22:59:04.981085+00:00",
+    "lastCheckedAt": "2026-11-10T02:16:08.967490+00:00",
+    "lastSuccessAt": "2026-11-10T02:16:08.967490+00:00",
     "lastResult": "REVIEW_REQUIRED",
     "lastMenuCount": 89,
     "lastNewCount": 0,
@@ -4856,8 +4883,8 @@
   },
   {
     "brandId": "brand-41b772c57bada9f9",
-    "lastCheckedAt": "2026-11-08T22:59:06.201853+00:00",
-    "lastSuccessAt": "2026-11-08T22:59:06.201853+00:00",
+    "lastCheckedAt": "2026-11-10T02:16:10.321679+00:00",
+    "lastSuccessAt": "2026-11-10T02:16:10.321679+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 34,
     "lastNewCount": 0,
@@ -4881,8 +4908,8 @@
   },
   {
     "brandId": "brand-69ad361cd26106b1",
-    "lastCheckedAt": "2026-11-08T22:59:06.829592+00:00",
-    "lastSuccessAt": "2026-11-08T22:59:06.829592+00:00",
+    "lastCheckedAt": "2026-11-10T02:16:11.445087+00:00",
+    "lastSuccessAt": "2026-11-10T02:16:11.445087+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 46,
     "lastNewCount": 0,
@@ -4906,8 +4933,8 @@
   },
   {
     "brandId": "brand-2cf7eb0ea975163d",
-    "lastCheckedAt": "2026-11-08T22:59:07.275116+00:00",
-    "lastSuccessAt": "2026-11-08T22:59:07.275116+00:00",
+    "lastCheckedAt": "2026-11-10T02:16:14.888573+00:00",
+    "lastSuccessAt": "2026-11-10T02:16:14.888573+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 11,
     "lastNewCount": 0,
@@ -4931,11 +4958,11 @@
   },
   {
     "brandId": "brand-537263c2bc830a08",
-    "lastCheckedAt": "2026-11-08T22:59:14.033199+00:00",
-    "lastSuccessAt": "2026-11-08T22:59:14.033199+00:00",
-    "lastResult": "NO_CHANGE",
-    "lastMenuCount": 327,
-    "lastNewCount": 0,
+    "lastCheckedAt": "2026-11-10T02:16:22.117403+00:00",
+    "lastSuccessAt": "2026-11-10T02:16:22.117403+00:00",
+    "lastResult": "REVIEW_REQUIRED",
+    "lastMenuCount": 326,
+    "lastNewCount": 5,
     "adapterTypes": [
       "reviewed-delivery"
     ],
@@ -4992,11 +5019,11 @@
   },
   {
     "brandId": "brand-1742b64ed29107ac",
-    "lastCheckedAt": "2026-11-08T22:59:16.903591+00:00",
-    "lastSuccessAt": "2026-11-08T22:59:16.903591+00:00",
+    "lastCheckedAt": "2026-11-10T02:16:26.107620+00:00",
+    "lastSuccessAt": "2026-11-10T02:16:26.107620+00:00",
     "lastResult": "REVIEW_REQUIRED",
-    "lastMenuCount": 140,
-    "lastNewCount": 0,
+    "lastMenuCount": 139,
+    "lastNewCount": 1,
     "adapterTypes": [
       "reviewed-delivery"
     ],
@@ -5062,8 +5089,8 @@
   },
   {
     "brandId": "brand-7dfea7361415a819",
-    "lastCheckedAt": "2026-11-08T23:00:45.731111+00:00",
-    "lastSuccessAt": "2026-11-08T23:00:45.731111+00:00",
+    "lastCheckedAt": "2026-11-10T02:17:56.623487+00:00",
+    "lastSuccessAt": "2026-11-10T02:17:56.623487+00:00",
     "lastResult": "REVIEW_REQUIRED",
     "lastMenuCount": 533,
     "lastNewCount": 0,
@@ -5501,8 +5528,8 @@
   },
   {
     "brandId": "brand-61b7f46d49620328",
-    "lastCheckedAt": "2026-11-08T22:59:17.181722+00:00",
-    "lastSuccessAt": "2026-11-08T22:59:17.181722+00:00",
+    "lastCheckedAt": "2026-11-10T02:16:26.873827+00:00",
+    "lastSuccessAt": "2026-11-10T02:16:26.873827+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 95,
     "lastNewCount": 0,
@@ -5526,10 +5553,10 @@
   },
   {
     "brandId": "brand-3d3d7aa34cc1f578",
-    "lastCheckedAt": "2026-11-08T22:59:19.523762+00:00",
-    "lastSuccessAt": "2026-11-06T23:55:09.503234+00:00",
-    "lastResult": "FAILED",
-    "lastMenuCount": 0,
+    "lastCheckedAt": "2026-11-10T02:16:29.399338+00:00",
+    "lastSuccessAt": "2026-11-10T02:16:29.399338+00:00",
+    "lastResult": "NO_CHANGE",
+    "lastMenuCount": 54,
     "lastNewCount": 0,
     "adapterTypes": [
       "reviewed-delivery"
@@ -5542,17 +5569,17 @@
         "sourceUrl": "https://www.misoya.co.kr/menu",
         "adapter": "reviewed-delivery",
         "sourceType": "HTML",
-        "status": "FETCH_FAILED",
-        "error": "HTTPError",
-        "errorReason": "HTTP Error 403: Forbidden",
+        "status": "SUCCESS",
+        "error": null,
+        "errorReason": null,
         "attempts": 1
       }
     ]
   },
   {
     "brandId": "brand-53314eb3760b340b",
-    "lastCheckedAt": "2026-11-08T22:59:33.918401+00:00",
-    "lastSuccessAt": "2026-11-08T22:59:33.918401+00:00",
+    "lastCheckedAt": "2026-11-10T02:16:46.182977+00:00",
+    "lastSuccessAt": "2026-11-10T02:16:46.182977+00:00",
     "lastResult": "REVIEW_REQUIRED",
     "lastMenuCount": 153,
     "lastNewCount": 0,
@@ -5630,8 +5657,8 @@
   },
   {
     "brandId": "brand-07de1aee884692c4",
-    "lastCheckedAt": "2026-11-08T22:59:44.535223+00:00",
-    "lastSuccessAt": "2026-11-08T22:59:44.535223+00:00",
+    "lastCheckedAt": "2026-11-10T02:16:51.841629+00:00",
+    "lastSuccessAt": "2026-11-10T02:16:51.841629+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 50,
     "lastNewCount": 0,
@@ -5772,8 +5799,8 @@
   },
   {
     "brandId": "brand-35225ece8d72c5b9",
-    "lastCheckedAt": "2026-11-08T22:59:36.411448+00:00",
-    "lastSuccessAt": "2026-11-08T22:59:36.411448+00:00",
+    "lastCheckedAt": "2026-11-10T02:16:48.529227+00:00",
+    "lastSuccessAt": "2026-11-10T02:16:48.529227+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 109,
     "lastNewCount": 0,
@@ -5797,8 +5824,8 @@
   },
   {
     "brandId": "brand-977382baa9a9159b",
-    "lastCheckedAt": "2026-11-08T22:59:38.182988+00:00",
-    "lastSuccessAt": "2026-11-08T22:59:38.182988+00:00",
+    "lastCheckedAt": "2026-11-10T02:16:50.336244+00:00",
+    "lastSuccessAt": "2026-11-10T02:16:50.336244+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 53,
     "lastNewCount": 0,
@@ -5822,8 +5849,8 @@
   },
   {
     "brandId": "brand-fdb71b87248a93b9",
-    "lastCheckedAt": "2026-11-08T22:59:51.229783+00:00",
-    "lastSuccessAt": "2026-11-08T22:59:51.229783+00:00",
+    "lastCheckedAt": "2026-11-10T02:17:04.971939+00:00",
+    "lastSuccessAt": "2026-11-10T02:17:04.971939+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 128,
     "lastNewCount": 0,
@@ -5928,8 +5955,8 @@
   },
   {
     "brandId": "brand-9d8b8d6c615c6ee7",
-    "lastCheckedAt": "2026-11-08T22:59:54.222146+00:00",
-    "lastSuccessAt": "2026-11-08T22:59:54.222146+00:00",
+    "lastCheckedAt": "2026-11-10T02:17:00.598191+00:00",
+    "lastSuccessAt": "2026-11-10T02:17:00.598191+00:00",
     "lastResult": "REVIEW_REQUIRED",
     "lastMenuCount": 235,
     "lastNewCount": 0,
@@ -6133,8 +6160,8 @@
   },
   {
     "brandId": "brand-5203807bf8b4bc7a",
-    "lastCheckedAt": "2026-11-08T22:59:52.468779+00:00",
-    "lastSuccessAt": "2026-11-08T22:59:52.468779+00:00",
+    "lastCheckedAt": "2026-11-10T02:17:00.838209+00:00",
+    "lastSuccessAt": "2026-11-10T02:17:00.838209+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 12,
     "lastNewCount": 0,
@@ -6158,8 +6185,8 @@
   },
   {
     "brandId": "brand-7b853dd449517e57",
-    "lastCheckedAt": "2026-11-08T22:59:53.483625+00:00",
-    "lastSuccessAt": "2026-11-08T22:59:53.483625+00:00",
+    "lastCheckedAt": "2026-11-10T02:17:01.890620+00:00",
+    "lastSuccessAt": "2026-11-10T02:17:01.890620+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 32,
     "lastNewCount": 0,
@@ -6183,11 +6210,11 @@
   },
   {
     "brandId": "brand-a0302f70b937755f",
-    "lastCheckedAt": "2026-11-08T22:59:54.583219+00:00",
-    "lastSuccessAt": "2026-11-08T22:59:54.583219+00:00",
+    "lastCheckedAt": "2026-11-10T02:17:03.496645+00:00",
+    "lastSuccessAt": "2026-11-10T02:17:03.496645+00:00",
     "lastResult": "REVIEW_REQUIRED",
-    "lastMenuCount": 436,
-    "lastNewCount": 0,
+    "lastMenuCount": 434,
+    "lastNewCount": 1,
     "adapterTypes": [
       "tlj"
     ],
@@ -6208,8 +6235,8 @@
   },
   {
     "brandId": "brand-9f125dd967fd168e",
-    "lastCheckedAt": "2026-11-08T22:59:55.613382+00:00",
-    "lastSuccessAt": "2026-11-08T22:59:55.613382+00:00",
+    "lastCheckedAt": "2026-11-10T02:17:05.837428+00:00",
+    "lastSuccessAt": "2026-11-10T02:17:05.837428+00:00",
     "lastResult": "REVIEW_REQUIRED",
     "lastMenuCount": 52,
     "lastNewCount": 0,
@@ -6233,8 +6260,8 @@
   },
   {
     "brandId": "brand-e32a9313e634ead7",
-    "lastCheckedAt": "2026-11-08T23:00:14.202557+00:00",
-    "lastSuccessAt": "2026-11-08T23:00:14.202557+00:00",
+    "lastCheckedAt": "2026-11-10T02:17:23.460676+00:00",
+    "lastSuccessAt": "2026-11-10T02:17:23.460676+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 76,
     "lastNewCount": 0,
@@ -6447,7 +6474,7 @@
   },
   {
     "brandId": "brand-a7444ee050c62abd",
-    "lastCheckedAt": "2026-11-08T22:59:59.447939+00:00",
+    "lastCheckedAt": "2026-11-10T02:17:09.383060+00:00",
     "lastSuccessAt": null,
     "lastResult": "FAILED",
     "lastMenuCount": 0,
@@ -6472,8 +6499,8 @@
   },
   {
     "brandId": "brand-cf57c271fe920362",
-    "lastCheckedAt": "2026-11-08T23:00:01.363968+00:00",
-    "lastSuccessAt": "2026-11-08T23:00:01.363968+00:00",
+    "lastCheckedAt": "2026-11-10T02:17:11.419454+00:00",
+    "lastSuccessAt": "2026-11-10T02:17:11.419454+00:00",
     "lastResult": "REVIEW_REQUIRED",
     "lastMenuCount": 24,
     "lastNewCount": 0,
@@ -6506,8 +6533,8 @@
   },
   {
     "brandId": "brand-db7ae070c1a211f3",
-    "lastCheckedAt": "2026-11-08T23:00:16.883853+00:00",
-    "lastSuccessAt": "2026-11-08T23:00:16.883853+00:00",
+    "lastCheckedAt": "2026-11-10T02:17:20.788501+00:00",
+    "lastSuccessAt": "2026-11-10T02:17:20.788501+00:00",
     "lastResult": "REVIEW_REQUIRED",
     "lastMenuCount": 73,
     "lastNewCount": 0,
@@ -6619,11 +6646,11 @@
   },
   {
     "brandId": "brand-c250fc357adcb9df",
-    "lastCheckedAt": "2026-11-08T23:00:33.344215+00:00",
-    "lastSuccessAt": "2026-11-08T23:00:33.344215+00:00",
+    "lastCheckedAt": "2026-11-10T02:17:39.659832+00:00",
+    "lastSuccessAt": "2026-11-10T02:17:39.659832+00:00",
     "lastResult": "REVIEW_REQUIRED",
-    "lastMenuCount": 194,
-    "lastNewCount": 0,
+    "lastMenuCount": 195,
+    "lastNewCount": 1,
     "adapterTypes": [
       "pascucci-list"
     ],
@@ -6761,8 +6788,8 @@
   },
   {
     "brandId": "brand-1b6e60f7965bce11",
-    "lastCheckedAt": "2026-11-08T23:00:35.136380+00:00",
-    "lastSuccessAt": "2026-11-08T23:00:35.136380+00:00",
+    "lastCheckedAt": "2026-11-10T02:17:43.008671+00:00",
+    "lastSuccessAt": "2026-11-10T02:17:43.008671+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 133,
     "lastNewCount": 0,
@@ -6912,8 +6939,8 @@
   },
   {
     "brandId": "brand-5f1ac0e21ddf73b1",
-    "lastCheckedAt": "2026-11-08T23:01:06.300745+00:00",
-    "lastSuccessAt": "2026-11-08T23:01:06.300745+00:00",
+    "lastCheckedAt": "2026-11-10T02:18:01.273572+00:00",
+    "lastSuccessAt": "2026-11-10T02:18:01.273572+00:00",
     "lastResult": "REVIEW_REQUIRED",
     "lastMenuCount": 277,
     "lastNewCount": 0,
@@ -7001,8 +7028,8 @@
   },
   {
     "brandId": "brand-9fa9c3eca7bcf563",
-    "lastCheckedAt": "2026-11-08T23:01:16.417113+00:00",
-    "lastSuccessAt": "2026-11-08T23:01:16.417113+00:00",
+    "lastCheckedAt": "2026-11-10T02:18:25.456927+00:00",
+    "lastSuccessAt": "2026-11-10T02:18:25.456927+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 174,
     "lastNewCount": 0,
@@ -7089,8 +7116,8 @@
   },
   {
     "brandId": "brand-2e050b39b22a7280",
-    "lastCheckedAt": "2026-11-08T23:00:47.147467+00:00",
-    "lastSuccessAt": "2026-11-08T23:00:47.147467+00:00",
+    "lastCheckedAt": "2026-11-10T02:17:58.139287+00:00",
+    "lastSuccessAt": "2026-11-10T02:17:58.139287+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 106,
     "lastNewCount": 0,
@@ -7114,8 +7141,8 @@
   },
   {
     "brandId": "brand-01c5e2f727401b55",
-    "lastCheckedAt": "2026-11-08T23:00:51.370123+00:00",
-    "lastSuccessAt": "2026-11-08T23:00:51.370123+00:00",
+    "lastCheckedAt": "2026-11-10T02:18:01.889383+00:00",
+    "lastSuccessAt": "2026-11-10T02:18:01.889383+00:00",
     "lastResult": "REVIEW_REQUIRED",
     "lastMenuCount": 100,
     "lastNewCount": 0,
