@@ -1,8 +1,8 @@
 [
   {
     "brandId": "brand-ffd3bb1b019cf849",
-    "lastCheckedAt": "2026-11-12T01:34:48.250871+00:00",
-    "lastSuccessAt": "2026-11-12T01:34:48.250871+00:00",
+    "lastCheckedAt": "2026-11-13T00:32:30.213023+00:00",
+    "lastSuccessAt": "2026-11-13T00:32:30.213023+00:00",
     "lastResult": "REVIEW_REQUIRED",
     "lastMenuCount": 128,
     "lastNewCount": 0,
@@ -398,8 +398,8 @@
   },
   {
     "brandId": "brand-24df7e63c9c2314e",
-    "lastCheckedAt": "2026-11-12T01:34:37.044961+00:00",
-    "lastSuccessAt": "2026-11-12T01:34:37.044961+00:00",
+    "lastCheckedAt": "2026-11-13T00:32:22.876083+00:00",
+    "lastSuccessAt": "2026-11-13T00:32:22.876083+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 77,
     "lastNewCount": 0,
@@ -423,8 +423,8 @@
   },
   {
     "brandId": "brand-d857c6bf9eb6a6c0",
-    "lastCheckedAt": "2026-11-12T01:34:37.045531+00:00",
-    "lastSuccessAt": "2026-11-12T01:34:37.045531+00:00",
+    "lastCheckedAt": "2026-11-13T00:32:22.876480+00:00",
+    "lastSuccessAt": "2026-11-13T00:32:22.876480+00:00",
     "lastResult": "REVIEW_REQUIRED",
     "lastMenuCount": 197,
     "lastNewCount": 0,
@@ -448,11 +448,11 @@
   },
   {
     "brandId": "brand-2c14410b57ba9fc4",
-    "lastCheckedAt": "2026-11-12T01:34:47.367522+00:00",
-    "lastSuccessAt": "2026-11-12T01:34:47.367522+00:00",
+    "lastCheckedAt": "2026-11-13T00:32:31.279421+00:00",
+    "lastSuccessAt": "2026-11-13T00:32:31.279421+00:00",
     "lastResult": "REVIEW_REQUIRED",
-    "lastMenuCount": 165,
-    "lastNewCount": 1,
+    "lastMenuCount": 168,
+    "lastNewCount": 0,
     "adapterTypes": [
       "kfc-json"
     ],
@@ -509,7 +509,7 @@
   },
   {
     "brandId": "brand-b0f892d2c591ca13",
-    "lastCheckedAt": "2026-11-12T01:39:31.230022+00:00",
+    "lastCheckedAt": "2026-11-13T00:36:54.429022+00:00",
     "lastSuccessAt": null,
     "lastResult": "FAILED",
     "lastMenuCount": 0,
@@ -562,8 +562,8 @@
         "adapter": "reviewed-html",
         "sourceType": "BROWSER",
         "status": "FETCH_FAILED",
-        "error": "Error",
-        "errorReason": "Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://www.momstouch.co.kr/menu/new.php?s_sect1=CG0003\nCall log:\n  - navigating to \"https://www.momstouch.co.kr/menu/new.php?s_sect1=CG0003\", waiting until",
+        "error": "TimeoutError",
+        "errorReason": "Page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://www.momstouch.co.kr/menu/new.php?s_sect1=CG0003\", waiting until \"domcontentloaded\"\n",
         "attempts": 2
       },
       {
@@ -571,8 +571,8 @@
         "adapter": "reviewed-html",
         "sourceType": "BROWSER",
         "status": "FETCH_FAILED",
-        "error": "TimeoutError",
-        "errorReason": "Page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://www.momstouch.co.kr/menu/new.php?s_sect1=CG0002\", waiting until \"domcontentloaded\"\n",
+        "error": "Error",
+        "errorReason": "Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://www.momstouch.co.kr/menu/new.php?s_sect1=CG0002\nCall log:\n  - navigating to \"https://www.momstouch.co.kr/menu/new.php?s_sect1=CG0002\", waiting until",
         "attempts": 2
       },
       {
@@ -580,8 +580,8 @@
         "adapter": "reviewed-html",
         "sourceType": "BROWSER",
         "status": "FETCH_FAILED",
-        "error": "Error",
-        "errorReason": "Page.goto: net::ERR_CONNECTION_TIMED_OUT at https://www.momstouch.co.kr/menu/new.php?s_sect1=CG0001\nCall log:\n  - navigating to \"https://www.momstouch.co.kr/menu/new.php?s_sect1=CG0001\", waiting until",
+        "error": "TimeoutError",
+        "errorReason": "Page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://www.momstouch.co.kr/menu/new.php?s_sect1=CG0001\", waiting until \"domcontentloaded\"\n",
         "attempts": 2
       },
       {
@@ -597,8 +597,8 @@
   },
   {
     "brandId": "brand-f91351461391155a",
-    "lastCheckedAt": "2026-11-12T01:34:43.731095+00:00",
-    "lastSuccessAt": "2026-11-12T01:34:43.731095+00:00",
+    "lastCheckedAt": "2026-11-13T00:32:28.719803+00:00",
+    "lastSuccessAt": "2026-11-13T00:32:28.719803+00:00",
     "lastResult": "REVIEW_REQUIRED",
     "lastMenuCount": 51,
     "lastNewCount": 0,
@@ -640,8 +640,8 @@
   },
   {
     "brandId": "brand-dfd7712a868b7cd2",
-    "lastCheckedAt": "2026-11-12T01:34:56.432669+00:00",
-    "lastSuccessAt": "2026-11-12T01:34:56.432669+00:00",
+    "lastCheckedAt": "2026-11-13T00:32:38.016800+00:00",
+    "lastSuccessAt": "2026-11-13T00:32:38.016800+00:00",
     "lastResult": "REVIEW_REQUIRED",
     "lastMenuCount": 120,
     "lastNewCount": 0,
@@ -800,8 +800,8 @@
   },
   {
     "brandId": "brand-792c9f221e49eb7e",
-    "lastCheckedAt": "2026-11-12T01:34:59.822300+00:00",
-    "lastSuccessAt": "2026-11-12T01:34:59.822300+00:00",
+    "lastCheckedAt": "2026-11-13T00:32:36.706517+00:00",
+    "lastSuccessAt": "2026-11-13T00:32:36.706517+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 83,
     "lastNewCount": 0,
@@ -915,8 +915,8 @@
   },
   {
     "brandId": "brand-45ddca38a87b3dcd",
-    "lastCheckedAt": "2026-11-12T01:34:54.136735+00:00",
-    "lastSuccessAt": "2026-11-12T01:34:54.136735+00:00",
+    "lastCheckedAt": "2026-11-13T00:32:36.093615+00:00",
+    "lastSuccessAt": "2026-11-13T00:32:36.093615+00:00",
     "lastResult": "REVIEW_REQUIRED",
     "lastMenuCount": 195,
     "lastNewCount": 0,
@@ -987,8 +987,8 @@
   },
   {
     "brandId": "brand-5b391ae396ab6901",
-    "lastCheckedAt": "2026-11-12T01:34:57.803684+00:00",
-    "lastSuccessAt": "2026-11-12T01:34:57.803684+00:00",
+    "lastCheckedAt": "2026-11-13T00:32:38.579414+00:00",
+    "lastSuccessAt": "2026-11-13T00:32:38.579414+00:00",
     "lastResult": "REVIEW_REQUIRED",
     "lastMenuCount": 119,
     "lastNewCount": 0,
@@ -1039,10 +1039,10 @@
   },
   {
     "brandId": "brand-dfbc0be6a9fb565a",
-    "lastCheckedAt": "2026-11-12T01:35:06.545879+00:00",
-    "lastSuccessAt": "2026-11-11T00:05:41.013620+00:00",
-    "lastResult": "FAILED",
-    "lastMenuCount": 0,
+    "lastCheckedAt": "2026-11-13T00:32:41.489099+00:00",
+    "lastSuccessAt": "2026-11-13T00:32:41.489099+00:00",
+    "lastResult": "NO_CHANGE",
+    "lastMenuCount": 59,
     "lastNewCount": 0,
     "adapterTypes": [
       "reviewed-html"
@@ -1055,17 +1055,62 @@
         "sourceUrl": "https://www.goobne.co.kr/menu/menu_list_p",
         "adapter": "reviewed-html",
         "sourceType": "HTML",
-        "status": "FETCH_FAILED",
-        "error": "TimeoutError",
-        "errorReason": "The read operation timed out",
-        "attempts": 2
+        "status": "SUCCESS",
+        "error": null,
+        "errorReason": null,
+        "attempts": 1
+      },
+      {
+        "sourceUrl": "https://www.goobne.co.kr/menu/menu_list_p?classId=1&classId2=",
+        "adapter": "reviewed-html",
+        "sourceType": "HTML",
+        "status": "SUCCESS",
+        "error": null,
+        "errorReason": null,
+        "attempts": 1
+      },
+      {
+        "sourceUrl": "https://www.goobne.co.kr/menu/menu_list_p?classId=12&classId2=",
+        "adapter": "reviewed-html",
+        "sourceType": "HTML",
+        "status": "SUCCESS",
+        "error": null,
+        "errorReason": null,
+        "attempts": 1
+      },
+      {
+        "sourceUrl": "https://www.goobne.co.kr/menu/menu_list_p?classId=16&classId2=",
+        "adapter": "reviewed-html",
+        "sourceType": "HTML",
+        "status": "SUCCESS",
+        "error": null,
+        "errorReason": null,
+        "attempts": 1
+      },
+      {
+        "sourceUrl": "https://www.goobne.co.kr/menu/menu_list_p?classId=18&classId2=",
+        "adapter": "reviewed-html",
+        "sourceType": "HTML",
+        "status": "SUCCESS",
+        "error": null,
+        "errorReason": null,
+        "attempts": 1
+      },
+      {
+        "sourceUrl": "https://www.goobne.co.kr/menu/menu_list_p?classId=3&classId2=",
+        "adapter": "reviewed-html",
+        "sourceType": "HTML",
+        "status": "SUCCESS",
+        "error": null,
+        "errorReason": null,
+        "attempts": 1
       }
     ]
   },
   {
     "brandId": "brand-913a908f005583f0",
-    "lastCheckedAt": "2026-11-12T01:35:19.658845+00:00",
-    "lastSuccessAt": "2026-11-12T01:35:19.658845+00:00",
+    "lastCheckedAt": "2026-11-13T00:32:47.661976+00:00",
+    "lastSuccessAt": "2026-11-13T00:32:47.661976+00:00",
     "lastResult": "REVIEW_REQUIRED",
     "lastMenuCount": 102,
     "lastNewCount": 0,
@@ -1163,7 +1208,7 @@
   },
   {
     "brandId": "brand-1c90aeff2ad68611",
-    "lastCheckedAt": "2026-11-12T01:35:12.990413+00:00",
+    "lastCheckedAt": "2026-11-13T00:32:47.756429+00:00",
     "lastSuccessAt": "2026-10-21T22:25:51.487951+00:00",
     "lastResult": "FAILED",
     "lastMenuCount": 68,
@@ -1242,7 +1287,7 @@
   },
   {
     "brandId": "brand-6f80c60267f6bc73",
-    "lastCheckedAt": "2026-11-12T01:35:51.606269+00:00",
+    "lastCheckedAt": "2026-11-13T00:33:01.265753+00:00",
     "lastSuccessAt": "2026-10-20T22:23:06.956681+00:00",
     "lastResult": "FAILED",
     "lastMenuCount": 323,
@@ -1458,7 +1503,7 @@
   },
   {
     "brandId": "brand-044f74822bd63a2c",
-    "lastCheckedAt": "2026-11-12T01:35:15.537706+00:00",
+    "lastCheckedAt": "2026-11-13T00:32:48.675774+00:00",
     "lastSuccessAt": null,
     "lastResult": "FAILED",
     "lastMenuCount": 0,
@@ -1483,7 +1528,7 @@
   },
   {
     "brandId": "brand-9bd2fd2f30a9da68",
-    "lastCheckedAt": "2026-11-12T01:35:22.137613+00:00",
+    "lastCheckedAt": "2026-11-13T00:32:52.328686+00:00",
     "lastSuccessAt": null,
     "lastResult": "FAILED",
     "lastMenuCount": 0,
@@ -1589,8 +1634,8 @@
   },
   {
     "brandId": "brand-0dc8558d4e8f58fd",
-    "lastCheckedAt": "2026-11-12T01:36:23.657106+00:00",
-    "lastSuccessAt": "2026-11-12T01:36:23.657106+00:00",
+    "lastCheckedAt": "2026-11-13T00:33:36.687686+00:00",
+    "lastSuccessAt": "2026-11-13T00:33:36.687686+00:00",
     "lastResult": "REVIEW_REQUIRED",
     "lastMenuCount": 506,
     "lastNewCount": 0,
@@ -2200,8 +2245,8 @@
   },
   {
     "brandId": "brand-db8f86831d5f2b94",
-    "lastCheckedAt": "2026-11-12T01:35:35.415398+00:00",
-    "lastSuccessAt": "2026-11-12T01:35:35.415398+00:00",
+    "lastCheckedAt": "2026-11-13T00:33:01.147621+00:00",
+    "lastSuccessAt": "2026-11-13T00:33:01.147621+00:00",
     "lastResult": "REVIEW_REQUIRED",
     "lastMenuCount": 202,
     "lastNewCount": 0,
@@ -2315,8 +2360,8 @@
   },
   {
     "brandId": "brand-149ee0d555be8e34",
-    "lastCheckedAt": "2026-11-12T01:36:02.493837+00:00",
-    "lastSuccessAt": "2026-11-12T01:36:02.493837+00:00",
+    "lastCheckedAt": "2026-11-13T00:33:13.364324+00:00",
+    "lastSuccessAt": "2026-11-13T00:33:13.364324+00:00",
     "lastResult": "REVIEW_REQUIRED",
     "lastMenuCount": 248,
     "lastNewCount": 0,
@@ -2493,10 +2538,10 @@
   },
   {
     "brandId": "brand-2366ea85553dc984",
-    "lastCheckedAt": "2026-11-12T01:35:54.652578+00:00",
-    "lastSuccessAt": "2026-11-11T00:06:12.694297+00:00",
-    "lastResult": "FAILED",
-    "lastMenuCount": 0,
+    "lastCheckedAt": "2026-11-13T00:33:02.461378+00:00",
+    "lastSuccessAt": "2026-11-13T00:33:02.461378+00:00",
+    "lastResult": "NO_CHANGE",
+    "lastMenuCount": 19,
     "lastNewCount": 0,
     "adapterTypes": [
       "reviewed-html"
@@ -2509,7 +2554,7 @@
         "sourceUrl": "https://www.twozzim.com/bbs/content.php?co_id=menu",
         "adapter": "reviewed-html",
         "sourceType": "BROWSER",
-        "status": "FAIL",
+        "status": "SUCCESS",
         "error": null,
         "errorReason": null,
         "attempts": 1
@@ -2518,8 +2563,8 @@
   },
   {
     "brandId": "brand-9bbe44a999e4d158",
-    "lastCheckedAt": "2026-11-12T01:35:59.510131+00:00",
-    "lastSuccessAt": "2026-11-12T01:35:59.510131+00:00",
+    "lastCheckedAt": "2026-11-13T00:33:07.489894+00:00",
+    "lastSuccessAt": "2026-11-13T00:33:07.489894+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 7,
     "lastNewCount": 0,
@@ -2543,8 +2588,8 @@
   },
   {
     "brandId": "brand-9fe52457ea35b575",
-    "lastCheckedAt": "2026-11-12T01:36:00.264517+00:00",
-    "lastSuccessAt": "2026-11-12T01:36:00.264517+00:00",
+    "lastCheckedAt": "2026-11-13T00:33:08.053710+00:00",
+    "lastSuccessAt": "2026-11-13T00:33:08.053710+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 15,
     "lastNewCount": 0,
@@ -2568,8 +2613,8 @@
   },
   {
     "brandId": "brand-6b4062eb7d56bbc2",
-    "lastCheckedAt": "2026-11-12T01:36:06.420724+00:00",
-    "lastSuccessAt": "2026-11-12T01:36:06.420724+00:00",
+    "lastCheckedAt": "2026-11-13T00:33:12.050074+00:00",
+    "lastSuccessAt": "2026-11-13T00:33:12.050074+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 19,
     "lastNewCount": 0,
@@ -2629,10 +2674,10 @@
   },
   {
     "brandId": "brand-e237cdd96675b8e9",
-    "lastCheckedAt": "2026-11-12T01:36:04.122538+00:00",
-    "lastSuccessAt": "2026-11-11T00:06:22.870952+00:00",
-    "lastResult": "FAILED",
-    "lastMenuCount": 0,
+    "lastCheckedAt": "2026-11-13T00:33:12.705855+00:00",
+    "lastSuccessAt": "2026-11-13T00:33:12.705855+00:00",
+    "lastResult": "NO_CHANGE",
+    "lastMenuCount": 10,
     "lastNewCount": 0,
     "adapterTypes": [
       "reviewed-html"
@@ -2645,7 +2690,7 @@
         "sourceUrl": "http://www.hyundaiok.com/menu",
         "adapter": "reviewed-html",
         "sourceType": "BROWSER",
-        "status": "FAIL",
+        "status": "SUCCESS",
         "error": null,
         "errorReason": null,
         "attempts": 1
@@ -2654,10 +2699,10 @@
   },
   {
     "brandId": "brand-a6a2f91c0a858eab",
-    "lastCheckedAt": "2026-11-12T01:36:13.594677+00:00",
-    "lastSuccessAt": "2026-11-11T00:06:32.906941+00:00",
-    "lastResult": "FAILED",
-    "lastMenuCount": 0,
+    "lastCheckedAt": "2026-11-13T00:33:22.437025+00:00",
+    "lastSuccessAt": "2026-11-13T00:33:22.437025+00:00",
+    "lastResult": "NO_CHANGE",
+    "lastMenuCount": 13,
     "lastNewCount": 0,
     "adapterTypes": [
       "reviewed-html"
@@ -2670,7 +2715,7 @@
         "sourceUrl": "https://ihwasoo.com/bbs/board.php?bo_table=menu",
         "adapter": "reviewed-html",
         "sourceType": "BROWSER",
-        "status": "FAIL",
+        "status": "SUCCESS",
         "error": null,
         "errorReason": null,
         "attempts": 1
@@ -2679,7 +2724,7 @@
         "sourceUrl": "https://ihwasoo.com/bbs/board.php?bo_table=menu&sca=%EB%A9%94%EC%9D%B8+%EB%A9%94%EB%89%B4",
         "adapter": "reviewed-html",
         "sourceType": "BROWSER",
-        "status": "FAIL",
+        "status": "SUCCESS",
         "error": null,
         "errorReason": null,
         "attempts": 1
@@ -2688,8 +2733,8 @@
   },
   {
     "brandId": "brand-e391193d95fb4b22",
-    "lastCheckedAt": "2026-11-12T01:36:12.713146+00:00",
-    "lastSuccessAt": "2026-11-12T01:36:12.713146+00:00",
+    "lastCheckedAt": "2026-11-13T00:33:22.897506+00:00",
+    "lastSuccessAt": "2026-11-13T00:33:22.897506+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 49,
     "lastNewCount": 0,
@@ -2740,8 +2785,8 @@
   },
   {
     "brandId": "brand-d12ac5629277dd74",
-    "lastCheckedAt": "2026-11-12T01:36:16.118435+00:00",
-    "lastSuccessAt": "2026-11-12T01:36:16.118435+00:00",
+    "lastCheckedAt": "2026-11-13T00:33:25.795065+00:00",
+    "lastSuccessAt": "2026-11-13T00:33:25.795065+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 19,
     "lastNewCount": 0,
@@ -2784,8 +2829,8 @@
   },
   {
     "brandId": "brand-d3742bdc75b7cfff",
-    "lastCheckedAt": "2026-11-12T01:36:17.197755+00:00",
-    "lastSuccessAt": "2026-11-12T01:36:17.197755+00:00",
+    "lastCheckedAt": "2026-11-13T00:33:26.208961+00:00",
+    "lastSuccessAt": "2026-11-13T00:33:26.208961+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 61,
     "lastNewCount": 0,
@@ -2809,8 +2854,8 @@
   },
   {
     "brandId": "brand-b06d5a467c2e2917",
-    "lastCheckedAt": "2026-11-12T01:36:17.704765+00:00",
-    "lastSuccessAt": "2026-11-12T01:36:17.704765+00:00",
+    "lastCheckedAt": "2026-11-13T00:33:26.501581+00:00",
+    "lastSuccessAt": "2026-11-13T00:33:26.501581+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 8,
     "lastNewCount": 0,
@@ -2834,10 +2879,10 @@
   },
   {
     "brandId": "brand-517e6e3a0f2a227b",
-    "lastCheckedAt": "2026-11-12T01:36:19.010353+00:00",
-    "lastSuccessAt": "2026-11-11T00:06:37.814587+00:00",
-    "lastResult": "FAILED",
-    "lastMenuCount": 0,
+    "lastCheckedAt": "2026-11-13T00:33:27.566612+00:00",
+    "lastSuccessAt": "2026-11-13T00:33:27.566612+00:00",
+    "lastResult": "NO_CHANGE",
+    "lastMenuCount": 90,
     "lastNewCount": 0,
     "adapterTypes": [
       "reviewed-html"
@@ -2850,7 +2895,7 @@
         "sourceUrl": "http://schoolfood.freewebclub.com/menu/menu.html",
         "adapter": "reviewed-html",
         "sourceType": "BROWSER",
-        "status": "FAIL",
+        "status": "SUCCESS",
         "error": null,
         "errorReason": null,
         "attempts": 1
@@ -2859,8 +2904,8 @@
   },
   {
     "brandId": "brand-3af4368565dc9463",
-    "lastCheckedAt": "2026-11-12T01:36:30.387111+00:00",
-    "lastSuccessAt": "2026-11-12T01:36:30.387111+00:00",
+    "lastCheckedAt": "2026-11-13T00:33:35.744659+00:00",
+    "lastSuccessAt": "2026-11-13T00:33:35.744659+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 62,
     "lastNewCount": 0,
@@ -2929,8 +2974,8 @@
   },
   {
     "brandId": "brand-09811efd43af8395",
-    "lastCheckedAt": "2026-11-12T01:36:29.162575+00:00",
-    "lastSuccessAt": "2026-11-12T01:36:29.162575+00:00",
+    "lastCheckedAt": "2026-11-13T00:33:39.902615+00:00",
+    "lastSuccessAt": "2026-11-13T00:33:39.902615+00:00",
     "lastResult": "REVIEW_REQUIRED",
     "lastMenuCount": 67,
     "lastNewCount": 0,
@@ -2999,8 +3044,8 @@
   },
   {
     "brandId": "brand-62da25d9478406f9",
-    "lastCheckedAt": "2026-11-12T01:36:31.617425+00:00",
-    "lastSuccessAt": "2026-11-12T01:36:31.617425+00:00",
+    "lastCheckedAt": "2026-11-13T00:33:40.355132+00:00",
+    "lastSuccessAt": "2026-11-13T00:33:40.355132+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 29,
     "lastNewCount": 0,
@@ -3069,8 +3114,8 @@
   },
   {
     "brandId": "brand-52b7eab533bf064f",
-    "lastCheckedAt": "2026-11-12T01:36:30.073571+00:00",
-    "lastSuccessAt": "2026-11-12T01:36:30.073571+00:00",
+    "lastCheckedAt": "2026-11-13T00:33:37.400672+00:00",
+    "lastSuccessAt": "2026-11-13T00:33:37.400672+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 22,
     "lastNewCount": 0,
@@ -3094,8 +3139,8 @@
   },
   {
     "brandId": "brand-98d0269278f56dd7",
-    "lastCheckedAt": "2026-11-12T01:36:34.262118+00:00",
-    "lastSuccessAt": "2026-11-12T01:36:34.262118+00:00",
+    "lastCheckedAt": "2026-11-13T00:33:40.273467+00:00",
+    "lastSuccessAt": "2026-11-13T00:33:40.273467+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 21,
     "lastNewCount": 0,
@@ -3153,8 +3198,8 @@
   },
   {
     "brandId": "brand-4971bd13f52f50ae",
-    "lastCheckedAt": "2026-11-12T01:36:31.560805+00:00",
-    "lastSuccessAt": "2026-11-12T01:36:31.560805+00:00",
+    "lastCheckedAt": "2026-11-13T00:33:40.416348+00:00",
+    "lastSuccessAt": "2026-11-13T00:33:40.416348+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 4,
     "lastNewCount": 0,
@@ -3178,8 +3223,8 @@
   },
   {
     "brandId": "brand-bd40e3bf63110e3a",
-    "lastCheckedAt": "2026-11-12T01:36:32.343389+00:00",
-    "lastSuccessAt": "2026-11-12T01:36:32.343389+00:00",
+    "lastCheckedAt": "2026-11-13T00:33:40.866975+00:00",
+    "lastSuccessAt": "2026-11-13T00:33:40.866975+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 70,
     "lastNewCount": 0,
@@ -3203,8 +3248,8 @@
   },
   {
     "brandId": "brand-2d083c367c257949",
-    "lastCheckedAt": "2026-11-12T01:36:33.042271+00:00",
-    "lastSuccessAt": "2026-11-12T01:36:33.042271+00:00",
+    "lastCheckedAt": "2026-11-13T00:33:41.316069+00:00",
+    "lastSuccessAt": "2026-11-13T00:33:41.316069+00:00",
     "lastResult": "REVIEW_REQUIRED",
     "lastMenuCount": 96,
     "lastNewCount": 0,
@@ -3228,8 +3273,8 @@
   },
   {
     "brandId": "brand-d788dc4427d306fe",
-    "lastCheckedAt": "2026-11-12T01:36:35.997665+00:00",
-    "lastSuccessAt": "2026-11-12T01:36:35.997665+00:00",
+    "lastCheckedAt": "2026-11-13T00:33:41.960858+00:00",
+    "lastSuccessAt": "2026-11-13T00:33:41.960858+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 57,
     "lastNewCount": 0,
@@ -3253,8 +3298,8 @@
   },
   {
     "brandId": "brand-440ae94a942a4921",
-    "lastCheckedAt": "2026-11-12T01:36:43.628111+00:00",
-    "lastSuccessAt": "2026-11-12T01:36:43.628111+00:00",
+    "lastCheckedAt": "2026-11-13T00:33:46.414972+00:00",
+    "lastSuccessAt": "2026-11-13T00:33:46.414972+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 83,
     "lastNewCount": 0,
@@ -3332,8 +3377,8 @@
   },
   {
     "brandId": "brand-71bb2f53e15c0897",
-    "lastCheckedAt": "2026-11-12T01:36:36.200444+00:00",
-    "lastSuccessAt": "2026-11-12T01:36:36.200444+00:00",
+    "lastCheckedAt": "2026-11-13T00:33:42.830060+00:00",
+    "lastSuccessAt": "2026-11-13T00:33:42.830060+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 41,
     "lastNewCount": 0,
@@ -3357,8 +3402,8 @@
   },
   {
     "brandId": "brand-2a13283561756adc",
-    "lastCheckedAt": "2026-11-12T01:36:37.358666+00:00",
-    "lastSuccessAt": "2026-11-12T01:36:37.358666+00:00",
+    "lastCheckedAt": "2026-11-13T00:33:43.773942+00:00",
+    "lastSuccessAt": "2026-11-13T00:33:43.773942+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 9,
     "lastNewCount": 0,
@@ -3382,8 +3427,8 @@
   },
   {
     "brandId": "brand-8420421dae1f2ef3",
-    "lastCheckedAt": "2026-11-12T01:36:44.106651+00:00",
-    "lastSuccessAt": "2026-11-12T01:36:44.106651+00:00",
+    "lastCheckedAt": "2026-11-13T00:33:47.874878+00:00",
+    "lastSuccessAt": "2026-11-13T00:33:47.874878+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 37,
     "lastNewCount": 0,
@@ -3452,8 +3497,8 @@
   },
   {
     "brandId": "brand-dfe7aafc7b485943",
-    "lastCheckedAt": "2026-11-12T01:36:46.408398+00:00",
-    "lastSuccessAt": "2026-11-12T01:36:46.408398+00:00",
+    "lastCheckedAt": "2026-11-13T00:33:49.355879+00:00",
+    "lastSuccessAt": "2026-11-13T00:33:49.355879+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 59,
     "lastNewCount": 0,
@@ -3556,8 +3601,8 @@
   },
   {
     "brandId": "brand-3869f6f268d4afd6",
-    "lastCheckedAt": "2026-11-12T01:36:44.830439+00:00",
-    "lastSuccessAt": "2026-11-12T01:36:44.830439+00:00",
+    "lastCheckedAt": "2026-11-13T00:33:47.082344+00:00",
+    "lastSuccessAt": "2026-11-13T00:33:47.082344+00:00",
     "lastResult": "REVIEW_REQUIRED",
     "lastMenuCount": 115,
     "lastNewCount": 0,
@@ -3581,8 +3626,8 @@
   },
   {
     "brandId": "brand-39adcc9276d724e2",
-    "lastCheckedAt": "2026-11-12T01:36:44.939927+00:00",
-    "lastSuccessAt": "2026-11-12T01:36:44.939927+00:00",
+    "lastCheckedAt": "2026-11-13T00:33:48.492142+00:00",
+    "lastSuccessAt": "2026-11-13T00:33:48.492142+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 79,
     "lastNewCount": 0,
@@ -3606,8 +3651,8 @@
   },
   {
     "brandId": "brand-e37848e7ad911d2a",
-    "lastCheckedAt": "2026-11-12T01:36:45.897863+00:00",
-    "lastSuccessAt": "2026-11-12T01:36:45.897863+00:00",
+    "lastCheckedAt": "2026-11-13T00:33:49.190487+00:00",
+    "lastSuccessAt": "2026-11-13T00:33:49.190487+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 64,
     "lastNewCount": 0,
@@ -3631,8 +3676,8 @@
   },
   {
     "brandId": "brand-e1baf7db5ac285a7",
-    "lastCheckedAt": "2026-11-12T01:36:46.844832+00:00",
-    "lastSuccessAt": "2026-11-12T01:36:46.844832+00:00",
+    "lastCheckedAt": "2026-11-13T00:33:49.806596+00:00",
+    "lastSuccessAt": "2026-11-13T00:33:49.806596+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 37,
     "lastNewCount": 0,
@@ -3656,11 +3701,11 @@
   },
   {
     "brandId": "brand-0e65f6b77b14e324",
-    "lastCheckedAt": "2026-11-12T01:36:47.499857+00:00",
-    "lastSuccessAt": "2026-11-12T01:36:47.499857+00:00",
+    "lastCheckedAt": "2026-11-13T00:33:49.987929+00:00",
+    "lastSuccessAt": "2026-11-13T00:33:49.987929+00:00",
     "lastResult": "REVIEW_REQUIRED",
     "lastMenuCount": 27,
-    "lastNewCount": 2,
+    "lastNewCount": 0,
     "adapterTypes": [
       "bon-api"
     ],
@@ -3681,8 +3726,8 @@
   },
   {
     "brandId": "brand-5cf4a5c95ff85d3a",
-    "lastCheckedAt": "2026-11-12T01:36:47.664039+00:00",
-    "lastSuccessAt": "2026-11-12T01:36:47.664039+00:00",
+    "lastCheckedAt": "2026-11-13T00:33:50.323088+00:00",
+    "lastSuccessAt": "2026-11-13T00:33:50.323088+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 14,
     "lastNewCount": 0,
@@ -3706,8 +3751,8 @@
   },
   {
     "brandId": "brand-9e7aeb464781f115",
-    "lastCheckedAt": "2026-11-12T01:36:48.294798+00:00",
-    "lastSuccessAt": "2026-11-12T01:36:48.294798+00:00",
+    "lastCheckedAt": "2026-11-13T00:33:50.479216+00:00",
+    "lastSuccessAt": "2026-11-13T00:33:50.479216+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 58,
     "lastNewCount": 0,
@@ -3756,8 +3801,8 @@
   },
   {
     "brandId": "brand-a9a4ba8b5ad2ca3d",
-    "lastCheckedAt": "2026-11-12T01:36:48.299585+00:00",
-    "lastSuccessAt": "2026-11-12T01:36:48.299585+00:00",
+    "lastCheckedAt": "2026-11-13T00:33:50.712556+00:00",
+    "lastSuccessAt": "2026-11-13T00:33:50.712556+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 9,
     "lastNewCount": 0,
@@ -3781,8 +3826,8 @@
   },
   {
     "brandId": "brand-1da93338e8beedb8",
-    "lastCheckedAt": "2026-11-12T01:36:51.148024+00:00",
-    "lastSuccessAt": "2026-11-12T01:36:51.148024+00:00",
+    "lastCheckedAt": "2026-11-13T00:33:53.741405+00:00",
+    "lastSuccessAt": "2026-11-13T00:33:53.741405+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 56,
     "lastNewCount": 0,
@@ -3816,8 +3861,8 @@
   },
   {
     "brandId": "brand-3c12a830fd8e20dd",
-    "lastCheckedAt": "2026-11-12T01:36:53.882144+00:00",
-    "lastSuccessAt": "2026-11-12T01:36:53.882144+00:00",
+    "lastCheckedAt": "2026-11-13T00:33:54.895926+00:00",
+    "lastSuccessAt": "2026-11-13T00:33:54.895926+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 58,
     "lastNewCount": 0,
@@ -3851,8 +3896,8 @@
   },
   {
     "brandId": "brand-b028605b3b64ee47",
-    "lastCheckedAt": "2026-11-12T01:37:00.639531+00:00",
-    "lastSuccessAt": "2026-11-12T01:37:00.639531+00:00",
+    "lastCheckedAt": "2026-11-13T00:33:58.913390+00:00",
+    "lastSuccessAt": "2026-11-13T00:33:58.913390+00:00",
     "lastResult": "REVIEW_REQUIRED",
     "lastMenuCount": 41,
     "lastNewCount": 0,
@@ -3921,8 +3966,8 @@
   },
   {
     "brandId": "brand-1bc146a27ab0e421",
-    "lastCheckedAt": "2026-11-12T01:36:55.241743+00:00",
-    "lastSuccessAt": "2026-11-12T01:36:55.241743+00:00",
+    "lastCheckedAt": "2026-11-13T00:33:55.609543+00:00",
+    "lastSuccessAt": "2026-11-13T00:33:55.609543+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 46,
     "lastNewCount": 0,
@@ -3946,11 +3991,11 @@
   },
   {
     "brandId": "brand-29327af78758b6f5",
-    "lastCheckedAt": "2026-11-12T01:37:03.477653+00:00",
-    "lastSuccessAt": null,
-    "lastResult": "FAILED",
-    "lastMenuCount": 0,
-    "lastNewCount": 0,
+    "lastCheckedAt": "2026-11-13T00:34:17.478463+00:00",
+    "lastSuccessAt": "2026-11-13T00:34:17.478463+00:00",
+    "lastResult": "REVIEW_REQUIRED",
+    "lastMenuCount": 97,
+    "lastNewCount": 3,
     "adapterTypes": [
       "subway-list"
     ],
@@ -3962,74 +4007,74 @@
         "sourceUrl": "https://www.subway.co.kr/menuList/sandwich",
         "adapter": "subway-list",
         "sourceType": "BROWSER",
-        "status": "FETCH_FAILED",
-        "error": "PublicAccessDenied",
-        "errorReason": "ACCESS_DENIED: 403",
+        "status": "SUCCESS",
+        "error": null,
+        "errorReason": null,
         "attempts": 1
       },
       {
         "sourceUrl": "https://www.subway.co.kr/menuList/grain_salad",
         "adapter": "subway-list",
         "sourceType": "BROWSER",
-        "status": "FETCH_FAILED",
-        "error": "PublicAccessDenied",
-        "errorReason": "ACCESS_DENIED: 403",
+        "status": "SUCCESS",
+        "error": null,
+        "errorReason": null,
         "attempts": 1
       },
       {
         "sourceUrl": "https://www.subway.co.kr/menuList/salad",
         "adapter": "subway-list",
         "sourceType": "BROWSER",
-        "status": "FETCH_FAILED",
-        "error": "PublicAccessDenied",
-        "errorReason": "ACCESS_DENIED: 403",
+        "status": "SUCCESS",
+        "error": null,
+        "errorReason": null,
         "attempts": 1
       },
       {
         "sourceUrl": "https://www.subway.co.kr/menuList/unit",
         "adapter": "subway-list",
         "sourceType": "BROWSER",
-        "status": "FETCH_FAILED",
-        "error": "PublicAccessDenied",
-        "errorReason": "ACCESS_DENIED: 403",
+        "status": "SUCCESS",
+        "error": null,
+        "errorReason": null,
         "attempts": 1
       },
       {
         "sourceUrl": "https://www.subway.co.kr/menuList/morning",
         "adapter": "subway-list",
         "sourceType": "BROWSER",
-        "status": "FETCH_FAILED",
-        "error": "PublicAccessDenied",
-        "errorReason": "ACCESS_DENIED: 403",
+        "status": "SUCCESS",
+        "error": null,
+        "errorReason": null,
         "attempts": 1
       },
       {
         "sourceUrl": "https://www.subway.co.kr/menuList/sidedrink",
         "adapter": "subway-list",
         "sourceType": "BROWSER",
-        "status": "FETCH_FAILED",
-        "error": "PublicAccessDenied",
-        "errorReason": "ACCESS_DENIED: 403",
+        "status": "SUCCESS",
+        "error": null,
+        "errorReason": null,
         "attempts": 1
       },
       {
         "sourceUrl": "https://www.subway.co.kr/menuList/catering",
         "adapter": "subway-list",
         "sourceType": "BROWSER",
-        "status": "FETCH_FAILED",
-        "error": "PublicAccessDenied",
-        "errorReason": "ACCESS_DENIED: 403",
+        "status": "SUCCESS",
+        "error": null,
+        "errorReason": null,
         "attempts": 1
       }
     ]
   },
   {
     "brandId": "brand-70ce8c35375d9fae",
-    "lastCheckedAt": "2026-11-12T01:37:19.261399+00:00",
-    "lastSuccessAt": "2026-11-12T01:37:19.261399+00:00",
-    "lastResult": "NO_CHANGE",
-    "lastMenuCount": 60,
-    "lastNewCount": 0,
+    "lastCheckedAt": "2026-11-13T00:34:11.990093+00:00",
+    "lastSuccessAt": "2026-11-13T00:34:11.990093+00:00",
+    "lastResult": "REVIEW_REQUIRED",
+    "lastMenuCount": 63,
+    "lastNewCount": 3,
     "adapterTypes": [
       "reviewed-html"
     ],
@@ -4185,7 +4230,7 @@
   },
   {
     "brandId": "brand-8032e5a2633bc1e3",
-    "lastCheckedAt": "2026-11-12T01:37:06.634869+00:00",
+    "lastCheckedAt": "2026-11-13T00:34:03.534591+00:00",
     "lastSuccessAt": "2026-10-29T23:22:39.016852+00:00",
     "lastResult": "FAILED",
     "lastMenuCount": 0,
@@ -4282,10 +4327,10 @@
   },
   {
     "brandId": "brand-adb1fa3e7378cd49",
-    "lastCheckedAt": "2026-11-12T01:37:56.544980+00:00",
-    "lastSuccessAt": "2026-11-11T00:07:59.446784+00:00",
-    "lastResult": "FAILED",
-    "lastMenuCount": 48,
+    "lastCheckedAt": "2026-11-13T00:35:03.865407+00:00",
+    "lastSuccessAt": "2026-11-13T00:35:03.865407+00:00",
+    "lastResult": "NO_CHANGE",
+    "lastMenuCount": 91,
     "lastNewCount": 0,
     "adapterTypes": [
       "camto-toast-modal",
@@ -4318,17 +4363,17 @@
         "sourceUrl": "https://camtotoast.com/45",
         "adapter": "reviewed-image-labels",
         "sourceType": "HTML",
-        "status": "FETCH_FAILED",
-        "error": "HTTPError",
-        "errorReason": "HTTP Error 403: Forbidden",
+        "status": "SUCCESS",
+        "error": null,
+        "errorReason": null,
         "attempts": 1
       }
     ]
   },
   {
     "brandId": "brand-d715f712d950d0e8",
-    "lastCheckedAt": "2026-11-12T01:37:07.238059+00:00",
-    "lastSuccessAt": "2026-11-12T01:37:07.238059+00:00",
+    "lastCheckedAt": "2026-11-13T00:34:12.691568+00:00",
+    "lastSuccessAt": "2026-11-13T00:34:12.691568+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 38,
     "lastNewCount": 0,
@@ -4352,8 +4397,8 @@
   },
   {
     "brandId": "brand-2891bc50e9e622e6",
-    "lastCheckedAt": "2026-11-12T01:37:12.091069+00:00",
-    "lastSuccessAt": "2026-11-12T01:37:12.091069+00:00",
+    "lastCheckedAt": "2026-11-13T00:34:16.469577+00:00",
+    "lastSuccessAt": "2026-11-13T00:34:16.469577+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 49,
     "lastNewCount": 0,
@@ -4465,8 +4510,8 @@
   },
   {
     "brandId": "brand-e7bc4d2ab88a800c",
-    "lastCheckedAt": "2026-11-12T01:37:27.146282+00:00",
-    "lastSuccessAt": "2026-11-12T01:37:27.146282+00:00",
+    "lastCheckedAt": "2026-11-13T00:34:43.387125+00:00",
+    "lastSuccessAt": "2026-11-13T00:34:43.387125+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 49,
     "lastNewCount": 0,
@@ -4508,8 +4553,8 @@
   },
   {
     "brandId": "brand-c253f58a17fc9b81",
-    "lastCheckedAt": "2026-11-12T01:37:24.783626+00:00",
-    "lastSuccessAt": "2026-11-12T01:37:24.783626+00:00",
+    "lastCheckedAt": "2026-11-13T00:34:22.553267+00:00",
+    "lastSuccessAt": "2026-11-13T00:34:22.553267+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 5,
     "lastNewCount": 0,
@@ -4569,10 +4614,10 @@
   },
   {
     "brandId": "brand-c242a10bbca4c411",
-    "lastCheckedAt": "2026-11-12T01:37:25.787515+00:00",
-    "lastSuccessAt": "2026-11-11T00:08:44.281923+00:00",
-    "lastResult": "FAILED",
-    "lastMenuCount": 0,
+    "lastCheckedAt": "2026-11-13T00:35:39.481746+00:00",
+    "lastSuccessAt": "2026-11-13T00:35:39.481746+00:00",
+    "lastResult": "NO_CHANGE",
+    "lastMenuCount": 44,
     "lastNewCount": 0,
     "adapterTypes": [
       "cheogajip-list"
@@ -4585,7 +4630,25 @@
         "sourceUrl": "https://www.cheogajip.co.kr/bbs/board.php?bo_table=allmenu",
         "adapter": "cheogajip-list",
         "sourceType": "BROWSER",
-        "status": "FAIL",
+        "status": "SUCCESS",
+        "error": null,
+        "errorReason": null,
+        "attempts": 1
+      },
+      {
+        "sourceUrl": "https://www.cheogajip.co.kr/bbs/board.php?bo_table=allmenu&page=2",
+        "adapter": "cheogajip-list",
+        "sourceType": "BROWSER",
+        "status": "SUCCESS",
+        "error": null,
+        "errorReason": null,
+        "attempts": 1
+      },
+      {
+        "sourceUrl": "https://www.cheogajip.co.kr/bbs/board.php?bo_table=allmenu&page=1",
+        "adapter": "cheogajip-list",
+        "sourceType": "BROWSER",
+        "status": "SUCCESS",
         "error": null,
         "errorReason": null,
         "attempts": 1
@@ -4594,8 +4657,8 @@
   },
   {
     "brandId": "brand-1e99fd5b57a9f5cb",
-    "lastCheckedAt": "2026-11-12T01:37:30.174697+00:00",
-    "lastSuccessAt": "2026-11-12T01:37:30.174697+00:00",
+    "lastCheckedAt": "2026-11-13T00:34:44.855287+00:00",
+    "lastSuccessAt": "2026-11-13T00:34:44.855287+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 31,
     "lastNewCount": 0,
@@ -4619,8 +4682,8 @@
   },
   {
     "brandId": "brand-f4abfad35563de25",
-    "lastCheckedAt": "2026-11-12T01:37:40.319140+00:00",
-    "lastSuccessAt": "2026-11-12T01:37:40.319140+00:00",
+    "lastCheckedAt": "2026-11-13T00:34:51.204788+00:00",
+    "lastSuccessAt": "2026-11-13T00:34:51.204788+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 33,
     "lastNewCount": 0,
@@ -4689,11 +4752,11 @@
   },
   {
     "brandId": "brand-b0d0c4de8cdf23bc",
-    "lastCheckedAt": "2026-11-12T01:37:41.848279+00:00",
-    "lastSuccessAt": "2026-11-12T01:37:41.848279+00:00",
-    "lastResult": "SUCCESS",
+    "lastCheckedAt": "2026-11-13T00:34:52.215254+00:00",
+    "lastSuccessAt": "2026-11-13T00:34:52.215254+00:00",
+    "lastResult": "NO_CHANGE",
     "lastMenuCount": 62,
-    "lastNewCount": 13,
+    "lastNewCount": 0,
     "adapterTypes": [
       "reviewed-delivery"
     ],
@@ -4714,8 +4777,8 @@
   },
   {
     "brandId": "brand-57244fb148c377c6",
-    "lastCheckedAt": "2026-11-12T01:37:54.764861+00:00",
-    "lastSuccessAt": "2026-11-12T01:37:54.764861+00:00",
+    "lastCheckedAt": "2026-11-13T00:35:01.098876+00:00",
+    "lastSuccessAt": "2026-11-13T00:35:01.098876+00:00",
     "lastResult": "REVIEW_REQUIRED",
     "lastMenuCount": 89,
     "lastNewCount": 0,
@@ -4811,8 +4874,8 @@
   },
   {
     "brandId": "brand-41b772c57bada9f9",
-    "lastCheckedAt": "2026-11-12T01:37:56.143529+00:00",
-    "lastSuccessAt": "2026-11-12T01:37:56.143529+00:00",
+    "lastCheckedAt": "2026-11-13T00:35:02.015884+00:00",
+    "lastSuccessAt": "2026-11-13T00:35:02.015884+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 34,
     "lastNewCount": 0,
@@ -4836,8 +4899,8 @@
   },
   {
     "brandId": "brand-69ad361cd26106b1",
-    "lastCheckedAt": "2026-11-12T01:37:56.856732+00:00",
-    "lastSuccessAt": "2026-11-12T01:37:56.856732+00:00",
+    "lastCheckedAt": "2026-11-13T00:35:02.933767+00:00",
+    "lastSuccessAt": "2026-11-13T00:35:02.933767+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 46,
     "lastNewCount": 0,
@@ -4861,8 +4924,8 @@
   },
   {
     "brandId": "brand-2cf7eb0ea975163d",
-    "lastCheckedAt": "2026-11-12T01:37:57.291699+00:00",
-    "lastSuccessAt": "2026-11-12T01:37:57.291699+00:00",
+    "lastCheckedAt": "2026-11-13T00:35:30.564477+00:00",
+    "lastSuccessAt": "2026-11-13T00:35:30.564477+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 11,
     "lastNewCount": 0,
@@ -4886,8 +4949,8 @@
   },
   {
     "brandId": "brand-537263c2bc830a08",
-    "lastCheckedAt": "2026-11-12T01:38:04.696833+00:00",
-    "lastSuccessAt": "2026-11-12T01:38:04.696833+00:00",
+    "lastCheckedAt": "2026-11-13T00:35:36.229842+00:00",
+    "lastSuccessAt": "2026-11-13T00:35:36.229842+00:00",
     "lastResult": "REVIEW_REQUIRED",
     "lastMenuCount": 326,
     "lastNewCount": 0,
@@ -4947,8 +5010,8 @@
   },
   {
     "brandId": "brand-1742b64ed29107ac",
-    "lastCheckedAt": "2026-11-12T01:38:07.457877+00:00",
-    "lastSuccessAt": "2026-11-12T01:38:07.457877+00:00",
+    "lastCheckedAt": "2026-11-13T00:35:39.090835+00:00",
+    "lastSuccessAt": "2026-11-13T00:35:39.090835+00:00",
     "lastResult": "REVIEW_REQUIRED",
     "lastMenuCount": 139,
     "lastNewCount": 0,
@@ -5017,11 +5080,11 @@
   },
   {
     "brandId": "brand-7dfea7361415a819",
-    "lastCheckedAt": "2026-11-12T01:39:29.717664+00:00",
-    "lastSuccessAt": "2026-11-12T01:39:29.717664+00:00",
+    "lastCheckedAt": "2026-11-13T00:36:43.146285+00:00",
+    "lastSuccessAt": "2026-11-13T00:36:43.146285+00:00",
     "lastResult": "REVIEW_REQUIRED",
-    "lastMenuCount": 535,
-    "lastNewCount": 0,
+    "lastMenuCount": 542,
+    "lastNewCount": 7,
     "adapterTypes": [
       "paris-fragment"
     ],
@@ -5456,8 +5519,8 @@
   },
   {
     "brandId": "brand-61b7f46d49620328",
-    "lastCheckedAt": "2026-11-12T01:38:07.784902+00:00",
-    "lastSuccessAt": "2026-11-12T01:38:07.784902+00:00",
+    "lastCheckedAt": "2026-11-13T00:35:43.277121+00:00",
+    "lastSuccessAt": "2026-11-13T00:35:43.277121+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 95,
     "lastNewCount": 0,
@@ -5481,8 +5544,8 @@
   },
   {
     "brandId": "brand-3d3d7aa34cc1f578",
-    "lastCheckedAt": "2026-11-12T01:38:10.109352+00:00",
-    "lastSuccessAt": "2026-11-12T01:38:10.109352+00:00",
+    "lastCheckedAt": "2026-11-13T00:35:45.550213+00:00",
+    "lastSuccessAt": "2026-11-13T00:35:45.550213+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 54,
     "lastNewCount": 0,
@@ -5506,8 +5569,8 @@
   },
   {
     "brandId": "brand-53314eb3760b340b",
-    "lastCheckedAt": "2026-11-12T01:38:25.574521+00:00",
-    "lastSuccessAt": "2026-11-12T01:38:25.574521+00:00",
+    "lastCheckedAt": "2026-11-13T00:35:59.418706+00:00",
+    "lastSuccessAt": "2026-11-13T00:35:59.418706+00:00",
     "lastResult": "REVIEW_REQUIRED",
     "lastMenuCount": 159,
     "lastNewCount": 0,
@@ -5585,8 +5648,8 @@
   },
   {
     "brandId": "brand-07de1aee884692c4",
-    "lastCheckedAt": "2026-11-12T01:38:33.565553+00:00",
-    "lastSuccessAt": "2026-11-12T01:38:33.565553+00:00",
+    "lastCheckedAt": "2026-11-13T00:36:01.466664+00:00",
+    "lastSuccessAt": "2026-11-13T00:36:01.466664+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 50,
     "lastNewCount": 0,
@@ -5727,8 +5790,8 @@
   },
   {
     "brandId": "brand-35225ece8d72c5b9",
-    "lastCheckedAt": "2026-11-12T01:38:28.080894+00:00",
-    "lastSuccessAt": "2026-11-12T01:38:28.080894+00:00",
+    "lastCheckedAt": "2026-11-13T00:36:01.323820+00:00",
+    "lastSuccessAt": "2026-11-13T00:36:01.323820+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 109,
     "lastNewCount": 0,
@@ -5752,8 +5815,8 @@
   },
   {
     "brandId": "brand-977382baa9a9159b",
-    "lastCheckedAt": "2026-11-12T01:38:29.897874+00:00",
-    "lastSuccessAt": "2026-11-12T01:38:29.897874+00:00",
+    "lastCheckedAt": "2026-11-13T00:36:02.467227+00:00",
+    "lastSuccessAt": "2026-11-13T00:36:02.467227+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 53,
     "lastNewCount": 0,
@@ -5777,8 +5840,8 @@
   },
   {
     "brandId": "brand-fdb71b87248a93b9",
-    "lastCheckedAt": "2026-11-12T01:38:49.599520+00:00",
-    "lastSuccessAt": "2026-11-12T01:38:49.599520+00:00",
+    "lastCheckedAt": "2026-11-13T00:36:11.932901+00:00",
+    "lastSuccessAt": "2026-11-13T00:36:11.932901+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 132,
     "lastNewCount": 0,
@@ -5883,8 +5946,8 @@
   },
   {
     "brandId": "brand-9d8b8d6c615c6ee7",
-    "lastCheckedAt": "2026-11-12T01:38:43.677843+00:00",
-    "lastSuccessAt": "2026-11-12T01:38:43.677843+00:00",
+    "lastCheckedAt": "2026-11-13T00:36:09.281850+00:00",
+    "lastSuccessAt": "2026-11-13T00:36:09.281850+00:00",
     "lastResult": "REVIEW_REQUIRED",
     "lastMenuCount": 235,
     "lastNewCount": 0,
@@ -6088,8 +6151,8 @@
   },
   {
     "brandId": "brand-5203807bf8b4bc7a",
-    "lastCheckedAt": "2026-11-12T01:38:44.047021+00:00",
-    "lastSuccessAt": "2026-11-12T01:38:44.047021+00:00",
+    "lastCheckedAt": "2026-11-13T00:36:09.494620+00:00",
+    "lastSuccessAt": "2026-11-13T00:36:09.494620+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 12,
     "lastNewCount": 0,
@@ -6113,8 +6176,8 @@
   },
   {
     "brandId": "brand-7b853dd449517e57",
-    "lastCheckedAt": "2026-11-12T01:38:45.373115+00:00",
-    "lastSuccessAt": "2026-11-12T01:38:45.373115+00:00",
+    "lastCheckedAt": "2026-11-13T00:36:10.393051+00:00",
+    "lastSuccessAt": "2026-11-13T00:36:10.393051+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 32,
     "lastNewCount": 0,
@@ -6138,11 +6201,11 @@
   },
   {
     "brandId": "brand-a0302f70b937755f",
-    "lastCheckedAt": "2026-11-12T01:38:47.366272+00:00",
-    "lastSuccessAt": "2026-11-12T01:38:47.366272+00:00",
+    "lastCheckedAt": "2026-11-13T00:36:11.852493+00:00",
+    "lastSuccessAt": "2026-11-13T00:36:11.852493+00:00",
     "lastResult": "REVIEW_REQUIRED",
-    "lastMenuCount": 434,
-    "lastNewCount": 0,
+    "lastMenuCount": 435,
+    "lastNewCount": 2,
     "adapterTypes": [
       "tlj"
     ],
@@ -6163,8 +6226,8 @@
   },
   {
     "brandId": "brand-9f125dd967fd168e",
-    "lastCheckedAt": "2026-11-12T01:38:49.744633+00:00",
-    "lastSuccessAt": "2026-11-12T01:38:49.744633+00:00",
+    "lastCheckedAt": "2026-11-13T00:36:12.823552+00:00",
+    "lastSuccessAt": "2026-11-13T00:36:12.823552+00:00",
     "lastResult": "REVIEW_REQUIRED",
     "lastMenuCount": 52,
     "lastNewCount": 0,
@@ -6188,8 +6251,8 @@
   },
   {
     "brandId": "brand-e32a9313e634ead7",
-    "lastCheckedAt": "2026-11-12T01:39:10.144500+00:00",
-    "lastSuccessAt": "2026-11-12T01:39:10.144500+00:00",
+    "lastCheckedAt": "2026-11-13T00:36:27.142368+00:00",
+    "lastSuccessAt": "2026-11-13T00:36:27.142368+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 76,
     "lastNewCount": 0,
@@ -6402,7 +6465,7 @@
   },
   {
     "brandId": "brand-a7444ee050c62abd",
-    "lastCheckedAt": "2026-11-12T01:38:53.603045+00:00",
+    "lastCheckedAt": "2026-11-13T00:36:16.287540+00:00",
     "lastSuccessAt": null,
     "lastResult": "FAILED",
     "lastMenuCount": 0,
@@ -6427,8 +6490,8 @@
   },
   {
     "brandId": "brand-cf57c271fe920362",
-    "lastCheckedAt": "2026-11-12T01:38:55.721202+00:00",
-    "lastSuccessAt": "2026-11-12T01:38:55.721202+00:00",
+    "lastCheckedAt": "2026-11-13T00:36:17.969823+00:00",
+    "lastSuccessAt": "2026-11-13T00:36:17.969823+00:00",
     "lastResult": "REVIEW_REQUIRED",
     "lastMenuCount": 24,
     "lastNewCount": 0,
@@ -6461,8 +6524,8 @@
   },
   {
     "brandId": "brand-db7ae070c1a211f3",
-    "lastCheckedAt": "2026-11-12T01:39:04.763527+00:00",
-    "lastSuccessAt": "2026-11-12T01:39:04.763527+00:00",
+    "lastCheckedAt": "2026-11-13T00:36:22.774383+00:00",
+    "lastSuccessAt": "2026-11-13T00:36:22.774383+00:00",
     "lastResult": "REVIEW_REQUIRED",
     "lastMenuCount": 73,
     "lastNewCount": 0,
@@ -6574,11 +6637,11 @@
   },
   {
     "brandId": "brand-c250fc357adcb9df",
-    "lastCheckedAt": "2026-11-12T01:39:27.183190+00:00",
-    "lastSuccessAt": "2026-11-12T01:39:27.183190+00:00",
+    "lastCheckedAt": "2026-11-13T00:36:35.662023+00:00",
+    "lastSuccessAt": "2026-11-13T00:36:35.662023+00:00",
     "lastResult": "REVIEW_REQUIRED",
-    "lastMenuCount": 196,
-    "lastNewCount": 0,
+    "lastMenuCount": 198,
+    "lastNewCount": 3,
     "adapterTypes": [
       "pascucci-list"
     ],
@@ -6716,8 +6779,8 @@
   },
   {
     "brandId": "brand-1b6e60f7965bce11",
-    "lastCheckedAt": "2026-11-12T01:39:30.172938+00:00",
-    "lastSuccessAt": "2026-11-12T01:39:30.172938+00:00",
+    "lastCheckedAt": "2026-11-13T00:36:42.834344+00:00",
+    "lastSuccessAt": "2026-11-13T00:36:42.834344+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 133,
     "lastNewCount": 0,
@@ -6867,8 +6930,8 @@
   },
   {
     "brandId": "brand-5f1ac0e21ddf73b1",
-    "lastCheckedAt": "2026-11-12T01:40:03.158075+00:00",
-    "lastSuccessAt": "2026-11-12T01:40:03.158075+00:00",
+    "lastCheckedAt": "2026-11-13T00:36:58.874009+00:00",
+    "lastSuccessAt": "2026-11-13T00:36:58.874009+00:00",
     "lastResult": "REVIEW_REQUIRED",
     "lastMenuCount": 277,
     "lastNewCount": 0,
@@ -6956,7 +7019,7 @@
   },
   {
     "brandId": "brand-9fa9c3eca7bcf563",
-    "lastCheckedAt": "2026-11-12T01:39:59.701126+00:00",
+    "lastCheckedAt": "2026-11-13T00:36:47.638318+00:00",
     "lastSuccessAt": "2026-11-11T00:10:35.751648+00:00",
     "lastResult": "FAILED",
     "lastMenuCount": 0,
@@ -6972,80 +7035,80 @@
         "sourceUrl": "https://www.theventi.co.kr/new2022/menu/all.html?mode=1",
         "adapter": "venti-list",
         "sourceType": "BROWSER",
-        "status": "FAIL",
-        "error": null,
-        "errorReason": null,
+        "status": "FETCH_FAILED",
+        "error": "Error",
+        "errorReason": "Page.goto: net::ERR_CERT_DATE_INVALID at https://www.theventi.co.kr/new2022/menu/all.html?mode=1\nCall log:\n  - navigating to \"https://www.theventi.co.kr/new2022/menu/all.html?mode=1\", waiting until \"d",
         "attempts": 1
       },
       {
         "sourceUrl": "https://www.theventi.co.kr/new2022/menu/all.html?mode=2",
         "adapter": "venti-list",
         "sourceType": "BROWSER",
-        "status": "FAIL",
-        "error": null,
-        "errorReason": null,
+        "status": "FETCH_FAILED",
+        "error": "Error",
+        "errorReason": "Page.goto: net::ERR_CERT_DATE_INVALID at https://www.theventi.co.kr/new2022/menu/all.html?mode=2\nCall log:\n  - navigating to \"https://www.theventi.co.kr/new2022/menu/all.html?mode=2\", waiting until \"d",
         "attempts": 1
       },
       {
         "sourceUrl": "https://www.theventi.co.kr/new2022/menu/all.html?mode=3",
         "adapter": "venti-list",
         "sourceType": "BROWSER",
-        "status": "FAIL",
-        "error": null,
-        "errorReason": null,
+        "status": "FETCH_FAILED",
+        "error": "Error",
+        "errorReason": "Page.goto: net::ERR_CERT_DATE_INVALID at https://www.theventi.co.kr/new2022/menu/all.html?mode=3\nCall log:\n  - navigating to \"https://www.theventi.co.kr/new2022/menu/all.html?mode=3\", waiting until \"d",
         "attempts": 1
       },
       {
         "sourceUrl": "https://www.theventi.co.kr/new2022/menu/all.html?mode=4",
         "adapter": "venti-list",
         "sourceType": "BROWSER",
-        "status": "FAIL",
-        "error": null,
-        "errorReason": null,
+        "status": "FETCH_FAILED",
+        "error": "Error",
+        "errorReason": "Page.goto: net::ERR_CERT_DATE_INVALID at https://www.theventi.co.kr/new2022/menu/all.html?mode=4\nCall log:\n  - navigating to \"https://www.theventi.co.kr/new2022/menu/all.html?mode=4\", waiting until \"d",
         "attempts": 1
       },
       {
         "sourceUrl": "https://www.theventi.co.kr/new2022/menu/all.html?mode=5",
         "adapter": "venti-list",
         "sourceType": "BROWSER",
-        "status": "FAIL",
-        "error": null,
-        "errorReason": null,
+        "status": "FETCH_FAILED",
+        "error": "Error",
+        "errorReason": "Page.goto: net::ERR_CERT_DATE_INVALID at https://www.theventi.co.kr/new2022/menu/all.html?mode=5\nCall log:\n  - navigating to \"https://www.theventi.co.kr/new2022/menu/all.html?mode=5\", waiting until \"d",
         "attempts": 1
       },
       {
         "sourceUrl": "https://www.theventi.co.kr/new2022/menu/all.html?mode=6",
         "adapter": "venti-list",
         "sourceType": "BROWSER",
-        "status": "FAIL",
-        "error": null,
-        "errorReason": null,
+        "status": "FETCH_FAILED",
+        "error": "Error",
+        "errorReason": "Page.goto: net::ERR_CERT_DATE_INVALID at https://www.theventi.co.kr/new2022/menu/all.html?mode=6\nCall log:\n  - navigating to \"https://www.theventi.co.kr/new2022/menu/all.html?mode=6\", waiting until \"d",
         "attempts": 1
       },
       {
         "sourceUrl": "https://www.theventi.co.kr/new2022/menu/all.html?mode=7",
         "adapter": "venti-list",
         "sourceType": "BROWSER",
-        "status": "FAIL",
-        "error": null,
-        "errorReason": null,
+        "status": "FETCH_FAILED",
+        "error": "Error",
+        "errorReason": "Page.goto: net::ERR_CERT_DATE_INVALID at https://www.theventi.co.kr/new2022/menu/all.html?mode=7\nCall log:\n  - navigating to \"https://www.theventi.co.kr/new2022/menu/all.html?mode=7\", waiting until \"d",
         "attempts": 1
       },
       {
         "sourceUrl": "https://www.theventi.co.kr/new2022/menu/all.html?mode=8",
         "adapter": "venti-list",
         "sourceType": "BROWSER",
-        "status": "FAIL",
-        "error": null,
-        "errorReason": null,
+        "status": "FETCH_FAILED",
+        "error": "Error",
+        "errorReason": "Page.goto: net::ERR_CERT_DATE_INVALID at https://www.theventi.co.kr/new2022/menu/all.html?mode=8\nCall log:\n  - navigating to \"https://www.theventi.co.kr/new2022/menu/all.html?mode=8\", waiting until \"d",
         "attempts": 1
       }
     ]
   },
   {
     "brandId": "brand-2e050b39b22a7280",
-    "lastCheckedAt": "2026-11-12T01:39:34.568517+00:00",
-    "lastSuccessAt": "2026-11-12T01:39:34.568517+00:00",
+    "lastCheckedAt": "2026-11-13T00:36:46.907098+00:00",
+    "lastSuccessAt": "2026-11-13T00:36:46.907098+00:00",
     "lastResult": "NO_CHANGE",
     "lastMenuCount": 106,
     "lastNewCount": 0,
@@ -7069,8 +7132,8 @@
   },
   {
     "brandId": "brand-01c5e2f727401b55",
-    "lastCheckedAt": "2026-11-12T01:39:38.520097+00:00",
-    "lastSuccessAt": "2026-11-12T01:39:38.520097+00:00",
+    "lastCheckedAt": "2026-11-13T00:36:49.728963+00:00",
+    "lastSuccessAt": "2026-11-13T00:36:49.728963+00:00",
     "lastResult": "REVIEW_REQUIRED",
     "lastMenuCount": 100,
     "lastNewCount": 0,
